@@ -1,0 +1,270 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load43();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_43{left:333px;top:108px;}
+#t2_43{left:331px;top:128px;}
+#t3_43{left:101px;top:191px;}
+#t4_43{left:217px;top:191px;}
+#t5_43{left:461px;top:191px;}
+#t6_43{left:101px;top:208px;}
+#t7_43{left:101px;top:226px;}
+#t8_43{left:101px;top:263px;}
+#t9_43{left:223px;top:263px;}
+#ta_43{left:101px;top:281px;}
+#tb_43{left:355px;top:281px;}
+#tc_43{left:101px;top:298px;}
+#td_43{left:101px;top:316px;}
+#te_43{left:101px;top:353px;}
+#tf_43{left:101px;top:391px;}
+#tg_43{left:101px;top:427px;}
+#th_43{left:223px;top:427px;}
+#ti_43{left:551px;top:427px;}
+#tj_43{left:101px;top:444px;}
+#tk_43{left:101px;top:462px;}
+#tl_43{left:101px;top:479px;}
+#tm_43{left:101px;top:517px;}
+#tn_43{left:217px;top:517px;}
+#to_43{left:380px;top:517px;}
+#tp_43{left:101px;top:554px;}
+#tq_43{left:101px;top:592px;}
+#tr_43{left:101px;top:629px;}
+#ts_43{left:101px;top:647px;}
+#tt_43{left:101px;top:685px;}
+#tu_43{left:101px;top:702px;}
+#tv_43{left:101px;top:740px;}
+#tw_43{left:101px;top:757px;}
+#tx_43{left:101px;top:795px;}
+#ty_43{left:101px;top:812px;}
+#tz_43{left:101px;top:850px;}
+#t10_43{left:101px;top:867px;}
+#t11_43{left:101px;top:905px;}
+#t12_43{left:101px;top:922px;}
+#t13_43{left:101px;top:940px;}
+#t14_43{left:101px;top:977px;}
+#t15_43{left:101px;top:1015px;}
+#t16_43{left:220px;top:1015px;}
+#t17_43{left:402px;top:1015px;}
+#t18_43{left:101px;top:1032px;}
+#t19_43{left:101px;top:1070px;}
+#t1a_43{left:218px;top:1070px;}
+#t1b_43{left:442px;top:1070px;}
+#t1c_43{left:101px;top:1087px;}
+
+.s2_43{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_43{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_43{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_43{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_43{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_43" class="t s1_43">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_43" class="t s1_43">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_43" class="t s2_43">Artículo 136.- </div>
+<div id="t4_43" class="t s3_43">Expendio de bebidas alcohólicas.</div>
+<div id="t5_43" class="t s4_43">Se impondrá prisión de quince días a seis meses, a </div>
+<div id="t6_43" class="t s4_43">las personas que expendan bebidas alcohólicas desde doce horas antes y hasta tres horas después </div>
+<div id="t7_43" class="t s4_43">de finalizado el acto eleccionario. </div>
+<div id="t8_43" class="t s2_43">Artículo 137.- </div>
+<div id="t9_43" class="t s3_43">Inscripciones múltiples o con documentos adulterados. Domicilio falso. Retención </div>
+<div id="ta_43" class="t s3_43">indebida de documentos cívicos. </div>
+<div id="tb_43" class="t s4_43">Se impondrá prisión de seis (6) meses a tres (3) años, si no </div>
+<div id="tc_43" class="t s4_43">resultare un delito más severamente penado, al elector que se inscribiere más de una vez, o lo </div>
+<div id="td_43" class="t s4_43">hiciere con documentos apócrifos, anulados o ajenos, o denunciare domicilio falso. </div>
+<div id="te_43" class="t s4_43">Serán pasibles de la misma pena quienes retengan indebidamente documentos cívicos de terceros. </div>
+<div id="tf_43" class="t s5_43">(Artículo modificado por art. 3° de la Ley N° 26.774 B.O. 02/11/2012) </div>
+<div id="tg_43" class="t s2_43">Artículo 138.- </div>
+<div id="th_43" class="t s3_43">Falsificación de documentos y formularios.</div>
+<div id="ti_43" class="t s4_43">Se impondrá prisión de seis meses a </div>
+<div id="tj_43" class="t s4_43">cuatro años a los que falsifiquen formularios y documentos electorales previstos por esta ley, </div>
+<div id="tk_43" class="t s4_43">siempre que el hecho no estuviere expresamente sancionado por otras disposiciones, y a quienes </div>
+<div id="tl_43" class="t s4_43">ejecuten la falsificación por cuenta ajena. </div>
+<div id="tm_43" class="t s2_43">Artículo 139.- </div>
+<div id="tn_43" class="t s3_43">Delitos. Enumeración.</div>
+<div id="to_43" class="t s4_43">Se penará con prisión de uno a tres años a quien: </div>
+<div id="tp_43" class="t s4_43">a) Con violencia o intimidación impidiere ejercer un cargo electoral o el derecho al sufragio; </div>
+<div id="tq_43" class="t s4_43">b) Compeliere a un elector a votar de manera determinada; </div>
+<div id="tr_43" class="t s4_43">c) Lo privare de la libertad, antes o durante las horas señaladas para la elección, para imposibilitarle </div>
+<div id="ts_43" class="t s4_43">el ejercicio de un cargo electoral o el sufragio; </div>
+<div id="tt_43" class="t s4_43">d) Suplantare a un sufragante o votare más de una vez en la misma elección o de cualquier otra </div>
+<div id="tu_43" class="t s4_43">manera emitiere su voto sin derecho; </div>
+<div id="tv_43" class="t s4_43">e) Sustrajere, destruyere o sustituyere urnas utilizadas en una elección antes de realizarse el </div>
+<div id="tw_43" class="t s4_43">escrutinio; </div>
+<div id="tx_43" class="t s4_43">f) Hiciere lo mismo con las boletas de sufragio desde que éstas fueron depositadas por los electores </div>
+<div id="ty_43" class="t s4_43">hasta la terminación del escrutinio; </div>
+<div id="tz_43" class="t s4_43">g) Igualmente, antes de la emisión del voto, sustrajere boletas del cuarto oscuro, las destruyere, </div>
+<div id="t10_43" class="t s4_43">sustituyere o adulterare u ocultare; </div>
+<div id="t11_43" class="t s4_43">h) Falsificare, en todo o en parte, o usare falsificada, sustrajere, destruyere, adulterare u ocultare </div>
+<div id="t12_43" class="t s4_43">una lista de sufragios o acta de escrutinio, o por cualquier medio hiciere imposible o defectuoso el </div>
+<div id="t13_43" class="t s4_43">escrutinio de una elección; </div>
+<div id="t14_43" class="t s4_43">i) Falseare el resultado del escrutinio. </div>
+<div id="t15_43" class="t s2_43">Artículo 140.- </div>
+<div id="t16_43" class="t s3_43">Inducción con engaños.</div>
+<div id="t17_43" class="t s4_43">Se impondrá prisión de dos meses a dos años al que con </div>
+<div id="t18_43" class="t s4_43">engaños indujere a otro a sufragar en determinada forma o a abstenerse de hacerlo. </div>
+<div id="t19_43" class="t s2_43">Artículo 141.- </div>
+<div id="t1a_43" class="t s3_43">Violación del secreto del voto.</div>
+<div id="t1b_43" class="t s4_43">Se impondrá prisión de tres meses a tres años al que </div>
+<div id="t1c_43" class="t s4_43">utilizare medios tendientes a violar el secreto del sufragio. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg43Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg43"><object width="935" height="1210" data="43/43.svg" type="image/svg+xml" id="pdf43" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld43" type="text/javascript">
+
+var isIE = false;
+var f43 = [['t1_43',1076],['t2_43',1096],['t3_43',445],['t4_43',953],['t5_43',1493],['t6_43',2934],['t7_43',959],['t8_43',455],['t9_43',2446],['ta_43',980],['tb_43',1918],['tc_43',2934],['td_43',2395],['te_43',2874],['tf_43',1839],['tg_43',455],['th_43',1280],['ti_43',1134],['tj_43',2934],['tk_43',2935],['tl_43',1203],['tm_43',443],['tn_43',633],['to_43',1449],['tp_43',2663],['tq_43',1738],['tr_43',2934],['ts_43',1343],['tt_43',2934],['tu_43',1089],['tv_43',2934],['tx_43',2933],['ty_43',1022],['tz_43',2934],['t10_43',1029],['t11_43',2933],['t12_43',2933],['t13_43',775],['t14_43',1090],['t15_43',451],['t16_43',699],['t17_43',1729],['t18_43',2461],['t19_43',445],['t1a_43',875],['t1b_43',1568],['t1c_43',1694]];
+function load43(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f43);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 49;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_43");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

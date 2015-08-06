@@ -1,0 +1,235 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:43px;top:1462px;}
+#t2_6{left:43px;top:107px;}
+#t3_6{left:801px;top:107px;}
+#t4_6{left:286px;top:192px;}
+#t5_6{left:493px;top:257px;}
+#t6_6{left:58px;top:289px;}
+#t7_6{left:197px;top:323px;}
+#t8_6{left:374px;top:323px;}
+#t9_6{left:597px;top:323px;}
+#ta_6{left:762px;top:323px;}
+#tb_6{left:615px;top:378px;}
+#tc_6{left:630px;top:413px;}
+#td_6{left:58px;top:404px;}
+#te_6{left:58px;top:438px;}
+#tf_6{left:626px;top:444px;}
+#tg_6{left:630px;top:478px;}
+#th_6{left:58px;top:505px;}
+#ti_6{left:58px;top:539px;}
+#tj_6{left:58px;top:589px;}
+#tk_6{left:43px;top:693px;}
+#tl_6{left:467px;top:693px;}
+
+.s4_6{
+	FONT-SIZE: 49px;
+	FONT-FAMILY: ZGSHBG-TimesNewRoman6;
+	color: rgb(0,0,0);
+}
+
+.s6_6{
+	FONT-SIZE: 60px;
+	FONT-FAMILY: WQHWKD-TimesNewRoman-Bold6;
+	color: rgb(0,0,0);
+}
+
+.s3_6{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: WQHWKD-TimesNewRoman-Bold6;
+	color: rgb(0,0,0);
+}
+
+.s5_6{
+	FONT-SIZE: 60px;
+	FONT-FAMILY: ZGSHBG-TimesNewRoman6;
+	color: rgb(0,0,0);
+}
+
+.s2_6{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: ZGSHBG-TimesNewRoman6;
+	color: rgb(0,0,0);
+}
+
+.s1_6{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: ZGSHBG-TimesNewRoman6;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts6" type="text/css" >
+
+@font-face {
+	font-family: ZGSHBG-TimesNewRoman6;
+	src :url("6/fonts/ZGSHBG-TimesNewRoman.woff") format("woff");
+}
+
+@font-face {
+	font-family: WQHWKD-TimesNewRoman-Bold6;
+	src :url("6/fonts/WQHWKD-TimesNewRoman-Bold.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">Generar correo y cuadros ampliables </div>
+<div id="t2_6" class="t s2_6">Fecha de presentación: ………. </div>
+<div id="t3_6" class="t s2_6">ANEXO II </div>
+<div id="t4_6" class="t s3_6">FICHA TECNICA COMPLEMENTARIA </div>
+<div id="t5_6" class="t s2_6">Año (aaaa) </div>
+<div id="t6_6" class="t s2_6">Campaña </div>
+<div id="t7_6" class="t s2_6">Presidencial</div>
+<div id="t8_6" class="t s2_6">Legislativa</div>
+<div id="t9_6" class="t s2_6">Ambas </div>
+<div id="ta_6" class="t s2_6">Otras </div>
+<div id="tb_6" class="t s2_6">N° de Registro </div>
+<div id="tc_6" class="t s4_6">(Para uso interno) </div>
+<div id="td_6" class="t s2_6">Nombre o Razón Social de la </div>
+<div id="te_6" class="t s2_6">Encuestadora </div>
+<div id="tf_6" class="t s2_6">N° de Ficha </div>
+<div id="tg_6" class="t s4_6">(Para uso interno)</div>
+<div id="th_6" class="t s2_6">Nombre o Razón Social del </div>
+<div id="ti_6" class="t s2_6">Contratante </div>
+<div id="tj_6" class="t s2_6">Monto facturado </div>
+<div id="tk_6" class="t s5_6">Enviar este formulario a la siguiente dirección de correo electrónico: </div>
+<div id="tl_6" class="t s6_6">cnelectoral.rencuestas@pjn.gov.ar </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1540" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1079],['t2_6',1006],['t3_6',349],['t4_6',1451],['t5_6',349],['tb_6',472],['tc_6',350],['td_6',932],['tf_6',379],['tg_6',350],['th_6',877],['tj_6',531],['tk_6',1679]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 22;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

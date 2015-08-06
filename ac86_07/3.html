@@ -1,0 +1,261 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:260px;}
+#t7_3{left:101px;top:277px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:326px;}
+#ta_3{left:101px;top:344px;}
+#tb_3{left:101px;top:375px;}
+#tc_3{left:101px;top:393px;}
+#td_3{left:101px;top:410px;}
+#te_3{left:101px;top:428px;}
+#tf_3{left:101px;top:445px;}
+#tg_3{left:101px;top:463px;}
+#th_3{left:101px;top:480px;}
+#ti_3{left:101px;top:497px;}
+#tj_3{left:101px;top:529px;}
+#tk_3{left:101px;top:546px;}
+#tl_3{left:101px;top:564px;}
+#tm_3{left:101px;top:581px;}
+#tn_3{left:101px;top:599px;}
+#to_3{left:101px;top:616px;}
+#tp_3{left:101px;top:648px;}
+#tq_3{left:101px;top:665px;}
+#tr_3{left:101px;top:683px;}
+#ts_3{left:101px;top:700px;}
+#tt_3{left:101px;top:718px;}
+#tu_3{left:101px;top:735px;}
+#tv_3{left:101px;top:767px;}
+#tw_3{left:101px;top:784px;}
+#tx_3{left:101px;top:802px;}
+#ty_3{left:101px;top:833px;}
+#tz_3{left:101px;top:851px;}
+#t10_3{left:101px;top:868px;}
+#t11_3{left:101px;top:900px;}
+#t12_3{left:678px;top:900px;}
+#t13_3{left:688px;top:900px;}
+#t14_3{left:101px;top:917px;}
+#t15_3{left:101px;top:949px;}
+#t16_3{left:101px;top:981px;}
+#t17_3{left:101px;top:998px;}
+#t18_3{left:101px;top:1016px;}
+#t19_3{left:101px;top:1033px;}
+#t1a_3{left:101px;top:1065px;}
+#t1b_3{left:101px;top:1082px;}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">10º) Que, en su carácter de partícipes primarios de la actividad regulada por la ley 23.298, por el </div>
+<div id="t4_3" class="t s2_3">Código Electoral Nacional y la legislación complementaria, los partidos políticos –reconocidos como </div>
+<div id="t5_3" class="t s2_3">“organizaciones de derecho público no estatal” (cf. Fallos 310:819; 312:2192; 316:1673; 319:1645; </div>
+<div id="t6_3" class="t s2_3">322:628 y 2424, y 326:628, entre otros)- tienen una experiencia y conocimiento valiosos que el </div>
+<div id="t7_3" class="t s2_3">Tribunal no debe desaprovechar.- </div>
+<div id="t8_3" class="t s2_3">11°) Que por todo lo que se lleva expuesto, resulta conveniente crear un ámbito en el que tales </div>
+<div id="t9_3" class="t s2_3">agrupaciones tengan la posibilidad de desempeñar un rol activo, aportando información, propuestas </div>
+<div id="ta_3" class="t s2_3">u opiniones no vinculantes respecto de asuntos relativos a la materia administrativa-electoral.- </div>
+<div id="tb_3" class="t s2_3">Esta solución -vale destacarlo- no es por cierto desconocida en la experiencia del derecho </div>
+<div id="tc_3" class="t s2_3">comparado. En efecto, desde hace ya varios años existen espacios, de carácter generalmente </div>
+<div id="td_3" class="t s2_3">consultivo, diseñados para servir de vínculo permanente entre los organismos electorales y las </div>
+<div id="te_3" class="t s2_3">agrupaciones políticas, –con naturaleza y alcances heterogéneos- en algunos países de nuestro </div>
+<div id="tf_3" class="t s2_3">continente (vgr. “Consejo Nacional de Partidos Políticos” de Panamá, “Consejo Consultivo Electoral” </div>
+<div id="tg_3" class="t s2_3">de Honduras, “Consejo Nacional de Partidos Políticos” de Nicaragua y los “Representantes de los </div>
+<div id="th_3" class="t s2_3">Partidos Políticos” integrantes -con voz pero sin voto del Consejo General del Instituto Federal de </div>
+<div id="ti_3" class="t s2_3">México).- </div>
+<div id="tj_3" class="t s2_3">En fecha reciente, el Tribunal Supremo de Elecciones de Costa Rica, por su parte, dispuso la </div>
+<div id="tk_3" class="t s2_3">conformación de un “Consejo de Partidos Políticos”, de carácter consultivo, con la finalidad –entre </div>
+<div id="tl_3" class="t s2_3">otras- de servir de “vínculo permanente” de ese tribunal con las agrupaciones políticas, “a los </div>
+<div id="tm_3" class="t s2_3">efectos de que por su medio puedan contribuir en la actualización y mejoramiento continuo de la </div>
+<div id="tn_3" class="t s2_3">institucionalidad y los procesos electorales, así como la normativa que los rige” (art. 1 del Dto. </div>
+<div id="to_3" class="t s2_3">9/2007 del Tribunal Supremo de Elecciones).- </div>
+<div id="tp_3" class="t s2_3">12º) Que por la índole propia de las cuestiones a tratarse en el espacio de propuesta y debate que </div>
+<div id="tq_3" class="t s2_3">por la presente se instituye, y a fin de no comprometer siquiera tangencialmente la opinión del </div>
+<div id="tr_3" class="t s2_3">Tribunal sobre cuestiones contenciosas que -con arreglo a las normas legales y reglamentarias </div>
+<div id="ts_3" class="t s2_3">vigentes- puedan motivar su intervención en ejercicio de su competencia jurisdiccional, resulta </div>
+<div id="tt_3" class="t s2_3">conveniente que aquél quede bajo la órbita de la Secretaría de Actuación Electoral, ajena por su </div>
+<div id="tu_3" class="t s2_3">naturaleza al trámite y resolución de las causas judiciales.- </div>
+<div id="tv_3" class="t s2_3">En este sentido, cabe dejar sentado, asimismo, que las cuestiones planteadas en casos judiciales </div>
+<div id="tw_3" class="t s2_3">traídos ante los estrados del Tribunal, no podrán ser objeto de tratamiento en el ámbito de </div>
+<div id="tx_3" class="t s2_3">mención.- </div>
+<div id="ty_3" class="t s2_3">13º) Que, finalmente, vale aclarar que la presente reglamentación no sólo tiene por finalidad </div>
+<div id="tz_3" class="t s2_3">establecer las pautas de acuerdo a las cuales intervendrán -en igualdad de condiciones- los partidos </div>
+<div id="t10_3" class="t s2_3">políticos, sino también, y por sobre todo, otorgar a esta práctica su más absoluta transparencia.- </div>
+<div id="t11_3" class="t s2_3">Por ello y en ejercicio de las facultades que derivan del citado artículo 4, inc. </div>
+<div id="t12_3" class="t s3_3">h</div>
+<div id="t13_3" class="t s2_3">, de la ley 19.108 y </div>
+<div id="t14_3" class="t s2_3">sus modificatorias, </div>
+<div id="t15_3" class="t s4_3">ACORDARON: </div>
+<div id="t16_3" class="t s2_3">1°) Crear el “Consejo Consultivo de Partidos Políticos”, que estará integrado -de pleno derecho- por </div>
+<div id="t17_3" class="t s2_3">todos los partidos políticos con reconocimiento jurídico-político de orden nacional vigente en los </div>
+<div id="t18_3" class="t s2_3">términos de la ley 23.298, con el propósito y el alcance señalado en los considerandos 11° y 12° de </div>
+<div id="t19_3" class="t s2_3">la presente.- </div>
+<div id="t1a_3" class="t s2_3">Asimismo y cuando las circunstancias así lo aconsejen, podrá convocarse en cualquiera de los </div>
+<div id="t1b_3" class="t s2_3">distritos al respectivo Consejo integrado por todas las agrupaciones políticas de distrito que cuenten </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2934],['t4_3',2934],['t5_3',2934],['t6_3',2933],['t7_3',978],['t8_3',2934],['t9_3',2933],['ta_3',2758],['tb_3',2933],['tc_3',2934],['td_3',2934],['te_3',2934],['tf_3',2933],['tg_3',2934],['th_3',2933],['tj_3',2933],['tk_3',2933],['tl_3',2933],['tm_3',2933],['tn_3',2934],['to_3',1333],['tp_3',2933],['tq_3',2933],['tr_3',2934],['ts_3',2933],['tt_3',2933],['tu_3',1714],['tv_3',2933],['tw_3',2933],['ty_3',2933],['tz_3',2934],['t10_3',2821],['t11_3',2285],['t13_3',586],['t14_3',542],['t16_3',2933],['t17_3',2934],['t18_3',2934],['t19_3',369],['t1a_3',2934],['t1b_3',2934]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 48;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

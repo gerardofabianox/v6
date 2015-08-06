@@ -1,0 +1,265 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:418px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:256px;}
+#t6_1{left:101px;top:272px;}
+#t7_1{left:321px;top:309px;}
+#t8_1{left:101px;top:340px;}
+#t9_1{left:213px;top:340px;}
+#ta_1{left:101px;top:372px;}
+#tb_1{left:219px;top:372px;}
+#tc_1{left:101px;top:390px;}
+#td_1{left:101px;top:421px;}
+#te_1{left:221px;top:421px;}
+#tf_1{left:101px;top:439px;}
+#tg_1{left:101px;top:470px;}
+#th_1{left:215px;top:470px;}
+#ti_1{left:101px;top:488px;}
+#tj_1{left:101px;top:505px;}
+#tk_1{left:101px;top:537px;}
+#tl_1{left:101px;top:554px;}
+#tm_1{left:101px;top:572px;}
+#tn_1{left:101px;top:604px;}
+#to_1{left:213px;top:604px;}
+#tp_1{left:101px;top:635px;}
+#tq_1{left:101px;top:667px;}
+#tr_1{left:101px;top:699px;}
+#ts_1{left:101px;top:731px;}
+#tt_1{left:101px;top:748px;}
+#tu_1{left:101px;top:780px;}
+#tv_1{left:101px;top:797px;}
+#tw_1{left:101px;top:829px;}
+#tx_1{left:101px;top:846px;}
+#ty_1{left:101px;top:878px;}
+#tz_1{left:214px;top:878px;}
+#t10_1{left:101px;top:895px;}
+#t11_1{left:101px;top:913px;}
+#t12_1{left:101px;top:945px;}
+#t13_1{left:101px;top:962px;}
+#t14_1{left:101px;top:994px;}
+#t15_1{left:219px;top:994px;}
+#t16_1{left:101px;top:1011px;}
+#t17_1{left:101px;top:1029px;}
+#t18_1{left:101px;top:1046px;}
+#t19_1{left:101px;top:1063px;}
+#t1a_1{left:101px;top:1081px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Ley 24.747 </div>
+<div id="t4_1" class="t s3_1">Sancionada: Noviembre 27 de 1996. </div>
+<div id="t5_1" class="t s3_1">Promulgada de Hecho: Diciembre 19 de 1996. </div>
+<div id="t6_1" class="t s3_1">Publicada: B.O. 24/12/1996. </div>
+<div id="t7_1" class="t s4_1">INICIATIVA LEGISLATIVA POPULAR </div>
+<div id="t8_1" class="t s4_1">ARTICULO 1°</div>
+<div id="t9_1" class="t s5_1">— Reglaméntase el artículo 39 de la Constitución Nacional. </div>
+<div id="ta_1" class="t s4_1">ARTICULO 2° </div>
+<div id="tb_1" class="t s5_1">— Los ciudadanos podrán ejercer el derecho de iniciativa popular para presentar </div>
+<div id="tc_1" class="t s5_1">proyectos de ley ante la Cámara de Diputados de la Nación. </div>
+<div id="td_1" class="t s4_1">ARTICULO 3º </div>
+<div id="te_1" class="t s5_1">— No podrán ser objeto de iniciativa popular los proyectos referidos a reforma </div>
+<div id="tf_1" class="t s5_1">constitucional, tratados internacionales, tributos, presupuesto y materia penal. </div>
+<div id="tg_1" class="t s4_1">ARTICULO 4°</div>
+<div id="th_1" class="t s5_1">— La iniciativa popular requerirá la firma de un número de ciudadanos no inferior al </div>
+<div id="ti_1" class="t s5_1">uno y medio por ciento (1,5 %) del padrón electoral utilizado para la última elección de diputados </div>
+<div id="tj_1" class="t s5_1">nacionales y deberá representar por lo menos a seis (6) distritos electorales. </div>
+<div id="tk_1" class="t s5_1">Cuando la materia de la iniciativa sea de alcance regional el requisito del porcentual se cumplirá </div>
+<div id="tl_1" class="t s5_1">considerando únicamente el padrón electoral del total de las provincias que componen dicha región, </div>
+<div id="tm_1" class="t s5_1">sin tener en cuenta la cantidad de distritos que prevé el primer párrafo. </div>
+<div id="tn_1" class="t s4_1">ARTICULO 5° </div>
+<div id="to_1" class="t s5_1">— Requisitos de la iniciativa popular. </div>
+<div id="tp_1" class="t s5_1">La iniciativa popular deberá deducirse por escrito y contendrá: </div>
+<div id="tq_1" class="t s5_1">a) La petición redactada en forma de ley en términos claros: </div>
+<div id="tr_1" class="t s5_1">b) Una exposición de motivos fundada: </div>
+<div id="ts_1" class="t s5_1">c) Nombre y domicilio del o los promotores de la iniciativa, los que podrán participar de las </div>
+<div id="tt_1" class="t s5_1">reuniones de Comisión con voz de acuerdo a la reglamentación que fijen las mismas: </div>
+<div id="tu_1" class="t s5_1">d) Descripción de los gastos y origen de los recursos que se ocasionaren durante el período previo a </div>
+<div id="tv_1" class="t s5_1">presentar el proyecto de iniciativa popular ante la Cámara de Diputados: </div>
+<div id="tw_1" class="t s5_1">e) Los pliegos con las firmas de los peticionantes, con la aclaración del nombre, apellido, número y </div>
+<div id="tx_1" class="t s5_1">tipo de documento y domicilio que figure en el padrón electoral. </div>
+<div id="ty_1" class="t s4_1">ARTICULO 6° </div>
+<div id="tz_1" class="t s5_1">— Toda planilla de recolección de firmas para promover una iniciativa debe contener </div>
+<div id="t10_1" class="t s5_1">un resumen impreso del proyecto de ley a ser presentado, y la mención del o los promotores </div>
+<div id="t11_1" class="t s5_1">responsables de la iniciativa. </div>
+<div id="t12_1" class="t s5_1">El resumen contendrá la información esencial del proyecto, cuyo contenido verificara el Defensor del </div>
+<div id="t13_1" class="t s5_1">Pueblo en un plazo no superior a diez (10) días previo a la circulación y recolección de firmas. </div>
+<div id="t14_1" class="t s4_1">ARTICULO 7°</div>
+<div id="t15_1" class="t s5_1">— Previo a la iniciación en la Cámara de Diputados, la justicia nacional electoral </div>
+<div id="t16_1" class="t s5_1">verificará por muestreo la autenticidad de las firmas en un plazo no mayor de veinte (20) días, </div>
+<div id="t17_1" class="t s5_1">prorrogable por resolución fundada del Tribunal. El tamaño de la muestra no podrá ser inferior al </div>
+<div id="t18_1" class="t s5_1">medio por ciento (0,5%) de las firmas presentadas. En caso de impugnación de firma, acreditada la </div>
+<div id="t19_1" class="t s5_1">falsedad se desestimará la misma del cómputo de firmas para el proyecto de iniciativa popular, sin </div>
+<div id="t1a_1" class="t s5_1">perjuicio de las demás acciones penales a que hubiere lugar, la planilla de adhesiones es documento </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',392],['t4_1',955],['t5_1',1205],['t6_1',748],['t7_1',1170],['t8_1',429],['t9_1',1708],['ta_1',441],['tb_1',2461],['tc_1',1737],['td_1',445],['te_1',2453],['tf_1',2289],['tg_1',433],['th_1',2477],['ti_1',2933],['tj_1',2228],['tk_1',2934],['tl_1',2934],['tm_1',2081],['tn_1',429],['to_1',1068],['tp_1',1814],['tq_1',1758],['tr_1',1137],['ts_1',2934],['tt_1',2473],['tu_1',2933],['tv_1',2113],['tw_1',2934],['tx_1',1855],['ty_1',431],['tz_1',2479],['t10_1',2934],['t11_1',832],['t12_1',2933],['t13_1',2726],['t14_1',440],['t15_1',2461],['t16_1',2933],['t17_1',2933],['t18_1',2933],['t19_1',2934],['t1a_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

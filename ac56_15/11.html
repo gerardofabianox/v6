@@ -1,0 +1,453 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 1540px; height: 935px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load11();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_11{left:20px;top:816px;}
+#t2_11{left:20px;top:826px;}
+#t3_11{left:20px;top:842px;}
+#t4_11{left:26px;top:897px;}
+#t5_11{left:270px;top:816px;}
+#t6_11{left:270px;top:826px;}
+#t7_11{left:270px;top:842px;}
+#t8_11{left:277px;top:897px;}
+#t9_11{left:21px;top:798px;letter-spacing:1px;}
+#ta_11{left:1196px;top:816px;}
+#tb_11{left:1196px;top:826px;}
+#tc_11{left:1196px;top:842px;}
+#td_11{left:1203px;top:897px;}
+#te_11{left:980px;top:816px;}
+#tf_11{left:980px;top:826px;}
+#tg_11{left:980px;top:842px;}
+#th_11{left:986px;top:897px;}
+#ti_11{left:763px;top:816px;}
+#tj_11{left:763px;top:826px;}
+#tk_11{left:763px;top:842px;}
+#tl_11{left:770px;top:897px;}
+#tm_11{left:547px;top:816px;}
+#tn_11{left:547px;top:826px;}
+#to_11{left:547px;top:842px;}
+#tp_11{left:553px;top:897px;}
+#tq_11{left:49px;top:180px;}
+#tr_11{left:187px;top:180px;}
+#ts_11{left:415px;top:196px;}
+#tt_11{left:561px;top:196px;}
+#tu_11{left:693px;top:196px;}
+#tv_11{left:839px;top:196px;}
+#tw_11{left:973px;top:196px;}
+#tx_11{left:1118px;top:196px;}
+#ty_11{left:1251px;top:196px;}
+#tz_11{left:1397px;top:196px;}
+#t10_11{left:305px;top:637px;}
+#t11_11{left:276px;top:669px;}
+#t12_11{left:208px;top:695px;}
+#t13_11{left:202px;top:768px;}
+#t14_11{left:166px;top:712px;letter-spacing:1px;}
+#t15_11{left:281px;top:731px;}
+#t16_11{left:74px;top:23px;}
+#t17_11{left:74px;top:44px;}
+#t18_11{left:74px;top:71px;}
+#t19_11{left:25px;top:100px;}
+#t1a_11{left:71px;top:100px;}
+#t1b_11{left:25px;top:117px;}
+#t1c_11{left:634px;top:145px;}
+#t1d_11{left:891px;top:20px;letter-spacing:1px;}
+#t1e_11{left:876px;top:31px;letter-spacing:1px;}
+#t1f_11{left:1056px;top:26px;letter-spacing:3px;}
+#t1g_11{left:724px;top:45px;}
+#t1h_11{left:724px;top:56px;}
+#t1i_11{left:724px;top:72px;}
+#t1j_11{left:724px;top:83px;}
+#t1k_11{left:809px;top:83px;}
+#t1l_11{left:724px;top:104px;}
+#t1m_11{left:1263px;top:66px;}
+#t1n_11{left:1259px;top:86px;}
+#t1o_11{left:1278px;top:106px;}
+#t1p_11{left:1310px;top:48px;letter-spacing:25px;}
+#t1q_11{left:344px;top:23px;}
+#t1r_11{left:344px;top:87px;}
+#t1s_11{left:360px;top:91px;}
+#t1t_11{left:514px;top:175px;}
+#t1u_11{left:795px;top:175px;}
+#t1v_11{left:1074px;top:175px;}
+#t1w_11{left:1353px;top:175px;}
+
+.s12_11{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(255,255,255);
+}
+
+.s16_11{
+	FONT-SIZE: 42px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(63,63,64);
+}
+
+.s20_11{
+	FONT-SIZE: 97px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(35,31,32);
+}
+
+.s14_11{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-MyriadPro-Bold11;
+	color: rgb(255,255,255);
+}
+
+.s10_11{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black11;
+	color: rgb(35,31,32);
+}
+
+.s4_11{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(35,31,32);
+}
+
+.s8_11{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: Helvetica, Arial, sans-serif;
+	color: rgb(35,31,32);
+}
+
+.s19_11{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Regular11;
+	color: rgb(35,31,32);
+}
+
+.s22_11{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(35,31,32);
+}
+
+.s13_11{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(63,63,64);
+}
+
+.s1_11{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(35,31,32);
+}
+
+.s2_11{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(35,31,32);
+}
+
+.s15_11{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(63,63,64);
+}
+
+.s21_11{
+	FONT-SIZE: 103px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(35,31,32);
+}
+
+.s17_11{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed11;
+	color: rgb(63,63,64);
+}
+
+.s9_11{
+	FONT-SIZE: 71px;
+	FONT-FAMILY: CenturyGothic-Bold;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s11_11{
+	FONT-SIZE: 65px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black11;
+	color: rgb(0,137,208);
+}
+
+.s18_11{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(63,63,64);
+}
+
+.s5_11{
+	FONT-SIZE: 55px;
+	FONT-FAMILY: MAIIBU-Vrinda11;
+	color: rgb(35,31,32);
+}
+
+.s3_11{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(35,31,32);
+}
+
+.s6_11{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: MAIIBU-Vrinda11;
+	color: rgb(35,31,32);
+}
+
+.s7_11{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo11;
+	color: rgb(255,255,255);
+}
+
+.v1_11{
+-webkit-transform: scale(0.25, 0,30);
+-ms-transform: scale(0.25, 0,30);
+-moz-transform: scale(0.25, 0,30);
+-o-transform: scale(0.25, 0,30);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts11" type="text/css" >
+
+@font-face {
+	font-family: EKFPXV-Helvetica-Condensed-Bo11;
+	src :url("11/fonts/EKFPXV-Helvetica-Condensed-Bo.woff") format("woff");
+}
+
+@font-face {
+	font-family: MAIIBU-Vrinda11;
+	src :url("11/fonts/MAIIBU-Vrinda.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Black11;
+	src :url("11/fonts/WCGQLA-MyriadPro-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-MyriadPro-Bold11;
+	src :url("11/fonts/EKFPXV-MyriadPro-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-Helvetica-Condensed11;
+	src :url("11/fonts/UNCHNP-Helvetica-Condensed.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Regular11;
+	src :url("11/fonts/WCGQLA-MyriadPro-Regular.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_11" class="t s1_11">Firma </div>
+<div id="t2_11" class="t s1_11">Presidente</div>
+<div id="t3_11" class="t s2_11">Nombre Apellido</div>
+<div id="t4_11" class="t s3_11">D.N.I.</div>
+<div id="t5_11" class="t s1_11">Firma </div>
+<div id="t6_11" class="t s1_11">Suplente</div>
+<div id="t7_11" class="t s2_11">Nombre Apellido</div>
+<div id="t8_11" class="t s3_11">D.N.I.</div>
+<div id="t9_11" class="t s4_11">* SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBE COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS QUE SE EXTRAJERON DE LA URNA.</div>
+<div id="ta_11" class="t s1_11">Firma </div>
+<div id="tb_11" class="t s1_11">Fiscal</div>
+<div id="tc_11" class="t s2_11">Nombre Apellido</div>
+<div id="td_11" class="t s3_11">D.N.I.</div>
+<div id="te_11" class="t s1_11">Firma </div>
+<div id="tf_11" class="t s1_11">Fiscal</div>
+<div id="tg_11" class="t s2_11">Nombre Apellido</div>
+<div id="th_11" class="t s3_11">D.N.I.</div>
+<div id="ti_11" class="t s1_11">Firma </div>
+<div id="tj_11" class="t s1_11">Fiscal</div>
+<div id="tk_11" class="t s2_11">Nombre Apellido</div>
+<div id="tl_11" class="t s3_11">D.N.I.</div>
+<div id="tm_11" class="t s1_11">Firma </div>
+<div id="tn_11" class="t s1_11">Fiscal</div>
+<div id="to_11" class="t s2_11">Nombre Apellido</div>
+<div id="tp_11" class="t s3_11">D.N.I.</div>
+<div id="tq_11" class="t s5_11">NÚMERO</div>
+<div id="tr_11" class="t s5_11">PARTIDO POLÍTICO O ALIANZA</div>
+<div id="ts_11" class="t s6_11">en números</div>
+<div id="tt_11" class="t s6_11">en letras</div>
+<div id="tu_11" class="t s6_11">en números</div>
+<div id="tv_11" class="t s6_11">en letras</div>
+<div id="tw_11" class="t s6_11">en números</div>
+<div id="tx_11" class="t s6_11">en letras</div>
+<div id="ty_11" class="t s6_11">en números</div>
+<div id="tz_11" class="t s6_11">en letras</div>
+<div id="t10_11" class="t s5_11">VOTOS NULOS</div>
+<div id="t11_11" class="t s5_11">VOTOS RECURRIDOS</div>
+<div id="t12_11" class="t s5_11">VOTOS DE IDENTIDAD IMPUGNADA</div>
+<div id="t13_11" class="t s7_11">TOTAL DE VOTOS POR COLUMNA*</div>
+<div id="t14_11" class="t v1_11 s8_11">(en todas las columnas debe asentar la misma cantidad)</div>
+<div id="t15_11" class="t s5_11">VOTOS EN BLANCO</div>
+<div id="t16_11" class="t s9_11">ELECCIONES NACIONALES</div>
+<div id="t17_11" class="t s10_11">25 de octubre de 2015</div>
+<div id="t18_11" class="t s11_11">ACTA DE ESCRUTINIO DE MESA</div>
+<div id="t19_11" class="t v1_11 s12_11">CERTIFICO: </div>
+<div id="t1a_11" class="t v1_11 s13_11">en mi carácter de presidente de mesa, de acuerdo con lo establecido en los arts. </div>
+<div id="t1b_11" class="t v1_11 s13_11">102 y 102 bis del Código Electoral Nacional, que el escrutinio arrojó los siguientes resultados:</div>
+<div id="t1c_11" class="t s14_11">NO INTRODUCIR EN LA URNA. INTRODUCIR EN EL SOBRE DE DEVOLUCION DE ACTA, JUNTO CON EL PADRÓN UTILIZADO Y LOS VOTOS RECURRIDOS E IMPUGNADOS</div>
+<div id="t1d_11" class="t s15_11">EN</div>
+<div id="t1e_11" class="t s15_11">NÚMEROS</div>
+<div id="t1f_11" class="t s16_11">EN LETRAS</div>
+<div id="t1g_11" class="t s17_11">Cantidad de ciudadanos que </div>
+<div id="t1h_11" class="t s17_11">votaron (según el padrón)</div>
+<div id="t1i_11" class="t s17_11">Cantidad de sobres utilizados</div>
+<div id="t1j_11" class="t s17_11">extraídos de la urna </div>
+<div id="t1k_11" class="t s18_11">*</div>
+<div id="t1l_11" class="t s17_11">Diferencia entre las anteriores</div>
+<div id="t1m_11" class="t s3_11">SECCIÓN:</div>
+<div id="t1n_11" class="t s3_11">CIRCUITO:</div>
+<div id="t1o_11" class="t s3_11">MESA:</div>
+<div id="t1p_11" class="t s19_11">*010010000101*</div>
+<div id="t1q_11" class="t s20_11">Justicia Nacional Electoral</div>
+<div id="t1r_11" class="t s21_11">D</div>
+<div id="t1s_11" class="t s22_11">ISTRITO:</div>
+<div id="t1t_11" class="t s5_11">CATEGORÍA</div>
+<div id="t1u_11" class="t s5_11">CATEGORÍA</div>
+<div id="t1v_11" class="t s5_11">CATEGORÍA</div>
+<div id="t1w_11" class="t s5_11">CATEGORÍA</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg11Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg11"><object width="1540" height="935" data="11/11.svg" type="image/svg+xml" id="pdf11" style="width:1540px; height:935px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld11" type="text/javascript">
+
+var isIE = false;
+var f11 = [['t3_11',264],['t7_11',264],['t9_11',2203],['tc_11',264],['tg_11',264],['tk_11',264],['to_11',264],['tr_11',583],['ts_11',182],['tt_11',136],['tu_11',182],['tv_11',136],['tw_11',182],['tx_11',136],['ty_11',182],['tz_11',136],['t10_11',276],['t11_11',395],['t12_11',665],['t13_11',689],['t14_11',833],['t15_11',375],['t16_11',897],['t17_11',601],['t18_11',925],['t1a_11',948],['t1b_11',1110],['t1c_11',3521],['t1f_11',221],['t1g_11',465],['t1h_11',430],['t1i_11',485],['t1j_11',327],['t1l_11',496],['t1q_11',1064]];
+function load11(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f11);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 69;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_11");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:246px;}
+#t6_2{left:101px;top:263px;}
+#t7_2{left:101px;top:281px;}
+#t8_2{left:101px;top:298px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:347px;}
+#tb_2{left:101px;top:365px;}
+#tc_2{left:101px;top:382px;}
+#td_2{left:101px;top:414px;}
+#te_2{left:101px;top:431px;}
+#tf_2{left:101px;top:449px;}
+#tg_2{left:101px;top:466px;}
+#th_2{left:101px;top:483px;}
+#ti_2{left:101px;top:501px;}
+#tj_2{left:101px;top:518px;}
+#tk_2{left:101px;top:536px;}
+#tl_2{left:101px;top:553px;}
+#tm_2{left:101px;top:571px;}
+#tn_2{left:101px;top:588px;}
+#to_2{left:101px;top:605px;}
+#tp_2{left:101px;top:637px;}
+#tq_2{left:101px;top:655px;}
+#tr_2{left:101px;top:672px;}
+#ts_2{left:101px;top:689px;}
+#tt_2{left:101px;top:721px;}
+#tu_2{left:101px;top:738px;}
+#tv_2{left:101px;top:756px;}
+#tw_2{left:101px;top:773px;}
+#tx_2{left:101px;top:791px;}
+#ty_2{left:101px;top:823px;}
+#tz_2{left:101px;top:840px;}
+#t10_2{left:101px;top:857px;}
+#t11_2{left:101px;top:889px;}
+#t12_2{left:101px;top:921px;}
+#t13_2{left:101px;top:953px;}
+#t14_2{left:101px;top:970px;}
+#t15_2{left:101px;top:987px;}
+#t16_2{left:101px;top:1005px;}
+#t17_2{left:101px;top:1022px;}
+#t18_2{left:101px;top:1040px;}
+#t19_2{left:101px;top:1057px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">También debe preverse la antelación con la cual corresponde proceder a tales designaciones para </div>
+<div id="t4_2" class="t s2_2">hacer factible la capacitación de la mayor cantidad posible de autoridades, ya que el término </div>
+<div id="t5_2" class="t s2_2">previsto en el art. 75 del Código Electoral Nacional -según el cual, los nombramientos se harán “con </div>
+<div id="t6_2" class="t s2_2">antelación no menor de veinte días”- constituye un plazo mínimo –que por tanto supone la </div>
+<div id="t7_2" class="t s2_2">posibilidad de una mayor anticipación– que no es suficiente para implementar un programa general </div>
+<div id="t8_2" class="t s2_2">de capacitación.- </div>
+<div id="t9_2" class="t s2_2">4º) Que, por otra parte, es preciso recordar, y hacer saber a los ciudadanos designados, que la </div>
+<div id="ta_2" class="t s2_2">actuación como autoridad de una mesa receptora de votos constituye una carga pública. Es decir, </div>
+<div id="tb_2" class="t s2_2">que se trata de una obligación legal -que expresa un indelegable deber cívico- a la que no es posible </div>
+<div id="tc_2" class="t s2_2">renunciar y cuyo incumplimiento se encuentra penalmente sancionado.- </div>
+<div id="td_2" class="t s2_2">La circunstancia de que el artículo 14 del Código Electoral Nacional no lo indique ya expresamente -</div>
+<div id="te_2" class="t s2_2">como sí lo hacía con anterioridad a la modificación introducida por la ley 25.610- en modo alguno </div>
+<div id="tf_2" class="t s2_2">obsta a tal aserción pues, como alguna vez se explicó, el carácter de carga pública de las funciones </div>
+<div id="tg_2" class="t s2_2">encomendadas a las autoridades de mesa “resulta de la naturaleza jurídica de la prestación” (cf. </div>
+<div id="th_2" class="t s2_2">Fernández Vázquez, E., “Diccionario de Derecho Público”, Ed. Astrea, 1981, Bs. As., p. 85). </div>
+<div id="ti_2" class="t s2_2">Tampoco altera dicha conclusión el hecho de que exista una compensación para quienes cumplan </div>
+<div id="tj_2" class="t s2_2">aquellas funciones, en tanto -como es sabido la gratuidad que, como regla, caracteriza a una carga </div>
+<div id="tk_2" class="t s2_2">pública no es óbice para que el Estado compense al ciudadano sobre el que recae, con una suma en </div>
+<div id="tl_2" class="t s2_2">concepto de viático, como lo es la que dispone el art. 72 del Código Electoral Nacional -cf. TO por </div>
+<div id="tm_2" class="t s2_2">Dto. 2135/83, modif. por ley 25.610 y 26.215- (Marienhoff, Miguel S., “Tratado de Derecho </div>
+<div id="tn_2" class="t s2_2">Administrativo”, Ed. Abeledo Perrot, Bs. As., 1981, T. II., p. 199 y Fernández Vázquez, E., ob. cit., </div>
+<div id="to_2" class="t s2_2">p. 84).- </div>
+<div id="tp_2" class="t s2_2">Por lo demás, del propio texto legal se desprende lo que aquí se señala puesto que, en su artículo </div>
+<div id="tq_2" class="t s2_2">75, inc. d), el código mencionado establece que los mayores de setenta años que hayan sido </div>
+<div id="tr_2" class="t s2_2">designados como autoridades de mesa “podrán excusarse de dicha carga pública, justificando </div>
+<div id="ts_2" class="t s2_2">únicamente su edad”.- </div>
+<div id="tt_2" class="t s2_2">5º) Que, finalmente, cabe también dejar sentado que -en atención a lo expuesto en el considerando </div>
+<div id="tu_2" class="t s2_2">precedente- cuando de la notificación dirigida al domicilio asentado en el registro de electores </div>
+<div id="tv_2" class="t s2_2">resulte que el ciudadano designado no reside efectivamente allí, la Junta Electoral Nacional podrá -si </div>
+<div id="tw_2" class="t s2_2">lo considerase conveniente y conociera su paradero- dirigir la citación al lugar donde aquél se </div>
+<div id="tx_2" class="t s2_2">hallare.- </div>
+<div id="ty_2" class="t s2_2">6º) Que es atribución del Tribunal “dictar las reglas necesarias para el cumplimiento de las normas </div>
+<div id="tz_2" class="t s2_2">que rigen las materias propias de su competencia, respetando el espíritu de las leyes y de sus </div>
+<div id="t10_2" class="t s2_2">disposiciones reglamentarias” (art. 4º, inc. h, ley 19.108, modif. por leyes 19.277 y 26.215).- </div>
+<div id="t11_2" class="t s2_2">Por todo ello, </div>
+<div id="t12_2" class="t s2_2">ACORDARON: </div>
+<div id="t13_2" class="t s2_2">1º) Disponer que a los fines de la designación de las autoridades de las mesas receptoras de votos, </div>
+<div id="t14_2" class="t s2_2">en los términos del art. 75 del Código Electoral Nacional, las Juntas Electorales Nacionales darán </div>
+<div id="t15_2" class="t s2_2">prioridad a los ciudadanos que resulten de una selección aleatoria por medios informáticos, en la </div>
+<div id="t16_2" class="t s2_2">cual se tendrá en cuenta su grado de instrucción y edad, excluyendo a aquellos electores que se </div>
+<div id="t17_2" class="t s2_2">encuentren afiliados a alguna agrupación política. Procurarán, asimismo, prescindir de quienes se </div>
+<div id="t18_2" class="t s2_2">hubieran desempeñado consecutivamente en las últimas dos elecciones, así como de aquéllos que </div>
+<div id="t19_2" class="t s2_2">hubiesen ejercido la función con manifiesta falta de idoneidad.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2934],['t4_2',2933],['t5_2',2934],['t6_2',2933],['t7_2',2933],['t8_2',492],['t9_2',2933],['ta_2',2934],['tb_2',2933],['tc_2',2091],['td_2',2933],['te_2',2933],['tf_2',2933],['tg_2',2933],['th_2',2933],['ti_2',2934],['tj_2',2933],['tk_2',2933],['tl_2',2934],['tm_2',2934],['tn_2',2933],['to_2',224],['tp_2',2934],['tq_2',2933],['tr_2',2933],['ts_2',658],['tt_2',2934],['tu_2',2933],['tv_2',2933],['tw_2',2933],['ty_2',2933],['tz_2',2934],['t10_2',2733],['t11_2',384],['t13_2',2933],['t14_2',2934],['t15_2',2933],['t16_2',2934],['t17_2',2934],['t18_2',2933],['t19_2',1836]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

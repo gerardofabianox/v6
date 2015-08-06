@@ -1,0 +1,249 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:248px;}
+#t5_1{left:101px;top:280px;}
+#t6_1{left:453px;top:280px;}
+#t7_1{left:101px;top:297px;}
+#t8_1{left:101px;top:329px;}
+#t9_1{left:101px;top:346px;}
+#ta_1{left:101px;top:364px;}
+#tb_1{left:101px;top:381px;}
+#tc_1{left:101px;top:399px;}
+#td_1{left:101px;top:430px;}
+#te_1{left:101px;top:462px;}
+#tf_1{left:101px;top:479px;}
+#tg_1{left:101px;top:497px;}
+#th_1{left:101px;top:514px;}
+#ti_1{left:101px;top:532px;}
+#tj_1{left:101px;top:563px;}
+#tk_1{left:101px;top:581px;}
+#tl_1{left:101px;top:598px;}
+#tm_1{left:101px;top:630px;}
+#tn_1{left:101px;top:647px;}
+#to_1{left:101px;top:665px;}
+#tp_1{left:101px;top:697px;}
+#tq_1{left:101px;top:714px;}
+#tr_1{left:101px;top:731px;}
+#ts_1{left:101px;top:763px;}
+#tt_1{left:101px;top:781px;}
+#tu_1{left:101px;top:812px;}
+#tv_1{left:101px;top:844px;}
+#tw_1{left:101px;top:876px;}
+#tx_1{left:101px;top:893px;}
+#ty_1{left:101px;top:911px;}
+#tz_1{left:101px;top:942px;}
+#t10_1{left:101px;top:960px;}
+#t11_1{left:101px;top:991px;}
+#t12_1{left:101px;top:1009px;}
+#t13_1{left:101px;top:1041px;}
+#t14_1{left:101px;top:1058px;}
+#t15_1{left:101px;top:1075px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N°112/2010 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 09/11/2011 </div>
+<div id="t5_1" class="t s4_1">APLICATIVO PARA LA CONFECCIÓN </div>
+<div id="t6_1" class="t s4_1">Y PRESENTACIÓN DE LAS PLANILLAS DE </div>
+<div id="t7_1" class="t s4_1">ADHESIONES A LOS PARTIDOS POLÍTICOS EN FORMACIÓN.</div>
+<div id="t8_1" class="t s3_1">En Buenos Aires, a los nueve días del mes de noviembre del año dos mil diez, reunidos en la Sala de </div>
+<div id="t9_1" class="t s3_1">Acuerdos de la Cámara Nacional Electoral, los doctores Alberto Ricardo Dalla Via, Rodolfo Emilio </div>
+<div id="ta_1" class="t s3_1">Munné y Santiago Hernán Corcuera, actuando los Secretarios de la Cámara doctores Nicolás Deane </div>
+<div id="tb_1" class="t s3_1">y Hernán Gonçalves Figueiredo. Abierto el acto por el señor presidente, doctor Alberto Ricardo Dalla </div>
+<div id="tc_1" class="t s3_1">Via, </div>
+<div id="td_1" class="t s3_1">CONSIDERARON: </div>
+<div id="te_1" class="t s3_1">1º) Que el artículo 7º inc. a) de la ley 23.298 (modif. por ley 26.571) prevé como requisito para </div>
+<div id="tf_1" class="t s3_1">solicitar el reconocimiento de la personalidad jurídico-política partidaria provisoria, la presentación </div>
+<div id="tg_1" class="t s3_1">de constancias que acrediten la adhesión de un porcentaje de electores del distrito. Asimismo, </div>
+<div id="th_1" class="t s3_1">dispone que "este acuerdo de voluntades se complementará con un documento en el que conste </div>
+<div id="ti_1" class="t s3_1">nombre, domicilio y matrícula de los firmantes".- </div>
+<div id="tj_1" class="t s3_1">Por su parte, el decreto 937/2010 establece el "modelo de formulario y la planilla de presentación de </div>
+<div id="tk_1" class="t s3_1">adhesiones que deberán utilizarse para la acreditación de los extremos establecidos en el inciso a) </div>
+<div id="tl_1" class="t s3_1">del artículo 7º de la Ley Nº 23.298 y sus modificatorias" (art. 1º y Anexos I y II). </div>
+<div id="tm_1" class="t s3_1">Igualmente, dicho decreto prescribe que "los datos de las planillas de adhesiones a los partidos </div>
+<div id="tn_1" class="t s3_1">políticos en formación deberán presentarse en papel y en los aplicativos informáticos específicos que </div>
+<div id="to_1" class="t s3_1">establezca la Justicia Nacional Electoral" (art. 2º). </div>
+<div id="tp_1" class="t s3_1">2º) Que en razón de esto último, oportunamente se encomendó al Centro de Cómputos del Tribunal </div>
+<div id="tq_1" class="t s3_1">el desarrollo de un programa idóneo y de fácil utilización, el cual se encuentra a la fecha concluido </div>
+<div id="tr_1" class="t s3_1">para su distribución junto con el correspondiente instructivo de uso. </div>
+<div id="ts_1" class="t s3_1">A tal efecto, resulta pertinente disponer su publicación en el sitio de Internet del Tribunal para la </div>
+<div id="tt_1" class="t s3_1">descarga directa por esa vía.- </div>
+<div id="tu_1" class="t s3_1">Por ello, </div>
+<div id="tv_1" class="t s4_1">ACORDARON: </div>
+<div id="tw_1" class="t s3_1">1°) Aprobar el aplicativo "Adherentes, ley 23.298, art. 7º inc. a)" con su instructivo adjunto, que </div>
+<div id="tx_1" class="t s3_1">deberá ser utilizado para la confección y presentación de las planillas de adhesiones a los partidos </div>
+<div id="ty_1" class="t s3_1">políticos en formación, conforme lo previsto en el art. 2º del decreto 937/2010.- </div>
+<div id="tz_1" class="t s3_1">2º) Establecer que todas las planillas de adhesiones deberán presentarse en soporte papel, </div>
+<div id="t10_1" class="t s3_1">acompañado por su correspondiente archivo digital.- </div>
+<div id="t11_1" class="t s3_1">3º) Disponer que por Secretaría se proceda a la publicación del programa que por la presente se </div>
+<div id="t12_1" class="t s3_1">aprueba, de conformidad con lo previsto en el considerando 2º.- </div>
+<div id="t13_1" class="t s3_1">4º) Los señores jueces de primera instancia harán saber los términos de la presente a las </div>
+<div id="t14_1" class="t s3_1">agrupaciones que se encuentren actualmente en trámite de reconocimiento y a las que lo inicien en </div>
+<div id="t15_1" class="t s3_1">lo sucesivo.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1033],['t4_1',587],['t5_1',1281],['t6_1',1526],['t7_1',1933],['t8_1',2934],['t9_1',2933],['ta_1',2933],['tb_1',2933],['te_1',2934],['tf_1',2933],['tg_1',2933],['th_1',2933],['ti_1',1421],['tj_1',2934],['tk_1',2933],['tl_1',2369],['tm_1',2934],['tn_1',2934],['to_1',1449],['tp_1',2934],['tq_1',2934],['tr_1',1974],['ts_1',2934],['tt_1',863],['tu_1',235],['tw_1',2933],['tx_1',2933],['ty_1',2334],['tz_1',2933],['t10_1',1529],['t11_1',2934],['t12_1',1871],['t13_1',2934],['t14_1',2933],['t15_1',363]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

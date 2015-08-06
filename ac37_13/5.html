@@ -1,0 +1,264 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load5();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_5{left:333px;top:128px;}
+#t2_5{left:331px;top:147px;}
+#t3_5{left:101px;top:207px;}
+#t4_5{left:101px;top:225px;}
+#t5_5{left:101px;top:242px;}
+#t6_5{left:101px;top:274px;}
+#t7_5{left:101px;top:291px;}
+#t8_5{left:101px;top:309px;}
+#t9_5{left:101px;top:341px;}
+#ta_5{left:101px;top:358px;}
+#tb_5{left:101px;top:390px;}
+#tc_5{left:101px;top:407px;}
+#td_5{left:101px;top:425px;}
+#te_5{left:101px;top:442px;}
+#tf_5{left:101px;top:459px;}
+#tg_5{left:101px;top:491px;}
+#th_5{left:101px;top:509px;}
+#ti_5{left:101px;top:526px;}
+#tj_5{left:734px;top:526px;}
+#tk_5{left:101px;top:543px;}
+#tl_5{left:332px;top:543px;}
+#tm_5{left:770px;top:543px;}
+#tn_5{left:101px;top:561px;}
+#to_5{left:447px;top:561px;}
+#tp_5{left:778px;top:561px;}
+#tq_5{left:101px;top:593px;}
+#tr_5{left:101px;top:610px;}
+#ts_5{left:101px;top:627px;}
+#tt_5{left:101px;top:645px;}
+#tu_5{left:101px;top:662px;}
+#tv_5{left:101px;top:680px;}
+#tw_5{left:101px;top:697px;}
+#tx_5{left:101px;top:729px;}
+#ty_5{left:101px;top:746px;}
+#tz_5{left:101px;top:764px;}
+#t10_5{left:101px;top:795px;}
+#t11_5{left:101px;top:813px;}
+#t12_5{left:101px;top:830px;}
+#t13_5{left:101px;top:848px;}
+#t14_5{left:101px;top:865px;}
+#t15_5{left:101px;top:882px;}
+#t16_5{left:101px;top:914px;}
+#t17_5{left:101px;top:932px;}
+#t18_5{left:101px;top:949px;}
+#t19_5{left:101px;top:981px;}
+#t1a_5{left:101px;top:998px;}
+#t1b_5{left:101px;top:1016px;}
+#t1c_5{left:108px;top:1016px;}
+#t1d_5{left:220px;top:1016px;}
+#t1e_5{left:258px;top:1016px;}
+#t1f_5{left:101px;top:1033px;}
+#t1g_5{left:101px;top:1050px;}
+
+.s2_5{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_5{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_5{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_5" class="t s1_5">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_5" class="t s1_5">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_5" class="t s2_5">Atento a ello, tratándose de la primera aplicación de la referida norma, cabe establecer que cuando </div>
+<div id="t4_5" class="t s2_5">la infracción se cometa respecto de uno solo de los actos electorales –primarias o generales- el valor </div>
+<div id="t5_5" class="t s2_5">de la multa ascenderá a cincuenta pesos ($50).- </div>
+<div id="t6_5" class="t s2_5">Cuando no se haya votado en las elecciones primarias ni en las generales, el monto de la segunda </div>
+<div id="t7_5" class="t s2_5">infracción ascenderá a cien pesos ($100), que se acumularán a los cincuenta pesos ($50) </div>
+<div id="t8_5" class="t s2_5">correspondientes a la primera infracción.- </div>
+<div id="t9_5" class="t s2_5">Con relación al medio de pago de la multa, podrá ser efectuado en cualquier sucursal del Banco de </div>
+<div id="ta_5" class="t s2_5">la Nación Argentina y en las demás entidades que se habiliten para el cobro.- </div>
+<div id="tb_5" class="t s2_5">La boleta de pago será generada digitalmente en el sitio web de la justicia nacional electoral. Luego </div>
+<div id="tc_5" class="t s2_5">de recibida la comunicación de su pago –por parte de las entidades autorizadas para el cobro o </div>
+<div id="td_5" class="t s2_5">personalmente por el elector- se encontrará habilitada en el mismo sitio web la generación e </div>
+<div id="te_5" class="t s2_5">impresión de la constancia correspondiente, que será suficiente elemento de prueba para acreditar </div>
+<div id="tf_5" class="t s2_5">dicha circunstancia.- </div>
+<div id="tg_5" class="t s2_5">9°) Que, en diferente orden de ideas, corresponde recordar que mediante la modificación al artículo </div>
+<div id="th_5" class="t s2_5">34 del Código Electoral Nacional, se estableció que el personal de las fuerzas de seguridad afectados </div>
+<div id="ti_5" class="t s2_5">a los establecimientos de votación debe ser incorporado por los jueces electorales </div>
+<div id="tj_5" class="t s3_5">“a un padrón </div>
+<div id="tk_5" class="t s3_5">complementario de una de las</div>
+<div id="tl_5" class="t s3_5">mesas que se encuentren en tal lugar siempre que por su</div>
+<div id="tm_5" class="t s3_5">domicilio </div>
+<div id="tn_5" class="t s3_5">en el padrón electoral le corresponda votar por</div>
+<div id="to_5" class="t s3_5">todas las categorías de la misma jurisdicción”</div>
+<div id="tp_5" class="t s2_5">.- </div>
+<div id="tq_5" class="t s2_5">Para ello, es necesario que -conforme lo prevé el artículo citado- veinticinco (25) días antes de la </div>
+<div id="tr_5" class="t s2_5">elección los jefes de las fuerzas de seguridad remitan a los magistrados electorales, la nómina donde </div>
+<div id="ts_5" class="t s2_5">figuren inscriptos los agentes que revistan a sus órdenes, con indicación del nombre y apellido, </div>
+<div id="tt_5" class="t s2_5">número de documento, distrito electoral y los establecimientos de votación a los que estarán </div>
+<div id="tu_5" class="t s2_5">afectados. A tal efecto, y con el objeto de unificar la metodología de comunicación de esa </div>
+<div id="tv_5" class="t s2_5">información por parte del Comando Electoral, se proveerá oportunamente un aplicativo informático </div>
+<div id="tw_5" class="t s2_5">que permita remitir de modo uniforme y completo la información de tales agentes.- </div>
+<div id="tx_5" class="t s2_5">Con dicha información, los juzgados federales con competencia electoral deberán incorporar al </div>
+<div id="ty_5" class="t s2_5">padrón complementario –con sus correspondientes constancias de emisión de voto- a aquellos </div>
+<div id="tz_5" class="t s2_5">agentes con derecho a votar por todas las categorías de la misma jurisdicción.- </div>
+<div id="t10_5" class="t s2_5">Vale recordar también, que –según se estableció en la Acordada N° 94/11 CNE- el Comando General </div>
+<div id="t11_5" class="t s2_5">Electoral podrá hacer uso del procedimiento establecido en el artículo 127 del Código Electoral </div>
+<div id="t12_5" class="t s2_5">Nacional. En tal sentido, aquellos agentes -informados a la justicia nacional electoral mediante el </div>
+<div id="t13_5" class="t s2_5">aplicativo informático mencionado- que no estén en condiciones de ser incorporados al padrón </div>
+<div id="t14_5" class="t s2_5">complementario en los términos del artículo 34, estarán justificados en su omisión de votar y serán </div>
+<div id="t15_5" class="t s2_5">-en consecuencia- excluidos de la nómina de infractores.- </div>
+<div id="t16_5" class="t s2_5">10) Que por otra parte, al modificar el artículo 167 del Código Electoral Nacional, la ley 26.744 </div>
+<div id="t17_5" class="t s2_5">habilitó como documento válido para votar, entre otros, al “Documento Nacional de Identidad </div>
+<div id="t18_5" class="t s2_5">(D.N.I.), en cualquiera de sus formatos (Ley 17.671)”.- </div>
+<div id="t19_5" class="t s2_5">Corresponde aclarar, entonces, que el formato en tarjeta plástica que era entregada junto con la </div>
+<div id="t1a_5" class="t s2_5">libreta –previo a la ley 26.744- es un documento habilitante, aun cuando lleve impresa la leyenda </div>
+<div id="t1b_5" class="t s2_5">“</div>
+<div id="t1c_5" class="t s3_5">no válido para</div>
+<div id="t1d_5" class="t s3_5">votar</div>
+<div id="t1e_5" class="t s2_5">” -que carece actualmente de eficacia-. Esta circunstancia será especialmente </div>
+<div id="t1f_5" class="t s2_5">enfatizada en los cursos y demás actividades de capacitación para las autoridades de mesa, a fin de </div>
+<div id="t1g_5" class="t s2_5">asegurar el adecuado desarrollo del acto electoral.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg5Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg5"><object width="935" height="1210" data="5/5.svg" type="image/svg+xml" id="pdf5" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld5" type="text/javascript">
+
+var isIE = false;
+var f5 = [['t1_5',1076],['t2_5',1095],['t3_5',2933],['t4_5',2933],['t5_5',1408],['t6_5',2933],['t7_5',2933],['t8_5',1210],['t9_5',2933],['ta_5',2248],['tb_5',2934],['tc_5',2934],['td_5',2934],['te_5',2933],['tf_5',597],['tg_5',2933],['th_5',2934],['ti_5',2502],['tj_5',399],['tk_5',897],['tl_5',1728],['tn_5',1363],['to_5',1322],['tq_5',2933],['tr_5',2934],['ts_5',2933],['tt_5',2934],['tu_5',2934],['tv_5',2933],['tw_5',2426],['tx_5',2933],['ty_5',2933],['tz_5',2302],['t10_5',2933],['t11_5',2933],['t12_5',2934],['t13_5',2933],['t14_5',2933],['t15_5',1674],['t16_5',2934],['t17_5',2933],['t18_5',1614],['t19_5',2933],['t1a_5',2934],['t1c_5',424],['t1e_5',2306],['t1f_5',2933],['t1g_5',1488]];
+function load5(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f5);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 53;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_5");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

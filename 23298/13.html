@@ -1,0 +1,231 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load13();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_13{left:344px;top:126px;}
+#t2_13{left:342px;top:161px;}
+#t3_13{left:307px;top:238px;}
+#t4_13{left:101px;top:276px;}
+#t5_13{left:234px;top:276px;}
+#t6_13{left:101px;top:293px;}
+#t7_13{left:101px;top:311px;}
+#t8_13{left:101px;top:328px;}
+#t9_13{left:420px;top:366px;}
+#ta_13{left:223px;top:404px;}
+#tb_13{left:101px;top:441px;}
+#tc_13{left:227px;top:441px;}
+#td_13{left:101px;top:459px;}
+#te_13{left:101px;top:496px;}
+#tf_13{left:101px;top:534px;}
+#tg_13{left:101px;top:571px;}
+#th_13{left:101px;top:609px;}
+#ti_13{left:101px;top:647px;}
+#tj_13{left:101px;top:684px;}
+#tk_13{left:101px;top:722px;}
+#tl_13{left:101px;top:739px;}
+#tm_13{left:101px;top:757px;}
+#tn_13{left:429px;top:794px;}
+#to_13{left:361px;top:832px;}
+#tp_13{left:102px;top:870px;}
+#tq_13{left:300px;top:907px;}
+#tr_13{left:425px;top:945px;}
+#ts_13{left:295px;top:982px;}
+#tt_13{left:101px;top:1020px;}
+#tu_13{left:228px;top:1020px;}
+#tv_13{left:101px;top:1037px;}
+#tw_13{left:101px;top:1075px;}
+
+.s2_13{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_13{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_13{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_13{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_13" class="t s1_13">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_13" class="t s1_13">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_13" class="t s2_13">De los símbolos y emblemas partidarios </div>
+<div id="t4_13" class="t s2_13">ARTÍCULO 38.- </div>
+<div id="t5_13" class="t s3_13">Los partidos reconocidos tienen derecho al registro y al uso exclusivo de sus </div>
+<div id="t6_13" class="t s3_13">símbolos, emblemas y número que no podrán ser utilizados por ningún otro, ni asociación o entidad </div>
+<div id="t7_13" class="t s3_13">de cualquier naturaleza. Respecto de los símbolos y emblemas regirán limitaciones análogas a las </div>
+<div id="t8_13" class="t s3_13">que esta ley establece en materia de nombre. </div>
+<div id="t9_13" class="t s3_13">CAPITULO VI </div>
+<div id="ta_13" class="t s2_13">Del registro de los actos que hacen a la existencia partidaria </div>
+<div id="tb_13" class="t s2_13">ARTÍCULO 39.- </div>
+<div id="tc_13" class="t s3_13">La Cámara Nacional Electoral y los juzgados de distrito llevarán un registro público, </div>
+<div id="td_13" class="t s3_13">a cargo de sus respectivos secretarios donde deberán inscribirse: </div>
+<div id="te_13" class="t s3_13">a) Los partidos reconocidos y la ratificación de los partidos preexistentes; </div>
+<div id="tf_13" class="t s3_13">b) El nombre partidario, sus cambios y modificaciones; </div>
+<div id="tg_13" class="t s3_13">c) El nombre y domicilio de los apoderados; </div>
+<div id="th_13" class="t s3_13">d) Los símbolos, emblemas y números partidarios que se registren; </div>
+<div id="ti_13" class="t s3_13">e) La cancelación de la personalidad jurídico-política partidaria; </div>
+<div id="tj_13" class="t s3_13">f) La extinción y la disolución partidaria. </div>
+<div id="tk_13" class="t s3_13">Todo movimiento en las inscripciones, cambios o modificaciones será comunicado inmediatamente </div>
+<div id="tl_13" class="t s3_13">por los juzgados de distrito a la Cámara Nacional Electoral para la actualización del registro a su </div>
+<div id="tm_13" class="t s3_13">cargo. </div>
+<div id="tn_13" class="t s2_13">TITULO V </div>
+<div id="to_13" class="t s2_13">Del patrimonio del partido </div>
+<div id="tp_13" class="t s4_13">(Título derogado por art. 71 de la Ley Nº 25.600 B.O. 12/6/2002. Vigencia de la derogación: a partir </div>
+<div id="tq_13" class="t s4_13">de los 120 días de publicada la ley N°25.600.) </div>
+<div id="tr_13" class="t s2_13">TITULO VI </div>
+<div id="ts_13" class="t s2_13">De la caducidad y extinción de los partidos </div>
+<div id="tt_13" class="t s2_13">ARTÍCULO 49.- </div>
+<div id="tu_13" class="t s3_13">La caducidad dará lugar a la cancelación de la inscripción del partido en el registro </div>
+<div id="tv_13" class="t s3_13">y la pérdida de la personalidad política. </div>
+<div id="tw_13" class="t s3_13">La extinción pondrá fin a la existencia legal del partido y dará lugar a su disolución. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg13Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg13"><object width="935" height="1210" data="13/13.svg" type="image/svg+xml" id="pdf13" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld13" type="text/javascript">
+
+var isIE = false;
+var f13 = [['t1_13',987],['t2_13',1004],['t3_13',1286],['t4_13',499],['t5_13',2399],['t6_13',2934],['t7_13',2934],['t8_13',1330],['t9_13',376],['ta_13',1954],['tb_13',484],['tc_13',2428],['td_13',1895],['te_13',2133],['tf_13',1594],['tg_13',1272],['th_13',1961],['ti_13',1838],['tj_13',1164],['tk_13',2933],['tl_13',2933],['tn_13',305],['to_13',848],['tp_13',2923],['tq_13',1341],['tr_13',337],['ts_13',1380],['tt_13',486],['tu_13',2425],['tv_13',1136],['tw_13',2420]];
+function load13(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f13);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 33;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_13");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

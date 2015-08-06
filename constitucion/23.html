@@ -1,0 +1,273 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load23();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_23{left:334px;top:139px;}
+#t2_23{left:356px;top:165px;}
+#t3_23{left:480px;top:1455px;}
+#t4_23{left:130px;top:209px;}
+#t5_23{left:268px;top:209px;}
+#t6_23{left:130px;top:229px;}
+#t7_23{left:130px;top:250px;}
+#t8_23{left:130px;top:279px;}
+#t9_23{left:130px;top:309px;}
+#ta_23{left:265px;top:309px;}
+#tb_23{left:130px;top:329px;}
+#tc_23{left:130px;top:350px;}
+#td_23{left:130px;top:379px;}
+#te_23{left:130px;top:409px;}
+#tf_23{left:262px;top:409px;}
+#tg_23{left:130px;top:429px;}
+#th_23{left:130px;top:450px;}
+#ti_23{left:130px;top:479px;}
+#tj_23{left:130px;top:509px;}
+#tk_23{left:130px;top:529px;}
+#tl_23{left:130px;top:559px;}
+#tm_23{left:130px;top:579px;}
+#tn_23{left:130px;top:600px;}
+#to_23{left:130px;top:629px;}
+#tp_23{left:130px;top:659px;}
+#tq_23{left:257px;top:659px;}
+#tr_23{left:130px;top:679px;}
+#ts_23{left:130px;top:700px;}
+#tt_23{left:130px;top:720px;}
+#tu_23{left:130px;top:741px;}
+#tv_23{left:130px;top:770px;}
+#tw_23{left:130px;top:791px;}
+#tx_23{left:130px;top:820px;}
+#ty_23{left:282px;top:820px;}
+#tz_23{left:130px;top:841px;}
+#t10_23{left:130px;top:870px;}
+#t11_23{left:130px;top:891px;}
+#t12_23{left:130px;top:911px;}
+#t13_23{left:130px;top:941px;}
+#t14_23{left:130px;top:961px;}
+#t15_23{left:130px;top:981px;}
+#t16_23{left:130px;top:1002px;}
+#t17_23{left:130px;top:1032px;}
+#t18_23{left:130px;top:1052px;}
+#t19_23{left:130px;top:1081px;}
+#t1a_23{left:130px;top:1111px;}
+#t1b_23{left:130px;top:1141px;}
+#t1c_23{left:130px;top:1161px;}
+
+.s3_23{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_23{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_23{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi23;
+	color: rgb(0,0,0);
+}
+
+.s1_23{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi23;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts23" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi23;
+	src :url("23/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_23" class="t s1_23">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_23" class="t s2_23">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_23" class="t s3_23">23 </div>
+<div id="t4_23" class="t s4_23">Decimotercera.</div>
+<div id="t5_23" class="t s3_23">A partir de los trescientos sesenta días de la vigencia de esta reforma los </div>
+<div id="t6_23" class="t s3_23">magistrados inferiores solamente podrán ser designados por el procedimiento previsto en la </div>
+<div id="t7_23" class="t s3_23">presente Constitución. Hasta tanto se aplicará el sistema vigente con anterioridad. </div>
+<div id="t8_23" class="t s3_23">(Corresponde al Artículo 114) </div>
+<div id="t9_23" class="t s4_23">Decimocuarta.</div>
+<div id="ta_23" class="t s3_23">Las causas en trámite ante la Cámara de Diputados al momento de </div>
+<div id="tb_23" class="t s3_23">instalarse el Consejo de la Magistratura, les serán remitidas a efectos del inc. 5 del Artículo </div>
+<div id="tc_23" class="t s3_23">114. Las ingresadas en el Senado continuarán allí hasta su terminación. </div>
+<div id="td_23" class="t s3_23">(Corresponde al Artículo 115) </div>
+<div id="te_23" class="t s4_23">Decimoquinta.</div>
+<div id="tf_23" class="t s3_23">Hasta tanto se constituyan los poderes que surjan del nuevo régimen de </div>
+<div id="tg_23" class="t s3_23">autonomía de la ciudad de Buenos Aires, el Congreso ejercerá una legislación exclusiva </div>
+<div id="th_23" class="t s3_23">sobre su territorio, en los mismos términos que hasta la sanción de la presente. </div>
+<div id="ti_23" class="t s3_23">El jefe de Gobierno será elegido durante el año mil novecientos noventa y cinco. </div>
+<div id="tj_23" class="t s3_23">La ley prevista en los párrafos segundo y tercero del Artículo 129, deberá ser sancionada </div>
+<div id="tk_23" class="t s3_23">dentro del plazo de doscientos setenta días a partir de la vigencia de esta Constitución </div>
+<div id="tl_23" class="t s3_23">Hasta tanto se haya dictado el estatuto organizativo la designación y remoción de los jueces </div>
+<div id="tm_23" class="t s3_23">de la ciudad de Buenos Aires se regirá por las disposiciones de los arts. 114 y 115 de esta </div>
+<div id="tn_23" class="t s3_23">Constitución. </div>
+<div id="to_23" class="t s3_23">(Corresponde al Artículo 129) </div>
+<div id="tp_23" class="t s4_23">Decimosexta.</div>
+<div id="tq_23" class="t s3_23">Esta reforma entra en vigencia al día siguiente de su publicación. Los </div>
+<div id="tr_23" class="t s3_23">miembros de la Convención Constituyente, el presidente de la Nación Argentina, los </div>
+<div id="ts_23" class="t s3_23">presidentes de las Cámaras Legislativas y el presidente de la Corte Suprema de Justicia </div>
+<div id="tt_23" class="t s3_23">prestan juramento en un mismo acto el día 24 de agosto de 1994, en el Palacio San José, </div>
+<div id="tu_23" class="t s3_23">Concepción del Uruguay, provincia de Entre Ríos. </div>
+<div id="tv_23" class="t s3_23">Cada poder del Estado y las autoridades provinciales y municipales disponen lo necesario </div>
+<div id="tw_23" class="t s3_23">para que sus miembros y funcionarios juren esta Constitución </div>
+<div id="tx_23" class="t s4_23">Decimoséptima.</div>
+<div id="ty_23" class="t s3_23">El texto constitucional ordenado, sancionado por esta Convención </div>
+<div id="tz_23" class="t s3_23">Constituyente, reemplaza al hasta ahora vigente. </div>
+<div id="t10_23" class="t s3_23">DADA EN LA SALA DE SESIONES DE LA CONVENCIÓN NACIONAL CONSTITUYENTE, EN LA </div>
+<div id="t11_23" class="t s3_23">CIUDAD DE SANTA FE, A LOS VEINTIDÓS DÍAS DEL MES DE AGOSTO DEL AÑO MIL </div>
+<div id="t12_23" class="t s3_23">NOVECIENTOS NOVENTA Y CUATRO. </div>
+<div id="t13_23" class="t s3_23">ARTICULO 2º.- El texto transcripto en el Artículo 1º de la presente ley incluye todas las </div>
+<div id="t14_23" class="t s3_23">disposiciones constitucionales sancionadas por la Convención Nacional Constituyente reunida </div>
+<div id="t15_23" class="t s3_23">en las ciudades de Santa Fe y Paraná en el año 1994, comprendiendo como Artículo 77, </div>
+<div id="t16_23" class="t s3_23">segunda parte, la aprobada en la sesión del primero de agosto de 1994 que expresa: </div>
+<div id="t17_23" class="t s3_23">"Los proyectos de ley que modifiquen el régimen electoral y de partidos políticos deberán ser </div>
+<div id="t18_23" class="t s3_23">aprobados por mayoría absoluta del total de los miembros de las Cámaras". </div>
+<div id="t19_23" class="t s3_23">ARTICULO 3º.- Publíquese en el Boletín Oficial. </div>
+<div id="t1a_23" class="t s3_23">ARTICULO 4º.- Comuníquese al Poder Ejecutivo </div>
+<div id="t1b_23" class="t s3_23">DADA EN LA SALA DE SESIONES DEL CONGRESO ARGENTINO, EN BUENOS AIRES, A LOS </div>
+<div id="t1c_23" class="t s3_23">QUINCE DIAS DEL MES DE DICIEMBRE DEL AÑO MIL NOVECIENTOS NOVENTA Y CUATRO. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg23Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg23"><object width="935" height="1540" data="23/23.svg" type="image/svg+xml" id="pdf23" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld23" type="text/javascript">
+
+var isIE = false;
+var f23 = [['t1_23',1244],['t2_23',1068],['t5_23',2324],['t6_23',2874],['t7_23',2545],['t8_23',912],['ta_23',2333],['tb_23',2874],['tc_23',2219],['td_23',912],['tf_23',2346],['tg_23',2874],['th_23',2465],['ti_23',2477],['tj_23',2874],['tk_23',2669],['tl_23',2874],['tm_23',2874],['to_23',912],['tq_23',2367],['tr_23',2874],['ts_23',2874],['tt_23',2875],['tu_23',1518],['tv_23',2874],['tw_23',1906],['ty_23',2267],['tz_23',1519],['t10_23',2875],['t11_23',2874],['t12_23',1135],['t13_23',2874],['t14_23',2874],['t15_23',2874],['t16_23',2628],['t17_23',2874],['t18_23',2343],['t19_23',1446],['t1a_23',1469],['t1b_23',2874],['t1c_23',2789]];
+function load23(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f23);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 49;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_23");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

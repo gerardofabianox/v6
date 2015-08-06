@@ -1,0 +1,261 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:297px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:399px;}
+#tc_1{left:101px;top:430px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:497px;}
+#tg_1{left:101px;top:514px;}
+#th_1{left:101px;top:532px;}
+#ti_1{left:101px;top:563px;}
+#tj_1{left:101px;top:581px;}
+#tk_1{left:101px;top:598px;}
+#tl_1{left:101px;top:616px;}
+#tm_1{left:101px;top:633px;}
+#tn_1{left:101px;top:665px;}
+#to_1{left:101px;top:682px;}
+#tp_1{left:101px;top:700px;}
+#tq_1{left:101px;top:717px;}
+#tr_1{left:101px;top:749px;}
+#ts_1{left:101px;top:766px;}
+#tt_1{left:101px;top:784px;}
+#tu_1{left:101px;top:801px;}
+#tv_1{left:101px;top:819px;}
+#tw_1{left:101px;top:836px;}
+#tx_1{left:101px;top:853px;}
+#ty_1{left:101px;top:885px;}
+#tz_1{left:101px;top:917px;}
+#t10_1{left:101px;top:948px;}
+#t11_1{left:101px;top:966px;}
+#t12_1{left:389px;top:966px;}
+#t13_1{left:101px;top:983px;}
+#t14_1{left:101px;top:1015px;}
+#t15_1{left:101px;top:1033px;}
+#t16_1{left:637px;top:1033px;}
+#t17_1{left:101px;top:1050px;}
+#t18_1{left:746px;top:1050px;}
+#t19_1{left:101px;top:1067px;}
+#t1a_1{left:596px;top:1067px;}
+#t1b_1{left:101px;top:1085px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N°101/2002 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 10/12/2002 </div>
+<div id="t5_1" class="t s4_1">CUERPO DE AUDITORES CONTADORES. DISTRIBUCIÓN GEOGRÁFICA. </div>
+<div id="t6_1" class="t s3_1">En Buenos Aires, a los diez días del mes de diciembre del año dos mil dos, se reúnen en la Sala de </div>
+<div id="t7_1" class="t s3_1">Acuerdos de la Cámara Nacional Electoral, los doctores Rodolfo Emilio Munné, Alberto Ricardo Dalla </div>
+<div id="t8_1" class="t s3_1">Via y Santiago Hernán Corcuera, actuando, los Secretarios de la Cámara doctores Jorge Horacio </div>
+<div id="t9_1" class="t s3_1">Otaño Piñero y Felipe González Roura. Abierto el acto el señor presidente, doctor Rodolfo Emilio </div>
+<div id="ta_1" class="t s3_1">Munné, </div>
+<div id="tb_1" class="t s3_1">CONSIDERARON: </div>
+<div id="tc_1" class="t s3_1">1°) Que la ley n° 25.600 -reglamentaria del art. 38 de la Constitución Nacional- encomienda a la </div>
+<div id="td_1" class="t s3_1">Justicia Nacional Electoral el control sobre el origen y destino de los fondos y patrimonio de los </div>
+<div id="te_1" class="t s3_1">partidos políticos.- </div>
+<div id="tf_1" class="t s3_1">2°) Que el art, 4, inciso “d” de ley 19.108 confiere a este Tribunal la atribución “especial” de </div>
+<div id="tg_1" class="t s3_1">organizar un cuerpo de auditores contadores, para verificar el estado contable de los partidos </div>
+<div id="th_1" class="t s3_1">políticos y el cumplimiento de las disposiciones legales aplicables.- </div>
+<div id="ti_1" class="t s3_1">3°) Que, conforme a ello, esta Cámara solicitó a la Corte Suprema de Justicia de la Nación la </div>
+<div id="tj_1" class="t s3_1">provisión de los medios necesarios para poner en funcionamiento el mencionado cuerpo, con un </div>
+<div id="tk_1" class="t s3_1">plantel de al menos (15) contadores públicos nacionales -si bien no escapa a su entendimiento la </div>
+<div id="tl_1" class="t s3_1">trascendente necesidad de contar con un técnico especializado en cada distrito- (Acordada n° 7 del </div>
+<div id="tm_1" class="t s3_1">21 de febrero de 2002 y Of. n° 1936 del 24 de junio de 2002).- </div>
+<div id="tn_1" class="t s3_1">4°) Que -superando las dificultades financieras por las que atraviesa el erario público- tal solicitud </div>
+<div id="to_1" class="t s3_1">ha sido receptada mediante resolución n° 1778 del 14 de noviembre de 2002, por la cual se autorizó </div>
+<div id="tp_1" class="t s3_1">la contratación de seis (6) agentes con el cargo equivalente al de Prosecretario Administrativo, para </div>
+<div id="tq_1" class="t s3_1">integrar dicho cuerpo.- </div>
+<div id="tr_1" class="t s3_1">5°) Que, por imperio de lo establecido en el ya citado art. 4° de la ley 19.108 y en atención al </div>
+<div id="ts_1" class="t s3_1">marco geográfico en el que debe realizarse la tarea relacionada -24 distritos electorales de todo el </div>
+<div id="tt_1" class="t s3_1">país, con 525 partidos de distrito, 38 de orden nacional reconocidos y 549 en trámite de </div>
+<div id="tu_1" class="t s3_1">reconocimiento-, este Tribunal se ve en la obligación de determinar la más adecuada distribución del </div>
+<div id="tv_1" class="t s3_1">cuerpo de auditores contadores a su cargo, teniendo en vista razones de comunicación y cantidad de </div>
+<div id="tw_1" class="t s3_1">trabajo, a los fines del mejor cumplimiento de las funciones que la ley le encomienda, sin perjuicio </div>
+<div id="tx_1" class="t s3_1">de lo que en el futuro se disponga en el caso de lograr la ampliación del referido cuerpo. Por ello, </div>
+<div id="ty_1" class="t s3_1">La Cámara Nacional Electoral </div>
+<div id="tz_1" class="t s3_1">RESUELVE: </div>
+<div id="t10_1" class="t s3_1">1º) Disponer que el cuerpo de auditores contadores de la Cámara Nacional Electoral, integrado </div>
+<div id="t11_1" class="t s3_1">mediante resolución n° 1778/02 de la </div>
+<div id="t12_1" class="t s3_1">Corte Suprema de Justicia de la Nación, ejerza sus funciones </div>
+<div id="t13_1" class="t s3_1">conforme la distribución geográfica que a continuación se detalla: </div>
+<div id="t14_1" class="t s3_1">a) Tres (3) agentes con sede en la Cámara Nacional Electoral, con intervención en el control </div>
+<div id="t15_1" class="t s3_1">patrimonial de los partidos políticos reconocidos en los distritos de la </div>
+<div id="t16_1" class="t s4_1">Capital Federal; Buenos </div>
+<div id="t17_1" class="t s4_1">Aires; La Pampa; Neuquén; Río Negro; Chubut; Santa Cruz y Tierra del Fuego -</div>
+<div id="t18_1" class="t s3_1">con un total </div>
+<div id="t19_1" class="t s3_1">aproximado de 160 partidos de distrito y 30 partidos nacionales-.</div>
+<div id="t1a_1" class="t s3_1">Asimismo intervendrán en todos </div>
+<div id="t1b_1" class="t s3_1">los trámites ante este Tribunal. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1033],['t4_1',587],['t5_1',2247],['t6_1',2933],['t7_1',2933],['t8_1',2934],['t9_1',2933],['tc_1',2933],['td_1',2934],['te_1',536],['tf_1',2934],['tg_1',2933],['th_1',1928],['ti_1',2933],['tj_1',2934],['tk_1',2933],['tl_1',2934],['tm_1',1850],['tn_1',2933],['to_1',2934],['tp_1',2934],['tq_1',665],['tr_1',2934],['ts_1',2934],['tt_1',2934],['tu_1',2933],['tv_1',2934],['tw_1',2934],['tx_1',2823],['ty_1',844],['t10_1',2933],['t11_1',1108],['t12_1',1780],['t13_1',1906],['t14_1',2933],['t15_1',2111],['t16_1',790],['t17_1',2581],['t18_1',352],['t19_1',1954],['t1a_1',954],['t1b_1',907]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 48;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:333px;top:128px;}
+#t2_6{left:331px;top:147px;}
+#t3_6{left:101px;top:211px;}
+#t4_6{left:101px;top:228px;}
+#t5_6{left:101px;top:246px;}
+#t6_6{left:101px;top:263px;}
+#t7_6{left:101px;top:295px;}
+#t8_6{left:101px;top:312px;}
+#t9_6{left:101px;top:344px;}
+#ta_6{left:101px;top:362px;}
+#tb_6{left:101px;top:379px;}
+#tc_6{left:101px;top:411px;}
+#td_6{left:241px;top:411px;}
+#te_6{left:325px;top:411px;}
+#tf_6{left:101px;top:428px;}
+#tg_6{left:101px;top:445px;}
+#th_6{left:101px;top:463px;}
+#ti_6{left:101px;top:495px;}
+#tj_6{left:766px;top:495px;}
+#tk_6{left:101px;top:512px;}
+#tl_6{left:101px;top:530px;}
+#tm_6{left:425px;top:530px;}
+#tn_6{left:604px;top:530px;}
+#to_6{left:101px;top:561px;}
+#tp_6{left:223px;top:561px;}
+#tq_6{left:449px;top:561px;}
+#tr_6{left:101px;top:579px;}
+#ts_6{left:101px;top:596px;}
+#tt_6{left:101px;top:628px;}
+#tu_6{left:101px;top:645px;}
+#tv_6{left:101px;top:677px;}
+#tw_6{left:101px;top:694px;}
+#tx_6{left:101px;top:712px;}
+#ty_6{left:101px;top:744px;}
+#tz_6{left:101px;top:761px;}
+#t10_6{left:101px;top:778px;}
+#t11_6{left:273px;top:810px;}
+#t12_6{left:101px;top:842px;}
+#t13_6{left:245px;top:842px;}
+#t14_6{left:303px;top:842px;}
+#t15_6{left:101px;top:859px;}
+#t16_6{left:101px;top:877px;}
+#t17_6{left:101px;top:894px;}
+#t18_6{left:101px;top:926px;}
+#t19_6{left:101px;top:943px;}
+#t1a_6{left:101px;top:961px;}
+#t1b_6{left:328px;top:992px;}
+#t1c_6{left:192px;top:1024px;}
+#t1d_6{left:101px;top:1056px;}
+#t1e_6{left:240px;top:1056px;}
+#t1f_6{left:349px;top:1056px;}
+#t1g_6{left:101px;top:1073px;}
+#t1h_6{left:101px;top:1091px;}
+
+.s3_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_6{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_6" class="t s1_6">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_6" class="t s2_6">ingresos y egresos del ejercicio, suscriptos por el presidente y tesorero del partido y por contador </div>
+<div id="t4_6" class="t s2_6">público matriculado en el distrito. El informe que efectúen los contadores públicos matriculados </div>
+<div id="t5_6" class="t s2_6">deberá contener un juicio técnico con la certificación correspondiente del Consejo Profesional de </div>
+<div id="t6_6" class="t s2_6">Ciencias Económicas de la jurisdicción correspondiente. </div>
+<div id="t7_6" class="t s2_6">Deberán poner a disposición de la justicia federal con competencia electoral la correspondiente </div>
+<div id="t8_6" class="t s2_6">documentación respaldatoria. </div>
+<div id="t9_6" class="t s2_6">Asimismo deberán presentar una lista completa de las personas físicas y jurídicas que hayan </div>
+<div id="ta_6" class="t s2_6">realizado aportes económicos en el período, detallando datos de identificación personal, </div>
+<div id="tb_6" class="t s2_6">identificación tributaria, monto y fecha del aporte. </div>
+<div id="tc_6" class="t s3_6">ARTÍCULO 24. — </div>
+<div id="td_6" class="t s2_6">Publicidad.</div>
+<div id="te_6" class="t s2_6">El juez federal con competencia electoral correspondiente ordenará la </div>
+<div id="tf_6" class="t s2_6">publicación inmediata de la información contable mencionada en el artículo anterior en el sitio web</div>
+<div id="tg_6" class="t s2_6">del Poder Judicial de la Nación y remitirá los estados contables anuales al Cuerpo de Auditores de la </div>
+<div id="th_6" class="t s2_6">Cámara Nacional Electoral para la confección del respectivo dictamen. </div>
+<div id="ti_6" class="t s2_6">Los partidos políticos deberán difundir en un diario de circulación nacional el sitio web</div>
+<div id="tj_6" class="t s2_6">donde se </div>
+<div id="tk_6" class="t s2_6">encuentran publicados los estados contables anuales completos con los listados de donantes. Si la </div>
+<div id="tl_6" class="t s2_6">agrupación política no contase con sitio web</div>
+<div id="tm_6" class="t s2_6">referenciará al sitio web</div>
+<div id="tn_6" class="t s2_6">del Poder Judicial de la Nación. </div>
+<div id="to_6" class="t s3_6">ARTÍCULO 25. </div>
+<div id="tp_6" class="t s2_6">— Observaciones de terceros.</div>
+<div id="tq_6" class="t s2_6">Los estados contables y demás informes podrán ser </div>
+<div id="tr_6" class="t s2_6">consultados en la sede del juzgado por cualquier ciudadano e incluso solicitar copia. La solicitud no </div>
+<div id="ts_6" class="t s2_6">requerirá expresión de causa y el costo de las copias estará a cargo del solicitante. </div>
+<div id="tt_6" class="t s2_6">Las observaciones de los terceros podrán formularse durante el plazo que dure el proceso de </div>
+<div id="tu_6" class="t s2_6">contralor, teniendo como fecha límite final, la de la resolución emitida por el juez respectivo. </div>
+<div id="tv_6" class="t s2_6">De las presentaciones efectuadas se correrá traslado al partido por el término de cinco (5) días, a fin </div>
+<div id="tw_6" class="t s2_6">de ponerlo en conocimiento de lo impugnado, conforme lo establece el artículo 150 del Código </div>
+<div id="tx_6" class="t s2_6">Procesal Civil y Comercial de la Nación de aplicación supletoria. </div>
+<div id="ty_6" class="t s2_6">Dichas impugnaciones tendrán como único efecto el de poner en conocimiento del juez interviniente </div>
+<div id="tz_6" class="t s2_6">los hechos que a juicio del presentante deben ser investigados, sin que los impugnantes tengan otra </div>
+<div id="t10_6" class="t s2_6">participación en la sustanciación del proceso. </div>
+<div id="t11_6" class="t s2_6">Capítulo II — Fiscalización y control patrimonial anual </div>
+<div id="t12_6" class="t s3_6">ARTÍCULO 26. — </div>
+<div id="t13_6" class="t s2_6">Plazos.</div>
+<div id="t14_6" class="t s2_6">La justicia federal electoral y la Cámara Nacional Electoral a través del </div>
+<div id="t15_6" class="t s2_6">Cuerpo de Auditores Contadores tendrán un máximo de ciento ochenta (180) días para la realización </div>
+<div id="t16_6" class="t s2_6">de la auditoría de los estados contables anuales y treinta (30) días para la elaboración y notificación </div>
+<div id="t17_6" class="t s2_6">a los partidos políticos dichos informes. </div>
+<div id="t18_6" class="t s2_6">Vencido dicho término el juez federal con competencia electoral dentro del plazo de treinta (30) días </div>
+<div id="t19_6" class="t s2_6">deberán resolver. El juez podrá ampliar dicho plazo de mediar un traslado al partido político para </div>
+<div id="t1a_6" class="t s2_6">que realice aclaraciones o presente un nuevo informe de corresponder. </div>
+<div id="t1b_6" class="t s2_6">Título III. De las campañas electorales </div>
+<div id="t1c_6" class="t s2_6">Capítulo I — Obligaciones de los partidos políticos por campañas electorales </div>
+<div id="t1d_6" class="t s3_6">ARTÍCULO 27. — </div>
+<div id="t1e_6" class="t s4_6">Responsables.</div>
+<div id="t1f_6" class="t s2_6">En forma previa al inicio de la campaña electoral, las agrupaciones </div>
+<div id="t1g_6" class="t s2_6">políticas, que presenten candidaturas a cargos públicos electivos deben designar dos (2) </div>
+<div id="t1h_6" class="t s2_6">responsables económico-financieros, que cumplan los requisitos previstos en el artículo 18 de la Ley </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1076],['t2_6',1095],['t3_6',2934],['t4_6',2933],['t5_6',2934],['t6_6',1607],['t7_6',2933],['t8_6',856],['t9_6',2933],['ta_6',2933],['tb_6',1456],['tc_6',539],['te_6',2038],['tf_6',2934],['tg_6',2934],['th_6',2030],['ti_6',2630],['tj_6',272],['tk_6',2934],['tl_6',1276],['tm_6',694],['tn_6',897],['to_6',463],['tp_6',881],['tq_6',1540],['tr_6',2933],['ts_6',2405],['tt_6',2933],['tu_6',2687],['tv_6',2933],['tw_6',2934],['tx_6',1834],['ty_6',2933],['tz_6',2934],['t10_6',1306],['t11_6',1557],['t12_6',550],['t14_6',2126],['t15_6',2933],['t16_6',2934],['t17_6',1141],['t18_6',2934],['t19_6',2934],['t1a_6',2061],['t1b_6',1117],['t1c_6',2201],['t1d_6',536],['t1f_6',1943],['t1g_6',2933],['t1h_6',2933]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 54;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

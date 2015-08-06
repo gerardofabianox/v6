@@ -1,0 +1,278 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load39();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_39{left:333px;top:108px;}
+#t2_39{left:331px;top:128px;}
+#t3_39{left:101px;top:191px;}
+#t4_39{left:101px;top:208px;}
+#t5_39{left:101px;top:246px;}
+#t6_39{left:222px;top:246px;}
+#t7_39{left:441px;top:246px;}
+#t8_39{left:101px;top:263px;}
+#t9_39{left:101px;top:281px;}
+#ta_39{left:101px;top:298px;}
+#tb_39{left:101px;top:336px;}
+#tc_39{left:101px;top:352px;}
+#td_39{left:268px;top:352px;}
+#te_39{left:101px;top:387px;}
+#tf_39{left:226px;top:387px;}
+#tg_39{left:414px;top:387px;}
+#th_39{left:101px;top:405px;}
+#ti_39{left:101px;top:422px;}
+#tj_39{left:101px;top:440px;}
+#tk_39{left:101px;top:477px;}
+#tl_39{left:221px;top:477px;}
+#tm_39{left:464px;top:477px;}
+#tn_39{left:101px;top:495px;}
+#to_39{left:101px;top:532px;}
+#tp_39{left:101px;top:550px;}
+#tq_39{left:101px;top:567px;}
+#tr_39{left:101px;top:605px;}
+#ts_39{left:101px;top:622px;}
+#tt_39{left:101px;top:660px;}
+#tu_39{left:101px;top:677px;}
+#tv_39{left:101px;top:715px;}
+#tw_39{left:101px;top:733px;letter-spacing:1px;}
+#tx_39{left:770px;top:733px;letter-spacing:3px;}
+#ty_39{left:101px;top:750px;}
+#tz_39{left:101px;top:788px;}
+#t10_39{left:101px;top:805px;}
+#t11_39{left:101px;top:823px;}
+#t12_39{left:101px;top:860px;}
+#t13_39{left:240px;top:860px;}
+#t14_39{left:565px;top:860px;}
+#t15_39{left:425px;top:896px;}
+#t16_39{left:354px;top:934px;}
+#t17_39{left:362px;top:971px;}
+#t18_39{left:420px;top:1009px;}
+#t19_39{left:382px;top:1046px;}
+
+.s3_39{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s6_39{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_39{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s7_39{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s4_39{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_39{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_39{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_39" class="t s1_39">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_39" class="t s1_39">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_39" class="t s2_39">habiéndose hecho o después de resueltas las que se presentaren, la Junta acordará un dictamen </div>
+<div id="t4_39" class="t s2_39">sobre las causas que a su juicio funden la validez o nulidad de la elección. </div>
+<div id="t5_39" class="t s3_39">Artículo 122.- </div>
+<div id="t6_39" class="t s4_39">Proclamación de los electos.</div>
+<div id="t7_39" class="t s2_39">La Asamblea Legislativa, en el caso de presidente y </div>
+<div id="t8_39" class="t s2_39">vicepresidente, y de parlamentarios del Mercosur, y las juntas electorales nacionales de los distritos, </div>
+<div id="t9_39" class="t s2_39">en el caso de senadores y diputados nacionales, proclamarán a los que resulten electos, haciéndoles </div>
+<div id="ta_39" class="t s2_39">entrega de los documentos que acrediten su carácter. </div>
+<div id="tb_39" class="t s5_39">(Artículo sustituido por art. 1 de la Ley N° 24.444 B.O. 19/01/1995 y modificado por art. 5° de la Ley N° </div>
+<div id="tc_39" class="t s5_39">27.120 B.O. 08/01/2015)</div>
+<div id="td_39" class="t s6_39">.</div>
+<div id="te_39" class="t s3_39">Artículo 123.- </div>
+<div id="tf_39" class="t s4_39">Destrucción de boletas.</div>
+<div id="tg_39" class="t s2_39">Inmediatamente, en presencia de los concurrentes, se </div>
+<div id="th_39" class="t s2_39">destruirán las boletas, con excepción de aquellas a las que se hubiese negado validez o hayan sido </div>
+<div id="ti_39" class="t s2_39">objeto de alguna reclamación, las cuales se unirán todas al acta a que alude el artículo 120, </div>
+<div id="tj_39" class="t s2_39">rubricadas por los miembros de la Junta y por los apoderados que quieran hacerlo. </div>
+<div id="tk_39" class="t s3_39">Artículo 124.- </div>
+<div id="tl_39" class="t s4_39">Acta de escrutinio. Testimonios.</div>
+<div id="tm_39" class="t s2_39">Todos estos procedimientos constarán en un acta </div>
+<div id="tn_39" class="t s2_39">que la Junta hará extender por su secretario y que será firmada por la totalidad de sus miembros. </div>
+<div id="to_39" class="t s2_39">La Junta Electoral Nacional del distrito enviará testimonio del acta a la Cámara Nacional Electoral, al </div>
+<div id="tp_39" class="t s2_39">Poder Ejecutivo y a los partidos intervinientes. El Ministerio del Interior y Transporte conservará por </div>
+<div id="tq_39" class="t s2_39">cinco (5) años los testimonios de las actas que le remitirán las Juntas. </div>
+<div id="tr_39" class="t s2_39">En el caso de la elección de parlamentarios del Mercosur la Cámara Nacional Electoral hará extender </div>
+<div id="ts_39" class="t s2_39">por su secretario un acta donde conste: </div>
+<div id="tt_39" class="t s2_39">a) La sumatoria de los resultados comunicados por las juntas nacionales electorales de las listas </div>
+<div id="tu_39" class="t s2_39">elegidas por distrito nacional; </div>
+<div id="tv_39" class="t s2_39">b) Quiénes han resultado electos parlamentarios del Mercosur titulares y suplentes, por distrito </div>
+<div id="tw_39" class="t s2_39">nacional y por distritos regionales provinciales y de la Ciudad Autónoma de Buenos A</div>
+<div id="tx_39" class="t s2_39">ires, por </div>
+<div id="ty_39" class="t s2_39">aplicación del sistema previsto en este Código. </div>
+<div id="tz_39" class="t s2_39">La Junta Nacional Electoral respectiva o, en su caso, la Cámara Nacional Electoral, otorgarán </div>
+<div id="t10_39" class="t s2_39">además un duplicado del acta correspondiente a cada uno de los electos, conjuntamente con un </div>
+<div id="t11_39" class="t s2_39">diploma. </div>
+<div id="t12_39" class="t s5_39">(Artículo modificado </div>
+<div id="t13_39" class="t s5_39">por art. 6° de la Ley N° 27.120 B.O. 08/01/2015)</div>
+<div id="t14_39" class="t s6_39">.</div>
+<div id="t15_39" class="t s3_39">TITULO VI </div>
+<div id="t16_39" class="t s7_39">Violación de la Ley Electoral </div>
+<div id="t17_39" class="t s7_39">Penas y Régimen Procesal </div>
+<div id="t18_39" class="t s3_39">CAPITULO I </div>
+<div id="t19_39" class="t s4_39">De las faltas electorales </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg39Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg39"><object width="935" height="1210" data="39/39.svg" type="image/svg+xml" id="pdf39" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld39" type="text/javascript">
+
+var isIE = false;
+var f39 = [['t1_39',1076],['t2_39',1096],['t3_39',2934],['t4_39',2146],['t5_39',453],['t6_39',846],['t7_39',1574],['t8_39',2934],['t9_39',2934],['ta_39',1562],['tb_39',2934],['tc_39',668],['te_39',461],['tf_39',714],['tg_39',1682],['th_39',2934],['ti_39',2934],['tj_39',2405],['tk_39',451],['tl_39',948],['tm_39',1479],['tn_39',2847],['to_39',2933],['tp_39',2933],['tq_39',2038],['tr_39',2934],['ts_39',1153],['tt_39',2934],['tu_39',858],['tv_39',2934],['tw_39',2678],['tx_39',256],['ty_39',1355],['tz_39',2933],['t10_39',2934],['t12_39',521],['t13_39',1299],['t15_39',337],['t16_39',905],['t17_39',847],['t18_39',382],['t19_39',688]];
+function load39(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f39);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_39");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load5();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_5{left:287px;top:1042px;}
+#t2_5{left:258px;top:1076px;}
+#t3_5{left:184px;top:1173px;}
+#t4_5{left:190px;top:1102px;}
+#t5_5{left:148px;top:1119px;letter-spacing:1px;}
+#t6_5{left:263px;top:1138px;}
+#t7_5{left:30px;top:1267px;}
+#t8_5{left:30px;top:1277px;}
+#t9_5{left:30px;top:1293px;}
+#ta_5{left:36px;top:1347px;}
+#tb_5{left:30px;top:1416px;}
+#tc_5{left:30px;top:1425px;}
+#td_5{left:30px;top:1441px;}
+#te_5{left:36px;top:1496px;}
+#tf_5{left:32px;top:1205px;letter-spacing:1px;}
+#tg_5{left:319px;top:1267px;}
+#th_5{left:319px;top:1277px;}
+#ti_5{left:319px;top:1293px;}
+#tj_5{left:325px;top:1347px;}
+#tk_5{left:519px;top:1267px;}
+#tl_5{left:519px;top:1277px;}
+#tm_5{left:519px;top:1293px;}
+#tn_5{left:525px;top:1347px;}
+#to_5{left:718px;top:1267px;}
+#tp_5{left:718px;top:1277px;}
+#tq_5{left:718px;top:1293px;}
+#tr_5{left:725px;top:1347px;}
+#ts_5{left:319px;top:1416px;}
+#tt_5{left:319px;top:1425px;}
+#tu_5{left:319px;top:1441px;}
+#tv_5{left:325px;top:1496px;}
+#tw_5{left:519px;top:1416px;}
+#tx_5{left:519px;top:1425px;}
+#ty_5{left:519px;top:1441px;}
+#tz_5{left:525px;top:1496px;}
+#t10_5{left:718px;top:1416px;}
+#t11_5{left:718px;top:1425px;}
+#t12_5{left:718px;top:1441px;}
+#t13_5{left:725px;top:1496px;}
+#t14_5{left:39px;top:345px;}
+#t15_5{left:123px;top:345px;}
+#t16_5{left:142px;top:358px;}
+#t17_5{left:269px;top:345px;}
+#t18_5{left:389px;top:372px;letter-spacing:-1px;}
+#t19_5{left:578px;top:181px;}
+#t1a_5{left:573px;top:216px;}
+#t1b_5{left:599px;top:250px;}
+#t1c_5{left:201px;top:174px;letter-spacing:1px;}
+#t1d_5{left:185px;top:185px;letter-spacing:1px;}
+#t1e_5{left:365px;top:180px;letter-spacing:3px;}
+#t1f_5{left:34px;top:200px;}
+#t1g_5{left:34px;top:210px;}
+#t1h_5{left:34px;top:226px;}
+#t1i_5{left:34px;top:237px;}
+#t1j_5{left:118px;top:237px;}
+#t1k_5{left:34px;top:258px;}
+#t1l_5{left:34px;top:130px;}
+#t1m_5{left:80px;top:130px;}
+#t1n_5{left:34px;top:146px;}
+#t1o_5{left:565px;top:129px;}
+#t1p_5{left:579px;top:133px;}
+#t1q_5{left:565px;top:95px;}
+#t1r_5{left:579px;top:100px;}
+#t1s_5{left:690px;top:98px;}
+#t1t_5{left:646px;top:70px;letter-spacing:25px;}
+#t1u_5{left:530px;top:289px;}
+#t1v_5{left:86px;top:29px;}
+#t1w_5{left:86px;top:50px;}
+#t1x_5{left:86px;top:77px;}
+#t1y_5{left:183px;top:82px;}
+#t1z_5{left:514px;top:336px;}
+#t20_5{left:620px;top:336px;}
+#t21_5{left:726px;top:336px;}
+#t22_5{left:832px;top:336px;}
+#t23_5{left:409px;top:336px;}
+#t24_5{left:829px;top:13px;}
+#t25_5{left:838px;top:28px;}
+
+.s19_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-MyriadPro-Bold5;
+	color: rgb(255,255,255);
+}
+
+.s9_5{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(63,63,64);
+}
+
+.s7_5{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: MAIIBU-Vrinda5;
+	color: rgb(35,31,32);
+}
+
+.s17_5{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(35,31,32);
+}
+
+.s24_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: CourierNewPS-BoldMT;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s13_5{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(255,255,255);
+}
+
+.s14_5{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(63,63,64);
+}
+
+.s1_5{
+	FONT-SIZE: 55px;
+	FONT-FAMILY: MAIIBU-Vrinda5;
+	color: rgb(35,31,32);
+}
+
+.s10_5{
+	FONT-SIZE: 42px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(63,63,64);
+}
+
+.s12_5{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(63,63,64);
+}
+
+.s5_5{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(35,31,32);
+}
+
+.s23_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: WOAMMG-MyriadPro-Semibold5;
+	color: rgb(35,31,32);
+}
+
+.s4_5{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(35,31,32);
+}
+
+.s25_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: EKFPXV-CourierNewPS-BoldMT5;
+	color: rgb(35,31,32);
+}
+
+.s15_5{
+	FONT-SIZE: 91px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(35,31,32);
+}
+
+.s11_5{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed5;
+	color: rgb(63,63,64);
+}
+
+.s3_5{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: Helvetica, Arial, sans-serif;
+	color: rgb(35,31,32);
+}
+
+.s21_5{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black5;
+	color: rgb(35,31,32);
+}
+
+.s8_5{
+	FONT-SIZE: 64px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(35,31,32);
+}
+
+.s16_5{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(35,31,32);
+}
+
+.s18_5{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Regular5;
+	color: rgb(35,31,32);
+}
+
+.s6_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(35,31,32);
+}
+
+.s2_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol5;
+	color: rgb(255,255,255);
+}
+
+.s20_5{
+	FONT-SIZE: 71px;
+	FONT-FAMILY: CenturyGothic-Bold;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s22_5{
+	FONT-SIZE: 65px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black5;
+	color: rgb(35,31,32);
+}
+
+.v1_5{
+-webkit-transform: scale(0.25, 0,30);
+-ms-transform: scale(0.25, 0,30);
+-moz-transform: scale(0.25, 0,30);
+-o-transform: scale(0.25, 0,30);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts5" type="text/css" >
+
+@font-face {
+	font-family: MAIIBU-Vrinda5;
+	src :url("5/fonts/MAIIBU-Vrinda.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-MyriadPro-Bold5;
+	src :url("5/fonts/EKFPXV-MyriadPro-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Black5;
+	src :url("5/fonts/WCGQLA-MyriadPro-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-CourierNewPS-BoldMT5;
+	src :url("5/fonts/EKFPXV-CourierNewPS-BoldMT.woff") format("woff");
+}
+
+@font-face {
+	font-family: WOAMMG-MyriadPro-Semibold5;
+	src :url("5/fonts/WOAMMG-MyriadPro-Semibold.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-Helvetica-Condensed5;
+	src :url("5/fonts/UNCHNP-Helvetica-Condensed.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-Helvetica-Condensed-Bol5;
+	src :url("5/fonts/EKFPXV-Helvetica-Condensed-Bol.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Regular5;
+	src :url("5/fonts/WCGQLA-MyriadPro-Regular.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_5" class="t s1_5">VOTOS NULOS</div>
+<div id="t2_5" class="t s1_5">VOTOS RECURRIDOS</div>
+<div id="t3_5" class="t s2_5">TOTAL DE VOTOS POR COLUMNA*</div>
+<div id="t4_5" class="t s1_5">VOTOS DE IDENTIDAD IMPUGNADA</div>
+<div id="t5_5" class="t v1_5 s3_5">(en todas las columnas debe asentar la misma cantidad)</div>
+<div id="t6_5" class="t s1_5">VOTOS EN BLANCO</div>
+<div id="t7_5" class="t s4_5">Firma </div>
+<div id="t8_5" class="t s4_5">Presidente</div>
+<div id="t9_5" class="t s5_5">Nombre Apellido</div>
+<div id="ta_5" class="t s6_5">D.N.I.</div>
+<div id="tb_5" class="t s4_5">Firma </div>
+<div id="tc_5" class="t s4_5">Suplente</div>
+<div id="td_5" class="t s5_5">Nombre Apellido</div>
+<div id="te_5" class="t s6_5">D.N.I.</div>
+<div id="tf_5" class="t s4_5">* SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBE COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS QUE SE EXTRAJERON DE LA URNA.</div>
+<div id="tg_5" class="t s4_5">Firma </div>
+<div id="th_5" class="t s4_5">Fiscal</div>
+<div id="ti_5" class="t s5_5">Nombre Apellido</div>
+<div id="tj_5" class="t s6_5">D.N.I.</div>
+<div id="tk_5" class="t s4_5">Firma </div>
+<div id="tl_5" class="t s4_5">Fiscal</div>
+<div id="tm_5" class="t s5_5">Nombre Apellido</div>
+<div id="tn_5" class="t s6_5">D.N.I.</div>
+<div id="to_5" class="t s4_5">Firma </div>
+<div id="tp_5" class="t s4_5">Fiscal</div>
+<div id="tq_5" class="t s5_5">Nombre Apellido</div>
+<div id="tr_5" class="t s6_5">D.N.I.</div>
+<div id="ts_5" class="t s4_5">Firma </div>
+<div id="tt_5" class="t s4_5">Fiscal</div>
+<div id="tu_5" class="t s5_5">Nombre Apellido</div>
+<div id="tv_5" class="t s6_5">D.N.I.</div>
+<div id="tw_5" class="t s4_5">Firma </div>
+<div id="tx_5" class="t s4_5">Fiscal</div>
+<div id="ty_5" class="t s5_5">Nombre Apellido</div>
+<div id="tz_5" class="t s6_5">D.N.I.</div>
+<div id="t10_5" class="t s4_5">Firma </div>
+<div id="t11_5" class="t s4_5">Fiscal</div>
+<div id="t12_5" class="t s5_5">Nombre Apellido</div>
+<div id="t13_5" class="t s6_5">D.N.I.</div>
+<div id="t14_5" class="t s1_5">NÚMERO</div>
+<div id="t15_5" class="t s1_5">PARTIDO POLÍTICO </div>
+<div id="t16_5" class="t s1_5">O ALIANZA</div>
+<div id="t17_5" class="t s1_5">LISTAS INTERNAS</div>
+<div id="t18_5" class="t s7_5">total de votos - en N° total de votos - en N° total de votos - en N° total de votos - en N° total de votos - en N°</div>
+<div id="t19_5" class="t s8_5">SECCIÓN:</div>
+<div id="t1a_5" class="t s8_5">CIRCUITO:</div>
+<div id="t1b_5" class="t s8_5">MESA:</div>
+<div id="t1c_5" class="t s9_5">EN</div>
+<div id="t1d_5" class="t s9_5">NÚMEROS</div>
+<div id="t1e_5" class="t s10_5">EN LETRAS</div>
+<div id="t1f_5" class="t s11_5">Cantidad de ciudadanos que </div>
+<div id="t1g_5" class="t s11_5">votaron (según el padrón)</div>
+<div id="t1h_5" class="t s11_5">Cantidad de sobres utilizados</div>
+<div id="t1i_5" class="t s11_5">extraídos de la urna </div>
+<div id="t1j_5" class="t s12_5">*</div>
+<div id="t1k_5" class="t s11_5">Diferencia entre las anteriores</div>
+<div id="t1l_5" class="t v1_5 s13_5">CERTIFICO: </div>
+<div id="t1m_5" class="t v1_5 s14_5">en mi carácter de presidente de mesa, de acuerdo con lo establecido en los arts. 102 y 102 bis del Código Electoral Nacional, que el escrutinio </div>
+<div id="t1n_5" class="t v1_5 s14_5">arrojó los siguientes resultados:</div>
+<div id="t1o_5" class="t s15_5">D</div>
+<div id="t1p_5" class="t s16_5">ISTRITO:</div>
+<div id="t1q_5" class="t s15_5">D</div>
+<div id="t1r_5" class="t s16_5">ESTINATARIO: </div>
+<div id="t1s_5" class="t s17_5">Justicia Nacional Electoral</div>
+<div id="t1t_5" class="t s18_5">*010010000101*</div>
+<div id="t1u_5" class="t s19_5">NO INTRODUCIR EN LA URNA - ENTREGAR AL EMPLEADO DEL CORREO</div>
+<div id="t1v_5" class="t s20_5">ELECCIONES P.A.S.O.</div>
+<div id="t1w_5" class="t s21_5">09 de agosto de 2015</div>
+<div id="t1x_5" class="t s22_5">TELEGRAMA </div>
+<div id="t1y_5" class="t s23_5">(Art. 105 Ley N° 19.945)</div>
+<div id="t1z_5" class="t s1_5">CATEGORÍA</div>
+<div id="t20_5" class="t s1_5">CATEGORÍA</div>
+<div id="t21_5" class="t s1_5">CATEGORÍA</div>
+<div id="t22_5" class="t s1_5">CATEGORÍA</div>
+<div id="t23_5" class="t s1_5">CATEGORÍA</div>
+<div id="t24_5" class="t s24_5">Ac. 56/15</div>
+<div id="t25_5" class="t s25_5">Anexo XІ</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg5Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg5"><object width="935" height="1540" data="5/5.svg" type="image/svg+xml" id="pdf5" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld5" type="text/javascript">
+
+var isIE = false;
+var f5 = [['t1_5',276],['t2_5',395],['t3_5',689],['t4_5',665],['t5_5',833],['t6_5',375],['t9_5',264],['td_5',264],['tf_5',2643],['ti_5',264],['tm_5',264],['tq_5',264],['tu_5',264],['ty_5',264],['t12_5',264],['t15_5',355],['t16_5',203],['t17_5',332],['t18_5',2068],['t1e_5',221],['t1f_5',465],['t1g_5',430],['t1h_5',485],['t1i_5',327],['t1k_5',496],['t1m_5',1679],['t1n_5',378],['t1s_5',816],['t1u_5',1514],['t1v_5',714],['t1w_5',576],['t1y_5',491],['t24_5',330],['t25_5',293]];
+function load5(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f5);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 78;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_5");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

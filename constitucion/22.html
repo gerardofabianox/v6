@@ -1,0 +1,284 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load22();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_22{left:437px;top:1453px;}
+#t2_22{left:87px;top:130px;}
+#t3_22{left:87px;top:150px;}
+#t4_22{left:87px;top:171px;}
+#t5_22{left:87px;top:200px;}
+#t6_22{left:87px;top:221px;}
+#t7_22{left:87px;top:241px;}
+#t8_22{left:87px;top:271px;}
+#t9_22{left:87px;top:291px;}
+#ta_22{left:87px;top:312px;}
+#tb_22{left:87px;top:332px;}
+#tc_22{left:87px;top:362px;}
+#td_22{left:87px;top:382px;}
+#te_22{left:87px;top:412px;}
+#tf_22{left:87px;top:432px;}
+#tg_22{left:87px;top:462px;}
+#th_22{left:87px;top:491px;}
+#ti_22{left:155px;top:491px;}
+#tj_22{left:87px;top:512px;}
+#tk_22{left:87px;top:532px;}
+#tl_22{left:87px;top:562px;}
+#tm_22{left:87px;top:591px;}
+#tn_22{left:147px;top:591px;}
+#to_22{left:87px;top:612px;}
+#tp_22{left:87px;top:632px;}
+#tq_22{left:87px;top:653px;}
+#tr_22{left:87px;top:673px;}
+#ts_22{left:87px;top:693px;}
+#tt_22{left:87px;top:714px;}
+#tu_22{left:87px;top:743px;}
+#tv_22{left:87px;top:764px;}
+#tw_22{left:87px;top:784px;}
+#tx_22{left:87px;top:814px;}
+#ty_22{left:87px;top:844px;}
+#tz_22{left:171px;top:844px;}
+#t10_22{left:87px;top:864px;}
+#t11_22{left:87px;top:893px;}
+#t12_22{left:87px;top:923px;}
+#t13_22{left:160px;top:923px;}
+#t14_22{left:87px;top:944px;}
+#t15_22{left:87px;top:964px;}
+#t16_22{left:87px;top:994px;}
+#t17_22{left:87px;top:1023px;}
+#t18_22{left:164px;top:1023px;}
+#t19_22{left:87px;top:1044px;}
+#t1a_22{left:87px;top:1073px;}
+#t1b_22{left:87px;top:1103px;}
+#t1c_22{left:162px;top:1103px;}
+#t1d_22{left:87px;top:1123px;}
+#t1e_22{left:87px;top:1153px;}
+#t1f_22{left:87px;top:1182px;}
+#t1g_22{left:187px;top:1182px;}
+#t1h_22{left:87px;top:1203px;}
+#t1i_22{left:87px;top:1223px;}
+#t1j_22{left:87px;top:1253px;}
+#t1k_22{left:87px;top:1282px;}
+#t1l_22{left:194px;top:1282px;}
+#t1m_22{left:87px;top:1303px;}
+#t1n_22{left:87px;top:1323px;}
+#t1o_22{left:87px;top:1353px;}
+#t1p_22{left:87px;top:1373px;}
+#t1q_22{left:87px;top:1403px;}
+
+.s3_22{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_22{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_22{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_22" class="t s1_22">22</div>
+<div id="t2_22" class="t s2_22">Estas reglas serán también aplicables a la elección de los senadores por la ciudad de Buenos </div>
+<div id="t3_22" class="t s2_22">Aires, en mil novecientos noventa y cinco por el cuerpo electoral, y en mil novecientos </div>
+<div id="t4_22" class="t s2_22">noventa y ocho, por el órgano legislativo de la ciudad. </div>
+<div id="t5_22" class="t s2_22">La elección de todos los senadores a que se refiere esta cláusula se llevará a cabo con una </div>
+<div id="t6_22" class="t s2_22">anticipación no menor de sesenta ni mayor de noventa días al momento en que el senador </div>
+<div id="t7_22" class="t s2_22">deba asumir su función. </div>
+<div id="t8_22" class="t s2_22">En todos los casos, los candidatos a senadores serán propuestos por los partidos políticos o </div>
+<div id="t9_22" class="t s2_22">alianzas electorales. El cumplimiento de las exigencias legales y estatutarias para ser </div>
+<div id="ta_22" class="t s2_22">proclamado candidato será certificado por la Justicia Electoral Nacional y comunicado a la </div>
+<div id="tb_22" class="t s2_22">Legislatura. </div>
+<div id="tc_22" class="t s2_22">Toda vez que se elija un senador nacional se designará un suplente, quien asumirá en los </div>
+<div id="td_22" class="t s2_22">casos del Artículo 62. </div>
+<div id="te_22" class="t s2_22">Los mandatos de los senadores elegidos por aplicación de esta cláusula transitoria durarán </div>
+<div id="tf_22" class="t s2_22">hasta el nueve de diciembre del dos mil uno. </div>
+<div id="tg_22" class="t s2_22">(Corresponde al Artículo 54) </div>
+<div id="th_22" class="t s3_22">Quinta.</div>
+<div id="ti_22" class="t s2_22">Todos los integrantes del Senado serán elegidos en la forma indicada en el Artículo </div>
+<div id="tj_22" class="t s2_22">54 dentro de los dos meses anteriores al diez de diciembre del dos mil uno, decidiéndose por </div>
+<div id="tk_22" class="t s2_22">la suerte, luego que todos se reúnan, quienes deban salir en el primero y segundo bienio. </div>
+<div id="tl_22" class="t s2_22">(Corresponde al Artículo 56) </div>
+<div id="tm_22" class="t s3_22">Sexta.</div>
+<div id="tn_22" class="t s2_22">Un régimen de coparticipación conforme lo dispuesto en el inc. 2 del Artículo 75 y la </div>
+<div id="to_22" class="t s2_22">reglamentación del organismo fiscal federal, serán establecidos antes de la finalización del </div>
+<div id="tp_22" class="t s2_22">año 1996; la distribución de competencias, servicios y funciones vigentes a la sanción de </div>
+<div id="tq_22" class="t s2_22">esta reforma, no podrá modificarse sin la aprobación de la provincia interesada; tampoco </div>
+<div id="tr_22" class="t s2_22">podrá modificarse en desmedro de las provincias la distribución de recursos vigente a la </div>
+<div id="ts_22" class="t s2_22">sanción de esta reforma y en ambos casos hasta el dictado del mencionado régimen de </div>
+<div id="tt_22" class="t s2_22">coparticipación. </div>
+<div id="tu_22" class="t s2_22">La presente cláusula no afecta los reclamos administrativos o judiciales en trámite </div>
+<div id="tv_22" class="t s2_22">originados por diferencias por distribución de competencias, servicios, funciones o recursos </div>
+<div id="tw_22" class="t s2_22">entre la Nación y las provincias. </div>
+<div id="tx_22" class="t s2_22">(Corresponde al Artículo 75 inc. 2). </div>
+<div id="ty_22" class="t s3_22">Séptima.</div>
+<div id="tz_22" class="t s2_22">El Congreso ejercerá en la ciudad de Buenos Aires mientras sea capital de la </div>
+<div id="t10_22" class="t s2_22">Nación las atribuciones legislativas que conserve con arreglo al Artículo 129. </div>
+<div id="t11_22" class="t s2_22">(Corresponde al Artículo 75 inc. 30). </div>
+<div id="t12_22" class="t s3_22">Octava.</div>
+<div id="t13_22" class="t s2_22">La legislación delegada preexistente que no contenga plazo establecido para su </div>
+<div id="t14_22" class="t s2_22">ejercicio caducará a los cinco años de la vigencia de esta disposición excepto aquella que el </div>
+<div id="t15_22" class="t s2_22">Congreso de la Nación ratifique expresamente por una nueva ley. </div>
+<div id="t16_22" class="t s2_22">(Corresponde al Artículo 76). </div>
+<div id="t17_22" class="t s3_22">Novena.</div>
+<div id="t18_22" class="t s2_22">El mandato del presidente en ejercicio al momento de sancionarse esta reforma </div>
+<div id="t19_22" class="t s2_22">deberá ser considerado como primer período. </div>
+<div id="t1a_22" class="t s2_22">(Corresponde al Artículo 90) </div>
+<div id="t1b_22" class="t s3_22">Décima.</div>
+<div id="t1c_22" class="t s2_22">El mandato del Presidente de la Nación que asuma su cargo el 8 de julio de 1995 </div>
+<div id="t1d_22" class="t s2_22">se extinguirá el 10 de diciembre de 1999. </div>
+<div id="t1e_22" class="t s2_22">(Corresponde al Artículo 90) </div>
+<div id="t1f_22" class="t s3_22">Undécimo.</div>
+<div id="t1g_22" class="t s2_22">La caducidad de los nombramientos y la duración limitada previstas en el </div>
+<div id="t1h_22" class="t s2_22">Artículo 99 inc. 4 entrarán en vigencia a los cinco años de la sanción de esta reforma </div>
+<div id="t1i_22" class="t s2_22">constitucional. </div>
+<div id="t1j_22" class="t s2_22">(Corresponde al Artículo 99 inc. 4) </div>
+<div id="t1k_22" class="t s3_22">Duodécima.</div>
+<div id="t1l_22" class="t s2_22">Las prescripciones establecidas en los arts. 100 y 101 del capítulo cuarto de la </div>
+<div id="t1m_22" class="t s2_22">sección segunda de la segunda parte de esta Constitución referidas al jefe de gabinete de </div>
+<div id="t1n_22" class="t s2_22">ministros, entrarán en vigencia el 8 de julio de 1995. </div>
+<div id="t1o_22" class="t s2_22">El jefe de gabinete de ministros será designado por primera vez el 8 de julio de 1995 hasta </div>
+<div id="t1p_22" class="t s2_22">esa fecha sus facultades serán ejercitadas por el Presidente de la República. </div>
+<div id="t1q_22" class="t s2_22">(Corresponde a los arts. 99 inc. 7, 100 y 101.) </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg22Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg22"><object width="935" height="1540" data="22/22.svg" type="image/svg+xml" id="pdf22" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld22" type="text/javascript">
+
+var isIE = false;
+var f22 = [['t2_22',2874],['t3_22',2874],['t4_22',1671],['t5_22',2874],['t6_22',2874],['t7_22',739],['t8_22',2874],['t9_22',2875],['ta_22',2874],['tc_22',2874],['td_22',658],['te_22',2874],['tf_22',1382],['tg_22',873],['ti_22',2599],['tj_22',2874],['tk_22',2768],['tl_22',873],['tn_22',2634],['to_22',2874],['tp_22',2875],['tq_22',2874],['tr_22',2874],['ts_22',2874],['tu_22',2874],['tv_22',2874],['tw_22',983],['tx_22',1086],['tz_22',2536],['t10_22',2357],['t11_22',1125],['t13_22',2579],['t14_22',2874],['t15_22',2021],['t16_22',895],['t18_22',2563],['t19_22',1402],['t1a_22',873],['t1c_22',2573],['t1d_22',1285],['t1e_22',873],['t1g_22',2471],['t1h_22',2875],['t1j_22',1064],['t1l_22',2447],['t1m_22',2874],['t1n_22',1638],['t1o_22',2874],['t1p_22',2348],['t1q_22',1441]];
+function load22(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f22);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 63;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_22");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:418px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:256px;}
+#t6_1{left:101px;top:272px;}
+#t7_1{left:240px;top:295px;}
+#t8_1{left:101px;top:327px;}
+#t9_1{left:233px;top:327px;}
+#ta_1{left:101px;top:344px;}
+#tb_1{left:101px;top:361px;}
+#tc_1{left:101px;top:379px;}
+#td_1{left:101px;top:411px;}
+#te_1{left:230px;top:411px;}
+#tf_1{left:101px;top:428px;}
+#tg_1{left:384px;top:428px;}
+#th_1{left:101px;top:445px;}
+#ti_1{left:101px;top:463px;}
+#tj_1{left:101px;top:495px;}
+#tk_1{left:238px;top:495px;}
+#tl_1{left:101px;top:512px;}
+#tm_1{left:101px;top:529px;}
+#tn_1{left:101px;top:547px;}
+#to_1{left:101px;top:578px;}
+#tp_1{left:101px;top:596px;}
+#tq_1{left:101px;top:613px;}
+#tr_1{left:464px;top:613px;}
+#ts_1{left:487px;top:613px;}
+#tt_1{left:542px;top:613px;}
+#tu_1{left:101px;top:645px;}
+#tv_1{left:101px;top:663px;}
+#tw_1{left:101px;top:694px;}
+#tx_1{left:237px;top:694px;}
+#ty_1{left:101px;top:712px;}
+#tz_1{left:101px;top:743px;}
+#t10_1{left:235px;top:743px;}
+#t11_1{left:101px;top:761px;}
+#t12_1{left:101px;top:778px;}
+#t13_1{left:101px;top:796px;}
+#t14_1{left:101px;top:827px;}
+#t15_1{left:228px;top:827px;}
+#t16_1{left:476px;top:827px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Ley 24.007 </div>
+<div id="t4_1" class="t s3_1">Sancionada: Octubre 9 de 1991. </div>
+<div id="t5_1" class="t s3_1">Promulgada: Octubre 29 de 1991. </div>
+<div id="t6_1" class="t s3_1">Publicada: B.O. 05/11/1991. </div>
+<div id="t7_1" class="t s4_1">REGISTRO DE ELECTORES RESIDENTES EN EL EXTERIOR </div>
+<div id="t8_1" class="t s4_1">ARTÍCULO 1° –</div>
+<div id="t9_1" class="t s5_1">Los ciudadanos argentinos que, residiendo en forma efectiva y permanente fuera </div>
+<div id="ta_1" class="t s5_1">del territorio de la República Argentina, sean electores nacionales de acuerdo a lo dispuesto en el </div>
+<div id="tb_1" class="t s5_1">Código Electoral Nacional y se inscriban en el Registro de Electores Residentes en el Exterior </div>
+<div id="tc_1" class="t s5_1">establecido en el artículo siguiente, podrán votar en las elecciones nacionales. </div>
+<div id="td_1" class="t s4_1">ARTÍCULO 2° –</div>
+<div id="te_1" class="t s5_1">Créase el Registro de Electores Residentes en el Exterior. La inscripción se hará en </div>
+<div id="tf_1" class="t s5_1">la forma y plazos que establezca </div>
+<div id="tg_1" class="t s5_1">la reglamentación, en las representaciones diplomáticas o </div>
+<div id="th_1" class="t s5_1">consulares argentinas existentes en el país de residencia del elector, las que a esos efectos </div>
+<div id="ti_1" class="t s5_1">quedarán subordinadas a la Cámara Nacional Electoral. </div>
+<div id="tj_1" class="t s4_1">ARTÍCULO 3° – </div>
+<div id="tk_1" class="t s5_1">Los ciudadanos que de acuerdo a lo establecido en el artículo 1º optasen por </div>
+<div id="tl_1" class="t s5_1">inscribirse en el Registro de Electores Residentes en el Exterior deberán acreditar su último domicilio </div>
+<div id="tm_1" class="t s5_1">en la República Argentina, para poder ser incorporados o ratificados en el Padrón Electoral del </div>
+<div id="tn_1" class="t s5_1">distrito correspondiente al cual, oportunamente, se adjudicarán los votos emitidos. </div>
+<div id="to_1" class="t s5_1">En el supuesto que los electores no pudiesen acreditar el último domicilio en la República Argentina, </div>
+<div id="tp_1" class="t s5_1">se considerará como último domicilio el del lugar de nacimiento en dicho país. En caso de </div>
+<div id="tq_1" class="t s5_1">imposibilidad de acreditarlo se tomará en cuenta </div>
+<div id="tr_1" class="t s5_1">el </div>
+<div id="ts_1" class="t s5_1">último </div>
+<div id="tt_1" class="t s5_1">domicilio de los padres. </div>
+<div id="tu_1" class="t s5_1">En cada representación diplomática o consular receptora de votos se efectuará el escrutinio </div>
+<div id="tv_1" class="t s5_1">pertinente de acuerdo a las disposiciones del Código Electoral Nacional. </div>
+<div id="tw_1" class="t s4_1">ARTÍCULO 4° –</div>
+<div id="tx_1" class="t s5_1">Esta ley queda incorporada al Código Electoral Nacional que será de aplicación </div>
+<div id="ty_1" class="t s5_1">supletoria en todo lo no previsto en ella. </div>
+<div id="tz_1" class="t s4_1">ARTÍCULO 5° –</div>
+<div id="t10_1" class="t s5_1">El Poder Ejecutivo nacional dictará la reglamentación de la presente ley, la que </div>
+<div id="t11_1" class="t s5_1">deberá prever las facilidades necesarias para asegurar un trámite sencillo, rápido y gratuito a </div>
+<div id="t12_1" class="t s5_1">quienes deseen acogerse a sus prescripciones, tanto en cuanto a la inscripción en el Registro de </div>
+<div id="t13_1" class="t s5_1">Electores Residentes en el Exterior como en cuanto al acto de emisión del sufragio. </div>
+<div id="t14_1" class="t s4_1">ARTÍCULO 6° –</div>
+<div id="t15_1" class="t s5_1">Comuníquese, al Poder Ejecutivo </div>
+<div id="t16_1" class="t s5_1">Nacional.</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',392],['t4_1',846],['t5_1',889],['t6_1',748],['t7_1',1822],['t8_1',501],['t9_1',2406],['ta_1',2933],['tb_1',2933],['tc_1',2265],['td_1',493],['te_1',2418],['tf_1',1049],['tg_1',1801],['th_1',2933],['ti_1',1602],['tj_1',515],['tk_1',2386],['tl_1',2933],['tm_1',2933],['tn_1',2407],['to_1',2934],['tp_1',2934],['tq_1',1411],['tt_1',681],['tu_1',2934],['tv_1',2070],['tw_1',511],['tx_1',2390],['ty_1',1171],['tz_1',508],['t10_1',2396],['t11_1',2933],['t12_1',2934],['t13_1',2412],['t14_1',490],['t15_1',950]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 43;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:268px;}
+#t6_1{left:101px;top:285px;}
+#t7_1{left:101px;top:323px;}
+#t8_1{left:101px;top:340px;}
+#t9_1{left:101px;top:378px;}
+#ta_1{left:242px;top:378px;}
+#tb_1{left:101px;top:395px;}
+#tc_1{left:101px;top:413px;}
+#td_1{left:101px;top:430px;}
+#te_1{left:101px;top:468px;}
+#tf_1{left:101px;top:485px;}
+#tg_1{left:101px;top:503px;}
+#th_1{left:101px;top:520px;}
+#ti_1{left:101px;top:538px;}
+#tj_1{left:101px;top:555px;}
+#tk_1{left:101px;top:593px;}
+#tl_1{left:101px;top:610px;}
+#tm_1{left:101px;top:628px;}
+#tn_1{left:101px;top:645px;}
+#to_1{left:101px;top:683px;}
+#tp_1{left:101px;top:700px;}
+#tq_1{left:101px;top:718px;}
+#tr_1{left:101px;top:755px;}
+#ts_1{left:101px;top:773px;}
+#tt_1{left:101px;top:790px;}
+#tu_1{left:101px;top:808px;}
+#tv_1{left:101px;top:825px;}
+#tw_1{left:101px;top:843px;}
+#tx_1{left:101px;top:880px;}
+#ty_1{left:101px;top:898px;}
+#tz_1{left:101px;top:915px;}
+#t10_1{left:101px;top:953px;}
+#t11_1{left:101px;top:970px;}
+#t12_1{left:101px;top:988px;}
+#t13_1{left:101px;top:1025px;}
+#t14_1{left:101px;top:1043px;}
+#t15_1{left:101px;top:1060px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Resolución 666/2015 </div>
+<div id="t4_1" class="t s3_1">Ministerio del Interior y Transporte </div>
+<div id="t5_1" class="t s4_1">Bs. As., 5/5/2015 </div>
+<div id="t6_1" class="t s4_1">Publicación: B.O. 12/05/2015 </div>
+<div id="t7_1" class="t s3_1">VALOR DEL VIÁTICO PARA LOS CIUDADANOS QUE SE DESEMPEÑEN COMO AUTORIDADES </div>
+<div id="t8_1" class="t s3_1">DE MESA Y COMO DELEGADOS DE LA JUSTICIA NACIONAL ELECTORAL </div>
+<div id="t9_1" class="t s3_1">ARTÍCULO 1° — </div>
+<div id="ta_1" class="t s4_1">Fíjase en la suma de PESOS UN MIL CINCUENTA ($ 1.050.-) en concepto de </div>
+<div id="tb_1" class="t s4_1">viático para cada uno de los ciudadanos que cumplan funciones como autoridad de mesa en las </div>
+<div id="tc_1" class="t s4_1">elecciones primarias, abiertas, simultáneas y obligatorias y en las elecciones nacionales a realizarse </div>
+<div id="td_1" class="t s4_1">durante el presente año y su eventual segunda vuelta. </div>
+<div id="te_1" class="t s4_1">ARTÍCULO 2° — Fíjase en la suma de PESOS CUATROCIENTOS ($ 400.-) en concepto de viático para </div>
+<div id="tf_1" class="t s4_1">cada una de las autoridades mencionadas en el artículo precedente que efectivamente hayan </div>
+<div id="tg_1" class="t s4_1">participado de las actividades de capacitación reconocidas por la Justicia Nacional Electoral, en </div>
+<div id="th_1" class="t s4_1">forma previa a las elecciones primarias, abiertas, simultáneas y obligatorias y en elecciones </div>
+<div id="ti_1" class="t s4_1">nacionales a realizarse durante el presente año, los que se adicionarán al valor fijado por el artículo </div>
+<div id="tj_1" class="t s4_1">1°. </div>
+<div id="tk_1" class="t s4_1">ARTÍCULO 3° — Fíjase en la suma de PESOS TRES MIL ($ 3.000.-) en concepto de viático para cada </div>
+<div id="tl_1" class="t s4_1">uno de los ciudadanos que cumplan funciones como delegados en los locales de votación designados </div>
+<div id="tm_1" class="t s4_1">por la Justicia Nacional Electoral, en ocasión de las elecciones primarias, abiertas, simultáneas y </div>
+<div id="tn_1" class="t s4_1">obligatorias y en las elecciones nacionales y su eventual segunda vuelta. </div>
+<div id="to_1" class="t s4_1">ARTÍCULO 4° — El viático asignado corresponde al efectivo ejercicio de la función. Si por alguna </div>
+<div id="tp_1" class="t s4_1">razón un ciudadano no pudiera desempeñarse como autoridad de mesa en alguna de las elecciones </div>
+<div id="tq_1" class="t s4_1">se le abonará la parte proporcional de la suma que le corresponda. </div>
+<div id="tr_1" class="t s4_1">ARTÍCULO 5° — La Justicia Nacional Electoral verificará el cumplimiento de las funciones </div>
+<div id="ts_1" class="t s4_1">establecidas en el Código Nacional Electoral y las condiciones establecidas en las Acordadas N° </div>
+<div id="tt_1" class="t s4_1">86/2011 y Acordada Extraordinaria N° 18/2013 de la Excma. CÁMARA NACIONAL ELECTORAL e </div>
+<div id="tu_1" class="t s4_1">informará, cuando corresponda, al Correo Oficial de la República Argentina S.A. la nómina de </div>
+<div id="tv_1" class="t s4_1">personas con derecho percibir las compensaciones establecidas en el presente acto administrativo, </div>
+<div id="tw_1" class="t s4_1">con indicación del número de mesa en que se desempeñaron. </div>
+<div id="tx_1" class="t s4_1">ARTÍCULO 6° — Facúltase a la DIRECCIÓN NACIONAL ELECTORAL a liquidar las sumas indicadas en </div>
+<div id="ty_1" class="t s4_1">los artículos precedentes a los ciudadanos con derecho a las mismas, para su pago parcial </div>
+<div id="tz_1" class="t s4_1">inmediatamente después de cada elección. </div>
+<div id="t10_1" class="t s4_1">ARTÍCULO 7° — La DIRECCIÓN NACIONAL ELECTORAL podrá optar por la utilización de los servicios </div>
+<div id="t11_1" class="t s4_1">financieros del Correo Oficial de la República Argentina S.A. o por la transferencia de las sumas </div>
+<div id="t12_1" class="t s4_1">correspondientes a las Secretarías Electorales a los fines del efectivo pago de los viáticos liquidados. </div>
+<div id="t13_1" class="t s4_1">ARTÍCULO 8° — Los ciudadanos con derecho a percibir los viáticos liquidados en su favor deberán </div>
+<div id="t14_1" class="t s4_1">concurrir al lugar y en la forma que oportunamente se indiquen con Documento Nacional de </div>
+<div id="t15_1" class="t s4_1">Identidad. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',765],['t4_1',1142],['t5_1',513],['t6_1',857],['t7_1',2933],['t8_1',2263],['t9_1',530],['ta_1',2371],['tb_1',2934],['tc_1',2933],['td_1',1584],['te_1',2934],['tf_1',2934],['tg_1',2934],['th_1',2934],['ti_1',2934],['tk_1',2933],['tl_1',2934],['tm_1',2934],['tn_1',2110],['to_1',2934],['tp_1',2933],['tq_1',1942],['tr_1',2933],['ts_1',2934],['tt_1',2934],['tu_1',2933],['tv_1',2934],['tw_1',1790],['tx_1',2933],['ty_1',2934],['tz_1',1244],['t10_1',2933],['t11_1',2933],['t12_1',2913],['t13_1',2934],['t14_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

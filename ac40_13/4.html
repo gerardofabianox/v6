@@ -1,0 +1,265 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:101px;top:309px;}
+#t7_4{left:101px;top:341px;}
+#t8_4{left:101px;top:373px;}
+#t9_4{left:101px;top:405px;}
+#ta_4{left:101px;top:422px;}
+#tb_4{left:101px;top:439px;}
+#tc_4{left:101px;top:471px;}
+#td_4{left:101px;top:488px;}
+#te_4{left:101px;top:506px;}
+#tf_4{left:101px;top:538px;}
+#tg_4{left:101px;top:555px;}
+#th_4{left:101px;top:572px;}
+#ti_4{left:101px;top:590px;}
+#tj_4{left:101px;top:622px;}
+#tk_4{left:127px;top:653px;}
+#tl_4{left:152px;top:653px;}
+#tm_4{left:127px;top:685px;}
+#tn_4{left:152px;top:685px;}
+#to_4{left:127px;top:717px;}
+#tp_4{left:152px;top:717px;}
+#tq_4{left:127px;top:749px;}
+#tr_4{left:152px;top:749px;}
+#ts_4{left:153px;top:766px;}
+#tt_4{left:127px;top:798px;}
+#tu_4{left:152px;top:798px;}
+#tv_4{left:153px;top:816px;}
+#tw_4{left:127px;top:847px;}
+#tx_4{left:152px;top:847px;}
+#ty_4{left:127px;top:879px;}
+#tz_4{left:152px;top:879px;}
+#t10_4{left:127px;top:911px;}
+#t11_4{left:152px;top:911px;}
+#t12_4{left:127px;top:943px;}
+#t13_4{left:152px;top:943px;}
+#t14_4{left:101px;top:975px;}
+#t15_4{left:101px;top:992px;}
+#t16_4{left:101px;top:1024px;}
+#t17_4{left:127px;top:1056px;}
+#t18_4{left:152px;top:1056px;}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: GJCMCJ-Symbol4;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts4" type="text/css" >
+
+@font-face {
+	font-family: GJCMCJ-Symbol4;
+	src :url("4/fonts/GJCMCJ-Symbol.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">Comuníquese a los señores jueces federales con competencia electoral de todo el país y por su </div>
+<div id="t4_4" class="t s2_4">intermedio a todos los partidos políticos con reconocimiento provisorio y definitivo. Con lo que se dio </div>
+<div id="t5_4" class="t s2_4">por terminado el acto.- </div>
+<div id="t6_4" class="t s3_4">Acordada N° 40/13 </div>
+<div id="t7_4" class="t s3_4">ANEXO </div>
+<div id="t8_4" class="t s3_4">Procedimiento para la actualización del Registro Nacional de Agrupaciones Políticas. </div>
+<div id="t9_4" class="t s2_4">Los Secretarios Electorales y los agentes responsables del mantenimiento y actualización del </div>
+<div id="ta_4" class="t s2_4">Sistema de Gestión del Registro Nacional de Agrupaciones Políticas dirigirán las comunicaciones de </div>
+<div id="tb_4" class="t s2_4">novedades a la Prosecretaría de Cámara, por las vías que se indican más abajo. </div>
+<div id="tc_4" class="t s2_4">Con la asistencia de la señora jefa del Registro Nacional de Agrupaciones Políticas, la Prosecretaría </div>
+<div id="td_4" class="t s2_4">verificará que la información recibida reúna los requisitos para su registración y lo informará al </div>
+<div id="te_4" class="t s2_4">Secretario de Actuación Judicial, quien dispondrá la inscripción en el mencionado registro. </div>
+<div id="tf_4" class="t s2_4">Cuando una comunicación adolezca de omisiones u otras deficiencias, la Prosecretaría requerirá los </div>
+<div id="tg_4" class="t s2_4">datos faltantes o las aclaraciones del caso a quien haya comunicado la novedad. Una vez </div>
+<div id="th_4" class="t s2_4">completada la información o enmendada la deficiencia, lo informará al Secretario de Actuación </div>
+<div id="ti_4" class="t s2_4">Judicial, para que disponga su registración. </div>
+<div id="tj_4" class="t s3_4">I.- Información que será comunicada mediante oficio tradicional: </div>
+<div id="tk_4" class="t s4_4"></div>
+<div id="tl_4" class="t s2_4">Inicio de trámite de reconocimiento, con el correspondiente Acta Constitutiva. </div>
+<div id="tm_4" class="t s4_4"></div>
+<div id="tn_4" class="t s2_4">Sentencia de reconocimiento de la personalidad jurídico política, provisorio o definitivo. </div>
+<div id="to_4" class="t s4_4"></div>
+<div id="tp_4" class="t s2_4">Carta Orgánica y sus modificaciones, en copias certificadas. </div>
+<div id="tq_4" class="t s4_4"></div>
+<div id="tr_4" class="t s2_4">Intervención partidaria o judicial: consignando fecha, prórrogas, término, nombre, apellido y </div>
+<div id="ts_4" class="t s2_4">número de documento de autoridades interventoras. </div>
+<div id="tt_4" class="t s4_4"></div>
+<div id="tu_4" class="t s2_4">Sentencia de reconocimiento de Alianzas, Bases de Acción Política, Declaración de Principios, </div>
+<div id="tv_4" class="t s2_4">Reglamento Electoral y Acuerdo Político Financiero. </div>
+<div id="tw_4" class="t s4_4"></div>
+<div id="tx_4" class="t s2_4">Sentencia de reconocimiento de fusión de agrupaciones. </div>
+<div id="ty_4" class="t s4_4"></div>
+<div id="tz_4" class="t s2_4">Nombres, símbolos, emblemas y números partidarios. </div>
+<div id="t10_4" class="t s4_4"></div>
+<div id="t11_4" class="t s2_4">Caducidad y cancelación de la personalidad política. </div>
+<div id="t12_4" class="t s4_4"></div>
+<div id="t13_4" class="t s2_4">Extinción y disolución partidaria. </div>
+<div id="t14_4" class="t s2_4">Todas las novedades que se funden en una decisión judicial (vgr. cambio de nombre, caducidad, </div>
+<div id="t15_4" class="t s2_4">intervención, etc.) serán comunicadas acompañando copia de la resolución respectiva </div>
+<div id="t16_4" class="t s3_4">II.- Información que será comunicada mediante oficio electrónico (DEO): </div>
+<div id="t17_4" class="t s4_4"></div>
+<div id="t18_4" class="t s2_4">Convocatoria a elecciones internas y proclamación de autoridades electas. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2933],['t4_4',2933],['t5_4',669],['t6_4',630],['t8_4',2739],['t9_4',2933],['ta_4',2934],['tb_4',2319],['tc_4',2933],['td_4',2934],['te_4',2608],['tf_4',2934],['tg_4',2934],['th_4',2934],['ti_4',1254],['tj_4',2113],['tl_4',2260],['tn_4',2528],['tp_4',1732],['tr_4',2729],['ts_4',1531],['tu_4',2730],['tv_4',1483],['tx_4',1634],['tz_4',1566],['t11_4',1501],['t13_4',942],['t14_4',2934],['t15_4',2490],['t16_4',2376],['t18_4',2153]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 45;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

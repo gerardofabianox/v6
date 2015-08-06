@@ -1,0 +1,294 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:297px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:381px;}
+#tb_1{left:101px;top:413px;}
+#tc_1{left:101px;top:430px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:497px;}
+#tg_1{left:101px;top:514px;}
+#th_1{left:101px;top:532px;}
+#ti_1{left:101px;top:549px;}
+#tj_1{left:101px;top:566px;}
+#tk_1{left:101px;top:584px;}
+#tl_1{left:101px;top:601px;}
+#tm_1{left:143px;top:601px;}
+#tn_1{left:488px;top:601px;}
+#to_1{left:101px;top:619px;}
+#tp_1{left:187px;top:619px;}
+#tq_1{left:672px;top:619px;}
+#tr_1{left:101px;top:636px;}
+#ts_1{left:380px;top:636px;}
+#tt_1{left:587px;top:636px;}
+#tu_1{left:101px;top:654px;}
+#tv_1{left:101px;top:671px;}
+#tw_1{left:101px;top:688px;}
+#tx_1{left:101px;top:706px;}
+#ty_1{left:101px;top:738px;}
+#tz_1{left:101px;top:755px;}
+#t10_1{left:101px;top:772px;}
+#t11_1{left:101px;top:790px;}
+#t12_1{left:101px;top:822px;}
+#t13_1{left:101px;top:839px;}
+#t14_1{left:127px;top:839px;}
+#t15_1{left:812px;top:839px;}
+#t16_1{left:101px;top:857px;}
+#t17_1{left:237px;top:857px;}
+#t18_1{left:725px;top:857px;}
+#t19_1{left:101px;top:874px;}
+#t1a_1{left:435px;top:874px;}
+#t1b_1{left:101px;top:891px;}
+#t1c_1{left:511px;top:891px;}
+#t1d_1{left:101px;top:909px;}
+#t1e_1{left:252px;top:909px;}
+#t1f_1{left:663px;top:909px;}
+#t1g_1{left:101px;top:926px;}
+#t1h_1{left:101px;top:958px;}
+#t1i_1{left:101px;top:975px;}
+#t1j_1{left:101px;top:993px;}
+#t1k_1{left:101px;top:1010px;}
+#t1l_1{left:101px;top:1028px;}
+#t1m_1{left:101px;top:1045px;}
+#t1n_1{left:101px;top:1062px;}
+#t1o_1{left:101px;top:1080px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 77/2011 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 12/07/2011 </div>
+<div id="t5_1" class="t s4_1">IMPLEMENTACIÓN DE CUARTOS OSCUROS ACCESIBLES. </div>
+<div id="t6_1" class="t s3_1">En Buenos Aires, a los doce días del mes de julio del año 2011, se reúnen en acuerdo extraordinario </div>
+<div id="t7_1" class="t s3_1">en la Sala de Acuerdos de la Cámara Nacional Electoral los doctores Rodolfo Emilio Munné, Santiago </div>
+<div id="t8_1" class="t s3_1">Hernán Corcuera y Alberto Ricardo Dalla Via, actuando el Secretario de la Cámara, doctor Nicolás </div>
+<div id="t9_1" class="t s3_1">Deane. Abierto el acto por el señor presidente, doctor Rodolfo Emilio Munné, </div>
+<div id="ta_1" class="t s3_1">CONSIDERARON: </div>
+<div id="tb_1" class="t s3_1">1°) Que a esta Cámara Nacional Electoral le corresponde, como autoridad superior en la materia (cf. </div>
+<div id="tc_1" class="t s3_1">art. 5° de la ley 19.108 y sus modif.), aplicar las normas que garanticen a la ciudadanía el pleno </div>
+<div id="td_1" class="t s3_1">goce de sus derechos políticos, asegurando la efectiva vigencia del principio democrático de la </div>
+<div id="te_1" class="t s3_1">representación popular a través del sufragio (cf. Ac. 85/87 CNE).- </div>
+<div id="tf_1" class="t s3_1">Ello no importa desconocer que –como se explicó en Fallos CNE 3597/05- el Código Electoral </div>
+<div id="tg_1" class="t s3_1">Nacional ya con anterioridad imponía a las autoridades de los comicios “habilitar recintos de ‘fácil </div>
+<div id="th_1" class="t s3_1">acceso’ para la emisión del voto (art. 82, incs. 3º y 4º), encomendando asimismo a los magistrados </div>
+<div id="ti_1" class="t s3_1">electorales seleccionar dependencias que reúnan ‘las condiciones indispensables’ (art. 77) y </div>
+<div id="tj_1" class="t s3_1">estableciendo que los jefes, dueños y encargados de los locales de votación deben adoptar ‘todas las </div>
+<div id="tk_1" class="t s3_1">medidas tendientes a facilitar el funcionamiento del comicio’ (art. cit., inc. 2º)”; como así también </div>
+<div id="tl_1" class="t s3_1">que “</div>
+<div id="tm_1" class="t s5_1">[l]os no videntes serán acompañados por el</div>
+<div id="tn_1" class="t s5_1">presidente y los fiscales que quieran hacerlo, </div>
+<div id="to_1" class="t s5_1">quienes se</div>
+<div id="tp_1" class="t s5_1">retirarán cuando el ciudadano haya comprobado la ubicación de</div>
+<div id="tq_1" class="t s5_1">las distintas boletas y </div>
+<div id="tr_1" class="t s5_1">quede en condiciones de practicar a</div>
+<div id="ts_1" class="t s5_1">solas la elección de la suya</div>
+<div id="tt_1" class="t s3_1">” (art. 94, seg. párr.) y que “las </div>
+<div id="tu_1" class="t s3_1">personas que tuvieren imposibilidad concreta para efectuar todos o algunos de los movimientos </div>
+<div id="tv_1" class="t s3_1">propios para sufragar serán acompañadas por el presidente de la mesa al cuarto oscuro, donde a </div>
+<div id="tw_1" class="t s3_1">solas con el ciudadano elector, colaborará con los pasos necesarios hasta la introducción del voto, en </div>
+<div id="tx_1" class="t s3_1">la medida que la discapacidad lo requiera”.- </div>
+<div id="ty_1" class="t s3_1">2º) Que, cabe destacar en tal sentido, que la ley 26.571 enfatizó la necesidad de que la justicia </div>
+<div id="tz_1" class="t s3_1">nacional electoral, como autoridad de aplicación de la ley en todo lo que hace a la organización del </div>
+<div id="t10_1" class="t s3_1">acto electoral, adopte las “medidas pertinentes a fin de garantizar la accesibilidad, confidencialidad e </div>
+<div id="t11_1" class="t s3_1">intimidad para el ejercicio de los derechos políticos de las personas con discapacidad” (cf. art. 105).- </div>
+<div id="t12_1" class="t s3_1">3°) Que, en sentido afín, cabe tener presente que mediante la ley 26.378 nuestro país ha ratificado </div>
+<div id="t13_1" class="t s3_1">la “</div>
+<div id="t14_1" class="t s5_1">Convención sobre los Derechos de las Personas con Discapacidad y su protocolo facultativo</div>
+<div id="t15_1" class="t s3_1">” a </div>
+<div id="t16_1" class="t s3_1">través de la cual</div>
+<div id="t17_1" class="t s3_1">se pretende promover, proteger y asegurar el goce pleno y en</div>
+<div id="t18_1" class="t s3_1">condiciones de </div>
+<div id="t19_1" class="t s3_1">igualdad de todos los derechos humanos y</div>
+<div id="t1a_1" class="t s3_1">libertades fundamentales por todas las personas con</div>
+<div id="t1b_1" class="t s3_1">discapacidad, y propender al respeto de su dignidad</div>
+<div id="t1c_1" class="t s3_1">inherente, estableciendo como uno de sus </div>
+<div id="t1d_1" class="t s3_1">principios generales</div>
+<div id="t1e_1" class="t s3_1">la accesibilidad (cf. Anexo I, art. 3°, inc. “f”, y art. 9°)</div>
+<div id="t1f_1" class="t s3_1">y su participación en la </div>
+<div id="t1g_1" class="t s3_1">vida política (cf. art. 29).-</div>
+<div id="t1h_1" class="t s3_1">4°) Que, asimismo, no puede pasarse por alto que en la experiencia del derecho comparado, el </div>
+<div id="t1i_1" class="t s3_1">desarrollo y la implementación de sistemas de asistencia para las personas con discapacidad en los </div>
+<div id="t1j_1" class="t s3_1">procesos electorales no resulta desconocido. En tal sentido, se verifica en ciertos casos que existen </div>
+<div id="t1k_1" class="t s3_1">regulaciones análogas sobre estas cuestiones; como ocurre, por ejemplo, en Nicaragua, donde la </div>
+<div id="t1l_1" class="t s3_1">Ley Electoral (ley 331) dispone en su artículo 119 que “las personas que tuvieran impedimento físico </div>
+<div id="t1m_1" class="t s3_1">podrán hacerse acompañar de una persona de su confianza”. En Honduras, por su parte, el Tribunal </div>
+<div id="t1n_1" class="t s3_1">Supremo Electoral celebró un convenio con las organizaciones que tutelan los derechos de las </div>
+<div id="t1o_1" class="t s3_1">personas discapacitadas -Convenio TSE, FENOPDIH, FENAPAPENESH y CIARH por el que acordó la </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1077],['t2_1',1095],['t3_1',1010],['t4_1',587],['t5_1',1811],['t6_1',2933],['t7_1',2934],['t8_1',2934],['t9_1',2224],['tb_1',2933],['tc_1',2934],['td_1',2934],['te_1',1915],['tf_1',2933],['tg_1',2933],['th_1',2934],['ti_1',2934],['tj_1',2933],['tk_1',2934],['tl_1',166],['tm_1',1349],['tn_1',1384],['to_1',315],['tp_1',1914],['tq_1',649],['tr_1',1086],['ts_1',829],['tt_1',989],['tu_1',2934],['tv_1',2934],['tw_1',2933],['tx_1',1272],['ty_1',2933],['tz_1',2934],['t10_1',2933],['t11_1',2927],['t12_1',2933],['t13_1',104],['t14_1',2739],['t15_1',89],['t16_1',513],['t17_1',1921],['t18_1',435],['t19_1',1305],['t1a_1',1596],['t1b_1',1608],['t1c_1',1290],['t1d_1',578],['t1e_1',1623],['t1f_1',684],['t1g_1',752],['t1h_1',2933],['t1i_1',2934],['t1j_1',2934],['t1k_1',2934],['t1l_1',2934],['t1m_1',2933],['t1n_1',2934],['t1o_1',2934]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 61;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

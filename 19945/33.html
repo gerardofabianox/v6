@@ -1,0 +1,245 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load33();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_33{left:333px;top:108px;}
+#t2_33{left:331px;top:128px;}
+#t3_33{left:101px;top:191px;}
+#t4_33{left:101px;top:208px;}
+#t5_33{left:101px;top:226px;}
+#t6_33{left:101px;top:263px;}
+#t7_33{left:101px;top:281px;}
+#t8_33{left:101px;top:298px;}
+#t9_33{left:101px;top:316px;}
+#ta_33{left:101px;top:353px;}
+#tb_33{left:101px;top:371px;}
+#tc_33{left:101px;top:408px;}
+#td_33{left:101px;top:426px;}
+#te_33{left:101px;top:463px;}
+#tf_33{left:101px;top:481px;}
+#tg_33{left:101px;top:518px;}
+#th_33{left:101px;top:536px;}
+#ti_33{left:101px;top:573px;}
+#tj_33{left:219px;top:573px;}
+#tk_33{left:362px;top:573px;}
+#tl_33{left:101px;top:591px;}
+#tm_33{left:101px;top:629px;}
+#tn_33{left:101px;top:646px;}
+#to_33{left:101px;top:664px;}
+#tp_33{left:101px;top:701px;}
+#tq_33{left:101px;top:719px;}
+#tr_33{left:101px;top:736px;}
+#ts_33{left:101px;top:774px;}
+#tt_33{left:101px;top:791px;}
+#tu_33{left:101px;top:809px;}
+#tv_33{left:101px;top:826px;}
+#tw_33{left:101px;top:844px;}
+#tx_33{left:101px;top:881px;}
+#ty_33{left:101px;top:899px;}
+#tz_33{left:101px;top:936px;}
+#t10_33{left:101px;top:954px;}
+#t11_33{left:101px;top:991px;}
+#t12_33{left:101px;top:1029px;}
+#t13_33{left:101px;top:1046px;}
+
+.s3_33{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_33{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_33{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_33{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_33" class="t s1_33">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_33" class="t s1_33">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_33" class="t s2_33">IV. Votos recurridos: son aquellos cuya validez o nulidad fuere cuestionada por algún fiscal presente </div>
+<div id="t4_33" class="t s2_33">en la mesa. En este caso el fiscal deberá fundar su pedido con expresión concreta de las causas, que </div>
+<div id="t5_33" class="t s2_33">se asentarán sumariamente en volante especial que proveerá la Junta. </div>
+<div id="t6_33" class="t s2_33">Dicho volante se adjuntará a la boleta y sobre respectivo, y lo suscribirá el fiscal cuestionante </div>
+<div id="t7_33" class="t s2_33">consignándose aclarado su nombre y apellido, el número de documento cívico, domicilio y partido </div>
+<div id="t8_33" class="t s2_33">político a que pertenezca. Ese voto se anotará en el acta de cierre de comicio como "voto recurrido" </div>
+<div id="t9_33" class="t s2_33">y será escrutado oportunamente por la Junta, que decidirá sobre su validez o nulidad. </div>
+<div id="ta_33" class="t s2_33">El escrutinio de los votos recurridos, declarados válidos por la Junta Electoral, se hará en igual forma </div>
+<div id="tb_33" class="t s2_33">que la prevista en el artículo 119 in fine. </div>
+<div id="tc_33" class="t s2_33">V. Votos impugnados: en cuanto a la identidad del elector, conforme al procedimiento reglado por </div>
+<div id="td_33" class="t s2_33">los artículos 91 y 92. </div>
+<div id="te_33" class="t s2_33">La iniciación de las tareas del escrutinio de mesa no podrá tener lugar, bajo ningún pretexto, antes </div>
+<div id="tf_33" class="t s2_33">de las dieciocho horas, aun cuando hubiera sufragado la totalidad de los electores. </div>
+<div id="tg_33" class="t s2_33">El escrutinio y suma de los votos obtenidos por los partidos se hará bajo la vigilancia permanente de </div>
+<div id="th_33" class="t s2_33">los fiscales, de manera que éstos puedan llenar su cometido con facilidad y sin impedimento alguno. </div>
+<div id="ti_33" class="t s3_33">Artículo 102.- </div>
+<div id="tj_33" class="t s4_33">Acta de escrutinio.</div>
+<div id="tk_33" class="t s2_33">Concluida la tarea del escrutinio se consignará, en acta impresa </div>
+<div id="tl_33" class="t s2_33">al dorso del padrón (artículo 83 "acta de cierre"), lo siguiente: </div>
+<div id="tm_33" class="t s2_33">a) La hora de cierre del comicio, número de sufragios emitidos, cantidad de votos impugnados, </div>
+<div id="tn_33" class="t s2_33">diferencia entre las cifras de sufragios escrutados y la de votantes señalados en el registro de </div>
+<div id="to_33" class="t s2_33">electores; todo ello asentado en letras y números; </div>
+<div id="tp_33" class="t s2_33">b) Cantidad también en letras y números de los sufragios logrados por cada uno de los respectivos </div>
+<div id="tq_33" class="t s2_33">partidos y en cada una de las categorías de cargos; el número de votos nulos, recurridos y en </div>
+<div id="tr_33" class="t s2_33">blanco; </div>
+<div id="ts_33" class="t s2_33">c) El nombre del presidente, los suplentes y fiscales que actuaron en la mesa con mención de los </div>
+<div id="tt_33" class="t s2_33">que estuvieron presentes en el acto del escrutinio o las razones de su ausencia. El fiscal que se </div>
+<div id="tu_33" class="t s2_33">ausente antes de la clausura del comicio suscribirá una constancia de la hora y motivo del retiro y </div>
+<div id="tv_33" class="t s2_33">en caso de negarse a ello se hará constar esta circunstancia firmando otro de los fiscales presentes. </div>
+<div id="tw_33" class="t s2_33">Se dejará constancia, asimismo, de su reintegro; </div>
+<div id="tx_33" class="t s2_33">d) La mención de las protestas que formulen los fiscales sobre el desarrollo del acto eleccionario y </div>
+<div id="ty_33" class="t s2_33">las que hagan con referencia al escrutinio; </div>
+<div id="tz_33" class="t s2_33">e) La nómina de los agentes de policía, individualizados con el número de chapa, que se </div>
+<div id="t10_33" class="t s2_33">desempeñaron a órdenes de las autoridades del comicio hasta la terminación del escrutinio; </div>
+<div id="t11_33" class="t s2_33">f) La hora de finalización del escrutinio. </div>
+<div id="t12_33" class="t s2_33">Si el espacio del registro electoral destinado a levantar el acta resulta insuficiente se utilizará el </div>
+<div id="t13_33" class="t s2_33">formulario de notas suplementario, que integrará la documentación a enviarse a la junta electoral. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg33Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg33"><object width="935" height="1210" data="33/33.svg" type="image/svg+xml" id="pdf33" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld33" type="text/javascript">
+
+var isIE = false;
+var f33 = [['t1_33',1076],['t2_33',1096],['t3_33',2934],['t4_33',2934],['t5_33',2053],['t6_33',2934],['t7_33',2934],['t8_33',2933],['t9_33',2495],['ta_33',2933],['tb_33',1174],['tc_33',2933],['td_33',607],['te_33',2933],['tf_33',2396],['tg_33',2934],['th_33',2915],['ti_33',448],['tj_33',547],['tk_33',1890],['tl_33',1806],['tm_33',2933],['tn_33',2934],['to_33',1465],['tp_33',2934],['tq_33',2933],['ts_33',2933],['tt_33',2935],['tu_33',2933],['tv_33',2933],['tw_33',1423],['tx_33',2934],['ty_33',1232],['tz_33',2934],['t10_33',2668],['t11_33',1142],['t12_33',2934],['t13_33',2859]];
+function load33(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f33);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_33");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

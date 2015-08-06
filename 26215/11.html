@@ -1,0 +1,293 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load11();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_11{left:333px;top:128px;}
+#t2_11{left:331px;top:147px;}
+#t3_11{left:101px;top:207px;}
+#t4_11{left:101px;top:225px;}
+#t5_11{left:101px;top:257px;}
+#t6_11{left:233px;top:257px;}
+#t7_11{left:258px;top:257px;}
+#t8_11{left:101px;top:274px;}
+#t9_11{left:192px;top:274px;}
+#ta_11{left:706px;top:274px;}
+#tb_11{left:101px;top:291px;}
+#tc_11{left:101px;top:309px;}
+#td_11{left:101px;top:326px;}
+#te_11{left:101px;top:358px;}
+#tf_11{left:101px;top:375px;}
+#tg_11{left:101px;top:393px;}
+#th_11{left:101px;top:425px;}
+#ti_11{left:101px;top:442px;}
+#tj_11{left:101px;top:474px;}
+#tk_11{left:101px;top:491px;}
+#tl_11{left:101px;top:523px;}
+#tm_11{left:404px;top:555px;}
+#tn_11{left:205px;top:586px;}
+#to_11{left:213px;top:618px;}
+#tp_11{left:101px;top:650px;}
+#tq_11{left:224px;top:650px;}
+#tr_11{left:257px;top:650px;}
+#ts_11{left:101px;top:667px;}
+#tt_11{left:101px;top:685px;}
+#tu_11{left:101px;top:702px;}
+#tv_11{left:101px;top:720px;}
+#tw_11{left:101px;top:737px;}
+#tx_11{left:101px;top:769px;}
+#ty_11{left:216px;top:769px;}
+#tz_11{left:245px;top:769px;}
+#t10_11{left:101px;top:786px;}
+#t11_11{left:101px;top:803px;}
+#t12_11{left:101px;top:821px;}
+#t13_11{left:101px;top:838px;}
+#t14_11{left:101px;top:856px;}
+#t15_11{left:101px;top:873px;}
+#t16_11{left:101px;top:905px;}
+#t17_11{left:222px;top:905px;}
+#t18_11{left:284px;top:905px;}
+#t19_11{left:306px;top:905px;}
+#t1a_11{left:101px;top:922px;}
+#t1b_11{left:101px;top:940px;}
+#t1c_11{left:101px;top:971px;}
+#t1d_11{left:219px;top:971px;}
+#t1e_11{left:305px;top:971px;}
+#t1f_11{left:101px;top:989px;}
+#t1g_11{left:101px;top:1006px;}
+#t1h_11{left:101px;top:1024px;}
+#t1i_11{left:101px;top:1055px;}
+#t1j_11{left:217px;top:1055px;}
+#t1k_11{left:274px;top:1055px;}
+#t1l_11{left:294px;top:1055px;}
+#t1m_11{left:101px;top:1073px;}
+#t1n_11{left:101px;top:1090px;}
+
+.s3_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s4_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_11{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_11" class="t s1_11">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_11" class="t s1_11">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_11" class="t s2_11">ciento (30%) de lo que hubiera recibido aquel de ellos que más fondos hubiera recibido como aporte </div>
+<div id="t4_11" class="t s2_11">público para la campaña para la primera vuelta. </div>
+<div id="t5_11" class="t s3_11">ARTÍCULO 43. </div>
+<div id="t6_11" class="t s2_11">— </div>
+<div id="t7_11" class="t s4_11">Espacios en emisoras de radiodifusión televisiva y sonora abierta o por </div>
+<div id="t8_11" class="t s4_11">suscripción.</div>
+<div id="t9_11" class="t s2_11">Los espacios de publicidad electoral en las emisoras de radiodifusión</div>
+<div id="ta_11" class="t s2_11">sonora, televisiva </div>
+<div id="tb_11" class="t s2_11">abierta o por suscripción, serán distribuidos exclusivamente por la Dirección Nacional Electoral del </div>
+<div id="tc_11" class="t s2_11">Ministerio del Interior, para todas las agrupaciones políticas que oficialicen candidaturas para cargos </div>
+<div id="td_11" class="t s2_11">públicos electivos, para la difusión de sus mensajes de campaña. </div>
+<div id="te_11" class="t s2_11">Las agrupaciones políticas, así como los candidatos oficializados por éstas, en ningún momento </div>
+<div id="tf_11" class="t s2_11">podrán contratar o adquirir, por sí o por terceros espacios en cualquier modalidad de radio o </div>
+<div id="tg_11" class="t s2_11">televisión, para promoción con fines electorales. </div>
+<div id="th_11" class="t s2_11">Asimismo, las emisoras de radiodifusión sonora, televisiva abierta o por suscripción, no podrán </div>
+<div id="ti_11" class="t s2_11">emitir publicidad electoral que no sea la distribuida y autorizada por el Ministerio del Interior. </div>
+<div id="tj_11" class="t s2_11">En el caso de segunda vuelta se asignará a cada una de las fórmulas el cincuenta por ciento (50%) </div>
+<div id="tk_11" class="t s2_11">de los espacios asignados al que más espacios hubiera recibido en la primera vuelta. </div>
+<div id="tl_11" class="t s4_11">(Artículo modificado por art. 56 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tm_11" class="t s2_11">CAPÍTULO III BIS </div>
+<div id="tn_11" class="t s4_11">(Capítulo incorporado por art. 57 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="to_11" class="t s4_11">De la publicidad electoral en los servicios de comunicación audiovisual </div>
+<div id="tp_11" class="t s3_11">ARTÍCULO 43 </div>
+<div id="tq_11" class="t s5_11">bis </div>
+<div id="tr_11" class="t s2_11">— La Dirección Nacional Electoral del Ministerio del Interior distribuirá los </div>
+<div id="ts_11" class="t s2_11">espacios de publicidad electoral en los servicios de comunicación audiovisual entre las agrupaciones </div>
+<div id="tt_11" class="t s2_11">políticas que oficialicen precandidaturas para las elecciones primarias y candidaturas para las </div>
+<div id="tu_11" class="t s2_11">elecciones generales, para la transmisión de sus mensajes de campaña. En relación a los espacios </div>
+<div id="tv_11" class="t s2_11">de radiodifusión sonora, los mensajes serán emitidos por emisoras de amplitud y emisoras de </div>
+<div id="tw_11" class="t s2_11">frecuencia modulada. </div>
+<div id="tx_11" class="t s3_11">ARTÍCULO 43 </div>
+<div id="ty_11" class="t s5_11">ter </div>
+<div id="tz_11" class="t s2_11">— A efectos de realizar la distribución de los espacios de publicidad electoral, en </div>
+<div id="t10_11" class="t s2_11">los servicios audiovisuales, la Dirección Nacional Electoral del Ministerio del Interior deberá solicitar </div>
+<div id="t11_11" class="t s2_11">a la Autoridad Federal de Servicios de Comunicación Audiovisual, con anterioridad al inicio de la </div>
+<div id="t12_11" class="t s2_11">campaña electoral correspondiente, el listado de los servicios televisivos y radiales autorizados por </div>
+<div id="t13_11" class="t s2_11">el organismo y su correspondiente tiempo de emisión, para la distribución de las pautas. A los </div>
+<div id="t14_11" class="t s2_11">efectos de esta ley, se entiende por espacio de publicidad electoral, a la cantidad de tiempo </div>
+<div id="t15_11" class="t s2_11">asignado a los fines de transmitir publicidad política por parte de la agrupación. </div>
+<div id="t16_11" class="t s3_11">ARTÍCULO 43 </div>
+<div id="t17_11" class="t s5_11">quáter </div>
+<div id="t18_11" class="t s3_11">— </div>
+<div id="t19_11" class="t s2_11">De acuerdo a lo establecido en la Ley de Servicios de Comunicación </div>
+<div id="t1a_11" class="t s2_11">Audiovisual 26.522, los servicios de comunicación están obligados a ceder el diez por ciento (10%) </div>
+<div id="t1b_11" class="t s2_11">del tiempo total de programación para fines electorales. </div>
+<div id="t1c_11" class="t s3_11">ARTÍCULO 43 </div>
+<div id="t1d_11" class="t s5_11">quinquies </div>
+<div id="t1e_11" class="t s2_11">— En caso de segunda vuelta electoral por la elección de presidente y </div>
+<div id="t1f_11" class="t s2_11">vicepresidente, las fórmulas participantes recibirán el equivalente al cincuenta por ciento (50%) de </div>
+<div id="t1g_11" class="t s2_11">los espacios recibidos por la agrupación política que más espacios hubiera obtenido en la primera </div>
+<div id="t1h_11" class="t s2_11">vuelta. </div>
+<div id="t1i_11" class="t s3_11">ARTÍCULO 43 </div>
+<div id="t1j_11" class="t s5_11">sexies </div>
+<div id="t1k_11" class="t s3_11">— </div>
+<div id="t1l_11" class="t s2_11">La cantidad de los espacios de radiodifusión y los espacios en los medios </div>
+<div id="t1m_11" class="t s2_11">audiovisuales, serán distribuidos tanto para las elecciones primarias como para las generales de la </div>
+<div id="t1n_11" class="t s2_11">siguiente forma: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg11Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg11"><object width="935" height="1210" data="11/11.svg" type="image/svg+xml" id="pdf11" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld11" type="text/javascript">
+
+var isIE = false;
+var f11 = [['t1_11',1076],['t2_11',1095],['t3_11',2933],['t4_11',1391],['t5_11',482],['t7_11',2304],['t9_11',2030],['ta_11',512],['tb_11',2934],['tc_11',2934],['td_11',1889],['te_11',2933],['tf_11',2933],['tg_11',1397],['th_11',2933],['ti_11',2704],['tj_11',2934],['tk_11',2459],['tl_11',2053],['tm_11',509],['tn_11',2098],['to_11',2038],['tp_11',455],['tr_11',2307],['ts_11',2934],['tt_11',2933],['tu_11',2933],['tv_11',2933],['tw_11',621],['tx_11',439],['tz_11',2357],['t10_11',2933],['t11_11',2934],['t12_11',2934],['t13_11',2934],['t14_11',2933],['t15_11',2308],['t16_11',450],['t19_11',2112],['t1a_11',2934],['t1b_11',1622],['t1c_11',444],['t1e_11',2118],['t1f_11',2934],['t1g_11',2933],['t1i_11',441],['t1l_11',2160],['t1m_11',2934],['t1n_11',477]];
+function load11(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f11);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 60;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_11");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

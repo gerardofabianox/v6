@@ -1,0 +1,236 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:108px;}
+#t2_3{left:331px;top:128px;}
+#t3_3{left:101px;top:191px;}
+#t4_3{left:101px;top:208px;}
+#t5_3{left:101px;top:226px;}
+#t6_3{left:101px;top:263px;}
+#t7_3{left:101px;top:281px;}
+#t8_3{left:101px;top:298px;}
+#t9_3{left:101px;top:316px;}
+#ta_3{left:101px;top:353px;}
+#tb_3{left:101px;top:371px;}
+#tc_3{left:101px;top:388px;}
+#td_3{left:101px;top:406px;}
+#te_3{left:101px;top:423px;}
+#tf_3{left:101px;top:461px;}
+#tg_3{left:101px;top:478px;}
+#th_3{left:101px;top:516px;}
+#ti_3{left:101px;top:533px;}
+#tj_3{left:101px;top:551px;}
+#tk_3{left:101px;top:588px;}
+#tl_3{left:101px;top:626px;}
+#tm_3{left:101px;top:643px;}
+#tn_3{left:101px;top:661px;}
+#to_3{left:101px;top:678px;}
+#tp_3{left:101px;top:696px;}
+#tq_3{left:101px;top:733px;}
+#tr_3{left:419px;top:771px;}
+#ts_3{left:412px;top:809px;}
+#tt_3{left:101px;top:846px;}
+#tu_3{left:101px;top:864px;}
+#tv_3{left:101px;top:881px;}
+#tw_3{left:101px;top:919px;}
+#tx_3{left:101px;top:936px;}
+#ty_3{left:101px;top:954px;}
+#tz_3{left:101px;top:991px;}
+#t10_3{left:101px;top:1009px;}
+#t11_3{left:101px;top:1026px;}
+#t12_3{left:101px;top:1044px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">La Cámara Nacional Electoral constatará el cumplimiento de lo prescripto por los incisos c) y d) del </div>
+<div id="t4_3" class="t s2_3">artículo 2º de la presente reglamentación y procederá al ordenamiento de los electores según lo </div>
+<div id="t5_3" class="t s2_3">dispuesto por el artículo 4º "in fine" del presente Decreto. </div>
+<div id="t6_3" class="t s2_3">Para determinar el distrito al cual se le adjudicarán los votos emitidos, se tendrá en cuenta el último </div>
+<div id="t7_3" class="t s2_3">domicilio acreditado en la REPUBLICA ARGENTINA. En el supuesto de no poder acreditarse el último </div>
+<div id="t8_3" class="t s2_3">domicilio en la República, se considerará como tal el domicilio del lugar de nacimiento en el país. En </div>
+<div id="t9_3" class="t s2_3">caso de imposibilidad de acreditar este último se tomará en cuenta el último domicilio de los padres. </div>
+<div id="ta_3" class="t s2_3">CIENTO VEINTE (120) días antes de cada elección, la Cámara Nacional Electoral, por conducto del </div>
+<div id="tb_3" class="t s2_3">MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO, facilitará a las </div>
+<div id="tc_3" class="t s2_3">representaciones y a los electores el acceso al Registro de Electores Residentes en el Exterior por </div>
+<div id="td_3" class="t s2_3">Internet. De la misma forma o por vía electrónica segura posibilitará a las representaciones el </div>
+<div id="te_3" class="t s2_3">acceso al listado de los electores excluidos, informando el motivo que justifica la exclusión. </div>
+<div id="tf_3" class="t s2_3">Las representaciones diplomáticas o consulares, según corresponda, deberán imprimir y difundir por </div>
+<div id="tg_3" class="t s2_3">todos los medios a su alcance los registros para que los ciudadanos verifiquen su correcta inclusión. </div>
+<div id="th_3" class="t s2_3">Las anomalías o errores que se detecten serán informados inmediatamente, por conducto del </div>
+<div id="ti_3" class="t s2_3">MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO, a la Cámara </div>
+<div id="tj_3" class="t s2_3">Nacional Electoral para su corrección. </div>
+<div id="tk_3" class="t s3_3">(Artículo sustituido por art. 3° del Decreto 254/2009 B.O. 8/4/2009)</div>
+<div id="tl_3" class="t s2_3">ARTÍCULO 7º — A los efectos del acto electoral se utilizará como padrón el Registro de Electores </div>
+<div id="tm_3" class="t s2_3">Residentes en el Exterior con las novedades registradas hasta CIENTO OCHENTA (180) días antes de </div>
+<div id="tn_3" class="t s2_3">las elecciones y las observaciones sobre anomalías o errores recibidas hasta NOVENTA (90) días </div>
+<div id="to_3" class="t s2_3">antes, el cual será impreso por las representaciones o por la Cámara Nacional Electoral, si ésta así lo </div>
+<div id="tp_3" class="t s2_3">dispusiera. Tendrá un espacio para que el elector firme luego de emitir el sufragio. </div>
+<div id="tq_3" class="t s3_3">(Artículo sustituido por art. 4° del Decreto 254/2009 B.O. 8/4/2009)</div>
+<div id="tr_3" class="t s2_3">CAPITULO III </div>
+<div id="ts_3" class="t s2_3">DEL SUFRAGIO </div>
+<div id="tt_3" class="t s2_3">ARTÍCULO 8º — Justificación de la no Emisión del Voto. Todo ciudadano que no haya efectuado el </div>
+<div id="tu_3" class="t s2_3">cambio de domicilio en el exterior, deberá proceder a la justificación de la no emisión del voto según </div>
+<div id="tv_3" class="t s2_3">la legislación aplicable en la República. </div>
+<div id="tw_3" class="t s2_3">ARTÍCULO 9º — Exhibición de los padrones. Una vez recibido el padrón aprobado por la Cámara </div>
+<div id="tx_3" class="t s2_3">Nacional Electoral, los funcionarios titulares de Embajadas, Consulados Generales, Consulados o </div>
+<div id="ty_3" class="t s2_3">Secciones Consulares pondrán los mismos a disposición de los electores. </div>
+<div id="tz_3" class="t s2_3">ARTÍCULO 10. — Llamado a elección. Fijada la fecha del acto comicial, por intermedio del Ministerio </div>
+<div id="t10_3" class="t s2_3">de Relaciones Exteriores, Comercio Internacional y Culto se dará conocimiento de ella a las </div>
+<div id="t11_3" class="t s2_3">Embajadas, Consulados Generales, Consulados y Secciones Consulares, remitiendo al efecto Decreto </div>
+<div id="t12_3" class="t s2_3">de Convocatoria a elecciones nacionales. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1096],['t3_3',2934],['t4_3',2934],['t5_3',1680],['t6_3',2933],['t7_3',2934],['t8_3',2933],['t9_3',2919],['ta_3',2934],['tb_3',2933],['tc_3',2933],['td_3',2933],['te_3',2643],['tf_3',2934],['tg_3',2899],['th_3',2933],['ti_3',2934],['tj_3',1086],['tk_3',1989],['tl_3',2933],['tm_3',2934],['tn_3',2934],['to_3',2934],['tp_3',2398],['tq_3',1989],['tr_3',385],['ts_3',441],['tt_3',2934],['tu_3',2933],['tv_3',1122],['tw_3',2933],['tx_3',2933],['ty_3',2106],['tz_3',2933],['t10_3',2934],['t11_3',2933],['t12_3',1181]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 39;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

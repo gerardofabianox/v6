@@ -1,0 +1,245 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:260px;}
+#t6_2{left:101px;top:278px;}
+#t7_2{left:101px;top:295px;}
+#t8_2{left:101px;top:312px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:347px;}
+#tb_2{left:101px;top:379px;}
+#tc_2{left:101px;top:396px;}
+#td_2{left:101px;top:414px;}
+#te_2{left:101px;top:431px;}
+#tf_2{left:101px;top:463px;}
+#tg_2{left:101px;top:480px;}
+#th_2{left:101px;top:498px;}
+#ti_2{left:101px;top:515px;}
+#tj_2{left:101px;top:533px;}
+#tk_2{left:101px;top:564px;}
+#tl_2{left:101px;top:582px;}
+#tm_2{left:101px;top:599px;}
+#tn_2{left:101px;top:631px;}
+#to_2{left:101px;top:648px;}
+#tp_2{left:101px;top:666px;}
+#tq_2{left:101px;top:683px;}
+#tr_2{left:101px;top:701px;}
+#ts_2{left:101px;top:718px;}
+#tt_2{left:101px;top:735px;}
+#tu_2{left:101px;top:753px;}
+#tv_2{left:101px;top:770px;}
+#tw_2{left:101px;top:788px;}
+#tx_2{left:101px;top:805px;}
+#ty_2{left:101px;top:837px;}
+#tz_2{left:101px;top:854px;}
+#t10_2{left:101px;top:872px;}
+#t11_2{left:101px;top:889px;}
+#t12_2{left:101px;top:906px;}
+#t13_2{left:101px;top:924px;}
+#t14_2{left:101px;top:941px;}
+#t15_2{left:101px;top:973px;}
+#t16_2{left:101px;top:991px;}
+#t17_2{left:101px;top:1008px;}
+#t18_2{left:101px;top:1040px;}
+#t19_2{left:101px;top:1057px;}
+#t1a_2{left:101px;top:1074px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">se desprendió unánimemente que su implementación -bajo las diversas modalidades que se </div>
+<div id="t4_2" class="t s2_2">adoptaron- fue calificada como altamente positiva (cf. Acordada Nº 34/12 CNE).- </div>
+<div id="t5_2" class="t s2_2">4º) Que, a la luz de lo expresado y con el objeto de formar un cuerpo profesionalizado de delegados, </div>
+<div id="t6_2" class="t s2_2">este Tribunal dispuso para el proceso electoral 2013, la creación de un “Registro de Delegados de la </div>
+<div id="t7_2" class="t s2_2">Justicia Nacional Electoral” poniendo especial énfasis en dotar a los inscriptos de los conocimientos </div>
+<div id="t8_2" class="t s2_2">necesarios vinculados a la función a desempeñar, para lo cual se solicitó a las Secretarías Electorales </div>
+<div id="t9_2" class="t s2_2">la designación de uno o más empleados para colaborar con su capacitación (Acordada Nº 34/12 CNE </div>
+<div id="ta_2" class="t s2_2">citada).- </div>
+<div id="tb_2" class="t s2_2">A su vez, del relevamiento efectuado sobre la tarea desempeñada por estos auxiliares en los citados </div>
+<div id="tc_2" class="t s2_2">comicios, surge un considerable aumento en la cobertura de los locales de votación con relación a </div>
+<div id="td_2" class="t s2_2">elecciones anteriores. Así, en diecisiete distritos actuaron delegados en más del 80% de los </div>
+<div id="te_2" class="t s2_2">establecimientos, llegando en trece de ellos a abarcar el 90% de las escuelas.- </div>
+<div id="tf_2" class="t s2_2">Por otra parte, si bien se observa una diversidad de criterios para la selección de los delegados, en </div>
+<div id="tg_2" class="t s2_2">la mayoría de los casos la designación ha recaído en directivos de escuelas (directores y </div>
+<div id="th_2" class="t s2_2">vicedirectores), docentes y empleados judiciales. Al respecto, cabe resaltar que también se han </div>
+<div id="ti_2" class="t s2_2">seleccionado exautoridades de mesa, estudiantes universitarios, profesionales y ciudadanos </div>
+<div id="tj_2" class="t s2_2">voluntarios.- </div>
+<div id="tk_2" class="t s2_2">Asimismo, de los informes recabados, se destaca un balance positivo de la actuación de los </div>
+<div id="tl_2" class="t s2_2">delegados en el desarrollo de los comicios, con recepción favorable por parte de las autoridades de </div>
+<div id="tm_2" class="t s2_2">mesa, los fiscales de los partidos políticos y la ciudadanía en general.- </div>
+<div id="tn_2" class="t s2_2">5º) Que, con el fin de avanzar con la profesionalización y delimitación del perfil de estos auxiliares </div>
+<div id="to_2" class="t s2_2">de la Justicia Nacional Electoral, este Tribunal dictó la Acordada Nº 68/14 CNE, en la que se prioriza </div>
+<div id="tp_2" class="t s2_2">en el nombramiento de delegados a los directores y vicedirectores de escuelas y a empleados del </div>
+<div id="tq_2" class="t s2_2">Poder Judicial tanto local como federal, y se permite la designación supletoria de ciudadanos que se </div>
+<div id="tr_2" class="t s2_2">hayan desempeñado anteriormente como delegados y voluntarios debidamente capacitados (cf. </div>
+<div id="ts_2" class="t s2_2">punto 2º Acordada citada). Por otro lado, también se establece un núcleo mínimo común de </div>
+<div id="tt_2" class="t s2_2">responsabilidades, entre las que se destacan la de recepcionar la documentación y el material </div>
+<div id="tu_2" class="t s2_2">electoral, asistir a las autoridades de mesa en la constitución de las mesas de votación y en el </div>
+<div id="tv_2" class="t s2_2">acondicionamiento del Cuarto Oscuro Accesible, evacuar consultas de autoridades de mesa, fiscales </div>
+<div id="tw_2" class="t s2_2">y electores y asistir al Comando Electoral en el resguardo de las boletas de contingencia (artículo </div>
+<div id="tx_2" class="t s2_2">66, inciso 5º, CEN), entre otras (cf. Anexo Acordada citada).- </div>
+<div id="ty_2" class="t s2_2">6º) Que, sin perjuicio de lo expuesto precedentemente, este Tribunal considera que se debe </div>
+<div id="tz_2" class="t s2_2">continuar avanzando en la planificación de acciones tendientes a optimizar la organización y logística </div>
+<div id="t10_2" class="t s2_2">referida a estos auxiliares de la justicia electoral. En este contexto, resulta imprescindible solicitar la </div>
+<div id="t11_2" class="t s2_2">colaboración de las autoridades locales en materia educativa y judicial. Ella debe estar orientada </div>
+<div id="t12_2" class="t s2_2">tanto para la selección de los delegados como así también para la organización de espacios de </div>
+<div id="t13_2" class="t s2_2">trabajo destinados a su capacitación, lo que deberá materializarse mediante la suscripción de </div>
+<div id="t14_2" class="t s2_2">convenios de colaboración y coordinación de tareas con los organismos correspondientes.- </div>
+<div id="t15_2" class="t s2_2">7º) Que a los efectos de lograr criterios homogéneos en todo el país al momento de la celebración </div>
+<div id="t16_2" class="t s2_2">de los referidos convenios, resulta indispensable centralizar su revisión, para lo cual la propuesta de </div>
+<div id="t17_2" class="t s2_2">acuerdo a suscribir con los organismos citados deberá ser elevada previamente a este Tribunal.- </div>
+<div id="t18_2" class="t s2_2">8º) Que, por otra parte y atento a la creación y conformación del Registro de Delegados de la </div>
+<div id="t19_2" class="t s2_2">Justicia Electoral (cf. Acordadas Nº 34/12 y 68/14 CNE), deberá excluirse del mismo a aquellos </div>
+<div id="t1a_2" class="t s2_2">ciudadanos que se encuentran afiliados a alguna agrupación política. Ello dado que, como ha </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2933],['t4_2',2359],['t5_2',2933],['t6_2',2933],['t7_2',2934],['t8_2',2934],['t9_2',2934],['tb_2',2933],['tc_2',2934],['td_2',2933],['te_2',2287],['tf_2',2934],['tg_2',2934],['th_2',2933],['ti_2',2934],['tk_2',2934],['tl_2',2933],['tm_2',2036],['tn_2',2933],['to_2',2934],['tp_2',2934],['tq_2',2934],['tr_2',2933],['ts_2',2933],['tt_2',2934],['tu_2',2934],['tv_2',2934],['tw_2',2933],['tx_2',1788],['ty_2',2933],['tz_2',2933],['t10_2',2933],['t11_2',2934],['t12_2',2933],['t13_2',2933],['t14_2',2626],['t15_2',2934],['t16_2',2934],['t17_2',2800],['t18_2',2933],['t19_2',2933],['t1a_2',2934]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

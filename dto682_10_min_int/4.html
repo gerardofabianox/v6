@@ -1,0 +1,229 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:108px;}
+#t2_4{left:331px;top:128px;}
+#t3_4{left:101px;top:191px;}
+#t4_4{left:101px;top:208px;}
+#t5_4{left:101px;top:226px;}
+#t6_4{left:101px;top:263px;}
+#t7_4{left:101px;top:281px;}
+#t8_4{left:101px;top:298px;}
+#t9_4{left:101px;top:316px;}
+#ta_4{left:101px;top:333px;}
+#tb_4{left:101px;top:371px;}
+#tc_4{left:101px;top:388px;}
+#td_4{left:101px;top:426px;}
+#te_4{left:101px;top:443px;}
+#tf_4{left:101px;top:481px;}
+#tg_4{left:101px;top:498px;}
+#th_4{left:101px;top:516px;}
+#ti_4{left:101px;top:553px;}
+#tj_4{left:101px;top:571px;}
+#tk_4{left:101px;top:588px;}
+#tl_4{left:101px;top:606px;}
+#tm_4{left:101px;top:643px;}
+#tn_4{left:101px;top:681px;}
+#to_4{left:101px;top:719px;}
+#tp_4{left:101px;top:736px;}
+#tq_4{left:101px;top:774px;}
+#tr_4{left:101px;top:791px;}
+#ts_4{left:101px;top:809px;}
+#tt_4{left:101px;top:826px;}
+#tu_4{left:101px;top:864px;}
+#tv_4{left:101px;top:881px;}
+#tw_4{left:101px;top:899px;}
+#tx_4{left:101px;top:936px;}
+#ty_4{left:101px;top:954px;}
+#tz_4{left:101px;top:971px;}
+#t10_4{left:101px;top:1009px;}
+#t11_4{left:101px;top:1046px;}
+#t12_4{left:101px;top:1084px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">10.- Coordinar las tareas operativas entre la Dirección Nacional Electoral, la Justicia Nacional </div>
+<div id="t4_4" class="t s2_4">Electoral, las Jurisdicciones provinciales y municipales que así lo requieran y el CORREO OFICIAL DE </div>
+<div id="t5_4" class="t s2_4">LA REPUBLICA ARGENTINA S.A. </div>
+<div id="t6_4" class="t s2_4">11.- Entender en las tareas de recolección, ordenamiento y generación de información atinente a los </div>
+<div id="t7_4" class="t s2_4">procesos electorales, la planificación y ejecución de las acciones de difusión y capacitación relativas </div>
+<div id="t8_4" class="t s2_4">a las actividades institucionales, los procesos electorales y participativos federales, nacionales y </div>
+<div id="t9_4" class="t s2_4">locales, así como en el desarrollo de estrategias y acciones de formación y capacitación cívico-</div>
+<div id="ta_4" class="t s2_4">electoral. </div>
+<div id="tb_4" class="t s2_4">12.- Entender en la realización de estudios y análisis sobre las normas y procedimientos electorales </div>
+<div id="tc_4" class="t s2_4">y de partidos políticos y sobre el comportamiento electoral general. </div>
+<div id="td_4" class="t s2_4">13.- Proponer y elaborar proyectos de modificación en materia de normativa electoral y de partidos </div>
+<div id="te_4" class="t s2_4">políticos. </div>
+<div id="tf_4" class="t s2_4">14.- Entender en la ejecución de la política de vinculación, cooperación y asistencia técnica electoral </div>
+<div id="tg_4" class="t s2_4">con organismos electorales extranjeros, organizaciones internacionales o regionales, Jurisdicciones </div>
+<div id="th_4" class="t s2_4">locales, entidades no gubernamentales y partidos políticos. </div>
+<div id="ti_4" class="t s2_4">15.- Entender en las relaciones institucionales, la cooperación operativa, la vinculación interagencial </div>
+<div id="tj_4" class="t s2_4">y el asesoramiento técnico a los organismos electorales de las provincias y de la Ciudad Autónoma </div>
+<div id="tk_4" class="t s2_4">de Buenos Aires en materia electoral y de los partidos políticos, y en especial al Foro Federal de </div>
+<div id="tl_4" class="t s2_4">Organismos Electorales Provinciales. </div>
+<div id="tm_4" class="t s2_4">DIRECCION DE CAMPAÑAS ELECTORALES </div>
+<div id="tn_4" class="t s2_4">ACCIONES: </div>
+<div id="to_4" class="t s2_4">1.- Ejecutar las actividades previstas en la Ley Nº 26.215 en materia de asignación de espacios de </div>
+<div id="tp_4" class="t s2_4">publicidad electoral en los servicios de comunicación audiovisual. </div>
+<div id="tq_4" class="t s2_4">2.- Llevar a cabo las tareas de enlace con la AUTORIDAD FEDERAL DE SERVICIOS DE </div>
+<div id="tr_4" class="t s2_4">COMUNICACION AUDIOVISUAL —organismo descentralizado en el ámbito de la PRESIDENCIA DE LA </div>
+<div id="ts_4" class="t s2_4">NACION— y con los medios afectados para planificar la disponibilidad de espacios, como así </div>
+<div id="tt_4" class="t s2_4">también, su modelo de distribución de acuerdo al tipo de acto eleccionario. </div>
+<div id="tu_4" class="t s2_4">3.- Planificar y ejecutar el sorteo de espacios previsto por la Ley Nº 26.215, así como la gestión de </div>
+<div id="tv_4" class="t s2_4">las rectificaciones que eventualmente tuvieren lugar. Efectuar la debida comunicación según </div>
+<div id="tw_4" class="t s2_4">establece la normativa vigente, del resultado de la asignación de dichos espacios. </div>
+<div id="tx_4" class="t s2_4">4.- Supervisar el debido cumplimiento de las asignaciones de los espacios publicitarios por parte de </div>
+<div id="ty_4" class="t s2_4">las organizaciones partidarias y de los medios y, en su caso, la puesta en conocimiento de las </div>
+<div id="tz_4" class="t s2_4">autoridades administrativas o judiciales competentes de eventuales incumplimientos. </div>
+<div id="t10_4" class="t s2_4">DIRECCION DE PROCESOS ELECTORALES </div>
+<div id="t11_4" class="t s2_4">ACCIONES: </div>
+<div id="t12_4" class="t s2_4">1.- Planificar y ejecutar las actividades que se le encomienden, en materia de procesos electorales. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1096],['t3_4',2934],['t4_4',2934],['t5_4',925],['t6_4',2933],['t7_4',2933],['t8_4',2934],['t9_4',2933],['tb_4',2933],['tc_4',1955],['td_4',2934],['tf_4',2933],['tg_4',2933],['th_4',1714],['ti_4',2933],['tj_4',2934],['tk_4',2934],['tl_4',1058],['tm_4',1215],['to_4',2933],['tp_4',1885],['tq_4',2934],['tr_4',2933],['ts_4',2933],['tt_4',2174],['tu_4',2934],['tv_4',2934],['tw_4',2369],['tx_4',2934],['ty_4',2934],['tz_4',2472],['t10_4',1211],['t12_4',2877]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 39;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

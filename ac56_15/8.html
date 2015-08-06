@@ -1,0 +1,456 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 1540px; height: 935px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:21px;top:793px;letter-spacing:1px;}
+#t2_8{left:74px;top:23px;}
+#t3_8{left:74px;top:44px;}
+#t4_8{left:74px;top:72px;}
+#t5_8{left:25px;top:100px;}
+#t6_8{left:71px;top:100px;}
+#t7_8{left:25px;top:117px;}
+#t8_8{left:960px;top:145px;}
+#t9_8{left:930px;top:178px;}
+#ta_8{left:1092px;top:178px;}
+#tb_8{left:1255px;top:178px;}
+#tc_8{left:1417px;top:178px;}
+#td_8{left:1072px;top:215px;}
+#te_8{left:1234px;top:215px;}
+#tf_8{left:1396px;top:215px;}
+#tg_8{left:910px;top:215px;}
+#th_8{left:53px;top:191px;}
+#ti_8{left:409px;top:191px;}
+#tj_8{left:759px;top:641px;}
+#tk_8{left:729px;top:671px;}
+#tl_8{left:661px;top:696px;}
+#tm_8{left:655px;top:766px;}
+#tn_8{left:619px;top:712px;letter-spacing:1px;}
+#to_8{left:734px;top:732px;}
+#tp_8{left:20px;top:816px;}
+#tq_8{left:20px;top:826px;}
+#tr_8{left:20px;top:842px;}
+#ts_8{left:26px;top:897px;}
+#tt_8{left:270px;top:816px;}
+#tu_8{left:270px;top:826px;}
+#tv_8{left:270px;top:842px;}
+#tw_8{left:277px;top:897px;}
+#tx_8{left:1308px;top:816px;}
+#ty_8{left:1308px;top:826px;}
+#tz_8{left:1308px;top:842px;}
+#t10_8{left:1314px;top:897px;}
+#t11_8{left:1092px;top:816px;}
+#t12_8{left:1092px;top:826px;}
+#t13_8{left:1092px;top:842px;}
+#t14_8{left:1098px;top:897px;}
+#t15_8{left:875px;top:816px;}
+#t16_8{left:875px;top:826px;}
+#t17_8{left:875px;top:842px;}
+#t18_8{left:881px;top:897px;}
+#t19_8{left:659px;top:816px;}
+#t1a_8{left:659px;top:826px;}
+#t1b_8{left:659px;top:842px;}
+#t1c_8{left:665px;top:897px;}
+#t1d_8{left:891px;top:34px;letter-spacing:1px;}
+#t1e_8{left:876px;top:44px;letter-spacing:1px;}
+#t1f_8{left:1056px;top:40px;letter-spacing:3px;}
+#t1g_8{left:724px;top:59px;}
+#t1h_8{left:724px;top:70px;}
+#t1i_8{left:724px;top:86px;}
+#t1j_8{left:724px;top:97px;}
+#t1k_8{left:809px;top:97px;}
+#t1l_8{left:724px;top:117px;}
+#t1m_8{left:1263px;top:80px;}
+#t1n_8{left:1259px;top:100px;}
+#t1o_8{left:1278px;top:120px;}
+#t1p_8{left:1310px;top:62px;letter-spacing:25px;}
+#t1q_8{left:344px;top:37px;}
+#t1r_8{left:344px;top:101px;}
+#t1s_8{left:360px;top:105px;}
+#t1t_8{left:1436px;top:1px;}
+#t1u_8{left:1454px;top:13px;}
+
+.s5_8{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed8;
+	color: rgb(255,255,255);
+}
+
+.s6_8{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed8;
+	color: rgb(63,63,64);
+}
+
+.s16_8{
+	FONT-SIZE: 42px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed8;
+	color: rgb(63,63,64);
+}
+
+.s22_8{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(35,31,32);
+}
+
+.s2_8{
+	FONT-SIZE: 71px;
+	FONT-FAMILY: CenturyGothic-Bold;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s8_8{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: MAIIBU-Vrinda8;
+	color: rgb(35,31,32);
+}
+
+.s3_8{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black8;
+	color: rgb(35,31,32);
+}
+
+.s19_8{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Regular8;
+	color: rgb(35,31,32);
+}
+
+.s13_8{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(35,31,32);
+}
+
+.s20_8{
+	FONT-SIZE: 97px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(35,31,32);
+}
+
+.s1_8{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed8;
+	color: rgb(35,31,32);
+}
+
+.s21_8{
+	FONT-SIZE: 103px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(35,31,32);
+}
+
+.s7_8{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-MyriadPro-Bold8;
+	color: rgb(255,255,255);
+}
+
+.s15_8{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed8;
+	color: rgb(63,63,64);
+}
+
+.s11_8{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(255,255,255);
+}
+
+.s18_8{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(63,63,64);
+}
+
+.s12_8{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: Helvetica, Arial, sans-serif;
+	color: rgb(35,31,32);
+}
+
+.s14_8{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bol8;
+	color: rgb(35,31,32);
+}
+
+.s17_8{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed8;
+	color: rgb(63,63,64);
+}
+
+.s10_8{
+	FONT-SIZE: 55px;
+	FONT-FAMILY: MAIIBU-Vrinda8;
+	color: rgb(35,31,32);
+}
+
+.s9_8{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: MAIIBU-Vrinda8;
+	color: rgb(35,31,32);
+}
+
+.s4_8{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black8;
+	color: rgb(35,31,32);
+}
+
+.s23_8{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: CourierNewPS-BoldMT;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.v1_8{
+-webkit-transform: scale(0.25, 0,30);
+-ms-transform: scale(0.25, 0,30);
+-moz-transform: scale(0.25, 0,30);
+-o-transform: scale(0.25, 0,30);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts8" type="text/css" >
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Black8;
+	src :url("8/fonts/WCGQLA-MyriadPro-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-MyriadPro-Bold8;
+	src :url("8/fonts/EKFPXV-MyriadPro-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: MAIIBU-Vrinda8;
+	src :url("8/fonts/MAIIBU-Vrinda.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-Helvetica-Condensed8;
+	src :url("8/fonts/UNCHNP-Helvetica-Condensed.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-Helvetica-Condensed-Bol8;
+	src :url("8/fonts/EKFPXV-Helvetica-Condensed-Bol.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Regular8;
+	src :url("8/fonts/WCGQLA-MyriadPro-Regular.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">* SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBE COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS QUE SE EXTRAJERON DE LA URNA.</div>
+<div id="t2_8" class="t s2_8">ELECCIONES NACIONALES</div>
+<div id="t3_8" class="t s3_8">25 de octubre de 2015</div>
+<div id="t4_8" class="t s4_8">CERTIFICADO DE ESCRUTINIO DE MESA</div>
+<div id="t5_8" class="t v1_8 s5_8">CERTIFICO: </div>
+<div id="t6_8" class="t v1_8 s6_8">en mi carácter de presidente de mesa, de acuerdo con lo establecido en los arts. </div>
+<div id="t7_8" class="t v1_8 s6_8">102 y 102 bis del Código Electoral Nacional, que el escrutinio arrojó los siguientes resultados:</div>
+<div id="t8_8" class="t s7_8">INTRODUCIR UN CERTIFICADO EN LA URNA Y ENTREGAR OTRO IGUAL A CADA FISCAL QUE LO SOLICITE</div>
+<div id="t9_8" class="t s8_8">CATEGORÍA</div>
+<div id="ta_8" class="t s8_8">CATEGORÍA</div>
+<div id="tb_8" class="t s8_8">CATEGORÍA</div>
+<div id="tc_8" class="t s8_8">CATEGORÍA</div>
+<div id="td_8" class="t s9_8">total de votos - en N°</div>
+<div id="te_8" class="t s9_8">total de votos - en N°</div>
+<div id="tf_8" class="t s9_8">total de votos - en N°</div>
+<div id="tg_8" class="t s9_8">total de votos - en N°</div>
+<div id="th_8" class="t s8_8">N°</div>
+<div id="ti_8" class="t s8_8">PARTIDO POLÍTICO O ALIANZA</div>
+<div id="tj_8" class="t s10_8">VOTOS NULOS</div>
+<div id="tk_8" class="t s10_8">VOTOS RECURRIDOS</div>
+<div id="tl_8" class="t s10_8">VOTOS DE IDENTIDAD IMPUGNADA</div>
+<div id="tm_8" class="t s11_8">TOTAL DE VOTOS POR COLUMNA*</div>
+<div id="tn_8" class="t v1_8 s12_8">(en todas las columnas debe asentar la misma cantidad)</div>
+<div id="to_8" class="t s10_8">VOTOS EN BLANCO</div>
+<div id="tp_8" class="t s1_8">Firma </div>
+<div id="tq_8" class="t s1_8">Presidente</div>
+<div id="tr_8" class="t s13_8">Nombre Apellido</div>
+<div id="ts_8" class="t s14_8">D.N.I.</div>
+<div id="tt_8" class="t s1_8">Firma </div>
+<div id="tu_8" class="t s1_8">Suplente</div>
+<div id="tv_8" class="t s13_8">Nombre Apellido</div>
+<div id="tw_8" class="t s14_8">D.N.I.</div>
+<div id="tx_8" class="t s1_8">Firma </div>
+<div id="ty_8" class="t s1_8">Fiscal</div>
+<div id="tz_8" class="t s13_8">Nombre Apellido</div>
+<div id="t10_8" class="t s14_8">D.N.I.</div>
+<div id="t11_8" class="t s1_8">Firma </div>
+<div id="t12_8" class="t s1_8">Fiscal</div>
+<div id="t13_8" class="t s13_8">Nombre Apellido</div>
+<div id="t14_8" class="t s14_8">D.N.I.</div>
+<div id="t15_8" class="t s1_8">Firma </div>
+<div id="t16_8" class="t s1_8">Fiscal</div>
+<div id="t17_8" class="t s13_8">Nombre Apellido</div>
+<div id="t18_8" class="t s14_8">D.N.I.</div>
+<div id="t19_8" class="t s1_8">Firma </div>
+<div id="t1a_8" class="t s1_8">Fiscal</div>
+<div id="t1b_8" class="t s13_8">Nombre Apellido</div>
+<div id="t1c_8" class="t s14_8">D.N.I.</div>
+<div id="t1d_8" class="t s15_8">EN</div>
+<div id="t1e_8" class="t s15_8">NÚMEROS</div>
+<div id="t1f_8" class="t s16_8">EN LETRAS</div>
+<div id="t1g_8" class="t s17_8">Cantidad de ciudadanos que </div>
+<div id="t1h_8" class="t s17_8">votaron (según el padrón)</div>
+<div id="t1i_8" class="t s17_8">Cantidad de sobres utilizados</div>
+<div id="t1j_8" class="t s17_8">extraídos de la urna </div>
+<div id="t1k_8" class="t s18_8">*</div>
+<div id="t1l_8" class="t s17_8">Diferencia entre las anteriores</div>
+<div id="t1m_8" class="t s14_8">SECCIÓN:</div>
+<div id="t1n_8" class="t s14_8">CIRCUITO:</div>
+<div id="t1o_8" class="t s14_8">MESA:</div>
+<div id="t1p_8" class="t s19_8">*010010000101*</div>
+<div id="t1q_8" class="t s20_8">Justicia Nacional Electoral</div>
+<div id="t1r_8" class="t s21_8">D</div>
+<div id="t1s_8" class="t s22_8">ISTRITO:</div>
+<div id="t1t_8" class="t s23_8">Ac. 56/15</div>
+<div id="t1u_8" class="t s23_8">Anexo X</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="1540" height="935" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:1540px; height:935px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t1_8',2643],['t2_8',897],['t3_8',601],['t4_8',925],['t6_8',948],['t7_8',1110],['t8_8',2218],['td_8',400],['te_8',400],['tf_8',400],['tg_8',400],['ti_8',647],['tj_8',276],['tk_8',395],['tl_8',665],['tm_8',689],['tn_8',833],['to_8',375],['tr_8',264],['tv_8',264],['tz_8',264],['t13_8',264],['t17_8',264],['t1b_8',264],['t1f_8',221],['t1g_8',465],['t1h_8',430],['t1i_8',485],['t1j_8',327],['t1l_8',496],['t1q_8',1064],['t1t_8',330],['t1u_8',256]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 67;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

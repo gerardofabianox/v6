@@ -1,0 +1,262 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load21();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_21{left:333px;top:108px;}
+#t2_21{left:331px;top:128px;}
+#t3_21{left:101px;top:191px;}
+#t4_21{left:520px;top:191px;}
+#t5_21{left:101px;top:208px;}
+#t6_21{left:101px;top:246px;}
+#t7_21{left:101px;top:263px;}
+#t8_21{left:101px;top:301px;}
+#t9_21{left:101px;top:318px;}
+#ta_21{left:101px;top:356px;}
+#tb_21{left:101px;top:373px;}
+#tc_21{left:101px;top:391px;}
+#td_21{left:101px;top:408px;}
+#te_21{left:101px;top:426px;}
+#tf_21{left:101px;top:443px;}
+#tg_21{left:101px;top:461px;}
+#th_21{left:572px;top:461px;}
+#ti_21{left:101px;top:478px;}
+#tj_21{left:101px;top:516px;}
+#tk_21{left:101px;top:533px;}
+#tl_21{left:101px;top:571px;}
+#tm_21{left:101px;top:608px;}
+#tn_21{left:101px;top:646px;}
+#to_21{left:101px;top:664px;}
+#tp_21{left:173px;top:665px;}
+#tq_21{left:101px;top:701px;}
+#tr_21{left:101px;top:718px;}
+#ts_21{left:425px;top:756px;}
+#tt_21{left:385px;top:794px;}
+#tu_21{left:420px;top:831px;}
+#tv_21{left:328px;top:869px;}
+#tw_21{left:101px;top:907px;}
+#tx_21{left:207px;top:907px;}
+#ty_21{left:438px;top:907px;}
+#tz_21{left:101px;top:924px;}
+#t10_21{left:101px;top:941px;}
+#t11_21{left:101px;top:959px;}
+#t12_21{left:101px;top:976px;}
+#t13_21{left:101px;top:1014px;}
+#t14_21{left:101px;top:1031px;}
+#t15_21{left:101px;top:1069px;}
+#t16_21{left:215px;top:1069px;}
+#t17_21{left:101px;top:1087px;}
+#t18_21{left:180px;top:1087px;}
+
+.s5_21{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_21{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_21{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_21{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_21{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_21" class="t s1_21">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_21" class="t s1_21">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_21" class="t s2_21">3. Sobres para el voto. Los mismos deberán ser opacos. </div>
+<div id="t4_21" class="t s3_21">(Inciso modificado por art. 94 de la Ley N° </div>
+<div id="t5_21" class="t s3_21">26.571 B.O. 14/12/2009) </div>
+<div id="t6_21" class="t s2_21">4. Un ejemplar de cada una de las boletas oficializadas, rubricado y sellado por el Secretario de la </div>
+<div id="t7_21" class="t s2_21">Junta. </div>
+<div id="t8_21" class="t s2_21">La firma de este funcionario y el sello a que se hace mención en el presente inciso se consignará en </div>
+<div id="t9_21" class="t s2_21">todas las boletas oficializadas. </div>
+<div id="ta_21" class="t s2_21">5. Boletas, en el caso de que los partidos políticos las hubieren suministrado para distribuirlas. La </div>
+<div id="tb_21" class="t s2_21">cantidad a remitirse por mesa y la fecha de entrega por parte de los partidos a sus efectos serán </div>
+<div id="tc_21" class="t s2_21">establecidas por la Junta Nacional Electoral en sus respectivos distritos, conforme a las posibilidades </div>
+<div id="td_21" class="t s2_21">en consulta con el servicio oficial de correos. La Junta Nacional Electoral deberá además remitir para </div>
+<div id="te_21" class="t s2_21">su custodia a la autoridad policial del local de votación boletas de sufragio correspondientes a todos </div>
+<div id="tf_21" class="t s2_21">los partidos políticos, alianzas o confederaciones que se presenten a la elección. Dichas boletas sólo </div>
+<div id="tg_21" class="t s2_21">serán entregadas a las autoridades de mesa que las requieran. </div>
+<div id="th_21" class="t s3_21">(Inciso modificado por art. 94 de la </div>
+<div id="ti_21" class="t s3_21">Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tj_21" class="t s2_21">6. Sellos de la mesa, sobres para devolver la documentación, impresos, papel, etc., en la cantidad </div>
+<div id="tk_21" class="t s2_21">que fuere menester. </div>
+<div id="tl_21" class="t s2_21">7. Un ejemplar de las disposiciones aplicables. </div>
+<div id="tm_21" class="t s2_21">8. Un ejemplar de esta ley. </div>
+<div id="tn_21" class="t s2_21">9. Otros elementos que la Justicia Nacional Electoral disponga para el mejor desarrollo del acto </div>
+<div id="to_21" class="t s2_21">electoral. </div>
+<div id="tp_21" class="t s4_21">(Inciso incorporado por art. 95 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tq_21" class="t s2_21">La entrega se efectuará con la anticipación suficiente para que puedan ser recibidos en el lugar en </div>
+<div id="tr_21" class="t s2_21">que funcionará la mesa a la apertura del acto electoral. </div>
+<div id="ts_21" class="t s5_21">TITULO IV </div>
+<div id="tt_21" class="t s5_21">EL ACTO ELECTORAL </div>
+<div id="tu_21" class="t s5_21">CAPITULO I </div>
+<div id="tv_21" class="t s3_21">Normas especiales para su celebración </div>
+<div id="tw_21" class="t s5_21">Artículo 67.- </div>
+<div id="tx_21" class="t s3_21">Reunión de tropas. Prohibición.</div>
+<div id="ty_21" class="t s2_21">Sin perjuicio de lo que especialmente se establezca en </div>
+<div id="tz_21" class="t s2_21">cuanto a la custodia y seguridad de cada comicio, el día de la elección queda prohibido la </div>
+<div id="t10_21" class="t s2_21">aglomeración de tropas o cualquier ostentación de fuerza armada. Sólo los presidentes de mesas </div>
+<div id="t11_21" class="t s2_21">receptoras de votos tendrán a su disposición la fuerza policial necesaria para atender el mejor </div>
+<div id="t12_21" class="t s2_21">cumplimiento de esta ley. </div>
+<div id="t13_21" class="t s2_21">Excepto la policía destinada a guardar el orden, las fuerzas que se encontrasen en la localidad en </div>
+<div id="t14_21" class="t s2_21">que tenga lugar la elección se mantendrán acuarteladas mientras se realice la misma. </div>
+<div id="t15_21" class="t s5_21">Artículo 68.- </div>
+<div id="t16_21" class="t s3_21">Miembros de las fuerzas armadas. Limitaciones de su actuación durante el acto </div>
+<div id="t17_21" class="t s3_21">electoral. </div>
+<div id="t18_21" class="t s2_21">Los jefes u oficiales de las fuerzas armadas y autoridades policiales nacionales, </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg21Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg21"><object width="935" height="1210" data="21/21.svg" type="image/svg+xml" id="pdf21" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld21" type="text/javascript">
+
+var isIE = false;
+var f21 = [['t1_21',1076],['t2_21',1096],['t3_21',1653],['t4_21',1258],['t5_21',742],['t6_21',2933],['t8_21',2934],['t9_21',875],['ta_21',2933],['tb_21',2934],['tc_21',2933],['td_21',2933],['te_21',2934],['tf_21',2934],['tg_21',1862],['th_21',1047],['ti_21',955],['tj_21',2935],['tk_21',590],['tl_21',1344],['tm_21',788],['tn_21',2934],['tp_21',1826],['tq_21',2933],['tr_21',1605],['ts_21',337],['tt_21',660],['tu_21',382],['tv_21',1119],['tw_21',404],['tx_21',905],['ty_21',1584],['tz_21',2933],['t10_21',2934],['t11_21',2934],['t12_21',746],['t13_21',2934],['t14_21',2495],['t15_21',419],['t16_21',2478],['t18_21',2617]];
+function load21(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f21);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 45;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_21");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

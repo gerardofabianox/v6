@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:260px;}
+#t6_2{left:101px;top:278px;}
+#t7_2{left:101px;top:309px;}
+#t8_2{left:101px;top:327px;}
+#t9_2{left:101px;top:344px;}
+#ta_2{left:101px;top:362px;}
+#tb_2{left:101px;top:393px;}
+#tc_2{left:101px;top:411px;}
+#td_2{left:101px;top:428px;}
+#te_2{left:101px;top:460px;}
+#tf_2{left:101px;top:477px;}
+#tg_2{left:101px;top:509px;}
+#th_2{left:101px;top:541px;}
+#ti_2{left:101px;top:558px;}
+#tj_2{left:101px;top:590px;}
+#tk_2{left:101px;top:607px;}
+#tl_2{left:101px;top:639px;}
+#tm_2{left:373px;top:671px;}
+#tn_2{left:101px;top:702px;}
+#to_2{left:101px;top:734px;}
+#tp_2{left:101px;top:752px;}
+#tq_2{left:101px;top:783px;}
+#tr_2{left:187px;top:783px;}
+#ts_2{left:101px;top:801px;}
+#tt_2{left:101px;top:818px;}
+#tu_2{left:101px;top:836px;}
+#tv_2{left:101px;top:867px;}
+#tw_2{left:101px;top:885px;}
+#tx_2{left:101px;top:917px;}
+#ty_2{left:101px;top:934px;}
+#tz_2{left:101px;top:966px;}
+#t10_2{left:190px;top:966px;}
+#t11_2{left:101px;top:983px;}
+#t12_2{left:101px;top:1001px;}
+#t13_2{left:101px;top:1032px;}
+#t14_2{left:101px;top:1050px;}
+#t15_2{left:101px;top:1081px;}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">representativa pueden afectar -directa o indirectamente- a la ciudadanía en su conjunto o a </div>
+<div id="t4_2" class="t s2_2">importantes sectores de ella.- </div>
+<div id="t5_2" class="t s2_2">6º) Que, por otra parte, la actuación del amicus curiae ante la justicia nacional electoral ya fue </div>
+<div id="t6_2" class="t s2_2">permitida en sus distintas instancias desde el año 2000.- </div>
+<div id="t7_2" class="t s2_2">Con criterio análogo, el Tribunal autorizó la participación de terceros ajenos al proceso -</div>
+<div id="t8_2" class="t s2_2">denunciantes- en las causas que versan sobre el financiamiento partidario, formulando </div>
+<div id="t9_2" class="t s2_2">observaciones sobre las presentaciones efectuadas pero sin adquirir la calidad de parte (cf. Fallos </div>
+<div id="ta_2" class="t s2_2">CNE 3339/04 y 3356/04).- </div>
+<div id="tb_2" class="t s2_2">7º) Que resulta entonces necesario establecer pautas para la intervención de amici curiae en el </div>
+<div id="tc_2" class="t s2_2">marco de la actuación jurisdiccional de esta Cámara, para lo cual cabe tomar como referencia las </div>
+<div id="td_2" class="t s2_2">disposiciones que rigen en la materia en el ámbito de la Corte Suprema de Justicia de la Nación.- </div>
+<div id="te_2" class="t s2_2">Por ello y en ejercicio de las facultades que derivan del artículo 4, inc. h, de la ley 19.108 y sus </div>
+<div id="tf_2" class="t s2_2">modificatorias, </div>
+<div id="tg_2" class="t s3_2">ACORDARON: </div>
+<div id="th_2" class="t s2_2">Autorizar la intervención de amici curiae ante esta Cámara Nacional Electoral, de acuerdo con el </div>
+<div id="ti_2" class="t s2_2">reglamento que en anexo forma parte de la presente.- </div>
+<div id="tj_2" class="t s2_2">Ofíciese a la Corte Suprema de Justicia de la Nación y hágase saber a los señores jueces federales </div>
+<div id="tk_2" class="t s2_2">con competencia electoral.- </div>
+<div id="tl_2" class="t s2_2">Con lo que se dio por terminado el acto.- </div>
+<div id="tm_2" class="t s3_2">Acordada 85/2007 CNE </div>
+<div id="tn_2" class="t s3_2">ANEXO </div>
+<div id="to_2" class="t s2_2">REGLAMENTO SOBRE INTERVENCION DE AMIGOS DEL TRIBUNAL ANTE LA CAMARA NACIONAL </div>
+<div id="tp_2" class="t s2_2">ELECTORAL </div>
+<div id="tq_2" class="t s3_2">Artículo 1.</div>
+<div id="tr_2" class="t s2_2">- Las personas físicas o jurídicas que no fueran parte en el pleito pueden presentarse </div>
+<div id="ts_2" class="t s2_2">ante la Cámara Nacional Electoral en calidad de Amigo del Tribunal en los procesos judiciales </div>
+<div id="tt_2" class="t s2_2">correspondientes a su competencia en los que se debatan cuestiones de trascendencia colectiva o </div>
+<div id="tu_2" class="t s2_2">interés general.- </div>
+<div id="tv_2" class="t s2_2">El Tribunal dará a conocer en su página web las causas que sean aptas para dar lugar a la </div>
+<div id="tw_2" class="t s2_2">intervención de los Amigos del Tribunal y el plazo para hacerla efectiva.- </div>
+<div id="tx_2" class="t s2_2">En la presentación deberá constituirse domicilio en el radio del Tribunal (arts. 40 del Código Procesal </div>
+<div id="ty_2" class="t s2_2">Civil y Comercial de la Nación y 67, 2_ párrafo de la ley 23.298).- </div>
+<div id="tz_2" class="t s3_2">Artículo 2.</div>
+<div id="t10_2" class="t s2_2">- El Amigo del Tribunal deberá ser una persona física o jurídica con reconocida </div>
+<div id="t11_2" class="t s2_2">competencia sobre la cuestión debatida en el pleito; fundamentará su interés para participar en la </div>
+<div id="t12_2" class="t s2_2">causa e informará sobre la existencia de algún tipo de relación con las partes del proceso.- </div>
+<div id="t13_2" class="t s2_2">Su actuación deberá limitarse a expresar una opinión fundada en defensa de un interés público o en </div>
+<div id="t14_2" class="t s2_2">una cuestión institucional relevante.- </div>
+<div id="t15_2" class="t s2_2">La presentación no podrá superar las veinte carillas.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2933],['t4_2',866],['t5_2',2933],['t6_2',1653],['t7_2',2933],['t8_2',2934],['t9_2',2933],['ta_2',780],['tb_2',2933],['tc_2',2934],['td_2',2820],['te_2',2934],['th_2',2934],['ti_2',1584],['tj_2',2934],['tk_2',799],['tl_2',1191],['tm_2',759],['to_2',2933],['tq_2',343],['tr_2',2590],['ts_2',2933],['tt_2',2933],['tu_2',480],['tv_2',2934],['tw_2',2109],['tx_2',2934],['ty_2',1912],['tz_2',358],['t10_2',2575],['t11_2',2934],['t12_2',2638],['t13_2',2933],['t14_2',1073],['t15_2',1540]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

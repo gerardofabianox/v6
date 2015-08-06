@@ -1,0 +1,241 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:333px;top:128px;}
+#t2_6{left:331px;top:147px;}
+#t3_6{left:101px;top:211px;}
+#t4_6{left:101px;top:228px;}
+#t5_6{left:101px;top:246px;}
+#t6_6{left:101px;top:263px;}
+#t7_6{left:101px;top:295px;}
+#t8_6{left:101px;top:312px;}
+#t9_6{left:101px;top:330px;}
+#ta_6{left:101px;top:347px;}
+#tb_6{left:101px;top:365px;}
+#tc_6{left:101px;top:382px;}
+#td_6{left:101px;top:414px;}
+#te_6{left:101px;top:431px;}
+#tf_6{left:101px;top:449px;}
+#tg_6{left:101px;top:466px;}
+#th_6{left:101px;top:498px;}
+#ti_6{left:101px;top:515px;}
+#tj_6{left:101px;top:533px;}
+#tk_6{left:101px;top:564px;}
+#tl_6{left:101px;top:596px;}
+#tm_6{left:101px;top:628px;}
+#tn_6{left:101px;top:645px;}
+#to_6{left:101px;top:663px;}
+#tp_6{left:101px;top:694px;}
+#tq_6{left:101px;top:712px;}
+#tr_6{left:101px;top:744px;}
+#ts_6{left:101px;top:761px;}
+#tt_6{left:101px;top:778px;}
+#tu_6{left:101px;top:796px;}
+#tv_6{left:101px;top:827px;}
+#tw_6{left:101px;top:845px;}
+#tx_6{left:101px;top:862px;}
+#ty_6{left:101px;top:880px;}
+#tz_6{left:101px;top:897px;}
+#t10_6{left:101px;top:929px;}
+#t11_6{left:101px;top:946px;}
+#t12_6{left:101px;top:964px;}
+#t13_6{left:101px;top:981px;}
+#t14_6{left:101px;top:999px;}
+#t15_6{left:101px;top:1016px;}
+#t16_6{left:101px;top:1033px;}
+#t17_6{left:101px;top:1065px;}
+#t18_6{left:101px;top:1083px;}
+
+.s2_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_6{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_6" class="t s1_6">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_6" class="t s2_6">17°) Que, por último, el señor Director Nacional Electoral ha hecho saber al Tribunal la necesidad de </div>
+<div id="t4_6" class="t s2_6">que las multas, suspensiones y pérdidas de aportes públicos que disponen los señores jueces de </div>
+<div id="t5_6" class="t s2_6">grado le sean notificadas al Ministerio del Interior en un formato uniforme y homogéneo (cf. Expte. </div>
+<div id="t6_6" class="t s2_6">SJ 76, F° 32, fs. 1/2).- </div>
+<div id="t7_6" class="t s2_6">En sustento de su petición, explica que existen diversos criterios entre los tribunales de grado, que </div>
+<div id="t8_6" class="t s2_6">en ciertas oportunidades torna "dificultosa la interpretación de los alcances, ya sea temporales </div>
+<div id="t9_6" class="t s2_6">cuanto patrimoniales de las medidas ordenadas" y que es necesario un "sistema de comunicación </div>
+<div id="ta_6" class="t s2_6">[...] que contenga la manda concreta que deba aplicar esta repartición" (cf. Expte. cit., fs. 1). </div>
+<div id="tb_6" class="t s2_6">Solicita, asimismo "que esa comunicación reemplace la remisión de las sentencias" y que las </div>
+<div id="tc_6" class="t s2_6">comunicaciones se efectúen cuando las decisiones se encuentren firmes (cf. Expte. cit., fs. 1/2).- </div>
+<div id="td_6" class="t s2_6">En tal sentido corresponde acceder a lo solicitado, ya que además de resultar de por si atendible, </div>
+<div id="te_6" class="t s2_6">simplificará las tareas que los juzgados de primera instancia deben llevar adelante para la </div>
+<div id="tf_6" class="t s2_6">actualización permanente de ese tipo de datos en el Registro General de Partidos Políticos (cf. </div>
+<div id="tg_6" class="t s2_6">Ac.102/07 CNE).- </div>
+<div id="th_6" class="t s2_6">18°) Que el art. 4, inc. h, de la ley 19.108 -modificado por el articulo 73 de la ley 26.215- le </div>
+<div id="ti_6" class="t s2_6">confiere a esta Cámara la atribución especial de "dictar las reglas necesarias para el cumplimiento </div>
+<div id="tj_6" class="t s2_6">de las normas que rigen las materias propias de su competencia".- </div>
+<div id="tk_6" class="t s2_6">Por ello, </div>
+<div id="tl_6" class="t s2_6">ACORDARON: </div>
+<div id="tm_6" class="t s2_6">1°) Fijar el próximo 10 de noviembre a las 10:00 horas para el inicio del proceso de entrevistas que </div>
+<div id="tn_6" class="t s2_6">prevé el articulo 12 del Reglamento anexo a la Acordada 4/08 CNE y disponer la publicación de esta </div>
+<div id="to_6" class="t s2_6">decisión en dos diarios de circulación masiva, convocando a la audiencia pública respectiva.- </div>
+<div id="tp_6" class="t s2_6">2°) Disponer que en el trámite de los procesos que la ley 26.215 impone llevar adelante se aplicarán </div>
+<div id="tq_6" class="t s2_6">las siguientes reglas: </div>
+<div id="tr_6" class="t s2_6">I) Vencido el plazo establecido en los artículos 23 o 58 de la ley 26.215 el juez remitirá al Cuerpo de </div>
+<div id="ts_6" class="t s2_6">Auditores Contadores -a la mayor brevedad posible- las presentaciones que se hubieran hecho en </div>
+<div id="tt_6" class="t s2_6">debida forma y resolverá sobre la aplicación de la multa prevista en el art. 67 respecto de las </div>
+<div id="tu_6" class="t s2_6">agrupaciones que no las hubieran efectuado.- </div>
+<div id="tv_6" class="t s2_6">II) Vencido el plazo establecido en el segundo párrafo del articulo 67 -90 días del vencimiento del </div>
+<div id="tw_6" class="t s2_6">plazo de los art. 23 o 58- sin que se hubiera efectuado la presentación correspondiente o subsanado </div>
+<div id="tx_6" class="t s2_6">la deficiencia formal que hubiera impedido tener por presentada la información y remitirla al Cuerpo </div>
+<div id="ty_6" class="t s2_6">de Auditores, el magistrado resolverá -según la norma citada- sobre la aplicación de la suspensión </div>
+<div id="tz_6" class="t s2_6">de los aportes públicos.- </div>
+<div id="t10_6" class="t s2_6">III) Al disponer la suspensión de los aportes públicos en los términos del articulo 67, el señor juez </div>
+<div id="t11_6" class="t s2_6">intimará una vez a la agrupación para que efectúe la presentación o subsane la deficiencia en el </div>
+<div id="t12_6" class="t s2_6">plazo perentorio que determine, el que no podrá ser mayor a 15 días -prorrogable solo por decisión </div>
+<div id="t13_6" class="t s2_6">fundada- bajo apercibimiento de declararse la pérdida de los aportes correspondientes, por </div>
+<div id="t14_6" class="t s2_6">aplicación del articulo 13 de la ley 26.215 y de conformidad con la doctrina vigente (Fallos CNE </div>
+<div id="t15_6" class="t s2_6">3450/05; 3479/05; 3516/05; 3531/05; 3592/05; 3682/06; 3723/06; 3790/07 y 4032/08, entre </div>
+<div id="t16_6" class="t s2_6">otros).– </div>
+<div id="t17_6" class="t s2_6">IV) Con la notificación del dictamen de auditoria (arts. 26 y 61, primer párr.) el juez hará saber a la </div>
+<div id="t18_6" class="t s2_6">agrupación el plazo de que dispone, que no podrá ser mayor a 15 días -prorrogable solo por decisión </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1076],['t2_6',1095],['t3_6',2933],['t4_6',2934],['t5_6',2933],['t6_6',665],['t7_6',2933],['t8_6',2933],['t9_6',2933],['ta_6',2933],['tb_6',2934],['tc_6',2825],['td_6',2934],['te_6',2934],['tf_6',2933],['tg_6',513],['th_6',2933],['ti_6',2933],['tj_6',1941],['tk_6',235],['tm_6',2934],['tn_6',2933],['to_6',2685],['tp_6',2933],['tq_6',612],['tr_6',2934],['ts_6',2934],['tt_6',2933],['tu_6',1327],['tv_6',2934],['tw_6',2933],['tx_6',2933],['ty_6',2934],['tz_6',710],['t10_6',2934],['t11_6',2934],['t12_6',2934],['t13_6',2933],['t14_6',2934],['t15_6',2934],['t17_6',2934],['t18_6',2933]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 45;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

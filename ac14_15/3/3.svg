@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style type="text/css"><![CDATA[
+.g2_3{
+}
+.g1_3{
+fill: none;
+stroke: #000000;
+stroke-width: 1;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+}
+]]></style>
+</defs>
+<path d="M520.5,103.5l484,0" class="g1_3" />
+<path d="M344.5,85.5l836,0" class="g1_3" />
+<path d="M528.5,270.5l0,-55" class="g1_3" />
+<path d="M711.5,270.5l0,-36" class="g1_3" />
+<path d="M888.5,270.5l0,-54" class="g1_3" />
+<path d="M528.5,820.5l0,-478" class="g1_3" />
+<path d="M888.5,820.5l0,-478" class="g1_3" />
+<path d="M711.5,820.5l0,-478" class="g1_3" />
+<path fill-rule="evenodd" d="M364,822l3,0l0,-500l-3,0l0,500Z" class="g2_3" />
+<path fill-rule="evenodd" d="M1065,822l2,0l0,-497l-2,0l0,497Z" class="g2_3" />
+<path d="M530.5,216.5l359,0" class="g1_3" />
+<path d="M530.5,234.5l359,0" class="g1_3" />
+<path d="M530.5,252.5l359,0" class="g1_3" />
+<path d="M530.5,270.5l359,0" class="g1_3" />
+<path fill-rule="evenodd" d="M367,325l700,0l0,-3l-700,0l0,3Z" class="g2_3" />
+<path d="M367.5,342.5l698,0" class="g1_3" />
+<path d="M367.5,376.5l698,0" class="g1_3" />
+<path d="M367.5,393.5l698,0" class="g1_3" />
+<path d="M367.5,411.5l698,0" class="g1_3" />
+<path d="M367.5,429.5l698,0" class="g1_3" />
+<path d="M367.5,447.5l698,0" class="g1_3" />
+<path d="M367.5,465.5l698,0" class="g1_3" />
+<path d="M367.5,482.5l698,0" class="g1_3" />
+<path d="M367.5,500.5l698,0" class="g1_3" />
+<path d="M367.5,518.5l698,0" class="g1_3" />
+<path d="M367.5,536.5l698,0" class="g1_3" />
+<path d="M367.5,553.5l698,0" class="g1_3" />
+<path d="M367.5,571.5l698,0" class="g1_3" />
+<path d="M367.5,589.5l698,0" class="g1_3" />
+<path d="M367.5,607.5l698,0" class="g1_3" />
+<path d="M367.5,625.5l698,0" class="g1_3" />
+<path d="M367.5,642.5l698,0" class="g1_3" />
+<path d="M367.5,660.5l698,0" class="g1_3" />
+<path d="M367.5,678.5l698,0" class="g1_3" />
+<path d="M367.5,696.5l698,0" class="g1_3" />
+<path d="M367.5,714.5l698,0" class="g1_3" />
+<path d="M367.5,731.5l698,0" class="g1_3" />
+<path d="M367.5,749.5l698,0" class="g1_3" />
+<path d="M367.5,767.5l698,0" class="g1_3" />
+<path d="M367.5,785.5l698,0" class="g1_3" />
+<path d="M367.5,802.5l698,0" class="g1_3" />
+<path fill-rule="evenodd" d="M367,822l700,0l0,-2l-700,0l0,2Z" class="g2_3" />
+</svg>

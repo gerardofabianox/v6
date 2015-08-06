@@ -1,0 +1,255 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:598px;top:314px;}
+#t9_1{left:602px;top:314px;letter-spacing:3px;}
+#ta_1{left:101px;top:332px;}
+#tb_1{left:101px;top:349px;}
+#tc_1{left:101px;top:367px;}
+#td_1{left:101px;top:384px;}
+#te_1{left:101px;top:416px;}
+#tf_1{left:101px;top:448px;}
+#tg_1{left:101px;top:465px;}
+#th_1{left:101px;top:482px;}
+#ti_1{left:101px;top:500px;}
+#tj_1{left:101px;top:517px;}
+#tk_1{left:101px;top:549px;}
+#tl_1{left:101px;top:566px;}
+#tm_1{left:101px;top:584px;}
+#tn_1{left:101px;top:601px;}
+#to_1{left:101px;top:619px;}
+#tp_1{left:101px;top:651px;}
+#tq_1{left:101px;top:682px;}
+#tr_1{left:101px;top:714px;}
+#ts_1{left:101px;top:731px;}
+#tt_1{left:101px;top:749px;}
+#tu_1{left:101px;top:781px;}
+#tv_1{left:101px;top:798px;}
+#tw_1{left:222px;top:798px;}
+#tx_1{left:235px;top:798px;}
+#ty_1{left:389px;top:798px;}
+#tz_1{left:101px;top:815px;}
+#t10_1{left:101px;top:847px;}
+#t11_1{left:101px;top:865px;}
+#t12_1{left:101px;top:882px;}
+#t13_1{left:101px;top:914px;}
+#t14_1{left:101px;top:931px;}
+#t15_1{left:101px;top:948px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,101,205);
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N°87/2013 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 13/08/2013 </div>
+<div id="t5_1" class="t s4_1">PRESENTACIÓN DE INFORMES DE FINANCIAMIENTO DE CAMPAÑA. APLICATIVO INFIPP </div>
+<div id="t6_1" class="t s4_1">4.6. </div>
+<div id="t7_1" class="t s3_1">En Buenos Aires, a los trece días del mes de agosto de dos m</div>
+<div id="t8_1" class="t s3_1">i</div>
+<div id="t9_1" class="t s3_1">l trece, se reúnen en acuerdo </div>
+<div id="ta_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral los doctores Alberto Ricardo </div>
+<div id="tb_1" class="t s3_1">Dalla Via, Rodolfo Emilio Munné y Santiago Hernán Corcuera, actuando los Secretarios de Cámara </div>
+<div id="tc_1" class="t s3_1">doctores Hernán Gonçalves Figueiredo y Sebastián Schimmel. Abierto el acto por el señor </div>
+<div id="td_1" class="t s3_1">Presidente, doctor Alberto Ricardo Dalla Via, </div>
+<div id="te_1" class="t s3_1">CONSIDERARON: </div>
+<div id="tf_1" class="t s3_1">1°) Que a los fines de facilitar los procedimientos de publicidad y control del financiamiento </div>
+<div id="tg_1" class="t s3_1">partidario, oportunamente se estableció el carácter uniforme de las presentaciones que las </div>
+<div id="th_1" class="t s3_1">agrupaciones políticas deben efectuar a la justicia electoral y se desarrolló un programa informático </div>
+<div id="ti_1" class="t s3_1">específico (INFIPP) que viene utilizándose con éxito en los procesos electorales de la última década </div>
+<div id="tj_1" class="t s3_1">(cf. Acs. CNE 95/05, 63/06, 2/03 y 100/11) </div>
+<div id="tk_1" class="t s3_1">2°) Que procurando la mejora continua y la mayor eficiencia del referido sistema, la Cámara dispuso </div>
+<div id="tl_1" class="t s3_1">el desarrollo de una nueva versión del aplicativo “INFIPP v. 4.0”, que a la fecha se encuentra </div>
+<div id="tm_1" class="t s3_1">concluido para su distribución junto con el respectivo instructivo de uso. Corresponde, por lo tanto, </div>
+<div id="tn_1" class="t s3_1">disponer su aprobación y publicación en los sitios de Internet del Tribunal, para la descarga directa </div>
+<div id="to_1" class="t s3_1">por esa vía.- </div>
+<div id="tp_1" class="t s3_1">Por ello, </div>
+<div id="tq_1" class="t s4_1">ACORDARON: </div>
+<div id="tr_1" class="t s3_1">1°) Aprobar el aplicativo “INFIPP v. 4.6” con su instructivo adjunto, que deberá ser adoptado por </div>
+<div id="ts_1" class="t s3_1">todas las listas internas y agrupaciones políticas para la presentación de los informes de </div>
+<div id="tt_1" class="t s3_1">financiamiento de campaña que exige la legislación vigente; </div>
+<div id="tu_1" class="t s3_1">2°) Disponer la publicación del aplicativo “INFIPP v. 4.6” en los sitios de Internet del fuero -</div>
+<div id="tv_1" class="t s5_1">www.pjn.gob.ar </div>
+<div id="tw_1" class="t s3_1">y </div>
+<div id="tx_1" class="t s5_1">www.electoral.gob.ar</div>
+<div id="ty_1" class="t s3_1">-, para su descarga por las agrupaciones políticas y sus listas </div>
+<div id="tz_1" class="t s3_1">internas; </div>
+<div id="t10_1" class="t s3_1">3°) Todas las presentaciones serán efectuadas en soporte papel y acompañadas de su </div>
+<div id="t11_1" class="t s3_1">correspondiente archivo digital, para su inmediata publicación en la página de Internet del fuero (cf. </div>
+<div id="t12_1" class="t s3_1">Acs. CNE 58/02 y 100/11).- </div>
+<div id="t13_1" class="t s3_1">Hacer saber lo que aquí se resuelve a los señores jueces federales con competencia electoral, </div>
+<div id="t14_1" class="t s3_1">quienes notificarán de la presente a todas las agrupaciones políticas reconocidas en su distrito. Con </div>
+<div id="t15_1" class="t s3_1">lo que se dio por terminado el acto.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',988],['t4_1',587],['t5_1',2933],['t7_1',1989],['t9_1',929],['ta_1',2933],['tb_1',2933],['tc_1',2933],['td_1',1285],['tf_1',2933],['tg_1',2934],['th_1',2934],['ti_1',2934],['tj_1',1273],['tk_1',2934],['tl_1',2934],['tm_1',2934],['tn_1',2933],['to_1',366],['tp_1',235],['tr_1',2934],['ts_1',2934],['tt_1',1746],['tu_1',2933],['ty_1',1780],['t10_1',2933],['t11_1',2933],['t12_1',811],['t13_1',2934],['t14_1',2934],['t15_1',1058]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

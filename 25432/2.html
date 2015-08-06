@@ -1,0 +1,262 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:218px;top:211px;}
+#t5_2{left:101px;top:228px;}
+#t6_2{left:101px;top:260px;}
+#t7_2{left:101px;top:278px;}
+#t8_2{left:101px;top:295px;}
+#t9_2{left:101px;top:327px;}
+#ta_2{left:214px;top:327px;}
+#tb_2{left:101px;top:344px;}
+#tc_2{left:101px;top:362px;}
+#td_2{left:101px;top:379px;}
+#te_2{left:101px;top:396px;}
+#tf_2{left:423px;top:428px;}
+#tg_2{left:358px;top:460px;}
+#th_2{left:101px;top:492px;}
+#ti_2{left:214px;top:492px;}
+#tj_2{left:101px;top:509px;}
+#tk_2{left:101px;top:526px;}
+#tl_2{left:101px;top:544px;}
+#tm_2{left:101px;top:576px;}
+#tn_2{left:221px;top:576px;}
+#to_2{left:101px;top:593px;}
+#tp_2{left:101px;top:610px;}
+#tq_2{left:101px;top:642px;}
+#tr_2{left:101px;top:660px;}
+#ts_2{left:101px;top:691px;}
+#tt_2{left:221px;top:691px;}
+#tu_2{left:101px;top:709px;}
+#tv_2{left:101px;top:726px;}
+#tw_2{left:101px;top:744px;}
+#tx_2{left:101px;top:775px;}
+#ty_2{left:221px;top:775px;}
+#tz_2{left:101px;top:793px;}
+#t10_2{left:101px;top:810px;}
+#t11_2{left:101px;top:842px;}
+#t12_2{left:221px;top:842px;}
+#t13_2{left:101px;top:859px;}
+#t14_2{left:101px;top:891px;}
+#t15_2{left:222px;top:891px;}
+#t16_2{left:101px;top:908px;}
+#t17_2{left:101px;top:940px;}
+#t18_2{left:222px;top:940px;}
+#t19_2{left:101px;top:958px;}
+#t1a_2{left:101px;top:975px;}
+#t1b_2{left:101px;top:1007px;}
+#t1c_2{left:101px;top:1038px;}
+#t1d_2{left:225px;top:1038px;}
+#t1e_2{left:101px;top:1056px;}
+#t1f_2{left:101px;top:1073px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">ARTÍCULO 7º </div>
+<div id="t4_2" class="t s3_2">— La convocatoria realizada por el Poder Ejecutivo Nacional deberá efectuarse </div>
+<div id="t5_2" class="t s3_2">mediante decreto decidido en acuerdo general de ministros y refrendado por todos ellos. </div>
+<div id="t6_2" class="t s3_2">La consulta popular no vinculante convocada a instancia de cualquiera de las Cámaras del Congreso </div>
+<div id="t7_2" class="t s3_2">deberá ser aprobada por el voto de la mayoría absoluta de miembros presentes en cada una de </div>
+<div id="t8_2" class="t s3_2">ellas. </div>
+<div id="t9_2" class="t s2_2">ARTÍCULO 8º </div>
+<div id="ta_2" class="t s3_2">— Cuando un proyecto de ley sometido a consulta popular no vinculante, obtenga el </div>
+<div id="tb_2" class="t s3_2">voto afirmativo de la mayoría absoluta de votos válidos emitidos, deberá ser tratado por el Congreso </div>
+<div id="tc_2" class="t s3_2">de la Nación, quedando automáticamente incorporado al plan de labor parlamentaria de la Cámara </div>
+<div id="td_2" class="t s3_2">de Diputados de la sesión siguiente a la fecha de proclamación del resultado del comicio por la </div>
+<div id="te_2" class="t s3_2">autoridad electoral. </div>
+<div id="tf_2" class="t s2_2">TITULO III</div>
+<div id="tg_2" class="t s2_2">DISPOSICIONES COMUNES</div>
+<div id="th_2" class="t s2_2">ARTÍCULO 9º </div>
+<div id="ti_2" class="t s3_2">— La ley o el decreto de convocatoria a una consulta popular —según corresponda— </div>
+<div id="tj_2" class="t s3_2">deberá contener el texto íntegro del proyecto de ley o decisión política objeto de consulta y señalar </div>
+<div id="tk_2" class="t s3_2">claramente la o las preguntas a contestar por el cuerpo electoral, cuyas respuestas no admitirán </div>
+<div id="tl_2" class="t s3_2">más alternativa que la del sí o el no. </div>
+<div id="tm_2" class="t s2_2">ARTÍCULO 10. </div>
+<div id="tn_2" class="t s3_2">— La ley o el decreto de convocatoria a consulta popular deberán ser publicados en </div>
+<div id="to_2" class="t s3_2">el Boletín Oficial de la República Argentina, en el diario de mayor circulación de cada una de las </div>
+<div id="tp_2" class="t s3_2">provincias y en los dos diarios de mayor circulación del país. </div>
+<div id="tq_2" class="t s3_2">Dictada la convocatoria, todos los puntos sometidos a consulta popular deberán difundirse en forma </div>
+<div id="tr_2" class="t s3_2">clara y objetiva, por medios gráficos, radiales y televisivos. </div>
+<div id="ts_2" class="t s2_2">ARTÍCULO 11. </div>
+<div id="tt_2" class="t s3_2">— Los partidos políticos reconocidos, estarán facultados para realizar campañas de </div>
+<div id="tu_2" class="t s3_2">propaganda exponiendo su posición con relación al asunto de la consulta, a través de espacios </div>
+<div id="tv_2" class="t s3_2">gratuitos en los medios de comunicación masiva, y conforme a las normas que regulan la concesión </div>
+<div id="tw_2" class="t s3_2">de estos espacios en ocasión de las elecciones nacionales. </div>
+<div id="tx_2" class="t s2_2">ARTÍCULO 12. </div>
+<div id="ty_2" class="t s3_2">— La consulta popular deberá realizarse dentro de un plazo no inferior a 60 días y </div>
+<div id="tz_2" class="t s3_2">no superior a 120 días corridos desde la fecha de publicación de la ley o el decreto de convocatoria </div>
+<div id="t10_2" class="t s3_2">en el Boletín Oficial de la República Argentina. </div>
+<div id="t11_2" class="t s2_2">ARTÍCULO 13. </div>
+<div id="t12_2" class="t s3_2">— Para determinar el resultado de toda consulta popular no serán computados los </div>
+<div id="t13_2" class="t s3_2">votos en blanco. </div>
+<div id="t14_2" class="t s2_2">ARTÍCULO 14. </div>
+<div id="t15_2" class="t s3_2">— El día fijado para la realización de una consulta popular, no podrá coincidir con </div>
+<div id="t16_2" class="t s3_2">otro acto eleccionario. </div>
+<div id="t17_2" class="t s2_2">ARTÍCULO 15. </div>
+<div id="t18_2" class="t s3_2">— Serán de aplicación a las consultas convocadas conforme a los procedimientos </div>
+<div id="t19_2" class="t s3_2">previstos, las disposiciones del Código Nacional Electoral (Ley 19.945 y sus modificatorias), en </div>
+<div id="t1a_2" class="t s3_2">cuanto no se opongan a la presente Ley. </div>
+<div id="t1b_2" class="t s3_2">La Justicia Electoral Nacional será competente en todo lo relativo al comicio. </div>
+<div id="t1c_2" class="t s2_2">ARTÍCULO 16. </div>
+<div id="t1d_2" class="t s3_2">— Las erogaciones derivadas de la ejecución de la presente ley, deberán ser </div>
+<div id="t1e_2" class="t s3_2">afectada al crédito previsto anualmente en el presupuesto nacional a partir del ejercicio </div>
+<div id="t1f_2" class="t s3_2">correspondiente al año 2001. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',449],['t4_2',2464],['t5_2',2574],['t6_2',2934],['t7_2',2934],['t9_2',433],['ta_2',2481],['tb_2',2933],['tc_2',2934],['td_2',2934],['te_2',562],['tf_2',356],['tg_2',875],['th_2',432],['ti_2',2481],['tj_2',2934],['tk_2',2934],['tl_2',1057],['tm_2',459],['tn_2',2454],['to_2',2934],['tp_2',1753],['tq_2',2933],['tr_2',1717],['ts_2',462],['tt_2',2452],['tu_2',2933],['tv_2',2934],['tw_2',1685],['tx_2',462],['ty_2',2452],['tz_2',2933],['t10_2',1337],['t11_2',463],['t12_2',2451],['t13_2',476],['t14_2',464],['t15_2',2450],['t16_2',641],['t17_2',466],['t18_2',2447],['t19_2',2934],['t1a_2',1180],['t1b_2',2212],['t1c_2',475],['t1d_2',2438],['t1e_2',2933],['t1f_2',849]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 52;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

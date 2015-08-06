@@ -1,0 +1,343 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 1540px; height: 935px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:590px;top:243px;}
+#t2_2{left:623px;top:240px;}
+#t3_2{left:737px;top:230px;}
+#t4_2{left:728px;top:253px;}
+#t5_2{left:804px;top:250px;}
+#t6_2{left:1283px;top:241px;}
+#t7_2{left:1335px;top:241px;}
+#t8_2{left:1408px;top:243px;}
+#t9_2{left:1459px;top:240px;}
+#ta_2{left:69px;top:300px;}
+#tb_2{left:69px;top:345px;}
+#tc_2{left:69px;top:390px;}
+#td_2{left:69px;top:435px;}
+#te_2{left:69px;top:479px;}
+#tf_2{left:69px;top:524px;}
+#tg_2{left:69px;top:569px;}
+#th_2{left:69px;top:613px;}
+#ti_2{left:69px;top:658px;}
+#tj_2{left:65px;top:701px;}
+#tk_2{left:80px;top:730px;}
+#tl_2{left:80px;top:746px;}
+#tm_2{left:80px;top:763px;}
+#tn_2{left:80px;top:796px;}
+#to_2{left:80px;top:812px;}
+#tp_2{left:80px;top:845px;}
+#tq_2{left:80px;top:862px;}
+#tr_2{left:80px;top:878px;}
+#ts_2{left:89px;top:881px;}
+#tt_2{left:89px;top:847px;}
+#tu_2{left:89px;top:864px;}
+#tv_2{left:476px;top:230px;}
+#tw_2{left:493px;top:228px;}
+#tx_2{left:829px;top:217px;}
+#ty_2{left:905px;top:240px;}
+#tz_2{left:971px;top:238px;}
+#t10_2{left:1073px;top:230px;}
+#t11_2{left:1244px;top:228px;}
+#t12_2{left:113px;top:174px;}
+#t13_2{left:138px;top:230px;}
+#t14_2{left:293px;top:228px;}
+#t15_2{left:89px;top:748px;}
+#t16_2{left:89px;top:798px;}
+#t17_2{left:89px;top:765px;}
+#t18_2{left:502px;top:765px;}
+#t19_2{left:1344px;top:765px;}
+#t1a_2{left:89px;top:781px;}
+#t1b_2{left:89px;top:814px;}
+#t1c_2{left:1235px;top:814px;}
+#t1d_2{left:89px;top:830px;}
+#t1e_2{left:544px;top:830px;}
+#t1f_2{left:651px;top:80px;}
+#t1g_2{left:570px;top:110px;}
+#t1h_2{left:502px;top:145px;}
+#t1i_2{left:401px;top:205px;}
+#t1j_2{left:386px;top:229px;}
+#t1k_2{left:388px;top:253px;}
+#t1l_2{left:89px;top:732px;}
+#t1m_2{left:634px;top:205px;}
+#t1n_2{left:1325px;top:206px;}
+#t1o_2{left:1408px;top:204px;}
+
+.s6_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s8_2{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s9_2{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s11_2{
+	FONT-SIZE: 41px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s4_2{
+	FONT-SIZE: 32px;
+	FONT-FAMILY: FORKEV-Arial2;
+	color: rgb(0,0,0);
+}
+
+.s10_2{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s5_2{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: FORKEV-Arial2;
+	color: rgb(0,0,0);
+}
+
+.s7_2{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s2_2{
+	FONT-SIZE: 41px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JONZVR-Arial-Bold2;
+	color: rgb(0,0,0);
+}
+
+.s3_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: FORKEV-Arial2;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts2" type="text/css" >
+
+@font-face {
+	font-family: JONZVR-Arial-Bold2;
+	src :url("2/fonts/JONZVR-Arial-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: FORKEV-Arial2;
+	src :url("2/fonts/FORKEV-Arial.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">Tipo</div>
+<div id="t2_2" class="t s2_2">3</div>
+<div id="t3_2" class="t s1_2">Imposic. </div>
+<div id="t4_2" class="t s1_2">Levantam.</div>
+<div id="t5_2" class="t s2_2">4</div>
+<div id="t6_2" class="t s1_2">Nº</div>
+<div id="t7_2" class="t s1_2">Fecha</div>
+<div id="t8_2" class="t s1_2">Estado</div>
+<div id="t9_2" class="t s2_2">8</div>
+<div id="ta_2" class="t s3_2">1</div>
+<div id="tb_2" class="t s3_2">2</div>
+<div id="tc_2" class="t s3_2">3</div>
+<div id="td_2" class="t s3_2">4</div>
+<div id="te_2" class="t s3_2">5</div>
+<div id="tf_2" class="t s3_2">6</div>
+<div id="tg_2" class="t s3_2">7</div>
+<div id="th_2" class="t s3_2">8</div>
+<div id="ti_2" class="t s3_2">9</div>
+<div id="tj_2" class="t s3_2">10</div>
+<div id="tk_2" class="t s4_2">1</div>
+<div id="tl_2" class="t s4_2">2</div>
+<div id="tm_2" class="t s4_2">3</div>
+<div id="tn_2" class="t s4_2">4</div>
+<div id="to_2" class="t s4_2">5</div>
+<div id="tp_2" class="t s4_2">6</div>
+<div id="tq_2" class="t s4_2">7</div>
+<div id="tr_2" class="t s4_2">8</div>
+<div id="ts_2" class="t s5_2">Especificar si la resolución comunicada se encuentra firme o ha sido recurrida.</div>
+<div id="tt_2" class="t s5_2">Consignar las previsiones de la ley de financiamiento que sirven de fundamento normativo de la decisión comunicada.</div>
+<div id="tu_2" class="t s5_2">Nº y fecha de la resolución dictada por el respectivo juez federal con competencia electoral que impone la sanción o comunica el levantamiento de la misma.</div>
+<div id="tv_2" class="t s1_2">Nº</div>
+<div id="tw_2" class="t s2_2">2</div>
+<div id="tx_2" class="t s6_2">Ejercicio contable - Informe de </div>
+<div id="ty_2" class="t s1_2">campaña</div>
+<div id="tz_2" class="t s2_2">5</div>
+<div id="t10_2" class="t s1_2">Fundamento normativo</div>
+<div id="t11_2" class="t s2_2">6 </div>
+<div id="t12_2" class="t s1_2">Juzgado federal electoral - Distrito </div>
+<div id="t13_2" class="t s1_2">Partido o agrupación</div>
+<div id="t14_2" class="t s2_2">1</div>
+<div id="t15_2" class="t s5_2">Número del partido político o alianza electoral, según corresponda.</div>
+<div id="t16_2" class="t s5_2">Especificar si se trata de la imposición de una sanción o bien del levantamiento de una sanción impuesta anteriormente.</div>
+<div id="t17_2" class="t s5_2">Especificar la sanción de que se trate (v. gr., pérdida, suspensión, multa, etc.). </div>
+<div id="t18_2" class="t s7_2">Si se aplican más de dos sanciones, aun cuando se trate del mismo ejercicio contable o informe de campaña, utilizar una fila distinta para cada una</div>
+<div id="t19_2" class="t s5_2">(ver ejemplo consignado </div>
+<div id="t1a_2" class="t s5_2">en puntos 2 y 3).</div>
+<div id="t1b_2" class="t s5_2">Detallar si se trata de un ejercicio contable anual (especificando correspondiente a qué año) o un informe de campaña (explicando si éste es previo o final y el tipo de campaña -legislativa o presidencial- así como su año). </div>
+<div id="t1c_2" class="t s8_2">Si la comunicación se refiere a más de un</div>
+<div id="t1d_2" class="t s7_2">ejercicio contable o informe de campaña, utilizar una fila distinta para cada uno</div>
+<div id="t1e_2" class="t s5_2">(ver ejemplo consignado en puntos 4, 5 y 6).</div>
+<div id="t1f_2" class="t s9_2">Cámara Nacional Electoral</div>
+<div id="t1g_2" class="t s10_2">Registro Nacional de Partidos Políticos</div>
+<div id="t1h_2" class="t s1_2">Régimen de sanciones - Ley de Financiamiento de los Partidos Políticos</div>
+<div id="t1i_2" class="t s1_2">Orden </div>
+<div id="t1j_2" class="t s3_2">(nacional o </div>
+<div id="t1k_2" class="t s3_2">de distrito)</div>
+<div id="t1l_2" class="t s5_2">Consignar el nombre completo del partido político o alianza sancionado, detallando en este último caso las agrupaciones que componen la coalición, en los términos del artículo 64 de la ley 26.215 (ver ejemplo consignado en el punto 1).</div>
+<div id="t1m_2" class="t s1_2">Sanción</div>
+<div id="t1n_2" class="t s1_2">Resolución</div>
+<div id="t1o_2" class="t s11_2">7</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="1540" height="935" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:1540px; height:935px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['ts_2',1686],['tt_2',2536],['tu_2',3364],['tx_2',896],['t10_2',684],['t12_2',1009],['t13_2',616],['t15_2',1436],['t16_2',2577],['t17_2',1681],['t18_2',3400],['t19_2',527],['t1a_2',360],['t1b_2',4731],['t1c_2',960],['t1d_2',1829],['t1e_2',955],['t1f_2',925],['t1g_2',1588],['t1h_2',2119],['t1j_2',301],['t1k_2',287],['t1l_2',5071]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 61;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

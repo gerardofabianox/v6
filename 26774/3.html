@@ -1,0 +1,266 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:260px;}
+#t7_3{left:101px;top:277px;}
+#t8_3{left:101px;top:294px;}
+#t9_3{left:101px;top:329px;}
+#ta_3{left:194px;top:329px;}
+#tb_3{left:428px;top:329px;}
+#tc_3{left:101px;top:347px;}
+#td_3{left:101px;top:364px;}
+#te_3{left:101px;top:382px;}
+#tf_3{left:101px;top:399px;}
+#tg_3{left:101px;top:416px;}
+#th_3{left:101px;top:434px;}
+#ti_3{left:101px;top:451px;}
+#tj_3{left:101px;top:469px;}
+#tk_3{left:101px;top:504px;}
+#tl_3{left:101px;top:521px;}
+#tm_3{left:101px;top:538px;}
+#tn_3{left:101px;top:573px;}
+#to_3{left:205px;top:573px;}
+#tp_3{left:495px;top:573px;}
+#tq_3{left:101px;top:591px;}
+#tr_3{left:101px;top:608px;}
+#ts_3{left:101px;top:625px;}
+#tt_3{left:101px;top:643px;}
+#tu_3{left:101px;top:660px;}
+#tv_3{left:101px;top:695px;}
+#tw_3{left:191px;top:695px;}
+#tx_3{left:490px;top:695px;}
+#ty_3{left:101px;top:712px;}
+#tz_3{left:101px;top:730px;}
+#t10_3{left:101px;top:747px;}
+#t11_3{left:101px;top:765px;}
+#t12_3{left:101px;top:782px;}
+#t13_3{left:101px;top:800px;}
+#t14_3{left:101px;top:817px;}
+#t15_3{left:101px;top:834px;}
+#t16_3{left:101px;top:869px;}
+#t17_3{left:101px;top:887px;}
+#t18_3{left:101px;top:904px;}
+#t19_3{left:101px;top:939px;}
+#t1a_3{left:195px;top:939px;}
+#t1b_3{left:331px;top:939px;}
+#t1c_3{left:101px;top:956px;}
+#t1d_3{left:101px;top:974px;}
+#t1e_3{left:101px;top:991px;}
+#t1f_3{left:101px;top:1026px;}
+#t1g_3{left:101px;top:1043px;}
+#t1h_3{left:101px;top:1078px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">registro de infractores al deber de votar establecido en el artículo 12. Luego de cada elección </div>
+<div id="t4_3" class="t s2_3">nacional, elaborará un listado por distrito, con nombre, apellido y matrícula de los electores mayores </div>
+<div id="t5_3" class="t s2_3">de dieciocho (18) años y menores de setenta (70) años de edad de quienes no se tenga constancia </div>
+<div id="t6_3" class="t s2_3">de emisión del voto, el que pondrá en conocimiento del Poder Ejecutivo. Los gobiernos provinciales y </div>
+<div id="t7_3" class="t s2_3">de la Ciudad Autónoma de Buenos Aires podrán solicitar a la Cámara el listado correspondiente a los </div>
+<div id="t8_3" class="t s2_3">electores de su distrito. </div>
+<div id="t9_3" class="t s2_3">Artículo 25: </div>
+<div id="ta_3" class="t s3_3">De los padrones provisionales. </div>
+<div id="tb_3" class="t s2_3">El Registro Nacional de Electores y los subregistros de </div>
+<div id="tc_3" class="t s2_3">electores de todos los distritos, tienen carácter público, con las previsiones legales de privacidad </div>
+<div id="td_3" class="t s2_3">correspondientes, para ser susceptibles de correcciones por parte de los electores inscritos en ellos. </div>
+<div id="te_3" class="t s2_3">Los padrones provisionales están compuestos por los datos de los subregistros de electores por </div>
+<div id="tf_3" class="t s2_3">distrito, incluidas las novedades registradas hasta ciento ochenta (180) días antes de cada elección </div>
+<div id="tg_3" class="t s2_3">general, así como también las personas que cumplan dieciséis (16) años de edad hasta el mismo día </div>
+<div id="th_3" class="t s2_3">del comicio. Los padrones provisionales de electores contendrán los siguientes datos: número y </div>
+<div id="ti_3" class="t s2_3">clase de documento cívico, apellido, nombre y domicilio de los inscritos. Los mismos deberán estar </div>
+<div id="tj_3" class="t s2_3">ordenados por distrito y sección. </div>
+<div id="tk_3" class="t s2_3">Los juzgados electorales podrán requerir la colaboración de la Dirección Nacional Electoral del </div>
+<div id="tl_3" class="t s2_3">Ministerio del Interior y Transporte para la impresión de las listas provisionales y supervisarán e </div>
+<div id="tm_3" class="t s2_3">inspeccionarán todo el proceso de impresión. </div>
+<div id="tn_3" class="t s2_3">Artículo 26: </div>
+<div id="to_3" class="t s3_3">Difusión de padrones provisionales.</div>
+<div id="tp_3" class="t s2_3">La Cámara Nacional Electoral dispondrá la </div>
+<div id="tq_3" class="t s2_3">publicación de los padrones provisionales y de residentes en el exterior diez (10) días después de la </div>
+<div id="tr_3" class="t s2_3">fecha de cierre del registro para cada elección, en su sitio web y/o por otros medios que considere </div>
+<div id="ts_3" class="t s2_3">convenientes, con las previsiones legales de privacidad correspondientes, para ser susceptible de </div>
+<div id="tt_3" class="t s2_3">correcciones por parte de los electores inscritos en él. Se deberá dar a publicidad la forma para </div>
+<div id="tu_3" class="t s2_3">realizar eventuales denuncias y reclamos así como también las consultas al padrón provisional. </div>
+<div id="tv_3" class="t s2_3">Artículo 28: </div>
+<div id="tw_3" class="t s3_3">Eliminación de electores. Procedimiento.</div>
+<div id="tx_3" class="t s2_3">En el mismo período cualquier elector o partido </div>
+<div id="ty_3" class="t s2_3">político tendrá derecho a pedir, al juzgado federal con competencia electoral, que se eliminen o </div>
+<div id="tz_3" class="t s2_3">tachen del padrón los electores fallecidos, los inscritos más de una vez o los que se encuentren </div>
+<div id="t10_3" class="t s2_3">comprendidos en las inhabilidades establecidas en esta ley. Previa verificación sumaria de los hechos </div>
+<div id="t11_3" class="t s2_3">que se invoquen y de la audiencia que se concederá al elector impugnado, en caso de corresponder, </div>
+<div id="t12_3" class="t s2_3">los jueces dictarán resolución. Si hicieran lugar al reclamo comunicarán a la Cámara Nacional </div>
+<div id="t13_3" class="t s2_3">Electoral para que disponga la anotación de la inhabilitación en el Registro Nacional de Electores. En </div>
+<div id="t14_3" class="t s2_3">cuanto a los fallecidos o inscritos más de una vez, se eliminarán los registros tanto informáticos </div>
+<div id="t15_3" class="t s2_3">como los soportes en papel. </div>
+<div id="t16_3" class="t s2_3">El impugnante podrá tomar conocimiento de las actuaciones posteriores y será notificado en todos </div>
+<div id="t17_3" class="t s2_3">los casos de la resolución definitiva, pero no tendrá participación en la sustanciación de la </div>
+<div id="t18_3" class="t s2_3">información que tramitará con vista al agente fiscal. </div>
+<div id="t19_3" class="t s2_3">Artículo 29: </div>
+<div id="t1a_3" class="t s3_3">Padrón definitivo.</div>
+<div id="t1b_3" class="t s2_3">Los padrones provisorios depurados constituirán el padrón electoral </div>
+<div id="t1c_3" class="t s2_3">definitivo destinado a las elecciones primarias y a las elecciones generales, que tendrá que hallarse </div>
+<div id="t1d_3" class="t s2_3">impreso treinta (30) días antes de la fecha de la elección primaria de acuerdo con las reglas fijadas </div>
+<div id="t1e_3" class="t s2_3">en el artículo 31. </div>
+<div id="t1f_3" class="t s2_3">El padrón se ordenará de acuerdo a las demarcaciones territoriales, las mesas electorales </div>
+<div id="t1g_3" class="t s2_3">correspondientes y por orden alfabético por apellido. </div>
+<div id="t1h_3" class="t s2_3">Compondrán el padrón de mesa definitivo destinado al comicio, el número de orden del elector, un </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2933],['t4_3',2934],['t5_3',2933],['t6_3',2934],['t7_3',2934],['t8_3',680],['t9_3',345],['ta_3',906],['tb_3',1626],['tc_3',2934],['td_3',2934],['te_3',2933],['tf_3',2933],['tg_3',2933],['th_3',2933],['ti_3',2933],['tj_3',946],['tk_3',2933],['tl_3',2934],['tm_3',1307],['tn_3',366],['to_3',1113],['tp_3',1357],['tq_3',2933],['tr_3',2933],['ts_3',2934],['tt_3',2934],['tu_3',2761],['tv_3',339],['tw_3',1175],['tx_3',1375],['ty_3',2933],['tz_3',2934],['t10_3',2934],['t11_3',2934],['t12_3',2934],['t13_3',2934],['t14_3',2933],['t15_3',812],['t16_3',2933],['t17_3',2934],['t18_3',1510],['t19_3',346],['t1a_3',516],['t1b_3',2013],['t1c_3',2934],['t1d_3',2934],['t1e_3',489],['t1f_3',2934],['t1g_3',1528],['t1h_3',2933]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 54;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

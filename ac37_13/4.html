@@ -1,0 +1,278 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:101px;top:278px;}
+#t7_4{left:101px;top:295px;}
+#t8_4{left:151px;top:295px;}
+#t9_4{left:577px;top:295px;}
+#ta_4{left:658px;top:295px;}
+#tb_4{left:101px;top:312px;}
+#tc_4{left:101px;top:330px;}
+#td_4{left:414px;top:330px;}
+#te_4{left:747px;top:330px;}
+#tf_4{left:101px;top:347px;}
+#tg_4{left:101px;top:365px;}
+#th_4{left:101px;top:382px;}
+#ti_4{left:101px;top:414px;}
+#tj_4{left:101px;top:431px;}
+#tk_4{left:101px;top:449px;}
+#tl_4{left:101px;top:466px;}
+#tm_4{left:154px;top:466px;}
+#tn_4{left:564px;top:466px;}
+#to_4{left:101px;top:483px;}
+#tp_4{left:296px;top:483px;}
+#tq_4{left:753px;top:483px;}
+#tr_4{left:101px;top:501px;}
+#ts_4{left:462px;top:501px;}
+#tt_4{left:101px;top:518px;}
+#tu_4{left:192px;top:518px;}
+#tv_4{left:251px;top:518px;}
+#tw_4{left:101px;top:550px;}
+#tx_4{left:101px;top:567px;}
+#ty_4{left:101px;top:585px;}
+#tz_4{left:101px;top:602px;}
+#t10_4{left:101px;top:620px;}
+#t11_4{left:101px;top:637px;}
+#t12_4{left:101px;top:669px;}
+#t13_4{left:101px;top:686px;}
+#t14_4{left:101px;top:704px;}
+#t15_4{left:101px;top:721px;}
+#t16_4{left:101px;top:738px;}
+#t17_4{left:101px;top:756px;}
+#t18_4{left:101px;top:773px;}
+#t19_4{left:101px;top:805px;}
+#t1a_4{left:101px;top:823px;}
+#t1b_4{left:101px;top:840px;}
+#t1c_4{left:101px;top:857px;}
+#t1d_4{left:101px;top:875px;}
+#t1e_4{left:101px;top:892px;}
+#t1f_4{left:101px;top:910px;}
+#t1g_4{left:101px;top:941px;}
+#t1h_4{left:101px;top:959px;}
+#t1i_4{left:101px;top:976px;}
+#t1j_4{left:101px;top:1008px;}
+#t1k_4{left:101px;top:1025px;}
+#t1l_4{left:101px;top:1043px;}
+#t1m_4{left:228px;top:1043px;}
+#t1n_4{left:597px;top:1043px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">Del mismo modo, los delegados de la justicia nacional electoral pueden -en razón del lugar donde </div>
+<div id="t4_4" class="t s2_4">deben cumplir esta función encomendada por los señores jueces federales con competencia </div>
+<div id="t5_4" class="t s2_4">electoral- verse impedidos de concurrir a sufragar en la mesa en que están empadronados.- </div>
+<div id="t6_4" class="t s2_4">Asimismo, si bien el artículo 75 –párrafo agregado por la ley 26.744- prevé que las autoridades de </div>
+<div id="t7_4" class="t s2_4">mesa “</div>
+<div id="t8_4" class="t s3_4">deberán figurar en el padrón de la mesa para la cual sean</div>
+<div id="t9_4" class="t s3_4">designados</div>
+<div id="ta_4" class="t s2_4">”, ello no constituye una </div>
+<div id="tb_4" class="t s2_4">condición para su designación -tal como se desprende de la enumeración de los requisitos del </div>
+<div id="tc_4" class="t s2_4">artículo 73, que exige residencia en la “</div>
+<div id="td_4" class="t s3_4">sección electoral donde deba desempeñarse</div>
+<div id="te_4" class="t s2_4">”- sino una </div>
+<div id="tf_4" class="t s2_4">previsión tendiente a que, cuando las circunstancias lo permitan, las autoridades de mesa sean </div>
+<div id="tg_4" class="t s2_4">agregadas por la justicia nacional electoral al padrón complementario preimpreso de las respectivas </div>
+<div id="th_4" class="t s2_4">mesas.- </div>
+<div id="ti_4" class="t s2_4">Por otra parte, es del caso recordar que las modificaciones introducidas al Código Electoral Nacional </div>
+<div id="tj_4" class="t s2_4">mediante la ley 26.571 han receptado la modalidad de selección de las autoridades de mesa </div>
+<div id="tk_4" class="t s2_4">establecidas por este Tribunal (cf. Acordadas 22/07, 129/08 y 49/09 CNE), al señalar que debe </div>
+<div id="tl_4" class="t s2_4">darse “</div>
+<div id="tm_4" class="t s3_4">prioridad a los electores que resulten de una selección</div>
+<div id="tn_4" class="t s3_4">aleatoria por medios informáticos en </div>
+<div id="to_4" class="t s3_4">la cual se debe tener en</div>
+<div id="tp_4" class="t s3_4">cuenta su grado de instrucción y edad, a los electores que</div>
+<div id="tq_4" class="t s3_4">hayan sido </div>
+<div id="tr_4" class="t s3_4">capacitados a tal efecto y a continuación a los</div>
+<div id="ts_4" class="t s3_4">inscriptos en el Registro Público de Postulantes a </div>
+<div id="tt_4" class="t s3_4">Autoridades</div>
+<div id="tu_4" class="t s3_4">de Mesa</div>
+<div id="tv_4" class="t s2_4">”.- </div>
+<div id="tw_4" class="t s2_4">En síntesis, en lo que respecta a las autoridades de mesa, la justicia nacional electoral procurará que </div>
+<div id="tx_4" class="t s2_4">la designación recaiga en un elector correspondiente al padrón de la mesa en que debe </div>
+<div id="ty_4" class="t s2_4">desempeñarse, en su defecto, dispondrá su inclusión al padrón complementario de la mesa </div>
+<div id="tz_4" class="t s2_4">respectiva cuando la designación estuviese perfeccionada con suficiente antelación y además -de </div>
+<div id="t10_4" class="t s2_4">acuerdo a su domicilio- la autoridad desinsaculada tuviera derecho a votar por todas la categorías en </div>
+<div id="t11_4" class="t s2_4">disputa en la mesa en que debe actuar.- </div>
+<div id="t12_4" class="t s2_4">Supletoriamente, cuando para integrar y habilitar una determinada mesa fuera imprescindible –de </div>
+<div id="t13_4" class="t s2_4">conformidad con los procedimientos de reemplazos y sustituciones- designar como autoridad de la </div>
+<div id="t14_4" class="t s2_4">misma a quien no constare como elector en el padrón de esa mesa -y sea imposible para tal elector </div>
+<div id="t15_4" class="t s2_4">concurrir a la mesa en la que se encuentra empadronado para emitir su voto- la justicia nacional </div>
+<div id="t16_4" class="t s2_4">electoral, en base a las constancias recibidas, justificará -sin necesidad de que los interesados </div>
+<div id="t17_4" class="t s2_4">concurran personalmente- la no emisión del voto de todos los presidentes de mesa, vocales y </div>
+<div id="t18_4" class="t s2_4">delegados que no hayan podido por razones de servicio emitir su voto.- </div>
+<div id="t19_4" class="t s2_4">En esa inteligencia, debe interpretarse que el artículo 84, inc. 2 -que prevé que las autoridades de </div>
+<div id="t1a_4" class="t s2_4">mesa que no se hallen inscriptos en la mesa en que actúan se agregarán al registro indicando la </div>
+<div id="t1b_4" class="t s2_4">mesa en que les correspondía sufragar- tiene actualmente por única finalidad, en virtud del artículo </div>
+<div id="t1c_4" class="t s2_4">87 que inhibe el voto de todo aquel que no esté incluido el padrón preimpreso, servir de </div>
+<div id="t1d_4" class="t s2_4">antecedente a la justicia nacional electoral para la justificación de la no emisión del voto, y será </div>
+<div id="t1e_4" class="t s2_4">cumplido alternativamente mediante la consignación de los datos de las autoridades de mesa en las </div>
+<div id="t1f_4" class="t s2_4">actas de apertura, cierre y escrutinio.- </div>
+<div id="t1g_4" class="t s2_4">8°) Que, asimismo, el Código establece que quien no emitiere el voto y no justificare su omisión </div>
+<div id="t1h_4" class="t s2_4">debe abonar una multa (cf. art. 125, primer párr.), que hasta el dictado de la ley 26.744 resultaba </div>
+<div id="t1i_4" class="t s2_4">inaplicable por falta de actualización de la expresión monetaria consignada originariamente.- </div>
+<div id="t1j_4" class="t s2_4">En este punto, es necesario fijar para los comicios a realizarse en el año 2013 el importe de la multa </div>
+<div id="t1k_4" class="t s2_4">en el supuesto de pago voluntario, dentro del parámetro que establece el artículo 125, según el cual </div>
+<div id="t1l_4" class="t s2_4">el monto será de </div>
+<div id="t1m_4" class="t s3_4">“pesos cincuenta ($50) a pesos quinientos ($500)”</div>
+<div id="t1n_4" class="t s2_4">.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2933],['t4_4',2934],['t5_4',2675],['t6_4',2934],['t7_4',202],['t8_4',1682],['ta_4',705],['tb_4',2933],['tc_4',1251],['td_4',1336],['te_4',347],['tf_4',2934],['tg_4',2934],['ti_4',2933],['tj_4',2934],['tk_4',2933],['tl_4',210],['tm_4',1615],['tn_4',1081],['to_4',749],['tp_4',1800],['tq_4',324],['tr_4',1414],['ts_4',1489],['tu_4',237],['tw_4',2933],['tx_4',2933],['ty_4',2934],['tz_4',2933],['t10_4',2934],['t11_4',1177],['t12_4',2933],['t13_4',2934],['t14_4',2934],['t15_4',2933],['t16_4',2933],['t17_4',2934],['t18_4',2080],['t19_4',2933],['t1a_4',2933],['t1b_4',2934],['t1c_4',2934],['t1d_4',2934],['t1e_4',2934],['t1f_4',1117],['t1g_4',2934],['t1h_4',2934],['t1i_4',2691],['t1j_4',2934],['t1k_4',2934],['t1l_4',488],['t1m_4',1476]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 60;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

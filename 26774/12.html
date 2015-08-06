@@ -1,0 +1,259 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load12();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_12{left:333px;top:128px;}
+#t2_12{left:331px;top:147px;}
+#t3_12{left:101px;top:211px;}
+#t4_12{left:101px;top:246px;}
+#t5_12{left:101px;top:263px;}
+#t6_12{left:101px;top:298px;}
+#t7_12{left:101px;top:315px;}
+#t8_12{left:101px;top:333px;}
+#t9_12{left:101px;top:350px;}
+#ta_12{left:101px;top:368px;}
+#tb_12{left:101px;top:385px;}
+#tc_12{left:101px;top:403px;}
+#td_12{left:101px;top:437px;}
+#te_12{left:101px;top:455px;}
+#tf_12{left:101px;top:472px;}
+#tg_12{left:101px;top:490px;}
+#th_12{left:101px;top:524px;}
+#ti_12{left:101px;top:542px;}
+#tj_12{left:101px;top:559px;}
+#tk_12{left:101px;top:577px;}
+#tl_12{left:101px;top:594px;}
+#tm_12{left:101px;top:612px;}
+#tn_12{left:101px;top:629px;}
+#to_12{left:101px;top:664px;}
+#tp_12{left:214px;top:664px;}
+#tq_12{left:101px;top:681px;}
+#tr_12{left:101px;top:716px;}
+#ts_12{left:101px;top:733px;}
+#tt_12{left:101px;top:768px;}
+#tu_12{left:101px;top:786px;}
+#tv_12{left:101px;top:803px;}
+#tw_12{left:101px;top:838px;}
+#tx_12{left:101px;top:855px;}
+#ty_12{left:101px;top:873px;}
+#tz_12{left:101px;top:890px;}
+#t10_12{left:101px;top:908px;}
+#t11_12{left:101px;top:942px;}
+#t12_12{left:214px;top:942px;}
+#t13_12{left:101px;top:960px;}
+#t14_12{left:101px;top:995px;}
+#t15_12{left:194px;top:995px;}
+#t16_12{left:391px;top:995px;}
+#t17_12{left:101px;top:1012px;}
+#t18_12{left:101px;top:1030px;}
+#t19_12{left:101px;top:1047px;}
+#t1a_12{left:101px;top:1064px;}
+
+.s3_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_12{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_12" class="t s1_12">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_12" class="t s1_12">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_12" class="t s2_12">a) Estar inscripto en el subregistro electoral del distrito en que se solicite la afiliación; </div>
+<div id="t4_12" class="t s2_12">b) Comprobar la identidad con la libreta de enrolamiento, libreta cívica o documento nacional de </div>
+<div id="t5_12" class="t s2_12">identidad; </div>
+<div id="t6_12" class="t s2_12">c) Presentar por cuadruplicado una ficha solicitud que contenga: nombre y domicilio, matrícula, </div>
+<div id="t7_12" class="t s2_12">clase, estado civil, profesión u oficio y la firma o impresión digital, cuya autenticidad deberá ser </div>
+<div id="t8_12" class="t s2_12">certificada en forma fehaciente por el funcionario público competente o por la autoridad partidaria </div>
+<div id="t9_12" class="t s2_12">que determinen los organismos ejecutivos, cuya nómina deberá ser remitida a la Justicia Federal con </div>
+<div id="ta_12" class="t s2_12">competencia electoral; la afiliación podrá también ser solicitada por intermedio de la oficina de </div>
+<div id="tb_12" class="t s2_12">correos de la localidad del domicilio, en cuyo caso el jefe de la misma certificará la autenticidad de la </div>
+<div id="tc_12" class="t s2_12">firma o impresión digital. </div>
+<div id="td_12" class="t s2_12">Las fichas solicitud serán suministradas sin cargo por el Ministerio del Interior y Transporte a los </div>
+<div id="te_12" class="t s2_12">partidos reconocidos o en formación que las requieran, sin perjuicio de su confección por los mismos </div>
+<div id="tf_12" class="t s2_12">y a su cargo, conforme al modelo realizado por el Ministerio del Interior y Transporte respetando </div>
+<div id="tg_12" class="t s2_12">medida, calidad del material y demás características. </div>
+<div id="th_12" class="t s2_12">Artículo 25 quáter: Los electores pueden formalizar su renuncia por telegrama gratuito o </div>
+<div id="ti_12" class="t s2_12">personalmente ante la secretaría electoral del distrito que corresponda. A tal fin se establece en todo </div>
+<div id="tj_12" class="t s2_12">el territorio de la República Argentina un servicio de telegrama gratuito para el remitente, para </div>
+<div id="tk_12" class="t s2_12">efectivizar las renuncias a partidos políticos. El gasto que demande este servicio será cargado, </div>
+<div id="tl_12" class="t s2_12">mediante el sistema sin previo pago, a la cuenta del Ministerio del Interior y Transporte. El juzgado </div>
+<div id="tm_12" class="t s2_12">federal con competencia electoral una vez notificado de la renuncia a una afiliación, deberá darla de </div>
+<div id="tn_12" class="t s2_12">baja y comunicarlo al partido al cual ha renunciado. </div>
+<div id="to_12" class="t s3_12">ARTICULO 5°</div>
+<div id="tp_12" class="t s2_12">— Modifícanse los artículos 3°, 4° y 6° de la ley 25.432, que quedarán redactados de </div>
+<div id="tq_12" class="t s2_12">la siguiente manera: </div>
+<div id="tr_12" class="t s2_12">Artículo 3°: En todo proyecto sometido a consulta popular vinculante, el voto del electorado en los </div>
+<div id="ts_12" class="t s2_12">términos de la ley 19.945 será obligatorio. </div>
+<div id="tt_12" class="t s2_12">Artículo 4°: Toda consulta popular vinculante será válida y eficaz cuando haya emitido su voto no </div>
+<div id="tu_12" class="t s2_12">menos del treinta y cinco por ciento (35%) de los electores inscriptos en el padrón electoral </div>
+<div id="tv_12" class="t s2_12">nacional. </div>
+<div id="tw_12" class="t s2_12">Artículo 6°: Puede ser sometido a consulta popular no vinculante, todo asunto de interés general </div>
+<div id="tx_12" class="t s2_12">para la Nación, con excepción de aquellos proyectos de ley cuyo procedimiento de sanción se </div>
+<div id="ty_12" class="t s2_12">encuentre especialmente reglado por la Constitución Nacional, mediante la determinación de la </div>
+<div id="tz_12" class="t s2_12">cámara de origen o por la exigencia de una mayoría calificada para su aprobación. En este tipo de </div>
+<div id="t10_12" class="t s2_12">consulta el voto del electorado no será obligatorio. </div>
+<div id="t11_12" class="t s3_12">ARTICULO 6°</div>
+<div id="t12_12" class="t s2_12">— Modifícanse los artículos 18 y 27 de la ley 26.215, que quedarán redactados de la </div>
+<div id="t13_12" class="t s2_12">siguiente manera: </div>
+<div id="t14_12" class="t s2_12">Artículo 18: </div>
+<div id="t15_12" class="t s4_12">Administración financiera.</div>
+<div id="t16_12" class="t s2_12">El partido deberá nombrar un (1) tesorero titular y uno (1) </div>
+<div id="t17_12" class="t s2_12">suplente, o sus equivalentes de acuerdo a su carta orgánica, mayores de edad, con domicilio en el </div>
+<div id="t18_12" class="t s2_12">distrito correspondiente, debiendo ambos ser afiliados. Las designaciones con los respectivos datos </div>
+<div id="t19_12" class="t s2_12">de identidad y profesión deberán ser comunicados al juez federal con competencia electoral </div>
+<div id="t1a_12" class="t s2_12">correspondiente y a la Dirección Nacional Electoral del Ministerio del Interior y Transporte. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg12Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg12"><object width="935" height="1210" data="12/12.svg" type="image/svg+xml" id="pdf12" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld12" type="text/javascript">
+
+var isIE = false;
+var f12 = [['t1_12',1076],['t2_12',1095],['t3_12',2487],['t4_12',2934],['t6_12',2933],['t7_12',2933],['t8_12',2934],['t9_12',2933],['ta_12',2933],['tb_12',2933],['tc_12',726],['td_12',2933],['te_12',2933],['tf_12',2933],['tg_12',1538],['th_12',2933],['ti_12',2933],['tj_12',2933],['tk_12',2933],['tl_12',2933],['tm_12',2934],['tn_12',1502],['to_12',430],['tp_12',2483],['tq_12',598],['tr_12',2934],['ts_12',1233],['tt_12',2933],['tu_12',2933],['tw_12',2933],['tx_12',2933],['ty_12',2933],['tz_12',2934],['t10_12',1467],['t11_12',431],['t12_12',2480],['t13_12',528],['t14_12',345],['t15_12',759],['t16_12',1775],['t17_12',2934],['t18_12',2934],['t19_12',2933],['t1a_12',2620]];
+function load12(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f12);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_12");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

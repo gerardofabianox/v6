@@ -1,0 +1,273 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load19();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_19{left:333px;top:128px;}
+#t2_19{left:331px;top:147px;}
+#t3_19{left:101px;top:207px;}
+#t4_19{left:101px;top:225px;}
+#t5_19{left:101px;top:242px;}
+#t6_19{left:101px;top:260px;}
+#t7_19{left:101px;top:291px;}
+#t8_19{left:218px;top:291px;}
+#t9_19{left:248px;top:291px;}
+#ta_19{left:101px;top:309px;}
+#tb_19{left:101px;top:326px;}
+#tc_19{left:101px;top:344px;}
+#td_19{left:101px;top:361px;}
+#te_19{left:101px;top:378px;}
+#tf_19{left:101px;top:396px;}
+#tg_19{left:101px;top:413px;}
+#th_19{left:101px;top:431px;}
+#ti_19{left:101px;top:448px;}
+#tj_19{left:101px;top:480px;}
+#tk_19{left:101px;top:512px;}
+#tl_19{left:224px;top:512px;}
+#tm_19{left:101px;top:529px;}
+#tn_19{left:101px;top:546px;}
+#to_19{left:101px;top:564px;}
+#tp_19{left:101px;top:596px;}
+#tq_19{left:222px;top:596px;}
+#tr_19{left:101px;top:613px;}
+#ts_19{left:101px;top:645px;}
+#tt_19{left:101px;top:662px;}
+#tu_19{left:101px;top:694px;}
+#tv_19{left:101px;top:711px;}
+#tw_19{left:101px;top:729px;}
+#tx_19{left:101px;top:760px;}
+#ty_19{left:101px;top:778px;}
+#tz_19{left:101px;top:795px;}
+#t10_19{left:101px;top:813px;}
+#t11_19{left:101px;top:830px;}
+#t12_19{left:101px;top:862px;}
+#t13_19{left:101px;top:879px;}
+#t14_19{left:101px;top:897px;}
+#t15_19{left:101px;top:914px;}
+#t16_19{left:101px;top:932px;}
+#t17_19{left:101px;top:949px;}
+#t18_19{left:101px;top:966px;}
+#t19_19{left:101px;top:984px;}
+#t1a_19{left:101px;top:1001px;}
+#t1b_19{left:101px;top:1033px;}
+#t1c_19{left:101px;top:1065px;}
+#t1d_19{left:101px;top:1082px;}
+
+.s3_19{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_19{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_19{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s5_19{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_19{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_19" class="t s1_19">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_19" class="t s1_19">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_19" class="t s2_19">para la sanción de aquellas conductas penadas por la presente ley, actuando como tribunal de </div>
+<div id="t4_19" class="t s2_19">alzada la Cámara Nacional Electoral. En las faltas y delitos electorales se aplicará el Código Electoral </div>
+<div id="t5_19" class="t s2_19">Nacional en cuanto al procedimiento, siendo tribunal de alzada la Cámara Federal de la respectiva </div>
+<div id="t6_19" class="t s2_19">jurisdicción. </div>
+<div id="t7_19" class="t s3_19">ARTÍCULO 71 </div>
+<div id="t8_19" class="t s4_19">bis </div>
+<div id="t9_19" class="t s2_19">— Las resoluciones de la Dirección Nacional Electoral del Ministerio del Interior </div>
+<div id="ta_19" class="t s2_19">tanto para las elecciones primarias como para las elecciones generales, sobre distribución o </div>
+<div id="tb_19" class="t s2_19">asignación a las agrupaciones políticas de aportes públicos o espacios de publicidad electoral son </div>
+<div id="tc_19" class="t s2_19">apelables por las agrupaciones en sede judicial directamente ante la Cámara Nacional Electoral. El </div>
+<div id="td_19" class="t s2_19">recurso se interpondrá dentro de las cuarenta y ocho (48) horas debidamente fundado ante la </div>
+<div id="te_19" class="t s2_19">Dirección Nacional Electoral del Ministerio del Interior que lo remitirá al tribunal dentro de las </div>
+<div id="tf_19" class="t s2_19">setenta y dos (72) horas, con el expediente en el que se haya dictado la decisión recurrida y una </div>
+<div id="tg_19" class="t s2_19">contestación al memorial del apelante. La Cámara podrá ordenar la incorporación de otros </div>
+<div id="th_19" class="t s2_19">elementos de prueba y solicitar a la Dirección Nacional Electoral del Ministerio del Interior </div>
+<div id="ti_19" class="t s2_19">aclaraciones o precisiones adicionales. Luego de ello, y previa intervención fiscal, se resolverá. </div>
+<div id="tj_19" class="t s5_19">(Artículo incorporado por art. 71 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tk_19" class="t s3_19">ARTÍCULO 72. </div>
+<div id="tl_19" class="t s2_19">— La Corte Suprema de Justicia de la Nación y el Consejo de la Magistratura del </div>
+<div id="tm_19" class="t s2_19">Poder Judicial de la Nación arbitrarán los medios para dotar al Cuerpo de Auditores Contadores de la </div>
+<div id="tn_19" class="t s2_19">Cámara Nacional Electoral de los recursos humanos, técnicos y financieros que permitan el </div>
+<div id="to_19" class="t s2_19">adecuado cumplimiento de sus funciones en los plazos previstos por esta ley. </div>
+<div id="tp_19" class="t s3_19">ARTÍCULO 73. </div>
+<div id="tq_19" class="t s2_19">— Modifícase el artículo 4º de la ley 19.108, de la siguiente forma: Artículo 4º: La </div>
+<div id="tr_19" class="t s2_19">Cámara Nacional Electoral tendrá las siguientes atribuciones especiales: </div>
+<div id="ts_19" class="t s2_19">a) dirigir y fiscalizar el funcionamiento del Registro Nacional de electores y fiscalizar los de los </div>
+<div id="tt_19" class="t s2_19">distritos de acuerdo con las disposiciones de la Ley Electoral; </div>
+<div id="tu_19" class="t s2_19">b) dirigir y fiscalizar el funcionamiento del Registro Nacional de Afiliados de los Partidos Políticos y </div>
+<div id="tv_19" class="t s2_19">fiscalizar los de los distritos, de acuerdo con las disposiciones de esta ley y de la Ley Orgánica de los </div>
+<div id="tw_19" class="t s2_19">Partidos Políticos; </div>
+<div id="tx_19" class="t s2_19">c) dictar las normas a que deberá sujetarse la formación y funcionamiento de los Registros </div>
+<div id="ty_19" class="t s2_19">Generales, de distritos, de cartas de ciudadanía, de inhabilitados, de faltas electorales, de juicios </div>
+<div id="tz_19" class="t s2_19">paralizados en razón de inmunidades, de nombres, símbolos, emblemas y número de identificación </div>
+<div id="t10_19" class="t s2_19">de los Partidos Políticos y las características uniformes de las fichas de afiliación que llevará y </div>
+<div id="t11_19" class="t s2_19">conservará la Justicia Federal Electoral; </div>
+<div id="t12_19" class="t s2_19">d) organizar un Cuerpo de Auditores Contadores para verificar el estado contable de los partidos y el </div>
+<div id="t13_19" class="t s2_19">cumplimiento, en lo pertinente de las disposiciones legales aplicables. A estos fines, contará con un </div>
+<div id="t14_19" class="t s2_19">fondo anual especial que no podrá ser inferior al cinco por ciento (5%) del Fondo Partidario </div>
+<div id="t15_19" class="t s2_19">Permanente, el cual se integrará con los aranceles percibidos por los trámites que se realizan ante </div>
+<div id="t16_19" class="t s2_19">su sede, con los fondos previstos en el Presupuesto General de la Nación y con recursos </div>
+<div id="t17_19" class="t s2_19">provenientes del Fondo Partidario Permanente que administra el Ministerio del Interior en caso de no </div>
+<div id="t18_19" class="t s2_19">cubrirse el mínimo establecido. Trimestralmente el Tribunal verificará haber percibido al menos un </div>
+<div id="t19_19" class="t s2_19">cuarto de dicho monto mínimo y en caso de no alcanzar esa cantidad lo comunicará a la Dirección </div>
+<div id="t1a_19" class="t s2_19">Nacional Electoral del Ministerio del Interior a fin de que sea completada; </div>
+<div id="t1b_19" class="t s2_19">e) implementar un sistema de auditoría de medios de comunicación; </div>
+<div id="t1c_19" class="t s2_19">f) administrar los recursos provenientes de los aranceles percibidos por los trámites que se realizan </div>
+<div id="t1d_19" class="t s2_19">ante su sede, los que se asignen en el Presupuesto General de la Nación y los provenientes de las </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg19Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg19"><object width="935" height="1210" data="19/19.svg" type="image/svg+xml" id="pdf19" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld19" type="text/javascript">
+
+var isIE = false;
+var f19 = [['t1_19',1076],['t2_19',1095],['t3_19',2933],['t4_19',2933],['t5_19',2933],['t7_19',442],['t9_19',2344],['ta_19',2933],['tb_19',2933],['tc_19',2933],['td_19',2934],['te_19',2933],['tf_19',2933],['tg_19',2933],['th_19',2933],['ti_19',2744],['tj_19',2081],['tk_19',465],['tl_19',2440],['tm_19',2933],['tn_19',2934],['to_19',2246],['tp_19',461],['tq_19',2448],['tr_19',2090],['ts_19',2934],['tt_19',1770],['tu_19',2933],['tv_19',2933],['tw_19',513],['tx_19',2933],['ty_19',2934],['tz_19',2934],['t10_19',2934],['t11_19',1146],['t12_19',2934],['t13_19',2933],['t14_19',2933],['t15_19',2934],['t16_19',2934],['t17_19',2934],['t18_19',2934],['t19_19',2934],['t1a_19',2125],['t1b_19',1993],['t1c_19',2933],['t1d_19',2934]];
+function load19(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f19);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 50;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_19");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

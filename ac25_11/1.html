@@ -1,0 +1,286 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:384px;}
+#tc_1{left:101px;top:416px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:482px;}
+#tg_1{left:101px;top:514px;}
+#th_1{left:101px;top:532px;}
+#ti_1{left:101px;top:549px;}
+#tj_1{left:561px;top:549px;}
+#tk_1{left:582px;top:549px;}
+#tl_1{left:101px;top:566px;}
+#tm_1{left:221px;top:566px;}
+#tn_1{left:395px;top:566px;}
+#to_1{left:101px;top:584px;}
+#tp_1{left:101px;top:601px;}
+#tq_1{left:101px;top:619px;}
+#tr_1{left:101px;top:651px;}
+#ts_1{left:101px;top:668px;}
+#tt_1{left:292px;top:668px;}
+#tu_1{left:336px;top:668px;}
+#tv_1{left:101px;top:685px;}
+#tw_1{left:395px;top:685px;}
+#tx_1{left:101px;top:703px;}
+#ty_1{left:101px;top:720px;}
+#tz_1{left:316px;top:720px;}
+#t10_1{left:335px;top:720px;}
+#t11_1{left:362px;top:720px;}
+#t12_1{left:101px;top:738px;}
+#t13_1{left:101px;top:769px;}
+#t14_1{left:101px;top:787px;}
+#t15_1{left:101px;top:804px;}
+#t16_1{left:405px;top:804px;}
+#t17_1{left:426px;top:804px;}
+#t18_1{left:101px;top:822px;}
+#t19_1{left:101px;top:839px;}
+#t1a_1{left:101px;top:871px;}
+#t1b_1{left:101px;top:888px;}
+#t1c_1{left:101px;top:906px;}
+#t1d_1{left:101px;top:937px;}
+#t1e_1{left:101px;top:955px;}
+#t1f_1{left:101px;top:986px;}
+#t1g_1{left:101px;top:1018px;}
+#t1h_1{left:205px;top:1018px;}
+#t1i_1{left:101px;top:1050px;}
+#t1j_1{left:101px;top:1067px;}
+#t1k_1{left:101px;top:1085px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 25/2011 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 17/03/2011 </div>
+<div id="t5_1" class="t s4_1">NÚMEROS DE IDENTIFICACIÓN DE LAS AGRUPACIONES POLÍTICAS. NORMAS DE </div>
+<div id="t6_1" class="t s4_1">COMPETENCIA Y PROCEDIMIENTO PARA SU ADJUDICACIÓN. </div>
+<div id="t7_1" class="t s3_1">En Buenos Aires, a los diecisiete días del mes de marzo del año dos mil once, se reúnen en Acuerdo </div>
+<div id="t8_1" class="t s3_1">Extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Rodolfo Emilio </div>
+<div id="t9_1" class="t s3_1">Munné, Santiago Hernán Corcuera y Alberto Ricardo Dalla Via, actuando el Secretario de Actuación </div>
+<div id="ta_1" class="t s3_1">Judicial de la Cámara doctor Hernán Gonçalves Figueiredo. Abierto el acto por el señor Presidente </div>
+<div id="tb_1" class="t s3_1">doctor Rodolfo Emilio Munné, </div>
+<div id="tc_1" class="t s3_1">CONSIDERARON: </div>
+<div id="td_1" class="t s3_1">1°) Que mediante la Acordada N° 94/02 este Tribunal estableció -sustituyendo las anteriores </div>
+<div id="te_1" class="t s3_1">previsiones de la Acordada N° 59/95- las disposiciones sobre la adjudicación de números </div>
+<div id="tf_1" class="t s3_1">partidarios.- </div>
+<div id="tg_1" class="t s3_1">2°) Que la ley 26.571 introdujo modificaciones a la ley orgánica de los partidos políticos (23.298) </div>
+<div id="th_1" class="t s3_1">disponiendo -entre otras cosas- que, previamente a la obtención del reconocimiento definitivo de la </div>
+<div id="ti_1" class="t s3_1">personalidad jurídico-política previsto en el artículo 7° </div>
+<div id="tj_1" class="t s5_1">bis</div>
+<div id="tk_1" class="t s3_1">, las agrupaciones obtienen el </div>
+<div id="tl_1" class="t s3_1">reconocimiento </div>
+<div id="tm_1" class="t s5_1">"en forma provisoria"</div>
+<div id="tn_1" class="t s3_1">(art. 7°). En consecuencia, resulta imperioso precisar la </div>
+<div id="to_1" class="t s3_1">reglamentación de la citada Acordada N° 94/02, con el objeto de determinar -con respecto a la </div>
+<div id="tp_1" class="t s3_1">asignación de número partidario- la situación de los partidos que obtengan ese tipo de </div>
+<div id="tq_1" class="t s3_1">reconocimiento.- </div>
+<div id="tr_1" class="t s3_1">A tal fin, no resulta ocioso advertir que, como se explicó en otra oportunidad, el número partidario </div>
+<div id="ts_1" class="t s3_1">cumple principalmente el </div>
+<div id="tt_1" class="t s5_1">"rol [.</div>
+<div id="tu_1" class="t s5_1">..] de facilitar la diferenciación de los partidos durante la campaña </div>
+<div id="tv_1" class="t s5_1">electoral y en las boletas de sufragio"</div>
+<div id="tw_1" class="t s3_1">(cf. Fallos CNE 476/83 y 477/83).Por ello, y toda vez que </div>
+<div id="tx_1" class="t s3_1">durante la vigencia del reconocimiento provisorio, los partidos no pueden presentar candidaturas a </div>
+<div id="ty_1" class="t s3_1">cargos electivos (cf. art. 7°, </div>
+<div id="tz_1" class="t s5_1">in</div>
+<div id="t10_1" class="t s5_1">fine</div>
+<div id="t11_1" class="t s3_1">), resulta conveniente que el número partidario le sea asignado </div>
+<div id="t12_1" class="t s3_1">sólo cuando la agrupación política obtenga reconocimiento definitivo.- </div>
+<div id="t13_1" class="t s3_1">3°) Que, en otro orden de ideas, tomando en cuenta que la reforma introducida por la ley 26.571 a </div>
+<div id="t14_1" class="t s3_1">la ley orgánica de los partidos políticos reglamenta más detalladamente la constitución de </div>
+<div id="t15_1" class="t s3_1">confederaciones de partidos (cf. art. 10 </div>
+<div id="t16_1" class="t s5_1">bis</div>
+<div id="t17_1" class="t s3_1">), enfatizando su singularidad respecto de los partidos </div>
+<div id="t18_1" class="t s3_1">políticos individualmente considerados, resulta conveniente que ello se traduzca también en una </div>
+<div id="t19_1" class="t s3_1">diferenciación del número partidario.- </div>
+<div id="t1a_1" class="t s3_1">En tal sentido, se estima pertinente precisar, dentro de los segmentos numéricos previstos en la </div>
+<div id="t1b_1" class="t s3_1">citada acordada 94/02, franjas diferenciadas para los partidos políticos y las confederaciones de </div>
+<div id="t1c_1" class="t s3_1">partidos.- </div>
+<div id="t1d_1" class="t s3_1">4°) Que, finalmente, frente a las nuevas previsiones, es necesario reordenar por completo el </div>
+<div id="t1e_1" class="t s3_1">contenido de la acordada mencionada.- </div>
+<div id="t1f_1" class="t s3_1">Por ello, </div>
+<div id="t1g_1" class="t s4_1">ACORDARON</div>
+<div id="t1h_1" class="t s3_1">: </div>
+<div id="t1i_1" class="t s3_1">1°) Establecer las normas de competencia y procedimiento para la adjudicación de los números de </div>
+<div id="t1j_1" class="t s3_1">identificación de las agrupaciones políticas establecidas en el Anexo de la presente, en reemplazo de </div>
+<div id="t1k_1" class="t s3_1">la reglamentación dispuesta en la Acordada N° 94/02 CNE.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1010],['t4_1',587],['t5_1',2933],['t6_1',1965],['t7_1',2934],['t8_1',2933],['t9_1',2933],['ta_1',2933],['tb_1',847],['td_1',2933],['te_1',2934],['tg_1',2934],['th_1',2934],['ti_1',1785],['tk_1',1011],['tm_1',658],['tn_1',1755],['to_1',2933],['tp_1',2933],['tr_1',2933],['ts_1',738],['tt_1',175],['tu_1',1991],['tv_1',1147],['tw_1',1756],['tx_1',2933],['ty_1',834],['t11_1',1889],['t12_1',2026],['t13_1',2933],['t14_1',2934],['t15_1',1189],['t17_1',1634],['t18_1',2933],['t19_1',1093],['t1a_1',2934],['t1b_1',2933],['t1d_1',2933],['t1e_1',1143],['t1f_1',235],['t1i_1',2934],['t1j_1',2933],['t1k_1',1739]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 57;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

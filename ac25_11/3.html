@@ -1,0 +1,259 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:257px;}
+#t6_3{left:127px;top:257px;}
+#t7_3{left:101px;top:288px;}
+#t8_3{left:561px;top:288px;}
+#t9_3{left:727px;top:288px;letter-spacing:2px;}
+#ta_3{left:101px;top:306px;}
+#tb_3{left:101px;top:338px;}
+#tc_3{left:121px;top:338px;}
+#td_3{left:101px;top:369px;}
+#te_3{left:101px;top:387px;}
+#tf_3{left:101px;top:418px;}
+#tg_3{left:101px;top:436px;}
+#th_3{left:101px;top:453px;}
+#ti_3{left:101px;top:471px;}
+#tj_3{left:101px;top:502px;}
+#tk_3{left:101px;top:520px;}
+#tl_3{left:101px;top:537px;}
+#tm_3{left:101px;top:555px;}
+#tn_3{left:101px;top:572px;}
+#to_3{left:101px;top:604px;}
+#tp_3{left:101px;top:621px;}
+#tq_3{left:101px;top:639px;}
+#tr_3{left:101px;top:670px;}
+#ts_3{left:127px;top:670px;}
+#tt_3{left:101px;top:702px;}
+#tu_3{left:101px;top:720px;}
+#tv_3{left:101px;top:751px;}
+#tw_3{left:101px;top:769px;}
+#tx_3{left:101px;top:800px;}
+#ty_3{left:133px;top:800px;}
+#tz_3{left:101px;top:832px;}
+#t10_3{left:101px;top:864px;}
+#t11_3{left:101px;top:881px;}
+#t12_3{left:101px;top:913px;}
+#t13_3{left:101px;top:945px;}
+#t14_3{left:139px;top:945px;}
+#t15_3{left:101px;top:976px;}
+#t16_3{left:101px;top:1008px;}
+#t17_3{left:101px;top:1026px;}
+#t18_3{left:101px;top:1043px;}
+#t19_3{left:101px;top:1075px;}
+#t1a_3{left:127px;top:1075px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">ante la justicia electoral a los fines de iniciar el trámite de reconocimiento y, en su defecto, por </div>
+<div id="t4_3" class="t s2_3">sorteo. </div>
+<div id="t5_3" class="t s2_3">IV.</div>
+<div id="t6_3" class="t s3_3">Agrupaciones políticas con reconocimiento provisorio. </div>
+<div id="t7_3" class="t s2_3">A las agrupaciones políticas que obtengan el reconocimiento </div>
+<div id="t8_3" class="t s4_3">"en forma provisoria"</div>
+<div id="t9_3" class="t s2_3">(cf. art. 7, ley </div>
+<div id="ta_3" class="t s2_3">23.298 y sus modif.) no les corresponde número de identificación. </div>
+<div id="tb_3" class="t s2_3">V.</div>
+<div id="tc_3" class="t s3_3">Partidos de distrito que integran uno de orden nacional. </div>
+<div id="td_3" class="t s2_3">Los partidos nacionales deben tener el mismo número de identificación en todos los distritos </div>
+<div id="te_3" class="t s2_3">electorales en que se hallen inscriptos como tales (art. 8°, ley 23.298). </div>
+<div id="tf_3" class="t s2_3">El partido de distrito que pasa a integrar un partido nacional debe utilizar el número de identificación </div>
+<div id="tg_3" class="t s2_3">que corresponda a dicho partido nacional. No obstante ello, conservará además su número como </div>
+<div id="th_3" class="t s2_3">partido de distrito, el que solo será efectivo ante la eventualidad de que se cancele por cualquier </div>
+<div id="ti_3" class="t s2_3">causa el registro del respectivo partido de orden nacional. </div>
+<div id="tj_3" class="t s2_3">De igual modo, el partido de distrito que desde la obtención de su reconocimiento definitivo integra </div>
+<div id="tk_3" class="t s2_3">un partido nacional, debe utilizar el número de identificación que corresponda a dicho partido </div>
+<div id="tl_3" class="t s2_3">nacional. No obstante ello, se le asignará además un número como partido de distrito de </div>
+<div id="tm_3" class="t s2_3">conformidad con el punto II b) , el que solo será efectivo ante la eventualidad de que se cancele por </div>
+<div id="tn_3" class="t s2_3">cualquier causa el registro del respectivo partido de orden nacional. </div>
+<div id="to_3" class="t s2_3">En caso de que se cancele por cualquier causa el registro de un partido de orden nacional, los </div>
+<div id="tp_3" class="t s2_3">partidos de distrito que lo integraban cesarán en el uso del número partidario de aquél, y utilizarán </div>
+<div id="tq_3" class="t s2_3">el número que les fuera asignado como partido de distrito. </div>
+<div id="tr_3" class="t s2_3">VI.</div>
+<div id="ts_3" class="t s3_3">Asignación de número en caso de fusión partidaria. </div>
+<div id="tt_3" class="t s2_3">Al partido político reconocido por la fusión de dos o más partidos en uno nuevo, se le asignará un </div>
+<div id="tu_3" class="t s2_3">nuevo número de conformidad con las previsiones anteriores. </div>
+<div id="tv_3" class="t s2_3">En el caso de incorporarse uno o más partidos en otro existente mediante una fusión por absorción </div>
+<div id="tw_3" class="t s2_3">(cf. Fallos CNE 4362/10), la agrupación resultante mantiene el número del partido subsistente. </div>
+<div id="tx_3" class="t s2_3">VII.</div>
+<div id="ty_3" class="t s3_3">Números de agrupaciones cuyo registro se cancelare. </div>
+<div id="tz_3" class="t s2_3">a) Los números de los partidos políticos caducos o extintos no se asignarán a ningún otro. </div>
+<div id="t10_3" class="t s2_3">b) Los números de las confederaciones disueltas no se asignarán a ninguna otra, hasta agotar los </div>
+<div id="t11_3" class="t s2_3">números disponibles del segmento respectivo que no se hayan utilizado previamente. </div>
+<div id="t12_3" class="t s2_3">c) Los números de las alianzas se asignarán para cada proceso electoral. </div>
+<div id="t13_3" class="t s2_3">VIII.</div>
+<div id="t14_3" class="t s3_3">Cláusulas transitorias. </div>
+<div id="t15_3" class="t s2_3">a) Las confederaciones actualmente reconocidas mantienen los números que ostentan. </div>
+<div id="t16_3" class="t s2_3">b) A los partidos políticos de distrito reconocidos que integren un partido de orden nacional y no </div>
+<div id="t17_3" class="t s2_3">tuviesen asignado número como partido de distrito, se les asignará uno a los efectos de lo </div>
+<div id="t18_3" class="t s2_3">establecido en el punto V. </div>
+<div id="t19_3" class="t s2_3">IX.</div>
+<div id="t1a_3" class="t s3_3">Disposición supletoria. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2934],['t6_3',1754],['t7_3',1809],['t8_3',636],['t9_3',429],['ta_3',1925],['tc_3',1815],['td_3',2934],['te_3',2069],['tf_3',2934],['tg_3',2934],['th_3',2933],['ti_3',1681],['tj_3',2934],['tk_3',2933],['tl_3',2933],['tm_3',2934],['tn_3',1964],['to_3',2934],['tp_3',2933],['tq_3',1702],['ts_3',1663],['tt_3',2934],['tu_3',1789],['tv_3',2933],['tw_3',2759],['ty_3',1734],['tz_3',2620],['t10_3',2934],['t11_3',2485],['t12_3',2113],['t14_3',724],['t15_3',2524],['t16_3',2934],['t17_3',2934],['t18_3',752],['t1a_3',736]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

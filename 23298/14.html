@@ -1,0 +1,237 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load14();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_14{left:344px;top:126px;}
+#t2_14{left:342px;top:161px;}
+#t3_14{left:101px;top:238px;}
+#t4_14{left:227px;top:238px;}
+#t5_14{left:101px;top:276px;}
+#t6_14{left:101px;top:313px;}
+#t7_14{left:101px;top:351px;}
+#t8_14{left:101px;top:369px;}
+#t9_14{left:101px;top:406px;}
+#ta_14{left:101px;top:444px;}
+#tb_14{left:101px;top:481px;}
+#tc_14{left:101px;top:499px;}
+#td_14{left:101px;top:536px;}
+#te_14{left:101px;top:574px;}
+#tf_14{left:101px;top:612px;}
+#tg_14{left:227px;top:612px;}
+#th_14{left:101px;top:649px;}
+#ti_14{left:101px;top:687px;}
+#tj_14{left:101px;top:724px;}
+#tk_14{left:101px;top:742px;}
+#tl_14{left:101px;top:779px;}
+#tm_14{left:101px;top:817px;}
+#tn_14{left:234px;top:817px;}
+#to_14{left:101px;top:835px;}
+#tp_14{left:101px;top:852px;}
+#tq_14{left:101px;top:890px;}
+#tr_14{left:228px;top:890px;}
+#ts_14{left:101px;top:907px;}
+#tt_14{left:101px;top:925px;}
+#tu_14{left:101px;top:942px;}
+#tv_14{left:101px;top:980px;}
+#tw_14{left:101px;top:997px;}
+#tx_14{left:101px;top:1015px;}
+#ty_14{left:101px;top:1052px;}
+#tz_14{left:101px;top:1070px;}
+
+.s2_14{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_14{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_14{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_14{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_14" class="t s1_14">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_14" class="t s1_14">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_14" class="t s2_14">ARTÍCULO 50.- </div>
+<div id="t4_14" class="t s3_14">Son causas de caducidad de la personalidad política de los partidos: </div>
+<div id="t5_14" class="t s3_14">a) La no realización de elecciones partidarias internas durante el término de cuatro (4) años; </div>
+<div id="t6_14" class="t s3_14">b) La no presentación a dos (2) elecciones nacionales consecutivas; </div>
+<div id="t7_14" class="t s3_14">c) No alcanzar en dos (2) elecciones nacionales sucesivas el dos por ciento (2%) del padrón </div>
+<div id="t8_14" class="t s3_14">electoral del distrito que corresponda; </div>
+<div id="t9_14" class="t s3_14">d) La violación de lo determinado en los artículos 7º, inciso e) y 37, previa intimación judicial; </div>
+<div id="ta_14" class="t s3_14">e) No mantener la afiliación mínima prevista por los artículos 7º y 7º ter; </div>
+<div id="tb_14" class="t s3_14">f) No estar integrado un partido nacional por al menos cinco (5) partidos de distrito con personería </div>
+<div id="tc_14" class="t s3_14">vigente; </div>
+<div id="td_14" class="t s3_14">g) La violación a lo dispuesto en los incisos f) y g) del artículo 33 de la presente ley. </div>
+<div id="te_14" class="t s4_14">(Artículo modificado por art. 16 de la Ley Nº 26.571 B.O. 14/12/2009) </div>
+<div id="tf_14" class="t s2_14">ARTÍCULO 51.- </div>
+<div id="tg_14" class="t s3_14">Los partidos se extinguen: </div>
+<div id="th_14" class="t s3_14">a) Por las causas que determine la carta orgánica; </div>
+<div id="ti_14" class="t s3_14">b) Por la voluntad de los afiliados, expresada de acuerdo con la carta orgánica; </div>
+<div id="tj_14" class="t s3_14">c) Cuando autoridades del partido o candidatos no desautorizados por aquéllas, cometieren delitos </div>
+<div id="tk_14" class="t s3_14">de acción pública; </div>
+<div id="tl_14" class="t s3_14">d) Por impartir instrucción militar a los afiliados u organizarlos militarmente. </div>
+<div id="tm_14" class="t s2_14">ARTÍCULO 52.- </div>
+<div id="tn_14" class="t s3_14">La cancelación de la personalidad política y la extinción de los partidos serán </div>
+<div id="to_14" class="t s3_14">declaradas por sentencias de la Justicia Federal con competencia electoral, con todas las garantías </div>
+<div id="tp_14" class="t s3_14">del debido proceso legal, en que el partido sea parte. </div>
+<div id="tq_14" class="t s2_14">ARTÍCULO 53.- </div>
+<div id="tr_14" class="t s3_14">En caso de declararse la caducidad de la personería jurídico-política de un partido, </div>
+<div id="ts_14" class="t s3_14">podrá ser solicitada nuevamente, a partir de la fecha de su caducidad y luego de celebrada la </div>
+<div id="tt_14" class="t s3_14">primera elección nacional, cumpliendo con lo dispuesto en el título II, previa intervención del </div>
+<div id="tu_14" class="t s3_14">procurador fiscal federal. </div>
+<div id="tv_14" class="t s3_14">El partido extinguido por sentencia firme no podrá ser reconocido nuevamente con el mismo </div>
+<div id="tw_14" class="t s3_14">nombre, la misma carta orgánica, declaración de principios, programa o bases de acción política, por </div>
+<div id="tx_14" class="t s3_14">el término de seis (6) años, a partir de la fecha de la sentencia. </div>
+<div id="ty_14" class="t s3_14">Por el mismo término los juzgados federales con competencia electoral de cada distrito no podrán </div>
+<div id="tz_14" class="t s3_14">registrar nuevos partidos integrados por ex afiliados a un mismo partido político declarado caduco </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg14Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg14"><object width="935" height="1210" data="14/14.svg" type="image/svg+xml" id="pdf14" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld14" type="text/javascript">
+
+var isIE = false;
+var f14 = [['t1_14',987],['t2_14',1004],['t3_14',483],['t4_14',1971],['t5_14',2699],['t6_14',1968],['t7_14',2933],['t8_14',1103],['t9_14',2732],['ta_14',2127],['tb_14',2933],['td_14',2442],['te_14',2048],['tf_14',483],['tg_14',767],['th_14',1461],['ti_14',2296],['tj_14',2933],['tk_14',522],['tl_14',2216],['tm_14',499],['tn_14',2400],['to_14',2934],['tp_14',1544],['tq_14',487],['tr_14',2423],['ts_14',2934],['tt_14',2934],['tu_14',722],['tv_14',2934],['tw_14',2933],['tx_14',1846],['ty_14',2933],['tz_14',2933]];
+function load14(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f14);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 36;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_14");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

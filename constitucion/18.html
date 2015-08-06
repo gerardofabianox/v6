@@ -1,0 +1,296 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load18();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_18{left:437px;top:1453px;}
+#t2_18{left:87px;top:130px;}
+#t3_18{left:87px;top:150px;}
+#t4_18{left:87px;top:171px;}
+#t5_18{left:87px;top:200px;}
+#t6_18{left:87px;top:221px;}
+#t7_18{left:87px;top:250px;}
+#t8_18{left:87px;top:271px;}
+#t9_18{left:87px;top:300px;}
+#ta_18{left:87px;top:321px;}
+#tb_18{left:87px;top:341px;}
+#tc_18{left:87px;top:362px;}
+#td_18{left:87px;top:391px;}
+#te_18{left:87px;top:421px;}
+#tf_18{left:194px;top:421px;}
+#tg_18{left:87px;top:441px;}
+#th_18{left:87px;top:462px;}
+#ti_18{left:87px;top:482px;}
+#tj_18{left:87px;top:503px;}
+#tk_18{left:87px;top:523px;}
+#tl_18{left:87px;top:553px;}
+#tm_18{left:193px;top:553px;}
+#tn_18{left:87px;top:573px;}
+#to_18{left:87px;top:603px;}
+#tp_18{left:193px;top:603px;}
+#tq_18{left:87px;top:623px;}
+#tr_18{left:87px;top:643px;}
+#ts_18{left:87px;top:673px;}
+#tt_18{left:198px;top:673px;}
+#tu_18{left:87px;top:693px;}
+#tv_18{left:87px;top:714px;}
+#tw_18{left:87px;top:743px;}
+#tx_18{left:192px;top:743px;}
+#ty_18{left:87px;top:764px;}
+#tz_18{left:87px;top:793px;}
+#t10_18{left:193px;top:793px;}
+#t11_18{left:87px;top:814px;}
+#t12_18{left:87px;top:844px;}
+#t13_18{left:193px;top:844px;}
+#t14_18{left:87px;top:864px;}
+#t15_18{left:365px;top:923px;}
+#t16_18{left:353px;top:953px;}
+#t17_18{left:359px;top:982px;}
+#t18_18{left:326px;top:1012px;}
+#t19_18{left:87px;top:1041px;}
+#t1a_18{left:196px;top:1041px;}
+#t1b_18{left:87px;top:1062px;}
+#t1c_18{left:87px;top:1082px;}
+#t1d_18{left:87px;top:1112px;}
+#t1e_18{left:192px;top:1112px;}
+#t1f_18{left:87px;top:1132px;}
+#t1g_18{left:87px;top:1162px;}
+#t1h_18{left:194px;top:1162px;}
+#t1i_18{left:87px;top:1182px;}
+#t1j_18{left:87px;top:1203px;}
+#t1k_18{left:87px;top:1223px;}
+#t1l_18{left:87px;top:1253px;}
+#t1m_18{left:197px;top:1253px;}
+#t1n_18{left:87px;top:1273px;}
+#t1o_18{left:87px;top:1294px;}
+#t1p_18{left:87px;top:1323px;}
+#t1q_18{left:195px;top:1323px;}
+#t1r_18{left:87px;top:1344px;}
+#t1s_18{left:87px;top:1364px;}
+#t1t_18{left:87px;top:1385px;}
+#t1u_18{left:87px;top:1414px;}
+#t1v_18{left:199px;top:1414px;}
+#t1w_18{left:87px;top:1434px;}
+
+.s3_18{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_18{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_18{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_18" class="t s1_18">18</div>
+<div id="t2_18" class="t s2_18">10. Una vez que se inicien las sesiones ordinarias del Congreso, presentar junto a los </div>
+<div id="t3_18" class="t s2_18">restantes ministros una memoria detallada del estado de la Nación en lo relativo a los </div>
+<div id="t4_18" class="t s2_18">negocios de los respectivos departamentos. </div>
+<div id="t5_18" class="t s2_18">11. Producir los informes y explicaciones verbales o escritos que cualquiera de las Cámaras </div>
+<div id="t6_18" class="t s2_18">solicite al Poder Ejecutivo. </div>
+<div id="t7_18" class="t s2_18">12. Refrendar los decretos que ejercen facultades delegadas por el Congreso, los que </div>
+<div id="t8_18" class="t s2_18">estarán sujetos al control de la Comisión Bicameral Permanente. </div>
+<div id="t9_18" class="t s2_18">13. Refrendar conjuntamente con los demás ministros los decretos de necesidad y urgencia </div>
+<div id="ta_18" class="t s2_18">y los decretos que promulgan parcialmente leyes. Someterá personalmente y dentro de los </div>
+<div id="tb_18" class="t s2_18">diez días de su sanción estos decretos a consideración de la Comisión Bicameral </div>
+<div id="tc_18" class="t s2_18">Permanente. </div>
+<div id="td_18" class="t s2_18">El jefe de gabinete de ministros no podrá desempeñar simultáneamente otro ministerio. </div>
+<div id="te_18" class="t s3_18">Artículo 101</div>
+<div id="tf_18" class="t s2_18">.- El jefe de gabinete de ministros debe concurrir al Congreso al menos una </div>
+<div id="tg_18" class="t s2_18">vez por mes, alternativamente a cada una de sus Cámaras, para informar de la marcha del </div>
+<div id="th_18" class="t s2_18">gobierno, sin perjuicio de lo dispuesto en el Artículo 71. Puede ser interpelado a los efectos </div>
+<div id="ti_18" class="t s2_18">del tratamiento de una moción de censura, por el voto de la mayoría absoluta de la totalidad </div>
+<div id="tj_18" class="t s2_18">de los miembros de cualquiera de las Cámaras, y ser removido por el voto de la mayoría </div>
+<div id="tk_18" class="t s2_18">absoluta de los miembros de cada una de las Cámaras. </div>
+<div id="tl_18" class="t s3_18">Artículo 102</div>
+<div id="tm_18" class="t s2_18">.- Cada ministro es responsable de los actos que legaliza; y solidariamente de </div>
+<div id="tn_18" class="t s2_18">los que acuerda con sus colegas. </div>
+<div id="to_18" class="t s3_18">Artículo 103</div>
+<div id="tp_18" class="t s2_18">.- Los ministros no pueden por sí solos, en ningún caso, tomar resoluciones, a </div>
+<div id="tq_18" class="t s2_18">excepción de lo concerniente al régimen económico y administrativo de sus respectivos </div>
+<div id="tr_18" class="t s2_18">departamentos. </div>
+<div id="ts_18" class="t s3_18">Artículo 104</div>
+<div id="tt_18" class="t s2_18">.- Luego que el Congreso abra sus sesiones, deberán los ministros del </div>
+<div id="tu_18" class="t s2_18">despacho presentarle una memoria detallada del estado de la Nación en lo relativo a los </div>
+<div id="tv_18" class="t s2_18">negocios de sus respectivos departamentos. </div>
+<div id="tw_18" class="t s3_18">Artículo 105</div>
+<div id="tx_18" class="t s2_18">.- No pueden ser senadores ni diputados, sin hacer dimisión de sus empleos de </div>
+<div id="ty_18" class="t s2_18">ministros. </div>
+<div id="tz_18" class="t s3_18">Artículo 106</div>
+<div id="t10_18" class="t s2_18">.- Pueden los ministros concurrir a las sesiones del Congreso y tomar parte en </div>
+<div id="t11_18" class="t s2_18">sus debates, pero no votar. </div>
+<div id="t12_18" class="t s3_18">Artículo 107</div>
+<div id="t13_18" class="t s2_18">.- Gozarán por sus servicios de un sueldo establecido por la ley, que no podrá </div>
+<div id="t14_18" class="t s2_18">ser aumentado ni disminuido en favor o perjuicio de los que se hallen en ejercicio. </div>
+<div id="t15_18" class="t s3_18">SECCIÓN TERCERA </div>
+<div id="t16_18" class="t s3_18">DEL PODER JUDICIAL </div>
+<div id="t17_18" class="t s3_18">CAPÍTULO PRIMERO </div>
+<div id="t18_18" class="t s3_18">De su naturaleza y duración </div>
+<div id="t19_18" class="t s3_18">Artículo 108</div>
+<div id="t1a_18" class="t s2_18">.- El Poder Judicial de la Nación será ejercido por una Corte Suprema de </div>
+<div id="t1b_18" class="t s2_18">Justicia, y por los demás tribunales inferiores que el Congreso estableciere en el territorio de </div>
+<div id="t1c_18" class="t s2_18">la Nación. </div>
+<div id="t1d_18" class="t s3_18">Artículo 109</div>
+<div id="t1e_18" class="t s2_18">.- En ningún caso el presidente de la Nación puede ejercer funciones judiciales, </div>
+<div id="t1f_18" class="t s2_18">arrogarse el conocimiento de causas pendientes o restablecer las fenecidas. </div>
+<div id="t1g_18" class="t s3_18">Artículo 110</div>
+<div id="t1h_18" class="t s2_18">.- Los jueces de la Corte Suprema y de los tribunales inferiores de la Nación </div>
+<div id="t1i_18" class="t s2_18">conservarán sus empleos mientras dure su buena conducta, y recibirán por sus servicios una </div>
+<div id="t1j_18" class="t s2_18">compensación que determinará la ley, y que no podrá ser disminuida en manera alguna, </div>
+<div id="t1k_18" class="t s2_18">mientras permaneciesen en sus funciones. </div>
+<div id="t1l_18" class="t s3_18">Artículo 111</div>
+<div id="t1m_18" class="t s2_18">.- Ninguno podrá ser miembro de la Corte Suprema de Justicia, sin ser </div>
+<div id="t1n_18" class="t s2_18">abogado de la Nación con ocho años de ejercicio, y tener las calidades requeridas para ser </div>
+<div id="t1o_18" class="t s2_18">senador. </div>
+<div id="t1p_18" class="t s3_18">Artículo 112</div>
+<div id="t1q_18" class="t s2_18">.- En la primera instalación de la Corte Suprema, los individuos nombrados </div>
+<div id="t1r_18" class="t s2_18">prestarán juramento en manos del Presidente de la Nación, de desempeñar sus obligaciones, </div>
+<div id="t1s_18" class="t s2_18">administrando justicia bien y legalmente, y en conformidad a lo que prescribe la </div>
+<div id="t1t_18" class="t s2_18">Constitución. En lo sucesivo lo prestarán ante el presidente de la misma Corte. </div>
+<div id="t1u_18" class="t s3_18">Artículo 113</div>
+<div id="t1v_18" class="t s2_18">.- La Corte Suprema dictará su reglamento interior y nombrará a sus </div>
+<div id="t1w_18" class="t s2_18">empleados. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg18Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg18"><object width="935" height="1540" data="18/18.svg" type="image/svg+xml" id="pdf18" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld18" type="text/javascript">
+
+var isIE = false;
+var f18 = [['t2_18',2875],['t3_18',2875],['t4_18',1346],['t5_18',2875],['t6_18',806],['t7_18',2875],['t8_18',1992],['t9_18',2874],['ta_18',2874],['tb_18',2874],['td_18',2715],['te_18',429],['tf_18',2445],['tg_18',2874],['th_18',2874],['ti_18',2874],['tj_18',2875],['tk_18',1704],['tl_18',424],['tm_18',2450],['tn_18',1012],['to_18',423],['tp_18',2451],['tq_18',2874],['ts_18',445],['tt_18',2429],['tu_18',2874],['tv_18',1363],['tw_18',421],['tx_18',2453],['tz_18',423],['t10_18',2450],['t11_18',848],['t12_18',424],['t13_18',2450],['t14_18',2538],['t15_18',644],['t16_18',741],['t17_18',698],['t18_18',960],['t19_18',436],['t1a_18',2437],['t1b_18',2875],['t1c_18',304],['t1d_18',421],['t1e_18',2453],['t1f_18',2338],['t1g_18',427],['t1h_18',2447],['t1i_18',2875],['t1j_18',2874],['t1k_18',1311],['t1l_18',441],['t1m_18',2433],['t1n_18',2874],['t1p_18',432],['t1q_18',2442],['t1r_18',2875],['t1s_18',2874],['t1t_18',2433],['t1u_18',447],['t1v_18',2427]];
+function load18(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f18);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 69;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_18");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

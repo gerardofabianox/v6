@@ -1,0 +1,277 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:333px;top:128px;}
+#t2_6{left:331px;top:147px;}
+#t3_6{left:101px;top:211px;}
+#t4_6{left:101px;top:243px;}
+#t5_6{left:101px;top:260px;}
+#t6_6{left:101px;top:292px;}
+#t7_6{left:101px;top:324px;}
+#t8_6{left:122px;top:324px;}
+#t9_6{left:238px;top:324px;}
+#ta_6{left:101px;top:341px;}
+#tb_6{left:101px;top:358px;}
+#tc_6{left:101px;top:376px;}
+#td_6{left:101px;top:408px;}
+#te_6{left:101px;top:425px;}
+#tf_6{left:101px;top:442px;}
+#tg_6{left:101px;top:474px;}
+#th_6{left:126px;top:474px;}
+#ti_6{left:203px;top:474px;}
+#tj_6{left:101px;top:492px;}
+#tk_6{left:101px;top:509px;}
+#tl_6{left:101px;top:526px;}
+#tm_6{left:101px;top:544px;}
+#tn_6{left:101px;top:561px;}
+#to_6{left:101px;top:593px;}
+#tp_6{left:101px;top:610px;}
+#tq_6{left:101px;top:628px;}
+#tr_6{left:101px;top:645px;}
+#ts_6{left:101px;top:677px;}
+#tt_6{left:124px;top:677px;}
+#tu_6{left:239px;top:677px;}
+#tv_6{left:101px;top:694px;}
+#tw_6{left:101px;top:712px;}
+#tx_6{left:101px;top:744px;}
+#ty_6{left:122px;top:744px;}
+#tz_6{left:224px;top:744px;}
+#t10_6{left:101px;top:761px;}
+#t11_6{left:101px;top:778px;}
+#t12_6{left:176px;top:778px;}
+#t13_6{left:210px;top:778px;}
+#t14_6{left:101px;top:810px;}
+#t15_6{left:125px;top:810px;}
+#t16_6{left:242px;top:810px;}
+#t17_6{left:101px;top:827px;}
+#t18_6{left:101px;top:845px;}
+#t19_6{left:101px;top:862px;}
+#t1a_6{left:101px;top:894px;}
+#t1b_6{left:131px;top:894px;}
+#t1c_6{left:504px;top:894px;}
+#t1d_6{left:101px;top:912px;}
+#t1e_6{left:101px;top:943px;}
+#t1f_6{left:101px;top:961px;}
+#t1g_6{left:101px;top:978px;}
+#t1h_6{left:101px;top:1010px;}
+#t1i_6{left:101px;top:1027px;}
+#t1j_6{left:101px;top:1045px;}
+
+.s3_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_6{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_6" class="t s1_6">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_6" class="t s2_6">- que no sean o hayan sido autoridades partidarias, o candidatos en los últimos cuatro (4) años, </div>
+<div id="t4_6" class="t s2_6">- que no sean individuos que presten servicios en algunos de los poderes de los estados nacional, </div>
+<div id="t5_6" class="t s2_6">provincial y/o municipal, y </div>
+<div id="t6_6" class="t s2_6">- presentar en debida forma la ficha técnica. </div>
+<div id="t7_6" class="t s2_6">5) </div>
+<div id="t8_6" class="t s3_6">Ficha técnica. </div>
+<div id="t9_6" class="t s2_6">Junto con la solicitud de inscripción, los interesados deberán acompañar una ficha </div>
+<div id="ta_6" class="t s2_6">donde se individualice: la actividad que se pretende realizar, las etapas con que cuenta, su duración </div>
+<div id="tb_6" class="t s2_6">y los responsables. La misma será presentada bajo el formato que se adjunta como modelo en el </div>
+<div id="tc_6" class="t s2_6">Anexo II o el que en el futuro lo sustituya. </div>
+<div id="td_6" class="t s2_6">Asimismo, a los efectos de la oportuna acreditación de los individuos que participen del programa, </div>
+<div id="te_6" class="t s2_6">aquéllos deberán presentar con antelación suficiente la nómina completa de los mismos conforme al </div>
+<div id="tf_6" class="t s2_6">modelo que se adjunta como Anexo III o el que en el futuro lo sustituya. </div>
+<div id="tg_6" class="t s2_6">6) </div>
+<div id="th_6" class="t s3_6">Trámite. </div>
+<div id="ti_6" class="t s2_6">Una vez hecha la presentación, o desde que la misma fuera recibida, la Cámara </div>
+<div id="tj_6" class="t s2_6">Nacional Electoral deberá controlar en un plazo no mayor a diez (10) días el cumplimiento de los </div>
+<div id="tk_6" class="t s2_6">requisitos exigidos. Si de la revisión el Tribunal entendiera que, por alguna razón, no debe otorgarse </div>
+<div id="tl_6" class="t s2_6">la inscripción se notificará a la parte interesada -dentro de las 24 horas- a fin de que subsane las </div>
+<div id="tm_6" class="t s2_6">deficiencias señaladas, para lo cual contará con tres (3) días. En caso de que la organización no </div>
+<div id="tn_6" class="t s2_6">efectuase ninguna presentación posterior se la tendrá por desistida. </div>
+<div id="to_6" class="t s2_6">Luego de verificar el cumplimiento de los extremos señalados -o subsanadas las omisiones- la </div>
+<div id="tp_6" class="t s2_6">Cámara Nacional Electoral procederá a su inscripción en el Registro de entidades acreditadas para </div>
+<div id="tq_6" class="t s2_6">ejercer el “acompañamiento cívico”. Esta inscripción es requisito indispensable para poder participar </div>
+<div id="tr_6" class="t s2_6">de las actividades de acompañamiento cívico. </div>
+<div id="ts_6" class="t s2_6">7) </div>
+<div id="tt_6" class="t s3_6">Credenciales. </div>
+<div id="tu_6" class="t s2_6">Una vez dispuesta su inscripción, se otorgará a cada uno de los individuos que </div>
+<div id="tv_6" class="t s2_6">participen del programa una credencial que permitirá identificarlos. Dichas credenciales se expedirán </div>
+<div id="tw_6" class="t s2_6">conforme al modelo que instrumente el Secretario de Actuación Electoral. </div>
+<div id="tx_6" class="t s2_6">8) </div>
+<div id="ty_6" class="t s3_6">Publicación. </div>
+<div id="tz_6" class="t s2_6">A fin de una mayor difusión, y para que la ciudadanía pueda tomar conocimiento de </div>
+<div id="t10_6" class="t s2_6">las entidades e individuos que participarán del programa, la Cámara Nacional Electoral publicará en </div>
+<div id="t11_6" class="t s2_6">su página </div>
+<div id="t12_6" class="t s4_6">web </div>
+<div id="t13_6" class="t s2_6">el listado de asociaciones inscriptas, así como también los integrantes de la misma. </div>
+<div id="t14_6" class="t s2_6">9) </div>
+<div id="t15_6" class="t s3_6">Capacitación. </div>
+<div id="t16_6" class="t s2_6">Las organizaciones deberán informar al Tribunal las previsiones relativas a la </div>
+<div id="t17_6" class="t s2_6">capacitación de los individuos que participen del programa, sin perjuicio de que, en función de la </div>
+<div id="t18_6" class="t s2_6">naturaleza de los objetivos propuestos en cada caso, se le podrá exigir que completen el curso de </div>
+<div id="t19_6" class="t s2_6">capacitación virtual puesto a disposición en la página web de la Justicia Nacional Electoral. </div>
+<div id="t1a_6" class="t s2_6">10) </div>
+<div id="t1b_6" class="t s3_6">Derechos y obligaciones de los participantes. </div>
+<div id="t1c_6" class="t s2_6">Los individuos acreditados tendrán derecho a </div>
+<div id="t1d_6" class="t s2_6">observar las actividades involucradas en el desarrollo del acto electoral. </div>
+<div id="t1e_6" class="t s2_6">No obstante, deberán abstenerse de obstaculizar a las autoridades en el ejercicio de sus funciones o </div>
+<div id="t1f_6" class="t s2_6">interferir en el desarrollo de los actos; así como tampoco deberán realizar actos proselitistas o </div>
+<div id="t1g_6" class="t s2_6">manifestarse a favor o en contra de alguna agrupación política o candidato. </div>
+<div id="t1h_6" class="t s2_6">En caso de ser consultados por los electores sobre algún aspecto del acto comicial, deberán </div>
+<div id="t1i_6" class="t s2_6">abstenerse de emitir opinión o instrucción alguna y derivar a la persona a formular su consulta a la </div>
+<div id="t1j_6" class="t s2_6">autoridad correspondiente. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1076],['t2_6',1095],['t3_6',2798],['t4_6',2934],['t5_6',764],['t6_6',1290],['t8_6',443],['t9_6',2386],['ta_6',2933],['tb_6',2933],['tc_6',1232],['td_6',2934],['te_6',2934],['tf_6',2115],['ti_6',2525],['tj_6',2933],['tk_6',2933],['tl_6',2934],['tm_6',2933],['tn_6',1972],['to_6',2934],['tp_6',2934],['tq_6',2934],['tr_6',1323],['tu_6',2381],['tv_6',2934],['tw_6',2135],['tz_6',2440],['t10_6',2933],['t11_6',279],['t13_6',2421],['t16_6',2370],['t17_6',2934],['t18_6',2934],['t19_6',2622],['t1b_6',1470],['t1c_6',1320],['t1d_6',2080],['t1e_6',2933],['t1f_6',2933],['t1g_6',2191],['t1h_6',2933],['t1i_6',2934],['t1j_6',780]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 56;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

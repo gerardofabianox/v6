@@ -1,0 +1,215 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:260px;}
+#t6_4{left:101px;top:278px;}
+#t7_4{left:101px;top:309px;}
+#t8_4{left:101px;top:327px;}
+#t9_4{left:101px;top:344px;}
+#ta_4{left:101px;top:362px;}
+#tb_4{left:101px;top:393px;}
+#tc_4{left:101px;top:411px;}
+#td_4{left:101px;top:428px;}
+#te_4{left:101px;top:460px;}
+#tf_4{left:101px;top:477px;}
+#tg_4{left:101px;top:509px;}
+#th_4{left:101px;top:526px;}
+#ti_4{left:101px;top:544px;}
+#tj_4{left:101px;top:561px;}
+#tk_4{left:101px;top:593px;}
+#tl_4{left:101px;top:610px;}
+#tm_4{left:101px;top:628px;}
+#tn_4{left:101px;top:645px;}
+#to_4{left:101px;top:663px;}
+#tp_4{left:101px;top:694px;}
+#tq_4{left:101px;top:712px;}
+#tr_4{left:101px;top:744px;}
+#ts_4{left:101px;top:761px;}
+#tt_4{left:101px;top:778px;}
+#tu_4{left:101px;top:796px;}
+#tv_4{left:101px;top:827px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">con reconocimiento jurídico-político en esa jurisdicción. A tal fin, el Secretario de Actuación Electoral </div>
+<div id="t4_4" class="t s2_4">podrá ser asistido -cuando así lo requiera- por la respectiva Secretaría Electoral de distrito.- </div>
+<div id="t5_4" class="t s2_4">2°) Disponer que las opiniones y propuestas de las agrupaciones que integran el Consejo serán </div>
+<div id="t6_4" class="t s2_4">debatidas en “Audiencias Consultivas”.- </div>
+<div id="t7_4" class="t s2_4">3°) Establecer que la Secretaría de Actuación Electoral del Tribunal será la encargada de coordinar el </div>
+<div id="t8_4" class="t s2_4">funcionamiento del “Consejo Consultivo de Partidos Políticos”, para lo cual convocará a “Audiencias </div>
+<div id="t9_4" class="t s2_4">Consultivas” y determinará los puntos respecto de los cuales habrá de requerirse opinión a los </div>
+<div id="ta_4" class="t s2_4">partidos integrantes.- </div>
+<div id="tb_4" class="t s2_4">Estos puntos serán comunicados a los partidos con antelación suficiente a la realización de la </div>
+<div id="tc_4" class="t s2_4">audiencia consultiva, juntamente con los documentos de trabajo que la Secretaría de Actuación </div>
+<div id="td_4" class="t s2_4">Electoral o -en su caso- los partidos, hayan preparado.- </div>
+<div id="te_4" class="t s2_4">A las audiencias concurrirán los presidentes o los apoderados de los partidos que conforman el </div>
+<div id="tf_4" class="t s2_4">Consejo, en tanto los organismos partidarios competentes no designen otro representante a tal fin.- </div>
+<div id="tg_4" class="t s2_4">4°) Establecer que los partidos que tengan interés en proponer un tema lo someterán a </div>
+<div id="th_4" class="t s2_4">consideración de la Secretaría de Actuación Electoral, la cual -si lo estima procedente- lo pondrá en </div>
+<div id="ti_4" class="t s2_4">conocimiento de las demás agrupaciones integrantes del Consejo y convocará a la correspondiente </div>
+<div id="tj_4" class="t s2_4">audiencia en los términos del punto 3º, segundo párrafo.- </div>
+<div id="tk_4" class="t s2_4">Para el caso en que la Cámara tenga prevista la realización de una reunión en fecha determinada </div>
+<div id="tl_4" class="t s2_4">para considerar un tema en particular, las agrupaciones interesadas en el tratamiento de alguna </div>
+<div id="tm_4" class="t s2_4">otra cuestión deberán solicitar su inclusión en el temario con una antelación a establecer. En tal </div>
+<div id="tn_4" class="t s2_4">hipótesis, y determinada por la Secretaría de Actuación Electoral la procedencia del tema sugerido, </div>
+<div id="to_4" class="t s2_4">éste deberá comunicarse a los demás partidos convocados.- </div>
+<div id="tp_4" class="t s2_4">5°) Disponer que las propuestas que formulen los partidos en las audiencias consultivas y las </div>
+<div id="tq_4" class="t s2_4">opiniones que viertan no serán vinculantes para la Cámara Nacional Electoral.- </div>
+<div id="tr_4" class="t s2_4">Ofíciese a la Corte Suprema de Justicia de la Nación y al Consejo de la Magistratura del Poder </div>
+<div id="ts_4" class="t s2_4">Judicial de la Nación, hágase saber a los señores jueces federales con competencia electoral y, por </div>
+<div id="tt_4" class="t s2_4">su intermedio, a los respectivos partidos de distrito, y póngase en conocimiento de las agrupaciones </div>
+<div id="tu_4" class="t s2_4">políticas de orden nacional.- </div>
+<div id="tv_4" class="t s2_4">Con lo que se dio por terminado el acto.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2933],['t4_4',2671],['t5_4',2933],['t6_4',1150],['t7_4',2934],['t8_4',2934],['t9_4',2933],['ta_4',628],['tb_4',2934],['tc_4',2934],['td_4',1618],['te_4',2934],['tf_4',2909],['tg_4',2934],['th_4',2935],['ti_4',2934],['tj_4',1682],['tk_4',2934],['tl_4',2934],['tm_4',2933],['tn_4',2934],['to_4',1747],['tp_4',2934],['tq_4',2289],['tr_4',2933],['ts_4',2933],['tt_4',2934],['tu_4',817],['tv_4',1191]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 32;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

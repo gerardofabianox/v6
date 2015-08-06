@@ -1,0 +1,282 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load38();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_38{left:333px;top:108px;}
+#t2_38{left:331px;top:128px;}
+#t3_38{left:101px;top:191px;letter-spacing:1px;}
+#t4_38{left:101px;top:208px;}
+#t5_38{left:101px;top:226px;}
+#t6_38{left:101px;top:243px;}
+#t7_38{left:101px;top:261px;}
+#t8_38{left:101px;top:278px;}
+#t9_38{left:101px;top:295px;}
+#ta_38{left:101px;top:313px;}
+#tb_38{left:101px;top:330px;}
+#tc_38{left:101px;top:368px;}
+#td_38{left:218px;top:368px;}
+#te_38{left:330px;top:368px;}
+#tf_38{left:101px;top:386px;}
+#tg_38{left:101px;top:403px;}
+#th_38{left:101px;top:420px;}
+#ti_38{left:101px;top:438px;}
+#tj_38{left:101px;top:475px;}
+#tk_38{left:101px;top:493px;}
+#tl_38{left:101px;top:510px;}
+#tm_38{left:101px;top:528px;}
+#tn_38{left:101px;top:545px;}
+#to_38{left:101px;top:563px;}
+#tp_38{left:101px;top:580px;}
+#tq_38{left:101px;top:618px;}
+#tr_38{left:101px;top:635px;}
+#ts_38{left:101px;top:653px;}
+#tt_38{left:101px;top:690px;}
+#tu_38{left:101px;top:708px;}
+#tv_38{left:101px;top:746px;}
+#tw_38{left:101px;top:783px;}
+#tx_38{left:546px;top:783px;}
+#ty_38{left:101px;top:819px;}
+#tz_38{left:249px;top:819px;}
+#t10_38{left:588px;top:819px;}
+#t11_38{left:101px;top:836px;}
+#t12_38{left:101px;top:854px;}
+#t13_38{left:101px;top:871px;}
+#t14_38{left:101px;top:889px;}
+#t15_38{left:101px;top:926px;}
+#t16_38{left:101px;top:944px;}
+#t17_38{left:101px;top:961px;}
+#t18_38{left:101px;top:979px;}
+#t19_38{left:101px;top:996px;}
+#t1a_38{left:101px;top:1034px;}
+#t1b_38{left:567px;top:1034px;}
+#t1c_38{left:101px;top:1070px;}
+#t1d_38{left:217px;top:1070px;}
+#t1e_38{left:438px;top:1070px;}
+#t1f_38{left:101px;top:1087px;}
+
+.s3_38{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s6_38{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_38{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_38{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_38{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_38{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_38" class="t s1_38">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_38" class="t s1_38">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_38" class="t s2_38">voto no será tenido en cuenta en el cómputo; si resultare probada, el voto será computado y la </div>
+<div id="t4_38" class="t s2_38">Junta ordenará la inmediata devolución del monto de la fianza al elector impugnado, o su libertad si </div>
+<div id="t5_38" class="t s2_38">se hallare arrestado. Tanto en un caso como en otro los antecedentes se pasarán al fiscal para que </div>
+<div id="t6_38" class="t s2_38">sea exigida la responsabilidad al elector o impugnante falso. Si el elector hubiere retirado el </div>
+<div id="t7_38" class="t s2_38">mencionado formulario su voto se declarará anulado, destruyéndose el sobre que lo contiene. El </div>
+<div id="t8_38" class="t s2_38">escrutinio de los sufragios impugnados que fueren declarados válidos se hará reuniendo todos los </div>
+<div id="t9_38" class="t s2_38">correspondientes a cada sección electoral y procediendo a la apertura simultánea de los mismos, </div>
+<div id="ta_38" class="t s2_38">luego de haberlos mezclado en una urna o caja cerrada a fin de impedir su individualización por </div>
+<div id="tb_38" class="t s2_38">mesa. </div>
+<div id="tc_38" class="t s3_38">Artículo 120.- </div>
+<div id="td_38" class="t s4_38">Cómputo final.</div>
+<div id="te_38" class="t s2_38">La Junta sumará los resultados de las mesas ateniéndose a las cifras </div>
+<div id="tf_38" class="t s2_38">consignadas en las actas, a las que se adicionarán los votos que hubieren sido recurridos y </div>
+<div id="tg_38" class="t s2_38">resultaren válidos y los indebidamente impugnados y declarados válidos, de los que se dejará </div>
+<div id="th_38" class="t s2_38">constancia en el acta final, acordando luego un dictamen sobre las causas que a su juicio funden la </div>
+<div id="ti_38" class="t s2_38">validez o nulidad de la elección. </div>
+<div id="tj_38" class="t s2_38">En el caso de la elección del Presidente y Vicepresidente de la Nación las Juntas Electorales </div>
+<div id="tk_38" class="t s2_38">Nacionales, dentro del plazo indicado en el primer párrafo del artículo 112, comunicarán los </div>
+<div id="tl_38" class="t s2_38">resultados al presidente del Senado de la Nación. El mismo convocará de inmediato a la Asamblea </div>
+<div id="tm_38" class="t s2_38">Legislativa, la que procederá a hacer la sumatoria para determinar si la fórmula más votada ha </div>
+<div id="tn_38" class="t s2_38">logrado la mayoría prevista en el artículo 97 de la Constitución Nacional o si se han producido las </div>
+<div id="to_38" class="t s2_38">circunstancias del artículo 98 o si, por el contrario, se deberá realizar una segunda vuelta electoral </div>
+<div id="tp_38" class="t s2_38">conforme lo dispuesto en el artículo 96 de la Constitución Nacional. </div>
+<div id="tq_38" class="t s2_38">En este último supuesto se hará saber tal circunstancia al Poder Ejecutivo nacional y a los </div>
+<div id="tr_38" class="t s2_38">apoderados de los partidos políticos, cuyas fórmulas se encuentren en condiciones de participar en </div>
+<div id="ts_38" class="t s2_38">la segunda vuelta. </div>
+<div id="tt_38" class="t s2_38">La Asamblea Legislativa comunicará los resultados definitivos de la primera vuelta electoral dentro </div>
+<div id="tu_38" class="t s2_38">del plazo de quince (15) días corridos de haberse realizado la misma. </div>
+<div id="tv_38" class="t s2_38">Igual procedimiento en lo que correspondiere, se utilizará para la segunda vuelta electoral. </div>
+<div id="tw_38" class="t s5_38">(Artículo sustituido por art. 1 de la Ley N° 24.444 B.O. 19/01/1995)</div>
+<div id="tx_38" class="t s6_38">. </div>
+<div id="ty_38" class="t s3_38">Artículo 120 bis: </div>
+<div id="tz_38" class="t s4_38">Cómputo final parlamentarios del Mercosur. </div>
+<div id="t10_38" class="t s2_38">Sin perjuicio de la comunicación </div>
+<div id="t11_38" class="t s2_38">prevista en el artículo 124, las juntas electorales nacionales deberán informar dentro del plazo de </div>
+<div id="t12_38" class="t s2_38">treinta y cinco (35) días, desde que se iniciara el escrutinio definitivo, los resultados de la elección </div>
+<div id="t13_38" class="t s2_38">en la categoría parlamentarios del Mercosur a la Cámara Nacional Electoral, dando cuenta además, y </div>
+<div id="t14_38" class="t s2_38">en su caso, de las cuestiones pendientes de resolución relativas a esa categoría. </div>
+<div id="t15_38" class="t s2_38">Cuando no existieren cuestiones pendientes de resolución relativas a la elección de parlamentarios </div>
+<div id="t16_38" class="t s2_38">del Mercosur, o las que hubiere no sean en conjunto susceptibles de alterar la distribución de </div>
+<div id="t17_38" class="t s2_38">bancas, la Cámara Nacional Electoral procederá a realizar la distribución de los cargos conforme los </div>
+<div id="t18_38" class="t s2_38">procedimientos previstos por este Código. La lista de los electos será comunicada a la Asamblea </div>
+<div id="t19_38" class="t s2_38">Legislativa para su proclamación. </div>
+<div id="t1a_38" class="t s5_38">(Artículo incorporado por art. 4° de la Ley N° 27.120 B.O. 08/01/2015)</div>
+<div id="t1b_38" class="t s6_38">. </div>
+<div id="t1c_38" class="t s3_38">Artículo 121.- </div>
+<div id="t1d_38" class="t s4_38">Protestas contra el escrutinio.</div>
+<div id="t1e_38" class="t s2_38">Finalizadas estas operaciones el presidente de la Junta </div>
+<div id="t1f_38" class="t s2_38">preguntará a los apoderados de los partidos si hay protesta que formular contra el escrutinio. No </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg38Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg38"><object width="935" height="1210" data="38/38.svg" type="image/svg+xml" id="pdf38" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld38" type="text/javascript">
+
+var isIE = false;
+var f38 = [['t1_38',1076],['t2_38',1096],['t3_38',2935],['t4_38',2933],['t5_38',2934],['t6_38',2934],['t7_38',2934],['t8_38',2934],['t9_38',2934],['ta_38',2934],['tc_38',445],['td_38',426],['te_38',2017],['tf_38',2934],['tg_38',2934],['th_38',2934],['ti_38',918],['tj_38',2934],['tk_38',2934],['tl_38',2933],['tm_38',2934],['tn_38',2933],['to_38',2933],['tp_38',1949],['tq_38',2934],['tr_38',2934],['ts_38',532],['tt_38',2934],['tu_38',2013],['tv_38',2641],['tw_38',1781],['ty_38',559],['tz_38',1323],['t10_38',985],['t11_38',2933],['t12_38',2934],['t13_38',2933],['t14_38',2330],['t15_38',2934],['t16_38',2933],['t17_38',2933],['t18_38',2933],['t19_38',965],['t1a_38',1864],['t1c_38',443],['t1d_38',864],['t1e_38',1586],['t1f_38',2934]];
+function load38(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f38);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 52;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_38");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

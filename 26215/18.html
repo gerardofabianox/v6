@@ -1,0 +1,279 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load18();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_18{left:333px;top:128px;}
+#t2_18{left:331px;top:147px;}
+#t3_18{left:101px;top:211px;}
+#t4_18{left:229px;top:211px;}
+#t5_18{left:101px;top:228px;}
+#t6_18{left:101px;top:246px;}
+#t7_18{left:101px;top:263px;}
+#t8_18{left:101px;top:281px;}
+#t9_18{left:101px;top:312px;}
+#ta_18{left:101px;top:330px;}
+#tb_18{left:101px;top:347px;}
+#tc_18{left:101px;top:379px;}
+#td_18{left:101px;top:396px;}
+#te_18{left:101px;top:414px;}
+#tf_18{left:101px;top:431px;}
+#tg_18{left:101px;top:449px;}
+#th_18{left:101px;top:480px;}
+#ti_18{left:101px;top:512px;}
+#tj_18{left:215px;top:512px;}
+#tk_18{left:244px;top:512px;}
+#tl_18{left:263px;top:512px;}
+#tm_18{left:101px;top:530px;}
+#tn_18{left:101px;top:547px;}
+#to_18{left:101px;top:564px;}
+#tp_18{left:101px;top:596px;}
+#tq_18{left:345px;top:628px;}
+#tr_18{left:101px;top:660px;}
+#ts_18{left:221px;top:660px;}
+#tt_18{left:101px;top:677px;}
+#tu_18{left:101px;top:694px;}
+#tv_18{left:101px;top:726px;}
+#tw_18{left:101px;top:744px;}
+#tx_18{left:101px;top:761px;}
+#ty_18{left:101px;top:778px;}
+#tz_18{left:101px;top:796px;}
+#t10_18{left:101px;top:827px;}
+#t11_18{left:215px;top:827px;}
+#t12_18{left:244px;top:827px;}
+#t13_18{left:101px;top:845px;}
+#t14_18{left:101px;top:862px;}
+#t15_18{left:101px;top:894px;}
+#t16_18{left:101px;top:926px;}
+#t17_18{left:220px;top:926px;}
+#t18_18{left:101px;top:943px;}
+#t19_18{left:101px;top:961px;}
+#t1a_18{left:101px;top:978px;}
+#t1b_18{left:101px;top:1010px;}
+#t1c_18{left:231px;top:1010px;}
+#t1d_18{left:101px;top:1027px;}
+#t1e_18{left:101px;top:1059px;}
+#t1f_18{left:227px;top:1059px;}
+#t1g_18{left:101px;top:1076px;}
+
+.s2_18{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_18{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_18{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s4_18{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_18{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_18" class="t s1_18">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_18" class="t s1_18">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_18" class="t s2_18">ARTÍCULO 67. </div>
+<div id="t4_18" class="t s3_18">— El incumplimiento en tiempo y forma de la presentación de la información </div>
+<div id="t5_18" class="t s3_18">prevista en los artículos 22, 23 y 58 facultará al juez a aplicar una multa por presentación </div>
+<div id="t6_18" class="t s3_18">extemporánea equivalente al cero coma dos por ciento (0,2%), por cada día de demora del total de </div>
+<div id="t7_18" class="t s3_18">fondos públicos que le correspondieren a la agrupación política en la próxima distribución del fondo </div>
+<div id="t8_18" class="t s3_18">partidario permanente. </div>
+<div id="t9_18" class="t s3_18">Transcurridos noventa (90) días, del vencimiento del plazo de que se trate, el juez interviniente </div>
+<div id="ta_18" class="t s3_18">podrá disponer la suspensión cautelar de todos los aportes públicos notificando su resolución a la </div>
+<div id="tb_18" class="t s3_18">Dirección Nacional Electoral del Ministerio del Interior. </div>
+<div id="tc_18" class="t s3_18">El incumplimiento en tiempo y forma de la presentación del informe previsto en el artículo 54 </div>
+<div id="td_18" class="t s3_18">facultará al juez a aplicar una multa por presentación extemporánea equivalente al cero coma cero </div>
+<div id="te_18" class="t s3_18">dos por ciento (0,02%) por cada día de demora del total de fondos públicos que le correspondieren </div>
+<div id="tf_18" class="t s3_18">a la agrupación política en la próxima distribución del fondo partidario permanente, hasta un </div>
+<div id="tg_18" class="t s3_18">máximo de nueve (9) días antes del comicio. </div>
+<div id="th_18" class="t s4_18">(Artículo modificado por art. 68 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="ti_18" class="t s2_18">ARTÍCULO 67 </div>
+<div id="tj_18" class="t s5_18">bis </div>
+<div id="tk_18" class="t s2_18">— </div>
+<div id="tl_18" class="t s3_18">Serán sancionadas con la prohibición de inscribirse en el Registro de Empresas </div>
+<div id="tm_18" class="t s3_18">de Encuestas y Sondeos de Opinión por un período de dos (2) a cuatro (4) elecciones, las empresas </div>
+<div id="tn_18" class="t s3_18">de encuestas y sondeos de opinión que incumplieran en dos (2) oportunidades consecutivas con lo </div>
+<div id="to_18" class="t s3_18">dispuesto en el artículo 44 ter de la presente ley. </div>
+<div id="tp_18" class="t s4_18">(Artículo incorporado por art. 69 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tq_18" class="t s3_18">Título VI. Disposiciones Generales </div>
+<div id="tr_18" class="t s2_18">ARTÍCULO 68. </div>
+<div id="ts_18" class="t s3_18">— Modifícase el primer párrafo del inciso c) del artículo 81 de la Ley de Impuesto a </div>
+<div id="tt_18" class="t s3_18">las Ganancias (t.o. por decreto 649/97) y sus modificatorias, el que quedará redactado al siguiente </div>
+<div id="tu_18" class="t s3_18">tenor: </div>
+<div id="tv_18" class="t s3_18">"Artículo 81: …c) Las donaciones a los fiscos nacional, provinciales y municipales, al Fondo Partidario </div>
+<div id="tw_18" class="t s3_18">Permanente, a los partidos políticos reconocidos incluso para el caso de campañas electorales y a las </div>
+<div id="tx_18" class="t s3_18">instituciones comprendidas en el inciso e) del artículo 20, realizadas en las condiciones que </div>
+<div id="ty_18" class="t s3_18">determine la reglamentación y hasta el límite del cinco por ciento (5%) de la ganancia neta del </div>
+<div id="tz_18" class="t s3_18">ejercicio". </div>
+<div id="t10_18" class="t s2_18">ARTÍCULO 68 </div>
+<div id="t11_18" class="t s5_18">bis </div>
+<div id="t12_18" class="t s3_18">— Créase el módulo electoral como unidad de medida monetaria para determinar </div>
+<div id="t13_18" class="t s3_18">los límites de gastos autorizados por esta ley. El valor del módulo electoral será determinado </div>
+<div id="t14_18" class="t s3_18">anualmente en el Presupuesto General de la Nación. </div>
+<div id="t15_18" class="t s4_18">(Artículo incorporado por art. 70 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t16_18" class="t s2_18">ARTÍCULO 69. </div>
+<div id="t17_18" class="t s3_18">— Los aportes previstos para el pago del Fondo Partidario Permanente a los partidos </div>
+<div id="t18_18" class="t s3_18">políticos que no se hicieran efectivos por motivo de incumplimientos a lo normado por esta ley, </div>
+<div id="t19_18" class="t s3_18">prescribirán a los veinticuatro (24) meses contados de la fecha de la resolución que los asignara. Se </div>
+<div id="t1a_18" class="t s3_18">exceptúa la suspensión cautelar decretada por autoridad judicial, hasta la resolución de la misma. </div>
+<div id="t1b_18" class="t s2_18">ARTÍCULO 70. </div>
+<div id="t1c_18" class="t s3_18">— Prohíbese la cesión de derechos sobre aportes futuros respecto al Fondo </div>
+<div id="t1d_18" class="t s3_18">Partidario Permanente y a aportes públicos extraordinarios de campaña. </div>
+<div id="t1e_18" class="t s2_18">ARTÍCULO 71. </div>
+<div id="t1f_18" class="t s3_18">— Aplícase supletoriamente el procedimiento previsto en la Ley 23.298 y en el </div>
+<div id="t1g_18" class="t s3_18">Código de Procedimiento en lo Civil y Comercial de la Nación o el Código Procesal Penal de la Nación </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg18Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg18"><object width="935" height="1210" data="18/18.svg" type="image/svg+xml" id="pdf18" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld18" type="text/javascript">
+
+var isIE = false;
+var f18 = [['t1_18',1076],['t2_18',1095],['t3_18',474],['t4_18',2422],['t5_18',2933],['t6_18',2933],['t7_18',2933],['t8_18',669],['t9_18',2933],['ta_18',2933],['tb_18',1568],['tc_18',2933],['td_18',2934],['te_18',2933],['tf_18',2933],['tg_18',1305],['th_18',2053],['ti_18',437],['tl_18',2286],['tm_18',2933],['tn_18',2934],['to_18',1425],['tp_18',2081],['tq_18',981],['tr_18',460],['ts_18',2451],['tt_18',2934],['tv_18',2933],['tw_18',2934],['tx_18',2934],['ty_18',2934],['t10_18',437],['t12_18',2363],['t13_18',2934],['t14_18',1518],['t15_18',2081],['t16_18',457],['t17_18',2456],['t18_18',2934],['t19_18',2934],['t1a_18',2844],['t1b_18',479],['t1c_18',2413],['t1d_18',2097],['t1e_18',470],['t1f_18',2430],['t1g_18',2933]];
+function load18(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f18);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 53;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_18");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:247px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:320px;}
+#t8_1{left:101px;top:338px;}
+#t9_1{left:101px;top:376px;}
+#ta_1{left:101px;top:393px;}
+#tb_1{left:101px;top:411px;}
+#tc_1{left:101px;top:428px;}
+#td_1{left:101px;top:446px;}
+#te_1{left:101px;top:483px;}
+#tf_1{left:101px;top:501px;}
+#tg_1{left:101px;top:518px;}
+#th_1{left:101px;top:536px;}
+#ti_1{left:101px;top:573px;}
+#tj_1{left:101px;top:591px;}
+#tk_1{left:101px;top:608px;}
+#tl_1{left:101px;top:626px;}
+#tm_1{left:101px;top:663px;}
+#tn_1{left:101px;top:681px;}
+#to_1{left:101px;top:698px;}
+#tp_1{left:101px;top:736px;}
+#tq_1{left:101px;top:753px;}
+#tr_1{left:101px;top:771px;}
+#ts_1{left:101px;top:808px;}
+#tt_1{left:101px;top:826px;}
+#tu_1{left:101px;top:863px;}
+#tv_1{left:772px;top:901px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Decreto 682/2010 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 14/05/2010 </div>
+<div id="t5_1" class="t s3_1">Publicación: B.O. 19/05/2010 </div>
+<div id="t6_1" class="t s4_1">MINISTERIO DEL INTERIOR </div>
+<div id="t7_1" class="t s4_1">Apruébase la estructura organizativa de las Direcciones Nacionales Electoral y de Asuntos </div>
+<div id="t8_1" class="t s4_1">Políticos y Reforma Política de la Secretaría de Asuntos Políticos. </div>
+<div id="t9_1" class="t s3_1">Artículo 1º — Apruébase la estructura organizativa de las Direcciones Nacionales Electoral y de </div>
+<div id="ta_1" class="t s3_1">Asuntos Políticos y Reforma Política, ambas dependientes de la SUBSECRETARIA DE ASUNTOS </div>
+<div id="tb_1" class="t s3_1">POLITICOS Y ELECTORALES de la SECRETARIA DE ASUNTOS POLITICOS del MINISTERIO DEL </div>
+<div id="tc_1" class="t s3_1">INTERIOR, de acuerdo al Organigrama y Responsabilidad Primaria y Acciones que, como Anexos I y </div>
+<div id="td_1" class="t s3_1">II, forman parte integrante del presente decreto. </div>
+<div id="te_1" class="t s3_1">Art. 2º — Modifícase la distribución del Presupuesto General de la Administración Nacional —</div>
+<div id="tf_1" class="t s3_1">Recursos Humanos—, en la parte correspondiente a la Jurisdicción 30, MINISTERIO DEL INTERIOR </div>
+<div id="tg_1" class="t s3_1">para el Ejercicio 2010, de acuerdo con el detalle obrante en las Planillas Anexas al presente artículo, </div>
+<div id="th_1" class="t s3_1">que forman parte integrante del mismo. </div>
+<div id="ti_1" class="t s3_1">Art. 3º — Dentro de los SESENTA (60) días de aprobada la presente medida, el MINISTERIO DEL </div>
+<div id="tj_1" class="t s3_1">INTERIOR, deberá elaborar la estructura organizativa de las aperturas inferiores a las que se </div>
+<div id="tk_1" class="t s3_1">aprueban por el presente decreto, la cual deberá prever un máximo de CINCO (5) cargos de </div>
+<div id="tl_1" class="t s3_1">conducción. </div>
+<div id="tm_1" class="t s3_1">Art. 4º — Hasta la aprobación de dichas aperturas inferiores, quedarán vigentes las existentes a la </div>
+<div id="tn_1" class="t s3_1">fecha de publicación del presente decreto, con su personal, niveles, grados de revista y Funciones </div>
+<div id="to_1" class="t s3_1">Ejecutivas previstas en el Decreto Nº 2098 de fecha 3 de diciembre de 2008. </div>
+<div id="tp_1" class="t s3_1">Art. 5º — Facúltase al señor Ministro del Interior, previa intervención de la SECRETARIA DE LA </div>
+<div id="tq_1" class="t s3_1">GESTION PUBLICA de la JEFATURA DE GABINETE DE MINISTROS, a aprobar y modificar la dotación </div>
+<div id="tr_1" class="t s3_1">del citado Departamento de Estado, de conformidad con las leyes de presupuesto vigentes. </div>
+<div id="ts_1" class="t s3_1">Art. 6º — El gasto que demande el cumplimiento de la presente medida será atendido con los </div>
+<div id="tt_1" class="t s3_1">créditos asignados a la Jurisdicción 30 - MINISTERIO DEL INTERIOR. </div>
+<div id="tu_1" class="t s3_1">Art. 7º — Comuníquese, publíquese, dése a la Dirección Nacional del Registro Oficial y archívese. </div>
+<div id="tv_1" class="t s3_1">ANEXO I </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',657],['t4_1',586],['t5_1',857],['t6_1',901],['t7_1',2933],['t8_1',2103],['t9_1',2933],['ta_1',2934],['tb_1',2934],['tc_1',2933],['td_1',1421],['te_1',2933],['tf_1',2934],['tg_1',2934],['th_1',1163],['ti_1',2934],['tj_1',2934],['tk_1',2934],['tm_1',2934],['tn_1',2933],['to_1',2236],['tp_1',2933],['tq_1',2933],['tr_1',2650],['ts_1',2933],['tt_1',1995],['tu_1',2818],['tv_1',247]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 32;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

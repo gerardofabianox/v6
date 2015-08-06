@@ -1,0 +1,245 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:260px;}
+#t6_2{left:101px;top:278px;}
+#t7_2{left:101px;top:295px;}
+#t8_2{left:101px;top:327px;}
+#t9_2{left:101px;top:344px;}
+#ta_2{left:101px;top:362px;}
+#tb_2{left:101px;top:379px;}
+#tc_2{left:101px;top:411px;}
+#td_2{left:101px;top:428px;}
+#te_2{left:101px;top:445px;}
+#tf_2{left:101px;top:463px;}
+#tg_2{left:101px;top:480px;}
+#th_2{left:101px;top:498px;}
+#ti_2{left:101px;top:530px;}
+#tj_2{left:101px;top:547px;}
+#tk_2{left:101px;top:579px;}
+#tl_2{left:101px;top:596px;}
+#tm_2{left:101px;top:613px;}
+#tn_2{left:101px;top:631px;}
+#to_2{left:101px;top:663px;}
+#tp_2{left:101px;top:680px;}
+#tq_2{left:101px;top:698px;}
+#tr_2{left:101px;top:729px;}
+#ts_2{left:101px;top:747px;}
+#tt_2{left:101px;top:764px;}
+#tu_2{left:101px;top:781px;}
+#tv_2{left:101px;top:799px;}
+#tw_2{left:101px;top:831px;}
+#tx_2{left:101px;top:848px;}
+#ty_2{left:101px;top:865px;}
+#tz_2{left:101px;top:883px;}
+#t10_2{left:101px;top:915px;}
+#t11_2{left:101px;top:932px;}
+#t12_2{left:378px;top:932px;}
+#t13_2{left:101px;top:949px;}
+#t14_2{left:101px;top:967px;}
+#t15_2{left:101px;top:999px;}
+#t16_2{left:101px;top:1016px;}
+#t17_2{left:101px;top:1033px;}
+#t18_2{left:101px;top:1051px;}
+#t19_2{left:101px;top:1068px;}
+#t1a_2{left:101px;top:1086px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">actuales limitaciones en materia de software, equipamiento tecnológico y capacidad de transmisión </div>
+<div id="t4_2" class="t s2_2">de las redes de comunicación.- </div>
+<div id="t5_2" class="t s2_2">Los sistemas y recursos técnicos disponibles, en efecto, son marcadamente insuficientes para </div>
+<div id="t6_2" class="t s2_2">procesar el mayor volumen de datos y los diferentes tipos de archivos que gestionará el Registro </div>
+<div id="t7_2" class="t s2_2">Nacional de Electores bajo el nuevo sistema.- </div>
+<div id="t8_2" class="t s2_2">A raíz de ello, corresponde -en lo inmediato regular una primera etapa de transición, para la </div>
+<div id="t9_2" class="t s2_2">adecuación de las modalidades de transmisión de datos por parte del Registro Nacional de las </div>
+<div id="ta_2" class="t s2_2">Personas y del procedimiento de recepción, control y registro de la información por la Justicia </div>
+<div id="tb_2" class="t s2_2">Nacional Electoral.- </div>
+<div id="tc_2" class="t s2_2">En tal sentido, y con la colaboración de la Dirección General de Tecnología del Consejo de la </div>
+<div id="td_2" class="t s2_2">Magistratura, se ha llevado adelante un programa de adaptación del sistema de información </div>
+<div id="te_2" class="t s2_2">electoral (SIE), con el objeto de incorporar los datos transmitidos electrónicamente. La prueba piloto </div>
+<div id="tf_2" class="t s2_2">de dicho sistema se llevará a cabo los días 21, 22 y 23 de julio, para que -luego de realizados los </div>
+<div id="tg_2" class="t s2_2">ajustes que pudieran corresponder- se proceda a su implementación en los centros de cómputos de </div>
+<div id="th_2" class="t s2_2">las secretarías electorales.- </div>
+<div id="ti_2" class="t s2_2">El mencionado régimen permitirá la incorporación del nuevo formato de novedades, sin perjuicio de </div>
+<div id="tj_2" class="t s2_2">las disposiciones que más adelante se establecerán para implementar el sistema definitivo.- </div>
+<div id="tk_2" class="t s2_2">5°) Que en relación con el contenido de las comunicaciones, es imperioso que además de la nómina </div>
+<div id="tl_2" class="t s2_2">enunciativa prevista en el art. 15 del Código Electoral Nacional, se transmitan otros datos -con los </div>
+<div id="tm_2" class="t s2_2">que cuenta el Registro Nacional de las Personas- que resultan indispensables para que el Tribunal y </div>
+<div id="tn_2" class="t s2_2">las secretarías electorales puedan desarrollar las tareas de fiscalización que encomienda la ley.- </div>
+<div id="to_2" class="t s2_2">6°) Que respecto del formato de dichas comunicaciones, el art. 17 del Código Electoral Nacional </div>
+<div id="tp_2" class="t s2_2">dispone que la transmisión de los datos por el Registro Nacional de las Personas debe hacerse en </div>
+<div id="tq_2" class="t s2_2">forma electrónica y remitirse el respaldo documental que acredite cada asiento informático.- </div>
+<div id="tr_2" class="t s2_2">Por su parte, el art. 3 del decreto reglamentario 935/2010, establece que los registros </div>
+<div id="ts_2" class="t s2_2">informatizados serán remitidos por medios que aseguren su integridad e inalterabilidad, en formato </div>
+<div id="tt_2" class="t s2_2">digital, y que "serán almacenados en ese formato en tanto no sea necesaria su impresión en papel". </div>
+<div id="tu_2" class="t s2_2">En tal sentido, aclara que "cuando así fuera menester, la Justicia Electoral procederá a su impresión </div>
+<div id="tv_2" class="t s2_2">a los efectos que correspondiere".- </div>
+<div id="tw_2" class="t s2_2">El art. 2 del mencionado decreto dispone, asimismo, que "la Dirección Nacional del Registro Nacional </div>
+<div id="tx_2" class="t s2_2">de las Personas incorporará la firma, la fotografía y la huella dactilar de los electores por captura </div>
+<div id="ty_2" class="t s2_2">óptica, digital o electrónica, las que, en tales condiciones, se considerarán originales a los efectos del </div>
+<div id="tz_2" class="t s2_2">artículo 15, segundo párrafo del Código Electoral Nacional".- </div>
+<div id="t10_2" class="t s2_2">En cuanto a la vía de transmisión de la información, se prevé que "la remisión de los datos que </div>
+<div id="t11_2" class="t s2_2">conforman el registro informatizado [.</div>
+<div id="t12_2" class="t s2_2">..] podrá ser realizada por Internet, mediante impresión de los </div>
+<div id="t13_2" class="t s2_2">formularios digitales o por dispositivos de almacenamiento externo de acuerdo a lo que determine la </div>
+<div id="t14_2" class="t s2_2">Justicia Electoral" (art. 3, Dto. 935/2010).- </div>
+<div id="t15_2" class="t s2_2">7°) Que en lo que respecta a la "organización, confección y actualización de los datos" que </div>
+<div id="t16_2" class="t s2_2">componen el Registro Nacional de Electores (art. 17 CEN) y a los mecanismos adecuados para la </div>
+<div id="t17_2" class="t s2_2">"actualización y fiscalización permanente" de la información proveniente del Registro Nacional de las </div>
+<div id="t18_2" class="t s2_2">Personas (art. cit.), corresponde determinar los elementos constitutivos del proceso que regirá, en </div>
+<div id="t19_2" class="t s2_2">esta primera etapa, para el tratamiento de las fuentes documentales impresas y electrónicas que se </div>
+<div id="t1a_2" class="t s2_2">reciban.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2934],['t4_2',898],['t5_2',2933],['t6_2',2933],['t7_2',1321],['t8_2',2933],['t9_2',2934],['ta_2',2933],['tb_2',560],['tc_2',2933],['td_2',2933],['te_2',2934],['tf_2',2934],['tg_2',2933],['th_2',792],['ti_2',2933],['tj_2',2668],['tk_2',2933],['tl_2',2933],['tm_2',2933],['tn_2',2781],['to_2',2933],['tp_2',2933],['tq_2',2683],['tr_2',2934],['ts_2',2933],['tt_2',2933],['tu_2',2934],['tv_2',1012],['tw_2',2933],['tx_2',2934],['ty_2',2933],['tz_2',1753],['t10_2',2933],['t11_2',1107],['t12_2',1826],['t13_2',2934],['t14_2',1254],['t15_2',2934],['t16_2',2934],['t17_2',2933],['t18_2',2934],['t19_2',2933]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

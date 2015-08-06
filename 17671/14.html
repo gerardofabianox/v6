@@ -1,0 +1,240 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load14();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_14{left:332px;top:128px;}
+#t2_14{left:330px;top:147px;}
+#t3_14{left:101px;top:211px;}
+#t4_14{left:101px;top:243px;}
+#t5_14{left:101px;top:274px;}
+#t6_14{left:101px;top:292px;}
+#t7_14{left:101px;top:309px;}
+#t8_14{left:101px;top:327px;}
+#t9_14{left:101px;top:344px;}
+#ta_14{left:101px;top:376px;}
+#tb_14{left:101px;top:408px;}
+#tc_14{left:101px;top:439px;}
+#td_14{left:101px;top:457px;}
+#te_14{left:101px;top:474px;}
+#tf_14{left:101px;top:492px;}
+#tg_14{left:101px;top:523px;}
+#th_14{left:101px;top:555px;}
+#ti_14{left:101px;top:587px;}
+#tj_14{left:101px;top:619px;}
+#tk_14{left:101px;top:650px;}
+#tl_14{left:101px;top:668px;}
+#tm_14{left:101px;top:685px;}
+#tn_14{left:101px;top:702px;}
+#to_14{left:101px;top:734px;}
+#tp_14{left:101px;top:752px;}
+#tq_14{left:101px;top:769px;}
+#tr_14{left:101px;top:801px;}
+#ts_14{left:101px;top:818px;}
+#tt_14{left:101px;top:836px;}
+#tu_14{left:101px;top:853px;}
+#tv_14{left:101px;top:870px;}
+#tw_14{left:101px;top:888px;}
+#tx_14{left:101px;top:920px;}
+#ty_14{left:101px;top:951px;}
+#tz_14{left:101px;top:983px;}
+#t10_14{left:101px;top:1001px;}
+#t11_14{left:101px;top:1018px;}
+#t12_14{left:101px;top:1050px;}
+#t13_14{left:101px;top:1067px;}
+#t14_14{left:101px;top:1085px;}
+
+.s3_14{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_14{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_14{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_14" class="t s1_14">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_14" class="t s1_14">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_14" class="t s2_14">SECCION V </div>
+<div id="t4_14" class="t s3_14">De los plazos </div>
+<div id="t5_14" class="t s2_14">Artículo 48.- Todos los plazos que no hayan sido fijados en la presente ley, referente al </div>
+<div id="t6_14" class="t s2_14">cumplimiento de las obligaciones que establece, serán determinados en la reglamentación </div>
+<div id="t7_14" class="t s2_14">correspondiente. De acuerdo con ello, se deberá considerar como "plazo vencido", a los efectos del </div>
+<div id="t8_14" class="t s2_14">análisis de las posibles contravenciones, el lapso transcurrido de ocho días hábiles a partir del </div>
+<div id="t9_14" class="t s2_14">momento en que se hayan cumplido los distintos términos citados por esta ley y su reglamentación. </div>
+<div id="ta_14" class="t s2_14">SECCION VI </div>
+<div id="tb_14" class="t s3_14">Franquicias postales y telegráficas </div>
+<div id="tc_14" class="t s2_14">Artículo 49.- El uso del correo y del telégrafo nacional para el cumplimiento de esta ley será gratuito </div>
+<div id="td_14" class="t s2_14">y la correspondencia será despachada como piezas oficiales certificadas libres de franqueo. En los </div>
+<div id="te_14" class="t s2_14">lugares que no existan líneas de telégrafo nacional, pero sí de la empresa de Ferrocarriles </div>
+<div id="tf_14" class="t s2_14">Argentinos, se utilizará este servicio. </div>
+<div id="tg_14" class="t s2_14">CAPITULO XII </div>
+<div id="th_14" class="t s3_14">Disposiciones transitorias </div>
+<div id="ti_14" class="t s2_14">SECCION I </div>
+<div id="tj_14" class="t s3_14">Facultades iniciales de emergencia del Registro Nacional de las Personas </div>
+<div id="tk_14" class="t s2_14">Artículo 50.- Facúltase al Registro Nacional de las Personas, si razones de simplificación lo exigieren </div>
+<div id="tl_14" class="t s2_14">para prescindir del testimonio de las partidas de nacimiento que establece el artículo 9°, aceptando </div>
+<div id="tm_14" class="t s2_14">como única documentación la actual Libreta de Enrolamiento y Libreta Cívica, en oportunidad de su </div>
+<div id="tn_14" class="t s2_14">canje por el Documento Nacional de Identidad. </div>
+<div id="to_14" class="t s2_14">Por las mismas razones podrá admitir el certificado de la partida en lugar de su testimonio y </div>
+<div id="tp_14" class="t s2_14">aceptarlo sin exigir su legalización, cuando se tratare de documentación emanada de autoridades </div>
+<div id="tq_14" class="t s2_14">argentinas. </div>
+<div id="tr_14" class="t s2_14">Las personas identificadas al recibir en canje el Documento Nacional de Identidad entregarán a las </div>
+<div id="ts_14" class="t s2_14">oficinas secciónales o consulares, con destino a su archivo en el Registro Nacional de las Personas </div>
+<div id="tt_14" class="t s2_14">por el tiempo que establezca la reglamentación sus correspondientes libretas de enrolamiento o </div>
+<div id="tu_14" class="t s2_14">libretas cívicas. A su vez el Registro Nacional de las Personas comunicará al Registro de Enrolados el </div>
+<div id="tv_14" class="t s2_14">número de matrícula y todo otro dato que se estimare necesario para documentar las constancias </div>
+<div id="tw_14" class="t s2_14">correspondientes. </div>
+<div id="tx_14" class="t s2_14">SECCION II </div>
+<div id="ty_14" class="t s3_14">Identificación de extranjeros </div>
+<div id="tz_14" class="t s2_14">Artículo 51.- Los extranjeros que viajen a nuestro país sin estar domiciliados en él deberán </div>
+<div id="t10_14" class="t s2_14">gestionar previamente el documento nacional de identidad respectivo ante las autoridades </div>
+<div id="t11_14" class="t s2_14">consulares argentinas. </div>
+<div id="t12_14" class="t s2_14">Dichas autoridades exigirán y confeccionarán a tal fin la documentación que se establezca por </div>
+<div id="t13_14" class="t s2_14">reglamentación, la que asimismo, determinará los casos en que los extranjeros estarán exceptuados </div>
+<div id="t14_14" class="t s2_14">de la obligación contenida en este artículo. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg14Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg14"><object width="935" height="1210" data="14/14.svg" type="image/svg+xml" id="pdf14" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld14" type="text/javascript">
+
+var isIE = false;
+var f14 = [['t1_14',1076],['t2_14',1095],['t3_14',328],['t4_14',426],['t5_14',2929],['t6_14',2929],['t7_14',2929],['t8_14',2928],['t9_14',2908],['ta_14',353],['tb_14',1121],['tc_14',2929],['td_14',2929],['te_14',2929],['tf_14',1067],['tg_14',401],['th_14',837],['ti_14',313],['tj_14',2364],['tk_14',2928],['tl_14',2929],['tm_14',2929],['tn_14',1363],['to_14',2929],['tp_14',2929],['tr_14',2929],['ts_14',2929],['tt_14',2929],['tu_14',2929],['tv_14',2929],['tx_14',337],['ty_14',941],['tz_14',2928],['t10_14',2929],['t11_14',653],['t12_14',2929],['t13_14',2929],['t14_14',1239]];
+function load14(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f14);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 41;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_14");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:246px;}
+#t6_2{left:101px;top:263px;}
+#t7_2{left:101px;top:281px;}
+#t8_2{left:101px;top:298px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:233px;top:330px;}
+#tb_2{left:299px;top:330px;}
+#tc_2{left:101px;top:347px;}
+#td_2{left:101px;top:365px;}
+#te_2{left:101px;top:382px;}
+#tf_2{left:101px;top:399px;}
+#tg_2{left:101px;top:417px;}
+#th_2{left:101px;top:434px;}
+#ti_2{left:101px;top:452px;}
+#tj_2{left:101px;top:483px;}
+#tk_2{left:101px;top:501px;}
+#tl_2{left:101px;top:533px;}
+#tm_2{left:247px;top:533px;}
+#tn_2{left:314px;top:533px;}
+#to_2{left:101px;top:550px;}
+#tp_2{left:101px;top:567px;}
+#tq_2{left:101px;top:599px;}
+#tr_2{left:101px;top:617px;}
+#ts_2{left:101px;top:634px;}
+#tt_2{left:101px;top:651px;}
+#tu_2{left:101px;top:683px;}
+#tv_2{left:101px;top:701px;}
+#tw_2{left:101px;top:732px;}
+#tx_2{left:238px;top:732px;}
+#ty_2{left:101px;top:750px;}
+#tz_2{left:101px;top:782px;}
+#t10_2{left:241px;top:782px;}
+#t11_2{left:373px;top:782px;}
+#t12_2{left:101px;top:799px;}
+#t13_2{left:101px;top:831px;}
+#t14_2{left:101px;top:848px;}
+#t15_2{left:101px;top:866px;}
+#t16_2{left:101px;top:897px;}
+#t17_2{left:245px;top:897px;}
+#t18_2{left:358px;top:897px;}
+#t19_2{left:101px;top:915px;}
+#t1a_2{left:101px;top:932px;}
+#t1b_2{left:101px;top:950px;}
+#t1c_2{left:101px;top:967px;}
+#t1d_2{left:101px;top:999px;}
+#t1e_2{left:240px;top:999px;}
+#t1f_2{left:508px;top:999px;}
+#t1g_2{left:101px;top:1016px;}
+#t1h_2{left:101px;top:1034px;}
+#t1i_2{left:101px;top:1051px;}
+#t1j_2{left:101px;top:1068px;}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">Cuando por cualquier causa se niegue o sea imposible obtener el consentimiento de alguno/a de </div>
+<div id="t4_2" class="t s2_2">los/as representantes legales del menor de edad, se podrá recurrir a la vía sumarísima para que </div>
+<div id="t5_2" class="t s2_2">los/as jueces/zas correspondientes resuelvan, teniendo en cuenta los principios de capacidad </div>
+<div id="t6_2" class="t s2_2">progresiva e interés superior del niño/a de acuerdo con lo estipulado en la Convención sobre los </div>
+<div id="t7_2" class="t s2_2">Derechos del Niño y en la Ley 26.061 de protección integral de los derechos de niñas, niños y </div>
+<div id="t8_2" class="t s2_2">adolescentes. </div>
+<div id="t9_2" class="t s3_2">ARTÍCULO 6° —</div>
+<div id="ta_2" class="t s4_2">Trámite. </div>
+<div id="tb_2" class="t s2_2">Cumplidos los requisitos establecidos en los artículos 4° y 5°, el/ la oficial </div>
+<div id="tc_2" class="t s2_2">público procederá, sin necesidad de ningún trámite judicial o administrativo, a notificar de oficio la </div>
+<div id="td_2" class="t s2_2">rectificación de sexo y cambio de nombre de pila al Registro Civil de la jurisdicción donde fue </div>
+<div id="te_2" class="t s2_2">asentada el acta de nacimiento para que proceda a emitir una nueva partida de nacimiento </div>
+<div id="tf_2" class="t s2_2">ajustándola a dichos cambios, y a expedirle un nuevo documento nacional de identidad que refleje la </div>
+<div id="tg_2" class="t s2_2">rectificación registral del sexo y el nuevo nombre de pila. Se prohíbe cualquier referencia a la </div>
+<div id="th_2" class="t s2_2">presente ley en la partida de nacimiento rectificada y en el documento nacional de identidad </div>
+<div id="ti_2" class="t s2_2">expedido en virtud de la misma. </div>
+<div id="tj_2" class="t s2_2">Los trámites para la rectificación registral previstos en la presente ley son gratuitos, personales y no </div>
+<div id="tk_2" class="t s2_2">será necesaria la intermediación de ningún gestor o abogado. </div>
+<div id="tl_2" class="t s3_2">ARTÍCULO 7° —</div>
+<div id="tm_2" class="t s4_2">Efectos. </div>
+<div id="tn_2" class="t s2_2">Los efectos de la rectificación del sexo y el/los nombre/s de pila, </div>
+<div id="to_2" class="t s2_2">realizados en virtud de la presente ley serán oponibles a terceros desde el momento de su </div>
+<div id="tp_2" class="t s2_2">inscripción en el/los registro/s. </div>
+<div id="tq_2" class="t s2_2">La rectificación registral no alterará la titularidad de los derechos y obligaciones jurídicas que </div>
+<div id="tr_2" class="t s2_2">pudieran corresponder a la persona con anterioridad a la inscripción del cambio registral, ni las </div>
+<div id="ts_2" class="t s2_2">provenientes de las relaciones propias del derecho de familia en todos sus órdenes y grados, las que </div>
+<div id="tt_2" class="t s2_2">se mantendrán inmodificables, incluida la adopción. </div>
+<div id="tu_2" class="t s2_2">En todos los casos será relevante el número de documento nacional de identidad de la persona, por </div>
+<div id="tv_2" class="t s2_2">sobre el nombre de pila o apariencia morfológica de la persona. </div>
+<div id="tw_2" class="t s3_2">ARTÍCULO 8° —</div>
+<div id="tx_2" class="t s2_2">La rectificación registral conforme la presente ley, una vez realizada, sólo podrá </div>
+<div id="ty_2" class="t s2_2">ser nuevamente modificada con autorización judicial. </div>
+<div id="tz_2" class="t s3_2">ARTÍCULO 9° —</div>
+<div id="t10_2" class="t s4_2">Confidencialidad. </div>
+<div id="t11_2" class="t s2_2">Sólo tendrán acceso al acta de nacimiento originaria quienes </div>
+<div id="t12_2" class="t s2_2">cuenten con autorización del/la titular de la misma o con orden judicial por escrito y fundada. </div>
+<div id="t13_2" class="t s2_2">No se dará publicidad a la rectificación registral de sexo y cambio de nombre de pila en ningún caso, </div>
+<div id="t14_2" class="t s2_2">salvo autorización del/la titular de los datos. Se omitirá la publicación en los diarios a que se refiere </div>
+<div id="t15_2" class="t s2_2">el artículo 17 de la Ley 18.248. </div>
+<div id="t16_2" class="t s3_2">ARTÍCULO 10 —</div>
+<div id="t17_2" class="t s4_2">Notificaciones. </div>
+<div id="t18_2" class="t s2_2">- El Registro Nacional de las Personas informará el cambio de </div>
+<div id="t19_2" class="t s2_2">documento nacional de identidad al Registro Nacional de Reincidencia, a la Secretaría del Registro </div>
+<div id="t1a_2" class="t s2_2">Electoral correspondiente para la corrección del padrón electoral y a los organismos que </div>
+<div id="t1b_2" class="t s2_2">reglamentariamente se determine, debiendo incluirse aquéllos que puedan tener información sobre </div>
+<div id="t1c_2" class="t s2_2">medidas precautorias existentes a nombre del interesado. </div>
+<div id="t1d_2" class="t s3_2">ARTÍCULO 11 —</div>
+<div id="t1e_2" class="t s4_2">Derecho al libre desarrollo personal</div>
+<div id="t1f_2" class="t s2_2">. Todas las personas mayores de dieciocho </div>
+<div id="t1g_2" class="t s2_2">(18) años de edad podrán, conforme al artículo 1° de la presente ley y a fin de garantizar el goce de </div>
+<div id="t1h_2" class="t s2_2">su salud integral, acceder a intervenciones quirúrgicas totales y parciales y/o tratamientos integrales </div>
+<div id="t1i_2" class="t s2_2">hormonales para adecuar su cuerpo, incluida su genitalidad, a su identidad de género autopercibida, </div>
+<div id="t1j_2" class="t s2_2">sin necesidad de requerir autorización judicial o administrativa. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2933],['t4_2',2934],['t5_2',2934],['t6_2',2933],['t7_2',2934],['t9_2',507],['tb_2',2140],['tc_2',2934],['td_2',2934],['te_2',2934],['tf_2',2934],['tg_2',2934],['th_2',2934],['ti_2',936],['tj_2',2934],['tk_2',1788],['tl_2',545],['tn_2',2079],['to_2',2933],['tp_2',892],['tq_2',2933],['tr_2',2933],['ts_2',2934],['tt_2',1499],['tu_2',2933],['tv_2',1844],['tw_2',519],['tx_2',2386],['ty_2',1538],['tz_2',529],['t11_2',1846],['t12_2',2715],['t13_2',2933],['t14_2',2934],['t15_2',905],['t16_2',541],['t18_2',1904],['t19_2',2933],['t1a_2',2933],['t1b_2',2933],['t1c_2',1681],['t1d_2',536],['t1e_2',1072],['t1f_2',1305],['t1g_2',2934],['t1h_2',2933],['t1i_2',2934],['t1j_2',1833]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 56;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

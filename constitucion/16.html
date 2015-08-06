@@ -1,0 +1,457 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load16();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_16{left:437px;top:1453px;}
+#t2_16{left:87px;top:130px;}
+#t3_16{left:87px;top:150px;}
+#t4_16{left:87px;top:180px;}
+#t5_16{left:87px;top:200px;}
+#t6_16{left:87px;top:221px;}
+#t7_16{left:87px;top:250px;}
+#t8_16{left:87px;top:271px;}
+#t9_16{left:87px;top:291px;}
+#ta_16{left:87px;top:312px;}
+#tb_16{left:114px;top:341px;}
+#tc_16{left:122px;top:344px;}
+#td_16{left:222px;top:341px;}
+#te_16{left:273px;top:344px;}
+#tf_16{left:322px;top:341px;}
+#tg_16{left:347px;top:344px;}
+#th_16{left:366px;top:341px;}
+#ti_16{left:375px;top:341px;}
+#tj_16{left:383px;top:344px;}
+#tk_16{left:388px;top:341px;}
+#tl_16{left:397px;top:341px;}
+#tm_16{left:114px;top:356px;}
+#tn_16{left:87px;top:380px;}
+#to_16{left:87px;top:401px;}
+#tp_16{left:87px;top:421px;}
+#tq_16{left:87px;top:451px;}
+#tr_16{left:114px;top:480px;}
+#ts_16{left:122px;top:483px;}
+#tt_16{left:223px;top:480px;}
+#tu_16{left:274px;top:483px;}
+#tv_16{left:324px;top:480px;}
+#tw_16{left:350px;top:483px;}
+#tx_16{left:368px;top:480px;}
+#ty_16{left:378px;top:480px;}
+#tz_16{left:385px;top:483px;}
+#t10_16{left:391px;top:480px;}
+#t11_16{left:401px;top:480px;}
+#t12_16{left:114px;top:495px;}
+#t13_16{left:87px;top:519px;}
+#t14_16{left:87px;top:539px;}
+#t15_16{left:87px;top:560px;}
+#t16_16{left:87px;top:580px;}
+#t17_16{left:87px;top:601px;}
+#t18_16{left:87px;top:630px;}
+#t19_16{left:94px;top:633px;}
+#t1a_16{left:191px;top:630px;}
+#t1b_16{left:240px;top:633px;}
+#t1c_16{left:288px;top:630px;}
+#t1d_16{left:312px;top:633px;}
+#t1e_16{left:330px;top:630px;}
+#t1f_16{left:87px;top:656px;}
+#t1g_16{left:87px;top:676px;}
+#t1h_16{left:87px;top:697px;}
+#t1i_16{left:87px;top:717px;}
+#t1j_16{left:114px;top:747px;}
+#t1k_16{left:122px;top:749px;}
+#t1l_16{left:230px;top:747px;}
+#t1m_16{left:284px;top:749px;}
+#t1n_16{left:336px;top:747px;}
+#t1o_16{left:364px;top:749px;}
+#t1p_16{left:382px;top:747px;}
+#t1q_16{left:394px;top:747px;}
+#t1r_16{left:410px;top:749px;}
+#t1s_16{left:415px;top:747px;}
+#t1t_16{left:114px;top:762px;}
+#t1u_16{left:114px;top:777px;}
+#t1v_16{left:114px;top:791px;}
+#t1w_16{left:87px;top:815px;}
+#t1x_16{left:87px;top:836px;}
+#t1y_16{left:87px;top:865px;}
+#t1z_16{left:87px;top:886px;}
+#t20_16{left:87px;top:906px;}
+#t21_16{left:87px;top:936px;}
+#t22_16{left:87px;top:956px;}
+#t23_16{left:87px;top:977px;}
+#t24_16{left:114px;top:1006px;}
+#t25_16{left:122px;top:1009px;}
+#t26_16{left:219px;top:1006px;}
+#t27_16{left:269px;top:1009px;}
+#t28_16{left:317px;top:1006px;}
+#t29_16{left:341px;top:1009px;}
+#t2a_16{left:360px;top:1006px;}
+#t2b_16{left:368px;top:1006px;}
+#t2c_16{left:383px;top:1009px;}
+#t2d_16{left:389px;top:1006px;}
+#t2e_16{left:397px;top:1006px;}
+#t2f_16{left:114px;top:1021px;}
+#t2g_16{left:114px;top:1036px;}
+#t2h_16{left:87px;top:1060px;}
+#t2i_16{left:114px;top:1090px;}
+#t2j_16{left:122px;top:1092px;}
+#t2k_16{left:223px;top:1090px;}
+#t2l_16{left:274px;top:1092px;}
+#t2m_16{left:324px;top:1090px;}
+#t2n_16{left:349px;top:1092px;}
+#t2o_16{left:368px;top:1090px;}
+#t2p_16{left:377px;top:1090px;}
+#t2q_16{left:393px;top:1092px;}
+#t2r_16{left:399px;top:1090px;}
+#t2s_16{left:408px;top:1090px;}
+#t2t_16{left:114px;top:1104px;}
+#t2u_16{left:87px;top:1128px;}
+#t2v_16{left:87px;top:1149px;}
+#t2w_16{left:87px;top:1169px;}
+#t2x_16{left:114px;top:1199px;}
+#t2y_16{left:122px;top:1201px;}
+#t2z_16{left:224px;top:1199px;}
+#t30_16{left:275px;top:1201px;}
+#t31_16{left:325px;top:1199px;}
+#t32_16{left:350px;top:1201px;}
+#t33_16{left:369px;top:1199px;}
+#t34_16{left:378px;top:1199px;}
+#t35_16{left:394px;top:1201px;}
+#t36_16{left:399px;top:1199px;}
+#t37_16{left:409px;top:1199px;}
+#t38_16{left:114px;top:1214px;}
+#t39_16{left:114px;top:1229px;}
+#t3a_16{left:87px;top:1253px;}
+#t3b_16{left:87px;top:1273px;}
+#t3c_16{left:114px;top:1303px;}
+#t3d_16{left:122px;top:1305px;}
+#t3e_16{left:221px;top:1303px;}
+#t3f_16{left:271px;top:1305px;}
+#t3g_16{left:319px;top:1303px;}
+#t3h_16{left:344px;top:1305px;}
+#t3i_16{left:362px;top:1303px;}
+#t3j_16{left:371px;top:1303px;}
+#t3k_16{left:386px;top:1305px;}
+#t3l_16{left:392px;top:1303px;}
+#t3m_16{left:400px;top:1303px;}
+#t3n_16{left:114px;top:1318px;}
+#t3o_16{left:87px;top:1341px;}
+#t3p_16{left:114px;top:1371px;}
+#t3q_16{left:122px;top:1373px;}
+#t3r_16{left:223px;top:1371px;}
+#t3s_16{left:275px;top:1373px;}
+#t3t_16{left:324px;top:1371px;}
+#t3u_16{left:350px;top:1373px;}
+#t3v_16{left:368px;top:1371px;}
+#t3w_16{left:378px;top:1371px;}
+#t3x_16{left:393px;top:1373px;}
+#t3y_16{left:399px;top:1371px;}
+#t3z_16{left:408px;top:1371px;}
+#t40_16{left:114px;top:1386px;}
+#t41_16{left:87px;top:1410px;}
+#t42_16{left:87px;top:1430px;}
+
+.s3_16{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_16{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_16{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_16{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_16" class="t s1_16">16</div>
+<div id="t2_16" class="t s2_16">4. Nombra los magistrados de la Corte Suprema con acuerdo del Senado por dos tercios de </div>
+<div id="t3_16" class="t s2_16">sus miembros presentes, en sesión pública, convocada al efecto. </div>
+<div id="t4_16" class="t s2_16">Nombra los demás jueces de los tribunales federales inferiores en base a una propuesta </div>
+<div id="t5_16" class="t s2_16">vinculante en terna del Consejo de la Magistratura, con acuerdo del Senado, en sesión </div>
+<div id="t6_16" class="t s2_16">pública, en la que se tendrá en cuenta la idoneidad de los candidatos. </div>
+<div id="t7_16" class="t s2_16">Un nuevo nombramiento, precedido de igual acuerdo, será necesario para mantener en el </div>
+<div id="t8_16" class="t s2_16">cargo a cualquiera de esos magistrados, una vez que cumplan la edad de setenta y cinco </div>
+<div id="t9_16" class="t s2_16">años. Todos los nombramientos de magistrados cuya edad sea la indicada o mayor se harán </div>
+<div id="ta_16" class="t s2_16">por cinco años, y podrán ser repetidos indefinidamente, por el mismo trámite. </div>
+<div id="tb_16" class="t s3_16">T</div>
+<div id="tc_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="td_16" class="t s3_16">1994: A</div>
+<div id="te_16" class="t s4_16">RTÍCULO </div>
+<div id="tf_16" class="t s3_16">86,</div>
+<div id="tg_16" class="t s4_16">INC</div>
+<div id="th_16" class="t s3_16">.</div>
+<div id="ti_16" class="t s3_16">5</div>
+<div id="tj_16" class="t s4_16">º</div>
+<div id="tk_16" class="t s3_16">.</div>
+<div id="tl_16" class="t s3_16">Nombra los magistrados de la Corte Suprema y de los demás </div>
+<div id="tm_16" class="t s3_16">tribunales inferiores, con acuerdo del Senado. </div>
+<div id="tn_16" class="t s2_16">5. Puede indultar o conmutar las penas por delitos sujetos a la jurisdicción federal, previo </div>
+<div id="to_16" class="t s2_16">informe del tribunal correspondiente, excepto en los casos de acusación por la Cámara de </div>
+<div id="tp_16" class="t s2_16">Diputados. </div>
+<div id="tq_16" class="t s2_16">6. Concede jubilaciones, retiros, licencias y pensiones conforme a las leyes de la Nación. </div>
+<div id="tr_16" class="t s3_16">T</div>
+<div id="ts_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="tt_16" class="t s3_16">1994: A</div>
+<div id="tu_16" class="t s4_16">RTÍCULO </div>
+<div id="tv_16" class="t s3_16">86,</div>
+<div id="tw_16" class="t s4_16">INC</div>
+<div id="tx_16" class="t s3_16">.</div>
+<div id="ty_16" class="t s3_16">7</div>
+<div id="tz_16" class="t s4_16">º</div>
+<div id="t10_16" class="t s3_16">.</div>
+<div id="t11_16" class="t s3_16">Concede jubilaciones, retiros, licencias y goces de montepíos </div>
+<div id="t12_16" class="t s3_16">conforme a las leyes de la Nación. </div>
+<div id="t13_16" class="t s2_16">7. Nombra y remueve a los embajadores, ministros plenipotenciarios y encargados de </div>
+<div id="t14_16" class="t s2_16">negocios con acuerdo del Senado; por sí solo nombra y remueve al jefe de gabinete de </div>
+<div id="t15_16" class="t s2_16">ministros y a los demás ministros del despacho, los oficiales de su secretaría, los agentes </div>
+<div id="t16_16" class="t s2_16">consulares y los empleados cuyo nombramiento no está reglado de otra forma por esta </div>
+<div id="t17_16" class="t s2_16">Constitución. </div>
+<div id="t18_16" class="t s3_16">T</div>
+<div id="t19_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t1a_16" class="t s3_16">1994: A</div>
+<div id="t1b_16" class="t s4_16">RTÍCULO </div>
+<div id="t1c_16" class="t s3_16">86,</div>
+<div id="t1d_16" class="t s4_16">INC</div>
+<div id="t1e_16" class="t s3_16">.</div>
+<div id="t1f_16" class="t s2_16">8. Hace anualmente la apertura de las sesiones del Congreso, reunidas al efecto ambas </div>
+<div id="t1g_16" class="t s2_16">Cámaras, dando cuenta en esta ocasión del estado de la Nación, de las reformas prometidas </div>
+<div id="t1h_16" class="t s2_16">por la Constitución, y recomendando a su consideración las medidas que juzgue necesarias y </div>
+<div id="t1i_16" class="t s2_16">convenientes. </div>
+<div id="t1j_16" class="t s3_16">T</div>
+<div id="t1k_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t1l_16" class="t s3_16">1994: A</div>
+<div id="t1m_16" class="t s4_16">RTÍCULO </div>
+<div id="t1n_16" class="t s3_16">86,</div>
+<div id="t1o_16" class="t s4_16">INC</div>
+<div id="t1p_16" class="t s3_16">.</div>
+<div id="t1q_16" class="t s3_16">10</div>
+<div id="t1r_16" class="t s4_16">º</div>
+<div id="t1s_16" class="t s3_16">. Nombra y remueve a los ministros plenipotenciarios y </div>
+<div id="t1t_16" class="t s3_16">encargados de negocios con acuerdo del Senado; por sí sólo nombra y remueve a los ministros del </div>
+<div id="t1u_16" class="t s3_16">despacho, los oficiales de su secretaría, los agentes consulares y los empleados cuyo nombramiento no está </div>
+<div id="t1v_16" class="t s3_16">reglado de otra forma por esta Constitución. </div>
+<div id="t1w_16" class="t s2_16">9. Prorroga las sesiones ordinarias del Congreso, o lo convoca a sesiones extraordinarias, </div>
+<div id="t1x_16" class="t s2_16">cuando un grave interés de orden o de progreso lo requiera. </div>
+<div id="t1y_16" class="t s2_16">10. Supervisa el ejercicio de la facultad del jefe de gabinete de ministros respecto de la </div>
+<div id="t1z_16" class="t s2_16">recaudación de las rentas da la Nación y de su inversión, con arreglo a la ley o presupuesto </div>
+<div id="t20_16" class="t s2_16">de gastos nacionales. </div>
+<div id="t21_16" class="t s2_16">11. Concluye y firma tratados, concordatos y otras negociaciones requeridas para el </div>
+<div id="t22_16" class="t s2_16">mantenimiento de buenas relaciones con las organizaciones internacionales y las naciones </div>
+<div id="t23_16" class="t s2_16">extranjeras, recibe sus ministros y admite sus cónsules. </div>
+<div id="t24_16" class="t s3_16">T</div>
+<div id="t25_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t26_16" class="t s3_16">1994: A</div>
+<div id="t27_16" class="t s4_16">RTÍCULO </div>
+<div id="t28_16" class="t s3_16">86,</div>
+<div id="t29_16" class="t s4_16">INC</div>
+<div id="t2a_16" class="t s3_16">.</div>
+<div id="t2b_16" class="t s3_16">14</div>
+<div id="t2c_16" class="t s4_16">º</div>
+<div id="t2d_16" class="t s3_16">.</div>
+<div id="t2e_16" class="t s3_16">Concluye y firma tratados de paz, de comercio, de navegación, </div>
+<div id="t2f_16" class="t s3_16">de alianza, de límites y de neutralidad, concordatos y otras negociaciones requeridas para el mantenimiento </div>
+<div id="t2g_16" class="t s3_16">de buenas relaciones con las potencias extranjeras, recibe sus ministros y admite sus cónsules. </div>
+<div id="t2h_16" class="t s2_16">12. Es comandante en jefe de todas las Fuerzas Armadas de la Nación. </div>
+<div id="t2i_16" class="t s3_16">T</div>
+<div id="t2j_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t2k_16" class="t s3_16">1994: A</div>
+<div id="t2l_16" class="t s4_16">RTÍCULO </div>
+<div id="t2m_16" class="t s3_16">86,</div>
+<div id="t2n_16" class="t s4_16">INC</div>
+<div id="t2o_16" class="t s3_16">.</div>
+<div id="t2p_16" class="t s3_16">15</div>
+<div id="t2q_16" class="t s4_16">º</div>
+<div id="t2r_16" class="t s3_16">.</div>
+<div id="t2s_16" class="t s3_16">Es Comandante en Jefe de todas las fuerzas armadas de la </div>
+<div id="t2t_16" class="t s3_16">Nación. </div>
+<div id="t2u_16" class="t s2_16">13. Provee los empleos militares de la Nación: con acuerdo del Senado, en la concesión de </div>
+<div id="t2v_16" class="t s2_16">los empleos o grados de oficiales superiores de las Fuerzas Armadas; y por sí solo en el </div>
+<div id="t2w_16" class="t s2_16">campo de batalla. </div>
+<div id="t2x_16" class="t s3_16">T</div>
+<div id="t2y_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t2z_16" class="t s3_16">1994: A</div>
+<div id="t30_16" class="t s4_16">RTÍCULO </div>
+<div id="t31_16" class="t s3_16">86,</div>
+<div id="t32_16" class="t s4_16">INC</div>
+<div id="t33_16" class="t s3_16">.</div>
+<div id="t34_16" class="t s3_16">16</div>
+<div id="t35_16" class="t s4_16">º</div>
+<div id="t36_16" class="t s3_16">.</div>
+<div id="t37_16" class="t s3_16">Provee los empleos militares de la Nación; con acuerdo del </div>
+<div id="t38_16" class="t s3_16">Senado, en la concesión de los empleos o grados de oficiales superiores del Ejército y Armada; y por sí sólo </div>
+<div id="t39_16" class="t s3_16">en el campo de batalla. </div>
+<div id="t3a_16" class="t s2_16">14. Dispone de las Fuerzas Armadas, y corre con su organización y distribución según las </div>
+<div id="t3b_16" class="t s2_16">necesidades de la Nación. </div>
+<div id="t3c_16" class="t s3_16">T</div>
+<div id="t3d_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t3e_16" class="t s3_16">1994: A</div>
+<div id="t3f_16" class="t s4_16">RTÍCULO </div>
+<div id="t3g_16" class="t s3_16">86,</div>
+<div id="t3h_16" class="t s4_16">INC</div>
+<div id="t3i_16" class="t s3_16">.</div>
+<div id="t3j_16" class="t s3_16">17</div>
+<div id="t3k_16" class="t s4_16">º</div>
+<div id="t3l_16" class="t s3_16">.</div>
+<div id="t3m_16" class="t s3_16">Dispone de las fuerzas militares, marinas y terrestres, y corre </div>
+<div id="t3n_16" class="t s3_16">con su organización y distribución según las necesidades de la Nación. </div>
+<div id="t3o_16" class="t s2_16">15. Declara la guerra y ordena represalias con autorización y aprobación del Congreso. </div>
+<div id="t3p_16" class="t s3_16">T</div>
+<div id="t3q_16" class="t s4_16">EXTO ANTERIOR A </div>
+<div id="t3r_16" class="t s3_16">1994: A</div>
+<div id="t3s_16" class="t s4_16">RTÍCULO </div>
+<div id="t3t_16" class="t s3_16">86,</div>
+<div id="t3u_16" class="t s4_16">INC</div>
+<div id="t3v_16" class="t s3_16">.</div>
+<div id="t3w_16" class="t s3_16">18</div>
+<div id="t3x_16" class="t s4_16">º</div>
+<div id="t3y_16" class="t s3_16">.</div>
+<div id="t3z_16" class="t s3_16">Declara la guerra y concede patentes de corso, y cartas de </div>
+<div id="t40_16" class="t s3_16">represalias con autorización y aprobación del Congreso. </div>
+<div id="t41_16" class="t s2_16">16. Declara en estado de sitio uno o varios puntos de la Nación, en caso de ataque exterior y </div>
+<div id="t42_16" class="t s2_16">por un término limitado, con acuerdo del Senado. En caso de conmoción interior sólo tiene </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg16Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg16"><object width="935" height="1540" data="16/16.svg" type="image/svg+xml" id="pdf16" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld16" type="text/javascript">
+
+var isIE = false;
+var f16 = [['t2_16',2874],['t3_16',1995],['t4_16',2874],['t5_16',2874],['t6_16',2151],['t7_16',2874],['t8_16',2874],['t9_16',2874],['ta_16',2411],['tc_16',383],['td_16',202],['tl_16',1563],['tm_16',1132],['tn_16',2874],['to_16',2874],['tq_16',2730],['ts_16',386],['tt_16',203],['t11_16',1550],['t12_16',842],['t13_16',2874],['t14_16',2874],['t15_16',2874],['t16_16',2875],['t19_16',372],['t1a_16',197],['t1f_16',2874],['t1g_16',2874],['t1h_16',2875],['t1k_16',405],['t1l_16',213],['t1s_16',1491],['t1t_16',2696],['t1u_16',2695],['t1v_16',1094],['t1w_16',2874],['t1x_16',1862],['t1y_16',2874],['t1z_16',2875],['t20_16',660],['t21_16',2874],['t22_16',2874],['t23_16',1729],['t25_16',375],['t26_16',198],['t2e_16',1565],['t2f_16',2696],['t2g_16',2356],['t2h_16',2189],['t2j_16',386],['t2k_16',203],['t2s_16',1520],['t2u_16',2874],['t2v_16',2874],['t2w_16',548],['t2y_16',387],['t2z_16',203],['t37_16',1516],['t38_16',2695],['t39_16',576],['t3a_16',2874],['t3b_16',795],['t3d_16',378],['t3e_16',200],['t3m_16',1551],['t3n_16',1735],['t3o_16',2682],['t3q_16',386],['t3r_16',204],['t3z_16',1519],['t40_16',1373],['t41_16',2875],['t42_16',2874]];
+function load16(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f16);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 147;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_16");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

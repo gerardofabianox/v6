@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:268px;}
+#t6_1{left:101px;top:285px;}
+#t7_1{left:101px;top:323px;}
+#t8_1{left:101px;top:360px;}
+#t9_1{left:101px;top:378px;}
+#ta_1{left:101px;top:395px;}
+#tb_1{left:101px;top:433px;}
+#tc_1{left:101px;top:450px;}
+#td_1{left:101px;top:468px;}
+#te_1{left:101px;top:505px;}
+#tf_1{left:101px;top:523px;}
+#tg_1{left:101px;top:540px;}
+#th_1{left:101px;top:558px;}
+#ti_1{left:101px;top:595px;}
+#tj_1{left:101px;top:613px;}
+#tk_1{left:101px;top:630px;}
+#tl_1{left:101px;top:648px;}
+#tm_1{left:101px;top:685px;}
+#tn_1{left:101px;top:703px;}
+#to_1{left:101px;top:740px;}
+#tp_1{left:101px;top:758px;}
+#tq_1{left:101px;top:795px;letter-spacing:2px;}
+#tr_1{left:101px;top:813px;}
+#ts_1{left:101px;top:830px;}
+#tt_1{left:101px;top:868px;}
+#tu_1{left:101px;top:886px;}
+#tv_1{left:101px;top:903px;}
+#tw_1{left:101px;top:941px;}
+#tx_1{left:101px;top:958px;}
+#ty_1{left:101px;top:975px;}
+#tz_1{left:101px;top:993px;}
+#t10_1{left:101px;top:1010px;}
+#t11_1{left:101px;top:1048px;}
+#t12_1{left:101px;top:1066px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Resolución 1695/2013 </div>
+<div id="t4_1" class="t s3_1">Ministerio de Justicia y Derechos Humanos </div>
+<div id="t5_1" class="t s4_1">Bs. As., 17/09/2013 </div>
+<div id="t6_1" class="t s4_1">Publicada: 18/09/2013 </div>
+<div id="t7_1" class="t s3_1">Apruébase el “Régimen de Presentación de la Declaración Jurada Patrimonial Integral”. </div>
+<div id="t8_1" class="t s4_1">Artículo 1° — Apruébase el “Régimen de Presentación de la Declaración Jurada Patrimonial Integral” </div>
+<div id="t9_1" class="t s4_1">aplicable a los funcionarios alcanzados por las disposiciones de la Ley Nº 25.188 modificada por su </div>
+<div id="ta_1" class="t s4_1">similar Nº 26.857 y el Decreto Nº 895/13. </div>
+<div id="tb_1" class="t s4_1">Art. 2° — Aclárase que en el ámbito de la Administración Pública Nacional, se mantienen vigentes </div>
+<div id="tc_1" class="t s4_1">las facultades y obligaciones establecidas por las Resoluciones M.J. y D.H. Nros. 17 del 7 de enero </div>
+<div id="td_1" class="t s4_1">del 2000 y 1000 del 4 de octubre del 2000. </div>
+<div id="te_1" class="t s4_1">Art. 3° — La ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS comunicará a la OFICINA </div>
+<div id="tf_1" class="t s4_1">ANTICORRUPCION la nómina de sujetos obligados y mantendrá actualizada dicha información en </div>
+<div id="tg_1" class="t s4_1">relación a las altas y bajas que se produzcan en la titularidad de los cargos o funciones, dentro de </div>
+<div id="th_1" class="t s4_1">los CINCO (5) días hábiles de conocidas las mismas. </div>
+<div id="ti_1" class="t s4_1">Art. 4° — A los fines de la presentación de la Declaración Jurada Patrimonial Integral establecida por </div>
+<div id="tj_1" class="t s4_1">la Ley Nº 25.188 y su modificatoria Ley Nº 26.857, los sujetos obligados deberán proceder a la </div>
+<div id="tk_1" class="t s4_1">transmisión electrónica de los datos, conforme el procedimiento establecido en el artículo 2° de la </div>
+<div id="tl_1" class="t s4_1">Resolución General de la ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS Nº 3511/13. </div>
+<div id="tm_1" class="t s4_1">Una vez completada la “Declaración Jurada Patrimonial Integral - F 1245” el declarante deberá </div>
+<div id="tn_1" class="t s4_1">imprimir DOS (2) copias de la constancia “Presentación de DJ por Internet - Acuse de Recibo”. </div>
+<div id="to_1" class="t s4_1">La ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS transferirá la información pública a la </div>
+<div id="tp_1" class="t s4_1">OFICINA ANTICORRUPCION para su publicación a través de su página web. </div>
+<div id="tq_1" class="t s4_1">Para la confección del Anexo Reservado establecido por el artículo 5° de la Ley Nº 26.857, el </div>
+<div id="tr_1" class="t s4_1">declarante deberá imprimir la totalidad de la información suministrada a través de la “Declaración </div>
+<div id="ts_1" class="t s4_1">Jurada Patrimonial Integral - F 1245”. </div>
+<div id="tt_1" class="t s4_1">En el caso que posea cónyuge, conviviente y/o hijos menores no emancipados, deberá también </div>
+<div id="tu_1" class="t s4_1">proceder a la confección e impresión del Formulario de Anexo Reservado, cuyo modelo se aprueba a </div>
+<div id="tv_1" class="t s4_1">través de la presente. </div>
+<div id="tw_1" class="t s4_1">Art. 5° — Dentro de los plazos establecidos por el artículo siguiente, el funcionario deberá presentar </div>
+<div id="tx_1" class="t s4_1">ante las áreas de personal, administración o recursos humanos de las jurisdicciones y organismos </div>
+<div id="ty_1" class="t s4_1">del PODER EJECUTIVO NACIONAL, o ante las dependencias que los Poderes Legislativo o Judicial y el </div>
+<div id="tz_1" class="t s4_1">MINISTERIO PUBLICO DE LA NACION determinen, un sobre cerrado conteniendo la información </div>
+<div id="t10_1" class="t s4_1">reservada indicada en el artículo anterior. </div>
+<div id="t11_1" class="t s4_1">Asimismo, se deberá acompañar DOS (2) copias de la constancia “Presentación de DJ por Internet - </div>
+<div id="t12_1" class="t s4_1">Acuse de Recibo”. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',810],['t4_1',1383],['t5_1',586],['t6_1',664],['t7_1',2839],['t8_1',2933],['t9_1',2934],['ta_1',1224],['tb_1',2933],['tc_1',2934],['td_1',1258],['te_1',2933],['tf_1',2934],['tg_1',2933],['th_1',1517],['ti_1',2933],['tj_1',2934],['tk_1',2933],['tl_1',2676],['tm_1',2933],['tn_1',2741],['to_1',2933],['tp_1',2186],['tq_1',2933],['tr_1',2934],['ts_1',1099],['tt_1',2934],['tu_1',2933],['tv_1',634],['tw_1',2934],['tx_1',2934],['ty_1',2934],['tz_1',2934],['t10_1',1210],['t11_1',2933],['t12_1',518]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 39;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:202px;}
+#t4_4{left:101px;top:220px;}
+#t5_4{left:101px;top:252px;}
+#t6_4{left:101px;top:269px;}
+#t7_4{left:101px;top:287px;}
+#t8_4{left:230px;top:287px;}
+#t9_4{left:101px;top:304px;}
+#ta_4{left:101px;top:336px;}
+#tb_4{left:121px;top:336px;}
+#tc_4{left:141px;top:336px;}
+#td_4{left:101px;top:367px;}
+#te_4{left:155px;top:367px;}
+#tf_4{left:101px;top:385px;}
+#tg_4{left:101px;top:416px;}
+#th_4{left:101px;top:448px;}
+#ti_4{left:101px;top:466px;}
+#tj_4{left:101px;top:497px;}
+#tk_4{left:101px;top:515px;}
+#tl_4{left:101px;top:547px;}
+#tm_4{left:156px;top:547px;}
+#tn_4{left:101px;top:564px;}
+#to_4{left:101px;top:581px;}
+#tp_4{left:101px;top:599px;}
+#tq_4{left:101px;top:616px;}
+#tr_4{left:308px;top:616px;}
+#ts_4{left:101px;top:634px;}
+#tt_4{left:101px;top:665px;}
+#tu_4{left:101px;top:683px;}
+#tv_4{left:101px;top:715px;}
+#tw_4{left:101px;top:732px;}
+#tx_4{left:101px;top:764px;}
+#ty_4{left:101px;top:781px;}
+#tz_4{left:763px;top:781px;}
+#t10_4{left:101px;top:799px;}
+#t11_4{left:302px;top:799px;}
+#t12_4{left:101px;top:816px;}
+#t13_4{left:101px;top:848px;}
+#t14_4{left:153px;top:848px;}
+#t15_4{left:101px;top:865px;}
+#t16_4{left:101px;top:883px;}
+#t17_4{left:101px;top:900px;}
+#t18_4{left:692px;top:900px;}
+#t19_4{left:101px;top:917px;}
+#t1a_4{left:101px;top:935px;}
+#t1b_4{left:101px;top:967px;}
+#t1c_4{left:171px;top:967px;}
+#t1d_4{left:101px;top:984px;}
+#t1e_4{left:754px;top:984px;}
+#t1f_4{left:101px;top:1001px;}
+#t1g_4{left:101px;top:1019px;}
+#t1h_4{left:101px;top:1050px;}
+#t1i_4{left:177px;top:1050px;}
+#t1j_4{left:101px;top:1068px;}
+#t1k_4{left:101px;top:1085px;}
+
+.s4_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">Los procuradores fiscales actuantes ante dichos juzgados asumirán el ejercicio de los deberes y </div>
+<div id="t4_4" class="t s2_4">facultades a que se refiere el artículo 7° en lo pertinente. </div>
+<div id="t5_4" class="t s2_4">Es deber de los Secretarios Electorales comunicar a la Cámara Nacional Electoral la caducidad o </div>
+<div id="t6_4" class="t s2_4">extinción de los Partidos Políticos, de conformidad al Título VI, Capítulo Unico de la Ley Orgánica </div>
+<div id="t7_4" class="t s2_4">número 19.102. </div>
+<div id="t8_4" class="t s3_4">(Denominación :"la Sala Electoral" sustituida por la denominación: "la Cámara </div>
+<div id="t9_4" class="t s3_4">Nacional Electoral", por art. 2° de la Ley N° 19.277 B.O. 7/10/1971)</div>
+<div id="ta_4" class="t s4_4">3. </div>
+<div id="tb_4" class="t s2_4">— </div>
+<div id="tc_4" class="t s4_4">DISPOSICIONES COMUNES Y TRANSITORIAS </div>
+<div id="td_4" class="t s4_4">Art 13</div>
+<div id="te_4" class="t s2_4">. — Las acciones que nacen de la violación o incumplimiento de las normas de la Ley </div>
+<div id="tf_4" class="t s2_4">Orgánica de los Partidos Políticos, podrán iniciarse: </div>
+<div id="tg_4" class="t s2_4">I) Por denuncia de una agrupación política o de algunos de sus afiliados. </div>
+<div id="th_4" class="t s2_4">II) De oficio, por los jueces o por acción fiscal directa o como consecuencia de sumarios preventivos </div>
+<div id="ti_4" class="t s2_4">sustanciados por las fuerzas de seguridad. </div>
+<div id="tj_4" class="t s2_4">El régimen procesal se ajustará a lo dispuesto en el artículo 54 de la Ley Orgánica de los Partidos </div>
+<div id="tk_4" class="t s2_4">Políticos y, supletoriamente, al Código Procesal Civil y Comercial de la Nación. </div>
+<div id="tl_4" class="t s4_4">Art 14</div>
+<div id="tm_4" class="t s2_4">. — Los jueces de la Cámara Nacional Electoral, los jueces de primera instancia con </div>
+<div id="tn_4" class="t s2_4">competencia electoral y los procuradores fiscales actuantes ante los mismos, no podrán ser </div>
+<div id="to_4" class="t s2_4">recusados sin expresión de causa. Deben excusarse de conocer en los juicios, o de actuar en las </div>
+<div id="tp_4" class="t s2_4">funciones determinadas por la Ley Orgánica de los Partidos Políticos, cuando los comprenda alguna </div>
+<div id="tq_4" class="t s2_4">de las causales siguientes: </div>
+<div id="tr_4" class="t s3_4">(Denominación :"la Sala Electoral" sustituida por la denominación: "la </div>
+<div id="ts_4" class="t s3_4">Cámara Nacional Electoral", por art. 2° de la Ley N° 19.277 B.O. 7/10/1971)</div>
+<div id="tt_4" class="t s2_4">a) Parentesco por consanguinidad, dentro de cuarto grado o afinidad en segundo grado, con algunas </div>
+<div id="tu_4" class="t s2_4">de las partes, candidatos, precandidatos o apoderados comprendidos en la causa; </div>
+<div id="tv_4" class="t s2_4">b) Amistad íntima, enemistad manifiesta o notoria vinculación de intereses con dichas personas </div>
+<div id="tw_4" class="t s2_4">físicas. </div>
+<div id="tx_4" class="t s2_4">En caso de recusación, excusación u otro impedimento de los jueces de la Cámara Nacional </div>
+<div id="ty_4" class="t s2_4">Electoral, ésta se integrará en la forma establecida por el artículo 31 del decreto-ley </div>
+<div id="tz_4" class="t s2_4">1.285/58, </div>
+<div id="t10_4" class="t s2_4">ratificado por ley 14.467. </div>
+<div id="t11_4" class="t s3_4">(Párrafo incorporado por art. 1° de la Ley N° 20.080 B.O. 9/1/1973. </div>
+<div id="t12_4" class="t s3_4">Vigencia: a partir del día 1° del mes siguiente al de su publicación)</div>
+<div id="t13_4" class="t s4_4">Art 15</div>
+<div id="t14_4" class="t s2_4">. — El Registro Nacional de Electores, el Registro de Cartas de Ciudadanía y el Registro de </div>
+<div id="t15_4" class="t s2_4">Inhabilitados, actualmente a cargo de la Secretaría Electoral de la Capital Federal, serán entregados </div>
+<div id="t16_4" class="t s2_4">bajo inventario a la Secretaría de la Cámara Nacional Electoral, a cuya dependencia pasará a prestar </div>
+<div id="t17_4" class="t s2_4">servicios el personal de aquella, que la Cámara determine en su oportunidad. </div>
+<div id="t18_4" class="t s3_4">(Denominación :"la </div>
+<div id="t19_4" class="t s3_4">Sala Electoral" sustituida por la denominación: "la Cámara Nacional Electoral", por art. 2° de la Ley </div>
+<div id="t1a_4" class="t s3_4">N° 19.277 B.O. 7/10/1971)</div>
+<div id="t1b_4" class="t s4_4">Art. 16.</div>
+<div id="t1c_4" class="t s2_4">— La presente ley, en lo pertinente, quedará incorporada al Decreto-Ley 1.285/58. Para </div>
+<div id="t1d_4" class="t s2_4">integrar la Cámara Nacional Electoral no se aplicará el procedimiento reglado por la Ley </div>
+<div id="t1e_4" class="t s2_4">Nº 17.455. </div>
+<div id="t1f_4" class="t s3_4">(Denominación:"la Sala Electoral" sustituida por la denominación: "la Cámara Nacional Electoral", </div>
+<div id="t1g_4" class="t s3_4">por art. 2° de la Ley N° 19.277 B.O. 7/10/1971) </div>
+<div id="t1h_4" class="t s4_4">Art. 17.</div>
+<div id="t1i_4" class="t s2_4">— Los gastos que demande el cumplimiento de la presente se imputarán a rentas </div>
+<div id="t1j_4" class="t s2_4">generales, hasta tanto sean incluidos en el Presupuesto General de la Nación. Autorízase a la Corte </div>
+<div id="t1k_4" class="t s2_4">Suprema para efectuar en su presupuesto los ajustes necesarios. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2934],['t4_4',1661],['t5_4',2933],['t6_4',2934],['t7_4',483],['t8_4',2415],['t9_4',1993],['tc_4',1459],['td_4',217],['te_4',2716],['tf_4',1482],['tg_4',2102],['th_4',2933],['ti_4',1233],['tj_4',2933],['tk_4',2263],['tl_4',222],['tm_4',2711],['tn_4',2933],['to_4',2934],['tp_4',2934],['tq_4',800],['tr_4',2103],['ts_4',2238],['tt_4',2933],['tu_4',2379],['tv_4',2934],['tx_4',2934],['ty_4',2584],['t10_4',773],['t11_4',2127],['t12_4',1948],['t13_4',208],['t14_4',2725],['t15_4',2934],['t16_4',2934],['t17_4',2337],['t18_4',568],['t19_4',2934],['t1a_4',801],['t1b_4',251],['t1c_4',2654],['t1d_4',2569],['t1e_4',321],['t1f_4',2933],['t1g_4',1410],['t1h_4',263],['t1i_4',2630],['t1j_4',2934],['t1k_4',1896]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 57;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

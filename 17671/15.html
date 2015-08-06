@@ -1,0 +1,236 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load15();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_15{left:332px;top:128px;}
+#t2_15{left:330px;top:147px;}
+#t3_15{left:101px;top:207px;}
+#t4_15{left:101px;top:225px;}
+#t5_15{left:101px;top:242px;}
+#t6_15{left:101px;top:274px;}
+#t7_15{left:101px;top:291px;}
+#t8_15{left:101px;top:309px;}
+#t9_15{left:101px;top:341px;}
+#ta_15{left:101px;top:358px;}
+#tb_15{left:101px;top:375px;}
+#tc_15{left:101px;top:393px;}
+#td_15{left:101px;top:425px;}
+#te_15{left:101px;top:442px;}
+#tf_15{left:101px;top:459px;}
+#tg_15{left:101px;top:477px;}
+#th_15{left:101px;top:509px;}
+#ti_15{left:101px;top:526px;}
+#tj_15{left:101px;top:558px;}
+#tk_15{left:101px;top:575px;}
+#tl_15{left:101px;top:593px;}
+#tm_15{left:101px;top:610px;}
+#tn_15{left:101px;top:642px;}
+#to_15{left:101px;top:673px;}
+#tp_15{left:101px;top:705px;}
+#tq_15{left:101px;top:723px;}
+#tr_15{left:101px;top:740px;}
+#ts_15{left:101px;top:757px;}
+#tt_15{left:101px;top:789px;}
+#tu_15{left:101px;top:821px;}
+#tv_15{left:101px;top:853px;}
+#tw_15{left:101px;top:884px;}
+#tx_15{left:101px;top:916px;}
+#ty_15{left:101px;top:948px;}
+#tz_15{left:101px;top:965px;}
+#t10_15{left:101px;top:997px;}
+#t11_15{left:101px;top:1029px;}
+#t12_15{left:101px;top:1046px;}
+
+.s3_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_15{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_15" class="t s1_15">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_15" class="t s1_15">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_15" class="t s2_15">Artículo 52.- Las oficinas consulares deberán legalizar gratuitamente la referida documentación de </div>
+<div id="t4_15" class="t s2_15">estado civil, debiendo inscribir en ella la siguiente leyenda: "Ingreso permanente a la República </div>
+<div id="t5_15" class="t s2_15">Argentina - legalización gratuita." </div>
+<div id="t6_15" class="t s2_15">Artículo 53.- Fijada su residencia en el país, el extranjero se presentará a la oficina seccional más </div>
+<div id="t7_15" class="t s2_15">próxima a su domicilio para proceder a la obtención del documento nacional de identidad, según </div>
+<div id="t8_15" class="t s2_15">corresponda a su edad. </div>
+<div id="t9_15" class="t s2_15">Artículo 54.- Los extranjeros que ya estuvieran en el país antes de la vigencia de la presente ley y </div>
+<div id="ta_15" class="t s2_15">posean cédula de identidad policial argentina, para gestionar el documento nacional de identidad </div>
+<div id="tb_15" class="t s2_15">respectivo deberán entregar en la oficina seccional correspondiente la cédula obtenida además de </div>
+<div id="tc_15" class="t s2_15">los documentos solicitados por reglamentación. </div>
+<div id="td_15" class="t s2_15">Artículo 55.- Los extranjeros que ya estuvieran radicados en el país y que no tengan documentación </div>
+<div id="te_15" class="t s2_15">argentina de identidad deberán proveerse de los documentos que se determinen por reglamentación </div>
+<div id="tf_15" class="t s2_15">y se identificarán en las oficinas secciónales más próximas a su domicilio en los tiempos y plazos </div>
+<div id="tg_15" class="t s2_15">que establezcan las autoridades del Registro Nacional de las Personas. </div>
+<div id="th_15" class="t s2_15">En todos los casos será previa e indispensable la presentación del comprobante de radicación </div>
+<div id="ti_15" class="t s2_15">expedido por la Dirección Nacional de Migraciones. </div>
+<div id="tj_15" class="t s2_15">Artículo 56.- Cuando por acción de guerra, terremoto, inundaciones u otras causas se hubiesen </div>
+<div id="tk_15" class="t s2_15">destruido los libros originales y los interesados no pudieran obtener los documentos requeridos, </div>
+<div id="tl_15" class="t s2_15">deberán presentar testimonio legalizado de la prueba supletoria o testifical obtenida en nuestro país </div>
+<div id="tm_15" class="t s2_15">ante las autoridades judiciales respectivas. </div>
+<div id="tn_15" class="t s2_15">SECCION III </div>
+<div id="to_15" class="t s3_15">Validez de los documentos actuales </div>
+<div id="tp_15" class="t s2_15">Artículo 57.- Hasta tanto el Registro Nacional de las Personas, dentro del plan de otorgamiento del </div>
+<div id="tq_15" class="t s2_15">documento nacional de identidad, haya completado las entregas o realizado los canjes </div>
+<div id="tr_15" class="t s2_15">correspondientes, los documentos de identidad que se especifican a continuación tendrán la validez </div>
+<div id="ts_15" class="t s2_15">del documento nacional de identidad y servirán a todos sus efectos. </div>
+<div id="tt_15" class="t s3_15">Para mayores de dieciocho años (argentinos): </div>
+<div id="tu_15" class="t s2_15">a) Libreta de Enrolamiento; </div>
+<div id="tv_15" class="t s2_15">b) Libreta Cívica. </div>
+<div id="tw_15" class="t s3_15">Para argentinos menores de dieciocho años y extranjeros de toda edad: </div>
+<div id="tx_15" class="t s2_15">c) Cédula de Identidad otorgada por la Policía Federal argentina; </div>
+<div id="ty_15" class="t s2_15">d) Cédula de Identidad otorgada por las direcciones de registros civiles y/o del Estado Civil y </div>
+<div id="tz_15" class="t s2_15">Capacidad de las Personas; </div>
+<div id="t10_15" class="t s2_15">e) Cédula de Identidad otorgada por las policías de provincias o territorio nacional; </div>
+<div id="t11_15" class="t s2_15">f) Los que otorgue el Registro Nacional de las Personas con carácter provisional y cuya </div>
+<div id="t12_15" class="t s2_15">nomenclatura se determinará en la reglamentación. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg15Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg15"><object width="935" height="1210" data="15/15.svg" type="image/svg+xml" id="pdf15" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld15" type="text/javascript">
+
+var isIE = false;
+var f15 = [['t1_15',1076],['t2_15',1095],['t3_15',2928],['t4_15',2929],['t5_15',974],['t6_15',2928],['t7_15',2929],['t8_15',679],['t9_15',2929],['ta_15',2929],['tb_15',2929],['tc_15',1374],['td_15',2929],['te_15',2929],['tf_15',2929],['tg_15',2045],['th_15',2929],['ti_15',1470],['tj_15',2928],['tk_15',2929],['tl_15',2929],['tm_15',1243],['tn_15',361],['to_15',1152],['tp_15',2929],['tq_15',2928],['tr_15',2929],['ts_15',1970],['tt_15',1495],['tu_15',799],['tv_15',493],['tw_15',2329],['tx_15',1878],['ty_15',2929],['tz_15',794],['t10_15',2406],['t11_15',2929],['t12_15',1502]];
+function load15(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f15);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 39;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_15");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

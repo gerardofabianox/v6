@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:257px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:326px;}
+#ta_3{left:101px;top:344px;}
+#tb_3{left:101px;top:375px;}
+#tc_3{left:101px;top:393px;}
+#td_3{left:101px;top:410px;}
+#te_3{left:101px;top:442px;}
+#tf_3{left:101px;top:459px;}
+#tg_3{left:101px;top:477px;}
+#th_3{left:101px;top:494px;}
+#ti_3{left:101px;top:526px;}
+#tj_3{left:101px;top:543px;}
+#tk_3{left:101px;top:561px;}
+#tl_3{left:101px;top:578px;}
+#tm_3{left:101px;top:610px;}
+#tn_3{left:101px;top:627px;}
+#to_3{left:101px;top:645px;}
+#tp_3{left:101px;top:677px;}
+#tq_3{left:101px;top:694px;}
+#tr_3{left:101px;top:711px;}
+#ts_3{left:101px;top:729px;}
+#tt_3{left:574px;top:729px;}
+#tu_3{left:101px;top:746px;}
+#tv_3{left:101px;top:764px;}
+#tw_3{left:101px;top:781px;}
+#tx_3{left:101px;top:798px;}
+#ty_3{left:101px;top:816px;}
+#tz_3{left:101px;top:833px;}
+#t10_3{left:101px;top:865px;}
+#t11_3{left:101px;top:882px;}
+#t12_3{left:101px;top:900px;}
+#t13_3{left:101px;top:932px;}
+#t14_3{left:101px;top:949px;}
+#t15_3{left:101px;top:966px;}
+#t16_3{left:101px;top:984px;}
+#t17_3{left:101px;top:1001px;}
+#t18_3{left:754px;top:1001px;}
+#t19_3{left:101px;top:1019px;}
+#t1a_3{left:101px;top:1036px;}
+#t1b_3{left:101px;top:1053px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Poder Judicial de la Nación sobre la necesidad de disponer la creación de cargos (cf. Oficios 4637 y </div>
+<div id="t4_3" class="t s2_3">4638 del 17 de junio de 2008).- </div>
+<div id="t5_3" class="t s2_3">Finalmente, a raíz de que la señora Administradora General del Poder Judicial de la Nación no </div>
+<div id="t6_3" class="t s2_3">autorizó el uso del fondo creado por el art. 4° de la ley 19.108 -modif. por art. 73 de la ley 26.215-</div>
+<div id="t7_3" class="t s2_3">para afrontar gastos de personal, en septiembre de este año se solicitó al señor Presidente de la </div>
+<div id="t8_3" class="t s2_3">Corte Suprema de Justicia "autorización para la urgente contratación de al menos cuatro contadores </div>
+<div id="t9_3" class="t s2_3">públicos" con carácter transitorio "hasta tanto se aprueben las partidas asignadas al mismo objetivo </div>
+<div id="ta_3" class="t s2_3">en el Presupuesto correspondiente al año 2009" (cf. Oficio 6147 del 17 de septiembre de 2008).- </div>
+<div id="tb_3" class="t s2_3">9°) Que, pese a todo lo que se ha hecho, las previsiones presupuestarias aprobadas recientemente </div>
+<div id="tc_3" class="t s2_3">por la H. Cámara de Diputados de la Nación para 2009, no contemplan la habilitación de los cargos </div>
+<div id="td_3" class="t s2_3">insistentemente solicitados.- </div>
+<div id="te_3" class="t s2_3">No obstante, según se ha tomado conocimiento en el día de ayer, a través de noticias difundidas en </div>
+<div id="tf_3" class="t s2_3">los medios de comunicación, la Corte Suprema de Justicia de la Nación -accediendo al pedido </div>
+<div id="tg_3" class="t s2_3">referido en último término- dispuso la creación de cuatro cargos de auditores contadores a lo fines </div>
+<div id="th_3" class="t s2_3">requeridos.- </div>
+<div id="ti_3" class="t s2_3">Por ello, corresponde fijar fecha para el inicio del proceso de entrevistas personales que prevé art. </div>
+<div id="tj_3" class="t s2_3">12 del Reglamento de Concurso Público para cubrir cargos del Cuerpo de Auditores Contadores de la </div>
+<div id="tk_3" class="t s2_3">Cámara Nacional Electoral (Ac. 4/08) -del cual se dio cuenta en el considerando 7°) de la presente- </div>
+<div id="tl_3" class="t s2_3">para que la Comisión Verificadora convoque a los postulantes a dichas entrevistas.- </div>
+<div id="tm_3" class="t s2_3">Asimismo, de conformidad con el principio de transparencia que rige todo lo atinente al control del </div>
+<div id="tn_3" class="t s2_3">financiamiento partidario, se estima conveniente que dicho proceso de entrevistas revista carácter </div>
+<div id="to_3" class="t s2_3">público y poner en conocimiento de la ciudadanía su fecha de inicio.- </div>
+<div id="tp_3" class="t s2_3">10°) Que con relación a las pautas que rigen los trámites de control -sobre las cuales deben ejercer </div>
+<div id="tq_3" class="t s2_3">sus funciones los señores jueces de grado y el Cuerpo de Auditores Contadores (Ac. 2/03 CNE, </div>
+<div id="tr_3" class="t s2_3">consid. 10°)- cabe destacar primariamente, como lo hizo la Cámara en ocasión de establecerlas, que </div>
+<div id="ts_3" class="t s2_3">"existe la necesidad manifiesta de que las normas de auditoria [.</div>
+<div id="tt_3" class="t s2_3">..] sean uniformes y adecuadas a la </div>
+<div id="tu_3" class="t s2_3">importancia relevante que tienen para la comunidad" (cf. Ac. 2/03 CNE, consid. 12°). En ello, entre </div>
+<div id="tv_3" class="t s2_3">otras razones, se funda la potestad que le confiere a este Tribunal la ley 19.108 (modif. por ley </div>
+<div id="tw_3" class="t s2_3">19.277) para organizar el cuerpo técnico de auditoria, pues la existencia de modalidades dispares </div>
+<div id="tx_3" class="t s2_3">entre los distritos del fuero para la tramitación de actuaciones similares, a más de la inequidad que </div>
+<div id="ty_3" class="t s2_3">podría generar, puede afectar los principios de certeza y seguridad jurídica que en materia electoral </div>
+<div id="tz_3" class="t s2_3">revisten una preponderancia determinante (arg. Fallo 3100/03 CNE).- </div>
+<div id="t10_3" class="t s2_3">En lo que aquí interesa, en particular, se observa que los procesos desarrollados por los señores </div>
+<div id="t11_3" class="t s2_3">jueces de grado no siempre son homogéneos, lo que justifica también -además de lo expresado en </div>
+<div id="t12_3" class="t s2_3">el considerando 5°)- uniformar los criterios para llevarlos adelante.- </div>
+<div id="t13_3" class="t s2_3">11°) Que, como se adelantó, la ley 26.215 establece términos máximos para el desarrollo de los </div>
+<div id="t14_3" class="t s2_3">procesos de control patrimonial, disponiendo que "la justicia federal electoral y la Cámara Nacional </div>
+<div id="t15_3" class="t s2_3">Electoral a través del Cuerpo de Auditores Contadores tendrán un máximo de ciento ochenta (180) </div>
+<div id="t16_3" class="t s2_3">días para la realización de la auditoria de los estados contables anuales [y de los informes finales de </div>
+<div id="t17_3" class="t s2_3">campaña] y treinta (30) días para la elaboración y notificación a los partidos políticos [.</div>
+<div id="t18_3" class="t s2_3">..] Vencido </div>
+<div id="t19_3" class="t s2_3">dicho término el juez federal con competencia electoral dentro del plazo de treinta (30) días deberá </div>
+<div id="t1a_3" class="t s2_3">resolver. El juez podrá ampliar dicho plazo de mediar un traslado al partido político para que realice </div>
+<div id="t1b_3" class="t s2_3">aclaraciones o presente un nuevo informe de corresponder" (arts. 26 y 61). </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2934],['t4_3',930],['t5_3',2933],['t6_3',2934],['t7_3',2933],['t8_3',2933],['t9_3',2933],['ta_3',2820],['tb_3',2934],['tc_3',2933],['td_3',828],['te_3',2933],['tf_3',2933],['tg_3',2934],['ti_3',2933],['tj_3',2934],['tk_3',2934],['tl_3',2426],['tm_3',2933],['tn_3',2933],['to_3',1998],['tp_3',2934],['tq_3',2933],['tr_3',2935],['ts_3',1891],['tt_3',1042],['tu_3',2933],['tv_3',2934],['tw_3',2933],['tx_3',2934],['ty_3',2933],['tz_3',2032],['t10_3',2933],['t11_3',2933],['t12_3',1975],['t13_3',2934],['t14_3',2933],['t15_3',2934],['t16_3',2933],['t17_3',2613],['t18_3',320],['t19_3',2933],['t1a_3',2933],['t1b_3',2201]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 48;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

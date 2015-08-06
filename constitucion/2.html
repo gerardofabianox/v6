@@ -1,0 +1,378 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:441px;top:1453px;}
+#t2_2{left:87px;top:130px;}
+#t3_2{left:181px;top:130px;}
+#t4_2{left:87px;top:150px;}
+#t5_2{left:87px;top:171px;}
+#t6_2{left:87px;top:200px;}
+#t7_2{left:179px;top:200px;}
+#t8_2{left:87px;top:221px;}
+#t9_2{left:87px;top:250px;}
+#ta_2{left:181px;top:250px;}
+#tb_2{left:87px;top:271px;}
+#tc_2{left:87px;top:291px;}
+#td_2{left:87px;top:321px;}
+#te_2{left:182px;top:321px;}
+#tf_2{left:87px;top:341px;}
+#tg_2{left:87px;top:362px;}
+#th_2{left:87px;top:382px;}
+#ti_2{left:87px;top:403px;}
+#tj_2{left:87px;top:432px;}
+#tk_2{left:182px;top:432px;}
+#tl_2{left:87px;top:453px;}
+#tm_2{left:87px;top:473px;}
+#tn_2{left:87px;top:503px;}
+#to_2{left:182px;top:503px;}
+#tp_2{left:87px;top:523px;}
+#tq_2{left:96px;top:523px;letter-spacing:10px;}
+#tr_2{left:121px;top:523px;letter-spacing:10px;}
+#ts_2{left:143px;top:523px;letter-spacing:15px;}
+#tt_2{left:169px;top:523px;letter-spacing:15px;}
+#tu_2{left:201px;top:523px;}
+#tv_2{left:210px;top:523px;}
+#tw_2{left:228px;top:523px;letter-spacing:15px;}
+#tx_2{left:243px;top:523px;}
+#ty_2{left:249px;top:523px;}
+#tz_2{left:256px;top:523px;}
+#t10_2{left:260px;top:523px;letter-spacing:15px;}
+#t11_2{left:276px;top:523px;}
+#t12_2{left:282px;top:523px;letter-spacing:15px;}
+#t13_2{left:309px;top:523px;letter-spacing:15px;}
+#t14_2{left:341px;top:523px;}
+#t15_2{left:350px;top:523px;}
+#t16_2{left:356px;top:523px;letter-spacing:15px;}
+#t17_2{left:385px;top:523px;}
+#t18_2{left:408px;top:523px;}
+#t19_2{left:417px;top:523px;}
+#t1a_2{left:423px;top:523px;letter-spacing:10px;}
+#t1b_2{left:447px;top:523px;}
+#t1c_2{left:466px;top:523px;}
+#t1d_2{left:475px;top:523px;}
+#t1e_2{left:493px;top:523px;letter-spacing:15px;}
+#t1f_2{left:524px;top:523px;letter-spacing:15px;}
+#t1g_2{left:543px;top:523px;}
+#t1h_2{left:549px;top:523px;letter-spacing:10px;}
+#t1i_2{left:584px;top:523px;letter-spacing:15px;}
+#t1j_2{left:598px;top:523px;letter-spacing:10px;}
+#t1k_2{left:629px;top:523px;letter-spacing:10px;}
+#t1l_2{left:666px;top:523px;letter-spacing:10px;}
+#t1m_2{left:708px;top:523px;letter-spacing:15px;}
+#t1n_2{left:725px;top:523px;letter-spacing:15px;}
+#t1o_2{left:738px;top:523px;}
+#t1p_2{left:757px;top:523px;}
+#t1q_2{left:765px;top:523px;letter-spacing:15px;}
+#t1r_2{left:792px;top:523px;}
+#t1s_2{left:801px;top:523px;}
+#t1t_2{left:87px;top:543px;}
+#t1u_2{left:87px;top:573px;}
+#t1v_2{left:182px;top:573px;}
+#t1w_2{left:87px;top:593px;}
+#t1x_2{left:87px;top:614px;}
+#t1y_2{left:87px;top:634px;}
+#t1z_2{left:87px;top:655px;}
+#t20_2{left:87px;top:675px;}
+#t21_2{left:87px;top:705px;}
+#t22_2{left:212px;top:705px;}
+#t23_2{left:87px;top:725px;}
+#t24_2{left:87px;top:746px;}
+#t25_2{left:87px;top:766px;}
+#t26_2{left:87px;top:786px;}
+#t27_2{left:87px;top:807px;}
+#t28_2{left:87px;top:827px;}
+#t29_2{left:87px;top:857px;}
+#t2a_2{left:87px;top:877px;}
+#t2b_2{left:87px;top:898px;}
+#t2c_2{left:87px;top:918px;}
+#t2d_2{left:87px;top:948px;}
+#t2e_2{left:87px;top:968px;}
+#t2f_2{left:87px;top:989px;}
+#t2g_2{left:87px;top:1009px;}
+#t2h_2{left:87px;top:1029px;}
+#t2i_2{left:87px;top:1050px;}
+#t2j_2{left:87px;top:1079px;}
+#t2k_2{left:183px;top:1079px;}
+#t2l_2{left:87px;top:1100px;}
+#t2m_2{left:87px;top:1120px;}
+#t2n_2{left:87px;top:1141px;}
+#t2o_2{left:87px;top:1161px;}
+#t2p_2{left:87px;top:1182px;}
+#t2q_2{left:87px;top:1211px;}
+#t2r_2{left:182px;top:1211px;}
+#t2s_2{left:87px;top:1232px;}
+#t2t_2{left:87px;top:1252px;}
+#t2u_2{left:87px;top:1272px;}
+#t2v_2{left:87px;top:1302px;}
+#t2w_2{left:181px;top:1302px;}
+#t2x_2{left:87px;top:1322px;}
+#t2y_2{left:87px;top:1343px;}
+#t2z_2{left:87px;top:1363px;}
+#t30_2{left:87px;top:1384px;}
+#t31_2{left:87px;top:1404px;}
+
+.s2_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">2</div>
+<div id="t2_2" class="t s2_2">Artículo 8º</div>
+<div id="t3_2" class="t s3_2">.- Los ciudadanos de cada provincia gozan de todos los derechos, privilegios e </div>
+<div id="t4_2" class="t s3_2">inmunidades inherentes al título de ciudadano en las demás. La extradición de los criminales </div>
+<div id="t5_2" class="t s3_2">es de obligación recíproca entre todas las provincias. </div>
+<div id="t6_2" class="t s2_2">Artículo 9º</div>
+<div id="t7_2" class="t s3_2">.- En todo el territorio de la Nación no habrá más aduanas que las nacionales, en </div>
+<div id="t8_2" class="t s3_2">las cuales regirán las tarifas que sancione el Congreso. </div>
+<div id="t9_2" class="t s2_2">Artículo 10</div>
+<div id="ta_2" class="t s3_2">.- En el interior de la República es libre de derechos la circulación de los efectos </div>
+<div id="tb_2" class="t s3_2">de producción o fabricación nacional, así como la de los géneros y mercancías de todas </div>
+<div id="tc_2" class="t s3_2">clases, despachadas en las aduanas exteriores. </div>
+<div id="td_2" class="t s2_2">Artículo 11</div>
+<div id="te_2" class="t s3_2">.- Los artículos de producción o fabricación nacional o extranjera, así como los </div>
+<div id="tf_2" class="t s3_2">ganados de toda especie, que pasen por territorio de una provincia a otra, serán libres de los </div>
+<div id="tg_2" class="t s3_2">derechos llamados de tránsito, siéndolo también los carruajes, buques o bestias en que se </div>
+<div id="th_2" class="t s3_2">transporten; y ningún otro derecho podrá imponérseles en adelante, cualquiera que sea su </div>
+<div id="ti_2" class="t s3_2">denominación, por el hecho de transitar el territorio. </div>
+<div id="tj_2" class="t s2_2">Artículo 12</div>
+<div id="tk_2" class="t s3_2">.- Los buques destinados de una provincia a otra, no serán obligados a entrar, </div>
+<div id="tl_2" class="t s3_2">anclar y pagar derechos por causa de tránsito, sin que en ningún caso puedan concederse </div>
+<div id="tm_2" class="t s3_2">preferencias a un puerto respecto de otro, por medio de leyes o reglamentos de comercio. </div>
+<div id="tn_2" class="t s2_2">Artículo 13</div>
+<div id="to_2" class="t s3_2">.- Podrán admitirse nuevas provincias en la Nación; pero no podrá erigirse una </div>
+<div id="tp_2" class="t s3_2">p</div>
+<div id="tq_2" class="t s3_2">rov</div>
+<div id="tr_2" class="t s3_2">inc</div>
+<div id="ts_2" class="t s3_2">ia</div>
+<div id="tt_2" class="t s3_2">en</div>
+<div id="tu_2" class="t s3_2">e</div>
+<div id="tv_2" class="t s3_2">l</div>
+<div id="tw_2" class="t s3_2">te</div>
+<div id="tx_2" class="t s3_2">r</div>
+<div id="ty_2" class="t s3_2">r</div>
+<div id="tz_2" class="t s3_2">i</div>
+<div id="t10_2" class="t s3_2">to</div>
+<div id="t11_2" class="t s3_2">r</div>
+<div id="t12_2" class="t s3_2">io</div>
+<div id="t13_2" class="t s3_2">de</div>
+<div id="t14_2" class="t s3_2">o</div>
+<div id="t15_2" class="t s3_2">t</div>
+<div id="t16_2" class="t s3_2">ra</div>
+<div id="t17_2" class="t s3_2">u</div>
+<div id="t18_2" class="t s3_2">o</div>
+<div id="t19_2" class="t s3_2">t</div>
+<div id="t1a_2" class="t s3_2">ras</div>
+<div id="t1b_2" class="t s3_2">,</div>
+<div id="t1c_2" class="t s3_2">n</div>
+<div id="t1d_2" class="t s3_2">i</div>
+<div id="t1e_2" class="t s3_2">de</div>
+<div id="t1f_2" class="t s3_2">va</div>
+<div id="t1g_2" class="t s3_2">r</div>
+<div id="t1h_2" class="t s3_2">ias</div>
+<div id="t1i_2" class="t s3_2">fo</div>
+<div id="t1j_2" class="t s3_2">rma</div>
+<div id="t1k_2" class="t s3_2">rse</div>
+<div id="t1l_2" class="t s3_2">una</div>
+<div id="t1m_2" class="t s3_2">so</div>
+<div id="t1n_2" class="t s3_2">la</div>
+<div id="t1o_2" class="t s3_2">,</div>
+<div id="t1p_2" class="t s3_2">s</div>
+<div id="t1q_2" class="t s3_2">in</div>
+<div id="t1r_2" class="t s3_2">e</div>
+<div id="t1s_2" class="t s3_2">l</div>
+<div id="t1t_2" class="t s3_2">consentimiento de la Legislatura de las provincias interesadas y del Congreso. </div>
+<div id="t1u_2" class="t s2_2">Artículo 14</div>
+<div id="t1v_2" class="t s3_2">.- Todos los habitantes de la Nación gozan de los siguientes derechos conforme </div>
+<div id="t1w_2" class="t s3_2">a las leyes que reglamenten su ejercicio; a saber: de trabajar y ejercer toda industria lícita; </div>
+<div id="t1x_2" class="t s3_2">de navegar y comerciar; de peticionar a las autoridades; de entrar, permanecer, transitar y </div>
+<div id="t1y_2" class="t s3_2">salir del territorio argentino; de publicar sus ideas por la prensa sin censura previa; de usar </div>
+<div id="t1z_2" class="t s3_2">y disponer de su propiedad; de asociarse con fines útiles; de profesar libremente su culto; </div>
+<div id="t20_2" class="t s3_2">de enseñar y aprender. </div>
+<div id="t21_2" class="t s2_2">Artículo 14 bis</div>
+<div id="t22_2" class="t s3_2">.- El trabajo en sus diversas formas gozará de la protección de las leyes, las </div>
+<div id="t23_2" class="t s3_2">que asegurarán al trabajador: condiciones dignas y equitativas de labor, jornada limitada; </div>
+<div id="t24_2" class="t s3_2">descanso y vacaciones pagados; retribución justa; salario mínimo vital móvil; igual </div>
+<div id="t25_2" class="t s3_2">remuneración por igual tarea; participación en las ganancias de las empresas, con control de </div>
+<div id="t26_2" class="t s3_2">la producción y colaboración en la dirección; protección contra el despido arbitrario; </div>
+<div id="t27_2" class="t s3_2">estabilidad del empleado público; organización sindical libre y democrática, reconocida por la </div>
+<div id="t28_2" class="t s3_2">simple inscripción en un registro especial. </div>
+<div id="t29_2" class="t s3_2">Queda garantizado a los gremios: concertar convenios colectivos de trabajo; recurrir a la </div>
+<div id="t2a_2" class="t s3_2">conciliación y al arbitraje; el derecho de huelga. Los representantes gremiales gozarán de </div>
+<div id="t2b_2" class="t s3_2">las garantías necesarias para el cumplimiento de su gestión sindical y las relacionadas con la </div>
+<div id="t2c_2" class="t s3_2">estabilidad de su empleo. </div>
+<div id="t2d_2" class="t s3_2">El Estado otorgará los beneficios de la seguridad social, que tendrá carácter de integral e </div>
+<div id="t2e_2" class="t s3_2">irrenunciable. En especial, la ley establecerá: el seguro social obligatorio, que estará a cargo </div>
+<div id="t2f_2" class="t s3_2">de entidades nacionales o provinciales con autonomía financiera y económica, administradas </div>
+<div id="t2g_2" class="t s3_2">por los interesados con participación del Estado, sin que pueda existir superposición de </div>
+<div id="t2h_2" class="t s3_2">aportes; jubilaciones y pensiones móviles; la protección integral de la familia; la defensa del </div>
+<div id="t2i_2" class="t s3_2">bien de familia; la compensación económica familiar y el acceso a una vivienda digna. </div>
+<div id="t2j_2" class="t s2_2">Artículo 15</div>
+<div id="t2k_2" class="t s3_2">.- En la Nación Argentina no hay esclavos: los pocos que hoy existen quedan </div>
+<div id="t2l_2" class="t s3_2">libres desde la jura de esta Constitución; y una ley especial reglará las indemnizaciones a </div>
+<div id="t2m_2" class="t s3_2">que dé lugar esta declaración. Todo contrato de compra y venta de personas es un crimen </div>
+<div id="t2n_2" class="t s3_2">de que serán responsables los que lo celebrasen, y el escribano o funcionario que lo </div>
+<div id="t2o_2" class="t s3_2">autorice. Y los esclavos que de cualquier modo se introduzcan quedan libres por el solo </div>
+<div id="t2p_2" class="t s3_2">hecho de pisar el territorio de la República. </div>
+<div id="t2q_2" class="t s2_2">Artículo 16</div>
+<div id="t2r_2" class="t s3_2">.- La Nación Argentina no admite prerrogativas de sangre, ni de nacimiento: no </div>
+<div id="t2s_2" class="t s3_2">hay en ella fueros personales ni títulos de nobleza. Todos sus habitantes son iguales ante la </div>
+<div id="t2t_2" class="t s3_2">ley, y admisibles en los empleos sin otra condición que la idoneidad. La igualdad es la base </div>
+<div id="t2u_2" class="t s3_2">del impuesto y de las cargas públicas. </div>
+<div id="t2v_2" class="t s2_2">Artículo 17</div>
+<div id="t2w_2" class="t s3_2">.- La propiedad es inviolable, y ningún habitante de la Nación puede ser privado </div>
+<div id="t2x_2" class="t s3_2">de ella, sino en virtud de sentencia fundada en ley. La expropiación por causa de utilidad </div>
+<div id="t2y_2" class="t s3_2">pública, debe ser calificada por ley y previamente indemnizada. Sólo el Congreso impone las </div>
+<div id="t2z_2" class="t s3_2">contribuciones que se expresan en el Artículo 4º. Ningún servicio personal es exigible, sino </div>
+<div id="t30_2" class="t s3_2">en virtud de ley o de sentencia fundada en ley. Todo autor o inventor es propietario </div>
+<div id="t31_2" class="t s3_2">exclusivo de su obra, invento o descubrimiento, por el término que le acuerde la ley. La </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1540" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t2_2',377],['t3_2',2497],['t4_2',2874],['t5_2',1629],['t6_2',370],['t7_2',2504],['t8_2',1692],['t9_2',379],['ta_2',2495],['tb_2',2874],['tc_2',1458],['td_2',383],['te_2',2491],['tf_2',2875],['tg_2',2874],['th_2',2874],['ti_2',1617],['tj_2',382],['tk_2',2492],['tl_2',2874],['tm_2',2787],['tn_2',382],['to_2',2492],['t1t_2',2408],['t1u_2',380],['t1v_2',2494],['t1w_2',2874],['t1x_2',2874],['t1y_2',2874],['t1z_2',2874],['t20_2',719],['t21_2',501],['t22_2',2373],['t23_2',2874],['t24_2',2874],['t25_2',2874],['t26_2',2873],['t27_2',2874],['t28_2',1287],['t29_2',2874],['t2a_2',2874],['t2b_2',2875],['t2c_2',786],['t2d_2',2874],['t2e_2',2874],['t2f_2',2874],['t2g_2',2874],['t2h_2',2874],['t2i_2',2654],['t2j_2',385],['t2k_2',2489],['t2l_2',2875],['t2m_2',2874],['t2n_2',2874],['t2o_2',2874],['t2p_2',1326],['t2q_2',380],['t2r_2',2494],['t2s_2',2874],['t2t_2',2874],['t2u_2',1171],['t2v_2',379],['t2w_2',2495],['t2x_2',2874],['t2y_2',2874],['t2z_2',2874],['t30_2',2874],['t31_2',2874]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 110;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

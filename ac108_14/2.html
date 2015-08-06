@@ -1,0 +1,239 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:246px;}
+#t6_2{left:101px;top:263px;}
+#t7_2{left:101px;top:281px;}
+#t8_2{left:101px;top:298px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:347px;}
+#tb_2{left:101px;top:365px;}
+#tc_2{left:101px;top:382px;}
+#td_2{left:101px;top:414px;}
+#te_2{left:101px;top:431px;}
+#tf_2{left:101px;top:449px;}
+#tg_2{left:101px;top:466px;}
+#th_2{left:101px;top:498px;}
+#ti_2{left:101px;top:515px;}
+#tj_2{left:101px;top:533px;}
+#tk_2{left:101px;top:550px;}
+#tl_2{left:101px;top:582px;}
+#tm_2{left:101px;top:599px;}
+#tn_2{left:101px;top:617px;}
+#to_2{left:101px;top:634px;}
+#tp_2{left:101px;top:666px;}
+#tq_2{left:101px;top:683px;}
+#tr_2{left:101px;top:715px;}
+#ts_2{left:101px;top:732px;}
+#tt_2{left:101px;top:750px;}
+#tu_2{left:101px;top:767px;}
+#tv_2{left:101px;top:799px;}
+#tw_2{left:101px;top:816px;}
+#tx_2{left:101px;top:834px;}
+#ty_2{left:101px;top:851px;}
+#tz_2{left:101px;top:883px;}
+#t10_2{left:101px;top:900px;}
+#t11_2{left:101px;top:918px;}
+#t12_2{left:101px;top:935px;}
+#t13_2{left:101px;top:953px;}
+#t14_2{left:101px;top:984px;}
+#t15_2{left:101px;top:1002px;}
+#t16_2{left:101px;top:1019px;}
+#t17_2{left:101px;top:1037px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">Así, a título de ejemplo, corresponde mencionar que previo a los comicios del año 2013, con el </div>
+<div id="t4_2" class="t s2_2">objeto de garantizar la participación electoral y la actualización de los padrones correspondientes a </div>
+<div id="t5_2" class="t s2_2">esa sección, a requerimiento de aquel magistrado se dispuso -en los términos del artículo 34 del </div>
+<div id="t6_2" class="t s2_2">Código Electoral Nacional y de la Acordada Nº 37/13 CNE- incorporar a un padrón complementario a </div>
+<div id="t7_2" class="t s2_2">los electores con domicilio en el distrito que, al momento de la elección, estuviesen residiendo </div>
+<div id="t8_2" class="t s2_2">efectivamente en alguna de las bases antárticas activas.- </div>
+<div id="t9_2" class="t s2_2">4º) Que, en ese contexto y con el objeto de prever diversas eventualidades propias de la </div>
+<div id="ta_2" class="t s2_2">organización del proceso electoral, resulta necesario dejar establecido algunas previsiones genéricas </div>
+<div id="tb_2" class="t s2_2">adicionales que permitan dar respuesta a las contingencias que puedan dificultar el normal </div>
+<div id="tc_2" class="t s2_2">desarrollo de los comicios en las bases antárticas argentinas.- </div>
+<div id="td_2" class="t s2_2">Ello a fin de que la circunstancia geográfica aludida no obste -por ejemplo- a la confección con el </div>
+<div id="te_2" class="t s2_2">mayor grado de actualización posible del padrón de electores, la planificación y ejecución de la </div>
+<div id="tf_2" class="t s2_2">logística electoral, la transmisión de los resultados del escrutinio de las mesas, o la remisión, </div>
+<div id="tg_2" class="t s2_2">transmisión o confección de los instrumentos de votación.- </div>
+<div id="th_2" class="t s2_2">En efecto, una de las mayores dificultades se advierte en la puesta a disposición de la oferta </div>
+<div id="ti_2" class="t s2_2">electoral que, en ocasiones y por razones de fuerza mayor, no guarda absoluta correspondencia con </div>
+<div id="tj_2" class="t s2_2">los modelos utilizados en las restantes mesas del distrito, ya que ha debido ser comunicada por vía </div>
+<div id="tk_2" class="t s2_2">telegráfica, telefónica o electrónica por la Secretaría Electoral.- </div>
+<div id="tl_2" class="t s2_2">En relación con ello, no puede pasarse por alto que, con posterioridad a las previsiones arriba </div>
+<div id="tm_2" class="t s2_2">citadas (consid. 2º), se han regulado regímenes específicos para el voto de los electores residentes </div>
+<div id="tn_2" class="t s2_2">en el exterior (ley 24.007 y decreto 1138/93) y de los electores privados de libertad (ley 25.858 y </div>
+<div id="to_2" class="t s2_2">decreto 1291/06), que contienen soluciones operativas que podrían resultar de aplicación al caso.- </div>
+<div id="tp_2" class="t s2_2">Por ello, y en mérito a lo establecido por el artículo 4º, inc. h, de la ley 19.108 (modif. por leyes </div>
+<div id="tq_2" class="t s2_2">19.277 y 26.215), ACORDARON: </div>
+<div id="tr_2" class="t s2_2">1º) Hacer saber al Juez Federal con competencia electoral en el distrito Tierra del Fuego, que </div>
+<div id="ts_2" class="t s2_2">deberán extremarse los recaudos para conocer con suficiente antelación la nómina de los electores </div>
+<div id="tt_2" class="t s2_2">hábiles que presumiblemente se encontrarán efectivamente residiendo en alguna de las bases </div>
+<div id="tu_2" class="t s2_2">antárticas a la fecha de los comicios nacionales.- </div>
+<div id="tv_2" class="t s2_2">2º) Requerir a la Dirección Nacional del Antártico, y a los demás organismos pertinentes, que </div>
+<div id="tw_2" class="t s2_2">informen con la mayor anticipación posible la nómina de las bases antárticas argentinas que </div>
+<div id="tx_2" class="t s2_2">presumiblemente se encontrarán operativas a la fecha de las elecciones primarias y generales, y </div>
+<div id="ty_2" class="t s2_2">todo cambio ulterior que se produjera respecto de tal información.- </div>
+<div id="tz_2" class="t s2_2">3º) Disponer que el Jefe de Base -o responsable de la misma- actuará como Delegado de la Justicia </div>
+<div id="t10_2" class="t s2_2">Nacional Electoral y -en un sentido análogo al previsto para las “autoridades de los comicios” </div>
+<div id="t11_2" class="t s2_2">previstas por los artículos 19 del decreto 1138/93 y 11 del decreto 1291/06- será el responsable de </div>
+<div id="t12_2" class="t s2_2">los procedimientos del acto comicial, así como también de las tramitaciones vinculadas a la gestión y </div>
+<div id="t13_2" class="t s2_2">correspondencia de información relacionada con los comicios.- </div>
+<div id="t14_2" class="t s2_2">4º) Autorizar al Juzgado Federal con competencia electoral en el distrito, a efectuar la remisión del </div>
+<div id="t15_2" class="t s2_2">material y documentación electoral correspondientes a las mesas que se habilitaren en las bases </div>
+<div id="t16_2" class="t s2_2">antárticas por medios electrónicos, incorporando a los modelos generales las modificaciones </div>
+<div id="t17_2" class="t s2_2">imprescindibles que ello requiera.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2934],['t4_2',2934],['t5_2',2933],['t6_2',2933],['t7_2',2933],['t8_2',1665],['t9_2',2933],['ta_2',2933],['tb_2',2933],['tc_2',1797],['td_2',2934],['te_2',2934],['tf_2',2934],['tg_2',1708],['th_2',2934],['ti_2',2934],['tj_2',2934],['tk_2',1826],['tl_2',2934],['tm_2',2934],['tn_2',2933],['to_2',2866],['tp_2',2934],['tq_2',954],['tr_2',2933],['ts_2',2933],['tt_2',2933],['tu_2',1414],['tv_2',2933],['tw_2',2933],['tx_2',2934],['ty_2',1953],['tz_2',2934],['t10_2',2933],['t11_2',2933],['t12_2',2933],['t13_2',1809],['t14_2',2933],['t15_2',2933],['t16_2',2934],['t17_2',1000]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 44;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

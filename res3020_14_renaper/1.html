@@ -1,0 +1,220 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:268px;}
+#t6_1{left:101px;top:285px;}
+#t7_1{left:101px;top:303px;}
+#t8_1{left:101px;top:320px;}
+#t9_1{left:101px;top:358px;}
+#ta_1{left:101px;top:395px;}
+#tb_1{left:101px;top:413px;}
+#tc_1{left:101px;top:430px;}
+#td_1{left:101px;top:468px;}
+#te_1{left:101px;top:485px;}
+#tf_1{left:101px;top:503px;}
+#tg_1{left:101px;top:520px;}
+#th_1{left:101px;top:538px;}
+#ti_1{left:101px;top:555px;}
+#tj_1{left:101px;top:593px;}
+#tk_1{left:101px;top:610px;}
+#tl_1{left:101px;top:628px;}
+#tm_1{left:101px;top:665px;}
+#tn_1{left:101px;top:683px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Resolución 3020/2014 </div>
+<div id="t4_1" class="t s3_1">Registro Nacional de las Personas </div>
+<div id="t5_1" class="t s4_1">Bs. As., 29/10/2014 </div>
+<div id="t6_1" class="t s4_1">Publicada: 31/10/2014 </div>
+<div id="t7_1" class="t s4_1">*El texto incluye las últimas modificaciones incorporadas por la Resolución N° 2030/15 (B.O. </div>
+<div id="t8_1" class="t s4_1">16/06/2015) </div>
+<div id="t9_1" class="t s3_1">Canje Obligatorio. Nuevo DNI Digital. Excepción. </div>
+<div id="ta_1" class="t s4_1">Artículo 1° — Determínase el canje obligatorio de todos los documentos de identidad de confección </div>
+<div id="tb_1" class="t s4_1">manual emitidos por el REGISTRO NACIONAL DE LAS PERSONAS por el Nuevo DNI digital, siendo la </div>
+<div id="tc_1" class="t s4_1">fecha límite el día 31 de diciembre de 2014. </div>
+<div id="td_1" class="t s5_1">(Prórroga del plazo establecido en el presente artículo “hasta el 31 de marzo de 2016, en las </div>
+<div id="te_1" class="t s5_1">mismas condiciones establecidas en un todo por dicha norma”, art. 1° de la Resolución N° 2030/15 </div>
+<div id="tf_1" class="t s5_1">del Registro Nacional de las Personas, B.O. 16/06/2015. Anteriormente la Resolución N° </div>
+<div id="tg_1" class="t s5_1">3117/2014 del Registro Nacional de las Personas, B.O. 17/11/2014 en su art. 1° había establecido la </div>
+<div id="th_1" class="t s5_1">prorroga “hasta el 30 de junio del 2015, en las mismas condiciones establecidas en un todo por </div>
+<div id="ti_1" class="t s5_1">dicha norma”) </div>
+<div id="tj_1" class="t s4_1">Art. 2° — Exceptúase de la obligación establecida en el ARTICULO 1° de la presente a las personas </div>
+<div id="tk_1" class="t s4_1">mayores de SETENTA Y CINCO (75) años de edad al día 31 de diciembre de 2014, y a los incapaces </div>
+<div id="tl_1" class="t s4_1">declarados judicialmente. </div>
+<div id="tm_1" class="t s4_1">Art. 3° — Comuníquese, publíquese, dése a la DIRECCION NACIONAL DEL REGISTRO OFICIAL y </div>
+<div id="tn_1" class="t s4_1">archívese.</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',810],['t4_1',1095],['t5_1',586],['t6_1',664],['t7_1',2933],['t9_1',1571],['ta_1',2933],['tb_1',2934],['tc_1',1276],['td_1',2934],['te_1',2934],['tf_1',2933],['tg_1',2933],['th_1',2933],['ti_1',411],['tj_1',2934],['tk_1',2934],['tl_1',738],['tm_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 24;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

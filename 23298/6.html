@@ -1,0 +1,253 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:344px;top:126px;}
+#t2_6{left:342px;top:161px;}
+#t3_6{left:101px;top:238px;}
+#t4_6{left:101px;top:256px;}
+#t5_6{left:101px;top:273px;}
+#t6_6{left:101px;top:311px;}
+#t7_6{left:101px;top:349px;}
+#t8_6{left:217px;top:349px;}
+#t9_6{left:246px;top:349px;}
+#ta_6{left:101px;top:366px;}
+#tb_6{left:101px;top:383px;}
+#tc_6{left:101px;top:421px;}
+#td_6{left:101px;top:438px;}
+#te_6{left:101px;top:476px;}
+#tf_6{left:101px;top:494px;}
+#tg_6{left:101px;top:531px;}
+#th_6{left:101px;top:569px;}
+#ti_6{left:101px;top:586px;}
+#tj_6{left:101px;top:604px;}
+#tk_6{left:101px;top:621px;}
+#tl_6{left:101px;top:659px;}
+#tm_6{left:101px;top:676px;}
+#tn_6{left:101px;top:694px;}
+#to_6{left:101px;top:731px;}
+#tp_6{left:101px;top:749px;}
+#tq_6{left:101px;top:766px;}
+#tr_6{left:101px;top:784px;}
+#ts_6{left:101px;top:801px;}
+#tt_6{left:101px;top:839px;}
+#tu_6{left:101px;top:856px;}
+#tv_6{left:101px;top:874px;}
+#tw_6{left:101px;top:911px;}
+#tx_6{left:101px;top:949px;}
+#ty_6{left:101px;top:987px;}
+#tz_6{left:227px;top:987px;}
+#t10_6{left:101px;top:1004px;}
+#t11_6{left:101px;top:1042px;}
+#t12_6{left:232px;top:1042px;}
+#t13_6{left:101px;top:1059px;}
+
+.s4_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s3_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_6{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_6" class="t s1_6">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_6" class="t s2_6">Para participar en las elecciones generales como confederación deberán haber solicitado su </div>
+<div id="t4_6" class="t s2_6">reconocimiento ante el juez federal con competencia electoral competente hasta sesenta (60) días </div>
+<div id="t5_6" class="t s2_6">antes del plazo previsto para las elecciones primarias respectivas. </div>
+<div id="t6_6" class="t s3_6">(Artículo incorporado por art. 7° de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t7_6" class="t s4_6">ARTÍCULO 10 </div>
+<div id="t8_6" class="t s5_6">ter.</div>
+<div id="t9_6" class="t s2_6">- Todo partido político debidamente inscrito, puede fusionarse con uno o varios </div>
+<div id="ta_6" class="t s2_6">partidos políticos presentando ante el juzgado federal con competencia electoral del distrito de su </div>
+<div id="tb_6" class="t s2_6">fundación: </div>
+<div id="tc_6" class="t s2_6">a) El acuerdo de fusión suscrito que se complementará con un documento en el que conste nombre, </div>
+<div id="td_6" class="t s2_6">domicilio y matrícula de los firmantes; </div>
+<div id="te_6" class="t s2_6">b) Actas de los órganos competentes de los partidos que se fusionan de las que surja la voluntad de </div>
+<div id="tf_6" class="t s2_6">la fusión; </div>
+<div id="tg_6" class="t s2_6">c) El resto de los requisitos establecido en los incisos b) a f) del artículo 7º de la presente ley; </div>
+<div id="th_6" class="t s2_6">d) Constancia de la publicación del acuerdo de fusión en el boletín oficial del distrito de fundación de </div>
+<div id="ti_6" class="t s2_6">los partidos que se fusionan, por tres (3) días, y en la que conste que, en caso de oposición, la </div>
+<div id="tj_6" class="t s2_6">misma deberá presentarse en el juzgado con competencia electoral del distrito de fundación dentro </div>
+<div id="tk_6" class="t s2_6">de los veinte (20) días de la publicación. </div>
+<div id="tl_6" class="t s2_6">El juzgado federal electoral competente verificará que la suma de los afiliados a los partidos que se </div>
+<div id="tm_6" class="t s2_6">fusionan alcanza el mínimo establecido del cuatro por mil (4‰) de los electores inscriptos en el </div>
+<div id="tn_6" class="t s2_6">padrón electoral del distrito respectivo. </div>
+<div id="to_6" class="t s2_6">El partido político resultante de la fusión, gozará de personería jurídico-política desde su </div>
+<div id="tp_6" class="t s2_6">reconocimiento por el juez federal electoral competente, y se constituirá a todo efecto legal como </div>
+<div id="tq_6" class="t s2_6">sucesor de los partidos fusionados, tanto en sus derechos, como obligaciones patrimoniales, sin </div>
+<div id="tr_6" class="t s2_6">perjuicio de subsistir la responsabilidad personal que les corresponda a las autoridades y otros </div>
+<div id="ts_6" class="t s2_6">responsables de los partidos fusionados por actos o hechos anteriores a la fusión. </div>
+<div id="tt_6" class="t s2_6">Se considerarán afiliados al nuevo partido político, todos los electores que a la fecha de la resolución </div>
+<div id="tu_6" class="t s2_6">judicial que reconoce la fusión, lo hubiesen sido de cualquiera de los partidos políticos fusionados, </div>
+<div id="tv_6" class="t s2_6">salvo que hubieren manifestado oposición en el plazo establecido precedentemente. </div>
+<div id="tw_6" class="t s3_6">(Artículo incorporado por art. 8° de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tx_6" class="t s2_6">4. De la intervención y la secesión </div>
+<div id="ty_6" class="t s4_6">ARTÍCULO 11.- </div>
+<div id="tz_6" class="t s2_6">En los partidos nacionales, los partidos de distrito carecen del derecho de secesión. </div>
+<div id="t10_6" class="t s2_6">En cambio los organismos centrales competentes tendrán el derecho de intervención a los distritos. </div>
+<div id="t11_6" class="t s4_6">ARTÍCULO 12.- </div>
+<div id="t12_6" class="t s2_6">Los partidos confederados tienen el derecho de secesión y podrán denunciar el </div>
+<div id="t13_6" class="t s2_6">acuerdo que los confedera. Sus organismos centrales carecen del derecho de intervención. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',987],['t2_6',1004],['t3_6',2934],['t4_6',2934],['t5_6',1912],['t6_6',2071],['t7_6',440],['t9_6',2354],['ta_6',2934],['tc_6',2933],['td_6',1111],['te_6',2934],['tf_6',270],['tg_6',2730],['th_6',2933],['ti_6',2934],['tj_6',2934],['tk_6',1173],['tl_6',2934],['tm_6',2933],['tn_6',1134],['to_6',2934],['tp_6',2934],['tq_6',2934],['tr_6',2934],['ts_6',2367],['tt_6',2934],['tu_6',2933],['tv_6',2437],['tw_6',2071],['tx_6',992],['ty_6',485],['tz_6',2428],['t10_6',2887],['t11_6',494],['t12_6',2408],['t13_6',2632]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

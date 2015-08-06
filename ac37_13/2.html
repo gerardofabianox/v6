@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:246px;}
+#t6_2{left:101px;top:278px;}
+#t7_2{left:101px;top:295px;}
+#t8_2{left:101px;top:312px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:347px;}
+#tb_2{left:101px;top:379px;}
+#tc_2{left:101px;top:396px;}
+#td_2{left:101px;top:414px;}
+#te_2{left:101px;top:431px;}
+#tf_2{left:101px;top:463px;}
+#tg_2{left:101px;top:480px;}
+#th_2{left:101px;top:498px;}
+#ti_2{left:101px;top:530px;}
+#tj_2{left:101px;top:547px;}
+#tk_2{left:101px;top:564px;}
+#tl_2{left:101px;top:582px;}
+#tm_2{left:101px;top:599px;}
+#tn_2{left:101px;top:617px;}
+#to_2{left:101px;top:634px;}
+#tp_2{left:101px;top:651px;}
+#tq_2{left:101px;top:669px;}
+#tr_2{left:101px;top:686px;}
+#ts_2{left:101px;top:718px;}
+#tt_2{left:101px;top:735px;}
+#tu_2{left:101px;top:753px;}
+#tv_2{left:101px;top:785px;}
+#tw_2{left:101px;top:802px;}
+#tx_2{left:101px;top:819px;}
+#ty_2{left:101px;top:837px;}
+#tz_2{left:101px;top:854px;}
+#t10_2{left:101px;top:872px;}
+#t11_2{left:101px;top:903px;}
+#t12_2{left:101px;top:921px;}
+#t13_2{left:101px;top:938px;}
+#t14_2{left:101px;top:956px;}
+#t15_2{left:101px;top:973px;}
+#t16_2{left:101px;top:1005px;}
+#t17_2{left:101px;top:1022px;}
+#t18_2{left:101px;top:1040px;}
+#t19_2{left:101px;top:1057px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">A tal efecto, corresponde establecer que el Tribunal habilitará -durante los períodos que resulten </div>
+<div id="t4_2" class="t s2_2">pertinentes- la consulta en su página de Internet, por parte de los electores, de su condición en el </div>
+<div id="t5_2" class="t s2_2">Registro de Infractores.- </div>
+<div id="t6_2" class="t s2_2">Una vez incorporadas al Registro las justificaciones -y demás actuaciones- efectuadas dentro del </div>
+<div id="t7_2" class="t s2_2">plazo de sesenta (60) días desde la elección respectiva (cf. art. 125 CEN), esta Cámara comunicará </div>
+<div id="t8_2" class="t s2_2">al Poder Ejecutivo Nacional –por intermedio de la Jefatura de Gabinete de Ministros- la nómina de </div>
+<div id="t9_2" class="t s2_2">infractores al deber de votar, en los términos de lo previsto por el artículo 18 del Código Electoral </div>
+<div id="ta_2" class="t s2_2">Nacional.- </div>
+<div id="tb_2" class="t s2_2">Asimismo, a los efectos de cumplir con las previsiones de los artículos 125, 126, 127 y 133, los </div>
+<div id="tc_2" class="t s2_2">gobiernos provinciales y de la Ciudad Autónoma de Buenos Aires podrán -sin perjuicio de la consulta </div>
+<div id="td_2" class="t s2_2">por Internet al Registro de Infractores-, solicitar al Tribunal el listado completo de los infractores de </div>
+<div id="te_2" class="t s2_2">su distrito (cf. art. 18).- </div>
+<div id="tf_2" class="t s2_2">4°) Que, en ese marco, corresponde efectuar algunas consideraciones respecto de la modalidad en </div>
+<div id="tg_2" class="t s2_2">que se asentarán en el Registro de Infractores las distintas justificaciones previstas en el Código </div>
+<div id="th_2" class="t s2_2">Electoral Nacional.- </div>
+<div id="ti_2" class="t s2_2">En primer término, en lo que respecta a los supuestos de justificación individual de la no emisión del </div>
+<div id="tj_2" class="t s2_2">voto fundada en alguna de las causas previstas por el artículo 12 -incs. “a”, “b” y “c”- del Código </div>
+<div id="tk_2" class="t s2_2">Electoral Nacional, el trámite respectivo deberá realizarse dentro de los sesenta (60) días siguientes </div>
+<div id="tl_2" class="t s2_2">a la elección, concurriendo a la Cámara Nacional Electoral o a las secretarías electorales. A tal fin, el </div>
+<div id="tm_2" class="t s2_2">elector deberá acompañar las constancias que acrediten la causal invocada a efectos de que, en </div>
+<div id="tn_2" class="t s2_2">caso de que resulte procedente la justificación, la misma se asiente en el sistema informático </div>
+<div id="to_2" class="t s2_2">previsto para ello, con el objeto de modificar automáticamente la condición del elector respectivo en </div>
+<div id="tp_2" class="t s2_2">el Registro de Infractores. Posteriormente, para los electores que lo requieran podrá emitirse desde </div>
+<div id="tq_2" class="t s2_2">el mismo sistema -en la sede de la justicia electoral o vía web- la constancia prevista por el artículo </div>
+<div id="tr_2" class="t s2_2">125 del Código.- </div>
+<div id="ts_2" class="t s2_2">Se procurará que las constancias emitidas a través del sitio web de la justicia electoral nacional, </div>
+<div id="tt_2" class="t s2_2">contengan un código de verificación único que permita convalidar su autenticidad mediante una </div>
+<div id="tu_2" class="t s2_2">consulta en la misma página.- </div>
+<div id="tv_2" class="t s2_2">5°) Que respecto de las justificaciones que, según lo previsto por el artículo 127 del Código Nacional </div>
+<div id="tw_2" class="t s2_2">Electoral, requieran las autoridades administrativas de la omisión del sufragio de sus subordinados -</div>
+<div id="tx_2" class="t s2_2">originada por actos de servicio por disposición legal-, los funcionarios responsables de esas </div>
+<div id="ty_2" class="t s2_2">dependencias deberán remitir a la justicia nacional electoral, dentro de los diez (10) días de </div>
+<div id="tz_2" class="t s2_2">realizada la elección, un listado en soporte papel acompañado del archivo digital de los electores </div>
+<div id="t10_2" class="t s2_2">alcanzados por la causal aludida.- </div>
+<div id="t11_2" class="t s2_2">Esa solicitud –cuyo modelo estará a disposición en la página web del Tribunal- deberá contener </div>
+<div id="t12_2" class="t s2_2">precisa indicación del organismo, dirección, teléfono, correo electrónico y el funcionario responsable </div>
+<div id="t13_2" class="t s2_2">de la dependencia, así como la causa por la cual no sufragaron, y los siguientes datos de cada </div>
+<div id="t14_2" class="t s2_2">agente: número de documento de identidad, apellido y nombre completos, último domicilio que </div>
+<div id="t15_2" class="t s2_2">figure en su documento, fecha de nacimiento y distrito electoral.- </div>
+<div id="t16_2" class="t s2_2">Una vez recibida tal información –que tendrá el carácter de declaración jurada y podrá ser auditada </div>
+<div id="t17_2" class="t s2_2">por la justicia nacional electoral- se asentará en el sistema informático y se informará al organismo </div>
+<div id="t18_2" class="t s2_2">correspondiente que se encuentra a disposición -vía web- la impresión de las constancias de </div>
+<div id="t19_2" class="t s2_2">justificación del artículo 127.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2933],['t4_2',2933],['t5_2',712],['t6_2',2933],['t7_2',2934],['t8_2',2934],['t9_2',2934],['tb_2',2934],['tc_2',2933],['td_2',2933],['te_2',697],['tf_2',2934],['tg_2',2933],['th_2',560],['ti_2',2934],['tj_2',2933],['tk_2',2933],['tl_2',2934],['tm_2',2934],['tn_2',2933],['to_2',2933],['tp_2',2933],['tq_2',2934],['tr_2',481],['ts_2',2933],['tt_2',2934],['tu_2',875],['tv_2',2933],['tw_2',2933],['tx_2',2933],['ty_2',2934],['tz_2',2934],['t10_2',980],['t11_2',2933],['t12_2',2934],['t13_2',2934],['t14_2',2933],['t15_2',1900],['t16_2',2933],['t17_2',2933],['t18_2',2933],['t19_2',860]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:248px;}
+#t5_1{left:101px;top:280px;}
+#t6_1{left:101px;top:311px;}
+#t7_1{left:101px;top:329px;}
+#t8_1{left:101px;top:346px;}
+#t9_1{left:101px;top:364px;}
+#ta_1{left:101px;top:381px;}
+#tb_1{left:101px;top:413px;}
+#tc_1{left:101px;top:445px;}
+#td_1{left:101px;top:462px;}
+#te_1{left:101px;top:479px;}
+#tf_1{left:101px;top:511px;}
+#tg_1{left:101px;top:529px;}
+#th_1{left:101px;top:546px;}
+#ti_1{left:101px;top:563px;}
+#tj_1{left:101px;top:581px;}
+#tk_1{left:101px;top:598px;}
+#tl_1{left:101px;top:616px;}
+#tm_1{left:101px;top:633px;}
+#tn_1{left:101px;top:665px;}
+#to_1{left:101px;top:682px;}
+#tp_1{left:101px;top:700px;}
+#tq_1{left:101px;top:717px;}
+#tr_1{left:101px;top:734px;}
+#ts_1{left:101px;top:752px;}
+#tt_1{left:291px;top:752px;}
+#tu_1{left:398px;top:752px;}
+#tv_1{left:101px;top:769px;}
+#tw_1{left:101px;top:801px;}
+#tx_1{left:101px;top:818px;}
+#ty_1{left:101px;top:836px;}
+#tz_1{left:101px;top:853px;}
+#t10_1{left:101px;top:871px;}
+#t11_1{left:101px;top:902px;}
+#t12_1{left:101px;top:920px;}
+#t13_1{left:101px;top:937px;}
+#t14_1{left:101px;top:955px;}
+#t15_1{left:101px;top:972px;}
+#t16_1{left:101px;top:1004px;}
+#t17_1{left:101px;top:1021px;}
+#t18_1{left:101px;top:1039px;}
+#t19_1{left:101px;top:1056px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 78/2011 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 12/07/2011 </div>
+<div id="t5_1" class="t s4_1">PORTAL DE DENUNCIAS. </div>
+<div id="t6_1" class="t s3_1">En Buenos Aires, a los doce días del mes de julio del año dos mil once, se reúnen en Acuerdo </div>
+<div id="t7_1" class="t s3_1">Extraordinario, en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Rodolfo Emilio </div>
+<div id="t8_1" class="t s3_1">Munné, Santiago Hernán Corcuera y Alberto Ricardo Dalla Via, actuando los secretarios de la </div>
+<div id="t9_1" class="t s3_1">Cámara, doctor Nicolás G. N. Deane y doctora Alejandra Marcela Lázzaro –subrogante-. Abierto el </div>
+<div id="ta_1" class="t s3_1">acto por el señor Presidente, doctor Rodolfo Emilio Munné, </div>
+<div id="tb_1" class="t s3_1">CONSIDERARON: </div>
+<div id="tc_1" class="t s3_1">1º) Que, en numerosas oportunidades, esta Cámara Nacional Electoral ha resaltado la necesidad de </div>
+<div id="td_1" class="t s3_1">que la ciudadanía asuma colectivamente la responsabilidad de contribuir a la formación de la </div>
+<div id="te_1" class="t s3_1">voluntad política del pueblo.- </div>
+<div id="tf_1" class="t s3_1">En ese entendimiento, se destacó que las elecciones constituyen un proceso ciudadano, pues ha sido </div>
+<div id="tg_1" class="t s3_1">“encomendado a la diligencia, al interés que los mismos electores se tomen por la cosa pública, el </div>
+<div id="th_1" class="t s3_1">prestigio de la institución del sufragio, y la vitalidad del sistema republicano argentino” (Joaquín V. </div>
+<div id="ti_1" class="t s3_1">González, La reforma electoral argentina. Discursos del ministro del interior Dr. Joaquín V. González, </div>
+<div id="tj_1" class="t s3_1">Didot, Bs. As., 1903, pág. 163). Por ello, el Tribunal exhortó a la ciudadanía a que -aun con </div>
+<div id="tk_1" class="t s3_1">prescindencia de su carácter obligatorio (cf. artículo 37, Constitución Nacional y artículos 12, 14, 76, </div>
+<div id="tl_1" class="t s3_1">125, 132 y ccdtes., Código Electoral Nacional)- cumpliese del modo más acabado y espontáneo con </div>
+<div id="tm_1" class="t s3_1">sus deberes cívicos como electores y autoridades de mesa (Acordadas Nº 22/07 y 77/09 CNE).- </div>
+<div id="tn_1" class="t s3_1">De modo concordante, estableció la creación de un “Registro Público de Postulantes a Autoridades </div>
+<div id="to_1" class="t s3_1">de Mesa Voluntarias” (cf. Acordadas N° 129/08 y 49/09 CNE) -que la reforma introducida por la ley </div>
+<div id="tp_1" class="t s3_1">26.571 incorporó legislativamente (cf. artículo 75 bis, Código Electoral Nacional y Acordada Nº </div>
+<div id="tq_1" class="t s3_1">16/11 CNE)- y, con criterio similar, dispuso también la publicación en el sitio de Internet del fuero </div>
+<div id="tr_1" class="t s3_1">electoral de las listas de candidatos a los efectos de que “los particulares o el representante del </div>
+<div id="ts_1" class="t s3_1">Ministerio Público Fiscal [.</div>
+<div id="tt_1" class="t s3_1">..] pued[a]n [.</div>
+<div id="tu_1" class="t s3_1">..] someter a los magistrados las cuestiones que entiendan </div>
+<div id="tv_1" class="t s3_1">relevantes a tal fin” (cf. Acordada Nº 32/09 CNE).- </div>
+<div id="tw_1" class="t s3_1">2º) Que, con particular referencia al financiamiento de los partidos políticos, la Cámara destacó que, </div>
+<div id="tx_1" class="t s3_1">al prever diversas oportunidades en las que los particulares pueden tomar conocimiento de las </div>
+<div id="ty_1" class="t s3_1">presentaciones efectuadas por los partidos políticos (artículos 24, 25, 55, 56, 59 y 60, ley 26.215 -y </div>
+<div id="tz_1" class="t s3_1">sus modif.-), la ley procura alentar la participación activa de la ciudadanía en el proceso de control </div>
+<div id="t10_1" class="t s3_1">de los fondos partidarios (cf. Fallos CNE 3339/04; 3356/04 y 3830/07).- </div>
+<div id="t11_1" class="t s3_1">Se aclaró, al respecto, que tal participación no podía considerarse agotada por el simple hecho de </div>
+<div id="t12_1" class="t s3_1">que la sociedad civil pudiese tomar conocimiento sobre el origen y destino de los fondos partidarios, </div>
+<div id="t13_1" class="t s3_1">sino que -en atención al rol de “instituciones fundamentales del sistema democrático” que asigna la </div>
+<div id="t14_1" class="t s3_1">Constitución Nacional a las agrupaciones políticas (cf. artículo 38)- también debía permitírsele </div>
+<div id="t15_1" class="t s3_1">intervenir y coadyuvar en el proceso de contralor.- </div>
+<div id="t16_1" class="t s3_1">Por ello, incluso con anterioridad a su recepción legislativa (cf. artículos 25 y 60 cit.), el Tribunal </div>
+<div id="t17_1" class="t s3_1">entendió que correspondía admitir observaciones formuladas por terceros ajenos al proceso o </div>
+<div id="t18_1" class="t s3_1">trámite de control patrimonial, sobre posibles anomalías que -a su juicio- presentase la información </div>
+<div id="t19_1" class="t s3_1">contable allí contenida (cf. Fallos CNE cit.).- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1010],['t4_1',587],['t5_1',794],['t6_1',2933],['t7_1',2933],['t8_1',2934],['t9_1',2934],['ta_1',1700],['tc_1',2934],['td_1',2933],['te_1',842],['tf_1',2933],['tg_1',2934],['th_1',2933],['ti_1',2933],['tj_1',2934],['tk_1',2933],['tl_1',2934],['tm_1',2787],['tn_1',2934],['to_1',2934],['tp_1',2934],['tq_1',2933],['tr_1',2933],['ts_1',759],['tt_1',429],['tu_1',1744],['tv_1',1477],['tw_1',2934],['tx_1',2934],['ty_1',2934],['tz_1',2933],['t10_1',2107],['t11_1',2933],['t12_1',2933],['t13_1',2934],['t14_1',2933],['t15_1',1474],['t16_1',2933],['t17_1',2934],['t18_1',2933],['t19_1',1272]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

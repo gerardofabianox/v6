@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load16();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_16{left:344px;top:126px;}
+#t2_16{left:342px;top:161px;}
+#t3_16{left:101px;top:238px;}
+#t4_16{left:227px;top:238px;}
+#t5_16{left:101px;top:256px;}
+#t6_16{left:422px;top:293px;}
+#t7_16{left:237px;top:331px;}
+#t8_16{left:101px;top:369px;}
+#t9_16{left:228px;top:369px;}
+#ta_16{left:101px;top:386px;}
+#tb_16{left:101px;top:404px;}
+#tc_16{left:101px;top:421px;}
+#td_16{left:101px;top:459px;}
+#te_16{left:227px;top:459px;}
+#tf_16{left:101px;top:476px;}
+#tg_16{left:101px;top:494px;}
+#th_16{left:101px;top:511px;}
+#ti_16{left:101px;top:529px;}
+#tj_16{left:101px;top:566px;}
+#tk_16{left:101px;top:584px;}
+#tl_16{left:101px;top:601px;}
+#tm_16{left:101px;top:619px;}
+#tn_16{left:101px;top:656px;}
+#to_16{left:101px;top:694px;}
+#tp_16{left:236px;top:694px;}
+#tq_16{left:101px;top:711px;}
+#tr_16{left:101px;top:729px;}
+#ts_16{left:101px;top:766px;}
+#tt_16{left:101px;top:784px;}
+#tu_16{left:101px;top:821px;}
+#tv_16{left:232px;top:821px;}
+#tw_16{left:101px;top:839px;}
+#tx_16{left:101px;top:856px;}
+#ty_16{left:101px;top:894px;}
+#tz_16{left:419px;top:931px;}
+#t10_16{left:343px;top:969px;}
+#t11_16{left:101px;top:1007px;}
+#t12_16{left:101px;top:1044px;}
+#t13_16{left:230px;top:1044px;}
+#t14_16{left:101px;top:1062px;}
+#t15_16{left:101px;top:1079px;}
+
+.s2_16{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_16{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_16{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_16" class="t s1_16">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_16" class="t s1_16">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_16" class="t s2_16">ARTÍCULO 60.- </div>
+<div id="t4_16" class="t s3_16">Las actuaciones ante la Justicia Federal con competencia electoral se tramitarán en </div>
+<div id="t5_16" class="t s3_16">papel simple, y las publicaciones dispuestas por ella en el Boletín Oficial, serán sin cargo. </div>
+<div id="t6_16" class="t s3_16">CAPITULO II </div>
+<div id="t7_16" class="t s2_16">Procedimiento para el reconocimiento de la personalidad </div>
+<div id="t8_16" class="t s2_16">ARTÍCULO 61.- </div>
+<div id="t9_16" class="t s3_16">El partido en constitución que solicitare reconocimiento de su personalidad, deberá </div>
+<div id="ta_16" class="t s3_16">acreditar la autenticidad de las firmas y demás documentación mediante certificación de escribano o </div>
+<div id="tb_16" class="t s3_16">funcionario público competente; en su defecto el juez federal con competencia electoral verificará </div>
+<div id="tc_16" class="t s3_16">dicha autenticidad arbitrando los medios idóneos a ese fin. </div>
+<div id="td_16" class="t s2_16">ARTÍCULO 62.- </div>
+<div id="te_16" class="t s3_16">Cumplidos los requisitos a que se refiere el artículo anterior y vencidos los términos </div>
+<div id="tf_16" class="t s3_16">de notificación y publicación dispuesta por el artículo 14, el juez federal con competencia electoral </div>
+<div id="tg_16" class="t s3_16">convocará a una audiencia dentro de los diez (10) días hábiles siguientes, al procurador fiscal </div>
+<div id="th_16" class="t s3_16">federal y a los apoderados de los partidos reconocidos o en formación del distrito de su jurisdicción, </div>
+<div id="ti_16" class="t s3_16">así como a los de otros distritos, que se hubieren presentado invocando un interés legítimo. </div>
+<div id="tj_16" class="t s3_16">En ese comparendo verbal, podrán formularse observaciones exclusivamente con respecto a la falta </div>
+<div id="tk_16" class="t s3_16">de cumplimiento de las condiciones y requisitos exigidos por ley o referentes al derecho, registro o </div>
+<div id="tl_16" class="t s3_16">uso del nombre partidario propuesto, debiendo concurrir quien la formulare con la prueba en que se </div>
+<div id="tm_16" class="t s3_16">funde, sin perjuicio de la intervención del ministerio público por vía de dictamen. </div>
+<div id="tn_16" class="t s3_16">Los comparecientes a la audiencia antes indicada, podrán apelar. </div>
+<div id="to_16" class="t s2_16">ARTÍCULO 63.- </div>
+<div id="tp_16" class="t s3_16">El juez federal con competencia electoral, cumplidos los trámites necesarios, </div>
+<div id="tq_16" class="t s3_16">procederá mediante auto fundado y dentro de los diez (10) días hábiles, a conceder o denegar la </div>
+<div id="tr_16" class="t s3_16">personalidad solicitada. </div>
+<div id="ts_16" class="t s3_16">Concedido el reconocimiento, ordenará publicar en el Boletín Oficial, por un (1) día el auto </div>
+<div id="tt_16" class="t s3_16">respectivo y la carta orgánica del partido. </div>
+<div id="tu_16" class="t s2_16">ARTÍCULO 64.- </div>
+<div id="tv_16" class="t s3_16">De toda resolución definitiva o que decida artículo, las partes interesadas, y el </div>
+<div id="tw_16" class="t s3_16">procurador fiscal federal, podrán apelar dentro del término de cinco (5) días hábiles por ante la </div>
+<div id="tx_16" class="t s3_16">Cámara Nacional Electoral. </div>
+<div id="ty_16" class="t s3_16">Este recurso se concederá en relación y a los efectos regulados en los artículos siguientes. </div>
+<div id="tz_16" class="t s3_16">CAPITULO III </div>
+<div id="t10_16" class="t s2_16">Del procedimiento contencioso </div>
+<div id="t11_16" class="t s3_16">Primera instancia </div>
+<div id="t12_16" class="t s2_16">ARTÍCULO 65.- </div>
+<div id="t13_16" class="t s3_16">Iniciada la causa se correrá traslado a los interesados por cinco (5) días hábiles. </div>
+<div id="t14_16" class="t s3_16">Vencido el término, el juez federal con competencia electoral convocará a una audiencia dentro de </div>
+<div id="t15_16" class="t s3_16">los cinco (5) días hábiles, bajo apercibimiento de celebrarse con la parte que concurra, debiendo </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg16Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg16"><object width="935" height="1210" data="16/16.svg" type="image/svg+xml" id="pdf16" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld16" type="text/javascript">
+
+var isIE = false;
+var f16 = [['t1_16',987],['t2_16',1004],['t3_16',485],['t4_16',2427],['t5_16',2588],['t6_16',361],['t7_16',1841],['t8_16',486],['t9_16',2426],['ta_16',2933],['tb_16',2934],['tc_16',1705],['td_16',483],['te_16',2430],['tf_16',2934],['tg_16',2933],['th_16',2933],['ti_16',2666],['tj_16',2934],['tk_16',2934],['tl_16',2934],['tm_16',2343],['tn_16',1889],['to_16',502],['tp_16',2392],['tq_16',2934],['tr_16',679],['ts_16',2933],['tt_16',1205],['tu_16',495],['tv_16',2407],['tw_16',2934],['tx_16',779],['ty_16',2621],['tz_16',385],['t10_16',996],['t11_16',500],['t12_16',490],['t13_16',2416],['t14_16',2934],['t15_16',2933]];
+function load16(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f16);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_16");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

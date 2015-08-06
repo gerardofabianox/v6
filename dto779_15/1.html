@@ -1,0 +1,263 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:247px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:321px;}
+#t8_1{left:101px;top:358px;}
+#t9_1{left:198px;top:358px;letter-spacing:1px;}
+#ta_1{left:101px;top:376px;}
+#tb_1{left:101px;top:393px;}
+#tc_1{left:101px;top:431px;}
+#td_1{left:160px;top:431px;}
+#te_1{left:101px;top:468px;}
+#tf_1{left:160px;top:468px;}
+#tg_1{left:101px;top:506px;}
+#th_1{left:164px;top:506px;}
+#ti_1{left:101px;top:523px;}
+#tj_1{left:101px;top:541px;}
+#tk_1{left:101px;top:558px;}
+#tl_1{left:101px;top:576px;}
+#tm_1{left:101px;top:593px;}
+#tn_1{left:101px;top:611px;}
+#to_1{left:101px;top:628px;}
+#tp_1{left:101px;top:646px;}
+#tq_1{left:101px;top:663px;}
+#tr_1{left:101px;top:681px;}
+#ts_1{left:101px;top:718px;}
+#tt_1{left:160px;top:718px;}
+#tu_1{left:101px;top:736px;}
+#tv_1{left:101px;top:753px;}
+#tw_1{left:101px;top:791px;}
+#tx_1{left:168px;top:791px;}
+#ty_1{left:101px;top:808px;}
+#tz_1{left:101px;top:826px;}
+#t10_1{left:101px;top:843px;}
+#t11_1{left:101px;top:861px;}
+#t12_1{left:101px;top:878px;}
+#t13_1{left:101px;top:916px;}
+#t14_1{left:166px;top:916px;}
+#t15_1{left:101px;top:933px;}
+#t16_1{left:101px;top:951px;}
+#t17_1{left:101px;top:968px;}
+#t18_1{left:101px;top:986px;}
+#t19_1{left:101px;top:1003px;}
+#t1a_1{left:101px;top:1041px;}
+#t1b_1{left:101px;top:1058px;}
+#t1c_1{left:101px;top:1075px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Decreto 779/2015 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 11/05/2015 </div>
+<div id="t5_1" class="t s3_1">Publicación: B.O. 13/05/2015 </div>
+<div id="t6_1" class="t s4_1">ELECCIONES NACIONALES </div>
+<div id="t7_1" class="t s4_1">Constitúyese el Comando General Electoral. </div>
+<div id="t8_1" class="t s4_1">Artículo 1°</div>
+<div id="t9_1" class="t s3_1">— Constitúyese el COMANDO GENERAL ELECTORAL a los fines de la custodia de las </div>
+<div id="ta_1" class="t s3_1">elecciones primarias, abiertas, simultáneas y obligatorias a celebrarse el 9 de agosto de 2015 y las </div>
+<div id="tb_1" class="t s3_1">elecciones nacionales a celebrarse el 25 de octubre de 2015 y la eventual segunda vuelta. </div>
+<div id="tc_1" class="t s4_1">Art. 2°</div>
+<div id="td_1" class="t s3_1">— El comando constituido en el artículo 1° dependerá del PODER EJECUTIVO NACIONAL. </div>
+<div id="te_1" class="t s4_1">Art. 3°</div>
+<div id="tf_1" class="t s3_1">— Autorízase al MINISTERIO DE DEFENSA a designar al Comandante General Electoral. </div>
+<div id="tg_1" class="t s4_1">Art. 4°</div>
+<div id="th_1" class="t s3_1">— El COMANDO GENERAL ELECTORAL tendrá a su cargo las funciones de coordinación y </div>
+<div id="ti_1" class="t s3_1">ejecución referentes a las medidas de seguridad que establece el Código Electoral Nacional, </div>
+<div id="tj_1" class="t s3_1">aprobado por la Ley N° 19.945 (t.o. por el Decreto N° 2135 del 18 de agosto de 1983) y sus </div>
+<div id="tk_1" class="t s3_1">modificatorias, como así también las destinadas a facilitar la observancia de las demás disposiciones </div>
+<div id="tl_1" class="t s3_1">legales vinculadas con los actos comiciales de las elecciones primarias, abiertas, simultáneas y </div>
+<div id="tm_1" class="t s3_1">obligatorias y las elecciones nacionales, en particular, la vigilancia de los locales donde funcionen las </div>
+<div id="tn_1" class="t s3_1">mesas receptoras de votos, de las sedes e infraestructuras destinadas al ingreso y procesamiento de </div>
+<div id="to_1" class="t s3_1">datos para el recuento provisional de resultados que realiza la Dirección Nacional Electoral del </div>
+<div id="tp_1" class="t s3_1">MINISTERIO DEL INTERIOR Y TRANSPORTE, de las sedes de las Juntas Electorales Nacionales de </div>
+<div id="tq_1" class="t s3_1">cada distrito, la custodia de las urnas así como la documentación durante su transporte y hasta la </div>
+<div id="tr_1" class="t s3_1">finalización del escrutinio definitivo en cada distrito. </div>
+<div id="ts_1" class="t s4_1">Art. 5°</div>
+<div id="tt_1" class="t s3_1">— El MINISTERIO DE DEFENSA subordinará al COMANDO GENERAL ELECTORAL los efectivos </div>
+<div id="tu_1" class="t s3_1">del EJÉRCITO ARGENTINO, la ARMADA ARGENTINA y la FUERZA AÉREA ARGENTINA que éste </div>
+<div id="tv_1" class="t s3_1">requiera. </div>
+<div id="tw_1" class="t s4_1">Art. 6°</div>
+<div id="tx_1" class="t s3_1">— El MINISTERIO DE SEGURIDAD subordinará al COMANDO GENERAL ELECTORAL los </div>
+<div id="ty_1" class="t s3_1">efectivos de la GENDARMERÍA NACIONAL, PREFECTURA NAVAL ARGENTINA, POLICÍA DE </div>
+<div id="tz_1" class="t s3_1">SEGURIDAD AEROPORTUARIA y POLICÍA FEDERAL ARGENTINA que éste requiera. Asimismo </div>
+<div id="t10_1" class="t s3_1">requerirá de los gobiernos provinciales y de la CIUDAD AUTÓNOMA DE BUENOS AIRES la </div>
+<div id="t11_1" class="t s3_1">subordinación al COMANDO GENERAL ELECTORAL de los efectivos de sus respectivas fuerzas de </div>
+<div id="t12_1" class="t s3_1">seguridad. </div>
+<div id="t13_1" class="t s4_1">Art. 7°</div>
+<div id="t14_1" class="t s3_1">— La movilización de los efectivos afectados a los operativos de seguridad electoral se </div>
+<div id="t15_1" class="t s3_1">extenderá desde los CINCO (5) días anteriores a las elecciones y hasta la finalización del escrutinio </div>
+<div id="t16_1" class="t s3_1">definitivo en cada distrito o el 10 de diciembre del corriente año. La eventual necesidad de servicios </div>
+<div id="t17_1" class="t s3_1">de seguridad para la custodia de material o documentación electoral que fuera parte de eventuales </div>
+<div id="t18_1" class="t s3_1">recursos judiciales pendientes de resolución que exceda de la fecha mencionada deberá cubrirse con </div>
+<div id="t19_1" class="t s3_1">efectivos de custodia de los Juzgados Federales con competencia Electoral. </div>
+<div id="t1a_1" class="t s3_1">La cobertura de los objetivos de custodia comenzará a las 08:00 horas del día previo a cada elección </div>
+<div id="t1b_1" class="t s3_1">y deberá permanecer en forma permanente hasta el repliegue del material y la documentación </div>
+<div id="t1c_1" class="t s3_1">electoral. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',657],['t4_1',586],['t5_1',857],['t6_1',852],['t7_1',1408],['t8_1',357],['t9_1',2546],['ta_1',2934],['tb_1',2615],['tc_1',214],['td_1',2577],['te_1',214],['tf_1',2535],['tg_1',224],['th_1',2680],['ti_1',2934],['tj_1',2934],['tk_1',2933],['tl_1',2933],['tm_1',2933],['tn_1',2933],['to_1',2933],['tp_1',2934],['tq_1',2934],['tr_1',1502],['ts_1',215],['tt_1',2697],['tu_1',2934],['tw_1',231],['tx_1',2664],['ty_1',2934],['tz_1',2934],['t10_1',2934],['t11_1',2934],['t13_1',227],['t14_1',2673],['t15_1',2933],['t16_1',2934],['t17_1',2934],['t18_1',2934],['t19_1',2173],['t1a_1',2934],['t1b_1',2935]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 49;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

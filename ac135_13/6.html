@@ -1,0 +1,220 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:333px;top:128px;}
+#t2_6{left:331px;top:147px;}
+#t3_6{left:101px;top:211px;}
+#t4_6{left:101px;top:243px;}
+#t5_6{left:101px;top:274px;}
+#t6_6{left:101px;top:306px;}
+#t7_6{left:101px;top:338px;}
+#t8_6{left:101px;top:370px;}
+#t9_6{left:101px;top:401px;}
+#ta_6{left:101px;top:433px;}
+#tb_6{left:101px;top:465px;}
+#tc_6{left:101px;top:497px;}
+#td_6{left:101px;top:528px;}
+#te_6{left:101px;top:560px;}
+#tf_6{left:101px;top:592px;}
+#tg_6{left:101px;top:623px;}
+#th_6{left:101px;top:655px;}
+#ti_6{left:101px;top:687px;}
+#tj_6{left:101px;top:719px;}
+#tk_6{left:101px;top:750px;}
+#tl_6{left:101px;top:782px;}
+#tm_6{left:101px;top:814px;}
+#tn_6{left:101px;top:846px;}
+#to_6{left:101px;top:877px;}
+#tp_6{left:101px;top:909px;}
+#tq_6{left:101px;top:941px;}
+#tr_6{left:101px;top:973px;}
+#ts_6{left:101px;top:1004px;}
+#tt_6{left:101px;top:1036px;}
+#tu_6{left:101px;top:1068px;}
+
+.s2_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_6{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_6" class="t s1_6">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_6" class="t s2_6">2.1. DEUDAS OPERATIVAS – CORRIENTES Y NO CORRIENTES </div>
+<div id="t4_6" class="t s3_6">2.1.1. Proveedores </div>
+<div id="t5_6" class="t s3_6">2.1.2. Documentos a pagar </div>
+<div id="t6_6" class="t s3_6">2.1.3. Honorarios a pagar </div>
+<div id="t7_6" class="t s3_6">2.1.4. Alquileres a pagar </div>
+<div id="t8_6" class="t s3_6">2.1.5. Aporte Público extraordinario para campaña electoral a devolver </div>
+<div id="t9_6" class="t s3_6">2.1.6. Aporte Público para impresión de boletas a devolver </div>
+<div id="ta_6" class="t s3_6">2.1.7. Deuda con listas internas por aportes públicos para elecciones primarias </div>
+<div id="tb_6" class="t s3_6">2.1.8. Valores diferidos a pagar </div>
+<div id="tc_6" class="t s3_6">2.1.9. Deudas con la Dirección Nacional Electoral </div>
+<div id="td_6" class="t s3_6">2.1.10. Multas y sanciones judiciales a pagar </div>
+<div id="te_6" class="t s3_6">2.1.11. Otras deudas operativas (según detalle) </div>
+<div id="tf_6" class="t s3_6">………………………………………………………. </div>
+<div id="tg_6" class="t s3_6">………………………………………………………. </div>
+<div id="th_6" class="t s2_6">2.2. DEUDAS SOCIALES – CORRIENTES Y NO CORRIENTES </div>
+<div id="ti_6" class="t s3_6">2.2.1. Sueldos a pagar </div>
+<div id="tj_6" class="t s3_6">2.2.2. Aportes jubilación a depositar </div>
+<div id="tk_6" class="t s3_6">2.2.3. Aportes obra social a depositar </div>
+<div id="tl_6" class="t s3_6">2.2.4. Retenciones jubilación a depositar </div>
+<div id="tm_6" class="t s3_6">2.2.5. Retenciones obra social a depositar </div>
+<div id="tn_6" class="t s3_6">2.2.6. Retenciones impuesto a las ganancias a depositar </div>
+<div id="to_6" class="t s3_6">2.2.7. Otras retenciones a depositar </div>
+<div id="tp_6" class="t s3_6">2.2.8. Indemnizaciones a pagar </div>
+<div id="tq_6" class="t s3_6">2.2.9. AFIP Plan de pagos </div>
+<div id="tr_6" class="t s3_6">2.2.10. Otros planes de pagos (según detalle) </div>
+<div id="ts_6" class="t s3_6">………………………………………………………. </div>
+<div id="tt_6" class="t s3_6">………………………………………………………. </div>
+<div id="tu_6" class="t s3_6">2.2.11. Otras deudas sociales (según detalle) </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1076],['t2_6',1095],['t3_6',1972],['t4_6',549],['t5_6',794],['t6_6',747],['t7_6',715],['t8_6',2056],['t9_6',1703],['ta_6',2288],['tb_6',913],['tc_6',1420],['td_6',1304],['te_6',1394],['th_6',1875],['ti_6',660],['tj_6',1053],['tk_6',1089],['tl_6',1180],['tm_6',1216],['tn_6',1635],['to_6',1047],['tp_6',918],['tq_6',749],['tr_6',1335],['tu_6',1318]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 31;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

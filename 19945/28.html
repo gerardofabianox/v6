@@ -1,0 +1,251 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load28();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_28{left:333px;top:108px;}
+#t2_28{left:331px;top:128px;}
+#t3_28{left:101px;top:191px;}
+#t4_28{left:101px;top:208px;}
+#t5_28{left:101px;top:246px;}
+#t6_28{left:101px;top:263px;}
+#t7_28{left:101px;top:281px;}
+#t8_28{left:101px;top:318px;}
+#t9_28{left:101px;top:336px;}
+#ta_28{left:101px;top:373px;}
+#tb_28{left:207px;top:373px;}
+#tc_28{left:342px;top:373px;}
+#td_28{left:101px;top:391px;}
+#te_28{left:101px;top:408px;}
+#tf_28{left:101px;top:446px;}
+#tg_28{left:208px;top:446px;}
+#th_28{left:525px;top:446px;}
+#ti_28{left:101px;top:463px;}
+#tj_28{left:101px;top:481px;}
+#tk_28{left:101px;top:498px;}
+#tl_28{left:101px;top:536px;}
+#tm_28{left:101px;top:553px;}
+#tn_28{left:101px;top:571px;}
+#to_28{left:101px;top:588px;}
+#tp_28{left:101px;top:606px;}
+#tq_28{left:101px;top:643px;}
+#tr_28{left:101px;top:661px;}
+#ts_28{left:101px;top:678px;}
+#tt_28{left:101px;top:716px;}
+#tu_28{left:101px;top:753px;}
+#tv_28{left:101px;top:771px;}
+#tw_28{left:101px;top:809px;}
+#tx_28{left:101px;top:826px;}
+#ty_28{left:101px;top:844px;}
+#tz_28{left:101px;top:881px;}
+#t10_28{left:101px;top:899px;}
+#t11_28{left:101px;top:936px;}
+#t12_28{left:101px;top:954px;}
+#t13_28{left:101px;top:991px;}
+#t14_28{left:101px;top:1029px;}
+#t15_28{left:101px;top:1066px;}
+#t16_28{left:101px;top:1084px;}
+
+.s3_28{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_28{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_28{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_28{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_28" class="t s1_28">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_28" class="t s1_28">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_28" class="t s2_28">1. El presidente y sus suplentes, así como los fiscales acreditados ante la mesa y que estén </div>
+<div id="t4_28" class="t s2_28">inscriptos en la misma, serán, en su orden, los primeros en emitir el voto. </div>
+<div id="t5_28" class="t s2_28">2. Si el presidente o sus suplentes no se hallan inscriptos en la mesa en que actúan, se agregará el </div>
+<div id="t6_28" class="t s2_28">nombre del votante en la hoja del registro haciéndolo constar, así como la mesa en que está </div>
+<div id="t7_28" class="t s2_28">registrado. </div>
+<div id="t8_28" class="t s2_28">3. Los fiscales o autoridades de mesa que no estuviesen presentes al abrirse el acto sufragarán a </div>
+<div id="t9_28" class="t s2_28">medida que se incorporen a la misma. </div>
+<div id="ta_28" class="t s3_28">Artículo 85.- </div>
+<div id="tb_28" class="t s4_28">Carácter del voto.</div>
+<div id="tc_28" class="t s2_28">El secreto del voto es obligatorio durante todo el desarrollo del acto </div>
+<div id="td_28" class="t s2_28">electoral. Ningún elector puede comparecer al recinto de la mesa exhibiendo de modo alguno la </div>
+<div id="te_28" class="t s2_28">boleta del sufragio, ni formulando cualquier manifestación que importe violar tal secreto. </div>
+<div id="tf_28" class="t s3_28">Artículo 86.- </div>
+<div id="tg_28" class="t s4_28">Dónde y cómo pueden votar los electores. </div>
+<div id="th_28" class="t s2_28">Los electores podrán votar únicamente en </div>
+<div id="ti_28" class="t s2_28">la mesa receptora de votos en cuya lista figuren asentados y con el documento cívico habilitante. El </div>
+<div id="tj_28" class="t s2_28">presidente verificará si el elector a quien pertenece el documento cívico figura en el padrón electoral </div>
+<div id="tk_28" class="t s2_28">de la mesa. </div>
+<div id="tl_28" class="t s2_28">Para ello cotejará si coinciden los datos personales consignados en el padrón con las mismas </div>
+<div id="tm_28" class="t s2_28">indicaciones contenidas en dicho documento. Cuando por error de impresión alguna de las </div>
+<div id="tn_28" class="t s2_28">menciones del padrón no coincida exactamente con la de su documento, el presidente no podrá </div>
+<div id="to_28" class="t s2_28">impedir el voto del elector si existe coincidencia en las demás constancias. En estos casos se </div>
+<div id="tp_28" class="t s2_28">anotarán las diferencias en la columna de observaciones. </div>
+<div id="tq_28" class="t s2_28">1. Si por deficiencia del padrón el nombre del elector no correspondiera exactamente al de su </div>
+<div id="tr_28" class="t s2_28">documento cívico, el presidente admitirá el voto siempre que, examinados debidamente el número </div>
+<div id="ts_28" class="t s2_28">de ese documento, año de nacimiento, domicilio, etc., fueran coincidentes con los del padrón. </div>
+<div id="tt_28" class="t s2_28">2. Tampoco se impedirá la emisión del voto: </div>
+<div id="tu_28" class="t s2_28">a) Cuando el nombre figure con exactitud y la discrepancia verse acerca de alguno o algunos datos </div>
+<div id="tv_28" class="t s2_28">relativos al documento cívico (domicilio, clase de documento, etc.); </div>
+<div id="tw_28" class="t s2_28">b) Cuando falte la fotografía del elector en el documento, siempre que conteste satisfactoriamente al </div>
+<div id="tx_28" class="t s2_28">interrogatorio minucioso que le formule el presidente sobre los datos personales y cualquier otra </div>
+<div id="ty_28" class="t s2_28">circunstancia que tienda a la debida identificación; </div>
+<div id="tz_28" class="t s2_28">c) Al elector que figure en el padrón con libreta de enrolamiento o libreta cívica duplicada, triplicada, </div>
+<div id="t10_28" class="t s2_28">etc., y se presente con el documento nacional de identidad; </div>
+<div id="t11_28" class="t s2_28">d) Al elector cuyo documento contenga anotaciones de instituciones u organismos oficiales, grupo </div>
+<div id="t12_28" class="t s2_28">sanguíneo, etc. </div>
+<div id="t13_28" class="t s2_28">3. No le será admitido el voto: </div>
+<div id="t14_28" class="t s2_28">a) Si el elector exhibiere un documento cívico anterior al que consta en el padrón; </div>
+<div id="t15_28" class="t s2_28">b) Al elector que se presente con libreta de enrolamiento o libreta cívica y figurase en el registro con </div>
+<div id="t16_28" class="t s2_28">documento nacional de identidad. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg28Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg28"><object width="935" height="1210" data="28/28.svg" type="image/svg+xml" id="pdf28" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld28" type="text/javascript">
+
+var isIE = false;
+var f28 = [['t1_28',1076],['t2_28',1096],['t3_28',2934],['t4_28',2150],['t5_28',2934],['t6_28',2934],['t8_28',2934],['t9_28',1110],['ta_28',404],['tb_28',520],['tc_28',1969],['td_28',2933],['te_28',2580],['tf_28',406],['tg_28',1243],['th_28',1237],['ti_28',2934],['tj_28',2934],['tk_28',336],['tl_28',2933],['tm_28',2934],['tn_28',2933],['to_28',2934],['tp_28',1656],['tq_28',2933],['tr_28',2933],['ts_28',2723],['tt_28',1288],['tu_28',2934],['tv_28',1958],['tw_28',2934],['tx_28',2934],['ty_28',1464],['tz_28',2933],['t10_28',1734],['t11_28',2933],['t12_28',443],['t13_28',884],['t14_28',2386],['t15_28',2934],['t16_28',978]];
+function load28(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f28);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 43;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_28");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

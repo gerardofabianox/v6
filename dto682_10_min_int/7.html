@@ -1,0 +1,225 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load7();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:333px;top:108px;}
+#t2_7{left:331px;top:128px;}
+#t3_7{left:101px;top:191px;}
+#t4_7{left:101px;top:208px;}
+#t5_7{left:101px;top:226px;}
+#t6_7{left:101px;top:263px;}
+#t7_7{left:101px;top:281px;}
+#t8_7{left:101px;top:318px;}
+#t9_7{left:101px;top:336px;}
+#ta_7{left:101px;top:353px;}
+#tb_7{left:101px;top:371px;}
+#tc_7{left:101px;top:408px;}
+#td_7{left:101px;top:446px;}
+#te_7{left:101px;top:483px;}
+#tf_7{left:101px;top:501px;}
+#tg_7{left:101px;top:518px;}
+#th_7{left:101px;top:556px;}
+#ti_7{left:101px;top:573px;}
+#tj_7{left:101px;top:611px;}
+#tk_7{left:101px;top:629px;}
+#tl_7{left:101px;top:666px;}
+#tm_7{left:101px;top:684px;}
+#tn_7{left:101px;top:721px;}
+#to_7{left:101px;top:759px;}
+#tp_7{left:101px;top:796px;}
+#tq_7{left:101px;top:814px;}
+#tr_7{left:101px;top:831px;}
+#ts_7{left:101px;top:849px;}
+#tt_7{left:101px;top:866px;}
+#tu_7{left:101px;top:884px;}
+#tv_7{left:101px;top:921px;}
+#tw_7{left:101px;top:939px;}
+#tx_7{left:101px;top:956px;}
+#ty_7{left:101px;top:994px;}
+#tz_7{left:101px;top:1031px;}
+#t10_7{left:101px;top:1049px;}
+
+.s2_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_7{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_7" class="t s1_7">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_7" class="t s1_7">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_7" class="t s2_7">1.- Participar en la ejecución de la gestión del Fondo Partidario Permanente, en los aportes de </div>
+<div id="t4_7" class="t s2_7">campaña electoral e impresión de boletas y en los aspectos financieros de cooperación con otros </div>
+<div id="t5_7" class="t s2_7">actores de los procesos electorales. </div>
+<div id="t6_7" class="t s2_7">2.- Planificar y ejecutar las actividades previstas por la Ley Nº 26.215 en materia de aportes, de </div>
+<div id="t7_7" class="t s2_7">campaña e impresión de boletas a los partidos políticos y alianzas. </div>
+<div id="t8_7" class="t s2_7">3.- Planificar y elaborar propuestas para la cooperación financiera con la Justicia Nacional Electoral, </div>
+<div id="t9_7" class="t s2_7">las Jurisdicciones locales, el Comando General Electoral, el CORREO OFICIAL DE LA REPUBLICA </div>
+<div id="ta_7" class="t s2_7">ARGENTINA S.A., Organizaciones No Gubernamentales y otras entidades que cooperen con la </div>
+<div id="tb_7" class="t s2_7">gestión de actividades preparatorias o de ejecución de los actos electorales y actividades conexas. </div>
+<div id="tc_7" class="t s2_7">DIRECCION DE COOPERACION Y ASISTENCIA ELECTORAL </div>
+<div id="td_7" class="t s2_7">ACCIONES: </div>
+<div id="te_7" class="t s2_7">1.- Participar en las actividades de vinculación, cooperación y asistencia técnica electoral con </div>
+<div id="tf_7" class="t s2_7">organismos electorales extranjeros y de organizaciones internacionales o regionales, así como </div>
+<div id="tg_7" class="t s2_7">Jurisdicciones locales, entidades no gubernamentales y partidos políticos. </div>
+<div id="th_7" class="t s2_7">2.- Establecer vínculos permanentes en materia de cooperación y asistencia electoral, con </div>
+<div id="ti_7" class="t s2_7">organismos electorales de carácter internacional, regional, nacional, provincial y municipal. </div>
+<div id="tj_7" class="t s2_7">3.- Analizar y desarrollar proyectos de cooperación y asistencia técnica electoral a nivel </div>
+<div id="tk_7" class="t s2_7">internacional, nacional o interinstitucional. </div>
+<div id="tl_7" class="t s2_7">4.- Gestionar la participación en los procesos electorales, de miembros de organizaciones públicas o </div>
+<div id="tm_7" class="t s2_7">privadas, nacionales, regionales o internacionales, a llevarse a cabo en territorio nacional. </div>
+<div id="tn_7" class="t s2_7">DIRECCION NACIONAL DE ASUNTOS POLITICOS Y REFORMA POLITICA </div>
+<div id="to_7" class="t s2_7">RESPONSABILIDAD PRIMARIA: </div>
+<div id="tp_7" class="t s2_7">Participar en las relaciones con los partidos políticos, así como en el relevamiento de opiniones y en </div>
+<div id="tq_7" class="t s2_7">toda formulación de propuestas tendientes a fortalecer las instituciones democráticas, tanto en el </div>
+<div id="tr_7" class="t s2_7">nivel nacional como provincial y local. Asistir y asesorar al señor Subsecretario de Asuntos Políticos y </div>
+<div id="ts_7" class="t s2_7">Electorales en los temas relacionados con la declaración de estado de sitio, la intervención del </div>
+<div id="tt_7" class="t s2_7">Gobierno Federal a las Provincias, así como en lo atinente a las leyes y/o propuestas de amnistía </div>
+<div id="tu_7" class="t s2_7">política. </div>
+<div id="tv_7" class="t s2_7">Entender en la formulación, ejecución y seguimiento de los anteproyectos sobre reformas </div>
+<div id="tw_7" class="t s2_7">constitucionales, así como en el seguimiento de la política sobre relaciones institucionales y políticas, </div>
+<div id="tx_7" class="t s2_7">conjuntamente con su permanente actualización legislativa. </div>
+<div id="ty_7" class="t s2_7">ACCIONES: </div>
+<div id="tz_7" class="t s2_7">1.- Asistir al señor Subsecretario de Asuntos Políticos y Electorales en todo aquello relacionado con </div>
+<div id="t10_7" class="t s2_7">la intervención del Gobierno Federal a las Provincias. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7"><object width="935" height="1210" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld7" type="text/javascript">
+
+var isIE = false;
+var f7 = [['t1_7',1076],['t2_7',1096],['t3_7',2934],['t4_7',2933],['t5_7',1028],['t6_7',2934],['t7_7',1930],['t8_7',2933],['t9_7',2933],['ta_7',2934],['tb_7',2854],['tc_7',1686],['te_7',2934],['tf_7',2933],['tg_7',2130],['th_7',2934],['ti_7',2644],['tj_7',2934],['tk_7',1228],['tl_7',2933],['tm_7',2611],['tn_7',2063],['to_7',901],['tp_7',2934],['tq_7',2934],['tr_7',2933],['ts_7',2933],['tt_7',2933],['tv_7',2934],['tw_7',2933],['tx_7',1733],['tz_7',2933],['t10_7',1532]];
+function load7(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f7);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 37;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_7");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:384px;}
+#tc_1{left:101px;top:416px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:311px;top:465px;}
+#tg_1{left:317px;top:465px;}
+#th_1{left:101px;top:483px;}
+#ti_1{left:101px;top:500px;}
+#tj_1{left:101px;top:518px;}
+#tk_1{left:101px;top:549px;}
+#tl_1{left:101px;top:567px;}
+#tm_1{left:101px;top:584px;}
+#tn_1{left:101px;top:601px;}
+#to_1{left:101px;top:633px;}
+#tp_1{left:101px;top:651px;}
+#tq_1{left:101px;top:668px;}
+#tr_1{left:101px;top:686px;}
+#ts_1{left:101px;top:703px;}
+#tt_1{left:101px;top:735px;}
+#tu_1{left:101px;top:752px;}
+#tv_1{left:101px;top:769px;}
+#tw_1{left:101px;top:801px;}
+#tx_1{left:101px;top:819px;}
+#ty_1{left:101px;top:850px;}
+#tz_1{left:101px;top:868px;}
+#t10_1{left:101px;top:885px;}
+#t11_1{left:101px;top:903px;}
+#t12_1{left:101px;top:934px;}
+#t13_1{left:101px;top:952px;}
+#t14_1{left:101px;top:969px;}
+#t15_1{left:101px;top:1001px;}
+#t16_1{left:101px;top:1018px;}
+#t17_1{left:101px;top:1036px;}
+#t18_1{left:101px;top:1053px;}
+#t19_1{left:101px;top:1071px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: JHPHNN-Symbol1;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts1" type="text/css" >
+
+@font-face {
+	font-family: JHPHNN-Symbol1;
+	src :url("1/fonts/JHPHNN-Symbol.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 56/2015 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 09/06/2015 </div>
+<div id="t5_1" class="t s4_1">MODELOS DE ACTAS DE APERTURA Y CIERRE, ACTAS DE ESCRUTINIO, CERTIFICADOS Y </div>
+<div id="t6_1" class="t s4_1">TELEGRAMAS CORRESPONDIENTES A LAS ELECCIONES PRIMARIAS Y GENERALES. </div>
+<div id="t7_1" class="t s3_1">En Buenos Aires, a los nueve días del mes de junio de dos mil quince, se reúnen en acuerdo </div>
+<div id="t8_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral los doctores Santiago Hernán </div>
+<div id="t9_1" class="t s3_1">Corcuera y Alberto Ricardo Dalla Via, actuando los Secretarios de la Cámara doctores Hernán </div>
+<div id="ta_1" class="t s3_1">Gonçalves Figueiredo y Sebastián Schimmel. Abierto el acto por el señor Presidente, doctor Santiago </div>
+<div id="tb_1" class="t s3_1">Hernán Corcuera, </div>
+<div id="tc_1" class="t s3_1">CONSIDERARON: </div>
+<div id="td_1" class="t s3_1">1º) Que como responsable de la administración electoral federal, el fuero -del que esta Cámara es la </div>
+<div id="te_1" class="t s3_1">“autoridad superior” (art. 5</div>
+<div id="tf_1" class="t s5_1"></div>
+<div id="tg_1" class="t s3_1">, ley 19.108 y sus modif.)- tiene a su cargo todo lo relativo a la </div>
+<div id="th_1" class="t s3_1">organización, dirección y control de los procesos electorales, entendidos como el conjunto de actos </div>
+<div id="ti_1" class="t s3_1">regulados jurídicamente y dirigidos a posibilitar la auténtica expresión de la voluntad política de la </div>
+<div id="tj_1" class="t s3_1">ciudadanía (cf. Fallos CNE 3473/05 y 3533/05 y doctrina de Acs. Nº 107/06, 128/09 y 18/13 CNE).- </div>
+<div id="tk_1" class="t s3_1">2º) Que, en ese marco, se ha explicado con anterioridad que de las distintas previsiones del Código </div>
+<div id="tl_1" class="t s3_1">Electoral Nacional se desprende inequívocamente que es responsabilidad de la justicia nacional </div>
+<div id="tm_1" class="t s3_1">electoral determinar la forma y contenido de los padrones electorales y de la demás documentación </div>
+<div id="tn_1" class="t s3_1">o material electoral imprescindible para la realización de los comicios (cf. Ac. 18/13 CNE).- </div>
+<div id="to_1" class="t s3_1">En ese marco, cabe recordar que por Acordada Nº 18/13 –a cuyos términos corresponde remitir- el </div>
+<div id="tp_1" class="t s3_1">Tribunal ha aprobado el modelo de padrón especial para presidente de mesa, conteniendo las </div>
+<div id="tq_1" class="t s3_1">constancias de emisión de voto, así como también los modelos de padrón para fijar en la pared para </div>
+<div id="tr_1" class="t s3_1">consulta de los electores (art. 82, inc.6); padrón auxiliar para el uso del vocal o los fiscales (art. 82, </div>
+<div id="ts_1" class="t s3_1">inc. 8), y padrón provisional (art. 25).- </div>
+<div id="tt_1" class="t s3_1">Del mismo modo, mediante Acordadas 57/11, 117/11 y 76/13 esta Cámara aprobó modelos de </div>
+<div id="tu_1" class="t s3_1">actas de escrutinio, certificados y telegramas correspondientes a las elecciones primarias y </div>
+<div id="tv_1" class="t s3_1">generales de los años 2011 y 2013.- </div>
+<div id="tw_1" class="t s3_1">Por otra parte, por Resolución del 22 de noviembre de 2012, el Tribunal aprobó el formato de urna, </div>
+<div id="tx_1" class="t s3_1">sobre bolsa para la remisión y devolución de actas y demás documentación electoral.- </div>
+<div id="ty_1" class="t s3_1">3º) Que, en atención a lo señalado, en primer término y en lo que respecta a los modelos de </div>
+<div id="tz_1" class="t s3_1">padrones electorales, corresponde entonces -en atención al correcto funcionamiento durante las </div>
+<div id="t10_1" class="t s3_1">elecciones nacionales de 2013- ratificar los diseños aprobados mediante Acordada la 18/13 CNE, </div>
+<div id="t11_1" class="t s3_1">efectuando las modificaciones que sean menester para adecuarlo al proceso electoral en curso.- </div>
+<div id="t12_1" class="t s3_1">No obstante ello, es oportuno advertir que en la impresión de los referidos padrones se evidenciaron </div>
+<div id="t13_1" class="t s3_1">algunos inconvenientes relacionados con la calidad de impresión que exigieron la adopción de </div>
+<div id="t14_1" class="t s3_1">diversas medidas.- </div>
+<div id="t15_1" class="t s3_1">En ese marco, corresponde poner en conocimiento de la Dirección Nacional Electoral del Ministerio </div>
+<div id="t16_1" class="t s3_1">de Justicia y Derechos Humanos tal circunstancia a fin de que se adopten los recaudos que tiendan a </div>
+<div id="t17_1" class="t s3_1">prevenir inconvenientes de dicho orden o, en su caso, a solucionarlos en el menor plazo posible; </div>
+<div id="t18_1" class="t s3_1">ello, resguardando la absoluta confidencialidad de los datos provistos por la justicia nacional </div>
+<div id="t19_1" class="t s3_1">electoral a la entidad responsable de la impresión.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1010],['t4_1',587],['t5_1',2933],['t6_1',2655],['t7_1',2933],['t8_1',2933],['t9_1',2934],['ta_1',2934],['tb_1',510],['td_1',2934],['te_1',840],['tg_1',2070],['th_1',2933],['ti_1',2933],['tj_1',2914],['tk_1',2934],['tl_1',2933],['tm_1',2934],['tn_1',2634],['to_1',2934],['tp_1',2934],['tq_1',2934],['tr_1',2934],['ts_1',1133],['tt_1',2934],['tu_1',2934],['tv_1',1062],['tw_1',2933],['tx_1',2501],['ty_1',2933],['tz_1',2933],['t10_1',2934],['t11_1',2785],['t12_1',2934],['t13_1',2934],['t14_1',548],['t15_1',2934],['t16_1',2933],['t17_1',2933],['t18_1',2934],['t19_1',1484]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

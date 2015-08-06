@@ -1,0 +1,301 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load21();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_21{left:334px;top:139px;}
+#t2_21{left:356px;top:165px;}
+#t3_21{left:480px;top:1455px;}
+#t4_21{left:130px;top:209px;}
+#t5_21{left:130px;top:229px;}
+#t6_21{left:130px;top:250px;}
+#t7_21{left:130px;top:270px;}
+#t8_21{left:130px;top:290px;}
+#t9_21{left:130px;top:311px;}
+#ta_21{left:130px;top:340px;}
+#tb_21{left:237px;top:340px;}
+#tc_21{left:130px;top:361px;}
+#td_21{left:130px;top:381px;}
+#te_21{left:130px;top:402px;}
+#tf_21{left:130px;top:431px;}
+#tg_21{left:237px;top:431px;}
+#th_21{left:130px;top:452px;}
+#ti_21{left:130px;top:481px;}
+#tj_21{left:238px;top:481px;}
+#tk_21{left:130px;top:502px;}
+#tl_21{left:130px;top:522px;}
+#tm_21{left:130px;top:552px;}
+#tn_21{left:130px;top:572px;}
+#to_21{left:130px;top:602px;letter-spacing:2px;}
+#tp_21{left:130px;top:622px;}
+#tq_21{left:130px;top:643px;}
+#tr_21{left:349px;top:702px;}
+#ts_21{left:130px;top:731px;}
+#tt_21{left:198px;top:731px;}
+#tu_21{left:130px;top:752px;}
+#tv_21{left:130px;top:772px;}
+#tw_21{left:130px;top:802px;}
+#tx_21{left:130px;top:822px;}
+#ty_21{left:130px;top:843px;}
+#tz_21{left:130px;top:872px;}
+#t10_21{left:216px;top:872px;}
+#t11_21{left:130px;top:893px;}
+#t12_21{left:130px;top:913px;}
+#t13_21{left:130px;top:943px;}
+#t14_21{left:130px;top:972px;}
+#t15_21{left:209px;top:972px;}
+#t16_21{left:130px;top:993px;}
+#t17_21{left:130px;top:1022px;}
+#t18_21{left:130px;top:1052px;}
+#t19_21{left:199px;top:1052px;}
+#t1a_21{left:130px;top:1072px;}
+#t1b_21{left:130px;top:1102px;}
+#t1c_21{left:130px;top:1122px;}
+#t1d_21{left:130px;top:1143px;}
+#t1e_21{left:130px;top:1163px;}
+#t1f_21{left:130px;top:1184px;}
+#t1g_21{left:130px;top:1204px;}
+#t1h_21{left:130px;top:1224px;}
+#t1i_21{left:130px;top:1245px;}
+#t1j_21{left:130px;top:1265px;}
+#t1k_21{left:130px;top:1295px;}
+#t1l_21{left:130px;top:1315px;}
+#t1m_21{left:130px;top:1336px;}
+#t1n_21{left:130px;top:1356px;}
+#t1o_21{left:130px;top:1377px;}
+#t1p_21{left:130px;top:1397px;}
+#t1q_21{left:130px;top:1417px;}
+
+.s3_21{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_21{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_21{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi21;
+	color: rgb(0,0,0);
+}
+
+.s1_21{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi21;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts21" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi21;
+	src :url("21/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_21" class="t s1_21">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_21" class="t s2_21">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_21" class="t s3_21">21 </div>
+<div id="t4_21" class="t s3_21">Comercial, Penal y de Minería, después que el Congreso los haya sancionado; ni dictar </div>
+<div id="t5_21" class="t s3_21">especialmente leyes sobre ciudadanía y naturalización, bancarrotas, falsificación de moneda </div>
+<div id="t6_21" class="t s3_21">o documentos del Estado; ni establecer derechos de tonelaje; ni armar buques de guerra o </div>
+<div id="t7_21" class="t s3_21">levantar ejércitos, salvo el caso de invasión exterior o de un peligro tan inminente que no </div>
+<div id="t8_21" class="t s3_21">admita dilación dando luego cuenta al Gobierno federal; ni nombrar o recibir agentes </div>
+<div id="t9_21" class="t s3_21">extranjeros. </div>
+<div id="ta_21" class="t s4_21">Artículo 127</div>
+<div id="tb_21" class="t s3_21">.- Ninguna provincia puede declarar, ni hacer la guerra a otra provincia. Sus </div>
+<div id="tc_21" class="t s3_21">quejas deben ser sometidas a la Corte Suprema de Justicia y dirimidas por ella. Sus </div>
+<div id="td_21" class="t s3_21">hostilidades de hecho son actos de guerra civil, calificados de sedición o asonada, que el </div>
+<div id="te_21" class="t s3_21">Gobierno federal debe sofocar y reprimir conforme a la ley. </div>
+<div id="tf_21" class="t s4_21">Artículo 128</div>
+<div id="tg_21" class="t s3_21">.- Los gobernadores de provincia son agentes naturales del Gobierno federal </div>
+<div id="th_21" class="t s3_21">para hacer cumplir la Constitución y las leyes de la Nación. </div>
+<div id="ti_21" class="t s4_21">Artículo 129</div>
+<div id="tj_21" class="t s3_21">.- La ciudad de Buenos Aires tendrá un régimen de Gobierno autónomo con </div>
+<div id="tk_21" class="t s3_21">facultades propias de legislación y jurisdicción, y su jefe de gobierno será elegido </div>
+<div id="tl_21" class="t s3_21">directamente por el pueblo de la ciudad. </div>
+<div id="tm_21" class="t s3_21">Una ley garantizará los intereses del Estado nacional mientras la ciudad de Buenos Aires sea </div>
+<div id="tn_21" class="t s3_21">capital de la Nación. </div>
+<div id="to_21" class="t s3_21">En el marco de lo dispuesto en este artículo, el Congreso de la Nación convocará a los </div>
+<div id="tp_21" class="t s3_21">habitantes de la ciudad de Buenos Aires para que, mediante los representantes que elijan a </div>
+<div id="tq_21" class="t s3_21">ese efecto, dicten el estatuto organizativo de sus instituciones. </div>
+<div id="tr_21" class="t s4_21">DISPOSICIONES TRANSITORIAS </div>
+<div id="ts_21" class="t s4_21">Primera</div>
+<div id="tt_21" class="t s3_21">. La Nación Argentina ratifica su legítima e imprescriptible soberanía sobre las islas </div>
+<div id="tu_21" class="t s3_21">Malvinas, Georgias del Sur y Sandwich del Sur y los espacios marítimos e insulares </div>
+<div id="tv_21" class="t s3_21">correspondientes, por ser parte integrante del territorio nacional. </div>
+<div id="tw_21" class="t s3_21">La recuperación de dichos territorios y el ejercicio pleno de la soberanía, respetando el modo </div>
+<div id="tx_21" class="t s3_21">de vida de sus habitantes, y conforme a los principios del derecho internacional, constituyen </div>
+<div id="ty_21" class="t s3_21">un objetivo permanente e irrenunciable del pueblo argentino. </div>
+<div id="tz_21" class="t s4_21">Segunda.</div>
+<div id="t10_21" class="t s3_21">Las acciones positivas a que alude el Artículo 37 en su último párrafo no podrán </div>
+<div id="t11_21" class="t s3_21">ser inferiores a las vigentes al tiempo de sancionarse esta Constitución y durarán lo que la </div>
+<div id="t12_21" class="t s3_21">ley determine. </div>
+<div id="t13_21" class="t s3_21">(Corresponde al Artículo 37) </div>
+<div id="t14_21" class="t s4_21">Tercera.</div>
+<div id="t15_21" class="t s3_21">La ley que reglamente el ejercicio de la iniciativa popular deberá ser aprobada </div>
+<div id="t16_21" class="t s3_21">dentro de los dieciocho meses de esta sanción. </div>
+<div id="t17_21" class="t s3_21">(Corresponde al Artículo 39) </div>
+<div id="t18_21" class="t s4_21">Cuarta.</div>
+<div id="t19_21" class="t s3_21">Los actuales integrantes del Senado de la Nación desempeñarán su cargo hasta la </div>
+<div id="t1a_21" class="t s3_21">extinción del mandato correspondiente a cada uno. </div>
+<div id="t1b_21" class="t s3_21">En ocasión de renovarse un tercio del Senado en mil novecientos noventa y cinco, por </div>
+<div id="t1c_21" class="t s3_21">finalización de los mandatos de todos los senadores elegidos en mil novecientos ochenta y </div>
+<div id="t1d_21" class="t s3_21">seis, será designado además un tercer senador por distrito por cada Legislatura. El conjunto </div>
+<div id="t1e_21" class="t s3_21">de los senadores por cada distrito se integrará, en lo posible, de modo que correspondan dos </div>
+<div id="t1f_21" class="t s3_21">bancas al partido político o alianza electoral que tenga el mayor número de miembros en la </div>
+<div id="t1g_21" class="t s3_21">legislatura, y la restante al partido político o alianza electoral que le siga en número de </div>
+<div id="t1h_21" class="t s3_21">miembros de ella. En caso de empate, se hará prevalecer al partido político o alianza </div>
+<div id="t1i_21" class="t s3_21">electoral que hubiera obtenido mayor cantidad de sufragios en la elección legislativa </div>
+<div id="t1j_21" class="t s3_21">provincial inmediata anterior. </div>
+<div id="t1k_21" class="t s3_21">La elección de los senadores que reemplacen a aquellos cuyos mandatos vencen en mil </div>
+<div id="t1l_21" class="t s3_21">novecientos noventa y ocho, así como la elección de quien reemplace a cualquiera de los </div>
+<div id="t1m_21" class="t s3_21">actuales senadores en caso de aplicación del Artículo 62, se hará por estas mismas reglas de </div>
+<div id="t1n_21" class="t s3_21">designación. Empero, el partido político o alianza electoral que tenga el mayor número de </div>
+<div id="t1o_21" class="t s3_21">miembros en la Legislatura al tiempo de la elección del senador, tendrá derecho a que sea </div>
+<div id="t1p_21" class="t s3_21">elegido su candidato, con la sola limitación de que no resulten los tres senadores de un </div>
+<div id="t1q_21" class="t s3_21">mismo partido político o alianza electoral. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg21Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg21"><object width="935" height="1540" data="21/21.svg" type="image/svg+xml" id="pdf21" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld21" type="text/javascript">
+
+var isIE = false;
+var f21 = [['t1_21',1244],['t2_21',1068],['t4_21',2874],['t5_21',2874],['t6_21',2874],['t7_21',2874],['t8_21',2874],['ta_21',428],['tb_21',2446],['tc_21',2874],['td_21',2875],['te_21',1826],['tf_21',429],['tg_21',2445],['th_21',1818],['ti_21',430],['tj_21',2444],['tk_21',2874],['tl_21',1243],['tm_21',2874],['tn_21',622],['to_21',2875],['tp_21',2874],['tq_21',1937],['tr_21',1120],['tt_21',2601],['tu_21',2874],['tv_21',2007],['tw_21',2874],['tx_21',2874],['ty_21',1891],['t10_21',2529],['t11_21',2874],['t12_21',445],['t13_21',873],['t15_21',2557],['t16_21',1449],['t17_21',873],['t19_21',2597],['t1a_21',1578],['t1b_21',2874],['t1c_21',2874],['t1d_21',2874],['t1e_21',2874],['t1f_21',2874],['t1g_21',2874],['t1h_21',2874],['t1i_21',2874],['t1j_21',905],['t1k_21',2874],['t1l_21',2874],['t1m_21',2874],['t1n_21',2874],['t1o_21',2874],['t1p_21',2875],['t1q_21',1283]];
+function load21(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f21);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 63;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_21");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

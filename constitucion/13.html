@@ -1,0 +1,321 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load13();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_13{left:334px;top:139px;}
+#t2_13{left:356px;top:165px;}
+#t3_13{left:480px;top:1455px;}
+#t4_13{left:157px;top:209px;}
+#t5_13{left:157px;top:224px;}
+#t6_13{left:157px;top:239px;}
+#t7_13{left:157px;top:253px;}
+#t8_13{left:130px;top:277px;}
+#t9_13{left:224px;top:277px;}
+#ta_13{left:130px;top:298px;}
+#tb_13{left:130px;top:327px;}
+#tc_13{left:226px;top:327px;}
+#td_13{left:130px;top:348px;}
+#te_13{left:130px;top:368px;}
+#tf_13{left:130px;top:389px;}
+#tg_13{left:130px;top:409px;}
+#th_13{left:130px;top:429px;}
+#ti_13{left:130px;top:450px;}
+#tj_13{left:130px;top:470px;}
+#tk_13{left:130px;top:500px;}
+#tl_13{left:225px;top:500px;}
+#tm_13{left:130px;top:520px;}
+#tn_13{left:582px;top:520px;}
+#to_13{left:130px;top:541px;}
+#tp_13{left:157px;top:570px;}
+#tq_13{left:165px;top:573px;}
+#tr_13{left:269px;top:570px;}
+#ts_13{left:321px;top:573px;}
+#tt_13{left:371px;top:570px;}
+#tu_13{left:397px;top:570px;}
+#tv_13{left:157px;top:585px;}
+#tw_13{left:157px;top:600px;}
+#tx_13{left:414px;top:624px;}
+#ty_13{left:334px;top:654px;}
+#tz_13{left:130px;top:683px;}
+#t10_13{left:226px;top:683px;}
+#t11_13{left:130px;top:704px;}
+#t12_13{left:130px;top:733px;}
+#t13_13{left:130px;top:754px;}
+#t14_13{left:130px;top:774px;}
+#t15_13{left:130px;top:804px;}
+#t16_13{left:130px;top:824px;}
+#t17_13{left:130px;top:845px;}
+#t18_13{left:130px;top:865px;}
+#t19_13{left:130px;top:885px;}
+#t1a_13{left:130px;top:915px;}
+#t1b_13{left:130px;top:935px;}
+#t1c_13{left:130px;top:956px;}
+#t1d_13{left:130px;top:976px;}
+#t1e_13{left:130px;top:997px;}
+#t1f_13{left:403px;top:1056px;}
+#t1g_13{left:386px;top:1085px;}
+#t1h_13{left:130px;top:1115px;}
+#t1i_13{left:225px;top:1115px;}
+#t1j_13{left:130px;top:1135px;}
+#t1k_13{left:130px;top:1156px;}
+#t1l_13{left:130px;top:1176px;}
+#t1m_13{left:130px;top:1197px;}
+#t1n_13{left:130px;top:1217px;}
+#t1o_13{left:130px;top:1247px;}
+#t1p_13{left:130px;top:1267px;}
+#t1q_13{left:130px;top:1288px;}
+#t1r_13{left:130px;top:1308px;}
+#t1s_13{left:130px;top:1338px;}
+#t1t_13{left:406px;top:1397px;}
+#t1u_13{left:390px;top:1426px;}
+
+.s6_13{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_13{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_13{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_13{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_13{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi13;
+	color: rgb(0,0,0);
+}
+
+.s1_13{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi13;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts13" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi13;
+	src :url("13/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_13" class="t s1_13">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_13" class="t s2_13">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_13" class="t s3_13">13 </div>
+<div id="t4_13" class="t s4_13">adiciones o correcciones fuesen desechadas, volverá segunda vez el proyecto a la Cámara revisora, y si aquí </div>
+<div id="t5_13" class="t s4_13">fueren nuevamente sancionadas por una mayoría de las dos terceras partes de sus miembros, pasará el </div>
+<div id="t6_13" class="t s4_13">proyecto a la otra Cámara, y no se entenderá que ésta reprueba dichas adiciones o correcciones, si no </div>
+<div id="t7_13" class="t s4_13">ocurre para ello el voto de las dos terceras partes de sus miembros presentes. </div>
+<div id="t8_13" class="t s5_13">Artículo 82</div>
+<div id="t9_13" class="t s3_13">.- La voluntad de cada Cámara debe manifestarse expresamente; se excluye, en </div>
+<div id="ta_13" class="t s3_13">todos los casos, la sanción tácita o ficta. </div>
+<div id="tb_13" class="t s5_13">Artículo 83</div>
+<div id="tc_13" class="t s3_13">.- Desechado en el todo o en parte un proyecto por el Poder Ejecutivo, vuelve </div>
+<div id="td_13" class="t s3_13">con sus objeciones a la Cámara de su origen: ésta lo discute de nuevo, y si lo confirma por </div>
+<div id="te_13" class="t s3_13">mayoría de dos tercios de votos, pasa otra vez a la Cámara de revisión. Si ambas Cámaras </div>
+<div id="tf_13" class="t s3_13">lo sancionan por igual mayoría, el proyecto es ley y pasa al Poder Ejecutivo para su </div>
+<div id="tg_13" class="t s3_13">promulgación. Las votaciones de ambas Cámaras serán en este caso nominales, por si o por </div>
+<div id="th_13" class="t s3_13">no; y tanto los nombres y fundamentos de los sufragantes, como las objeciones del Poder </div>
+<div id="ti_13" class="t s3_13">Ejecutivo, se publicarán inmediatamente por la prensa. Si las Cámaras difieren sobre las </div>
+<div id="tj_13" class="t s3_13">objeciones, el proyecto no podrá repetirse en las sesiones de aquel año. </div>
+<div id="tk_13" class="t s5_13">Artículo 84</div>
+<div id="tl_13" class="t s3_13">.- En la sanción de las leyes se usará de esta fórmula: El Senado y Cámara de </div>
+<div id="tm_13" class="t s3_13">Diputados de la Nación Argentina, reunidos en Congreso, .</div>
+<div id="tn_13" class="t s3_13">.. decretan o sancionan con fuerza </div>
+<div id="to_13" class="t s3_13">de ley. </div>
+<div id="tp_13" class="t s4_13">T</div>
+<div id="tq_13" class="t s6_13">EXTO ANTERIOR A </div>
+<div id="tr_13" class="t s4_13">1994: A</div>
+<div id="ts_13" class="t s6_13">RTÍCULO </div>
+<div id="tt_13" class="t s4_13">73.</div>
+<div id="tu_13" class="t s4_13">En la sanción de las leyes se usará de esta fórmula: “El Senado y </div>
+<div id="tv_13" class="t s4_13">Cámara de Diputados de la Nación Argentina reunidos en Congreso &amp;a. decretan, o sancionan con fuerza de </div>
+<div id="tw_13" class="t s4_13">ley”. </div>
+<div id="tx_13" class="t s5_13">CAPITULO SEXTO </div>
+<div id="ty_13" class="t s5_13">De la Auditoría General de la Nación </div>
+<div id="tz_13" class="t s5_13">Artículo 85</div>
+<div id="t10_13" class="t s3_13">.- El control externo del sector público nacional en sus aspectos patrimoniales, </div>
+<div id="t11_13" class="t s3_13">económicos, financieros y operativos, será una atribución propia del Poder Legislativo. </div>
+<div id="t12_13" class="t s3_13">El examen y la opinión del Poder Legislativo sobre el desempeño y situación general de la </div>
+<div id="t13_13" class="t s3_13">administración pública estarán sustentados en los dictámenes de la Auditoría General de la </div>
+<div id="t14_13" class="t s3_13">Nación. </div>
+<div id="t15_13" class="t s3_13">Este organismo de asistencia técnica del Congreso, con autonomía funcional, se integrará </div>
+<div id="t16_13" class="t s3_13">del modo que establezca la ley que reglamenta su creación y funcionamiento, que deberá </div>
+<div id="t17_13" class="t s3_13">ser aprobada por mayoría absoluta de los miembros de cada Cámara. El presidente del </div>
+<div id="t18_13" class="t s3_13">organismo será designado a propuesta del partido político de oposición con mayor número </div>
+<div id="t19_13" class="t s3_13">de legisladores en el Congreso. </div>
+<div id="t1a_13" class="t s3_13">Tendrá a su cargo el control de legalidad, gestión y auditoría de toda la actividad de la </div>
+<div id="t1b_13" class="t s3_13">administración pública centralizada y descentralizada, cualquiera fuera su modalidad de </div>
+<div id="t1c_13" class="t s3_13">organización, y las demás funciones que la ley le otorgue. Intervendrá necesariamente en el </div>
+<div id="t1d_13" class="t s3_13">trámite de aprobación o rechazo de las cuentas de percepción e inversión de los fondos </div>
+<div id="t1e_13" class="t s3_13">públicos. </div>
+<div id="t1f_13" class="t s5_13">CAPÍTULO SEPTIMO </div>
+<div id="t1g_13" class="t s5_13">Del Defensor del Pueblo </div>
+<div id="t1h_13" class="t s5_13">Artículo 86</div>
+<div id="t1i_13" class="t s3_13">.- El Defensor del Pueblo es un órgano independiente instituido en el ámbito del </div>
+<div id="t1j_13" class="t s3_13">Congreso de la Nación, que actuará con plena autonomía funcional, sin recibir instrucciones </div>
+<div id="t1k_13" class="t s3_13">de ninguna autoridad. Su misión es la defensa y protección de los derechos humanos y </div>
+<div id="t1l_13" class="t s3_13">demás derechos, garantías e intereses tutelados en esta Constitución y las leyes, ante </div>
+<div id="t1m_13" class="t s3_13">hechos, actos u omisiones de la Administración; y el control del ejercicio de las funciones </div>
+<div id="t1n_13" class="t s3_13">administrativas públicas. </div>
+<div id="t1o_13" class="t s3_13">El Defensor del Pueblo tiene legitimación procesal. Es designado y removido por el Congreso </div>
+<div id="t1p_13" class="t s3_13">con el voto de las dos terceras partes de los miembros presentes de cada una de las </div>
+<div id="t1q_13" class="t s3_13">Cámaras. Goza de las inmunidades y privilegios de los legisladores. Durará en su cargo cinco </div>
+<div id="t1r_13" class="t s3_13">años, pudiendo ser nuevamente designado por una sola vez. </div>
+<div id="t1s_13" class="t s3_13">La organización y el funcionamiento de esta institución serán regulados por una ley especial. </div>
+<div id="t1t_13" class="t s5_13">SECCIÓN SEGUNDA </div>
+<div id="t1u_13" class="t s5_13">DEL PODER EJECUTIVO </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg13Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg13"><object width="935" height="1540" data="13/13.svg" type="image/svg+xml" id="pdf13" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld13" type="text/javascript">
+
+var isIE = false;
+var f13 = [['t1_13',1244],['t2_13',1068],['t4_13',2696],['t5_13',2696],['t6_13',2695],['t7_13',1936],['t8_13',377],['t9_13',2497],['ta_13',1241],['tb_13',383],['tc_13',2490],['td_13',2874],['te_13',2875],['tf_13',2874],['tg_13',2874],['th_13',2874],['ti_13',2874],['tj_13',2225],['tk_13',381],['tl_13',2493],['tm_13',1809],['tn_13',1065],['to_13',207],['tq_13',392],['tr_13',206],['tu_13',1737],['tv_13',2695],['tx_13',598],['ty_13',1241],['tz_13',383],['t10_13',2491],['t11_13',2662],['t12_13',2874],['t13_13',2874],['t15_13',2874],['t16_13',2874],['t17_13',2874],['t18_13',2874],['t19_13',962],['t1a_13',2874],['t1b_13',2874],['t1c_13',2874],['t1d_13',2874],['t1f_13',687],['t1g_13',823],['t1h_13',379],['t1i_13',2494],['t1j_13',2874],['t1k_13',2874],['t1l_13',2875],['t1m_13',2874],['t1n_13',763],['t1o_13',2874],['t1p_13',2874],['t1q_13',2874],['t1r_13',1873],['t1s_13',2859],['t1t_13',666],['t1u_13',795]];
+function load13(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f13);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 67;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_13");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:332px;top:128px;}
+#t2_3{left:330px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:306px;}
+#t8_3{left:101px;top:323px;}
+#t9_3{left:101px;top:355px;}
+#ta_3{left:101px;top:372px;}
+#tb_3{left:101px;top:404px;}
+#tc_3{left:101px;top:436px;}
+#td_3{left:101px;top:467px;}
+#te_3{left:101px;top:499px;}
+#tf_3{left:101px;top:531px;}
+#tg_3{left:101px;top:548px;}
+#th_3{left:101px;top:566px;}
+#ti_3{left:101px;top:583px;}
+#tj_3{left:101px;top:601px;}
+#tk_3{left:101px;top:618px;}
+#tl_3{left:101px;top:635px;}
+#tm_3{left:101px;top:667px;}
+#tn_3{left:101px;top:685px;}
+#to_3{left:101px;top:702px;}
+#tp_3{left:101px;top:720px;}
+#tq_3{left:101px;top:751px;}
+#tr_3{left:101px;top:783px;}
+#ts_3{left:101px;top:815px;}
+#tt_3{left:101px;top:832px;}
+#tu_3{left:101px;top:849px;}
+#tv_3{left:101px;top:867px;}
+#tw_3{left:101px;top:899px;}
+#tx_3{left:101px;top:916px;}
+#ty_3{left:101px;top:948px;}
+#tz_3{left:101px;top:980px;}
+#t10_3{left:101px;top:1011px;}
+#t11_3{left:101px;top:1043px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">e) Proyectar anualmente el presupuesto de gastos y cálculo de recursos del organismo, así como el </div>
+<div id="t4_3" class="t s2_3">plan de trabajos públicos y los correspondientes registros de todos ellos para su elevación al Poder </div>
+<div id="t5_3" class="t s2_3">Ejecutivo nacional; </div>
+<div id="t6_3" class="t s2_3">f) Proponer al Ministerio de Defensa las tasas para el cobro de los servicios que preste el organismo. </div>
+<div id="t7_3" class="t s2_3">g) Entender en la aplicación de las multas previstas por los artículos 2, inciso e) y 41 de la presente </div>
+<div id="t8_3" class="t s2_3">ley. </div>
+<div id="t9_3" class="t s2_3">Artículo 6°- En caso de ausencia o imposibilidad temporaria del director nacional, será reemplazado </div>
+<div id="ta_3" class="t s2_3">por el subdirector nacional; en ausencia de ambos, por la autoridad del organismo que se designe. </div>
+<div id="tb_3" class="t s2_3">CAPITULO II </div>
+<div id="tc_3" class="t s3_3">De la inscripción </div>
+<div id="td_3" class="t s2_3">SECCION I </div>
+<div id="te_3" class="t s3_3">Legajo de identificación </div>
+<div id="tf_3" class="t s2_3">Artículo 7°- Las personas comprendidas en el artículo 1° deberán ser inscritas por el Registro </div>
+<div id="tg_3" class="t s2_3">Nacional de las Personas, asignándoseles en el mismo un legajo de identificación con un número </div>
+<div id="th_3" class="t s2_3">fijo, exclusivo e inmutable, el que sólo podrá modificarse en caso de error fehacientemente </div>
+<div id="ti_3" class="t s2_3">comprobado. Dicho legajo se irá formando desde el nacimiento de aquéllas y en el mismo se </div>
+<div id="tj_3" class="t s2_3">acumularán todos los antecedentes personales de mayor importancia que configuran su actividad en </div>
+<div id="tk_3" class="t s2_3">las distintas etapas de su vida. Todo identificado tiene derecho a exigir que conste en su legajo los </div>
+<div id="tl_3" class="t s2_3">antecedentes, méritos y títulos que considere favorable a su persona. </div>
+<div id="tm_3" class="t s2_3">Las constancias del legajo de identificación deberán puntualizar con precisión los comprobantes que </div>
+<div id="tn_3" class="t s2_3">las justifiquen. En la sede central del Registro Nacional de las Personas se llevarán por lo menos </div>
+<div id="to_3" class="t s2_3">ficheros patronímicos, numéricos y dactiloscópicos según el sistema argentino Vucetich u otro que </div>
+<div id="tp_3" class="t s2_3">en el futuro aconseje la evolución de la técnica. </div>
+<div id="tq_3" class="t s2_3">SECCION II </div>
+<div id="tr_3" class="t s3_3">Procedimiento de la inscripción </div>
+<div id="ts_3" class="t s2_3">Artículo 8°- Las oficinas secciónales procederán a llenar el formulario de inscripción sobre la base de </div>
+<div id="tt_3" class="t s2_3">los datos y pruebas aportados. En tal oportunidad se otorgará a la persona interesada un número de </div>
+<div id="tu_3" class="t s2_3">documento que certificará la inscripción y que se mantendrá inmutable a través de las distintas </div>
+<div id="tv_3" class="t s2_3">etapas de su vida. </div>
+<div id="tw_3" class="t s2_3">Dicho formulario de inscripción, juntamente con la documentación anexa, será remitida a la </div>
+<div id="tx_3" class="t s2_3">Delegación Regional para su revisión y posterior envío al Registro Nacional de las Personas. </div>
+<div id="ty_3" class="t s2_3">CAPITULO III </div>
+<div id="tz_3" class="t s3_3">De la identificación </div>
+<div id="t10_3" class="t s2_3">SECCION I </div>
+<div id="t11_3" class="t s3_3">Procedimiento </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2928],['t4_3',2928],['t5_3',548],['t6_3',2916],['t7_3',2929],['t9_3',2929],['ta_3',2866],['tb_3',362],['tc_3',535],['td_3',313],['te_3',771],['tf_3',2929],['tg_3',2929],['th_3',2928],['ti_3',2929],['tj_3',2929],['tk_3',2929],['tl_3',2023],['tm_3',2930],['tn_3',2929],['to_3',2929],['tp_3',1379],['tq_3',337],['tr_3',1016],['ts_3',2928],['tt_3',2929],['tu_3',2929],['tv_3',530],['tw_3',2929],['tx_3',2657],['ty_3',386],['tz_3',620],['t10_3',313]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

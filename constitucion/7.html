@@ -1,0 +1,357 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load7();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:334px;top:139px;}
+#t2_7{left:356px;top:165px;}
+#t3_7{left:484px;top:1455px;}
+#t4_7{left:130px;top:209px;}
+#t5_7{left:226px;top:209px;}
+#t6_7{left:130px;top:229px;}
+#t7_7{left:130px;top:250px;}
+#t8_7{left:130px;top:279px;}
+#t9_7{left:232px;top:279px;}
+#ta_7{left:130px;top:300px;}
+#tb_7{left:130px;top:320px;}
+#tc_7{left:130px;top:340px;}
+#td_7{left:130px;top:370px;}
+#te_7{left:224px;top:370px;}
+#tf_7{left:130px;top:390px;}
+#tg_7{left:130px;top:420px;}
+#th_7{left:227px;top:420px;}
+#ti_7{left:130px;top:440px;}
+#tj_7{left:130px;top:470px;}
+#tk_7{left:231px;top:470px;}
+#tl_7{left:130px;top:491px;}
+#tm_7{left:130px;top:511px;}
+#tn_7{left:130px;top:531px;}
+#to_7{left:130px;top:552px;}
+#tp_7{left:130px;top:572px;}
+#tq_7{left:157px;top:602px;}
+#tr_7{left:165px;top:604px;}
+#ts_7{left:268px;top:602px;}
+#tt_7{left:320px;top:604px;}
+#tu_7{left:370px;top:602px;}
+#tv_7{left:157px;top:617px;}
+#tw_7{left:157px;top:632px;}
+#tx_7{left:157px;top:646px;}
+#ty_7{left:157px;top:661px;}
+#tz_7{left:400px;top:685px;}
+#t10_7{left:441px;top:715px;}
+#t11_7{left:130px;top:744px;}
+#t12_7{left:226px;top:744px;}
+#t13_7{left:130px;top:765px;}
+#t14_7{left:130px;top:785px;}
+#t15_7{left:130px;top:806px;}
+#t16_7{left:157px;top:835px;}
+#t17_7{left:165px;top:838px;}
+#t18_7{left:265px;top:835px;}
+#t19_7{left:315px;top:838px;}
+#t1a_7{left:365px;top:835px;}
+#t1b_7{left:157px;top:850px;}
+#t1c_7{left:157px;top:865px;}
+#t1d_7{left:130px;top:889px;}
+#t1e_7{left:225px;top:889px;}
+#t1f_7{left:130px;top:909px;}
+#t1g_7{left:130px;top:930px;}
+#t1h_7{left:130px;top:950px;}
+#t1i_7{left:130px;top:980px;}
+#t1j_7{left:230px;top:980px;}
+#t1k_7{left:130px;top:1000px;}
+#t1l_7{left:130px;top:1021px;}
+#t1m_7{left:157px;top:1050px;}
+#t1n_7{left:165px;top:1053px;}
+#t1o_7{left:265px;top:1050px;}
+#t1p_7{left:315px;top:1053px;}
+#t1q_7{left:364px;top:1050px;}
+#t1r_7{left:157px;top:1065px;}
+#t1s_7{left:157px;top:1080px;}
+#t1t_7{left:130px;top:1104px;}
+#t1u_7{left:227px;top:1104px;}
+#t1v_7{left:130px;top:1124px;}
+#t1w_7{left:130px;top:1154px;}
+#t1x_7{left:229px;top:1154px;}
+#t1y_7{left:130px;top:1174px;}
+#t1z_7{left:130px;top:1204px;}
+#t20_7{left:225px;top:1204px;}
+#t21_7{left:130px;top:1224px;}
+#t22_7{left:130px;top:1245px;}
+#t23_7{left:130px;top:1265px;}
+#t24_7{left:130px;top:1286px;}
+#t25_7{left:130px;top:1315px;}
+#t26_7{left:228px;top:1315px;}
+#t27_7{left:130px;top:1336px;}
+#t28_7{left:130px;top:1356px;}
+#t29_7{left:130px;top:1377px;}
+#t2a_7{left:130px;top:1406px;}
+#t2b_7{left:225px;top:1406px;}
+#t2c_7{left:130px;top:1427px;}
+
+.s6_7{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_7{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_7{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_7{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_7{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi7;
+	color: rgb(0,0,0);
+}
+
+.s1_7{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi7;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts7" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi7;
+	src :url("7/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_7" class="t s1_7">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_7" class="t s2_7">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_7" class="t s3_7">7 </div>
+<div id="t4_7" class="t s4_7">Artículo 49</div>
+<div id="t5_7" class="t s3_7">.- Por esta vez las Legislaturas de las provincias reglarán los medios de hacer </div>
+<div id="t6_7" class="t s3_7">efectiva la elección directa de los diputados de la Nación: para lo sucesivo el Congreso </div>
+<div id="t7_7" class="t s3_7">expedirá una ley general. </div>
+<div id="t8_7" class="t s4_7">Artículo 50</div>
+<div id="t9_7" class="t s3_7">.- Los diputados durarán en su representación por cuatro años, y son </div>
+<div id="ta_7" class="t s3_7">reelegibles; pero la Sala se renovará por mitad cada bienio; a cuyo efecto los nombrados </div>
+<div id="tb_7" class="t s3_7">para la primera Legislatura, luego que se reúnan, sortearán los que deban salir en el primer </div>
+<div id="tc_7" class="t s3_7">período. </div>
+<div id="td_7" class="t s4_7">Artículo 51</div>
+<div id="te_7" class="t s3_7">.- En caso de vacante, el Gobierno de provincia, o de la Capital, hace proceder a </div>
+<div id="tf_7" class="t s3_7">elección legal de un nuevo miembro. </div>
+<div id="tg_7" class="t s4_7">Artículo 52</div>
+<div id="th_7" class="t s3_7">.- A la Cámara de Diputados corresponde exclusivamente la iniciativa de las </div>
+<div id="ti_7" class="t s3_7">leyes sobre contribuciones y reclutamiento de tropas. </div>
+<div id="tj_7" class="t s4_7">Artículo 53</div>
+<div id="tk_7" class="t s3_7">.- Sólo ella ejerce el derecho de acusar ante el Senado al presidente, </div>
+<div id="tl_7" class="t s3_7">vicepresidente, al jefe de gabinete de ministros, a los ministros y a los miembros de la Corte </div>
+<div id="tm_7" class="t s3_7">Suprema, en las causas de responsabilidad que se intenten contra ellos, por mal desempeño </div>
+<div id="tn_7" class="t s3_7">o por delito en el ejercicio de sus funciones; o por crímenes comunes, después de haber </div>
+<div id="to_7" class="t s3_7">conocido de ellos y declarado haber lugar a la formación de causa por la mayoría de dos </div>
+<div id="tp_7" class="t s3_7">terceras partes de sus miembros presentes. </div>
+<div id="tq_7" class="t s5_7">T</div>
+<div id="tr_7" class="t s6_7">EXTO ANTERIOR A </div>
+<div id="ts_7" class="t s5_7">1994: A</div>
+<div id="tt_7" class="t s6_7">RTÍCULO </div>
+<div id="tu_7" class="t s5_7">45. Sólo ella ejerce el derecho de acusar ante el Senado al presidente, </div>
+<div id="tv_7" class="t s5_7">vicepresidente, sus ministros y a los miembros de la Corte Suprema y demás tribunales inferiores de la </div>
+<div id="tw_7" class="t s5_7">Nación en las causas de responsabilidad que se intenten contra ellos, por mal desempeño o por delito en el </div>
+<div id="tx_7" class="t s5_7">ejercicio de sus funciones; o por crímenes comunes, después de haber conocido de ellos y declarado haber </div>
+<div id="ty_7" class="t s5_7">lugar a la formación de causa por mayoría de dos terceras partes de sus miembros presentes. </div>
+<div id="tz_7" class="t s4_7">CAPÍTULO SEGUNDO </div>
+<div id="t10_7" class="t s4_7">Del Senado </div>
+<div id="t11_7" class="t s4_7">Artículo 54</div>
+<div id="t12_7" class="t s3_7">.- El Senado se compondrá de tres senadores por cada provincia y tres por la </div>
+<div id="t13_7" class="t s3_7">ciudad de Buenos Aires, elegidos en forma directa y conjunta, correspondiendo dos bancas </div>
+<div id="t14_7" class="t s3_7">al partido político que obtenga el mayor número de votos, y la restante al partido político </div>
+<div id="t15_7" class="t s3_7">que le siga en número de votos. Cada senador tendrá un voto. </div>
+<div id="t16_7" class="t s5_7">T</div>
+<div id="t17_7" class="t s6_7">EXTO ANTERIOR A </div>
+<div id="t18_7" class="t s5_7">1994: A</div>
+<div id="t19_7" class="t s6_7">RTÍCULO </div>
+<div id="t1a_7" class="t s5_7">46. El Senado se compondrá de dos senadores de cada provincia elegidos </div>
+<div id="t1b_7" class="t s5_7">por sus Legislaturas a pluralidad de sufragios; y dos de la Capital elegidos en la forma prescripta para la </div>
+<div id="t1c_7" class="t s5_7">elección del presidente de la Nación.Cada senador tendrá un voto. </div>
+<div id="t1d_7" class="t s4_7">Artículo 55</div>
+<div id="t1e_7" class="t s3_7">.- Son requisitos para ser elegido senador: tener la edad de treinta años, haber </div>
+<div id="t1f_7" class="t s3_7">sido seis años ciudadano de la Nación, disfrutar de una renta anual de dos mil pesos fuertes </div>
+<div id="t1g_7" class="t s3_7">o de una entrada equivalente, y ser natural de la provincia que lo elija, o con dos años de </div>
+<div id="t1h_7" class="t s3_7">residencia inmediata en ella. </div>
+<div id="t1i_7" class="t s4_7">Artículo 56</div>
+<div id="t1j_7" class="t s3_7">.- Los senadores duran seis años en el ejercicio de su mandato, y son </div>
+<div id="t1k_7" class="t s3_7">reelegibles indefinidamente; pero el Senado se renovará a razón de una tercera parte de los </div>
+<div id="t1l_7" class="t s3_7">distritos electorales cada dos años. </div>
+<div id="t1m_7" class="t s5_7">T</div>
+<div id="t1n_7" class="t s6_7">EXTO ANTERIOR A </div>
+<div id="t1o_7" class="t s5_7">1994: A</div>
+<div id="t1p_7" class="t s6_7">RTÍCULO </div>
+<div id="t1q_7" class="t s5_7">48. Los senadores duran nueve años en el ejercicio de su mandato, y son </div>
+<div id="t1r_7" class="t s5_7">reelegibles indefinidamente; pero el Senado se renovará por terceras partes cada tres años, decidiéndose </div>
+<div id="t1s_7" class="t s5_7">por la suerte, luego que todos se reúnan, quienes deben salir en el primero y segundo trienio. </div>
+<div id="t1t_7" class="t s4_7">Artículo 57</div>
+<div id="t1u_7" class="t s3_7">.- El vicepresidente de la Nación será presidente del Senado; pero no tendrá </div>
+<div id="t1v_7" class="t s3_7">voto sino en el caso que haya empate en la votación. </div>
+<div id="t1w_7" class="t s4_7">Artículo 58</div>
+<div id="t1x_7" class="t s3_7">.- El Senado nombrará un presidente provisorio que lo presida en caso de </div>
+<div id="t1y_7" class="t s3_7">ausencia del vicepresidente, o cuando éste ejerce las funciones de presidente de la Nación. </div>
+<div id="t1z_7" class="t s4_7">Artículo 59</div>
+<div id="t20_7" class="t s3_7">.- Al Senado corresponde juzgar en juicio público a los acusados por la Cámara </div>
+<div id="t21_7" class="t s3_7">de Diputados, debiendo sus miembros prestar juramento para este acto. Cuando el acusado </div>
+<div id="t22_7" class="t s3_7">sea el presidente de la Nación, el Senado será presidido por el presidente de la Corte </div>
+<div id="t23_7" class="t s3_7">Suprema. Ninguno será declarado culpable sino a mayoría de los dos tercios de los </div>
+<div id="t24_7" class="t s3_7">miembros presentes. </div>
+<div id="t25_7" class="t s4_7">Artículo 60</div>
+<div id="t26_7" class="t s3_7">.- Su fallo no tendrá más efecto que destituir al acusado, y aun declararle </div>
+<div id="t27_7" class="t s3_7">incapaz de ocupar ningún empleo de honor, de confianza o a sueldo en la Nación. Pero la </div>
+<div id="t28_7" class="t s3_7">parte condenada quedará, no obstante, sujeta a acusación, juicio y castigo conforme a las </div>
+<div id="t29_7" class="t s3_7">leyes ante los tribunales ordinarios. </div>
+<div id="t2a_7" class="t s4_7">Artículo 61</div>
+<div id="t2b_7" class="t s3_7">.- Corresponde también al Senado autorizar al presidente de la Nación para que </div>
+<div id="t2c_7" class="t s3_7">declare en estado de sitio, uno o varios puntos de la República en caso de ataque exterior. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7"><object width="935" height="1540" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld7" type="text/javascript">
+
+var isIE = false;
+var f7 = [['t1_7',1244],['t2_7',1068],['t4_7',384],['t5_7',2489],['t6_7',2874],['t7_7',784],['t8_7',406],['t9_7',2467],['ta_7',2874],['tb_7',2874],['td_7',378],['te_7',2496],['tf_7',1133],['tg_7',389],['th_7',2484],['ti_7',1649],['tj_7',405],['tk_7',2469],['tl_7',2875],['tm_7',2874],['tn_7',2874],['to_7',2874],['tp_7',1355],['tr_7',390],['ts_7',206],['tu_7',1845],['tv_7',2695],['tw_7',2695],['tx_7',2696],['ty_7',2322],['tz_7',711],['t10_7',386],['t11_7',384],['t12_7',2490],['t13_7',2874],['t14_7',2874],['t15_7',1934],['t17_7',381],['t18_7',201],['t1a_7',1867],['t1b_7',2695],['t1c_7',1634],['t1d_7',380],['t1e_7',2494],['t1f_7',2874],['t1g_7',2875],['t1h_7',881],['t1i_7',401],['t1j_7',2472],['t1k_7',2874],['t1l_7',1079],['t1n_7',380],['t1o_7',201],['t1q_7',1869],['t1r_7',2695],['t1s_7',2322],['t1t_7',387],['t1u_7',2486],['t1v_7',1642],['t1w_7',394],['t1x_7',2480],['t1y_7',2810],['t1z_7',380],['t20_7',2494],['t21_7',2874],['t22_7',2874],['t23_7',2874],['t24_7',649],['t25_7',392],['t26_7',2482],['t27_7',2874],['t28_7',2874],['t29_7',1097],['t2a_7',379],['t2b_7',2494],['t2c_7',2797]];
+function load7(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f7);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 85;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_7");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

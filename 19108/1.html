@@ -1,0 +1,290 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:418px;top:216px;}
+#t4_1{left:101px;top:242px;}
+#t5_1{left:101px;top:260px;}
+#t6_1{left:101px;top:277px;}
+#t7_1{left:241px;top:300px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:126px;top:332px;}
+#ta_1{left:146px;top:332px;}
+#tb_1{left:101px;top:363px;}
+#tc_1{left:101px;top:381px;}
+#td_1{left:101px;top:412px;}
+#te_1{left:197px;top:412px;}
+#tf_1{left:101px;top:430px;}
+#tg_1{left:101px;top:462px;}
+#th_1{left:101px;top:493px;}
+#ti_1{left:155px;top:493px;}
+#tj_1{left:101px;top:511px;}
+#tk_1{left:674px;top:511px;}
+#tl_1{left:101px;top:528px;}
+#tm_1{left:306px;top:528px;}
+#tn_1{left:658px;top:528px;}
+#to_1{left:101px;top:546px;}
+#tp_1{left:101px;top:563px;}
+#tq_1{left:101px;top:595px;}
+#tr_1{left:155px;top:595px;}
+#ts_1{left:759px;top:595px;}
+#tt_1{left:101px;top:612px;}
+#tu_1{left:686px;top:612px;}
+#tv_1{left:101px;top:630px;}
+#tw_1{left:101px;top:661px;}
+#tx_1{left:101px;top:693px;}
+#ty_1{left:154px;top:693px;}
+#tz_1{left:101px;top:725px;}
+#t10_1{left:101px;top:742px;}
+#t11_1{left:101px;top:774px;}
+#t12_1{left:101px;top:791px;}
+#t13_1{left:101px;top:809px;}
+#t14_1{left:101px;top:841px;}
+#t15_1{left:101px;top:858px;}
+#t16_1{left:101px;top:875px;}
+#t17_1{left:101px;top:893px;}
+#t18_1{left:101px;top:910px;}
+#t19_1{left:101px;top:942px;}
+#t1a_1{left:761px;top:942px;}
+#t1b_1{left:101px;top:959px;}
+#t1c_1{left:703px;top:959px;}
+#t1d_1{left:101px;top:977px;}
+#t1e_1{left:101px;top:994px;}
+#t1f_1{left:101px;top:1012px;}
+#t1g_1{left:101px;top:1029px;}
+#t1h_1{left:101px;top:1046px;}
+#t1i_1{left:101px;top:1064px;}
+#t1j_1{left:101px;top:1081px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s6_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Ley 19.108 </div>
+<div id="t4_1" class="t s3_1">Bs. As. 5/7/1971 </div>
+<div id="t5_1" class="t s3_1">Publicación: B.O. 12/07/1971 </div>
+<div id="t6_1" class="t s4_1">*El texto incluye las últimas modificaciones incorporadas por Ley N° 26.215 (B.O. 17/01/2007) </div>
+<div id="t7_1" class="t s5_1">ORGANIZACIÓN DE LA JUSTICIA NACIONAL ELECTORAL </div>
+<div id="t8_1" class="t s5_1">1. </div>
+<div id="t9_1" class="t s3_1">— </div>
+<div id="ta_1" class="t s5_1">DE LA CAMARA NACIONAL ELECTORAL </div>
+<div id="tb_1" class="t s6_1">(Denominación:"la Sala Electoral" sustituida por la denominación: "la Cámara Nacional Electoral", </div>
+<div id="tc_1" class="t s6_1">por art. 2° de la Ley N° 19.277 B.O. 7/10/1971)</div>
+<div id="td_1" class="t s5_1">Artículo 1°</div>
+<div id="te_1" class="t s3_1">— Créase la Cámara Nacional Electoral que tendrá asiento en la Capital Federal, con </div>
+<div id="tf_1" class="t s3_1">competencia en todo el territorio de la Nación. </div>
+<div id="tg_1" class="t s6_1">(Artículo sustituido por art. 1° de la Ley N° 19.277 B.O. 7/10/1971)</div>
+<div id="th_1" class="t s5_1">Art 2°</div>
+<div id="ti_1" class="t s3_1">— La Cámara Nacional Electoral estará compuesta por tres jueces quienes, además de reunir </div>
+<div id="tj_1" class="t s3_1">las condiciones exigidas por el artículo 5° del Decreto-Ley 1285/58 no deben </div>
+<div id="tk_1" class="t s3_1">haber ocupado cargos </div>
+<div id="tl_1" class="t s3_1">partidarios hasta cuatro </div>
+<div id="tm_1" class="t s3_1">años antes de la fecha de su designación. </div>
+<div id="tn_1" class="t s6_1">(Denominación:"la Sala </div>
+<div id="to_1" class="t s6_1">Electoral" sustituida por la denominación: "la Cámara Nacional Electoral", por art. 2° de la Ley N° </div>
+<div id="tp_1" class="t s6_1">19.277 B.O. 7/10/1971)</div>
+<div id="tq_1" class="t s5_1">Art 3°</div>
+<div id="tr_1" class="t s3_1">— La Cámara designará dos (2) secretarios que, sin perjuicio de la específica que </div>
+<div id="ts_1" class="t s3_1">contempla </div>
+<div id="tt_1" class="t s3_1">el Artículo 2º, deberán reunir las mismas condiciones exigidas para ser Juez </div>
+<div id="tu_1" class="t s3_1">Nacional de Primera </div>
+<div id="tv_1" class="t s3_1">Instancia y tendrán igual jerarquía. </div>
+<div id="tw_1" class="t s6_1">(Artículo sustituido por art. 1° de la Ley N° 22.866 B.O. 4/8/1983)</div>
+<div id="tx_1" class="t s5_1">Art 4°</div>
+<div id="ty_1" class="t s3_1">— La Cámara Nacional Electoral tendrá las siguientes atribuciones especiales: </div>
+<div id="tz_1" class="t s3_1">a) dirigir y fiscalizar el funcionamiento del Registro Nacional de electores y fiscalizar los de los </div>
+<div id="t10_1" class="t s3_1">distritos de acuerdo con las disposiciones de la Ley Electoral; </div>
+<div id="t11_1" class="t s3_1">b) dirigir y fiscalizar el funcionamiento del Registro Nacional de Afiliados de los Partidos Políticos y </div>
+<div id="t12_1" class="t s3_1">fiscalizar los de los distritos, de acuerdo con las disposiciones de esta ley y de la Ley Orgánica de los </div>
+<div id="t13_1" class="t s3_1">Partidos Políticos; </div>
+<div id="t14_1" class="t s3_1">c) dictar las normas a que deberá sujetarse la formación y funcionamiento de los Registros </div>
+<div id="t15_1" class="t s3_1">Generales, de distritos, de cartas de ciudadanía, de inhabilitados, de faltas electorales, de juicios </div>
+<div id="t16_1" class="t s3_1">paralizados en razón de inmunidades, de nombres, símbolos, emblemas y número de identificación </div>
+<div id="t17_1" class="t s3_1">de los Partidos Políticos y las características uniformes de las fichas de afiliación que llevará y </div>
+<div id="t18_1" class="t s3_1">conservará la Justicia Federal Electoral; </div>
+<div id="t19_1" class="t s3_1">d) organizar un Cuerpo de Auditores Contadores para verificar el estado contable de los </div>
+<div id="t1a_1" class="t s3_1">partidos y </div>
+<div id="t1b_1" class="t s3_1">el cumplimiento, en lo pertinente de las disposiciones legales aplicables. A estos </div>
+<div id="t1c_1" class="t s3_1">fines, contará con </div>
+<div id="t1d_1" class="t s3_1">un fondo anual especial que no podrá ser inferior al cinco por ciento (5%) del Fondo Partidario </div>
+<div id="t1e_1" class="t s3_1">Permanente, el cual se integrará con los aranceles percibidos por los trámites que se realizan ante </div>
+<div id="t1f_1" class="t s3_1">su sede, con los fondos previstos en el Presupuesto General de la Nación y con recursos </div>
+<div id="t1g_1" class="t s3_1">provenientes del Fondo Partidario Permanente que administra el Ministerio del Interior en caso de no </div>
+<div id="t1h_1" class="t s3_1">cubrirse el mínimo establecido. Trimestralmente el Tribunal verificará haber percibido al menos un </div>
+<div id="t1i_1" class="t s3_1">cuarto de dicho monto mínimo y en caso de no alcanzar esa cantidad lo comunicará a la Dirección </div>
+<div id="t1j_1" class="t s3_1">Nacional Electoral del Ministerio del Interior a fin de que sea completada; </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',392],['t4_1',493],['t5_1',858],['t6_1',2490],['t7_1',1814],['ta_1',1241],['tb_1',2933],['tc_1',1411],['td_1',356],['te_1',2548],['tf_1',1344],['tg_1',1978],['th_1',195],['ti_1',2716],['tj_1',2249],['tk_1',640],['tl_1',735],['tm_1',1363],['tn_1',706],['to_1',2934],['tp_1',706],['tq_1',195],['tr_1',2375],['tt_1',2285],['tu_1',593],['tv_1',1024],['tw_1',1942],['tx_1',194],['ty_1',2255],['tz_1',2934],['t10_1',1770],['t11_1',2933],['t12_1',2933],['t13_1',513],['t14_1',2933],['t15_1',2934],['t16_1',2934],['t17_1',2934],['t18_1',1146],['t19_1',2594],['t1a_1',292],['t1b_1',2362],['t1c_1',524],['t1d_1',2933],['t1e_1',2934],['t1f_1',2934],['t1g_1',2934],['t1h_1',2934],['t1i_1',2934],['t1j_1',2125]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 56;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

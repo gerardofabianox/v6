@@ -1,0 +1,299 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:325px;top:136px;}
+#t2_2{left:322px;top:156px;}
+#t3_2{left:65px;top:224px;}
+#t4_2{left:184px;top:224px;}
+#t5_2{left:65px;top:258px;}
+#t6_2{left:201px;top:258px;}
+#t7_2{left:550px;top:258px;}
+#t8_2{left:65px;top:276px;}
+#t9_2{left:65px;top:295px;}
+#ta_2{left:65px;top:314px;}
+#tb_2{left:65px;top:332px;}
+#tc_2{left:65px;top:366px;}
+#td_2{left:65px;top:384px;}
+#te_2{left:65px;top:403px;}
+#tf_2{left:65px;top:421px;}
+#tg_2{left:65px;top:440px;}
+#th_2{left:65px;top:474px;}
+#ti_2{left:188px;top:474px;}
+#tj_2{left:65px;top:492px;}
+#tk_2{left:65px;top:526px;}
+#tl_2{left:182px;top:526px;}
+#tm_2{left:427px;top:526px;}
+#tn_2{left:65px;top:544px;}
+#to_2{left:65px;top:563px;}
+#tp_2{left:65px;top:581px;}
+#tq_2{left:65px;top:615px;}
+#tr_2{left:188px;top:615px;}
+#ts_2{left:65px;top:634px;}
+#tt_2{left:65px;top:667px;}
+#tu_2{left:172px;top:667px;}
+#tv_2{left:428px;top:667px;}
+#tw_2{left:65px;top:686px;}
+#tx_2{left:65px;top:720px;}
+#ty_2{left:65px;top:738px;}
+#tz_2{left:65px;top:757px;}
+#t10_2{left:65px;top:791px;}
+#t11_2{left:65px;top:809px;}
+#t12_2{left:65px;top:843px;}
+#t13_2{left:65px;top:861px;}
+#t14_2{left:65px;top:895px;}
+#t15_2{left:65px;top:914px;}
+#t16_2{left:65px;top:932px;}
+#t17_2{left:65px;top:966px;}
+#t18_2{left:65px;top:984px;}
+#t19_2{left:65px;top:1018px;}
+#t1a_2{left:200px;top:1018px;}
+#t1b_2{left:65px;top:1037px;}
+#t1c_2{left:65px;top:1055px;}
+#t1d_2{left:425px;top:1089px;}
+#t1e_2{left:493px;top:1089px;}
+#t1f_2{left:331px;top:1123px;}
+#t1g_2{left:65px;top:1156px;}
+#t1h_2{left:208px;top:1156px;}
+#t1i_2{left:382px;top:1156px;}
+#t1j_2{left:65px;top:1175px;}
+#t1k_2{left:65px;top:1209px;}
+#t1l_2{left:65px;top:1227px;}
+#t1m_2{left:65px;top:1245px;}
+#t1n_2{left:65px;top:1279px;}
+#t1o_2{left:65px;top:1298px;}
+#t1p_2{left:65px;top:1331px;}
+#t1q_2{left:202px;top:1331px;}
+#t1r_2{left:65px;top:1350px;}
+#t1s_2{left:115px;top:1350px;}
+#t1t_2{left:65px;top:1368px;}
+#t1u_2{left:65px;top:1402px;}
+
+.s2_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_2{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_2{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">ARTÍCULO 4° </div>
+<div id="t4_2" class="t s3_2">— Incorpórase como artículo 120 bis del Código Electoral Nacional el siguiente: </div>
+<div id="t5_2" class="t s3_2">Artículo 120 bis:</div>
+<div id="t6_2" class="t s4_2">Cómputo final parlamentarios del Mercosur. </div>
+<div id="t7_2" class="t s3_2">Sin perjuicio de la comunicación prevista </div>
+<div id="t8_2" class="t s3_2">en el artículo 124, las juntas electorales nacionales deberán informar dentro del plazo de treinta y cinco </div>
+<div id="t9_2" class="t s3_2">(35) días, desde que se iniciara el escrutinio definitivo, los resultados de la elección en la categoría </div>
+<div id="ta_2" class="t s3_2">parlamentarios del Mercosur a la Cámara Nacional Electoral, dando cuenta además, y en su caso, de las </div>
+<div id="tb_2" class="t s3_2">cuestiones pendientes de resolución relativas a esa categoría. </div>
+<div id="tc_2" class="t s3_2">Cuando no existieren cuestiones pendientes de resolución relativas a la elección de parlamentarios del </div>
+<div id="td_2" class="t s3_2">Mercosur, o las que hubiere no sean en conjunto susceptibles de alterar la distribución de bancas, la </div>
+<div id="te_2" class="t s3_2">Cámara Nacional Electoral procederá a realizar la distribución de los cargos conforme los </div>
+<div id="tf_2" class="t s3_2">procedimientos previstos por este Código. La lista de los electos será comunicada a la Asamblea </div>
+<div id="tg_2" class="t s3_2">Legislativa para su proclamación. </div>
+<div id="th_2" class="t s2_2">ARTÍCULO 5° </div>
+<div id="ti_2" class="t s3_2">— Modifícase el artículo 122 del Código Electoral Nacional, que queda redactado de la </div>
+<div id="tj_2" class="t s3_2">siguiente manera: </div>
+<div id="tk_2" class="t s3_2">Artículo 122:</div>
+<div id="tl_2" class="t s4_2">Proclamación de los electos.</div>
+<div id="tm_2" class="t s3_2">La Asamblea Legislativa, en el caso de presidente y </div>
+<div id="tn_2" class="t s3_2">vicepresidente, y de parlamentarios del Mercosur, y las juntas electorales nacionales de los distritos, en </div>
+<div id="to_2" class="t s3_2">el caso de senadores y diputados nacionales, proclamarán a los que resulten electos, haciéndoles </div>
+<div id="tp_2" class="t s3_2">entrega de los documentos que acrediten su carácter. </div>
+<div id="tq_2" class="t s2_2">ARTÍCULO 6° </div>
+<div id="tr_2" class="t s3_2">— Modifícase el artículo 124 del Código Electoral Nacional, que queda redactado de la </div>
+<div id="ts_2" class="t s3_2">siguiente manera: </div>
+<div id="tt_2" class="t s3_2">Artículo 124:</div>
+<div id="tu_2" class="t s4_2">Acta de escrutinio. Testimonios.</div>
+<div id="tv_2" class="t s3_2">Todos estos procedimientos constarán en un acta que la </div>
+<div id="tw_2" class="t s3_2">Junta hará extender por su secretario y que será firmada por la totalidad de sus miembros. </div>
+<div id="tx_2" class="t s3_2">La Junta Electoral Nacional del distrito enviará testimonio del acta a la Cámara Nacional Electoral, al </div>
+<div id="ty_2" class="t s3_2">Poder Ejecutivo y a los partidos intervinientes. El Ministerio del Interior y Transporte conservará por </div>
+<div id="tz_2" class="t s3_2">cinco (5) años los testimonios de las actas que le remitirán las Juntas. </div>
+<div id="t10_2" class="t s3_2">En el caso de la elección de parlamentarios del Mercosur la Cámara Nacional Electoral hará extender por </div>
+<div id="t11_2" class="t s3_2">su secretario un acta donde conste: </div>
+<div id="t12_2" class="t s3_2">a) La sumatoria de los resultados comunicados por las juntas nacionales electorales de las listas </div>
+<div id="t13_2" class="t s3_2">elegidas por distrito nacional; </div>
+<div id="t14_2" class="t s3_2">b) Quiénes han resultado electos parlamentarios del Mercosur titulares y suplentes, por distrito nacional </div>
+<div id="t15_2" class="t s3_2">y por distritos regionales provinciales y de la Ciudad Autónoma de Buenos Aires, por aplicación del </div>
+<div id="t16_2" class="t s3_2">sistema previsto en este Código. </div>
+<div id="t17_2" class="t s3_2">La Junta Nacional Electoral respectiva o, en su caso, la Cámara Nacional Electoral, otorgarán además un </div>
+<div id="t18_2" class="t s3_2">duplicado del acta correspondiente a cada uno de los electos, conjuntamente con un diploma. </div>
+<div id="t19_2" class="t s2_2">ARTÍCULO 7° </div>
+<div id="t1a_2" class="t s3_2">— Incorpórase al Título VII del Código Electoral Nacional –ley 19.945 y sus </div>
+<div id="t1b_2" class="t s3_2">modificaciones- como Capítulo IV, con la denominación “De la elección de los parlamentarios del </div>
+<div id="t1c_2" class="t s3_2">Mercosur”, lo que sigue: </div>
+<div id="t1d_2" class="t s3_2">Capítulo</div>
+<div id="t1e_2" class="t s3_2">IV </div>
+<div id="t1f_2" class="t s4_2">De los parlamentarios del Mercosur </div>
+<div id="t1g_2" class="t s3_2">Artículo 164 bis:</div>
+<div id="t1h_2" class="t s4_2">Sistema de elección.</div>
+<div id="t1i_2" class="t s3_2">Los parlamentarios del Mercosur se elegirán por un sistema </div>
+<div id="t1j_2" class="t s3_2">mixto: </div>
+<div id="t1k_2" class="t s3_2">a) Veinticuatro (24) parlamentarios serán elegidos en forma directa por distrito regional: un </div>
+<div id="t1l_2" class="t s3_2">parlamentario por cada una de las 23 provincias y un parlamentario por la Ciudad Autónoma de Buenos </div>
+<div id="t1m_2" class="t s3_2">Aires; </div>
+<div id="t1n_2" class="t s3_2">b) El resto de parlamentarios serán elegidos en forma directa por el pueblo de la Nación, por distrito </div>
+<div id="t1o_2" class="t s3_2">nacional, a cuyo fin el territorio nacional constituye un distrito único. </div>
+<div id="t1p_2" class="t s3_2">Artículo 164 ter: </div>
+<div id="t1q_2" class="t s4_2">Postulación por distritos regionales provinciales y de la Ciudad Autónoma de Buenos </div>
+<div id="t1r_2" class="t s4_2">Aires. </div>
+<div id="t1s_2" class="t s3_2">Podrán postular candidatos a parlamentarios del Mercosur por distrito regional provincial y de la </div>
+<div id="t1t_2" class="t s3_2">Ciudad Autónoma de Buenos Aires, las agrupaciones políticas de distrito correspondientes. </div>
+<div id="t1u_2" class="t s3_2">Cada elector votará por una sola lista oficializada de un único candidato con dos suplentes. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1540" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1144],['t2_2',1164],['t3_2',456],['t4_2',2444],['t5_2',517],['t6_2',1370],['t7_2',1280],['t8_2',3220],['t9_2',3220],['ta_2',3221],['tb_2',1904],['tc_2',3220],['td_2',3220],['te_2',3220],['tf_2',3221],['tg_2',1026],['th_2',463],['ti_2',2729],['tj_2',561],['tk_2',422],['tl_2',938],['tm_2',1771],['tn_2',3220],['to_2',3220],['tp_2',1663],['tq_2',463],['tr_2',2729],['ts_2',561],['tt_2',403],['tu_2',999],['tv_2',1768],['tw_2',2819],['tx_2',3220],['ty_2',3220],['tz_2',2167],['t10_2',3220],['t11_2',1106],['t12_2',3221],['t13_2',912],['t14_2',3220],['t15_2',3220],['t16_2',1006],['t17_2',3221],['t18_2',2891],['t19_2',487],['t1a_2',2681],['t1b_2',3220],['t1c_2',752],['t1f_2',1089],['t1g_2',535],['t1h_2',662],['t1i_2',1951],['t1k_2',3220],['t1l_2',3221],['t1n_2',3220],['t1o_2',2119],['t1p_2',520],['t1q_2',2672],['t1s_2',3019],['t1t_2',2793],['t1u_2',2807]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 67;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

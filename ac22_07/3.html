@@ -1,0 +1,241 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:326px;}
+#ta_3{left:101px;top:344px;}
+#tb_3{left:101px;top:361px;letter-spacing:5px;}
+#tc_3{left:140px;top:361px;}
+#td_3{left:156px;top:361px;letter-spacing:3px;}
+#te_3{left:203px;top:361px;letter-spacing:5px;}
+#tf_3{left:242px;top:361px;}
+#tg_3{left:250px;top:361px;}
+#th_3{left:265px;top:361px;letter-spacing:3px;}
+#ti_3{left:324px;top:361px;letter-spacing:11px;}
+#tj_3{left:347px;top:361px;letter-spacing:7px;}
+#tk_3{left:379px;top:361px;letter-spacing:7px;}
+#tl_3{left:411px;top:361px;letter-spacing:11px;}
+#tm_3{left:440px;top:361px;}
+#tn_3{left:447px;top:361px;}
+#to_3{left:101px;top:378px;}
+#tp_3{left:101px;top:410px;}
+#tq_3{left:101px;top:428px;}
+#tr_3{left:101px;top:445px;}
+#ts_3{left:101px;top:463px;}
+#tt_3{left:101px;top:494px;}
+#tu_3{left:101px;top:512px;}
+#tv_3{left:101px;top:529px;}
+#tw_3{left:101px;top:561px;}
+#tx_3{left:101px;top:578px;}
+#ty_3{left:101px;top:596px;}
+#tz_3{left:101px;top:627px;}
+#t10_3{left:101px;top:645px;}
+#t11_3{left:101px;top:677px;}
+#t12_3{left:101px;top:694px;}
+#t13_3{left:101px;top:711px;}
+#t14_3{left:101px;top:743px;}
+#t15_3{left:101px;top:760px;}
+#t16_3{left:101px;top:778px;}
+#t17_3{left:101px;top:810px;}
+#t18_3{left:101px;top:827px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Las Juntas sólo podrán apartarse de lo establecido en el párrafo precedente cuando medien razones </div>
+<div id="t4_3" class="t s2_3">fundadas que así lo justifiquen, lo que deberá ser inmediatamente puesto en conocimiento de este </div>
+<div id="t5_3" class="t s2_3">Tribunal.- </div>
+<div id="t6_3" class="t s2_3">2º) Establecer que, a los efectos de lo dispuesto en el punto precedente, las Secretarías Electorales </div>
+<div id="t7_3" class="t s2_3">llevarán registro de las designaciones que se efectúen en cada proceso electoral -con indicación del </div>
+<div id="t8_3" class="t s2_3">nombre, apellido, domicilio y número de documento de los designados- y de los ciudadanos que </div>
+<div id="t9_3" class="t s2_3">efectivamente se desempeñen como presidente o suplente de mesa. Para esto último y con el objeto </div>
+<div id="ta_3" class="t s2_3">de evaluar el cumplimiento de quienes hayan sido designados con anterioridad como autoridades de </div>
+<div id="tb_3" class="t s2_3">mesa</div>
+<div id="tc_3" class="t s2_3">,</div>
+<div id="td_3" class="t s2_3">requer</div>
+<div id="te_3" class="t s2_3">irán</div>
+<div id="tf_3" class="t s2_3">a</div>
+<div id="tg_3" class="t s2_3">l</div>
+<div id="th_3" class="t s2_3">Correo</div>
+<div id="ti_3" class="t s2_3">la</div>
+<div id="tj_3" class="t s2_3">nóm</div>
+<div id="tk_3" class="t s2_3">ina</div>
+<div id="tl_3" class="t s2_3">de</div>
+<div id="tm_3" class="t s2_3">c</div>
+<div id="tn_3" class="t s2_3">iudadanos que habitualmente confecciona para la </div>
+<div id="to_3" class="t s2_3">instrumentación del pago previsto en el art. 72 del Código Electoral Nacional.- </div>
+<div id="tp_3" class="t s2_3">También asentarán la identidad de las autoridades a cargo de las mesas cuyo funcionamiento </div>
+<div id="tq_3" class="t s2_3">hubiera sido fundadamente impugnado o cuya documentación -según lo advierta la Junta al realizar </div>
+<div id="tr_3" class="t s2_3">el escrutinio definitivo- presente manifiestas irregularidades o evidentes errores de confección, sin </div>
+<div id="ts_3" class="t s2_3">perjuicio de que se verifique -además- si se les iniciaron acciones por su desempeño.- </div>
+<div id="tt_3" class="t s2_3">A fin de excluir a los electores que registren afiliación a alguna agrupación política, las Secretarías </div>
+<div id="tu_3" class="t s2_3">Electorales deberán efectuar el cruce de los datos consignados en el padrón con los del registro de </div>
+<div id="tv_3" class="t s2_3">afiliados a partidos políticos del distrito respectivo.- </div>
+<div id="tw_3" class="t s2_3">3º) Disponer que las Juntas Electorales Nacionales deberán efectuar las designaciones de las </div>
+<div id="tx_3" class="t s2_3">autoridades de mesa, al menos treinta días antes de la fecha de los comicios, a fin de facilitar la </div>
+<div id="ty_3" class="t s2_3">implementación de las tareas de capacitación a que hace referencia la Acordada 107/06.- </div>
+<div id="tz_3" class="t s2_3">Si, por motivos fundados, las Juntas no pudiesen realizar las designaciones con la antelación </div>
+<div id="t10_3" class="t s2_3">señalada, deberán -sin dilación- comunicar tal circunstancia a este Tribunal.- </div>
+<div id="t11_3" class="t s2_3">4º) Decretar que, en las citaciones a las autoridades de mesa, se informará acerca del carácter de </div>
+<div id="t12_3" class="t s2_3">carga pública que reviste la función, su naturaleza irrenunciable, y se les advertirá sobre las </div>
+<div id="t13_3" class="t s2_3">sanciones de que serán pasibles en caso de incumplimiento.- </div>
+<div id="t14_3" class="t s2_3">5º) Establecer que, a los fines de la citación de aquellas autoridades que no residan en el domicilio </div>
+<div id="t15_3" class="t s2_3">asentado en el registro de electores, la Junta Electoral Nacional podrá proceder en los términos </div>
+<div id="t16_3" class="t s2_3">expuestos en el considerando 5º de la presente.- </div>
+<div id="t17_3" class="t s2_3">Ofíciese a los jueces federales electorales de todo el país, quienes oportunamente comunicarán la </div>
+<div id="t18_3" class="t s2_3">presente a las Juntas Electorales Nacionales. Con lo que se dio por terminado el acto.-</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2934],['t4_3',2934],['t6_3',2933],['t7_3',2933],['t8_3',2934],['t9_3',2933],['ta_3',2933],['tn_3',1548],['to_3',2269],['tp_3',2933],['tq_3',2934],['tr_3',2934],['ts_3',2499],['tt_3',2934],['tu_3',2934],['tv_3',1493],['tw_3',2934],['tx_3',2934],['ty_3',2598],['tz_3',2933],['t10_3',2234],['t11_3',2934],['t12_3',2934],['t13_3',1771],['t14_3',2934],['t15_3',2933],['t16_3',1427],['t17_3',2933],['t18_3',2509]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 45;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

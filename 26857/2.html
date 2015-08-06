@@ -1,0 +1,233 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:246px;}
+#t5_2{left:101px;top:263px;}
+#t6_2{left:101px;top:280px;}
+#t7_2{left:101px;top:298px;}
+#t8_2{left:101px;top:315px;}
+#t9_2{left:101px;top:333px;}
+#ta_2{left:101px;top:367px;}
+#tb_2{left:101px;top:385px;}
+#tc_2{left:101px;top:419px;}
+#td_2{left:101px;top:437px;}
+#te_2{left:101px;top:472px;}
+#tf_2{left:101px;top:489px;}
+#tg_2{left:101px;top:506px;}
+#th_2{left:101px;top:524px;}
+#ti_2{left:101px;top:558px;}
+#tj_2{left:101px;top:576px;}
+#tk_2{left:101px;top:611px;}
+#tl_2{left:101px;top:645px;}
+#tm_2{left:101px;top:663px;}
+#tn_2{left:101px;top:697px;}
+#to_2{left:101px;top:715px;}
+#tp_2{left:101px;top:749px;}
+#tq_2{left:101px;top:767px;}
+#tr_2{left:101px;top:801px;}
+#ts_2{left:101px;top:819px;}
+#tt_2{left:101px;top:854px;}
+#tu_2{left:101px;top:871px;}
+#tv_2{left:101px;top:906px;}
+#tw_2{left:101px;top:923px;}
+#tx_2{left:101px;top:941px;}
+#ty_2{left:101px;top:958px;}
+#tz_2{left:101px;top:993px;}
+#t10_2{left:101px;top:1010px;}
+#t11_2{left:101px;top:1027px;}
+#t12_2{left:101px;top:1045px;}
+#t13_2{left:101px;top:1062px;}
+#t14_2{left:101px;top:1080px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">l) Los rectores, decanos y secretarios de las universidades nacionales; </div>
+<div id="t4_2" class="t s2_2">m) Los funcionarios o empleados con categoría o función no inferior a la de director o equivalente, </div>
+<div id="t5_2" class="t s2_2">que presten servicio en la Administración Pública Nacional, centralizada o descentralizada, las </div>
+<div id="t6_2" class="t s2_2">entidades autárquicas, los bancos y entidades financieras del sistema oficial, las obras sociales </div>
+<div id="t7_2" class="t s2_2">administradas por el Estado, las empresas del Estado, las sociedades del Estado y el personal con </div>
+<div id="t8_2" class="t s2_2">similar categoría o función, designado a propuesta del Estado en las sociedades de economía mixta, </div>
+<div id="t9_2" class="t s2_2">en las sociedades anónimas con participación estatal y en otros entes del sector público; </div>
+<div id="ta_2" class="t s2_2">n) Los funcionarios colaboradores de interventores federales, con categoría o función no inferior a la </div>
+<div id="tb_2" class="t s2_2">de director o equivalente; </div>
+<div id="tc_2" class="t s2_2">o) El personal de los organismos indicados en el inciso h) del presente artículo, con categoría no </div>
+<div id="td_2" class="t s2_2">inferior a la de director o equivalente; </div>
+<div id="te_2" class="t s2_2">p) Todo funcionario o empleado público encargado de otorgar habilitaciones administrativas para el </div>
+<div id="tf_2" class="t s2_2">ejercicio de cualquier actividad, como también todo funcionario o empleado público encargado de </div>
+<div id="tg_2" class="t s2_2">controlar el funcionamiento de dichas actividades o de ejercer cualquier otro control en virtud de un </div>
+<div id="th_2" class="t s2_2">poder de policía; </div>
+<div id="ti_2" class="t s2_2">q) Los funcionarios que integran los organismos de control de los servicios públicos privatizados, con </div>
+<div id="tj_2" class="t s2_2">categoría no inferior a la de director; </div>
+<div id="tk_2" class="t s2_2">r) El personal que se desempeña en el Poder Legislativo, con categoría no inferior a la de director; </div>
+<div id="tl_2" class="t s2_2">s) El personal que cumpla servicios en el Poder Judicial de la Nación y en el Ministerio Público de la </div>
+<div id="tm_2" class="t s2_2">Nación, con categoría no inferior a secretario o equivalente; </div>
+<div id="tn_2" class="t s2_2">t) Todo funcionario o empleado público que integre comisiones de adjudicación de licitaciones, de </div>
+<div id="to_2" class="t s2_2">compra o de recepción de bienes, o participe en la toma de decisiones de licitaciones o compras; </div>
+<div id="tp_2" class="t s2_2">u) Todo funcionario público que tenga por función administrar un patrimonio público o privado, o </div>
+<div id="tq_2" class="t s2_2">controlar o fiscalizar los ingresos públicos cualquiera fuera su naturaleza; </div>
+<div id="tr_2" class="t s2_2">v) Los directores y administradores de las entidades sometidas al control externo del Congreso de la </div>
+<div id="ts_2" class="t s2_2">Nación, de conformidad con lo dispuesto en el artículo 120 de la ley 24.156.”. </div>
+<div id="tt_2" class="t s2_2">ARTICULO 3° — Quedan también comprendidos en los alcances de la presente ley los candidatos a </div>
+<div id="tu_2" class="t s2_2">ejercer cargos públicos electivos nacionales. </div>
+<div id="tv_2" class="t s2_2">ARTICULO 4° — Las declaraciones juradas públicas a que se refiere esta ley serán iguales a aquellas </div>
+<div id="tw_2" class="t s2_2">que se presentan ante la Administración Federal de Ingresos Públicos, no rigiendo para estos casos </div>
+<div id="tx_2" class="t s2_2">el secreto fiscal establecido por la legislación impositiva, con excepción del anexo reservado previsto </div>
+<div id="ty_2" class="t s2_2">en el artículo siguiente. </div>
+<div id="tz_2" class="t s2_2">Las personas referidas en el artículo 5° de la ley 25.188 que no efectúen las declaraciones juradas a </div>
+<div id="t10_2" class="t s2_2">la fecha ante el organismo fiscal, derivadas del ejercicio de la función pública o de cualquier otra </div>
+<div id="t11_2" class="t s2_2">actividad, deberán presentar una declaración de contenido equivalente a la del Impuesto a las </div>
+<div id="t12_2" class="t s2_2">Ganancias, a la del Impuesto sobre los Bienes Personales y si correspondiere otra similar que </div>
+<div id="t13_2" class="t s2_2">presenten en cualquier concepto, a efectos del cumplimiento de las obligaciones establecidas en la </div>
+<div id="t14_2" class="t s2_2">ley, además del anexo reservado correspondiente. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2039],['t4_2',2934],['t5_2',2933],['t6_2',2934],['t7_2',2934],['t8_2',2934],['t9_2',2572],['ta_2',2934],['tb_2',748],['tc_2',2933],['td_2',1100],['te_2',2934],['tf_2',2933],['tg_2',2934],['th_2',484],['ti_2',2933],['tj_2',1069],['tk_2',2855],['tl_2',2934],['tm_2',1738],['tn_2',2934],['to_2',2809],['tp_2',2934],['tq_2',2127],['tr_2',2933],['ts_2',2258],['tt_2',2933],['tu_2',1280],['tv_2',2934],['tw_2',2934],['tx_2',2934],['ty_2',678],['tz_2',2934],['t10_2',2933],['t11_2',2934],['t12_2',2933],['t13_2',2933],['t14_2',1463]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 41;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

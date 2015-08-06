@@ -1,0 +1,244 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load7();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:344px;top:126px;}
+#t2_7{left:342px;top:161px;}
+#t3_7{left:422px;top:238px;}
+#t4_7{left:421px;top:276px;}
+#t5_7{left:101px;top:313px;}
+#t6_7{left:232px;top:313px;}
+#t7_7{left:101px;top:331px;}
+#t8_7{left:101px;top:349px;}
+#t9_7{left:101px;top:386px;}
+#ta_7{left:233px;top:386px;}
+#tb_7{left:101px;top:404px;}
+#tc_7{left:101px;top:441px;}
+#td_7{left:101px;top:459px;}
+#te_7{left:101px;top:476px;}
+#tf_7{left:101px;top:494px;}
+#tg_7{left:101px;top:531px;}
+#th_7{left:101px;top:549px;}
+#ti_7{left:101px;top:566px;}
+#tj_7{left:101px;top:584px;}
+#tk_7{left:101px;top:621px;}
+#tl_7{left:101px;top:639px;}
+#tm_7{left:101px;top:676px;}
+#tn_7{left:218px;top:676px;}
+#to_7{left:101px;top:694px;}
+#tp_7{left:101px;top:731px;}
+#tq_7{left:227px;top:731px;}
+#tr_7{left:101px;top:749px;}
+#ts_7{left:101px;top:766px;}
+#tt_7{left:101px;top:784px;}
+#tu_7{left:101px;top:801px;}
+#tv_7{left:101px;top:819px;}
+#tw_7{left:101px;top:836px;}
+#tx_7{left:101px;top:874px;}
+#ty_7{left:227px;top:874px;}
+#tz_7{left:101px;top:891px;}
+#t10_7{left:101px;top:909px;}
+#t11_7{left:101px;top:926px;}
+#t12_7{left:101px;top:964px;}
+#t13_7{left:231px;top:964px;}
+#t14_7{left:101px;top:981px;}
+#t15_7{left:419px;top:1019px;}
+#t16_7{left:415px;top:1056px;}
+
+.s3_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_7{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_7" class="t s1_7">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_7" class="t s1_7">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_7" class="t s2_7">CAPITULO II </div>
+<div id="t4_7" class="t s3_7">Del nombre </div>
+<div id="t5_7" class="t s3_7">ARTÍCULO 13.- </div>
+<div id="t6_7" class="t s2_7">El nombre constituye un atributo exclusivo del partido. No podrá ser usado por </div>
+<div id="t7_7" class="t s2_7">ningún otro, ni asociación o entidad de cualquier naturaleza dentro del territorio de la Nación. Será </div>
+<div id="t8_7" class="t s2_7">adoptado en el acto de constitución, sin perjuicio de su ulterior cambio o modificación. </div>
+<div id="t9_7" class="t s3_7">ARTÍCULO 14.- </div>
+<div id="ta_7" class="t s2_7">El nombre partidario, su cambio o modificación, deberán ser aprobados por la </div>
+<div id="tb_7" class="t s2_7">Justicia Federal con competencia electoral, previo cumplimiento de las disposiciones legales. </div>
+<div id="tc_7" class="t s2_7">Solicitado el reconocimiento del derecho al nombre adoptado, el juez federal con competencia </div>
+<div id="td_7" class="t s2_7">electoral dispondrá la notificación a los apoderados de los partidos y la publicación por tres (3) días </div>
+<div id="te_7" class="t s2_7">en el Boletín Oficial de la Nación de la denominación, así como la fecha en que fue adoptada al </div>
+<div id="tf_7" class="t s2_7">efecto de la oposición que pudiere formular otro partido o el procurador fiscal federal. </div>
+<div id="tg_7" class="t s2_7">Los partidos reconocidos o en constitución podrán controlar y oponerse al reconocimiento del </div>
+<div id="th_7" class="t s2_7">derecho al nombre con anterioridad a que el juez federal con competencia electoral resuelva en </div>
+<div id="ti_7" class="t s2_7">definitiva o en el acto de la audiencia establecida en esta ley, con cuya comparecencia tendrán el </div>
+<div id="tj_7" class="t s2_7">derecho de apelar sin perjuicio del ejercicio ulterior de las acciones pertinentes. </div>
+<div id="tk_7" class="t s2_7">La resolución definitiva deberá ser comunicada a la Cámara Nacional Electoral a los fines del artículo </div>
+<div id="tl_7" class="t s2_7">39. </div>
+<div id="tm_7" class="t s3_7">ARTÍCULO 15.</div>
+<div id="tn_7" class="t s2_7">- La denominación "partido" podrá ser utilizada únicamente por las agrupaciones </div>
+<div id="to_7" class="t s2_7">reconocidas como tales, o en constitución. </div>
+<div id="tp_7" class="t s3_7">ARTÍCULO 16.- </div>
+<div id="tq_7" class="t s2_7">El nombre no podrá contener designaciones personales, ni derivadas de ellas, ni las </div>
+<div id="tr_7" class="t s2_7">expresiones "argentino", "nacional", "internacional" ni sus derivados, ni aquellas cuyo significado </div>
+<div id="ts_7" class="t s2_7">afecten o puedan afectar las relaciones internacionales de la Nación, ni palabras que exterioricen </div>
+<div id="tt_7" class="t s2_7">antagonismos raciales, de clases, religiosos, o conduzcan a provocarlos. Deberá distinguirse </div>
+<div id="tu_7" class="t s2_7">razonable y claramente del nombre de cualquier otro partido, asociación o entidad. En caso de </div>
+<div id="tv_7" class="t s2_7">escisión, el grupo desprendido no tendrá derecho a emplear, total o parcialmente, el nombre </div>
+<div id="tw_7" class="t s2_7">originario del partido o agregarle aditamentos. </div>
+<div id="tx_7" class="t s3_7">ARTÍCULO 17.- </div>
+<div id="ty_7" class="t s2_7">Cuando por causa de caducidad se cancelare la personalidad política de un partido, </div>
+<div id="tz_7" class="t s2_7">o fuere declarado extinguido, su nombre no podrá ser usado por ningún otro partido, asociación o </div>
+<div id="t10_7" class="t s2_7">entidad de cualquier naturaleza, hasta transcurridos cuatro (4) años en el primer caso y ocho (8) en </div>
+<div id="t11_7" class="t s2_7">el segundo desde la sentencia firme respectiva. </div>
+<div id="t12_7" class="t s3_7">ARTÍCULO 18.- </div>
+<div id="t13_7" class="t s2_7">Los partidos tendrán derecho al uso permanente de un número de identificación </div>
+<div id="t14_7" class="t s2_7">que quedará registrado, adjudicándose en el orden en que obtenga su reconocimiento. </div>
+<div id="t15_7" class="t s2_7">CAPITULO III </div>
+<div id="t16_7" class="t s3_7">Del domicilio </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7"><object width="935" height="1210" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld7" type="text/javascript">
+
+var isIE = false;
+var f7 = [['t1_7',987],['t2_7',1004],['t3_7',361],['t4_7',373],['t5_7',494],['t6_7',2410],['t7_7',2934],['t8_7',2508],['t9_7',497],['ta_7',2403],['tb_7',2678],['tc_7',2934],['td_7',2933],['te_7',2934],['tf_7',2486],['tg_7',2933],['th_7',2934],['ti_7',2934],['tj_7',2308],['tk_7',2934],['tm_7',468],['tn_7',2465],['to_7',1228],['tp_7',484],['tq_7',2429],['tr_7',2933],['ts_7',2934],['tt_7',2934],['tu_7',2933],['tv_7',2933],['tw_7',1350],['tx_7',485],['ty_7',2427],['tz_7',2933],['t10_7',2934],['t11_7',1377],['t12_7',492],['t13_7',2413],['t14_7',2518],['t15_7',385],['t16_7',417]];
+function load7(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f7);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 43;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_7");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

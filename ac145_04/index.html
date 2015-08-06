@@ -1,0 +1,72 @@
+<!DOCTYPE html >
+<html lang="es-ar">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Ac 145 - 04 colaboraci�n</title>
+<link rel="stylesheet" type="text/css" href="assets/IDRViewer.css">
+<script type="text/javascript">
+var isIE = false;
+function idrLoad() {
+	var bounds = [[935,1210],[935,1210]];
+	IDRViewer.makeNavBar(2,'.jpg', bounds, true);
+}
+</script>
+<script src="assets/IDRViewer.js" type="text/javascript"></script>
+<script src="assets/jquery-1.11.2.min.js" type="text/javascript"></script>
+</head>
+
+<!-- Background pattern courtesy of http://subtlepatterns.com/grey-washed-wall/ -->
+<body style="background:url('assets/bg.png') repeat scroll 0 0 transparent;"><div id="left">
+<div id="leftNav">
+	<div id="btnThumbnails" onclick="IDRViewer.toggleOutlines(false)" title="Miniaturas" class="navBtn inactive"></div>
+	<div id="btnOutlines" onclick="IDRViewer.toggleOutlines(true)" title="Marcador" class="navBtn inactive"></div>
+</div>
+<div id="leftContent">
+	<div id="thumbnailPanel"></div>
+	<div id="outlinePanel"></div>
+</div>
+</div>
+
+<div id="main">
+
+<div id="mainNav">
+	<div id="btnSideToggle" onclick="IDRViewer.toggleThumbnails();" class="navBtn"><div title="Sidebar"></div></div>
+
+	<div id="btnPrev" title="Pagina Anterior" onclick="IDRViewer.prev()" class="navBtn"></div>
+	<select id="goBtn" onchange="IDRViewer.goToPage(0)">
+
+	</select>
+	<span id="pgCount"></span>
+	<div id="btnNext" title="Pagina Siguiente" onclick="IDRViewer.next()" class="navBtn"></div>
+
+	<div id="btnSelect" title="Seleccionar" onclick="IDRViewer.setSelectMode(0)" class="navBtn"></div>
+	<div id="btnMove" title="Mover" onclick="IDRViewer.setSelectMode(1)" class="navBtn"></div>
+
+	<div id="btnZoomOut" title="Disminuir Zoom" onclick="IDRViewer.zoomOut()" class="navBtn"></div>
+	<select id="zoomBtn" onchange="IDRViewer.zoomUpdate()">
+		<option value="0">100%</option>
+		<option value="1">Tamano Real</option>
+		<option value="2">Ajustar Ancho</option>
+		<option value="3">Ajustar Altura</option>
+		<option value="4">Ajustar a la Pagina</option>
+		<option value="5">Automatico</option>
+	</select>
+	<div id="btnZoomIn" title="Aumentar Zoom" onclick="IDRViewer.zoomIn()" class="navBtn"></div>
+	<div id="btnFullscreen" title="Pantalla Completa" onclick="IDRViewer.toggleFullScreen();" class="navBtn closed"></div>
+</div>
+
+<div id="mainContent">
+
+<div id="contentContainer">
+<div id="jpedal"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">idrLoad();</script>
+<a href="../index.html" title="Volver al Inicio"><img border="0" width="50" height="51" src="../images/volver.png" style="position: fixed; bottom: 205px; right: 0px;" /></a>
+<a href="javascript:history.back()" title="Atras"><img border="0" width="50" height="51" src="../images/atras.png" style="position: fixed; bottom: 150px; right: 0px;" /></a>
+</body>
+</html>
+

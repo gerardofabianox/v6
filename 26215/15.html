@@ -1,0 +1,307 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load15();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_15{left:333px;top:128px;}
+#t2_15{left:331px;top:147px;}
+#t3_15{left:101px;top:207px;}
+#t4_15{left:228px;top:207px;}
+#t5_15{left:511px;top:207px;}
+#t6_15{left:101px;top:225px;}
+#t7_15{left:101px;top:242px;}
+#t8_15{left:101px;top:274px;}
+#t9_15{left:101px;top:291px;}
+#ta_15{left:101px;top:323px;}
+#tb_15{left:240px;top:323px;}
+#tc_15{left:449px;top:323px;}
+#td_15{left:101px;top:341px;}
+#te_15{left:101px;top:358px;}
+#tf_15{left:234px;top:390px;}
+#tg_15{left:101px;top:421px;}
+#th_15{left:222px;top:421px;}
+#ti_15{left:401px;top:421px;}
+#tj_15{left:101px;top:439px;}
+#tk_15{left:101px;top:456px;}
+#tl_15{left:101px;top:474px;}
+#tm_15{left:101px;top:491px;}
+#tn_15{left:101px;top:523px;}
+#to_15{left:240px;top:523px;}
+#tp_15{left:358px;top:523px;}
+#tq_15{left:101px;top:540px;}
+#tr_15{left:101px;top:558px;}
+#ts_15{left:101px;top:575px;}
+#tt_15{left:101px;top:593px;}
+#tu_15{left:101px;top:610px;}
+#tv_15{left:101px;top:642px;}
+#tw_15{left:221px;top:642px;}
+#tx_15{left:325px;top:642px;}
+#ty_15{left:101px;top:659px;}
+#tz_15{left:434px;top:659px;}
+#t10_15{left:101px;top:677px;}
+#t11_15{left:101px;top:708px;}
+#t12_15{left:221px;top:708px;}
+#t13_15{left:444px;top:708px;}
+#t14_15{left:101px;top:726px;}
+#t15_15{left:101px;top:743px;}
+#t16_15{left:101px;top:775px;}
+#t17_15{left:223px;top:775px;}
+#t18_15{left:383px;top:775px;}
+#t19_15{left:101px;top:792px;}
+#t1a_15{left:101px;top:810px;}
+#t1b_15{left:101px;top:827px;}
+#t1c_15{left:101px;top:859px;}
+#t1d_15{left:223px;top:859px;}
+#t1e_15{left:243px;top:859px;}
+#t1f_15{left:350px;top:859px;}
+#t1g_15{left:101px;top:876px;}
+#t1h_15{left:101px;top:894px;}
+#t1i_15{left:101px;top:911px;}
+#t1j_15{left:101px;top:928px;}
+#t1k_15{left:101px;top:946px;}
+#t1l_15{left:101px;top:963px;}
+#t1m_15{left:101px;top:981px;}
+#t1n_15{left:101px;top:998px;}
+#t1o_15{left:101px;top:1030px;}
+#t1p_15{left:101px;top:1062px;}
+#t1q_15{left:217px;top:1062px;}
+#t1r_15{left:246px;top:1062px;}
+#t1s_15{left:267px;top:1062px;}
+#t1t_15{left:405px;top:1062px;}
+#t1u_15{left:101px;top:1079px;}
+
+.s2_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s4_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_15{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_15" class="t s1_15">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_15" class="t s1_15">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_15" class="t s2_15">ARTÍCULO 51. </div>
+<div id="t4_15" class="t s3_15">— Gastos realizados por anticipado.</div>
+<div id="t5_15" class="t s3_15">Aquellas compras o contrataciones que se </div>
+<div id="t6_15" class="t s3_15">realicen con anterioridad al comienzo de la campaña deberán estar debidamente respaldadas e </div>
+<div id="t7_15" class="t s3_15">informadas en notas en los informes de los artículos 54 y 58 del Título IV de la presente ley. </div>
+<div id="t8_15" class="t s3_15">Las sumas que representen estas adquisiciones formarán parte del límite de gastos previstos en el </div>
+<div id="t9_15" class="t s3_15">artículo 45. </div>
+<div id="ta_15" class="t s2_15">ARTÍCULO 52. — </div>
+<div id="tb_15" class="t s3_15">Límites de gastos y aportes.</div>
+<div id="tc_15" class="t s3_15">A los fines del cálculo del monto máximo de gastos y </div>
+<div id="td_15" class="t s3_15">aportes previstos en la presente ley, los bienes y servicios serán computados conforme al valor y </div>
+<div id="te_15" class="t s3_15">prácticas del mercado. </div>
+<div id="tf_15" class="t s3_15">Título IV. Del control de financiamiento de campañas electorales </div>
+<div id="tg_15" class="t s2_15">ARTÍCULO 53. </div>
+<div id="th_15" class="t s3_15">— Información aportes.</div>
+<div id="ti_15" class="t s3_15">En el plazo del artículo 54, el Ministerio del Interior deberá </div>
+<div id="tj_15" class="t s3_15">informar al juez federal con competencia electoral correspondiente, el monto de los aportes, </div>
+<div id="tk_15" class="t s3_15">subsidios y franquicias públicos a la campaña electoral, discriminados por rubro, monto y partido y </div>
+<div id="tl_15" class="t s3_15">con indicación de las sumas ya entregadas y las pendientes de pago. En este último caso, deberá </div>
+<div id="tm_15" class="t s3_15">indicarse la fecha estimada en que se harán efectivas y las causas de la demora. </div>
+<div id="tn_15" class="t s2_15">ARTÍCULO 54. — </div>
+<div id="to_15" class="t s3_15">Informe previo.</div>
+<div id="tp_15" class="t s3_15">Diez (10) días antes de la celebración del comicio, el presidente y </div>
+<div id="tq_15" class="t s3_15">tesorero del partido y los responsables económico-financiero y político de la campaña deberán </div>
+<div id="tr_15" class="t s3_15">presentar, en forma conjunta, ante el juzgado federal con competencia electoral de distrito </div>
+<div id="ts_15" class="t s3_15">correspondiente, un informe detallado de los aportes públicos y privados recibidos, con indicación de </div>
+<div id="tt_15" class="t s3_15">origen y monto, así como de los gastos incurridos con motivo de la campaña electoral, con </div>
+<div id="tu_15" class="t s3_15">indicación de los ingresos y egresos que estén previstos hasta la finalización de la misma. </div>
+<div id="tv_15" class="t s2_15">ARTÍCULO 55. </div>
+<div id="tw_15" class="t s3_15">— Publicidad.</div>
+<div id="tx_15" class="t s3_15">El juez federal con competencia electoral correspondiente ordenará la </div>
+<div id="ty_15" class="t s3_15">publicación en el Boletín Oficial del sitio web</div>
+<div id="tz_15" class="t s3_15">donde puede consultarse el informe previo del artículo </div>
+<div id="t10_15" class="t s3_15">54, en la semana previa a la fecha fijada para la realización del comicio. </div>
+<div id="t11_15" class="t s2_15">ARTÍCULO 56. </div>
+<div id="t12_15" class="t s3_15">— Procedimiento de consulta.</div>
+<div id="t13_15" class="t s3_15">El informe previo podrá ser consultado en la sede del </div>
+<div id="t14_15" class="t s3_15">juzgado sin limitación alguna de acuerdo a lo establecido en el primer párrafo del artículo 25 de la </div>
+<div id="t15_15" class="t s3_15">presente ley. </div>
+<div id="t16_15" class="t s2_15">ARTÍCULO 57. </div>
+<div id="t17_15" class="t s3_15">— Falta información.</div>
+<div id="t18_15" class="t s3_15">Todo partido político o alianza electoral que haya oficializado </div>
+<div id="t19_15" class="t s3_15">candidatos está obligado a presentar el informe previo aunque no haya recibido hasta el plazo que </div>
+<div id="t1a_15" class="t s3_15">fija el artículo 54 de la presente ley, aportes públicos ni privados. Esto no obsta a que presupueste </div>
+<div id="t1b_15" class="t s3_15">lo que estime se gastará hasta el momento del comicio. </div>
+<div id="t1c_15" class="t s2_15">ARTÍCULO 58. </div>
+<div id="t1d_15" class="t s3_15">— </div>
+<div id="t1e_15" class="t s4_15">Informe final.</div>
+<div id="t1f_15" class="t s3_15">Noventa (90) días después de finalizada la elección, el tesorero y </div>
+<div id="t1g_15" class="t s3_15">los responsables económico-financieros de la campaña deberán presentar, en forma conjunta, ante </div>
+<div id="t1h_15" class="t s3_15">la justicia federal con competencia electoral del distrito correspondiente, un informe final detallado </div>
+<div id="t1i_15" class="t s3_15">de los aportes públicos y privados recibidos, que deberá contener y precisar claramente su </div>
+<div id="t1j_15" class="t s3_15">naturaleza, origen, nombre y documento del donante, destino y monto, así como el total de los </div>
+<div id="t1k_15" class="t s3_15">gastos incurridos con motivo de la campaña electoral, detallados por rubros y los comprobantes de </div>
+<div id="t1l_15" class="t s3_15">egresos con las facturas correspondientes. Deberá indicarse también la fecha de apertura y cierre de </div>
+<div id="t1m_15" class="t s3_15">la cuenta bancaria abierta para la campaña para el caso de las alianzas electorales, debiendo poner </div>
+<div id="t1n_15" class="t s3_15">a disposición la correspondiente documentación respaldatoria. </div>
+<div id="t1o_15" class="t s4_15">(Artículo modificado por art. 64 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t1p_15" class="t s2_15">ARTÍCULO 58 </div>
+<div id="t1q_15" class="t s5_15">bis </div>
+<div id="t1r_15" class="t s2_15">— </div>
+<div id="t1s_15" class="t s4_15">Rubros de gastos.</div>
+<div id="t1t_15" class="t s3_15">En el informe final al que se refiere el artículo anterior, se </div>
+<div id="t1u_15" class="t s3_15">consignarán al menos los siguientes rubros: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg15Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg15"><object width="935" height="1210" data="15/15.svg" type="image/svg+xml" id="pdf15" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld15" type="text/javascript">
+
+var isIE = false;
+var f15 = [['t1_15',1076],['t2_15',1095],['t3_15',473],['t4_15',1098],['t5_15',1292],['t6_15',2933],['t7_15',2684],['t8_15',2934],['t9_15',329],['ta_15',535],['tb_15',818],['tc_15',1539],['td_15',2934],['te_15',655],['tf_15',1866],['tg_15',461],['th_15',690],['ti_15',1735],['tj_15',2934],['tk_15',2934],['tl_15',2934],['tm_15',2345],['tn_15',535],['to_15',451],['tp_15',1907],['tq_15',2933],['tr_15',2933],['ts_15',2933],['tt_15',2934],['tu_15',2607],['tv_15',459],['tw_15',391],['tx_15',2037],['ty_15',1307],['tz_15',1602],['t10_15',2093],['t11_15',459],['t12_15',867],['t13_15',1562],['t14_15',2933],['t15_15',377],['t16_15',463],['t17_15',611],['t18_15',1807],['t19_15',2933],['t1a_15',2933],['t1b_15',1620],['t1c_15',462],['t1e_15',400],['t1f_15',1939],['t1g_15',2933],['t1h_15',2933],['t1i_15',2933],['t1j_15',2933],['t1k_15',2934],['t1l_15',2934],['t1m_15',2934],['t1n_15',1801],['t1o_15',2053],['t1p_15',440],['t1s_15',529],['t1t_15',1717],['t1u_15',1277]];
+function load15(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f15);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 67;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_15");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

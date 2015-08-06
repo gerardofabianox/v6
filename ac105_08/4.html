@@ -1,0 +1,241 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:101px;top:278px;}
+#t7_4{left:101px;top:295px;}
+#t8_4{left:101px;top:312px;}
+#t9_4{left:101px;top:330px;}
+#ta_4{left:101px;top:362px;}
+#tb_4{left:101px;top:379px;}
+#tc_4{left:101px;top:396px;}
+#td_4{left:101px;top:414px;}
+#te_4{left:101px;top:445px;}
+#tf_4{left:101px;top:463px;}
+#tg_4{left:101px;top:480px;}
+#th_4{left:101px;top:498px;}
+#ti_4{left:101px;top:515px;}
+#tj_4{left:101px;top:533px;}
+#tk_4{left:101px;top:564px;}
+#tl_4{left:101px;top:582px;}
+#tm_4{left:101px;top:599px;}
+#tn_4{left:101px;top:631px;}
+#to_4{left:101px;top:648px;}
+#tp_4{left:101px;top:666px;}
+#tq_4{left:101px;top:698px;}
+#tr_4{left:101px;top:715px;}
+#ts_4{left:101px;top:732px;}
+#tt_4{left:101px;top:750px;}
+#tu_4{left:101px;top:767px;}
+#tv_4{left:101px;top:785px;}
+#tw_4{left:101px;top:816px;}
+#tx_4{left:101px;top:834px;}
+#ty_4{left:101px;top:851px;}
+#tz_4{left:101px;top:869px;}
+#t10_4{left:101px;top:886px;}
+#t11_4{left:101px;top:903px;}
+#t12_4{left:101px;top:921px;}
+#t13_4{left:101px;top:953px;}
+#t14_4{left:101px;top:970px;}
+#t15_4{left:101px;top:1002px;}
+#t16_4{left:101px;top:1019px;}
+#t17_4{left:101px;top:1037px;}
+#t18_4{left:101px;top:1054px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">En tal sentido, ya con anterioridad al dictado de la norma transcripta, este Tribunal había precisado </div>
+<div id="t4_4" class="t s2_4">que los procesos de control de las rendiciones de cuenta de los gastos de campaña deben finalizar </div>
+<div id="t5_4" class="t s2_4">antes de que se inicie el próximo proceso electoral (Fallos CNE 3356/04 y 3709/06).- </div>
+<div id="t6_4" class="t s2_4">Atendiendo particularmente a esa pauta -traducida actualmente en mandato legal- y teniendo en </div>
+<div id="t7_4" class="t s2_4">cuenta la experiencia acumulada desde la aplicación del régimen que precedió a la ley 26.215 </div>
+<div id="t8_4" class="t s2_4">(25.600), corresponde establecer algunas reglas uniformes para el trámite de los referidos </div>
+<div id="t9_4" class="t s2_4">procesos.- </div>
+<div id="ta_4" class="t s2_4">12°) Que en muchos casos se advierten dilaciones innecesarias por la producción de intimaciones no </div>
+<div id="tb_4" class="t s2_4">requeridas por la ley como condición para la aplicación de las medidas conminatorias que ella </div>
+<div id="tc_4" class="t s2_4">establece (arts. 67, ley 26.215) frente a los casos de falta de presentación de las rendiciones de </div>
+<div id="td_4" class="t s2_4">cuenta.- </div>
+<div id="te_4" class="t s2_4">Cabe destacar, en este sentido, que -como se desprende de la doctrina del Tribunal- el vencimiento </div>
+<div id="tf_4" class="t s2_4">de los plazos determinados en los artículos 23, 54 y 58 de la ley 26.215 (previamente arts. 50, 54 y </div>
+<div id="tg_4" class="t s2_4">58 de la ley 25.600) se produce por el mero agotamiento del término legal y no nace de las </div>
+<div id="th_4" class="t s2_4">intimaciones que -"con generosidad" (Fallo 3436/05 y 3450/05)- puedan efectuar los señores </div>
+<div id="ti_4" class="t s2_4">magistrados (Fallos CNE 3436/05, 3449/05, 3450/05, 3682/06, 3761/06, 3764/06, 3928/07, </div>
+<div id="tj_4" class="t s2_4">4003/08 y 4032/08).- </div>
+<div id="tk_4" class="t s2_4">Por ello, para propiciar el cumplimiento oportuno de las presentaciones y evitar la postergación del </div>
+<div id="tl_4" class="t s2_4">control judicial que a su respecto debe desarrollarse, cabe precisar el trámite correspondiente a la </div>
+<div id="tm_4" class="t s2_4">falta de presentación oportuna de las rendiciones de cuentas.- </div>
+<div id="tn_4" class="t s2_4">13°) Que existen, por otra parte, supuestos en los cuales se remiten al Cuerpo de Auditores -para </div>
+<div id="to_4" class="t s2_4">su fiscalización- informes de financiamiento de campaña correspondientes a agrupaciones que no </div>
+<div id="tp_4" class="t s2_4">debían presentarlos por no haber intervenido en la elección.- </div>
+<div id="tq_4" class="t s2_4">En efecto, con motivo del proceso electoral de 2007, muchos partidos de distrito que participaron </div>
+<div id="tr_4" class="t s2_4">únicamente en los comicios legislativos y que no integran un partido nacional que haya intervenido -</div>
+<div id="ts_4" class="t s2_4">solo o en coalición con otros- en la elección presidencial, ni formaron parte de una confederación de </div>
+<div id="tt_4" class="t s2_4">ese orden para competir en dicha elección, presentaron -presuntamente por error-informes de </div>
+<div id="tu_4" class="t s2_4">campaña para esa categoría. En estos informes generalmente se indica que no tuvieron ningún tipo </div>
+<div id="tv_4" class="t s2_4">de ingreso ni de egreso.- </div>
+<div id="tw_4" class="t s2_4">En tales condiciones, atento a que la presentación de los informes de financiamiento de campaña es </div>
+<div id="tx_4" class="t s2_4">exigible a las agrupaciones que participaron de la elección, oficializando candidaturas por si o a </div>
+<div id="ty_4" class="t s2_4">través de las entidades que integran -partidos nacionales, alianzas o confederaciones- (arg. de </div>
+<div id="tz_4" class="t s2_4">Fallos CNE 3386/04, 3494/05, 3680/06, 3824/07, entre muchos otros) , o bien, a través de sus </div>
+<div id="t10_4" class="t s2_4">distritos, para el caso de las agrupaciones nacionales (Fallos CNE 3449/05 y 4009/08) corresponde </div>
+<div id="t11_4" class="t s2_4">adoptar las medidas necesarias para evitar el dispendio jurisdiccional que supone la tramitación de </div>
+<div id="t12_4" class="t s2_4">actuaciones carentes de toda relevancia en el marco de la ley 26.215.- </div>
+<div id="t13_4" class="t s2_4">14°) Que otro género de demoras se advierte en la tramitación del control de las rendiciones </div>
+<div id="t14_4" class="t s2_4">presentadas.- </div>
+<div id="t15_4" class="t s2_4">En primer término, ocurre con frecuencia que ante la falta de contestación -en el plazo que los </div>
+<div id="t16_4" class="t s2_4">señores jueces suelen fijar- a las observaciones o requerimientos formulados en los dictámenes de </div>
+<div id="t17_4" class="t s2_4">auditoria, se reiteran los traslados o se disponen intimaciones para que dicha contestación sea </div>
+<div id="t18_4" class="t s2_4">efectuada, extendiéndose el trámite más de lo necesario.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2933],['t4_4',2933],['t5_4',2475],['t6_4',2933],['t7_4',2934],['t8_4',2933],['ta_4',2933],['tb_4',2933],['tc_4',2933],['te_4',2933],['tf_4',2935],['tg_4',2933],['th_4',2934],['ti_4',2934],['tj_4',639],['tk_4',2934],['tl_4',2934],['tm_4',1810],['tn_4',2933],['to_4',2934],['tp_4',1768],['tq_4',2933],['tr_4',2933],['ts_4',2933],['tt_4',2934],['tu_4',2934],['tv_4',726],['tw_4',2933],['tx_4',2933],['ty_4',2934],['tz_4',2933],['t10_4',2933],['t11_4',2934],['t12_4',2057],['t13_4',2933],['t15_4',2934],['t16_4',2933],['t17_4',2933],['t18_4',1687]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 45;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

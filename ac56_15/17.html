@@ -1,0 +1,415 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load17();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_17{left:673px;top:53px;}
+#t2_17{left:135px;top:113px;}
+#t3_17{left:241px;top:113px;}
+#t4_17{left:120px;top:83px;}
+#t5_17{left:339px;top:83px;}
+#t6_17{left:165px;top:147px;letter-spacing:1px;}
+#t7_17{left:576px;top:74px;}
+#t8_17{left:576px;top:90px;}
+#t9_17{left:576px;top:115px;}
+#ta_17{left:576px;top:138px;}
+#tb_17{left:637px;top:138px;}
+#tc_17{left:576px;top:159px;}
+#td_17{left:617px;top:154px;}
+#te_17{left:576px;top:181px;}
+#tf_17{left:634px;top:181px;}
+#tg_17{left:324px;top:254px;}
+#th_17{left:60px;top:333px;}
+#ti_17{left:81px;top:1174px;}
+#tj_17{left:800px;top:554px;}
+#tk_17{left:565px;top:554px;}
+#tl_17{left:75px;top:545px;}
+#tm_17{left:119px;top:560px;}
+#tn_17{left:365px;top:545px;}
+#to_17{left:393px;top:561px;}
+#tp_17{left:436px;top:1289px;letter-spacing:1px;}
+#tq_17{left:436px;top:1303px;letter-spacing:1px;}
+#tr_17{left:436px;top:1327px;letter-spacing:1px;}
+#ts_17{left:445px;top:1407px;}
+#tt_17{left:67px;top:1289px;letter-spacing:1px;}
+#tu_17{left:67px;top:1303px;letter-spacing:1px;}
+#tv_17{left:67px;top:1327px;letter-spacing:1px;}
+#tw_17{left:76px;top:1407px;}
+#tx_17{left:63px;top:366px;}
+#ty_17{left:841px;top:366px;}
+#tz_17{left:63px;top:393px;}
+#t10_17{left:63px;top:421px;}
+#t11_17{left:63px;top:448px;}
+#t12_17{left:81px;top:1143px;}
+#t13_17{left:97px;top:181px;}
+#t14_17{left:803px;top:13px;}
+#t15_17{left:821px;top:28px;}
+#t16_17{left:86px;top:1474px;}
+#t17_17{left:86px;top:1494px;}
+
+.s7_17{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s14_17{
+	FONT-SIZE: 53px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed17;
+	color: rgb(35,31,32);
+}
+
+.s8_17{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: UNCHNP-HelveticaNeue17;
+	color: rgb(35,31,32);
+}
+
+.s15_17{
+	FONT-SIZE: 53px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo17;
+	color: rgb(35,31,32);
+}
+
+.s5_17{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s12_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(35,31,32);
+}
+
+.s10_17{
+	FONT-SIZE: 128px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(255,255,255);
+	FONT-WEIGHT: bold;
+}
+
+.s11_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s3_17{
+	FONT-SIZE: 107px;
+	FONT-FAMILY: TimesNewRomanPS-BoldMT;
+	color: rgb(37,64,143);
+	FONT-WEIGHT: bold;
+}
+
+.s17_17{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPS-BoldMT;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s1_17{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: KLEEDJ-Frutiger75-Black17;
+	color: rgb(255,255,255);
+}
+
+.s6_17{
+	FONT-SIZE: 66px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s16_17{
+	FONT-SIZE: 71px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo17;
+	color: rgb(35,31,32);
+}
+
+.s9_17{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s13_17{
+	FONT-SIZE: 55px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed17;
+	color: rgb(35,31,32);
+}
+
+.s18_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: CourierNewPS-BoldMT;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s19_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: EKFPXV-CourierNewPS-BoldMT17;
+	color: rgb(35,31,32);
+}
+
+.s4_17{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: TimesNewRomanPS-BoldMT;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s2_17{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPS-BoldMT;
+	color: rgb(37,64,143);
+	FONT-WEIGHT: bold;
+}
+
+.s20_17{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: EKFPXV-MyriadPro-Bold17;
+	color: rgb(238,29,35);
+}
+
+.v1_17{
+-webkit-transform: scale(0.25, 0,28);
+-ms-transform: scale(0.25, 0,28);
+-moz-transform: scale(0.25, 0,28);
+-o-transform: scale(0.25, 0,28);
+}
+
+.v3_17{
+-webkit-transform: scale(0.25, 0,28);
+-ms-transform: scale(0.25, 0,28);
+-moz-transform: scale(0.25, 0,28);
+-o-transform: scale(0.25, 0,28);
+}
+
+.v2_17{
+-webkit-transform: scale(0.25, 0,28);
+-ms-transform: scale(0.25, 0,28);
+-moz-transform: scale(0.25, 0,28);
+-o-transform: scale(0.25, 0,28);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts17" type="text/css" >
+
+@font-face {
+	font-family: EKFPXV-Helvetica-Condensed-Bo17;
+	src :url("17/fonts/EKFPXV-Helvetica-Condensed-Bo.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-CourierNewPS-BoldMT17;
+	src :url("17/fonts/EKFPXV-CourierNewPS-BoldMT.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-MyriadPro-Bold17;
+	src :url("17/fonts/EKFPXV-MyriadPro-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: KLEEDJ-Frutiger75-Black17;
+	src :url("17/fonts/KLEEDJ-Frutiger75-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-Helvetica-Condensed17;
+	src :url("17/fonts/UNCHNP-Helvetica-Condensed.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-HelveticaNeue17;
+	src :url("17/fonts/UNCHNP-HelveticaNeue.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_17" class="t v1_17 s1_17">SECCION ELECTORAL</div>
+<div id="t2_17" class="t s2_17">REGISTRO </div>
+<div id="t3_17" class="t s2_17">NACIONAL DE ELECTORES</div>
+<div id="t4_17" class="t s3_17">REPÚBLICA </div>
+<div id="t5_17" class="t s3_17">ARGENTINA</div>
+<div id="t6_17" class="t s4_17">CÁMARA NACIONAL ELECTORAL</div>
+<div id="t7_17" class="t v2_17 s5_17">DISTRITO:</div>
+<div id="t8_17" class="t v3_17 s6_17">CAPITAL FEDERAL</div>
+<div id="t9_17" class="t s7_17">SECCION 03 / COMUNA 3</div>
+<div id="ta_17" class="t s8_17">CIRCUITO: </div>
+<div id="tb_17" class="t s7_17">0030</div>
+<div id="tc_17" class="t s8_17">MESA: </div>
+<div id="td_17" class="t s9_17">1234</div>
+<div id="te_17" class="t s8_17">ESCUELA: </div>
+<div id="tf_17" class="t s7_17">83242679</div>
+<div id="tg_17" class="t s10_17">ACTA DE APERTURA</div>
+<div id="th_17" class="t s11_17">Articulo 83 - Código Electoral Nacional.</div>
+<div id="ti_17" class="t s12_17">Presidente de esta mesa de votos, declara abierto el acto electoral.</div>
+<div id="tj_17" class="t s13_17">FIRMA</div>
+<div id="tk_17" class="t s13_17">NÚMERO DE DOCUMENTO</div>
+<div id="tl_17" class="t s13_17">PARTIDO, CONFEDERACIÓN O ALIANZA </div>
+<div id="tm_17" class="t s13_17">(N° y denominación) </div>
+<div id="tn_17" class="t s13_17">NOMBRE Y APELLIDO </div>
+<div id="to_17" class="t s13_17">DEL FISCAL</div>
+<div id="tp_17" class="t s14_17">Firma </div>
+<div id="tq_17" class="t s14_17">Presidente</div>
+<div id="tr_17" class="t s15_17">Nombre Apellido</div>
+<div id="ts_17" class="t s16_17">D.N.I.</div>
+<div id="tt_17" class="t s14_17">Firma </div>
+<div id="tu_17" class="t s14_17">Suplente</div>
+<div id="tv_17" class="t s15_17">Nombre Apellido</div>
+<div id="tw_17" class="t s16_17">D.N.I.</div>
+<div id="tx_17" class="t s12_17">En _______________________________, a los 9 días del mes de agosto del año dos mil quince, siendo las </div>
+<div id="ty_17" class="t s12_17">horas en </div>
+<div id="tz_17" class="t s12_17">virtud de las respectivasen virtud de las respectivas leyes de aplicación que fijan este día para la realización de elecciones en </div>
+<div id="t10_17" class="t s12_17">este distrito y en presencia del Suplente _______________________________________________________ (DNI N </div>
+<div id="t11_17" class="t s12_17">__________________), y de los Fiscales de los Partidos Políticos, Confederaciones y Alianzas:</div>
+<div id="t12_17" class="t s12_17">El que suscribe, ____________________________________________________________________________________</div>
+<div id="t13_17" class="t s17_17">ELECCIONES PRIMARIAS - 9 DE AGOSTO DE 2015</div>
+<div id="t14_17" class="t s18_17">Ac. 56/15</div>
+<div id="t15_17" class="t s19_17">Anexo І</div>
+<div id="t16_17" class="t s20_17">SR. PRESIDENTE:</div>
+<div id="t17_17" class="t s20_17">LUEGO DE LA FIRMA DEL ACTA, COMUNICAR AL DELEGADO PARA QUE SE INFORME A LA JUSTICIA ELECTORAL</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg17Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg17"><object width="935" height="1540" data="17/17.svg" type="image/svg+xml" id="pdf17" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld17" type="text/javascript">
+
+var isIE = false;
+var f17 = [['t1_17',323],['t3_17',991],['t6_17',1168],['t8_17',620],['t9_17',584],['tg_17',1300],['th_17',1144],['ti_17',1824],['tk_17',589],['tl_17',877],['tm_17',449],['tn_17',485],['to_17',261],['tr_17',388],['tv_17',388],['tx_17',2878],['ty_17',236],['tz_17',3348],['t10_17',3349],['t11_17',2592],['t12_17',3306],['t13_17',1758],['t14_17',330],['t15_17',256],['t16_17',496],['t17_17',3272]];
+function load17(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f17);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 44;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_17");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

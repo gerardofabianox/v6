@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:300px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:384px;}
+#tc_1{left:101px;top:402px;}
+#td_1{left:101px;top:433px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:482px;}
+#tg_1{left:101px;top:500px;}
+#th_1{left:101px;top:517px;}
+#ti_1{left:101px;top:535px;}
+#tj_1{left:101px;top:552px;}
+#tk_1{left:101px;top:584px;}
+#tl_1{left:101px;top:601px;}
+#tm_1{left:101px;top:619px;}
+#tn_1{left:101px;top:651px;}
+#to_1{left:101px;top:668px;}
+#tp_1{left:101px;top:685px;}
+#tq_1{left:101px;top:717px;}
+#tr_1{left:101px;top:734px;}
+#ts_1{left:101px;top:752px;}
+#tt_1{left:101px;top:784px;}
+#tu_1{left:101px;top:815px;}
+#tv_1{left:101px;top:847px;}
+#tw_1{left:101px;top:865px;}
+#tx_1{left:101px;top:896px;}
+#ty_1{left:101px;top:914px;}
+#tz_1{left:101px;top:931px;}
+#t10_1{left:101px;top:963px;}
+#t11_1{left:101px;top:980px;}
+#t12_1{left:101px;top:998px;}
+#t13_1{left:101px;top:1015px;}
+#t14_1{left:101px;top:1033px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 60/2013 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 11/06/2013 </div>
+<div id="t5_1" class="t s4_1">MODELO DE DECLARACIÓN JURADA PARA PRECANDIDATOS EN ELECCIONES PRIMARIAS. </div>
+<div id="t6_1" class="t s4_1">PRESENTACIÓN DE LISTAS DE PRECANDIDATOS EN SOPORTE PAPEL Y DIGITAL, EN </div>
+<div id="t7_1" class="t s4_1">FORMATO PLANILLA DE CÁLCULO. </div>
+<div id="t8_1" class="t s3_1">En Buenos Aires, a los once días del mes de junio del año dos mil trece, se reúnen en Acuerdo </div>
+<div id="t9_1" class="t s3_1">Extraordinario, en la Sala de Acuerdos de la Cámara Nacional Electoral los doctores Alberto Ricardo </div>
+<div id="ta_1" class="t s3_1">Dalla Via, Rodolfo Emilio Munné y Santiago Hernán Corcuera, actuando los secretarios de la Cámara, </div>
+<div id="tb_1" class="t s3_1">doctores Hernán Gonçalves Figueiredo y Sebastián Schimmel. Abierto el acto por el señor </div>
+<div id="tc_1" class="t s3_1">Presidente, doctor Alberto Ricardo Dalla Via, </div>
+<div id="td_1" class="t s3_1">CONSIDERARON: </div>
+<div id="te_1" class="t s3_1">1°) Que según lo establecido en el artículo 26 de la ley 26.571 y en el artículo 6° del decreto </div>
+<div id="tf_1" class="t s3_1">443/11, con relación al proceso de elecciones primarias, los precandidatos que se presenten para su </div>
+<div id="tg_1" class="t s3_1">oficialización ante las Juntas Electorales de las agrupaciones políticas deben cumplir -entre otras </div>
+<div id="th_1" class="t s3_1">exigencias- con una declaración jurada de reunir los requisitos constitucionales y legales del cargo al </div>
+<div id="ti_1" class="t s3_1">que se postulan y de respeto por la plataforma electoral de la lista, de acuerdo con el modelo que </div>
+<div id="tj_1" class="t s3_1">establezca esta Cámara.- </div>
+<div id="tk_1" class="t s3_1">En tal sentido, en ocasión de las elecciones primarias que tuvieron lugar en el año 2011, el Tribunal </div>
+<div id="tl_1" class="t s3_1">estableció el modelo respectivo (Ac. 46/11 CNE), cuyo formato corresponde adecuar para los </div>
+<div id="tm_1" class="t s3_1">comicios del año en curso, procurando asimismo su aplicabilidad en futuros procesos electorales.- </div>
+<div id="tn_1" class="t s3_1">2°) Que por otra parte, de acuerdo con el artículo 14 del decreto 443/11, las listas de precandidatos </div>
+<div id="to_1" class="t s3_1">deben ser presentadas en las planillas y el soporte informático que establezca la Cámara Nacional </div>
+<div id="tp_1" class="t s3_1">Electoral.- </div>
+<div id="tq_1" class="t s3_1">Al respecto corresponde mantener el sistema establecido mediante Acordada 46/11, según el cual </div>
+<div id="tr_1" class="t s3_1">“la presentación de las listas de precandidatos se formalizará en soporte papel, acompañado de su </div>
+<div id="ts_1" class="t s3_1">copia en soporte digital (CDROM o Pendrive), en formato de planilla de cálculo” (cf. punto 6°).- </div>
+<div id="tt_1" class="t s3_1">Por ello, </div>
+<div id="tu_1" class="t s4_1">ACORDARON: </div>
+<div id="tv_1" class="t s3_1">1°) Aprobar el modelo de declaración jurada para la presentación de precandidaturas en las </div>
+<div id="tw_1" class="t s3_1">elecciones primarias, agregado como Anexo I de la presente.- </div>
+<div id="tx_1" class="t s3_1">2°) Hacer saber a las agrupaciones políticas que para la presentación de las listas de precandidatos </div>
+<div id="ty_1" class="t s3_1">regirá -hasta tanto no sea expresamente modificado- el sistema oportunamente previsto (Ac. 46/11 </div>
+<div id="tz_1" class="t s3_1">CNE) según lo expresado en el considerando 2° de la presente.- </div>
+<div id="t10_1" class="t s3_1">Hágase saber lo que aquí se resuelve a los señores jueces federales con competencia electoral, </div>
+<div id="t11_1" class="t s3_1">quienes notificarán la presente a todas las agrupaciones políticas reconocidas en su jurisdicción. </div>
+<div id="t12_1" class="t s3_1">Publíquese en las páginas de Internet del Tribunal con el modelo de declaración jurada para su </div>
+<div id="t13_1" class="t s3_1">descarga. Comuníquese a la Dirección de Comunicación Pública de la Corte Suprema de Justicia de </div>
+<div id="t14_1" class="t s3_1">la Nación. Con lo que se dio por terminado el acto.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1010],['t4_1',587],['t5_1',2934],['t6_1',2933],['t7_1',1105],['t8_1',2934],['t9_1',2933],['ta_1',2934],['tb_1',2933],['tc_1',1285],['te_1',2934],['tf_1',2934],['tg_1',2934],['th_1',2934],['ti_1',2934],['tj_1',735],['tk_1',2933],['tl_1',2934],['tm_1',2839],['tn_1',2934],['to_1',2933],['tq_1',2934],['tr_1',2933],['ts_1',2767],['tt_1',235],['tv_1',2934],['tw_1',1798],['tx_1',2934],['ty_1',2933],['tz_1',1862],['t10_1',2934],['t11_1',2933],['t12_1',2934],['t13_1',2933],['t14_1',1496]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 41;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

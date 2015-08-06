@@ -1,0 +1,236 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load11();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_11{left:332px;top:128px;}
+#t2_11{left:330px;top:147px;}
+#t3_11{left:101px;top:207px;}
+#t4_11{left:101px;top:225px;}
+#t5_11{left:101px;top:257px;}
+#t6_11{left:101px;top:288px;}
+#t7_11{left:101px;top:320px;}
+#t8_11{left:101px;top:338px;}
+#t9_11{left:101px;top:401px;}
+#ta_11{left:101px;top:433px;}
+#tb_11{left:101px;top:464px;}
+#tc_11{left:101px;top:482px;}
+#td_11{left:101px;top:499px;}
+#te_11{left:101px;top:517px;}
+#tf_11{left:101px;top:534px;}
+#tg_11{left:101px;top:552px;}
+#th_11{left:101px;top:569px;}
+#ti_11{left:101px;top:601px;}
+#tj_11{left:101px;top:618px;}
+#tk_11{left:101px;top:635px;}
+#tl_11{left:101px;top:653px;}
+#tm_11{left:101px;top:670px;}
+#tn_11{left:101px;top:688px;}
+#to_11{left:101px;top:720px;}
+#tp_11{left:101px;top:737px;}
+#tq_11{left:101px;top:769px;}
+#tr_11{left:101px;top:786px;}
+#ts_11{left:101px;top:803px;}
+#tt_11{left:101px;top:835px;}
+#tu_11{left:101px;top:853px;}
+#tv_11{left:101px;top:884px;}
+#tw_11{left:101px;top:902px;}
+#tx_11{left:101px;top:919px;}
+#ty_11{left:101px;top:951px;}
+#tz_11{left:101px;top:968px;}
+#t10_11{left:101px;top:986px;}
+#t11_11{left:101px;top:1017px;}
+#t12_11{left:101px;top:1049px;}
+
+.s3_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_11{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_11" class="t s1_11">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_11" class="t s1_11">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_11" class="t s2_11">d) La persona que ilegítimamente hiciere uso de un documento anulado o reemplazado o que </div>
+<div id="t4_11" class="t s2_11">corresponda a otra persona. </div>
+<div id="t5_11" class="t s2_11">Artículo 34.- Será reprimido con prisión de seis meses a dos años: </div>
+<div id="t6_11" class="t s2_11">a) El que a sabiendas se hiciere identificar más de una vez; </div>
+<div id="t7_11" class="t s2_11">b) El que para obtener el documento nacional de identidad empleare documentación que no </div>
+<div id="t8_11" class="t s2_11">corresponde a su verdadera identidad. </div>
+<div id="t9_11" class="t s2_11">SECCION II </div>
+<div id="ta_11" class="t s3_11">De las contravenciones </div>
+<div id="tb_11" class="t s2_11">Artículo 35: Las personas de ambos sexos, mayores de dieciséis (16) años y las comprendidas en </div>
+<div id="tc_11" class="t s2_11">los artículos 20,21 y 53 de la presente ley, que no gestionaren el correspondiente documento </div>
+<div id="td_11" class="t s2_11">nacional de identidad dentro del año que cumpliere dicha edad, de haber obtenido la carta de </div>
+<div id="te_11" class="t s2_11">naturalización y/o ciudadanía, de haber optado por la ciudadanía argentina y, respecto del </div>
+<div id="tf_11" class="t s2_11">extranjero desde que su residencia se haya fijado en el país, respectivamente, serán sancionados </div>
+<div id="tg_11" class="t s2_11">con una multa cuyo importe será equivalente a una (1) tasa vigente a la fecha en que se gestione </div>
+<div id="th_11" class="t s2_11">su identificación. </div>
+<div id="ti_11" class="t s2_11">Artículo 36: Las personas de ambos sexos, que no hayan regularizado su situación identificatoria </div>
+<div id="tj_11" class="t s2_11">dentro de los plazos establecidos y que intimados a ese efecto no realicen las gestiones pertinentes </div>
+<div id="tk_11" class="t s2_11">dentro de los noventa (90) días de efectuada la intimación, serán sancionadas con pena de prisión </div>
+<div id="tl_11" class="t s2_11">de un (1) mes a un (1) año con inhabilitación de seis (ó) meses a dos (2) años para desempeñar </div>
+<div id="tm_11" class="t s2_11">cargos, empleos o comisiones publicas. Esta sanción se aplicará sin perjuicio de la prevista en el </div>
+<div id="tn_11" class="t s2_11">articulo anterior. </div>
+<div id="to_11" class="t s2_11">Artículo 37: Será sancionado con una multa cuyo importe será equivalente a una ( 1) tasa vigente a </div>
+<div id="tp_11" class="t s2_11">la fecha que se cumpla con la obligación que se trate: </div>
+<div id="tq_11" class="t s2_11">a) El padre. madre, tutor o representante legal del recién nacido que al denunciar el nacimiento de </div>
+<div id="tr_11" class="t s2_11">la criatura no gestionare simultáneamente para ésta el correspondiente documento nacional de </div>
+<div id="ts_11" class="t s2_11">identidad. </div>
+<div id="tt_11" class="t s2_11">b) El padre, madre, tutor o representante legal que no hiciere cumplir con la actualización de los </div>
+<div id="tu_11" class="t s2_11">ocho (8) años dentro del año que alcance dicha edad. </div>
+<div id="tv_11" class="t s2_11">Artículo 38: Será sancionado con una multa cuyo importe será equivalente a una ( 1) tasa vigente a </div>
+<div id="tw_11" class="t s2_11">la fecha en que se realice el tramite, la persona mayor de dieciséis (16) anos que no denuncie </div>
+<div id="tx_11" class="t s2_11">dentro de los noventa (90) días de producido su cambio de domicilio o el de sus representados. </div>
+<div id="ty_11" class="t s2_11">Artículo 39: Será sancionado con una multa cuyo importe será equivalente a cinco (5) tasas la </div>
+<div id="tz_11" class="t s2_11">persona, que fingiendo impedimento físico, hiciere concurrir a su domicilio a los encargados de la </div>
+<div id="t10_11" class="t s2_11">identificación. </div>
+<div id="t11_11" class="t s2_11">SECCION III </div>
+<div id="t12_11" class="t s3_11">Juzgamiento de los delitos y contravenciones </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg11Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg11"><object width="935" height="1210" data="11/11.svg" type="image/svg+xml" id="pdf11" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld11" type="text/javascript">
+
+var isIE = false;
+var f11 = [['t1_11',1076],['t2_11',1095],['t3_11',2929],['t4_11',819],['t5_11',1928],['t6_11',1728],['t7_11',2929],['t8_11',1117],['t9_11',337],['ta_11',750],['tb_11',2929],['tc_11',2929],['td_11',2929],['te_11',2929],['tf_11',2929],['tg_11',2929],['th_11',485],['ti_11',2929],['tj_11',2929],['tk_11',2929],['tl_11',2928],['tm_11',2929],['tn_11',483],['to_11',2929],['tp_11',1564],['tq_11',2929],['tr_11',2929],['tt_11',2929],['tu_11',1560],['tv_11',2929],['tw_11',2929],['tx_11',2774],['ty_11',2929],['tz_11',2929],['t11_11',361],['t12_11',1470]];
+function load11(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f11);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 39;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_11");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

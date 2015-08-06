@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load37();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_37{left:333px;top:108px;}
+#t2_37{left:331px;top:128px;}
+#t3_37{left:101px;top:191px;}
+#t4_37{left:228px;top:191px;}
+#t5_37{left:557px;top:191px;}
+#t6_37{left:101px;top:208px;}
+#t7_37{left:101px;top:246px;}
+#t8_37{left:101px;top:263px;}
+#t9_37{left:101px;top:301px;}
+#ta_37{left:101px;top:318px;}
+#tb_37{left:101px;top:356px;}
+#tc_37{left:101px;top:373px;}
+#td_37{left:101px;top:391px;}
+#te_37{left:101px;top:428px;}
+#tf_37{left:221px;top:428px;}
+#tg_37{left:476px;top:428px;}
+#th_37{left:101px;top:446px;}
+#ti_37{left:101px;top:483px;}
+#tj_37{left:101px;top:501px;}
+#tk_37{left:101px;top:539px;}
+#tl_37{left:101px;top:556px;}
+#tm_37{left:101px;top:573px;}
+#tn_37{left:101px;top:611px;}
+#to_37{left:220px;top:611px;}
+#tp_37{left:472px;top:611px;}
+#tq_37{left:101px;top:629px;}
+#tr_37{left:101px;top:646px;}
+#ts_37{left:101px;top:664px;}
+#tt_37{left:101px;top:701px;}
+#tu_37{left:101px;top:719px;}
+#tv_37{left:101px;top:756px;}
+#tw_37{left:223px;top:756px;}
+#tx_37{left:491px;top:756px;}
+#ty_37{left:101px;top:774px;}
+#tz_37{left:101px;top:791px;}
+#t10_37{left:101px;top:829px;}
+#t11_37{left:101px;top:846px;}
+#t12_37{left:101px;top:884px;}
+#t13_37{left:221px;top:884px;}
+#t14_37{left:744px;top:884px;}
+#t15_37{left:101px;top:901px;}
+#t16_37{left:101px;top:919px;}
+#t17_37{left:101px;top:936px;}
+#t18_37{left:101px;top:954px;}
+#t19_37{left:101px;top:991px;}
+#t1a_37{left:226px;top:991px;}
+#t1b_37{left:379px;top:991px;}
+#t1c_37{left:101px;top:1009px;}
+#t1d_37{left:101px;top:1046px;}
+#t1e_37{left:101px;top:1064px;}
+#t1f_37{left:101px;top:1081px;}
+
+.s2_37{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_37{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_37{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_37{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_37" class="t s1_37">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_37" class="t s1_37">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_37" class="t s2_37">Artículo 114.- </div>
+<div id="t4_37" class="t s3_37">Declaración de nulidad. Cuándo procede.</div>
+<div id="t5_37" class="t s4_37">La Junta declarará nula la elección </div>
+<div id="t6_37" class="t s4_37">realizada en una mesa, aunque no medie petición de partido, cuando: </div>
+<div id="t7_37" class="t s4_37">1. No hubiere acta de elección de la mesa o certificado de escrutinio firmado por las autoridades del </div>
+<div id="t8_37" class="t s4_37">comicio y dos fiscales, por lo menos. </div>
+<div id="t9_37" class="t s4_37">2. Hubiera sido maliciosamente alterada el acta o, a falta de ella, el certificado de escrutinio no </div>
+<div id="ta_37" class="t s4_37">contare con los recaudos mínimos preestablecidos. </div>
+<div id="tb_37" class="t s4_37">3. El número de sufragantes consignados en el acta o, en su defecto, en el certificado de escrutinio, </div>
+<div id="tc_37" class="t s4_37">difiriera en cinco sobres o más del número de sobres utilizados y remitidos por el presidente de </div>
+<div id="td_37" class="t s4_37">mesa. </div>
+<div id="te_37" class="t s2_37">Artículo 115.- </div>
+<div id="tf_37" class="t s3_37">Comprobación de irregularidades.</div>
+<div id="tg_37" class="t s4_37">A petición de los apoderados de los partidos, la </div>
+<div id="th_37" class="t s4_37">Junta podrá anular la elección practicada en una mesa, cuando: </div>
+<div id="ti_37" class="t s4_37">1. Se compruebe que la apertura tardía o la clausura anticipada del comicio privó maliciosamente a </div>
+<div id="tj_37" class="t s4_37">electores de emitir su voto. </div>
+<div id="tk_37" class="t s4_37">2. No aparezca la firma del presidente en el acta de apertura o de clausura o, en su caso, en el </div>
+<div id="tl_37" class="t s4_37">certificado de escrutinio, y no se hubieren cumplimentado tampoco las demás formalidades </div>
+<div id="tm_37" class="t s4_37">prescriptas por esta ley. </div>
+<div id="tn_37" class="t s2_37">Artículo 116.- </div>
+<div id="to_37" class="t s3_37">Convocatoria a complementarias.</div>
+<div id="tp_37" class="t s4_37">Si no se efectuó la elección en alguna o algunas </div>
+<div id="tq_37" class="t s4_37">mesas, o se hubiese anulado, la Junta podrá requerir del Poder Ejecutivo Nacional que convoque a </div>
+<div id="tr_37" class="t s4_37">los electores respectivos a elecciones complementarias, salvo el supuesto previsto en el artículo </div>
+<div id="ts_37" class="t s4_37">siguiente. </div>
+<div id="tt_37" class="t s4_37">Para que el Poder Ejecutivo pueda disponer tal convocatoria será indispensable que un partido </div>
+<div id="tu_37" class="t s4_37">político actuante lo solicite dentro de los tres días de sancionada la nulidad o fracasada la elección. </div>
+<div id="tv_37" class="t s2_37">Artículo 117.- </div>
+<div id="tw_37" class="t s3_37">Efectos de la anulación de mesas.</div>
+<div id="tx_37" class="t s4_37">Se considerará que no existió elección en un </div>
+<div id="ty_37" class="t s4_37">distrito cuando la mitad del total de sus mesas fueran anuladas por la Junta. Esta declaración se </div>
+<div id="tz_37" class="t s4_37">comunicará al Poder Ejecutivo que corresponda y a las Cámaras Legislativas de la Nación. </div>
+<div id="t10_37" class="t s4_37">Declarada la nulidad se procederá a una nueva convocatoria con sujeción a las disposiciones de este </div>
+<div id="t11_37" class="t s4_37">Código. </div>
+<div id="t12_37" class="t s2_37">Artículo 118.- </div>
+<div id="t13_37" class="t s3_37">Recuento de sufragios por errores u omisiones en la documentación.</div>
+<div id="t14_37" class="t s4_37">En casos de </div>
+<div id="t15_37" class="t s4_37">evidentes errores de hecho sobre los resultados del escrutinio consignados en la documentación de </div>
+<div id="t16_37" class="t s4_37">la mesa, o en el supuesto de no existir esta documentación específica, la Junta Electoral Nacional </div>
+<div id="t17_37" class="t s4_37">podrá no anular el acto comicial, avocándose a realizar íntegramente el escrutinio con los sobres y </div>
+<div id="t18_37" class="t s4_37">votos remitidos por el presidente de mesa. </div>
+<div id="t19_37" class="t s2_37">Artículo 119.- </div>
+<div id="t1a_37" class="t s3_37">Votos impugnados.</div>
+<div id="t1b_37" class="t s4_37">Procedimiento. En el examen de los votos impugnados se </div>
+<div id="t1c_37" class="t s4_37">procederá de la siguiente manera: </div>
+<div id="t1d_37" class="t s4_37">De los sobres se retirará el formulario previsto en el artículo 92 y se enviará al juez electoral para </div>
+<div id="t1e_37" class="t s4_37">que, después de cotejar la impresión digital y demás datos con los existentes en la ficha del elector </div>
+<div id="t1f_37" class="t s4_37">cuyo voto ha sido impugnado, informe sobre la identidad del mismo. Si ésta no resulta probada, el </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg37Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg37"><object width="935" height="1210" data="37/37.svg" type="image/svg+xml" id="pdf37" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld37" type="text/javascript">
+
+var isIE = false;
+var f37 = [['t1_37',1076],['t2_37',1096],['t3_37',466],['t4_37',1275],['t5_37',1108],['t6_37',2031],['t7_37',2934],['t8_37',1062],['t9_37',2933],['ta_37',1475],['tb_37',2933],['tc_37',2933],['te_37',451],['tf_37',993],['tg_37',1432],['th_37',1853],['ti_37',2935],['tj_37',794],['tk_37',2934],['tl_37',2934],['tm_37',700],['tn_37',450],['to_37',982],['tp_37',1449],['tq_37',2933],['tr_37',2934],['tt_37',2934],['tu_37',2866],['tv_37',455],['tw_37',1041],['tx_37',1373],['ty_37',2934],['tz_37',2610],['t10_37',2934],['t12_37',452],['t13_37',2064],['t14_37',359],['t15_37',2934],['t16_37',2934],['t17_37',2933],['t18_37',1242],['t19_37',462],['t1a_37',572],['t1b_37',1820],['t1c_37',997],['t1d_37',2934],['t1e_37',2934],['t1f_37',2934]];
+function load37(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f37);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 52;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_37");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

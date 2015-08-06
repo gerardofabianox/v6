@@ -1,0 +1,285 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load5();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_5{left:325px;top:136px;}
+#t2_5{left:322px;top:156px;}
+#t3_5{left:65px;top:220px;}
+#t4_5{left:65px;top:239px;}
+#t5_5{left:65px;top:273px;}
+#t6_5{left:65px;top:306px;}
+#t7_5{left:65px;top:325px;}
+#t8_5{left:424px;top:359px;}
+#t9_5{left:116px;top:392px;}
+#ta_5{left:65px;top:426px;}
+#tb_5{left:198px;top:426px;}
+#tc_5{left:65px;top:445px;}
+#td_5{left:65px;top:478px;}
+#te_5{left:150px;top:478px;}
+#tf_5{left:164px;top:478px;}
+#tg_5{left:65px;top:497px;}
+#th_5{left:65px;top:516px;}
+#ti_5{left:65px;top:534px;}
+#tj_5{left:65px;top:568px;}
+#tk_5{left:65px;top:602px;}
+#tl_5{left:65px;top:635px;}
+#tm_5{left:65px;top:654px;}
+#tn_5{left:335px;top:654px;letter-spacing:3px;}
+#to_5{left:580px;top:654px;}
+#tp_5{left:65px;top:672px;}
+#tq_5{left:65px;top:691px;}
+#tr_5{left:65px;top:709px;}
+#ts_5{left:65px;top:728px;}
+#tt_5{left:65px;top:746px;}
+#tu_5{left:65px;top:780px;}
+#tv_5{left:65px;top:799px;}
+#tw_5{left:65px;top:817px;}
+#tx_5{left:65px;top:836px;}
+#ty_5{left:65px;top:854px;}
+#tz_5{left:65px;top:873px;}
+#t10_5{left:65px;top:906px;}
+#t11_5{left:65px;top:940px;}
+#t12_5{left:198px;top:940px;}
+#t13_5{left:65px;top:959px;}
+#t14_5{left:65px;top:992px;}
+#t15_5{left:65px;top:1011px;}
+#t16_5{left:65px;top:1030px;}
+#t17_5{left:65px;top:1048px;}
+#t18_5{left:65px;top:1067px;}
+#t19_5{left:65px;top:1085px;}
+#t1a_5{left:65px;top:1119px;}
+#t1b_5{left:65px;top:1137px;}
+#t1c_5{left:65px;top:1156px;}
+#t1d_5{left:65px;top:1190px;}
+#t1e_5{left:65px;top:1208px;}
+#t1f_5{left:65px;top:1227px;}
+#t1g_5{left:65px;top:1260px;}
+#t1h_5{left:65px;top:1279px;}
+#t1i_5{left:65px;top:1297px;}
+#t1j_5{left:65px;top:1316px;}
+#t1k_5{left:65px;top:1350px;}
+#t1l_5{left:65px;top:1368px;}
+#t1m_5{left:65px;top:1387px;}
+#t1n_5{left:580px;top:1387px;}
+
+.s4_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_5{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_5" class="t s1_5">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_5" class="t s1_5">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_5" class="t s2_5">Para las elecciones primarias se aplicarán los mismos criterios de distribución entre las agrupaciones </div>
+<div id="t4_5" class="t s2_5">políticas que se presenten. </div>
+<div id="t5_5" class="t s2_5">El Ministerio del Interior y Transporte publicará la nómina y monto de los aportes por todo concepto. </div>
+<div id="t6_5" class="t s2_5">El Ministerio del Interior y Transporte depositará los aportes al inicio de la campaña una vez </div>
+<div id="t7_5" class="t s2_5">oficializadas las listas. </div>
+<div id="t8_5" class="t s2_5">Capítulo III </div>
+<div id="t9_5" class="t s3_5">Modificaciones a la ley 26.571, de elecciones primarias abiertas, simultáneas y obligatorias </div>
+<div id="ta_5" class="t s4_5">ARTÍCULO 11. </div>
+<div id="tb_5" class="t s2_5">— Modifícase el artículo 21 de la ley 26.571, que queda redactado de la siguiente </div>
+<div id="tc_5" class="t s2_5">manera: </div>
+<div id="td_5" class="t s2_5">Artículo 21</div>
+<div id="te_5" class="t s4_5">: </div>
+<div id="tf_5" class="t s2_5">La designación de los precandidatos es exclusiva de las agrupaciones políticas, debiendo </div>
+<div id="tg_5" class="t s2_5">respetar las respectivas cartas orgánicas, los requisitos establecidos en la Constitución Nacional, la Ley </div>
+<div id="th_5" class="t s2_5">Orgánica de los Partidos Políticos, el Código Electoral Nacional, el Protocolo Constitutivo del Parlamento </div>
+<div id="ti_5" class="t s2_5">del Mercosur, y en la presente ley. </div>
+<div id="tj_5" class="t s2_5">Los partidos pueden reglamentar la participación de extrapartidarios en sus cartas orgánicas. </div>
+<div id="tk_5" class="t s2_5">Cada agrupación política determinará los requisitos para ser precandidato por las mismas. </div>
+<div id="tl_5" class="t s2_5">Las precandidaturas a senadores, diputados nacionales y parlamentarios del Mercosur por distritos </div>
+<div id="tm_5" class="t s2_5">regionales provinciales y de la C</div>
+<div id="tn_5" class="t s2_5">iudad Autónoma de Buenos A</div>
+<div id="to_5" class="t s2_5">ires deberán estar avaladas por un </div>
+<div id="tp_5" class="t s2_5">número de afiliados no inferior al dos por mil (2‰) del total de los inscritos en el padrón general de </div>
+<div id="tq_5" class="t s2_5">cada distrito electoral, hasta el máximo de un millón (1.000.000), o por un número mínimo de afiliados </div>
+<div id="tr_5" class="t s2_5">a la agrupación política o partidos que la integran, equivalente al dos por ciento (2%) del padrón de </div>
+<div id="ts_5" class="t s2_5">afiliados de la agrupación política o de la suma de los padrones de los partidos que la integran, en el </div>
+<div id="tt_5" class="t s2_5">caso de las alianzas, del distrito respectivo, hasta un máximo de cien mil (100.000), el que sea menor. </div>
+<div id="tu_5" class="t s2_5">Las precandidaturas a presidente y vicepresidente de la Nación y parlamentarios del Mercosur por </div>
+<div id="tv_5" class="t s2_5">distrito nacional, deberán estar avaladas por un número de afiliados no inferior al uno por mil (1‰) del </div>
+<div id="tw_5" class="t s2_5">total de los inscritos en el padrón general, domiciliados en al menos cinco (5) distritos, o al uno por </div>
+<div id="tx_5" class="t s2_5">ciento (1%) del padrón de afiliados de la agrupación política o de la suma de los padrones de los </div>
+<div id="ty_5" class="t s2_5">partidos que la integran, en el caso de las alianzas, de cinco (5) distritos a su elección en los que tenga </div>
+<div id="tz_5" class="t s2_5">reconocimiento vigente, el que sea menor. </div>
+<div id="t10_5" class="t s2_5">Ningún afiliado podrá avalar más de una (1) lista. </div>
+<div id="t11_5" class="t s4_5">ARTÍCULO 12. </div>
+<div id="t12_5" class="t s2_5">— Modifícase el artículo 27 de la ley 26.571, que queda redactado de la siguiente </div>
+<div id="t13_5" class="t s2_5">manera: </div>
+<div id="t14_5" class="t s2_5">Artículo 27: Presentada la solicitud de oficialización, la junta electoral de cada agrupación verificará el </div>
+<div id="t15_5" class="t s2_5">cumplimiento de las condiciones establecidas en la Constitución Nacional, la Ley de Partidos Políticos, el </div>
+<div id="t16_5" class="t s2_5">Código Electoral Nacional, El Protocolo Constitutivo del Parlamento del Mercosur, la carta orgánica </div>
+<div id="t17_5" class="t s2_5">partidaria y, en el caso de las alianzas, de su reglamento electoral. A tal efecto podrá solicitar la </div>
+<div id="t18_5" class="t s2_5">información necesaria al juzgado federal con competencia electoral del distrito, que deberá evacuarla </div>
+<div id="t19_5" class="t s2_5">dentro de las veinticuatro (24) horas desde su presentación. </div>
+<div id="t1a_5" class="t s2_5">Dentro de las cuarenta y ocho (48) horas de presentadas las solicitudes de oficialización la junta </div>
+<div id="t1b_5" class="t s2_5">electoral partidaria dictará resolución fundada acerca de su admisión o rechazo, y deberá notificarla a </div>
+<div id="t1c_5" class="t s2_5">las listas presentadas dentro de las veinticuatro (24) horas. </div>
+<div id="t1d_5" class="t s2_5">Cualquiera de las listas podrá solicitar la revocatoria de la resolución, la que deberá presentarse por </div>
+<div id="t1e_5" class="t s2_5">escrito y fundada ante la junta electoral dentro de las veinticuatro (24) horas de serle notificada. La </div>
+<div id="t1f_5" class="t s2_5">junta electoral deberá expedirse dentro de las veinticuatro (24) horas de su presentación. </div>
+<div id="t1g_5" class="t s2_5">La solicitud de revocatoria podrá acompañarse del de apelación subsidiaria en base a los mismos </div>
+<div id="t1h_5" class="t s2_5">fundamentos. Ante el rechazo de la revocatoria planteada la junta electoral elevará el expediente sin </div>
+<div id="t1i_5" class="t s2_5">más al juzgado federal con competencia electoral del distrito correspondiente dentro de las veinticuatro </div>
+<div id="t1j_5" class="t s2_5">(24) horas del dictado de la resolución confirmatoria. </div>
+<div id="t1k_5" class="t s2_5">Todas las notificaciones de las juntas electorales partidarias pueden hacerse indistintamente: en forma </div>
+<div id="t1l_5" class="t s2_5">personal ante ella, por acta notarial, por telegrama con copia certificada y aviso de entrega, por carta </div>
+<div id="t1m_5" class="t s2_5">documento con aviso de entrega, o por publicación en el sitio web</div>
+<div id="t1n_5" class="t s2_5">oficial de cada agrupación política. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg5Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg5"><object width="935" height="1540" data="5/5.svg" type="image/svg+xml" id="pdf5" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld5" type="text/javascript">
+
+var isIE = false;
+var f5 = [['t1_5',1144],['t2_5',1164],['t3_5',3220],['t4_5',825],['t5_5',3106],['t6_5',3220],['t7_5',677],['t8_5',349],['t9_5',2809],['ta_5',499],['tb_5',2687],['td_5',341],['tf_5',2824],['tg_5',3220],['th_5',3220],['ti_5',1068],['tj_5',2876],['tk_5',2782],['tl_5',3220],['tm_5',1079],['tn_5',980],['to_5',1160],['tp_5',3220],['tq_5',3220],['tr_5',3220],['ts_5',3221],['tt_5',3182],['tu_5',3220],['tv_5',3220],['tw_5',3221],['tx_5',3220],['ty_5',3220],['tz_5',1316],['t10_5',1534],['t11_5',499],['t12_5',2687],['t14_5',3220],['t15_5',3220],['t16_5',3220],['t17_5',3220],['t18_5',3220],['t19_5',1867],['t1a_5',3221],['t1b_5',3220],['t1c_5',1841],['t1d_5',3221],['t1e_5',3220],['t1f_5',2776],['t1g_5',3221],['t1h_5',3220],['t1i_5',3220],['t1j_5',1638],['t1k_5',3220],['t1l_5',3220],['t1m_5',2037],['t1n_5',1059]];
+function load5(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f5);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 60;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_5");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load15();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_15{left:334px;top:139px;}
+#t2_15{left:356px;top:165px;}
+#t3_15{left:480px;top:1455px;}
+#t4_15{left:157px;top:209px;}
+#t5_15{left:157px;top:224px;}
+#t6_15{left:157px;top:248px;}
+#t7_15{left:166px;top:250px;}
+#t8_15{left:216px;top:248px;}
+#t9_15{left:157px;top:263px;}
+#ta_15{left:157px;top:277px;}
+#tb_15{left:157px;top:292px;}
+#tc_15{left:157px;top:307px;}
+#td_15{left:157px;top:331px;}
+#te_15{left:166px;top:333px;}
+#tf_15{left:215px;top:331px;}
+#tg_15{left:157px;top:346px;}
+#th_15{left:157px;top:361px;}
+#ti_15{left:157px;top:376px;}
+#tj_15{left:157px;top:391px;}
+#tk_15{left:157px;top:405px;}
+#tl_15{left:157px;top:429px;}
+#tm_15{left:166px;top:432px;}
+#tn_15{left:216px;top:429px;}
+#to_15{left:157px;top:444px;}
+#tp_15{left:130px;top:468px;}
+#tq_15{left:226px;top:468px;}
+#tr_15{left:130px;top:489px;}
+#ts_15{left:130px;top:518px;}
+#tt_15{left:228px;top:518px;}
+#tu_15{left:130px;top:539px;}
+#tv_15{left:130px;top:568px;}
+#tw_15{left:227px;top:568px;}
+#tx_15{left:130px;top:589px;}
+#ty_15{left:130px;top:609px;}
+#tz_15{left:130px;top:639px;}
+#t10_15{left:227px;top:639px;}
+#t11_15{left:130px;top:659px;}
+#t12_15{left:130px;top:680px;}
+#t13_15{left:130px;top:700px;}
+#t14_15{left:130px;top:720px;}
+#t15_15{left:403px;top:780px;}
+#t16_15{left:350px;top:809px;}
+#t17_15{left:130px;top:839px;}
+#t18_15{left:224px;top:839px;}
+#t19_15{left:130px;top:868px;}
+#t1a_15{left:130px;top:889px;}
+#t1b_15{left:157px;top:918px;}
+#t1c_15{left:165px;top:921px;}
+#t1d_15{left:273px;top:918px;}
+#t1e_15{left:326px;top:921px;}
+#t1f_15{left:377px;top:918px;}
+#t1g_15{left:405px;top:921px;}
+#t1h_15{left:423px;top:918px;}
+#t1i_15{left:435px;top:918px;}
+#t1j_15{left:442px;top:921px;}
+#t1k_15{left:448px;top:918px;}
+#t1l_15{left:459px;top:918px;}
+#t1m_15{left:157px;top:933px;}
+#t1n_15{left:130px;top:957px;}
+#t1o_15{left:130px;top:978px;}
+#t1p_15{left:130px;top:1007px;}
+#t1q_15{left:130px;top:1028px;}
+#t1r_15{left:130px;top:1057px;}
+#t1s_15{left:130px;top:1078px;}
+#t1t_15{left:130px;top:1107px;}
+#t1u_15{left:130px;top:1128px;}
+#t1v_15{left:130px;top:1148px;}
+#t1w_15{left:130px;top:1169px;}
+#t1x_15{left:130px;top:1189px;}
+#t1y_15{left:130px;top:1209px;}
+#t1z_15{left:130px;top:1239px;}
+#t20_15{left:130px;top:1259px;}
+#t21_15{left:130px;top:1280px;}
+#t22_15{left:130px;top:1300px;}
+#t23_15{left:130px;top:1321px;}
+#t24_15{left:130px;top:1341px;}
+#t25_15{left:130px;top:1362px;}
+#t26_15{left:157px;top:1391px;}
+#t27_15{left:165px;top:1394px;}
+#t28_15{left:274px;top:1391px;}
+#t29_15{left:327px;top:1394px;}
+#t2a_15{left:379px;top:1391px;}
+#t2b_15{left:407px;top:1394px;}
+#t2c_15{left:425px;top:1391px;}
+#t2d_15{left:437px;top:1391px;}
+#t2e_15{left:445px;top:1394px;}
+#t2f_15{left:450px;top:1391px;}
+#t2g_15{left:462px;top:1391px;}
+#t2h_15{left:157px;top:1406px;}
+
+.s5_15{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_15{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_15{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s6_15{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_15{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi15;
+	color: rgb(0,0,0);
+}
+
+.s1_15{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi15;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts15" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi15;
+	src :url("15/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_15" class="t s1_15">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_15" class="t s2_15">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_15" class="t s3_15">15 </div>
+<div id="t4_15" class="t s4_15">ambos casos la mayoría absoluta de todos los votos, serán proclamados inmediatamente presidente y </div>
+<div id="t5_15" class="t s4_15">vicepresidente. </div>
+<div id="t6_15" class="t s4_15">A</div>
+<div id="t7_15" class="t s5_15">RTÍCULO </div>
+<div id="t8_15" class="t s4_15">83. En el caso de que por dividirse la votación no hubiere mayoría absoluta, elegirá el Congreso </div>
+<div id="t9_15" class="t s4_15">entre las dos personas que hubiesen obtenido mayor número de sufragios. Si la primera mayoría que </div>
+<div id="ta_15" class="t s4_15">resultare hubiese cabido a más de dos personas, elegirá el Congreso entre todas éstas. Si la primera </div>
+<div id="tb_15" class="t s4_15">mayoría hubiese cabido a una sola persona, y la segunda a dos o más, elegirá el Congreso entre todas las </div>
+<div id="tc_15" class="t s4_15">personas, que hayan obtenido la primera y segunda mayoría. </div>
+<div id="td_15" class="t s4_15">A</div>
+<div id="te_15" class="t s5_15">RTÍCULO </div>
+<div id="tf_15" class="t s4_15">84.Esta elección se hará a pluralidad absoluta de sufragios y por votación nominal. Si verificada la </div>
+<div id="tg_15" class="t s4_15">primera votación no resultare mayoría absoluta, se hará segunda vez, contrayéndose la votación a las dos </div>
+<div id="th_15" class="t s4_15">personas que en la primera hubiesen obtenido mayor número de sufragios. En caso de empate, se repetirá </div>
+<div id="ti_15" class="t s4_15">la votación, y si resultase nuevo empate, decidirá el presidente del Senado (la primera vez el del Congreso </div>
+<div id="tj_15" class="t s4_15">Constituyente).No podrá hacerse el escrutinio, ni la rectificación de estas elecciones sin que estén presentes </div>
+<div id="tk_15" class="t s4_15">las tres cuartas partes del total de los miembros del Congreso. </div>
+<div id="tl_15" class="t s4_15">A</div>
+<div id="tm_15" class="t s5_15">RTÍCULO </div>
+<div id="tn_15" class="t s4_15">85.La elección del presidente y vicepresidente de la Nación debe quedar concluida en una sola </div>
+<div id="to_15" class="t s4_15">sesión del Congreso, publicándose en seguida el resultado de ésta y las actas electorales por la prensa. </div>
+<div id="tp_15" class="t s6_15">Artículo 95</div>
+<div id="tq_15" class="t s3_15">.- La elección se efectuará dentro de los dos meses anteriores a la conclusión </div>
+<div id="tr_15" class="t s3_15">del mandato del Presidente en ejercicio. </div>
+<div id="ts_15" class="t s6_15">Artículo 96</div>
+<div id="tt_15" class="t s3_15">.- La segunda vuelta electoral, si correspondiere, se realizará entre las dos </div>
+<div id="tu_15" class="t s3_15">fórmulas de candidatos más votadas, dentro de los treinta días de celebrada la anterior. </div>
+<div id="tv_15" class="t s6_15">Artículo 97</div>
+<div id="tw_15" class="t s3_15">.- Cuando la fórmula que resultare más votada en la primera vuelta, hubiere </div>
+<div id="tx_15" class="t s3_15">obtenido más del cuarenta y cinco por ciento de los votos afirmativos válidamente emitidos, </div>
+<div id="ty_15" class="t s3_15">sus integrantes serán proclamados como Presidente y vicepresidente de la Nación. </div>
+<div id="tz_15" class="t s6_15">Artículo 98</div>
+<div id="t10_15" class="t s3_15">.- Cuando la fórmula que resultare más votada en la primera vuelta hubiere </div>
+<div id="t11_15" class="t s3_15">obtenido el cuarenta por ciento por lo menos de los votos afirmativos válidamente emitidos </div>
+<div id="t12_15" class="t s3_15">y, además, existiere una diferencia mayor de diez puntos porcentuales respecto del total de </div>
+<div id="t13_15" class="t s3_15">los votos afirmativos válidamente emitidos sobre la fórmula que le sigue en número de </div>
+<div id="t14_15" class="t s3_15">votos, sus integrantes serán proclamados como Presidente y vicepresidente de la Nación. </div>
+<div id="t15_15" class="t s6_15">CAPÍTULO TERCERO </div>
+<div id="t16_15" class="t s6_15">Atribuciones del Poder Ejecutivo </div>
+<div id="t17_15" class="t s6_15">Artículo 99</div>
+<div id="t18_15" class="t s3_15">.- El Presidente de la Nación tiene las siguientes atribuciones: </div>
+<div id="t19_15" class="t s3_15">1. Es el jefe supremo de la Nación, jefe del gobierno y responsable político de la </div>
+<div id="t1a_15" class="t s3_15">administración general del país. </div>
+<div id="t1b_15" class="t s4_15">T</div>
+<div id="t1c_15" class="t s5_15">EXTO ANTERIOR A </div>
+<div id="t1d_15" class="t s4_15">1994: A</div>
+<div id="t1e_15" class="t s5_15">RTÍCULO </div>
+<div id="t1f_15" class="t s4_15">86,</div>
+<div id="t1g_15" class="t s5_15">INC</div>
+<div id="t1h_15" class="t s4_15">.</div>
+<div id="t1i_15" class="t s4_15">1</div>
+<div id="t1j_15" class="t s5_15">º</div>
+<div id="t1k_15" class="t s4_15">.</div>
+<div id="t1l_15" class="t s4_15">Es el jefe supremo de la Nación, y tiene a su cargo la </div>
+<div id="t1m_15" class="t s4_15">administración general del país. </div>
+<div id="t1n_15" class="t s3_15">2. Expide las instrucciones y reglamentos que sean necesarios para la ejecución de las leyes </div>
+<div id="t1o_15" class="t s3_15">de la Nación, cuidando de no alterar su espíritu con excepciones reglamentarias. </div>
+<div id="t1p_15" class="t s3_15">3. Participa de la formación de las leyes con arreglo a la Constitución, las promulga y hace </div>
+<div id="t1q_15" class="t s3_15">publicar. </div>
+<div id="t1r_15" class="t s3_15">El Poder Ejecutivo no podrá en ningún caso bajo pena de nulidad absoluta e insanable, </div>
+<div id="t1s_15" class="t s3_15">emitir disposiciones de carácter legislativo. </div>
+<div id="t1t_15" class="t s3_15">Solamente cuando circunstancias excepcionales hicieran imposible seguir los trámites </div>
+<div id="t1u_15" class="t s3_15">ordinarios previstos por esta Constitución para la sanción de las leyes, y no se trate de </div>
+<div id="t1v_15" class="t s3_15">normas que regulen materia penal, tributaria, electoral o de régimen de los partidos </div>
+<div id="t1w_15" class="t s3_15">políticos, podrá dictar decretos por razones de necesidad y urgencia, los que serán decididos </div>
+<div id="t1x_15" class="t s3_15">en acuerdo general de ministros que deberán refrendarlos, conjuntamente con el jefe de </div>
+<div id="t1y_15" class="t s3_15">gabinete de ministros. </div>
+<div id="t1z_15" class="t s3_15">El jefe de gabinete de ministros personalmente y dentro de los diez días someterá la medida </div>
+<div id="t20_15" class="t s3_15">a consideración de la Comisión Bicameral Permanente, cuya composición deberá respetar la </div>
+<div id="t21_15" class="t s3_15">proporción de las representaciones políticas de cada Cámara. Esta comisión elevará su </div>
+<div id="t22_15" class="t s3_15">despacho en un plazo de diez días al plenario de cada Cámara para su expreso tratamiento, </div>
+<div id="t23_15" class="t s3_15">el que de inmediato considerarán las Cámaras. Una ley especial sancionada con la mayoría </div>
+<div id="t24_15" class="t s3_15">absoluta de la totalidad de los miembros de cada Cámara regulará el trámite y los alcances </div>
+<div id="t25_15" class="t s3_15">de la intervención del Congreso. </div>
+<div id="t26_15" class="t s4_15">T</div>
+<div id="t27_15" class="t s5_15">EXTO ANTERIOR A </div>
+<div id="t28_15" class="t s4_15">1994: A</div>
+<div id="t29_15" class="t s5_15">RTÍCULO </div>
+<div id="t2a_15" class="t s4_15">86,</div>
+<div id="t2b_15" class="t s5_15">INC</div>
+<div id="t2c_15" class="t s4_15">.</div>
+<div id="t2d_15" class="t s4_15">4</div>
+<div id="t2e_15" class="t s5_15">º</div>
+<div id="t2f_15" class="t s4_15">.</div>
+<div id="t2g_15" class="t s4_15">Participa de la formación de las leyes con arreglo a la </div>
+<div id="t2h_15" class="t s4_15">Constitución, las sanciona y promulga. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg15Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg15"><object width="935" height="1540" data="15/15.svg" type="image/svg+xml" id="pdf15" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld15" type="text/javascript">
+
+var isIE = false;
+var f15 = [['t1_15',1244],['t2_15',1068],['t4_15',2695],['t8_15',2463],['t9_15',2696],['ta_15',2695],['tb_15',2695],['tc_15',1517],['tf_15',2467],['tg_15',2696],['th_15',2695],['ti_15',2695],['tj_15',2695],['tk_15',1547],['tn_15',2460],['to_15',2550],['tp_15',384],['tq_15',2490],['tr_15',1233],['ts_15',393],['tt_15',2481],['tu_15',2719],['tv_15',387],['tw_15',2487],['tx_15',2874],['ty_15',2549],['tz_15',389],['t10_15',2485],['t11_15',2875],['t12_15',2874],['t13_15',2874],['t14_15',2759],['t15_15',690],['t16_15',1116],['t17_15',376],['t18_15',1903],['t19_15',2874],['t1a_15',979],['t1c_15',402],['t1d_15',211],['t1l_15',1488],['t1m_15',783],['t1n_15',2874],['t1o_15',2483],['t1p_15',2875],['t1r_15',2874],['t1s_15',1322],['t1t_15',2874],['t1u_15',2875],['t1v_15',2874],['t1w_15',2874],['t1x_15',2874],['t1y_15',687],['t1z_15',2874],['t20_15',2874],['t21_15',2874],['t22_15',2875],['t23_15',2874],['t24_15',2874],['t25_15',993],['t27_15',404],['t28_15',213],['t2g_15',1476],['t2h_15',950]];
+function load15(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f15);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 90;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_15");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

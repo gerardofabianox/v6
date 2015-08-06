@@ -1,0 +1,249 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:260px;}
+#t7_3{left:101px;top:277px;}
+#t8_3{left:101px;top:295px;}
+#t9_3{left:101px;top:312px;}
+#ta_3{left:101px;top:329px;}
+#tb_3{left:101px;top:347px;}
+#tc_3{left:101px;top:364px;}
+#td_3{left:101px;top:382px;}
+#te_3{left:101px;top:413px;}
+#tf_3{left:101px;top:431px;}
+#tg_3{left:101px;top:463px;}
+#th_3{left:101px;top:480px;}
+#ti_3{left:101px;top:512px;}
+#tj_3{left:235px;top:512px;}
+#tk_3{left:329px;top:512px;}
+#tl_3{left:101px;top:529px;}
+#tm_3{left:101px;top:547px;}
+#tn_3{left:101px;top:564px;}
+#to_3{left:101px;top:581px;}
+#tp_3{left:101px;top:613px;}
+#tq_3{left:101px;top:631px;}
+#tr_3{left:101px;top:648px;}
+#ts_3{left:101px;top:665px;}
+#tt_3{left:101px;top:697px;}
+#tu_3{left:101px;top:715px;}
+#tv_3{left:101px;top:746px;}
+#tw_3{left:248px;top:746px;}
+#tx_3{left:335px;top:746px;}
+#ty_3{left:101px;top:764px;}
+#tz_3{left:101px;top:781px;}
+#t10_3{left:101px;top:798px;}
+#t11_3{left:101px;top:816px;}
+#t12_3{left:101px;top:848px;}
+#t13_3{left:234px;top:848px;}
+#t14_3{left:101px;top:879px;}
+#t15_3{left:234px;top:879px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Para el acceso a los tratamientos integrales hormonales, no será necesario acreditar la voluntad en </div>
+<div id="t4_3" class="t s2_3">la intervención quirúrgica de reasignación genital total o parcial. En ambos casos se requerirá, </div>
+<div id="t5_3" class="t s2_3">únicamente, el consentimiento informado de la persona. En el caso de las personas menores de </div>
+<div id="t6_3" class="t s2_3">edad regirán los principios y requisitos establecidos en el artículo 5° para la obtención del </div>
+<div id="t7_3" class="t s2_3">consentimiento informado. Sin perjuicio de ello, para el caso de la obtención del mismo respecto de </div>
+<div id="t8_3" class="t s2_3">la intervención quirúrgica total o parcial se deberá contar, además, con la conformidad de la </div>
+<div id="t9_3" class="t s2_3">autoridad judicial competente de cada jurisdicción, quien deberá velar por los principios de </div>
+<div id="ta_3" class="t s2_3">capacidad progresiva e interés superior del niño o niña de acuerdo con lo estipulado por la </div>
+<div id="tb_3" class="t s2_3">Convención sobre los Derechos del Niño y en la Ley 26.061 de protección integral de los derechos de </div>
+<div id="tc_3" class="t s2_3">las niñas, niños y adolescentes. La autoridad judicial deberá expedirse en un plazo no mayor de </div>
+<div id="td_3" class="t s2_3">sesenta (60) días contados a partir de la solicitud de conformidad. </div>
+<div id="te_3" class="t s2_3">Los efectores del sistema público de salud, ya sean estatales, privados o del subsistema de obras </div>
+<div id="tf_3" class="t s2_3">sociales, deberán garantizar en forma permanente los derechos que esta ley reconoce. </div>
+<div id="tg_3" class="t s2_3">Todas las prestaciones de salud contempladas en el presente artículo quedan incluidas en el Plan </div>
+<div id="th_3" class="t s2_3">Médico Obligatorio, o el que lo reemplace, conforme lo reglamente la autoridad de aplicación. </div>
+<div id="ti_3" class="t s3_3">ARTÍCULO 12 —</div>
+<div id="tj_3" class="t s4_3">Trato digno. </div>
+<div id="tk_3" class="t s2_3">Deberá respetarse la identidad de género adoptada por las personas, </div>
+<div id="tl_3" class="t s2_3">en especial por niñas, niños y adolescentes, que utilicen un nombre de pila distinto al consignado en </div>
+<div id="tm_3" class="t s2_3">su documento nacional de identidad. A su solo requerimiento, el nombre de pila adoptado deberá </div>
+<div id="tn_3" class="t s2_3">ser utilizado para la citación, registro, legajo, llamado y cualquier otra gestión o servicio, tanto en </div>
+<div id="to_3" class="t s2_3">los ámbitos públicos como privados. </div>
+<div id="tp_3" class="t s2_3">Cuando la naturaleza de la gestión haga necesario registrar los datos obrantes en el documento </div>
+<div id="tq_3" class="t s2_3">nacional de identidad, se utilizará un sistema que combine las iniciales del nombre, el apellido </div>
+<div id="tr_3" class="t s2_3">completo, día y año de nacimiento y número de documento y se agregará el nombre de pila elegido </div>
+<div id="ts_3" class="t s2_3">por razones de identidad de género a solicitud del interesado/a. </div>
+<div id="tt_3" class="t s2_3">En aquellas circunstancias en que la persona deba ser nombrada en público deberá utilizarse </div>
+<div id="tu_3" class="t s2_3">únicamente el nombre de pila de elección que respete la identidad de género adoptada. </div>
+<div id="tv_3" class="t s3_3">ARTÍCULO 13 —</div>
+<div id="tw_3" class="t s4_3">Aplicación. </div>
+<div id="tx_3" class="t s2_3">Toda norma, reglamentación o procedimiento deberá respetar el </div>
+<div id="ty_3" class="t s2_3">derecho humano a la identidad de género de las personas. Ninguna norma, reglamentación o </div>
+<div id="tz_3" class="t s2_3">procedimiento podrá limitar, restringir, excluir o suprimir el ejercicio del derecho a la identidad de </div>
+<div id="t10_3" class="t s2_3">género de las personas, debiendo interpretarse y aplicarse las normas siempre a favor del acceso al </div>
+<div id="t11_3" class="t s2_3">mismo. </div>
+<div id="t12_3" class="t s3_3">ARTÍCULO 14 —</div>
+<div id="t13_3" class="t s2_3">Derógase el inciso 4° del artículo 19 de la Ley 17.132. </div>
+<div id="t14_3" class="t s3_3">ARTÍCULO 15 —</div>
+<div id="t15_3" class="t s2_3">Comuníquese al Poder Ejecutivo Nacional. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2933],['t4_3',2934],['t5_3',2934],['t6_3',2933],['t7_3',2933],['t8_3',2933],['t9_3',2933],['ta_3',2933],['tb_3',2934],['tc_3',2934],['td_3',1925],['te_3',2934],['tf_3',2521],['tg_3',2933],['th_3',2709],['ti_3',516],['tj_3',354],['tk_3',2020],['tl_3',2934],['tm_3',2934],['tn_3',2934],['to_3',1047],['tp_3',2934],['tq_3',2933],['tr_3',2933],['ts_3',1851],['tt_3',2934],['tu_3',2544],['tv_3',550],['tx_3',1996],['ty_3',2934],['tz_3',2933],['t10_3',2933],['t12_3',514],['t13_3',1575],['t14_3',514],['t15_3',1216]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

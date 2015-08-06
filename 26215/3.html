@@ -1,0 +1,264 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:260px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:234px;top:291px;}
+#t9_3{left:601px;top:291px;}
+#ta_3{left:101px;top:309px;}
+#tb_3{left:101px;top:326px;}
+#tc_3{left:101px;top:344px;}
+#td_3{left:101px;top:375px;}
+#te_3{left:101px;top:393px;}
+#tf_3{left:101px;top:410px;}
+#tg_3{left:101px;top:442px;}
+#th_3{left:224px;top:442px;}
+#ti_3{left:402px;top:442px;}
+#tj_3{left:101px;top:459px;}
+#tk_3{left:101px;top:477px;}
+#tl_3{left:101px;top:494px;}
+#tm_3{left:101px;top:512px;}
+#tn_3{left:101px;top:543px;}
+#to_3{left:225px;top:543px;}
+#tp_3{left:351px;top:543px;}
+#tq_3{left:101px;top:561px;}
+#tr_3{left:101px;top:578px;}
+#ts_3{left:101px;top:596px;}
+#tt_3{left:101px;top:627px;}
+#tu_3{left:101px;top:645px;}
+#tv_3{left:101px;top:662px;}
+#tw_3{left:101px;top:694px;}
+#tx_3{left:101px;top:726px;}
+#ty_3{left:101px;top:743px;}
+#tz_3{left:101px;top:775px;}
+#t10_3{left:228px;top:775px;}
+#t11_3{left:333px;top:775px;}
+#t12_3{left:101px;top:792px;}
+#t13_3{left:101px;top:810px;}
+#t14_3{left:101px;top:827px;}
+#t15_3{left:109px;top:859px;}
+#t16_3{left:101px;top:891px;}
+#t17_3{left:237px;top:891px;}
+#t18_3{left:458px;top:891px;}
+#t19_3{left:101px;top:908px;}
+#t1a_3{left:101px;top:940px;}
+#t1b_3{left:101px;top:971px;}
+#t1c_3{left:101px;top:1003px;}
+#t1d_3{left:101px;top:1035px;}
+#t1e_3{left:230px;top:1035px;}
+#t1f_3{left:364px;top:1035px;}
+#t1g_3{left:101px;top:1052px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">b) ochenta por ciento (80%), en forma proporcional a la cantidad de votos que el partido hubiera </div>
+<div id="t4_3" class="t s2_3">obtenido en la última elección de diputados nacionales. Sólo participarán en esta distribución los </div>
+<div id="t5_3" class="t s2_3">partidos que acrediten haber obtenido al menos un número de sufragios equivalente al uno por </div>
+<div id="t6_3" class="t s2_3">ciento (1%) del padrón electoral. </div>
+<div id="t7_3" class="t s3_3">ARTÍCULO 10. </div>
+<div id="t8_3" class="t s2_3">— Distribución Fondo Partidario Permanente.</div>
+<div id="t9_3" class="t s2_3">Para el caso de los partidos </div>
+<div id="ta_3" class="t s2_3">nacionales, una vez determinado el monto correspondiente a cada partido, de acuerdo al artículo </div>
+<div id="tb_3" class="t s2_3">anterior, se distribuirá directamente el ochenta por ciento (80%) a los organismos partidarios de </div>
+<div id="tc_3" class="t s2_3">distrito y el veinte por ciento (20%) restante a los organismos nacionales. </div>
+<div id="td_3" class="t s2_3">Para el caso de los partidos de distritos que no hayan sido reconocidos como partidos nacionales, el </div>
+<div id="te_3" class="t s2_3">monto del aporte se entregará a los organismos partidarios del distrito o los distritos en que </div>
+<div id="tf_3" class="t s2_3">estuviere reconocido. </div>
+<div id="tg_3" class="t s3_3">ARTÍCULO 11. </div>
+<div id="th_3" class="t s2_3">— Alianzas electorales.</div>
+<div id="ti_3" class="t s2_3">Para el caso de los partidos que hubieran concurrido a la </div>
+<div id="tj_3" class="t s2_3">última elección nacional conformando una alianza, la suma correspondiente a la misma, en función </div>
+<div id="tk_3" class="t s2_3">de lo dispuesto por el inciso b) del artículo 9º, se distribuirá entre los partidos miembros en la forma </div>
+<div id="tl_3" class="t s2_3">que determine el acuerdo suscripto entre los referidos partidos miembros al momento de solicitar el </div>
+<div id="tm_3" class="t s2_3">reconocimiento de la alianza. </div>
+<div id="tn_3" class="t s3_3">ARTÍCULO 12. </div>
+<div id="to_3" class="t s2_3">— Capacitación.</div>
+<div id="tp_3" class="t s2_3">Los partidos deberán destinar por lo menos el veinte por ciento </div>
+<div id="tq_3" class="t s2_3">(20%) de lo que reciban en concepto de aporte anual para desenvolvimiento institucional al </div>
+<div id="tr_3" class="t s2_3">financiamiento de actividades de capacitación para la función pública, formación de dirigentes e </div>
+<div id="ts_3" class="t s2_3">investigación. </div>
+<div id="tt_3" class="t s2_3">Asimismo se establece que por lo menos un treinta por ciento (30%) del monto destinado a </div>
+<div id="tu_3" class="t s2_3">capacitación debe afectarse a las actividades de capacitación para la función pública, formación de </div>
+<div id="tv_3" class="t s2_3">dirigentes e investigación para menores de treinta (30) años. </div>
+<div id="tw_3" class="t s2_3">Esta obligación alcanza al partido nacional y también para cada uno de los partidos de distrito. </div>
+<div id="tx_3" class="t s2_3">De no cumplir con lo dispuesto en este artículo, los hará pasibles de la sanción prevista en el artículo </div>
+<div id="ty_3" class="t s2_3">65 de la presente ley. </div>
+<div id="tz_3" class="t s3_3">ARTÍCULO 13. </div>
+<div id="t10_3" class="t s2_3">— Requisito.</div>
+<div id="t11_3" class="t s2_3">El pago del aporte para el desenvolvimiento institucional sólo se </div>
+<div id="t12_3" class="t s2_3">efectuará si el partido ha presentado la documentación contable correspondiente al último ejercicio, </div>
+<div id="t13_3" class="t s2_3">en tiempo y forma de acuerdo al Título II de la presente ley y ante el juez federal con competencia </div>
+<div id="t14_3" class="t s2_3">electoral correspondiente. </div>
+<div id="t15_3" class="t s2_3">Financiamiento privado </div>
+<div id="t16_3" class="t s3_3">ARTÍCULO 14. </div>
+<div id="t17_3" class="t s2_3">— Financiamiento privado.</div>
+<div id="t18_3" class="t s2_3">Los partidos políticos podrán obtener para su </div>
+<div id="t19_3" class="t s2_3">financiamiento, con las limitaciones previstas en esta ley, los siguientes aportes del sector privado: </div>
+<div id="t1a_3" class="t s2_3">a) de sus afiliados, de forma periódica, de acuerdo a lo prescripto en sus cartas orgánicas; </div>
+<div id="t1b_3" class="t s2_3">b) donaciones de otras personas físicas —no afiliados— y personas jurídicas; </div>
+<div id="t1c_3" class="t s2_3">c) de rendimientos de su patrimonio y otro tipo de actividades. </div>
+<div id="t1d_3" class="t s3_3">ARTÍCULO 15. </div>
+<div id="t1e_3" class="t s2_3">— Prohibiciones.</div>
+<div id="t1f_3" class="t s2_3">Los partidos políticos no podrán aceptar o recibir, directa o </div>
+<div id="t1g_3" class="t s2_3">indirectamente: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2933],['t4_3',2934],['t5_3',2934],['t6_3',961],['t7_3',486],['t8_3',1416],['t9_3',935],['ta_3',2934],['tb_3',2934],['tc_3',2154],['td_3',2933],['te_3',2933],['tf_3',618],['tg_3',466],['th_3',683],['ti_3',1728],['tj_3',2934],['tk_3',2933],['tl_3',2933],['tm_3',843],['tn_3',467],['to_3',473],['tp_3',1933],['tq_3',2933],['tr_3',2934],['tt_3',2933],['tu_3',2934],['tv_3',1781],['tw_3',2745],['tx_3',2934],['ty_3',632],['tz_3',474],['t10_3',380],['t11_3',2006],['t12_3',2934],['t13_3',2933],['t14_3',751],['t15_3',671],['t16_3',490],['t17_3',835],['t18_3',1503],['t19_3',2882],['t1a_3',2632],['t1b_3',2228],['t1c_3',1828],['t1d_3',477],['t1e_3',497],['t1f_3',1880]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 53;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:101px;top:278px;}
+#t7_4{left:101px;top:295px;}
+#t8_4{left:101px;top:327px;}
+#t9_4{left:101px;top:344px;}
+#ta_4{left:101px;top:362px;}
+#tb_4{left:101px;top:393px;}
+#tc_4{left:101px;top:411px;}
+#td_4{left:101px;top:442px;}
+#te_4{left:101px;top:460px;}
+#tf_4{left:101px;top:477px;}
+#tg_4{left:101px;top:509px;}
+#th_4{left:101px;top:526px;}
+#ti_4{left:101px;top:544px;}
+#tj_4{left:101px;top:576px;}
+#tk_4{left:101px;top:593px;}
+#tl_4{left:101px;top:625px;}
+#tm_4{left:101px;top:642px;}
+#tn_4{left:101px;top:660px;}
+#to_4{left:101px;top:677px;}
+#tp_4{left:101px;top:709px;}
+#tq_4{left:101px;top:726px;}
+#tr_4{left:101px;top:744px;}
+#ts_4{left:101px;top:775px;}
+#tt_4{left:101px;top:793px;}
+#tu_4{left:101px;top:824px;}
+#tv_4{left:101px;top:842px;}
+#tw_4{left:101px;top:859px;}
+#tx_4{left:101px;top:891px;}
+#ty_4{left:101px;top:908px;}
+#tz_4{left:101px;top:926px;}
+#t10_4{left:101px;top:943px;}
+#t11_4{left:101px;top:961px;}
+#t12_4{left:101px;top:978px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">i) Facilitar el ingreso de los acompañantes cívico-electorales al establecimiento de votación, </div>
+<div id="t4_4" class="t s2_4">asegurando que su actuación no interfiera ni obstaculice el desarrollo del acto electoral ni el </div>
+<div id="t5_4" class="t s2_4">funcionamiento de las mesas, y se ajuste estrictamente a la reglamentación vigente. </div>
+<div id="t6_4" class="t s2_4">j) Asistir al Comando Electoral en el resguardo y distribución de las boletas electorales de </div>
+<div id="t7_4" class="t s2_4">contingencia previstas en la segunda parte del artículo 66, inciso 5 del Código Electoral Nacional. </div>
+<div id="t8_4" class="t s2_4">k) Remitir durante la jornada electoral a la Justicia Nacional Electoral, por la vía y con la periodicidad </div>
+<div id="t9_4" class="t s2_4">que se indique, los informes que se soliciten respecto del desarrollo de los comicios (apertura y </div>
+<div id="ta_4" class="t s2_4">cierre de mesas, incidentes, porcentaje de votantes, etc.). </div>
+<div id="tb_4" class="t s2_4">l) Transmitir a las autoridades de mesa las comunicaciones o disposiciones que -en el caso de que </div>
+<div id="tc_4" class="t s2_4">fuera necesario- les requiera la Justicia Nacional Electoral durante el desarrollo del acto electoral. </div>
+<div id="td_4" class="t s2_4">m) Coordinar con los agentes del Comando Electoral a cargo de la custodia del establecimiento, la </div>
+<div id="te_4" class="t s2_4">correcta individualización de los electores que a las 18 horas estuvieran aguardando su turno para </div>
+<div id="tf_4" class="t s2_4">votar, de modo tal de que se posibilite la emisión del voto de los mismos. </div>
+<div id="tg_4" class="t s2_4">n) En los casos en que se solicitare, remitir a la Justicia Nacional Electoral, conforme el </div>
+<div id="th_4" class="t s2_4">procedimiento que se indique, datos vinculados al recuento de votos de una o varias mesas de </div>
+<div id="ti_4" class="t s2_4">votación de las habilitadas en el establecimiento. </div>
+<div id="tj_4" class="t s2_4">ñ) En los casos en que se solicitare, elaborar y remitir a la Justicia Nacional Electoral un informe </div>
+<div id="tk_4" class="t s2_4">posterior al acto electoral. </div>
+<div id="tl_4" class="t s2_4">En el cumplimiento de sus tareas, los Delegados deberán actuar con absoluto respeto a las </div>
+<div id="tm_4" class="t s2_4">funciones y competencias propias de las autoridades de mesa -máxima autoridad de la respectiva </div>
+<div id="tn_4" class="t s2_4">mesa de votación-, sin interferir en su desempeño; y deberán además ajustarse a lo indicado por la </div>
+<div id="to_4" class="t s2_4">Justicia Nacional Electoral en relación con: </div>
+<div id="tp_4" class="t s2_4">1. el modo de inscripción y acreditación, informando sus datos de contacto -y, en su caso, los del </div>
+<div id="tq_4" class="t s2_4">establecimiento del votación- y utilizando, en caso de resultar necesario, sus propios medios </div>
+<div id="tr_4" class="t s2_4">(teléfono celular y/o correo electrónico) para comunicarse con la Justicia Nacional Electoral. </div>
+<div id="ts_4" class="t s2_4">2. el modo de identificación en el local de votación, a través de las credenciales u otro elemento </div>
+<div id="tt_4" class="t s2_4">suministrado por la Secretaría Electoral. </div>
+<div id="tu_4" class="t s2_4">3. la obligatoriedad de recibir la capacitación dictada por la Justicia Nacional Electoral, tanto en lo </div>
+<div id="tv_4" class="t s2_4">que respecta a los contenidos específicos relativos al rol del delegado, como así también la </div>
+<div id="tw_4" class="t s2_4">capacitación orientada a las autoridades de mesa. </div>
+<div id="tx_4" class="t s2_4">4. en el caso de que un ciudadano preseleccionado o designado como Delegado sea designado como </div>
+<div id="ty_4" class="t s2_4">autoridad de mesa, aquella condición no lo exime de esta carga pública. En consecuencia, el </div>
+<div id="tz_4" class="t s2_4">ciudadano designado como autoridad de mesa no podrá desempeñarse como delegado del </div>
+<div id="t10_4" class="t s2_4">establecimiento, salvo que se trate de un establecimiento con una única mesa de votación </div>
+<div id="t11_4" class="t s2_4">habilitada, en cuyo serán acumulables las funciones pero el ciudadano tendrá derecho a percibir </div>
+<div id="t12_4" class="t s2_4">únicamente el viático mayor. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2934],['t4_4',2933],['t5_4',2462],['t6_4',2934],['t7_4',2815],['t8_4',2933],['t9_4',2933],['ta_4',1696],['tb_4',2933],['tc_4',2822],['td_4',2933],['te_4',2934],['tf_4',2135],['tg_4',2934],['th_4',2934],['ti_4',1420],['tj_4',2933],['tk_4',757],['tl_4',2933],['tm_4',2933],['tn_4',2934],['to_4',1229],['tp_4',2933],['tq_4',2934],['tr_4',2659],['ts_4',2933],['tt_4',1163],['tu_4',2933],['tv_4',2934],['tw_4',1450],['tx_4',2933],['ty_4',2933],['tz_4',2933],['t10_4',2934],['t11_4',2934],['t12_4',840]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 39;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

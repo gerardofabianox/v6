@@ -1,0 +1,246 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:257px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:341px;}
+#ta_3{left:101px;top:358px;}
+#tb_3{left:101px;top:375px;}
+#tc_3{left:101px;top:393px;}
+#td_3{left:101px;top:410px;}
+#te_3{left:101px;top:442px;}
+#tf_3{left:101px;top:459px;}
+#tg_3{left:101px;top:477px;}
+#th_3{left:101px;top:494px;}
+#ti_3{left:101px;top:512px;}
+#tj_3{left:101px;top:529px;}
+#tk_3{left:101px;top:561px;}
+#tl_3{left:101px;top:578px;}
+#tm_3{left:101px;top:596px;}
+#tn_3{left:101px;top:613px;}
+#to_3{left:101px;top:631px;}
+#tp_3{left:101px;top:662px;}
+#tq_3{left:101px;top:680px;}
+#tr_3{left:101px;top:697px;}
+#ts_3{left:101px;top:714px;}
+#tt_3{left:101px;top:746px;}
+#tu_3{left:101px;top:778px;}
+#tv_3{left:101px;top:810px;}
+#tw_3{left:101px;top:827px;}
+#tx_3{left:101px;top:859px;}
+#ty_3{left:101px;top:876px;}
+#tz_3{left:101px;top:894px;}
+#t10_3{left:101px;top:925px;}
+#t11_3{left:101px;top:943px;}
+#t12_3{left:101px;top:960px;}
+#t13_3{left:101px;top:978px;}
+#t14_3{left:101px;top:1009px;}
+#t15_3{left:101px;top:1027px;}
+#t16_3{left:101px;top:1044px;}
+#t17_3{left:101px;top:1062px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">padrones se hará efectiva en la medida que se disponga de la tecnología necesaria para posibilitar </div>
+<div id="t4_3" class="t s2_3">su fiscalización y validación para su asiento en el Registro Nacional de Electores.- </div>
+<div id="t5_3" class="t s2_3">No obstante ello podrá, en cualquier caso, autorizarse su implementación a modo de prueba piloto </div>
+<div id="t6_3" class="t s2_3">para el proceso electoral en curso, siempre que por la calidad y cantidad de las fotografías </div>
+<div id="t7_3" class="t s2_3">disponibles en la base de datos de novedades registrales ello resulte justificado, ya sea para todo el </div>
+<div id="t8_3" class="t s2_3">país o para alguna circunscripción electoral específica.- </div>
+<div id="t9_3" class="t s2_3">En tal supuesto deberá, además, enfatizarse que una hipotética falta de correspondencia entre la </div>
+<div id="ta_3" class="t s2_3">fotografía incorporada con el elector respectivo, no debe impedir ni obstaculizar la emisión de voto </div>
+<div id="tb_3" class="t s2_3">por parte del elector, así como tampoco conlleva por sí misma la impugnación de su identidad sino </div>
+<div id="tc_3" class="t s2_3">que, en todo caso, deberá dejarse nota de esa discordancia como observación al padrón, en los </div>
+<div id="td_3" class="t s2_3">términos del artículo 86 del Código Electoral Nacional.- </div>
+<div id="te_3" class="t s2_3">Es necesario precisar que solo podrán constar en el padrón del proceso electoral en curso las </div>
+<div id="tf_3" class="t s2_3">fotografías de aquellos electores mayores de edad, que hubiesen efectuado ante el Registro Nacional </div>
+<div id="tg_3" class="t s2_3">de las Personas - o los registros civiles- un trámite que haya generado un nuevo ejemplar de su </div>
+<div id="th_3" class="t s2_3">documento de identidad a partir de la fecha en que implementó la captura digital de fotografías del </div>
+<div id="ti_3" class="t s2_3">ciudadano y que, además, haya sido comunicado por esa dependencia a la Cámara Nacional </div>
+<div id="tj_3" class="t s2_3">Electoral con anterioridad a la fecha de cierre del padrón.- </div>
+<div id="tk_3" class="t s2_3">Del mismo modo, y teniendo en consideración que la incorporación de fotografías se efectuaría -</div>
+<div id="tl_3" class="t s2_3">como se resaltó- a modo de prueba piloto, es conveniente prever que en ese supuesto se incorpore </div>
+<div id="tm_3" class="t s2_3">también la fotografía al padrón provisional -tanto en su versión impresa como para su exhibición en </div>
+<div id="tn_3" class="t s2_3">Internet- a fin de que los electores dispongan con suficiente antelación de una ocasión para realizar </div>
+<div id="to_3" class="t s2_3">oportunamente las observaciones que correspondan.- </div>
+<div id="tp_3" class="t s2_3">8º) Que lo dispuesto por la presente ha sido objeto de tratamiento y consideración por la Comisión </div>
+<div id="tq_3" class="t s2_3">de Gestión -en su reunión del 27 de agosto de 2012 y mediante la consulta cursada a su nueva </div>
+<div id="tr_3" class="t s2_3">integración- y en diversas reuniones realizadas a tal efecto con los señores jueces federales con </div>
+<div id="ts_3" class="t s2_3">competencia electoral de todo el país.- </div>
+<div id="tt_3" class="t s2_3">Por ello, </div>
+<div id="tu_3" class="t s3_3">ACORDARON: </div>
+<div id="tv_3" class="t s2_3">1º) Aprobar el modelo de padrón especial para presidente de mesa, conteniendo las constancias de </div>
+<div id="tw_3" class="t s2_3">emisión de voto que, como Anexo I, integra la presente.- </div>
+<div id="tx_3" class="t s2_3">2º) Aprobar los modelos de padrón para fijar en la pared para consulta de los electores (art. 82, </div>
+<div id="ty_3" class="t s2_3">inc.6); padrón auxiliar para el uso del vocal o los fiscales (art. 82, inc. 8), y padrón provisional (art. </div>
+<div id="tz_3" class="t s2_3">25) que, respectivamente, como Anexos II, III y IV integran la presente.- </div>
+<div id="t10_3" class="t s2_3">3°) Autorizar al Secretario del área a implementar nuevos modelos de los aprobados </div>
+<div id="t11_3" class="t s2_3">precedentemente, o a efectuar las adecuaciones imprescindibles de acuerdo a las características del </div>
+<div id="t12_3" class="t s2_3">proceso de generación, impresión y/o captura de la información que se adopte para su conformación </div>
+<div id="t13_3" class="t s2_3">y la del Registro de Infractores.- </div>
+<div id="t14_3" class="t s2_3">4º) Hacer saber a la Dirección Nacional Electoral que la devolución, por parte de las autoridades de </div>
+<div id="t15_3" class="t s2_3">mesa, del padrón electoral especial utilizado por el presidente mesa conteniendo las constancias no </div>
+<div id="t16_3" class="t s2_3">entregadas y las actas de escrutinio de la mesa, se considerará condición necesaria para el cobro de </div>
+<div id="t17_3" class="t s2_3">la compensación prevista por el artículo 72 del Código Electoral Nacional.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2933],['t4_3',2362],['t5_3',2933],['t6_3',2934],['t7_3',2933],['t8_3',1596],['t9_3',2933],['ta_3',2933],['tb_3',2934],['tc_3',2934],['td_3',1593],['te_3',2933],['tf_3',2933],['tg_3',2933],['th_3',2933],['ti_3',2934],['tj_3',1690],['tk_3',2933],['tl_3',2933],['tm_3',2934],['tn_3',2933],['to_3',1560],['tp_3',2933],['tq_3',2934],['tr_3',2934],['ts_3',1122],['tt_3',235],['tv_3',2933],['tw_3',1663],['tx_3',2933],['ty_3',2934],['tz_3',2145],['t10_3',2933],['t11_3',2933],['t12_3',2933],['t13_3',943],['t14_3',2933],['t15_3',2933],['t16_3',2933],['t17_3',2149]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 44;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

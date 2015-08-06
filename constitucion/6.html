@@ -1,0 +1,310 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:441px;top:1453px;}
+#t2_6{left:87px;top:130px;}
+#t3_6{left:87px;top:150px;}
+#t4_6{left:87px;top:171px;}
+#t5_6{left:87px;top:200px;}
+#t6_6{left:87px;top:221px;}
+#t7_6{left:87px;top:241px;}
+#t8_6{left:87px;top:262px;}
+#t9_6{left:87px;top:282px;}
+#ta_6{left:87px;top:312px;}
+#tb_6{left:87px;top:332px;}
+#tc_6{left:87px;top:353px;}
+#td_6{left:87px;top:373px;}
+#te_6{left:87px;top:393px;}
+#tf_6{left:87px;top:423px;}
+#tg_6{left:87px;top:443px;}
+#th_6{left:87px;top:464px;}
+#ti_6{left:87px;top:484px;}
+#tj_6{left:87px;top:505px;}
+#tk_6{left:374px;top:564px;}
+#tl_6{left:317px;top:593px;}
+#tm_6{left:370px;top:623px;}
+#tn_6{left:358px;top:653px;}
+#to_6{left:364px;top:682px;}
+#tp_6{left:336px;top:712px;}
+#tq_6{left:87px;top:741px;}
+#tr_6{left:183px;top:741px;}
+#ts_6{left:87px;top:762px;}
+#tt_6{left:87px;top:782px;}
+#tu_6{left:114px;top:812px;}
+#tv_6{left:122px;top:814px;}
+#tw_6{left:218px;top:812px;}
+#tx_6{left:268px;top:814px;}
+#ty_6{left:316px;top:812px;}
+#tz_6{left:114px;top:827px;}
+#t10_6{left:359px;top:880px;}
+#t11_6{left:330px;top:910px;}
+#t12_6{left:87px;top:939px;}
+#t13_6{left:190px;top:939px;}
+#t14_6{left:87px;top:960px;}
+#t15_6{left:87px;top:980px;}
+#t16_6{left:87px;top:1001px;}
+#t17_6{left:87px;top:1021px;}
+#t18_6{left:87px;top:1042px;}
+#t19_6{left:87px;top:1062px;}
+#t1a_6{left:114px;top:1092px;}
+#t1b_6{left:122px;top:1094px;}
+#t1c_6{left:226px;top:1092px;}
+#t1d_6{left:278px;top:1094px;}
+#t1e_6{left:328px;top:1092px;}
+#t1f_6{left:114px;top:1107px;}
+#t1g_6{left:114px;top:1121px;}
+#t1h_6{left:114px;top:1136px;}
+#t1i_6{left:114px;top:1151px;}
+#t1j_6{left:114px;top:1166px;}
+#t1k_6{left:87px;top:1190px;}
+#t1l_6{left:185px;top:1190px;}
+#t1m_6{left:87px;top:1210px;}
+#t1n_6{left:87px;top:1231px;}
+#t1o_6{left:87px;top:1251px;}
+#t1p_6{left:87px;top:1272px;}
+#t1q_6{left:87px;top:1292px;}
+#t1r_6{left:87px;top:1322px;}
+#t1s_6{left:181px;top:1322px;}
+#t1t_6{left:87px;top:1342px;}
+#t1u_6{left:87px;top:1372px;}
+#t1v_6{left:184px;top:1372px;}
+#t1w_6{left:87px;top:1392px;}
+#t1x_6{left:87px;top:1412px;}
+
+.s3_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_6{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_6{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_6{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">6</div>
+<div id="t2_6" class="t s2_6">amenace, con arbitrariedad o ilegalidad manifiesta, derechos y garantías reconocidos por </div>
+<div id="t3_6" class="t s2_6">esta Constitución, un tratado o una ley. En el caso, el juez podrá declarar la </div>
+<div id="t4_6" class="t s2_6">inconstitucionalidad de la norma en que se funde el acto u omisión lesiva. </div>
+<div id="t5_6" class="t s2_6">Podrán interponer esta acción contra cualquier forma de discriminación y en lo relativo a los </div>
+<div id="t6_6" class="t s2_6">derechos que protegen al ambiente, a la competencia, al usuario y al consumidor, así como </div>
+<div id="t7_6" class="t s2_6">a los derechos de incidencia colectiva en general, el afectado, el defensor del pueblo y las </div>
+<div id="t8_6" class="t s2_6">asociaciones que propendan a esos fines, registradas conforme a la ley, la que determinará </div>
+<div id="t9_6" class="t s2_6">los requisitos y formas de su organización. </div>
+<div id="ta_6" class="t s2_6">Toda persona podrá interponer esta acción para tomar conocimiento de los datos a ella </div>
+<div id="tb_6" class="t s2_6">referidos y de su finalidad, que consten en registros o bancos de datos públicos, o los </div>
+<div id="tc_6" class="t s2_6">privados destinados a proveer informes, y en caso de falsedad o discriminación, para exigir </div>
+<div id="td_6" class="t s2_6">la supresión, rectificación, confidencialidad o actualización de aquéllos. No podrá afectarse el </div>
+<div id="te_6" class="t s2_6">secreto de las fuentes de información periodística. </div>
+<div id="tf_6" class="t s2_6">Cuando el derecho lesionado, restringido, alterado o amenazado fuera la libertad física, o en </div>
+<div id="tg_6" class="t s2_6">caso de agravamiento ilegítimo en la forma o condiciones de detención, o en el de </div>
+<div id="th_6" class="t s2_6">desaparición forzada de personas, la acción de hábeas corpus podrá ser interpuesta por el </div>
+<div id="ti_6" class="t s2_6">afectado o por cualquiera en su favor y el juez resolverá de inmediato, aun durante la </div>
+<div id="tj_6" class="t s2_6">vigencia del estado de sitio. </div>
+<div id="tk_6" class="t s3_6">SEGUNDA PARTE </div>
+<div id="tl_6" class="t s3_6">AUTORIDADES DE LA NACION </div>
+<div id="tm_6" class="t s3_6">TITULO PRIMERO </div>
+<div id="tn_6" class="t s3_6">GOBIERNO FEDERAL </div>
+<div id="to_6" class="t s3_6">SECCION PRIMERA </div>
+<div id="tp_6" class="t s3_6">DEL PODER LEGISLATIVO </div>
+<div id="tq_6" class="t s3_6">Artículo 44</div>
+<div id="tr_6" class="t s2_6">.- Un Congreso compuesto de dos Cámaras, una de Diputados de la Nación y </div>
+<div id="ts_6" class="t s2_6">otra de Senadores de las provincias y de la ciudad de Buenos Aires, será investido del Poder </div>
+<div id="tt_6" class="t s2_6">Legislativo de la Nación. </div>
+<div id="tu_6" class="t s4_6">T</div>
+<div id="tv_6" class="t s5_6">EXTO ANTERIOR A </div>
+<div id="tw_6" class="t s4_6">1994: A</div>
+<div id="tx_6" class="t s5_6">RTÍCULO </div>
+<div id="ty_6" class="t s4_6">36. Un Congreso compuesto de dos Cámaras, una de diputados de la Nación </div>
+<div id="tz_6" class="t s4_6">y otra de senadores de las provincias y de la Capital, será investido del Poder Legislativo de la Nación. </div>
+<div id="t10_6" class="t s3_6">CAPÍTULO PRIMERO </div>
+<div id="t11_6" class="t s3_6">De la Cámara de Diputados </div>
+<div id="t12_6" class="t s3_6">Artículo 45</div>
+<div id="t13_6" class="t s2_6">.- La Cámara de Diputados se compondrá de representantes elegidos </div>
+<div id="t14_6" class="t s2_6">directamente por el pueblo de las provincias, de la ciudad de Buenos Aires, y de la Capital </div>
+<div id="t15_6" class="t s2_6">en caso de traslado, que se consideran a este fin como distritos electorales de un solo </div>
+<div id="t16_6" class="t s2_6">Estado y a simple pluralidad de sufragios. El número de representantes será de uno por cada </div>
+<div id="t17_6" class="t s2_6">treinta y tres mil habitantes o fracción que no baje de dieciséis mil quinientos. Después de la </div>
+<div id="t18_6" class="t s2_6">realización de cada censo, el Congreso fijará la representación con arreglo al mismo, </div>
+<div id="t19_6" class="t s2_6">pudiendo aumentar pero no disminuir la base expresada para cada diputado. </div>
+<div id="t1a_6" class="t s4_6">T</div>
+<div id="t1b_6" class="t s5_6">EXTO ANTERIOR A </div>
+<div id="t1c_6" class="t s4_6">1994: A</div>
+<div id="t1d_6" class="t s5_6">RTÍCULO </div>
+<div id="t1e_6" class="t s4_6">37. La Cámara de Diputados se compondrá de representantes elegidos </div>
+<div id="t1f_6" class="t s4_6">directamente por el pueblo de las provincias y de la Capital, que se consideran a este fin como distritos </div>
+<div id="t1g_6" class="t s4_6">electorales de un solo Estado y a simple pluralidad de sufragios. El número de representantes será de uno </div>
+<div id="t1h_6" class="t s4_6">por cada treinta y tres mil habitntes o fracción que no baje de dieciséis mil quinientos. Después de la </div>
+<div id="t1i_6" class="t s4_6">realización de cada censo, el Congreso fijará la representación con arreglo al mismo, pudiendo aumentar </div>
+<div id="t1j_6" class="t s4_6">pero no disminuir la base expresada por cada diputado. </div>
+<div id="t1k_6" class="t s3_6">Artículo 46</div>
+<div id="t1l_6" class="t s2_6">.- Los diputados para la primera Legislatura se nombrarán en la proporción </div>
+<div id="t1m_6" class="t s2_6">siguiente: por la provincia de Buenos Aires doce: por la de Córdoba seis: por la de </div>
+<div id="t1n_6" class="t s2_6">Catamarca tres: por la de Corrientes cuatro: por la de Entre Ríos dos: por la de Jujuy dos: </div>
+<div id="t1o_6" class="t s2_6">por la de Mendoza tres: por la de La Rioja dos: por la de Salta tres: por la de Santiago </div>
+<div id="t1p_6" class="t s2_6">cuatro: por la de San Juan dos: por la de Santa Fe dos: por la de San Luis dos: y por la de </div>
+<div id="t1q_6" class="t s2_6">Tucumán tres. </div>
+<div id="t1r_6" class="t s3_6">Artículo 47</div>
+<div id="t1s_6" class="t s2_6">.- Para la segunda Legislatura deberá realizarse el censo general, y arreglarse a </div>
+<div id="t1t_6" class="t s2_6">él el número de diputados; pero este censo sólo podrá renovarse cada diez años. </div>
+<div id="t1u_6" class="t s3_6">Artículo 48</div>
+<div id="t1v_6" class="t s2_6">.- Para ser diputado se requiere haber cumplido la edad de veinticinco años, </div>
+<div id="t1w_6" class="t s2_6">tener cuatro años de ciudadanía en ejercicio, y ser natural de la provincia que lo elija, o con </div>
+<div id="t1x_6" class="t s2_6">dos años de residencia inmediata en ella. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1540" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t2_6',2874],['t3_6',2874],['t4_6',2276],['t5_6',2874],['t6_6',2874],['t7_6',2874],['t8_6',2875],['t9_6',1314],['ta_6',2874],['tb_6',2874],['tc_6',2874],['td_6',2874],['te_6',1547],['tf_6',2874],['tg_6',2875],['th_6',2874],['ti_6',2874],['tj_6',856],['tk_6',579],['tl_6',1028],['tm_6',603],['tn_6',703],['to_6',652],['tp_6',877],['tq_6',385],['tr_6',2489],['ts_6',2874],['tt_6',747],['tv_6',372],['tw_6',197],['ty_6',1889],['tz_6',2525],['t10_6',698],['t11_6',929],['t12_6',413],['t13_6',2461],['t14_6',2874],['t15_6',2874],['t16_6',2875],['t17_6',2874],['t18_6',2874],['t19_6',2373],['t1b_6',393],['t1c_6',206],['t1e_6',1838],['t1f_6',2696],['t1g_6',2696],['t1h_6',2695],['t1i_6',2695],['t1j_6',1372],['t1k_6',391],['t1l_6',2482],['t1m_6',2874],['t1n_6',2874],['t1o_6',2874],['t1p_6',2874],['t1q_6',444],['t1r_6',379],['t1s_6',2495],['t1t_6',2504],['t1u_6',388],['t1v_6',2486],['t1w_6',2874],['t1x_6',1272]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 70;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

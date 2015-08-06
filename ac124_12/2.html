@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:260px;}
+#t6_2{left:101px;top:278px;}
+#t7_2{left:101px;top:295px;}
+#t8_2{left:101px;top:312px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:362px;}
+#tb_2{left:101px;top:379px;}
+#tc_2{left:101px;top:411px;}
+#td_2{left:101px;top:428px;}
+#te_2{left:101px;top:445px;}
+#tf_2{left:101px;top:477px;}
+#tg_2{left:101px;top:495px;}
+#th_2{left:101px;top:512px;}
+#ti_2{left:101px;top:530px;}
+#tj_2{left:101px;top:547px;}
+#tk_2{left:101px;top:564px;}
+#tl_2{left:101px;top:596px;}
+#tm_2{left:101px;top:613px;}
+#tn_2{left:101px;top:631px;}
+#to_2{left:101px;top:648px;}
+#tp_2{left:101px;top:680px;}
+#tq_2{left:101px;top:698px;}
+#tr_2{left:101px;top:715px;}
+#ts_2{left:101px;top:732px;}
+#tt_2{left:101px;top:750px;}
+#tu_2{left:101px;top:767px;}
+#tv_2{left:101px;top:799px;}
+#tw_2{left:101px;top:816px;}
+#tx_2{left:101px;top:834px;}
+#ty_2{left:101px;top:865px;}
+#tz_2{left:101px;top:883px;}
+#t10_2{left:101px;top:900px;}
+#t11_2{left:101px;top:932px;}
+#t12_2{left:101px;top:949px;}
+#t13_2{left:101px;top:967px;}
+#t14_2{left:101px;top:984px;}
+#t15_2{left:101px;top:1002px;}
+#t16_2{left:101px;top:1019px;}
+#t17_2{left:101px;top:1037px;}
+#t18_2{left:101px;top:1068px;}
+#t19_2{left:101px;top:1086px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">Electoral, que agrupa a un número reducido de magistrados y funcionarios del fuero provenientes de </div>
+<div id="t4_2" class="t s2_2">distintos distritos.- </div>
+<div id="t5_2" class="t s2_2">3°) Que, sin perjuicio de ello, no puede pasarse por alto que, en el marco de la organización federal </div>
+<div id="t6_2" class="t s2_2">(artículo 1° de la Constitución Nacional) y de la específica configuración de federalismo que se </div>
+<div id="t7_2" class="t s2_2">desprende de los términos de los artículos 121, 122, 123 y concordantes, coexisten actualmente en </div>
+<div id="t8_2" class="t s2_2">nuestro país, en cada ámbito territorial distrital, al menos dos estamentos -federal y provincial- en </div>
+<div id="t9_2" class="t s2_2">materia de administración electoral.- </div>
+<div id="ta_2" class="t s2_2">En ese contexto, sin embargo, numerosas tareas a cargo de la justicia nacional electoral proyectan </div>
+<div id="tb_2" class="t s2_2">sus efectos al ámbito de la administración electoral local.- </div>
+<div id="tc_2" class="t s2_2">4°) Que, usualmente, el fuero federal electoral presta asistencia a los organismos provinciales </div>
+<div id="td_2" class="t s2_2">competentes en diversos aspectos relativos al desarrollo de los procesos electorales locales, sean </div>
+<div id="te_2" class="t s2_2">éstos simultáneos o no.- </div>
+<div id="tf_2" class="t s2_2">Se afirmó en otra ocasión -Ac. N° 145/04 CNE- que, en numerosas oportunidades, las autoridades </div>
+<div id="tg_2" class="t s2_2">provinciales -gobiernos y organismos electorales- han solicitado colaboración a la justicia nacional </div>
+<div id="th_2" class="t s2_2">electoral para la organización de comicios exclusivamente locales, así como también en los casos en </div>
+<div id="ti_2" class="t s2_2">que éstos se celebraren -cf. ley 15.262 y su decr. regl.- de manera simultánea con los nacionales, </div>
+<div id="tj_2" class="t s2_2">dando lugar a que el fuero federal electoral prestara su “cooperación con el fin de dar cumplimiento </div>
+<div id="tk_2" class="t s2_2">con las funciones que, por mandato legal, le han sido encomendadas” (cf. Ac. cit.).- </div>
+<div id="tl_2" class="t s2_2">Por ello, se consideró necesario uniformar las diferentes modalidades en que se instrumentaban las </div>
+<div id="tm_2" class="t s2_2">aludidas demandas de colaboración, que normalmente son encauzadas “mediante la suscripción de </div>
+<div id="tn_2" class="t s2_2">convenios entre los titulares de los juzgados federales electorales y las autoridades de provincia o en </div>
+<div id="to_2" class="t s2_2">su caso, de la Ciudad de Buenos Aires” (cf. Ac. cit.).- </div>
+<div id="tp_2" class="t s2_2">5°) Que, no obstante lo expuesto en el considerando anterior, existen innumerables aspectos de </div>
+<div id="tq_2" class="t s2_2">administración electoral -relativos, por ejemplo, al registro y subregistros de electores, de </div>
+<div id="tr_2" class="t s2_2">agrupaciones políticas, de afiliados, control del financiamiento partidario, incorporación de nuevas </div>
+<div id="ts_2" class="t s2_2">tecnologías, etc.- que, para alcanzar una mayor eficacia operativa, requieren una coordinación </div>
+<div id="tt_2" class="t s2_2">interjurisdiccional aún mayor, atendiendo -cuando ello fuera posible- a las especificidades de las </div>
+<div id="tu_2" class="t s2_2">respectivas regulaciones federales y locales.- </div>
+<div id="tv_2" class="t s2_2">6°) Que no es ocioso mencionar aquí, por otra parte, que los organismos provinciales electorales </div>
+<div id="tw_2" class="t s2_2">han conformado en el año 1996 -en el marco de las “Primeras Jornadas Interprovinciales de Justicia </div>
+<div id="tx_2" class="t s2_2">Electoral” (La Plata, 1996)- un Foro Federal de organismos electorales.- </div>
+<div id="ty_2" class="t s2_2">La actividad de dicho Foro tiene por objeto (cfr. www.forofederal.org.ar) el intercambio de </div>
+<div id="tz_2" class="t s2_2">experiencia, legislación y jurisprudencia relacionada con la actividad que desarrollan las distintas </div>
+<div id="t10_2" class="t s2_2">autoridades con competencia en la materia de cada una de las provincias argentinas.- </div>
+<div id="t11_2" class="t s2_2">7°) Que, teniendo en consideración la existencia de los mencionados foros y espacios de trabajo </div>
+<div id="t12_2" class="t s2_2">escindidos en jurisdicción federal y provincial, resulta conveniente disponer de un ámbito adecuado </div>
+<div id="t13_2" class="t s2_2">que convoque tanto a la justicia nacional electoral como a los organismos electorales locales, para </div>
+<div id="t14_2" class="t s2_2">intercambiar las experiencias e inquietudes relativas a las problemáticas comunes en materia de </div>
+<div id="t15_2" class="t s2_2">administración y justicia electoral, y coordinar las acciones pertinentes en tales áreas, adoptando, </div>
+<div id="t16_2" class="t s2_2">cuando ello fuera conveniente, las medidas adecuadas para optimizar las tareas electorales dentro </div>
+<div id="t17_2" class="t s2_2">de las respectivas competencias.- </div>
+<div id="t18_2" class="t s2_2">8°) Que, a tal efecto, corresponde recordar que -según se ha explicado- “los Consejos Federales </div>
+<div id="t19_2" class="t s2_2">constituyen herramientas estratégicas, (pues) son ámbitos de encuentro Nación-provincias en los </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2933],['t4_2',543],['t5_2',2933],['t6_2',2933],['t7_2',2933],['t8_2',2933],['t9_2',1069],['ta_2',2933],['tb_2',1682],['tc_2',2933],['td_2',2934],['te_2',713],['tf_2',2934],['tg_2',2933],['th_2',2934],['ti_2',2934],['tj_2',2934],['tk_2',2440],['tl_2',2934],['tm_2',2933],['tn_2',2934],['to_2',1542],['tp_2',2933],['tq_2',2934],['tr_2',2933],['ts_2',2933],['tt_2',2934],['tu_2',1309],['tv_2',2933],['tw_2',2934],['tx_2',2085],['ty_2',2934],['tz_2',2934],['t10_2',2498],['t11_2',2934],['t12_2',2934],['t13_2',2934],['t14_2',2934],['t15_2',2934],['t16_2',2933],['t17_2',978],['t18_2',2934],['t19_2',2933]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

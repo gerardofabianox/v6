@@ -1,0 +1,222 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:333px;top:128px;}
+#t2_8{left:331px;top:147px;}
+#t3_8{left:101px;top:211px;}
+#t4_8{left:101px;top:243px;}
+#t5_8{left:101px;top:274px;}
+#t6_8{left:101px;top:306px;}
+#t7_8{left:101px;top:338px;}
+#t8_8{left:101px;top:370px;}
+#t9_8{left:101px;top:401px;}
+#ta_8{left:101px;top:433px;}
+#tb_8{left:101px;top:465px;}
+#tc_8{left:101px;top:497px;}
+#td_8{left:101px;top:528px;}
+#te_8{left:101px;top:560px;}
+#tf_8{left:101px;top:592px;}
+#tg_8{left:101px;top:623px;}
+#th_8{left:101px;top:655px;}
+#ti_8{left:101px;top:687px;}
+#tj_8{left:101px;top:719px;}
+#tk_8{left:101px;top:750px;}
+#tl_8{left:101px;top:782px;}
+#tm_8{left:101px;top:814px;}
+#tn_8{left:101px;top:846px;}
+#to_8{left:101px;top:877px;}
+#tp_8{left:101px;top:909px;}
+#tq_8{left:101px;top:927px;}
+#tr_8{left:101px;top:958px;}
+#ts_8{left:101px;top:976px;}
+#tt_8{left:101px;top:1007px;}
+#tu_8{left:101px;top:1039px;}
+#tv_8{left:101px;top:1071px;}
+
+.s2_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_8{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_8" class="t s1_8">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_8" class="t s2_8">3. PATRIMONIO NETO </div>
+<div id="t4_8" class="t s3_8">3.1. Superávit / Déficit inicial </div>
+<div id="t5_8" class="t s3_8">3.2. Superávit / Déficit del período </div>
+<div id="t6_8" class="t s3_8">3.3. Reservas (según detalle) </div>
+<div id="t7_8" class="t s3_8">………………………………………………………. </div>
+<div id="t8_8" class="t s3_8">………………………………………………………. </div>
+<div id="t9_8" class="t s3_8">3.4. Saldo por revaluación de bienes de uso </div>
+<div id="ta_8" class="t s3_8">3.5. Ajuste de Resultados de Ejercicios Anteriores </div>
+<div id="tb_8" class="t s2_8">4. RECURSOS </div>
+<div id="tc_8" class="t s2_8">4.1. RECURSOS PÚBLICOS PARA DESENVOLVIMIENTO INSTITUCIONAL </div>
+<div id="td_8" class="t s3_8">4.1.1. Aportes públicos para desenvolvimiento institucional </div>
+<div id="te_8" class="t s3_8">4.1.2. Aportes públicos para mantenimiento de cuenta bancaria </div>
+<div id="tf_8" class="t s3_8">4.1.3. Aportes públicos extraordinarios </div>
+<div id="tg_8" class="t s2_8">4.2. RECURSOS PRIVADOS PARA DESENVOLVIMIENTO INSTITUCIONAL </div>
+<div id="th_8" class="t s3_8">4.2.1. Contribuciones y donaciones privadas de personas físicas recibidas en efectivo </div>
+<div id="ti_8" class="t s3_8">4.2.2. Contribuciones y donaciones privadas de personas físicas recibidas en especie </div>
+<div id="tj_8" class="t s3_8">4.2.3. Contribuciones y donaciones privadas de personas jurídicas recibidas en efectivo </div>
+<div id="tk_8" class="t s3_8">4.2.4. Contribuciones y donaciones privadas de personas jurídicas recibidas en especie </div>
+<div id="tl_8" class="t s3_8">4.2.5. Transferencias recibidas de otros órganos o distritos para desenvolvimiento institucional </div>
+<div id="tm_8" class="t s2_8">4.3. RECURSOS PARA CAMPAÑA ELECTORAL NACIONAL </div>
+<div id="tn_8" class="t s3_8">4.3.1. Aporte público extraordinario para campaña electoral nacional </div>
+<div id="to_8" class="t s3_8">4.3.2. Aporte público para impresión de boletas para campaña nacional </div>
+<div id="tp_8" class="t s3_8">4.3.3. Contribuciones y donaciones privadas de personas físicas recibidas en efectivo para campaña </div>
+<div id="tq_8" class="t s3_8">nacional </div>
+<div id="tr_8" class="t s3_8">4.3.4. Contribuciones y donaciones privadas de personas físicas recibidas en especie para campaña </div>
+<div id="ts_8" class="t s3_8">nacional </div>
+<div id="tt_8" class="t s3_8">4.3.5. Transferencias recibidas de otros órganos o distritos para campaña nacional </div>
+<div id="tu_8" class="t s2_8">4.4. RECURSOS PARA CAMPAÑA ELECTORAL LOCAL </div>
+<div id="tv_8" class="t s3_8">4.4.1. Aportes públicos provinciales para campaña local </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="935" height="1210" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t1_8',1076],['t2_8',1095],['t3_8',712],['t4_8',847],['t5_8',1005],['t6_8',856],['t9_8',1272],['ta_8',1442],['tb_8',430],['tc_8',2295],['td_8',1711],['te_8',1846],['tf_8',1127],['tg_8',2307],['th_8',2465],['ti_8',2454],['tj_8',2533],['tk_8',2520],['tl_8',2748],['tm_8',1787],['tn_8',1993],['to_8',2071],['tp_8',2898],['tr_8',2886],['tt_8',2397],['tu_8',1650],['tv_8',1614]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 32;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

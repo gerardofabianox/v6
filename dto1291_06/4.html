@@ -1,0 +1,246 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:108px;}
+#t2_4{left:331px;top:128px;}
+#t3_4{left:101px;top:191px;}
+#t4_4{left:101px;top:208px;}
+#t5_4{left:101px;top:226px;}
+#t6_4{left:101px;top:243px;}
+#t7_4{left:101px;top:281px;}
+#t8_4{left:101px;top:298px;}
+#t9_4{left:101px;top:336px;}
+#ta_4{left:101px;top:353px;}
+#tb_4{left:101px;top:371px;}
+#tc_4{left:101px;top:388px;}
+#td_4{left:101px;top:406px;}
+#te_4{left:150px;top:406px;}
+#tf_4{left:101px;top:443px;}
+#tg_4{left:101px;top:461px;}
+#th_4{left:101px;top:478px;}
+#ti_4{left:101px;top:496px;}
+#tj_4{left:101px;top:513px;}
+#tk_4{left:101px;top:531px;}
+#tl_4{left:181px;top:531px;}
+#tm_4{left:101px;top:568px;}
+#tn_4{left:101px;top:586px;}
+#to_4{left:101px;top:603px;}
+#tp_4{left:101px;top:621px;}
+#tq_4{left:101px;top:638px;}
+#tr_4{left:101px;top:655px;}
+#ts_4{left:101px;top:693px;}
+#tt_4{left:101px;top:711px;}
+#tu_4{left:101px;top:748px;}
+#tv_4{left:101px;top:766px;}
+#tw_4{left:101px;top:803px;}
+#tx_4{left:101px;top:821px;}
+#ty_4{left:101px;top:858px;}
+#tz_4{left:101px;top:876px;}
+#t10_4{left:101px;top:893px;}
+#t11_4{left:101px;top:931px;}
+#t12_4{left:101px;top:948px;}
+#t13_4{left:101px;top:966px;}
+#t14_4{left:101px;top:983px;}
+#t15_4{left:101px;top:1021px;}
+#t16_4{left:101px;top:1038px;}
+#t17_4{left:101px;top:1076px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">e) A depositar en el cuarto oscuro las listas de los candidatos oficializados de cada distrito electoral. </div>
+<div id="t4_4" class="t s2_4">Queda prohibido colocar en el cuarto oscuro carteles, inscripciones, insignias, indicaciones o </div>
+<div id="t5_4" class="t s2_4">imágenes, o elemento alguno que implique una sugerencia a la voluntad del elector, fuera de las </div>
+<div id="t6_4" class="t s2_4">listas de candidatos oficializadas. </div>
+<div id="t7_4" class="t s2_4">f) A poner en lugar bien visible, a la entrada de la mesa, uno de los ejemplares del padrón de </div>
+<div id="t8_4" class="t s2_4">electores con su firma, para que sea consultado por éstos sin dificultad. </div>
+<div id="t9_4" class="t s2_4">g) A colocar sobre la mesa las boletas oficiales de sufragio, los formularios de Acta de Apertura y </div>
+<div id="ta_4" class="t s2_4">Cierre del Comicio, del Acta de Recuento de Boletas y DOS (2) ejemplares del Padrón Electoral </div>
+<div id="tb_4" class="t s2_4">Especial para Procesados. Las constancias que habrán de remitirse a la CAMARA NACIONAL </div>
+<div id="tc_4" class="t s2_4">ELECTORAL se asentarán en UNO (1) solo de los TRES (3) ejemplares que reciban los Presidentes de </div>
+<div id="td_4" class="t s2_4">mesa. </div>
+<div id="te_4" class="t s3_4">(Inciso sustituido por art. 4° del Decreto N° 295/2009 B.O. 15/4/2009)</div>
+<div id="tf_4" class="t s2_4">h) A verificar la identidad de los Fiscales de los partidos políticos que hubiesen asistido. Aquellos que </div>
+<div id="tg_4" class="t s2_4">no estuvieran presentes en el momento de la apertura del acto electoral serán reconocidos al tiempo </div>
+<div id="th_4" class="t s2_4">que lleguen, sin retrotraer ninguna de las operaciones. Los partidos políticos deberán informar a las </div>
+<div id="ti_4" class="t s2_4">Juntas Electorales Nacionales, al menos DIEZ (10) días antes de la fecha de la elección, la nómina </div>
+<div id="tj_4" class="t s2_4">de fiscales que actuarán en el marco de la Ley Nº 25.858, para su notificación a las unidades de </div>
+<div id="tk_4" class="t s2_4">detención.</div>
+<div id="tl_4" class="t s3_4">(Inciso sustituido por art. 4° del Decreto N° 295/2009 B.O. 15/4/2009)</div>
+<div id="tm_4" class="t s2_4">ARTÍCULO 15.- Apertura del acto. Adoptadas las medidas pertinentes, el presidente de la mesa </div>
+<div id="tn_4" class="t s2_4">declarará abierto el acto electoral y labrará el Acta de Apertura llenando los claros del formulario </div>
+<div id="to_4" class="t s2_4">impreso, donde se consignará el número total de boletas de votación. El Acta será suscripta por el </div>
+<div id="tp_4" class="t s2_4">Presidente, el suplente y los fiscales de los partidos. Si alguno de éstos no estuviese presente, o no </div>
+<div id="tq_4" class="t s2_4">hubiese Fiscales nombrados, o se negaren a firmar, el presidente consignará tal circunstancia, </div>
+<div id="tr_4" class="t s2_4">testificada, en lo posible, por DOS (2) electores presentes, que firmarán juntamente con él. </div>
+<div id="ts_4" class="t s2_4">ARTÍCULO 16.- Procedimiento. Una vez abierto el acto, los electores se apersonarán al presidente, </div>
+<div id="tt_4" class="t s2_4">exhibiendo su documento cívico. </div>
+<div id="tu_4" class="t s2_4">El presidente y su suplente, así como los Fiscales acreditados ante la mesa y que estén inscriptos en </div>
+<div id="tv_4" class="t s2_4">ella, serán los primeros en emitir el voto. </div>
+<div id="tw_4" class="t s2_4">Los Fiscales o autoridades de mesa que no estuviesen presentes al abrirse el acto sufragarán a </div>
+<div id="tx_4" class="t s2_4">medida que se incorporen a la mesa. </div>
+<div id="ty_4" class="t s2_4">ARTÍCULO 17.- Derecho del elector a votar. Todo interno que figure en el padrón y exhiba su </div>
+<div id="tz_4" class="t s2_4">documento de identidad tiene el derecho a votar. Los presidentes no aceptarán impugnación alguna </div>
+<div id="t10_4" class="t s2_4">que se funde en la inhabilidad del ciudadano para figurar en el padrón electoral. </div>
+<div id="t11_4" class="t s2_4">ARTÍCULO 18.- Dónde y cómo votan los electores. Los electores podrán votar únicamente en la </div>
+<div id="t12_4" class="t s2_4">mesa receptora de votos en cuya lista figuren asentados y con el documento cívico habilitante. El </div>
+<div id="t13_4" class="t s2_4">presidente verificará si el ciudadano a quien pertenece el documento cívico figura en el padrón </div>
+<div id="t14_4" class="t s2_4">electoral de la mesa. </div>
+<div id="t15_4" class="t s2_4">Las Autoridades penitenciarias que se encuentren cumpliendo funciones el día del comicio no podrán </div>
+<div id="t16_4" class="t s2_4">emitir su voto en tales establecimientos. </div>
+<div id="t17_4" class="t s3_4">(Artículo sustituido por art. 5° del Decreto N° 295/2009 B.O. 15/4/2009)</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1096],['t3_4',2933],['t4_4',2933],['t5_4',2934],['t6_4',958],['t7_4',2934],['t8_4',2081],['t9_4',2934],['ta_4',2933],['tb_4',2934],['tc_4',2935],['te_4',2073],['tf_4',2934],['tg_4',2934],['th_4',2934],['ti_4',2934],['tj_4',2934],['tl_4',2072],['tm_4',2934],['tn_4',2933],['to_4',2934],['tp_4',2934],['tq_4',2934],['tr_4',2659],['ts_4',2934],['tt_4',943],['tu_4',2934],['tv_4',1195],['tw_4',2934],['tx_4',1072],['ty_4',2934],['tz_4',2934],['t10_4',2321],['t11_4',2934],['t12_4',2934],['t13_4',2934],['t14_4',603],['t15_4',2933],['t16_4',1174],['t17_4',2120]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 44;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

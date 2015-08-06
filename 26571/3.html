@@ -1,0 +1,257 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:334px;top:207px;}
+#t4_3{left:101px;top:239px;}
+#t5_3{left:232px;top:239px;}
+#t6_3{left:101px;top:257px;}
+#t7_3{left:101px;top:274px;}
+#t8_3{left:101px;top:291px;}
+#t9_3{left:101px;top:309px;}
+#ta_3{left:101px;top:326px;}
+#tb_3{left:101px;top:344px;}
+#tc_3{left:101px;top:361px;}
+#td_3{left:101px;top:378px;}
+#te_3{left:101px;top:396px;}
+#tf_3{left:101px;top:428px;}
+#tg_3{left:235px;top:428px;}
+#th_3{left:101px;top:445px;}
+#ti_3{left:101px;top:477px;}
+#tj_3{left:101px;top:494px;}
+#tk_3{left:101px;top:512px;}
+#tl_3{left:101px;top:543px;}
+#tm_3{left:101px;top:561px;}
+#tn_3{left:101px;top:578px;}
+#to_3{left:101px;top:610px;}
+#tp_3{left:101px;top:627px;}
+#tq_3{left:101px;top:645px;}
+#tr_3{left:101px;top:662px;}
+#ts_3{left:101px;top:694px;}
+#tt_3{left:101px;top:711px;}
+#tu_3{left:101px;top:729px;}
+#tv_3{left:101px;top:760px;}
+#tw_3{left:101px;top:778px;}
+#tx_3{left:101px;top:810px;}
+#ty_3{left:101px;top:841px;}
+#tz_3{left:101px;top:859px;}
+#t10_3{left:101px;top:891px;}
+#t11_3{left:101px;top:922px;}
+#t12_3{left:101px;top:940px;}
+#t13_3{left:101px;top:971px;}
+#t14_3{left:226px;top:971px;}
+#t15_3{left:101px;top:989px;}
+#t16_3{left:101px;top:1006px;}
+#t17_3{left:101px;top:1024px;}
+#t18_3{left:101px;top:1041px;}
+#t19_3{left:101px;top:1059px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Presentación y oficialización de listas </div>
+<div id="t4_3" class="t s3_3">ARTÍCULO 25. </div>
+<div id="t5_3" class="t s4_3">— Hasta cincuenta y cinco (55) días antes de las elecciones primarias las </div>
+<div id="t6_3" class="t s4_3">agrupaciones políticas podrán solicitar al juzgado federal con competencia electoral que corresponda </div>
+<div id="t7_3" class="t s4_3">la asignación de colores para las boletas a utilizar en las elecciones primarias y la elección general. </div>
+<div id="t8_3" class="t s4_3">Las boletas de todas las listas de una misma agrupación tendrán el mismo color que no podrá </div>
+<div id="t9_3" class="t s4_3">repetirse con el de otras agrupaciones, salvo el blanco. Aquellas que no hayan solicitado color, </div>
+<div id="ta_3" class="t s4_3">deberán utilizar en las boletas de todas sus listas el color blanco. En el caso de las agrupaciones </div>
+<div id="tb_3" class="t s4_3">nacionales, el juzgado federal con competencia electoral de la Capital Federal asignará los colores </div>
+<div id="tc_3" class="t s4_3">que serán utilizados por todas las agrupaciones de distrito de cada agrupación nacional, </div>
+<div id="td_3" class="t s4_3">comunicándolo a los juzgados electorales de distrito para que esos colores no sean asignados a </div>
+<div id="te_3" class="t s4_3">otras agrupaciones. </div>
+<div id="tf_3" class="t s3_3">ARTÍCULO 26. </div>
+<div id="tg_3" class="t s4_3">— Las juntas electorales partidarias se integrarán, asimismo, con un (1) </div>
+<div id="th_3" class="t s4_3">representante de cada una de las listas oficializadas. </div>
+<div id="ti_3" class="t s4_3">Las listas de precandidatos se deben presentar ante la junta electoral de cada agrupación hasta </div>
+<div id="tj_3" class="t s4_3">cincuenta (50) días antes de la elección primaria para su oficialización. Las listas deben cumplir con </div>
+<div id="tk_3" class="t s4_3">los siguientes requisitos: </div>
+<div id="tl_3" class="t s4_3">a) Número de precandidatos igual al número de cargos titulares y suplentes a seleccionar, </div>
+<div id="tm_3" class="t s4_3">respetando el porcentaje mínimo de precandidatos de cada sexo de conformidad con lo dispuesto </div>
+<div id="tn_3" class="t s4_3">por la Ley 24.012 y su decreto reglamentario; </div>
+<div id="to_3" class="t s4_3">b) Nómina de precandidatos acompañada de constancias de aceptación de la postulación suscritas </div>
+<div id="tp_3" class="t s4_3">por el precandidato, indicación de domicilio, número de documento nacional de identidad, libreta de </div>
+<div id="tq_3" class="t s4_3">enrolamiento o libreta cívica, y declaración jurada de reunir los requisitos constitucionales y legales </div>
+<div id="tr_3" class="t s4_3">pertinentes; </div>
+<div id="ts_3" class="t s4_3">c) Designación de apoderado y responsable económico-financiero de lista, a los fines establecidos en </div>
+<div id="tt_3" class="t s4_3">la Ley de Financiamiento de los Partidos Políticos, y constitución de domicilio especial en la ciudad </div>
+<div id="tu_3" class="t s4_3">asiento de la junta electoral de la agrupación; </div>
+<div id="tv_3" class="t s4_3">d) Denominación de la lista, mediante color y/o nombre la que no podrá contener el nombre de </div>
+<div id="tw_3" class="t s4_3">personas vivas, de la agrupación política, ni de los partidos que la integraren; </div>
+<div id="tx_3" class="t s4_3">e) Avales establecidos en el artículo 21 de la presente ley; </div>
+<div id="ty_3" class="t s4_3">f) Declaración jurada de todos los precandidatos de cada lista comprometiéndose a respetar la </div>
+<div id="tz_3" class="t s4_3">plataforma electoral de la lista; </div>
+<div id="t10_3" class="t s4_3">g) Plataforma programática y declaración del medio por el cual la difundirá. </div>
+<div id="t11_3" class="t s4_3">Las listas podrán presentar copia de la documentación descrita anteriormente ante la justicia </div>
+<div id="t12_3" class="t s4_3">electoral. </div>
+<div id="t13_3" class="t s3_3">ARTÍCULO 27. </div>
+<div id="t14_3" class="t s4_3">— Presentada la solicitud de oficialización, la junta electoral de cada agrupación </div>
+<div id="t15_3" class="t s4_3">verificará el cumplimiento de las condiciones establecidas en la Constitución Nacional, la Ley de </div>
+<div id="t16_3" class="t s4_3">Partidos Políticos, el Código Electoral Nacional, el Protocolo Constitutivo del Parlamento del </div>
+<div id="t17_3" class="t s4_3">Mercosur, la carta orgánica partidaria y, en el caso de las alianzas, de su reglamento electoral. A tal </div>
+<div id="t18_3" class="t s4_3">efecto podrá solicitar la información necesaria al juzgado federal con competencia electoral del </div>
+<div id="t19_3" class="t s4_3">distrito, que deberá evacuarla dentro de las veinticuatro (24) horas desde su presentación. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',1068],['t4_3',481],['t5_3',2408],['t6_3',2933],['t7_3',2934],['t8_3',2933],['t9_3',2933],['ta_3',2933],['tb_3',2933],['tc_3',2933],['td_3',2933],['te_3',571],['tf_3',487],['tg_3',2396],['th_3',1525],['ti_3',2933],['tj_3',2934],['tk_3',718],['tl_3',2934],['tm_3',2933],['tn_3',1338],['to_3',2934],['tp_3',2933],['tq_3',2934],['ts_3',2933],['tt_3',2934],['tu_3',1332],['tv_3',2934],['tw_3',2257],['tx_3',1694],['ty_3',2933],['tz_3',905],['t10_3',2192],['t11_3',2934],['t13_3',468],['t14_3',2435],['t15_3',2934],['t16_3',2933],['t17_3',2933],['t18_3',2933],['t19_3',2644]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

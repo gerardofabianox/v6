@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load17();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_17{left:344px;top:126px;}
+#t2_17{left:342px;top:161px;}
+#t3_17{left:101px;top:238px;}
+#t4_17{left:101px;top:256px;}
+#t5_17{left:101px;top:293px;}
+#t6_17{left:101px;top:311px;}
+#t7_17{left:101px;top:349px;}
+#t8_17{left:101px;top:366px;}
+#t9_17{left:101px;top:404px;}
+#ta_17{left:101px;top:441px;}
+#tb_17{left:234px;top:441px;}
+#tc_17{left:101px;top:459px;}
+#td_17{left:101px;top:476px;}
+#te_17{left:101px;top:514px;}
+#tf_17{left:101px;top:531px;}
+#tg_17{left:101px;top:549px;}
+#th_17{left:101px;top:586px;}
+#ti_17{left:233px;top:586px;}
+#tj_17{left:101px;top:604px;}
+#tk_17{left:101px;top:641px;}
+#tl_17{left:101px;top:659px;}
+#tm_17{left:101px;top:676px;}
+#tn_17{left:101px;top:694px;}
+#to_17{left:101px;top:731px;}
+#tp_17{left:227px;top:731px;}
+#tq_17{left:101px;top:749px;}
+#tr_17{left:101px;top:766px;}
+#ts_17{left:101px;top:804px;}
+#tt_17{left:101px;top:821px;}
+#tu_17{left:101px;top:839px;}
+#tv_17{left:101px;top:876px;}
+#tw_17{left:229px;top:876px;}
+#tx_17{left:101px;top:894px;}
+#ty_17{left:101px;top:931px;}
+#tz_17{left:101px;top:949px;}
+#t10_17{left:101px;top:966px;}
+#t11_17{left:101px;top:984px;}
+#t12_17{left:101px;top:1021px;}
+#t13_17{left:227px;top:1021px;}
+#t14_17{left:101px;top:1039px;}
+#t15_17{left:101px;top:1056px;}
+
+.s3_17{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_17{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_17{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_17" class="t s1_17">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_17" class="t s1_17">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_17" class="t s2_17">expedirse en el plazo de diez (10) días hábiles de realizada ésta. La incompetencia o la falta de </div>
+<div id="t4_17" class="t s2_17">personería del representante deberá resolverse previamente. </div>
+<div id="t5_17" class="t s2_17">El procurador fiscal federal dictaminará en la audiencia o dentro de los tres (3) días hábiles de </div>
+<div id="t6_17" class="t s2_17">celebrada aquélla. </div>
+<div id="t7_17" class="t s2_17">Los términos establecidos por esta ley son perentorios. La Justicia Federal con competencia electoral </div>
+<div id="t8_17" class="t s2_17">podrá abreviarlos cuando sea justificado el apremio. </div>
+<div id="t9_17" class="t s2_17">Segunda instancia </div>
+<div id="ta_17" class="t s3_17">ARTÍCULO 66.- </div>
+<div id="tb_17" class="t s2_17">De toda sentencia o resolución definitiva o que decida artículo podrá apelarse </div>
+<div id="tc_17" class="t s2_17">dentro del plazo de cinco (5) días hábiles, por ante la Cámara Nacional Electoral, excepto en el caso </div>
+<div id="td_17" class="t s2_17">previsto por el artículo 61 del Código Electoral Nacional. </div>
+<div id="te_17" class="t s2_17">La apelación se concederá en relación y al solo efecto devolutivo, salvo cuando el cumplimiento de la </div>
+<div id="tf_17" class="t s2_17">sentencia pudiera ocasionar un perjuicio irreparable, en cuyo caso será concedida en ambos efectos. </div>
+<div id="tg_17" class="t s2_17">El recurso de apelación comprende al de nulidad. </div>
+<div id="th_17" class="t s3_17">ARTÍCULO 67.- </div>
+<div id="ti_17" class="t s2_17">El recurso de apelación será sustanciado ante el juez federal con competencia </div>
+<div id="tj_17" class="t s2_17">electoral, y del memorial que lo funde se dará traslado a la apelada por cinco (5) días. </div>
+<div id="tk_17" class="t s2_17">Al interponerse el recurso ante el juez federal con competencia electoral, las partes interesadas </div>
+<div id="tl_17" class="t s2_17">constituirán domicilio en jurisdicción de la Capital Federal. En su defecto, la Cámara Nacional </div>
+<div id="tm_17" class="t s2_17">Electoral podrá intimar a hacerlo dentro de los cinco (5) días hábiles bajo apercibimiento de tenerlo </div>
+<div id="tn_17" class="t s2_17">por constituido en sus estrados. </div>
+<div id="to_17" class="t s3_17">ARTÍCULO 68.- </div>
+<div id="tp_17" class="t s2_17">Recibidos los autos, la Cámara como medida para mejor proveer, podrá disponer la </div>
+<div id="tq_17" class="t s2_17">recepción de pruebas no rendidas en primera instancia u otras diligencias probatorias, así como </div>
+<div id="tr_17" class="t s2_17">comparendos verbales. </div>
+<div id="ts_17" class="t s2_17">Producidas las pruebas o efectuado el comparendo verbal, en su caso, se correrá vista al procurador </div>
+<div id="tt_17" class="t s2_17">fiscal federal de segunda instancia. Agregado el dictamen fiscal pasarán los autos al acuerdo para </div>
+<div id="tu_17" class="t s2_17">dictar sentencia. </div>
+<div id="tv_17" class="t s3_17">ARTÍCULO 69.- </div>
+<div id="tw_17" class="t s2_17">El término para interponer recurso de queja por apelación denegada será de cinco </div>
+<div id="tx_17" class="t s2_17">(5) días. </div>
+<div id="ty_17" class="t s2_17">La aclaratoria de la sentencia definitiva podrá interponerse, en ambas instancias dentro de las </div>
+<div id="tz_17" class="t s2_17">veinticuatro (24) horas de la notificación y deberá ser resuelta en primera instancia, dentro de las </div>
+<div id="t10_17" class="t s2_17">cuarenta y ocho (48) horas. La interposición de la aclaratoria interrumpirá el término para la </div>
+<div id="t11_17" class="t s2_17">apelación. </div>
+<div id="t12_17" class="t s3_17">ARTÍCULO 70.- </div>
+<div id="t13_17" class="t s2_17">Declarada la nulidad de una sentencia o resolución definitiva que decida artículo, la </div>
+<div id="t14_17" class="t s2_17">Cámara dispondrá que los autos pasen al subrogante legal, para que dicte nuevo pronunciamiento </div>
+<div id="t15_17" class="t s2_17">ajustado a derecho. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg17Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg17"><object width="935" height="1210" data="17/17.svg" type="image/svg+xml" id="pdf17" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld17" type="text/javascript">
+
+var isIE = false;
+var f17 = [['t1_17',987],['t2_17',1004],['t3_17',2933],['t4_17',1775],['t5_17',2934],['t6_17',527],['t7_17',2934],['t8_17',1514],['t9_17',528],['ta_17',498],['tb_17',2401],['tc_17',2933],['td_17',1624],['te_17',2933],['tf_17',2934],['tg_17',1423],['th_17',497],['ti_17',2404],['tj_17',2507],['tk_17',2934],['tl_17',2933],['tm_17',2933],['tn_17',926],['to_17',484],['tp_17',2430],['tq_17',2933],['tr_17',671],['ts_17',2933],['tt_17',2933],['tu_17',478],['tv_17',487],['tw_17',2423],['tx_17',246],['ty_17',2933],['tz_17',2934],['t10_17',2933],['t12_17',485],['t13_17',2428],['t14_17',2934],['t15_17',575]];
+function load17(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f17);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_17");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

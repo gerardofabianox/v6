@@ -1,0 +1,255 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:333px;top:128px;}
+#t2_8{left:331px;top:147px;}
+#t3_8{left:101px;top:211px;}
+#t4_8{left:101px;top:228px;}
+#t5_8{left:101px;top:260px;}
+#t6_8{left:101px;top:292px;}
+#t7_8{left:101px;top:309px;}
+#t8_8{left:101px;top:327px;}
+#t9_8{left:101px;top:358px;}
+#ta_8{left:101px;top:376px;}
+#tb_8{left:101px;top:408px;}
+#tc_8{left:101px;top:425px;}
+#td_8{left:101px;top:457px;}
+#te_8{left:101px;top:474px;}
+#tf_8{left:101px;top:492px;}
+#tg_8{left:101px;top:509px;}
+#th_8{left:101px;top:526px;}
+#ti_8{left:101px;top:544px;}
+#tj_8{left:101px;top:576px;}
+#tk_8{left:101px;top:593px;}
+#tl_8{left:101px;top:610px;}
+#tm_8{left:101px;top:628px;}
+#tn_8{left:101px;top:660px;}
+#to_8{left:223px;top:660px;}
+#tp_8{left:101px;top:677px;}
+#tq_8{left:101px;top:694px;}
+#tr_8{left:101px;top:712px;}
+#ts_8{left:101px;top:729px;}
+#tt_8{left:101px;top:747px;}
+#tu_8{left:417px;top:778px;}
+#tv_8{left:354px;top:810px;}
+#tw_8{left:101px;top:842px;}
+#tx_8{left:222px;top:842px;}
+#ty_8{left:101px;top:859px;}
+#tz_8{left:101px;top:891px;}
+#t10_8{left:101px;top:908px;}
+#t11_8{left:101px;top:926px;}
+#t12_8{left:101px;top:943px;}
+#t13_8{left:101px;top:961px;}
+#t14_8{left:101px;top:992px;}
+#t15_8{left:101px;top:1010px;}
+#t16_8{left:101px;top:1027px;}
+#t17_8{left:101px;top:1059px;}
+#t18_8{left:101px;top:1076px;}
+
+.s3_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_8{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_8" class="t s1_8">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_8" class="t s2_8">de sufragios emitidos, y el número de sufragios para cada lista interna de cada agrupación política </div>
+<div id="t4_8" class="t s2_8">en letras y números. </div>
+<div id="t5_8" class="t s2_8">Asimismo deberá contener: </div>
+<div id="t6_8" class="t s2_8">a) Cantidad, en letras y números, de votos totales emitidos para cada agrupación política y los </div>
+<div id="t7_8" class="t s2_8">logrados por cada una de las listas internas por categorías de cargos, el número de votos nulos, así </div>
+<div id="t8_8" class="t s2_8">como los recurridos, impugnados y en blanco; </div>
+<div id="t9_8" class="t s2_8">b) El nombre del presidente, el suplente y fiscales por las listas que actuaron en la mesa con </div>
+<div id="ta_8" class="t s2_8">mención de los que estuvieron presentes en el acta del escrutinio o las razones de su ausencia; </div>
+<div id="tb_8" class="t s2_8">c) La mención de las protestas que formulen los fiscales sobre el desarrollo del acto eleccionario y </div>
+<div id="tc_8" class="t s2_8">las que hagan con referencia al escrutinio. </div>
+<div id="td_8" class="t s2_8">El acta de escrutinio debe ser firmada por las autoridades de la mesa y los fiscales. Si alguno de </div>
+<div id="te_8" class="t s2_8">éstos no estuviera presente o no hubiere fiscales nombrados o se negaren a firmar, el presidente </div>
+<div id="tf_8" class="t s2_8">dejará constancia circunstanciada de estos hechos. Además del acta referida y con los resultados </div>
+<div id="tg_8" class="t s2_8">extraídos de la misma el presidente de mesa extenderá a los fiscales que lo soliciten un certificado </div>
+<div id="th_8" class="t s2_8">de escrutinio que será suscripto por él, por los suplentes y los fiscales, dejándose constancia </div>
+<div id="ti_8" class="t s2_8">circunstanciada si alguien se niega a firmarlo. </div>
+<div id="tj_8" class="t s2_8">El fiscal que se ausente antes de la clausura de los comicios señalará la hora y motivo del retiro y en </div>
+<div id="tk_8" class="t s2_8">caso de negarse a ello, se hará constar esta circunstancia firmando otro de los fiscales presentes o </div>
+<div id="tl_8" class="t s2_8">la autoridad electoral. Asimismo, se dejará constancia de su reintegro en caso de que éste se </div>
+<div id="tm_8" class="t s2_8">produzca. </div>
+<div id="tn_8" class="t s3_8">ARTÍCULO 43. </div>
+<div id="to_8" class="t s2_8">— Una vez suscritas el acta de cierre, las actas de escrutinio y los certificados de </div>
+<div id="tp_8" class="t s2_8">escrutinio para los fiscales, el presidente de mesa comunicará el resultado del escrutinio de su mesa </div>
+<div id="tq_8" class="t s2_8">al juzgado federal con competencia electoral que corresponde y a la Dirección Nacional Electoral del </div>
+<div id="tr_8" class="t s2_8">Ministerio del Interior, mediante un telegrama consignando los resultados de cada lista interna de </div>
+<div id="ts_8" class="t s2_8">cada respectiva agrupación política según el modelo que confeccione el correo oficial, y apruebe el </div>
+<div id="tt_8" class="t s2_8">juzgado federal con competencia electoral, a efectos de su difusión preliminar. </div>
+<div id="tu_8" class="t s2_8">CAPITULO VII </div>
+<div id="tv_8" class="t s4_8">Proclamación de los candidatos </div>
+<div id="tw_8" class="t s3_8">ARTÍCULO 44. </div>
+<div id="tx_8" class="t s2_8">— La elección de los candidatos a presidente y vicepresidente de la Nación de cada </div>
+<div id="ty_8" class="t s2_8">agrupación se hará mediante fórmula en forma directa y a simple pluralidad de sufragios. </div>
+<div id="tz_8" class="t s2_8">Las candidaturas a senadores y a parlamentarios del Mercosur por distritos regionales provinciales y </div>
+<div id="t10_8" class="t s2_8">de la Ciudad Autónoma de Buenos Aires, se elegirán por lista completa a simple pluralidad de votos. </div>
+<div id="t11_8" class="t s2_8">En la elección de candidatos a diputados nacionales, y a parlamentarios del Mercosur por distrito </div>
+<div id="t12_8" class="t s2_8">nacional, cada agrupación política para integrar la lista definitiva aplicará el sistema de distribución </div>
+<div id="t13_8" class="t s2_8">de cargos que establezca cada carta orgánica partidaria o el reglamento de la alianza partidaria. </div>
+<div id="t14_8" class="t s2_8">Los juzgados federales con competencia electoral de cada distrito efectuarán el escrutinio definitivo </div>
+<div id="t15_8" class="t s2_8">de las elecciones primarias de las agrupaciones políticas de su distrito, y comunicarán los </div>
+<div id="t16_8" class="t s2_8">resultados: </div>
+<div id="t17_8" class="t s2_8">a) En el caso de la categoría presidente y vicepresidente de la Nación, y de parlamentarios del </div>
+<div id="t18_8" class="t s2_8">Mercosur por distrito nacional a la Cámara Nacional Electoral, la que procederá a hacer la sumatoria </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="935" height="1210" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t1_8',1076],['t2_8',1095],['t3_8',2934],['t4_8',601],['t5_8',796],['t6_8',2933],['t7_8',2933],['t8_8',1340],['t9_8',2933],['ta_8',2774],['tb_8',2933],['tc_8',1228],['td_8',2933],['te_8',2934],['tf_8',2934],['tg_8',2934],['th_8',2933],['ti_8',1326],['tj_8',2934],['tk_8',2934],['tl_8',2933],['tn_8',464],['to_8',2443],['tp_8',2933],['tq_8',2933],['tr_8',2934],['ts_8',2934],['tt_8',2279],['tu_8',401],['tv_8',905],['tw_8',460],['tx_8',2450],['ty_8',2600],['tz_8',2933],['t10_8',2933],['t11_8',2933],['t12_8',2934],['t13_8',2792],['t14_8',2933],['t15_8',2934],['t17_8',2933],['t18_8',2933]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 45;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

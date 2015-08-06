@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load7();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:333px;top:128px;}
+#t2_7{left:331px;top:147px;}
+#t3_7{left:101px;top:207px;}
+#t4_7{left:101px;top:225px;}
+#t5_7{left:101px;top:242px;}
+#t6_7{left:101px;top:260px;}
+#t7_7{left:101px;top:291px;}
+#t8_7{left:101px;top:323px;}
+#t9_7{left:222px;top:323px;}
+#ta_7{left:400px;top:323px;}
+#tb_7{left:101px;top:341px;}
+#tc_7{left:101px;top:358px;}
+#td_7{left:101px;top:390px;}
+#te_7{left:224px;top:390px;}
+#tf_7{left:246px;top:390px;}
+#tg_7{left:450px;top:390px;}
+#th_7{left:101px;top:407px;}
+#ti_7{left:101px;top:425px;}
+#tj_7{left:101px;top:442px;}
+#tk_7{left:101px;top:474px;}
+#tl_7{left:101px;top:505px;}
+#tm_7{left:223px;top:505px;}
+#tn_7{left:244px;top:505px;}
+#to_7{left:435px;top:505px;}
+#tp_7{left:101px;top:523px;}
+#tq_7{left:101px;top:540px;}
+#tr_7{left:101px;top:558px;}
+#ts_7{left:101px;top:589px;}
+#tt_7{left:101px;top:621px;}
+#tu_7{left:101px;top:653px;}
+#tv_7{left:101px;top:685px;}
+#tw_7{left:101px;top:716px;}
+#tx_7{left:101px;top:748px;}
+#ty_7{left:101px;top:766px;}
+#tz_7{left:346px;top:797px;}
+#t10_7{left:101px;top:829px;}
+#t11_7{left:240px;top:829px;}
+#t12_7{left:309px;top:829px;}
+#t13_7{left:101px;top:846px;}
+#t14_7{left:101px;top:878px;}
+#t15_7{left:101px;top:896px;}
+#t16_7{left:101px;top:913px;}
+#t17_7{left:101px;top:930px;}
+#t18_7{left:101px;top:948px;}
+#t19_7{left:101px;top:965px;}
+#t1a_7{left:101px;top:997px;}
+#t1b_7{left:101px;top:1029px;}
+#t1c_7{left:223px;top:1029px;}
+#t1d_7{left:392px;top:1029px;}
+#t1e_7{left:101px;top:1046px;}
+#t1f_7{left:101px;top:1064px;}
+
+.s4_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_7{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_7" class="t s1_7">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_7" class="t s1_7">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_7" class="t s2_7">de Financiamiento de los Partidos Políticos, 26.215, quienes serán solidariamente responsables con </div>
+<div id="t4_7" class="t s2_7">el tesorero, por el cumplimiento de las disposiciones legales, reglamentarias y técnicas aplicables. </div>
+<div id="t5_7" class="t s2_7">Las designaciones deberán ser comunicadas al juez federal con competencia electoral </div>
+<div id="t6_7" class="t s2_7">correspondiente, y al Ministerio del Interior y Transporte. </div>
+<div id="t7_7" class="t s3_7">(Artículo modificado por art. 6 de la Ley N° 26.774 B.O. 02/11/2012)</div>
+<div id="t8_7" class="t s4_7">ARTÍCULO 28. </div>
+<div id="t9_7" class="t s2_7">— Fondos de campaña.</div>
+<div id="ta_7" class="t s2_7">Los fondos destinados a financiar la campaña electoral y el </div>
+<div id="tb_7" class="t s2_7">aporte para impresión de boleta deberán depositarse en la cuenta única establecida en los artículos </div>
+<div id="tc_7" class="t s2_7">20 ó 32 de la presente ley, según corresponda. </div>
+<div id="td_7" class="t s4_7">ARTÍCULO 29. </div>
+<div id="te_7" class="t s2_7">— </div>
+<div id="tf_7" class="t s3_7">Constitución de fondo fijo.</div>
+<div id="tg_7" class="t s2_7">Las erogaciones que por su monto sólo puedan ser </div>
+<div id="th_7" class="t s2_7">realizadas en efectivo, se instrumentarán a través de la constitución de un fondo fijo. Cada gasto </div>
+<div id="ti_7" class="t s2_7">que se realice utilizando el fondo fijo debe contar con la constancia prevista en el artículo siguiente y </div>
+<div id="tj_7" class="t s2_7">la documentación respaldatoria de dicho gasto. </div>
+<div id="tk_7" class="t s3_7">(Artículo modificado por art. 49 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tl_7" class="t s4_7">ARTÍCULO 30. </div>
+<div id="tm_7" class="t s2_7">— </div>
+<div id="tn_7" class="t s3_7">Constancia de operación.</div>
+<div id="to_7" class="t s2_7">Todo gasto que se efectúe con motivo de la campaña </div>
+<div id="tp_7" class="t s2_7">electoral, superior a un mil (1.000) módulos electorales deberá documentarse, sin perjuicio de la </div>
+<div id="tq_7" class="t s2_7">emisión de los instrumentos fiscales ordinarios, a través de una “constancia de operación para </div>
+<div id="tr_7" class="t s2_7">campaña electoral”, en la que deberán constar los siguientes datos: </div>
+<div id="ts_7" class="t s3_7">(Párrafo modificado por art. 50 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tt_7" class="t s2_7">a) identificación tributaria del partido o alianza y de la parte co-contratante; </div>
+<div id="tu_7" class="t s2_7">b) importe de la operación; </div>
+<div id="tv_7" class="t s2_7">c) número de la factura correspondiente; </div>
+<div id="tw_7" class="t s2_7">d) número del cheque destinado al pago. </div>
+<div id="tx_7" class="t s2_7">Las “Constancias de Operación para Campaña Electoral” serán numeradas correlativamente para </div>
+<div id="ty_7" class="t s2_7">cada campaña y deberán registrarse en los libros contables. </div>
+<div id="tz_7" class="t s2_7">Capítulo II — Alianzas electorales </div>
+<div id="t10_7" class="t s4_7">ARTÍCULO 31. — </div>
+<div id="t11_7" class="t s3_7">Alianzas.</div>
+<div id="t12_7" class="t s2_7">Los partidos políticos podrán constituir alianzas electorales de acuerdo a </div>
+<div id="t13_7" class="t s2_7">lo previsto en el artículo 10 de la Ley 23.298. </div>
+<div id="t14_7" class="t s2_7">Al iniciarse la campaña electoral las alianzas electorales en aquellos distritos en que presenten </div>
+<div id="t15_7" class="t s2_7">candidaturas a cargos públicos electivos nacionales deben designar dos (2) responsables económico-</div>
+<div id="t16_7" class="t s2_7">financieros de campaña, que cumplan los requisitos previstos en el artículo 27 de la presente ley, </div>
+<div id="t17_7" class="t s2_7">quienes serán solidariamente responsables con el tesorero, por el cumplimiento de las disposiciones </div>
+<div id="t18_7" class="t s2_7">legales aplicables. Las designaciones deberán ser comunicadas al juez federal con competencia </div>
+<div id="t19_7" class="t s2_7">electoral correspondiente. </div>
+<div id="t1a_7" class="t s3_7">(Artículo modificado por art. 51 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t1b_7" class="t s4_7">ARTÍCULO 32. </div>
+<div id="t1c_7" class="t s2_7">— Fondos electorales.</div>
+<div id="t1d_7" class="t s2_7">La alianza electoral deberá abrir una cuenta corriente única </div>
+<div id="t1e_7" class="t s2_7">en el Banco de la Nación Argentina o bancos oficiales en las provincias que los tuvieren, a nombre </div>
+<div id="t1f_7" class="t s2_7">de la alianza y a la orden conjunta del responsable económico y del responsable político de </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7"><object width="935" height="1210" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld7" type="text/javascript">
+
+var isIE = false;
+var f7 = [['t1_7',1076],['t2_7',1095],['t3_7',2934],['t4_7',2933],['t5_7',2933],['t6_7',1660],['t7_7',2016],['t8_7',461],['t9_7',688],['ta_7',1738],['tb_7',2934],['tc_7',1372],['td_7',465],['tf_7',786],['tg_7',1538],['th_7',2933],['ti_7',2935],['tj_7',1369],['tk_7',2053],['tl_7',463],['tn_7',740],['to_7',1596],['tp_7',2934],['tq_7',2933],['tr_7',1971],['ts_7',2041],['tt_7',2212],['tu_7',795],['tv_7',1194],['tw_7',1192],['tx_7',2933],['ty_7',1742],['tz_7',969],['t10_7',535],['t12_7',2100],['t13_7',1320],['t14_7',2933],['t15_7',2933],['t16_7',2934],['t17_7',2933],['t18_7',2934],['t19_7',751],['t1a_7',2053],['t1b_7',463],['t1c_7',647],['t1d_7',1771],['t1e_7',2933],['t1f_7',2933]];
+function load7(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f7);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 52;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_7");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

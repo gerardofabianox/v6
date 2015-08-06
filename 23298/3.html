@@ -1,0 +1,259 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:344px;top:126px;}
+#t2_3{left:342px;top:161px;}
+#t3_3{left:101px;top:238px;}
+#t4_3{left:101px;top:256px;}
+#t5_3{left:101px;top:273px;}
+#t6_3{left:101px;top:311px;}
+#t7_3{left:101px;top:328px;}
+#t8_3{left:101px;top:366px;}
+#t9_3{left:206px;top:366px;}
+#ta_3{left:235px;top:366px;}
+#tb_3{left:101px;top:383px;}
+#tc_3{left:101px;top:421px;}
+#td_3{left:101px;top:438px;}
+#te_3{left:101px;top:456px;}
+#tf_3{left:101px;top:473px;}
+#tg_3{left:101px;top:491px;}
+#th_3{left:101px;top:529px;}
+#ti_3{left:101px;top:546px;}
+#tj_3{left:101px;top:584px;}
+#tk_3{left:101px;top:601px;}
+#tl_3{left:101px;top:639px;}
+#tm_3{left:101px;top:656px;}
+#tn_3{left:101px;top:674px;}
+#to_3{left:101px;top:691px;}
+#tp_3{left:101px;top:729px;}
+#tq_3{left:101px;top:746px;}
+#tr_3{left:101px;top:784px;}
+#ts_3{left:215px;top:784px;}
+#tt_3{left:244px;top:784px;}
+#tu_3{left:261px;top:784px;}
+#tv_3{left:101px;top:801px;}
+#tw_3{left:101px;top:819px;}
+#tx_3{left:101px;top:836px;}
+#ty_3{left:101px;top:854px;}
+#tz_3{left:101px;top:891px;}
+#t10_3{left:101px;top:909px;}
+#t11_3{left:101px;top:926px;}
+#t12_3{left:101px;top:964px;}
+#t13_3{left:101px;top:981px;}
+#t14_3{left:101px;top:999px;}
+#t15_3{left:101px;top:1036px;}
+#t16_3{left:101px;top:1074px;}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Durante la vigencia del reconocimiento provisorio, los partidos políticos serán considerados en </div>
+<div id="t4_3" class="t s2_3">formación. No pueden presentar candidaturas a cargos electivos en elecciones primarias ni en </div>
+<div id="t5_3" class="t s2_3">elecciones nacionales, ni tienen derecho a aportes públicos ordinarios ni extraordinarios. </div>
+<div id="t6_3" class="t s3_3">(Artículo modificado por art. 2° de la Ley N° 26.571 B.O. 14/12/2009. Vigencia: a partir del 31 de </div>
+<div id="t7_3" class="t s3_3">diciembre del 2011, vigencia observada por art. 1° del Decreto N° 2004/2009 B.O. 14/12/2009) </div>
+<div id="t8_3" class="t s4_3">ARTÍCULO 7 </div>
+<div id="t9_3" class="t s5_3">bis.</div>
+<div id="ta_3" class="t s2_3">- Para obtener la personería jurídico-política definitiva, los partidos en formación, </div>
+<div id="tb_3" class="t s2_3">deben acreditar: </div>
+<div id="tc_3" class="t s2_3">a) Dentro de los ciento cincuenta (150) días, la afiliación de un número de electores no inferior al </div>
+<div id="td_3" class="t s2_3">cuatro por mil (4‰) del total de los inscriptos en el registro de electores del distrito </div>
+<div id="te_3" class="t s2_3">correspondiente, hasta el máximo de un millón (1.000.000), acompañadas de copia de los </div>
+<div id="tf_3" class="t s2_3">documentos cívicos de los afiliados donde conste la identidad y el domicilio, certificadas por </div>
+<div id="tg_3" class="t s2_3">autoridad partidaria; </div>
+<div id="th_3" class="t s2_3">b) Dentro de los ciento ochenta (180) días, haber realizado las elecciones internas, para constituir </div>
+<div id="ti_3" class="t s2_3">las autoridades definitivas del partido; </div>
+<div id="tj_3" class="t s2_3">c) Dentro de los sesenta (60) días de obtenido el reconocimiento, haber presentado los libros a que </div>
+<div id="tk_3" class="t s2_3">se refiere el artículo 37, a los fines de su rúbrica. </div>
+<div id="tl_3" class="t s2_3">Todos los trámites ante la justicia federal con competencia electoral hasta la constitución definitiva </div>
+<div id="tm_3" class="t s2_3">de las autoridades partidarias serán efectuados por las autoridades promotoras, o los apoderados, </div>
+<div id="tn_3" class="t s2_3">quienes serán solidariamente responsables de la veracidad de lo expuesto en las respectivas </div>
+<div id="to_3" class="t s2_3">documentaciones y presentaciones. </div>
+<div id="tp_3" class="t s3_3">(Artículo incorporado por art. 3° de la Ley N° 26.571 B.O. 14/12/2009. Vigencia: a partir del 31 de </div>
+<div id="tq_3" class="t s3_3">diciembre del 2011, vigencia observada por art. 1° del Decreto N° 2004/2009 B.O. 14/12/2009) </div>
+<div id="tr_3" class="t s4_3">ARTÍCULO 7 </div>
+<div id="ts_3" class="t s5_3">ter.</div>
+<div id="tt_3" class="t s4_3">- </div>
+<div id="tu_3" class="t s2_3">Para conservar la personería jurídico-política, los partidos políticos deben </div>
+<div id="tv_3" class="t s2_3">mantener en forma permanente el número mínimo de afiliados. El Ministerio Público Fiscal, de oficio, </div>
+<div id="tw_3" class="t s2_3">o a instancia del juzgado federal con competencia electoral, verificará el cumplimiento del presente </div>
+<div id="tx_3" class="t s2_3">requisito, en el segundo mes de cada año, e impulsará la declaración de caducidad de la personería </div>
+<div id="ty_3" class="t s2_3">jurídico-política cuando corresponda. </div>
+<div id="tz_3" class="t s2_3">Previo a la declaración de caducidad el juez competente intimará el cumplimiento del requisito </div>
+<div id="t10_3" class="t s2_3">indicado, por el plazo improrrogable de noventa (90) días, bajo apercibimiento de dar de baja al </div>
+<div id="t11_3" class="t s2_3">partido del Registro así como también su nombre y sigla. </div>
+<div id="t12_3" class="t s2_3">La Cámara Nacional Electoral publicará antes del 15 de febrero del año siguiente al cierre anual, el </div>
+<div id="t13_3" class="t s2_3">número mínimo de afiliados requerido para el mantenimiento de la personería jurídico-política de los </div>
+<div id="t14_3" class="t s2_3">partidos de distrito. </div>
+<div id="t15_3" class="t s3_3">(Artículo incorporado por art. 4° de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t16_3" class="t s2_3">2. Partidos nacionales </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',987],['t2_3',1004],['t3_3',2934],['t4_3',2935],['t5_3',2565],['t6_3',2934],['t7_3',2798],['t8_3',398],['ta_3',2396],['tb_3',479],['tc_3',2934],['td_3',2934],['te_3',2934],['tf_3',2933],['tg_3',599],['th_3',2933],['ti_3',1111],['tj_3',2934],['tk_3',1424],['tl_3',2933],['tm_3',2934],['tn_3',2934],['to_3',1030],['tp_3',2934],['tq_3',2798],['tr_3',416],['tu_3',2293],['tv_3',2933],['tw_3',2934],['tx_3',2934],['ty_3',1069],['tz_3',2933],['t10_3',2934],['t11_3',1656],['t12_3',2934],['t13_3',2934],['t14_3',567],['t15_3',2071],['t16_3',633]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 43;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

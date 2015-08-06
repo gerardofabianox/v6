@@ -1,0 +1,276 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:418px;top:207px;}
+#t4_1{left:101px;top:244px;}
+#t5_1{left:101px;top:259px;}
+#t6_1{left:101px;top:275px;}
+#t7_1{left:101px;top:291px;}
+#t8_1{left:332px;top:320px;}
+#t9_1{left:101px;top:372px;}
+#ta_1{left:218px;top:372px;}
+#tb_1{left:101px;top:390px;}
+#tc_1{left:101px;top:425px;}
+#td_1{left:101px;top:442px;}
+#te_1{left:101px;top:494px;}
+#tf_1{left:216px;top:494px;}
+#tg_1{left:101px;top:511px;}
+#th_1{left:101px;top:546px;}
+#ti_1{left:101px;top:564px;}
+#tj_1{left:101px;top:581px;}
+#tk_1{left:101px;top:599px;}
+#tl_1{left:101px;top:633px;}
+#tm_1{left:101px;top:651px;}
+#tn_1{left:101px;top:668px;}
+#to_1{left:101px;top:703px;}
+#tp_1{left:101px;top:721px;}
+#tq_1{left:101px;top:755px;}
+#tr_1{left:216px;top:755px;}
+#ts_1{left:101px;top:773px;}
+#tt_1{left:101px;top:790px;}
+#tu_1{left:101px;top:825px;}
+#tv_1{left:101px;top:842px;}
+#tw_1{left:101px;top:860px;}
+#tx_1{left:101px;top:895px;}
+#ty_1{left:196px;top:895px;}
+#tz_1{left:376px;top:895px;}
+#t10_1{left:101px;top:912px;}
+#t11_1{left:101px;top:929px;}
+#t12_1{left:101px;top:947px;}
+#t13_1{left:101px;top:964px;}
+#t14_1{left:101px;top:999px;}
+#t15_1{left:196px;top:999px;}
+#t16_1{left:323px;top:999px;}
+#t17_1{left:101px;top:1017px;}
+#t18_1{left:101px;top:1051px;}
+#t19_1{left:101px;top:1086px;}
+
+.s7_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s6_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 45px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Ley 26.774 </div>
+<div id="t4_1" class="t s3_1">Sancionada: Octubre 31 de 2012. </div>
+<div id="t5_1" class="t s3_1">Promulgada: Noviembre 1 de 2012. </div>
+<div id="t6_1" class="t s3_1">Publicada: B.O. 02/11/2012. </div>
+<div id="t7_1" class="t s4_1">*Nota: Las modificaciones establecidas en la presente ley se encuentran incorporadas en las normas respectivas. </div>
+<div id="t8_1" class="t s5_1">LEY DE CIUDADANÍA ARGENTINA </div>
+<div id="t9_1" class="t s5_1">ARTICULO 1°</div>
+<div id="ta_1" class="t s6_1">— Modifícase el artículo 7° de la ley 346, que quedará redactado de la siguiente </div>
+<div id="tb_1" class="t s6_1">manera: </div>
+<div id="tc_1" class="t s6_1">Artículo 7°: Los argentinos que hubiesen cumplido la edad de dieciséis (16) años, gozan de todos los </div>
+<div id="td_1" class="t s6_1">derechos políticos conforme a la Constitución y a las leyes de la República. </div>
+<div id="te_1" class="t s5_1">ARTICULO 2°</div>
+<div id="tf_1" class="t s6_1">— Modifícanse el inciso b) del artículo 10 y el artículo 10 bis de la ley 17.671, que </div>
+<div id="tg_1" class="t s6_1">quedarán redactados de la siguiente manera: </div>
+<div id="th_1" class="t s6_1">b) Al cumplir la persona los catorce (14) años de edad, oportunidad en que se completarán todos los </div>
+<div id="ti_1" class="t s6_1">datos y antecedentes, incluyendo una nueva fotografía. En esta etapa de actualización, que suple al </div>
+<div id="tj_1" class="t s6_1">anterior enrolamiento y empadronamiento, se entregará el documento nacional de identidad que </div>
+<div id="tk_1" class="t s6_1">corresponde; </div>
+<div id="tl_1" class="t s6_1">Artículo 10 bis: En oportunidad de la primera actualización de los datos de identificación, se </div>
+<div id="tm_1" class="t s6_1">requerirá la presentación del certificado que acredite escolaridad actual, extendido por autoridad </div>
+<div id="tn_1" class="t s6_1">competente. </div>
+<div id="to_1" class="t s6_1">Al tramitar la persona la actualización prevista a los catorce (14) años de edad, se solicitará el </div>
+<div id="tp_1" class="t s6_1">certificado de aprobación de la Educación General Básica, o la acreditación de escolaridad actual. </div>
+<div id="tq_1" class="t s5_1">ARTICULO 3°</div>
+<div id="tr_1" class="t s6_1">— Modifícanse los artículos 1°, 6°, 12, 15, 18, 25, 26, 28, 29, 33, 35, 41, 43, 61, </div>
+<div id="ts_1" class="t s6_1">68, 72, 73, 75, 75 bis, 86, 87, 88, 89, 92, 94, 95, 112, 125, 127 y 137 de la ley 19.945, que </div>
+<div id="tt_1" class="t s6_1">quedarán redactados de la siguiente manera: </div>
+<div id="tu_1" class="t s6_1">Artículo 1º: Son electores los argentinos nativos y por opción, desde los dieciséis (16) años de edad, </div>
+<div id="tv_1" class="t s6_1">y los argentinos naturalizados, desde los dieciocho (18) años de edad, que no tengan ninguna de las </div>
+<div id="tw_1" class="t s6_1">inhabilitaciones previstas en esta ley. </div>
+<div id="tx_1" class="t s6_1">Artículo 6°: </div>
+<div id="ty_1" class="t s7_1">Inmunidad del Elector. </div>
+<div id="tz_1" class="t s6_1">Ninguna autoridad estará facultada para reducir a prisión al </div>
+<div id="t10_1" class="t s6_1">elector desde veinticuatro (24) horas antes de la elección hasta la clausura del comicio, salvo el caso </div>
+<div id="t11_1" class="t s6_1">de flagrante delito o cuando existiera orden emanada de juez competente. Fuera de estos supuestos </div>
+<div id="t12_1" class="t s6_1">no se le estorbará en el tránsito desde su domicilio hasta el lugar donde aquél se halle instalado, ni </div>
+<div id="t13_1" class="t s6_1">podrá ser molestado en el desempeño de sus funciones. </div>
+<div id="t14_1" class="t s6_1">Artículo 12: </div>
+<div id="t15_1" class="t s7_1">Deber de votar. </div>
+<div id="t16_1" class="t s6_1">Todo elector tiene el deber de votar en la elección nacional que se </div>
+<div id="t17_1" class="t s6_1">realice en su distrito. </div>
+<div id="t18_1" class="t s6_1">Quedan exentos de esa obligación: </div>
+<div id="t19_1" class="t s6_1">a) Los jueces y sus auxiliares que por imperio de esta ley deban asistir a sus oficinas y mantenerlas </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',392],['t4_1',879],['t5_1',931],['t6_1',748],['t7_1',2620],['t8_1',1083],['t9_1',439],['ta_1',2463],['tc_1',2934],['td_1',2167],['te_1',435],['tf_1',2472],['tg_1',1319],['th_1',2934],['ti_1',2933],['tj_1',2933],['tl_1',2934],['tm_1',2934],['to_1',2934],['tp_1',2813],['tq_1',435],['tr_1',2473],['ts_1',2935],['tt_1',1319],['tu_1',2935],['tv_1',2934],['tw_1',1083],['tx_1',346],['ty_1',685],['tz_1',1834],['t10_1',2934],['t11_1',2933],['t12_1',2934],['t13_1',1629],['t14_1',349],['t15_1',476],['t16_1',2045],['t17_1',609],['t18_1',1014],['t19_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

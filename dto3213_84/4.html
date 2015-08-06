@@ -1,0 +1,256 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:108px;}
+#t2_4{left:331px;top:128px;}
+#t3_4{left:101px;top:191px;}
+#t4_4{left:101px;top:208px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:166px;top:246px;}
+#t7_4{left:101px;top:263px;}
+#t8_4{left:101px;top:281px;}
+#t9_4{left:101px;top:298px;}
+#ta_4{left:101px;top:336px;}
+#tb_4{left:162px;top:336px;}
+#tc_4{left:101px;top:353px;}
+#td_4{left:101px;top:371px;}
+#te_4{left:101px;top:388px;}
+#tf_4{left:101px;top:426px;}
+#tg_4{left:162px;top:426px;}
+#th_4{left:101px;top:443px;}
+#ti_4{left:101px;top:461px;}
+#tj_4{left:101px;top:478px;}
+#tk_4{left:101px;top:496px;}
+#tl_4{left:101px;top:513px;}
+#tm_4{left:101px;top:531px;}
+#tn_4{left:101px;top:548px;}
+#to_4{left:101px;top:566px;}
+#tp_4{left:101px;top:603px;}
+#tq_4{left:163px;top:603px;}
+#tr_4{left:101px;top:621px;}
+#ts_4{left:101px;top:638px;}
+#tt_4{left:101px;top:655px;}
+#tu_4{left:101px;top:693px;}
+#tv_4{left:101px;top:711px;}
+#tw_4{left:101px;top:748px;}
+#tx_4{left:169px;top:748px;}
+#ty_4{left:101px;top:766px;}
+#tz_4{left:101px;top:783px;}
+#t10_4{left:101px;top:801px;}
+#t11_4{left:101px;top:818px;}
+#t12_4{left:101px;top:836px;}
+#t13_4{left:101px;top:853px;}
+#t14_4{left:101px;top:891px;}
+#t15_4{left:101px;top:908px;}
+#t16_4{left:101px;top:946px;}
+#t17_4{left:101px;top:963px;}
+#t18_4{left:101px;top:981px;}
+#t19_4{left:101px;top:1018px;}
+#t1a_4{left:101px;top:1036px;}
+#t1b_4{left:101px;top:1053px;}
+#t1c_4{left:101px;top:1071px;}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">ciudadanía por opción, por naturalización o por aplicación de la Ley N° 16.569, así como aquéllas en </div>
+<div id="t4_4" class="t s2_4">que se declare la nulidad de la misma por haber sido obtenida mediante fraude. </div>
+<div id="t5_4" class="t s3_4">Art. 11</div>
+<div id="t6_4" class="t s2_4">— El argentino naturalizado deberá presentarse con la Carta de Ciudadanía en la oficina </div>
+<div id="t7_4" class="t s2_4">correspondiente del Registro Nacional de las Personas para tramitar su documentación. Cuando se </div>
+<div id="t8_4" class="t s2_4">trate de ciudadanía por opción u obtenida de conformidad a la Ley N° 16.569 será suficiente con el </div>
+<div id="t9_4" class="t s2_4">testimonio de la sentencia. </div>
+<div id="ta_4" class="t s3_4">Art. 12</div>
+<div id="tb_4" class="t s2_4">— El Registro Nacional de las Personas comunicará a la Cámara Nacional Electoral los datos </div>
+<div id="tc_4" class="t s2_4">identificatorios de aquellas personas a quienes se conceda ciudadanía argentina por opción, por </div>
+<div id="td_4" class="t s2_4">naturalización o por aplicación de la Ley N° 16.569, como así también de aquéllos a quienes se les </div>
+<div id="te_4" class="t s2_4">anule la misma, a efectos de mantener actualizado el Registro Nacional de Electores. </div>
+<div id="tf_4" class="t s3_4">Art. 13</div>
+<div id="tg_4" class="t s2_4">— Las personas que hubieren obtenido o readquirido la nacionalidad argentina de acuerdo a </div>
+<div id="th_4" class="t s2_4">lo previsto en los artículos 5°, 6° y 9° de la Ley de facto N° 21.795, así como aquéllas comprendidas </div>
+<div id="ti_4" class="t s2_4">en los artículos 3° y 4° de la Ley N° 23.059, serán consideradas ciudadanos argentinos con pleno </div>
+<div id="tj_4" class="t s2_4">ejercicio de los derechos políticos e incorporados de oficio al Registro Nacional de Electores y al </div>
+<div id="tk_4" class="t s2_4">Registro Nacional de las Personas sin necesidad de trámite judicial o administrativo previo alguno, </div>
+<div id="tl_4" class="t s2_4">salvo respecto del ejercicio de los derechos políticos, los casos en que se interpusiere el recurso </div>
+<div id="tm_4" class="t s2_4">judicial previsto en el artículo 4° última parte de la Ley N° 23.059, y aquéllos comprendidos en </div>
+<div id="tn_4" class="t s2_4">alguna de las causales previstas en el artículo 8° de la Ley N° 346, siendo en este último caso </div>
+<div id="to_4" class="t s2_4">necesario iniciar de oficio la acción judicial respectiva. </div>
+<div id="tp_4" class="t s3_4">Art. 14</div>
+<div id="tq_4" class="t s2_4">— La suspensión del ejercicio de los derechos políticos y su rehabilitación deberán tramitar </div>
+<div id="tr_4" class="t s2_4">por ante la Justicia Nacional Electoral. Será competente el Juzgado Nacional Electoral </div>
+<div id="ts_4" class="t s2_4">correspondiente al último domicilio del causante que figure registrado en el Registro Nacional de </div>
+<div id="tt_4" class="t s2_4">Electores. </div>
+<div id="tu_4" class="t s2_4">Cuando el mismo fuere desconocido o estuviere fijado en el extranjero será competente el Juzgado </div>
+<div id="tv_4" class="t s2_4">Nacional Electoral de la Capital Federal. </div>
+<div id="tw_4" class="t s3_4">Art. 15</div>
+<div id="tx_4" class="t s2_4">— Los organismos mencionados en el artículo 5° del presente decreto y los cónsules </div>
+<div id="ty_4" class="t s2_4">argentinos actuantes en el exterior están obligados a denunciar ante la Cámara Nacional Electoral </div>
+<div id="tz_4" class="t s2_4">los casos de que tuvieren conocimiento que estén comprendidos en el artículo 8° de la Ley N° 346 o </div>
+<div id="t10_4" class="t s2_4">que en la obtención de la ciudadanía por opción, por naturalización o por aplicación de la Ley N° </div>
+<div id="t11_4" class="t s2_4">16.569, hubiere mediado fraude por ser falsos los hechos invocados para su obtención, a efectos de </div>
+<div id="t12_4" class="t s2_4">proceder a su anulación, debiéndose en la denuncia determinarse con precisión la causa a la vez que </div>
+<div id="t13_4" class="t s2_4">acompañar la prueba que la justifique. </div>
+<div id="t14_4" class="t s2_4">La denuncia será pasada al Procurador Fiscal para que asuma la calidad de parte en el juicio. La </div>
+<div id="t15_4" class="t s2_4">acción también podrá ser iniciada de oficio por el mencionado funcionario. </div>
+<div id="t16_4" class="t s2_4">Solicitada la suspensión del ejercicio de los derechos políticos o la nulidad de la ciudadanía obtenida </div>
+<div id="t17_4" class="t s2_4">mediante fraude, se correrá traslado al interesado, por el término de quince (15) días laborables, </div>
+<div id="t18_4" class="t s2_4">para que conteste y ofrezca la prueba de descargo. </div>
+<div id="t19_4" class="t s2_4">El emplazamiento se notificará por Cédula en el último domicilio que el interesado tuviere registrado </div>
+<div id="t1a_4" class="t s2_4">en el Registro Nacional de Electores. Si no residiere allí o estuviere ausente, será notificado por </div>
+<div id="t1b_4" class="t s2_4">edictos, que se publicarán tres (3) veces con un intervalo de diez (10) días entre una y otra </div>
+<div id="t1c_4" class="t s2_4">publicación en el Boletín Oficial de la Nación. La defensa del causante será asumida obligatoriamente </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1096],['t3_4',2934],['t4_4',2319],['t5_4',231],['t6_4',2673],['t7_4',2933],['t8_4',2933],['t9_4',778],['ta_4',223],['tb_4',2687],['tc_4',2933],['td_4',2934],['te_4',2464],['tf_4',223],['tg_4',2688],['th_4',2934],['ti_4',2933],['tj_4',2933],['tk_4',2934],['tl_4',2934],['tm_4',2934],['tn_4',2934],['to_4',1562],['tp_4',225],['tq_4',2684],['tr_4',2934],['ts_4',2934],['tu_4',2934],['tv_4',1147],['tw_4',237],['tx_4',2659],['ty_4',2933],['tz_4',2934],['t10_4',2933],['t11_4',2934],['t12_4',2934],['t13_4',1118],['t14_4',2934],['t15_4',2148],['t16_4',2933],['t17_4',2933],['t18_4',1488],['t19_4',2934],['t1a_4',2934],['t1b_4',2933],['t1c_4',2934]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 49;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

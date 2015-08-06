@@ -1,0 +1,304 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load41();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_41{left:333px;top:108px;}
+#t2_41{left:331px;top:128px;}
+#t3_41{left:101px;top:191px;}
+#t4_41{left:101px;top:207px;}
+#t5_41{left:101px;top:242px;}
+#t6_41{left:223px;top:242px;}
+#t7_41{left:803px;top:242px;}
+#t8_41{left:816px;top:242px;}
+#t9_41{left:101px;top:260px;}
+#ta_41{left:101px;top:277px;}
+#tb_41{left:101px;top:315px;}
+#tc_41{left:553px;top:315px;}
+#td_41{left:101px;top:351px;}
+#te_41{left:210px;top:351px;}
+#tf_41{left:233px;top:351px;}
+#tg_41{left:253px;top:351px;}
+#th_41{left:740px;top:351px;}
+#ti_41{left:101px;top:368px;}
+#tj_41{left:101px;top:386px;}
+#tk_41{left:101px;top:423px;}
+#tl_41{left:560px;top:423px;}
+#tm_41{left:101px;top:459px;}
+#tn_41{left:206px;top:459px;}
+#to_41{left:229px;top:459px;}
+#tp_41{left:247px;top:459px;}
+#tq_41{left:538px;top:459px;}
+#tr_41{left:101px;top:476px;}
+#ts_41{left:101px;top:494px;}
+#tt_41{left:101px;top:511px;}
+#tu_41{left:101px;top:529px;}
+#tv_41{left:101px;top:566px;}
+#tw_41{left:101px;top:584px;}
+#tx_41{left:101px;top:601px;}
+#ty_41{left:101px;top:639px;}
+#tz_41{left:101px;top:657px;}
+#t10_41{left:101px;top:694px;}
+#t11_41{left:101px;top:712px;}
+#t12_41{left:101px;top:729px;}
+#t13_41{left:101px;top:767px;}
+#t14_41{left:101px;top:784px;}
+#t15_41{left:101px;top:802px;}
+#t16_41{left:101px;top:839px;}
+#t17_41{left:560px;top:839px;}
+#t18_41{left:101px;top:875px;}
+#t19_41{left:208px;top:875px;}
+#t1a_41{left:279px;top:875px;}
+#t1b_41{left:101px;top:892px;}
+#t1c_41{left:785px;top:892px;}
+#t1d_41{left:813px;top:892px;}
+#t1e_41{left:101px;top:910px;}
+#t1f_41{left:101px;top:927px;}
+#t1g_41{left:101px;top:945px;}
+#t1h_41{left:101px;top:962px;}
+#t1i_41{left:101px;top:980px;}
+#t1j_41{left:101px;top:997px;}
+#t1k_41{left:101px;top:1015px;}
+#t1l_41{left:101px;top:1052px;}
+#t1m_41{left:416px;top:1088px;}
+
+.s5_41{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s7_41{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s3_41{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s6_41{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_41{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_41{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_41{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_41" class="t s1_41">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_41" class="t s1_41">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_41" class="t s2_41">(Artículo sustituido por art. 8° de la Ley 26.744 B.O. 11/06/2012 y modificado por art. 3° de la Ley N° 26.774 </div>
+<div id="t4_41" class="t s2_41">B.O. 02/11/2012) </div>
+<div id="t5_41" class="t s3_41">Artículo 128.- </div>
+<div id="t6_41" class="t s4_41">Portación de armas. Exhibición de banderas, divisas o distintivos partidarios</div>
+<div id="t7_41" class="t s3_41">. </div>
+<div id="t8_41" class="t s5_41">Se </div>
+<div id="t9_41" class="t s5_41">impondrá prisión de hasta quince (15) días o multa de hasta quinientos pesos ($ 500) a toda </div>
+<div id="ta_41" class="t s5_41">persona que violare la prohibición impuesta por el artículo 71 inciso e) de la presente ley. </div>
+<div id="tb_41" class="t s2_41">(Artículo modificado por art. 8 de la Ley N° 25.610 B.O. 08/07/2002)</div>
+<div id="tc_41" class="t s6_41">. </div>
+<div id="td_41" class="t s3_41">Artículo 128 </div>
+<div id="te_41" class="t s7_41">bis</div>
+<div id="tf_41" class="t s3_41">.- </div>
+<div id="tg_41" class="t s4_41">Actos de proselitismo. Publicación de encuestas y proyecciones.</div>
+<div id="th_41" class="t s5_41">Se impondrá </div>
+<div id="ti_41" class="t s5_41">multa de entre diez mil ($ 10.000) y cien mil pesos ($ 100.000) a toda persona física o jurídica que </div>
+<div id="tj_41" class="t s5_41">violare las prohibiciones impuestas por el artículo 71 en sus incisos f) y h) de la presente ley. </div>
+<div id="tk_41" class="t s2_41">(Artículo incorporado por art. 9 de la Ley N° 25.610 B.O. 08/07/2002)</div>
+<div id="tl_41" class="t s6_41">. </div>
+<div id="tm_41" class="t s3_41">Artículo 128 </div>
+<div id="tn_41" class="t s7_41">ter</div>
+<div id="to_41" class="t s3_41">.- </div>
+<div id="tp_41" class="t s4_41">Publicidad en medios de comunicación.</div>
+<div id="tq_41" class="t s5_41">a) El partido político que incumpliera los </div>
+<div id="tr_41" class="t s5_41">límites de emisión y publicación de avisos publicitarios en televisión, radio y medios gráficos, </div>
+<div id="ts_41" class="t s5_41">perderá el derecho a recibir contribuciones, subsidios y todo recurso de financiamiento público </div>
+<div id="tt_41" class="t s5_41">anual, por un plazo de uno (1) a cuatro (4) años y los fondos para el financiamiento de campaña por </div>
+<div id="tu_41" class="t s5_41">una (1) a dos (2) elecciones. </div>
+<div id="tv_41" class="t s5_41">b) La persona física o jurídica que incumpliera los límites de emisión y publicación de avisos </div>
+<div id="tw_41" class="t s5_41">publicitarios en televisión, radio y medios gráficos será pasible de una multa de entre diez mil ($ 10. </div>
+<div id="tx_41" class="t s5_41">000) y cien mil pesos ($ 100.000). </div>
+<div id="ty_41" class="t s5_41">c) La persona física o jurídica que explote un medio de comunicación y que violare la prohibición </div>
+<div id="tz_41" class="t s5_41">establecida en el artículo 64 ter de la presente ley será pasible de la siguiente sanción: </div>
+<div id="t10_41" class="t s5_41">1. Multa equivalente al valor total de los segundos de publicidad de uno (1) hasta cuatro (4) días, </div>
+<div id="t11_41" class="t s5_41">conforme a la facturación de dicho medio en el mes anterior a aquél en que se produzca la </div>
+<div id="t12_41" class="t s5_41">infracción, si se trata de un medio televisivo o radial. </div>
+<div id="t13_41" class="t s5_41">2. Multa equivalente al valor total de los centímetros de publicidad de uno (1) hasta cuatro (4) días, </div>
+<div id="t14_41" class="t s5_41">conforme a la facturación de dicho medio en el mes anterior a aquél en que se produzca la </div>
+<div id="t15_41" class="t s5_41">infracción, si se trata de un medio gráfico. </div>
+<div id="t16_41" class="t s2_41">(Artículo incorporado por art. 7 de la Ley N° 25.610 B.O. 08/07/2002)</div>
+<div id="t17_41" class="t s6_41">. </div>
+<div id="t18_41" class="t s3_41">Artículo 128 </div>
+<div id="t19_41" class="t s7_41">quáter.-</div>
+<div id="t1a_41" class="t s5_41">Actos de campaña electoral. La agrupación política, que realice actividades </div>
+<div id="t1b_41" class="t s5_41">entendidas como actos de campaña electoral fuera del plazo establecido en el Artículo 64 </div>
+<div id="t1c_41" class="t s4_41">bis </div>
+<div id="t1d_41" class="t s5_41">del </div>
+<div id="t1e_41" class="t s5_41">presente Código, será sancionada con la pérdida del derecho a recibir contribuciones, subsidios y </div>
+<div id="t1f_41" class="t s5_41">todo recurso de financiamiento público anual, por un plazo de uno (1) a cuatro (4) años y los fondos </div>
+<div id="t1g_41" class="t s5_41">para el financiamiento de campaña por una (1) a dos (2) elecciones. La persona física que realizare </div>
+<div id="t1h_41" class="t s5_41">actividades entendidas como actos de campaña electoral fuera del período establecido por el </div>
+<div id="t1i_41" class="t s5_41">presente Código, será pasible de una multa de entre diez mil (10.000) y cien mil (100.000) módulos </div>
+<div id="t1j_41" class="t s5_41">electorales, de acuerdo al valor establecido anualmente en el Presupuesto General de la </div>
+<div id="t1k_41" class="t s5_41">Administración Nacional. </div>
+<div id="t1l_41" class="t s2_41">(Artículo incorporado por art. 102 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t1m_41" class="t s3_41">CAPITULO II </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg41Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg41"><object width="935" height="1210" data="41/41.svg" type="image/svg+xml" id="pdf41" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld41" type="text/javascript">
+
+var isIE = false;
+var f41 = [['t1_41',1076],['t2_41',1096],['t3_41',2934],['t4_41',465],['t5_41',456],['t6_41',2318],['t9_41',2934],['ta_41',2598],['tb_41',1811],['td_41',405],['tg_41',1918],['th_41',377],['ti_41',2934],['tj_41',2705],['tk_41',1836],['tm_41',398],['tp_41',1142],['tq_41',1183],['tr_41',2934],['ts_41',2934],['tt_41',2934],['tu_41',837],['tv_41',2933],['tw_41',2934],['tx_41',1009],['ty_41',2933],['tz_41',2524],['t10_41',2933],['t11_41',2933],['t12_41',1537],['t13_41',2933],['t14_41',2933],['t15_41',1225],['t16_41',1836],['t18_41',401],['t1a_41',2220],['t1b_41',2707],['t1e_41',2933],['t1f_41',2934],['t1g_41',2933],['t1h_41',2933],['t1i_41',2934],['t1j_41',2934],['t1k_41',714],['t1l_41',1902],['t1m_41',413]];
+function load41(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f41);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 59;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_41");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

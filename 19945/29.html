@@ -1,0 +1,280 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load29();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_29{left:333px;top:108px;}
+#t2_29{left:331px;top:128px;}
+#t3_29{left:101px;top:191px;}
+#t4_29{left:101px;top:208px;}
+#t5_29{left:101px;top:246px;}
+#t6_29{left:101px;top:282px;}
+#t7_29{left:207px;top:282px;}
+#t8_29{left:392px;top:282px;}
+#t9_29{left:101px;top:299px;}
+#ta_29{left:101px;top:317px;}
+#tb_29{left:101px;top:354px;letter-spacing:1px;}
+#tc_29{left:101px;top:370px;}
+#td_29{left:101px;top:406px;}
+#te_29{left:216px;top:406px;}
+#tf_29{left:448px;top:406px;}
+#tg_29{left:101px;top:423px;}
+#th_29{left:101px;top:441px;}
+#ti_29{left:101px;top:458px;}
+#tj_29{left:101px;top:496px;}
+#tk_29{left:101px;top:513px;}
+#tl_29{left:101px;top:551px;}
+#tm_29{left:101px;top:587px;}
+#tn_29{left:218px;top:587px;}
+#to_29{left:539px;top:587px;}
+#tp_29{left:101px;top:604px;}
+#tq_29{left:101px;top:622px;}
+#tr_29{left:101px;top:639px;}
+#ts_29{left:101px;top:677px;}
+#tt_29{left:101px;top:712px;}
+#tu_29{left:214px;top:712px;}
+#tv_29{left:467px;top:712px;}
+#tw_29{left:101px;top:730px;}
+#tx_29{left:101px;top:747px;}
+#ty_29{left:101px;top:785px;}
+#tz_29{left:217px;top:785px;}
+#t10_29{left:545px;top:785px;}
+#t11_29{left:101px;top:802px;}
+#t12_29{left:101px;top:820px;}
+#t13_29{left:101px;top:837px;}
+#t14_29{left:101px;top:855px;}
+#t15_29{left:101px;top:892px;}
+#t16_29{left:212px;top:892px;}
+#t17_29{left:505px;top:892px;}
+#t18_29{left:101px;top:910px;}
+#t19_29{left:101px;top:927px;}
+#t1a_29{left:101px;top:945px;}
+#t1b_29{left:101px;top:962px;}
+#t1c_29{left:101px;top:980px;}
+#t1d_29{left:101px;top:997px;}
+#t1e_29{left:101px;top:1015px;}
+#t1f_29{left:101px;top:1032px;}
+#t1g_29{left:101px;top:1070px;}
+#t1h_29{left:101px;top:1087px;}
+
+.s4_29{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_29{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_29{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_29{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_29{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_29" class="t s1_29">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_29" class="t s1_29">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_29" class="t s2_29">4. El presidente dejará constancia en la columna de ‘observaciones’ del padrón de las deficiencias a </div>
+<div id="t4_29" class="t s2_29">que se refieren las disposiciones precedentes. </div>
+<div id="t5_29" class="t s3_29">(Artículo modificado por art. 3° de la Ley N° 26.774 B.O. 02/11/2012) </div>
+<div id="t6_29" class="t s4_29">Artículo 87.- </div>
+<div id="t7_29" class="t s5_29">Inadmisibilidad del voto. </div>
+<div id="t8_29" class="t s2_29">Ninguna autoridad, ni aun el juez electoral, podrá ordenar al </div>
+<div id="t9_29" class="t s2_29">presidente de mesa que admita el voto de un elector que no figura inscripto en los ejemplares del </div>
+<div id="ta_29" class="t s2_29">padrón electoral. </div>
+<div id="tb_29" class="t s3_29">(Artículo sustituido por art. 4° de la Ley N° 26.744 B.O. 11/06/2012 y modificado por art. 3° de la Ley N° </div>
+<div id="tc_29" class="t s3_29">26.774 B.O. 02/11/2012) </div>
+<div id="td_29" class="t s4_29">Artículo 88.- </div>
+<div id="te_29" class="t s5_29">Derecho del elector a votar. </div>
+<div id="tf_29" class="t s2_29">Todo aquel que figure en el padrón y exhiba su </div>
+<div id="tg_29" class="t s2_29">documento cívico tiene el derecho a votar y nadie podrá cuestionarlo en el acto del sufragio. Los </div>
+<div id="th_29" class="t s2_29">presidentes no aceptarán impugnación alguna que se funde en la inhabilidad del elector para figurar </div>
+<div id="ti_29" class="t s2_29">en el padrón electoral. </div>
+<div id="tj_29" class="t s2_29">Está excluido del mismo quien se encuentre tachado con tinta roja en el padrón de la mesa, no </div>
+<div id="tk_29" class="t s2_29">pudiendo en tal caso emitir el voto aunque se alegare error. </div>
+<div id="tl_29" class="t s3_29">(Artículo modificado por art. 3° de la Ley N° 26.774 B.O. 02/11/2012) </div>
+<div id="tm_29" class="t s4_29">Artículo 89.- </div>
+<div id="tn_29" class="t s5_29">Verificación de la identidad del elector. </div>
+<div id="to_29" class="t s2_29">Comprobado que el documento cívico </div>
+<div id="tp_29" class="t s2_29">presentado pertenece al mismo elector que aparece registrado como elector, el presidente procederá </div>
+<div id="tq_29" class="t s2_29">a verificar la identidad del compareciente con las indicaciones respectivas de dicho documento, </div>
+<div id="tr_29" class="t s2_29">oyendo sobre el punto a los fiscales de los partidos. </div>
+<div id="ts_29" class="t s3_29">(Artículo modificado por art. 3° de la Ley N° 26.774 B.O. 02/11/2012) </div>
+<div id="tt_29" class="t s4_29">Artículo 90.- </div>
+<div id="tu_29" class="t s5_29">Derecho a interrogar al elector.</div>
+<div id="tv_29" class="t s2_29">Quien ejerza la presidencia de la mesa, por su </div>
+<div id="tw_29" class="t s2_29">iniciativa o a pedido de los fiscales, tiene derecho a interrogar al elector sobre las diversas </div>
+<div id="tx_29" class="t s2_29">referencias y anotaciones del documento cívico. </div>
+<div id="ty_29" class="t s4_29">Artículo 91.- </div>
+<div id="tz_29" class="t s5_29">Impugnación de la identidad del elector.</div>
+<div id="t10_29" class="t s2_29">Las mismas personas también tienen </div>
+<div id="t11_29" class="t s2_29">derecho a impugnar el voto del compareciente cuando a su juicio hubiere falseado su identidad. En </div>
+<div id="t12_29" class="t s2_29">esta alternativa expondrá concretamente el motivo de la impugnación, labrándose un acta firmada </div>
+<div id="t13_29" class="t s2_29">por el presidente y el o los impugnantes y tomándose nota sumaria en la columna de observaciones </div>
+<div id="t14_29" class="t s2_29">del padrón, frente al nombre del elector. </div>
+<div id="t15_29" class="t s4_29">Artículo 92. - </div>
+<div id="t16_29" class="t s5_29">Procedimiento en caso de impugnación. </div>
+<div id="t17_29" class="t s2_29">En caso de impugnación el presidente lo hará </div>
+<div id="t18_29" class="t s2_29">constar en el sobre correspondiente. De inmediato anotará el nombre, apellido, número y clase de </div>
+<div id="t19_29" class="t s2_29">documento cívico y año de nacimiento, y tomará la impresión dígito pulgar del elector impugnado en </div>
+<div id="t1a_29" class="t s2_29">el formulario respectivo, que será firmado por el presidente y por el o los fiscales impugnantes. Si </div>
+<div id="t1b_29" class="t s2_29">alguno de éstos se negare el presidente dejará constancia, pudiendo hacerlo bajo la firma de alguno </div>
+<div id="t1c_29" class="t s2_29">o algunos de los electores presentes. Luego colocará este formulario dentro del mencionado sobre, </div>
+<div id="t1d_29" class="t s2_29">que entregará abierto al elector junto con el sobre para emitir el voto y lo invitará a pasar al cuarto </div>
+<div id="t1e_29" class="t s2_29">oscuro. El elector no podrá retirar del sobre el formulario; si lo hiciere constituirá prueba suficiente </div>
+<div id="t1f_29" class="t s2_29">de verdad de la impugnación, salvo acreditación en contrario. </div>
+<div id="t1g_29" class="t s2_29">La negativa del o de los fiscales impugnantes a suscribir el formulario importará el desistimiento y </div>
+<div id="t1h_29" class="t s2_29">anulación de la impugnación; pero bastará que uno solo firme para que subsista. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg29Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg29"><object width="935" height="1210" data="29/29.svg" type="image/svg+xml" id="pdf29" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld29" type="text/javascript">
+
+var isIE = false;
+var f29 = [['t1_29',1076],['t2_29',1096],['t3_29',2934],['t4_29',1328],['t5_29',1839],['t6_29',405],['t7_29',714],['t8_29',1770],['t9_29',2934],['ta_29',489],['tb_29',2934],['tc_29',667],['td_29',423],['te_29',886],['tf_29',1545],['tg_29',2934],['th_29',2933],['ti_29',651],['tj_29',2934],['tk_29',1741],['tl_29',1839],['tm_29',426],['tn_29',1240],['to_29',1180],['tp_29',2934],['tq_29',2933],['tr_29',1499],['ts_29',1839],['tt_29',419],['tu_29',973],['tv_29',1470],['tw_29',2934],['tx_29',1385],['ty_29',423],['tz_29',1271],['t10_29',1158],['t11_29',2934],['t12_29',2934],['t13_29',2934],['t14_29',1177],['t15_29',423],['t16_29',1151],['t17_29',1319],['t18_29',2933],['t19_29',2934],['t1a_29',2934],['t1b_29',2933],['t1c_29',2933],['t1d_29',2933],['t1e_29',2934],['t1f_29',1788],['t1g_29',2934],['t1h_29',2350]];
+function load29(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f29);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 54;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_29");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:297px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:399px;}
+#tc_1{left:101px;top:430px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:482px;}
+#tg_1{left:101px;top:514px;}
+#th_1{left:569px;top:514px;}
+#ti_1{left:101px;top:532px;}
+#tj_1{left:453px;top:532px;}
+#tk_1{left:570px;top:532px;}
+#tl_1{left:618px;top:532px;}
+#tm_1{left:101px;top:549px;}
+#tn_1{left:101px;top:566px;}
+#to_1{left:101px;top:584px;}
+#tp_1{left:101px;top:601px;}
+#tq_1{left:101px;top:633px;}
+#tr_1{left:101px;top:651px;}
+#ts_1{left:101px;top:668px;}
+#tt_1{left:101px;top:700px;}
+#tu_1{left:101px;top:717px;}
+#tv_1{left:101px;top:734px;}
+#tw_1{left:101px;top:752px;}
+#tx_1{left:101px;top:784px;}
+#ty_1{left:101px;top:801px;}
+#tz_1{left:101px;top:819px;}
+#t10_1{left:101px;top:850px;}
+#t11_1{left:101px;top:868px;}
+#t12_1{left:101px;top:885px;}
+#t13_1{left:101px;top:917px;}
+#t14_1{left:101px;top:934px;}
+#t15_1{left:101px;top:952px;}
+#t16_1{left:101px;top:969px;}
+#t17_1{left:101px;top:1001px;}
+#t18_1{left:101px;top:1033px;}
+#t19_1{left:101px;top:1064px;}
+#t1a_1{left:101px;top:1082px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 18/2011 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 03/03/2011 </div>
+<div id="t5_1" class="t s4_1">CREACIÓN DEL REGISTRO NACIONAL DE DIVISIONES ELECTORALES. </div>
+<div id="t6_1" class="t s3_1">En Buenos Aires, a los tres días del mes de marzo del año dos mil once, se reúnen en Acuerdo </div>
+<div id="t7_1" class="t s3_1">Extraordinario, en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Santiago </div>
+<div id="t8_1" class="t s3_1">Hernán Corcuera y Alberto Ricardo Dalla Via, actuando los secretarios de la Cámara, doctores </div>
+<div id="t9_1" class="t s3_1">Nicolás Deane y Hernán Gonçalves Figueiredo. Abierto el acto por el señor Vicepresidente a cargo de </div>
+<div id="ta_1" class="t s3_1">la Presidencia, doctor Santiago Hernán Corcuera, </div>
+<div id="tb_1" class="t s4_1">CONSIDERARON: </div>
+<div id="tc_1" class="t s3_1">1º) Que la ley 26.571 introdujo reformas sustanciales al Código Electoral Nacional, que inciden en </div>
+<div id="td_1" class="t s3_1">todo el sistema de registro, actualización y mantenimiento de la información con base en la cual se </div>
+<div id="te_1" class="t s3_1">confeccionan los padrones que se utilizan en los comicios, así como en las divisiones territoriales y </div>
+<div id="tf_1" class="t s3_1">agrupación de electores. </div>
+<div id="tg_1" class="t s3_1">En cuanto a este último punto, la ley dispone que esta Cámara “</div>
+<div id="th_1" class="t s5_1">llevará un registro centralizado de la </div>
+<div id="ti_1" class="t s5_1">totalidad de las divisiones electorales del país</div>
+<div id="tj_1" class="t s3_1">” (artículo 39, </div>
+<div id="tk_1" class="t s5_1">in fine</div>
+<div id="tl_1" class="t s3_1">, Código Electoral Nacional). </div>
+<div id="tm_1" class="t s3_1">Asimismo, establece que el Tribunal dictará directivas sobre organización de los circuitos para la </div>
+<div id="tn_1" class="t s3_1">preparación de los anteproyectos de demarcación que deben remitir los juzgados federales con </div>
+<div id="to_1" class="t s3_1">competencia electoral, con el propósito de modificar o crear una división electoral (artículo 40, inc. </div>
+<div id="tp_1" class="t s3_1">1º, Código cit.).- </div>
+<div id="tq_1" class="t s3_1">2°) Que la recopilación de las divisiones electorales en un Sistema de Información Geográfica </div>
+<div id="tr_1" class="t s3_1">(S.I.G.) y la unificación de tablas y normalización de domicilios posibilitará, fundamentalmente, </div>
+<div id="ts_1" class="t s3_1">asignar de modo más eficiente a los electores los lugares de votación más cercanos a su domicilio. </div>
+<div id="tt_1" class="t s3_1">A tales fines este Tribunal creó la Unidad de Geografía Electoral, dedicada a la conformación de una </div>
+<div id="tu_1" class="t s3_1">base de datos nacional para organizar un sistema de información –de actualización continua- de </div>
+<div id="tv_1" class="t s3_1">aspectos cualitativos y cuantitativos de las unidades geográficas de cada distrito y de su ubicación </div>
+<div id="tw_1" class="t s3_1">exacta en el territorio (Ac. 139/07 CNE). </div>
+<div id="tx_1" class="t s3_1">Con el objeto de dotar a dicha Unidad de la mayor cantidad de datos, resulta necesario requerir a </div>
+<div id="ty_1" class="t s3_1">los juzgados federales con competencia electoral la remisión –en soporte digital, en cuanto sea </div>
+<div id="tz_1" class="t s3_1">posible- de los mapas actualizados de todas las divisiones electorales de su distrito.- </div>
+<div id="t10_1" class="t s3_1">3°) Que, asimismo, la utilización de nuevas tecnologías aportan amplios beneficios, como también </div>
+<div id="t11_1" class="t s3_1">sustanciales mejoras en la gestión de información electoral, que redundan en una mayor eficacia de </div>
+<div id="t12_1" class="t s3_1">la administración electoral. </div>
+<div id="t13_1" class="t s3_1">En este sentido, la utilización de un Sistema de Información Geográfica (S.I.G.) como herramienta </div>
+<div id="t14_1" class="t s3_1">informática permitirá integrar la captura, administración, análisis, modelamiento y graficación de </div>
+<div id="t15_1" class="t s3_1">datos u objetos georeferenciados, a partir de los cuales se puede realizar consultas interactivas para </div>
+<div id="t16_1" class="t s3_1">la toma de decisiones en la administración electoral.- </div>
+<div id="t17_1" class="t s3_1">Por todo ello, </div>
+<div id="t18_1" class="t s3_1">ACORDARON: </div>
+<div id="t19_1" class="t s3_1">1º) Crear, en el ámbito de la Unidad de Geografía Electoral, el Registro Nacional de Divisiones </div>
+<div id="t1a_1" class="t s3_1">Electorales.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',1010],['t4_1',587],['t5_1',2232],['t6_1',2933],['t7_1',2934],['t8_1',2934],['t9_1',2933],['ta_1',1425],['tc_1',2933],['td_1',2934],['te_1',2933],['tf_1',710],['tg_1',1872],['th_1',1061],['ti_1',1410],['tj_1',431],['tk_1',194],['tl_1',863],['tm_1',2934],['tn_1',2933],['to_1',2934],['tp_1',489],['tq_1',2933],['tr_1',2934],['ts_1',2862],['tt_1',2933],['tu_1',2933],['tv_1',2933],['tw_1',1179],['tx_1',2933],['ty_1',2933],['tz_1',2455],['t10_1',2933],['t11_1',2934],['t12_1',780],['t13_1',2933],['t14_1',2934],['t15_1',2933],['t16_1',1544],['t17_1',384],['t19_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

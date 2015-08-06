@@ -1,0 +1,226 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:108px;}
+#t2_3{left:331px;top:128px;}
+#t3_3{left:101px;top:191px;}
+#t4_3{left:168px;top:191px;}
+#t5_3{left:101px;top:208px;}
+#t6_3{left:101px;top:246px;}
+#t7_3{left:168px;top:246px;}
+#t8_3{left:101px;top:263px;}
+#t9_3{left:101px;top:281px;}
+#ta_3{left:101px;top:318px;}
+#tb_3{left:171px;top:318px;}
+#tc_3{left:101px;top:336px;}
+#td_3{left:101px;top:353px;}
+#te_3{left:101px;top:371px;}
+#tf_3{left:101px;top:408px;}
+#tg_3{left:169px;top:408px;}
+#th_3{left:101px;top:426px;}
+#ti_3{left:101px;top:443px;}
+#tj_3{left:101px;top:461px;}
+#tk_3{left:101px;top:498px;}
+#tl_3{left:170px;top:498px;}
+#tm_3{left:101px;top:516px;}
+#tn_3{left:101px;top:533px;}
+#to_3{left:101px;top:551px;}
+#tp_3{left:101px;top:588px;}
+#tq_3{left:179px;top:588px;}
+#tr_3{left:101px;top:606px;}
+#ts_3{left:101px;top:623px;}
+#tt_3{left:101px;top:641px;}
+#tu_3{left:101px;top:678px;}
+#tv_3{left:170px;top:678px;}
+#tw_3{left:101px;top:696px;}
+#tx_3{left:101px;top:733px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Art. 11. </div>
+<div id="t4_3" class="t s3_3">— Apruébase el modelo de telegrama gratuito que como Anexo III forma parte integrante </div>
+<div id="t5_3" class="t s3_3">del presente. </div>
+<div id="t6_3" class="t s2_3">Art. 12. </div>
+<div id="t7_3" class="t s3_3">— Cualquier persona que presuma que se encuentra afiliada a un partido político o que no </div>
+<div id="t8_3" class="t s3_3">quiera manifestar expresamente a cual se encuentra afiliada, puede renunciar a todo partido político </div>
+<div id="t9_3" class="t s3_3">en forma indeterminada. </div>
+<div id="ta_3" class="t s2_3">Art. 13. </div>
+<div id="tb_3" class="t s3_3">— Vencido el plazo de TRES (3) días de publicación en el Boletín Oficial de la República </div>
+<div id="tc_3" class="t s3_3">Argentina de la denominación adoptada por el partido en trámite de reconocimiento, y en forma </div>
+<div id="td_3" class="t s3_3">previa a su reconocimiento provisorio, se deberá realizar la audiencia prevista en el artículo 62 de la </div>
+<div id="te_3" class="t s3_3">Ley Nº 23.298. </div>
+<div id="tf_3" class="t s2_3">Art. 14. </div>
+<div id="tg_3" class="t s3_3">— Concedido el reconocimiento provisorio de la personería jurídico política de los partidos </div>
+<div id="th_3" class="t s3_3">políticos, el Juez Federal con Competencia Electoral deberá ordenar la publicación en el Boletín </div>
+<div id="ti_3" class="t s3_3">Oficial de la República Argentina por UN (1) día del auto respectivo, del domicilio partidario y de la </div>
+<div id="tj_3" class="t s3_3">carta orgánica. </div>
+<div id="tk_3" class="t s2_3">Art. 15. </div>
+<div id="tl_3" class="t s3_3">— Concedido el reconocimiento definitivo de la personería jurídico política de los partidos </div>
+<div id="tm_3" class="t s3_3">políticos de distrito y nacionales, el Juez Federal con Competencia Electoral deberá ordenar publicar </div>
+<div id="tn_3" class="t s3_3">en el Boletín Oficial de la República Argentina por UN (1) día el auto respectivo y la nómina de </div>
+<div id="to_3" class="t s3_3">autoridades del partido. </div>
+<div id="tp_3" class="t s2_3">Art. 16. </div>
+<div id="tq_3" class="t s3_3">— La DIRECCION NACIONAL ELECTORAL del MINISTERIO DEL INTERIOR al tomar </div>
+<div id="tr_3" class="t s3_3">conocimiento del reconocimiento definitivo de los partidos políticos y de las confederaciones y </div>
+<div id="ts_3" class="t s3_3">alianzas deberá notificarlo a la ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS (AFIP), </div>
+<div id="tt_3" class="t s3_3">organismo actuante en la órbita del MINISTERIO DE ECONOMIA Y FINANZAS PUBLICAS. </div>
+<div id="tu_3" class="t s2_3">Art. 17. </div>
+<div id="tv_3" class="t s3_3">— Comuníquese, publíquese, dése a la DIRECCION NACIONAL DEL REGISTRO OFICIAL y </div>
+<div id="tw_3" class="t s3_3">archívese. </div>
+<div id="tx_3" class="t s3_3">ANEXO I </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1096],['t3_3',247],['t4_3',2663],['t5_3',379],['t6_3',245],['t7_3',2665],['t8_3',2933],['t9_3',718],['ta_3',251],['tb_3',2654],['tc_3',2934],['td_3',2933],['te_3',440],['tf_3',247],['tg_3',2661],['th_3',2934],['ti_3',2934],['tj_3',434],['tk_3',249],['tl_3',2659],['tm_3',2933],['tn_3',2933],['to_3',690],['tp_3',267],['tq_3',2622],['tr_3',2933],['ts_3',2934],['tt_3',2562],['tu_3',250],['tv_3',2657],['tx_3',248]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 34;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

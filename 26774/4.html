@@ -1,0 +1,258 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:263px;}
+#t6_4{left:197px;top:263px;}
+#t7_4{left:553px;top:263px;}
+#t8_4{left:101px;top:281px;}
+#t9_4{left:101px;top:298px;}
+#ta_4{left:101px;top:315px;}
+#tb_4{left:101px;top:333px;}
+#tc_4{left:101px;top:350px;}
+#td_4{left:101px;top:385px;}
+#te_4{left:101px;top:403px;}
+#tf_4{left:101px;top:437px;}
+#tg_4{left:101px;top:455px;}
+#th_4{left:101px;top:472px;}
+#ti_4{left:101px;top:507px;}
+#tj_4{left:192px;top:507px;}
+#tk_4{left:810px;top:507px;}
+#tl_4{left:101px;top:524px;}
+#tm_4{left:101px;top:542px;}
+#tn_4{left:101px;top:559px;}
+#to_4{left:101px;top:577px;}
+#tp_4{left:101px;top:612px;}
+#tq_4{left:101px;top:629px;}
+#tr_4{left:101px;top:646px;}
+#ts_4{left:101px;top:664px;}
+#tt_4{left:101px;top:699px;}
+#tu_4{left:101px;top:716px;}
+#tv_4{left:101px;top:733px;}
+#tw_4{left:101px;top:768px;}
+#tx_4{left:192px;top:768px;}
+#ty_4{left:331px;top:768px;}
+#tz_4{left:101px;top:786px;}
+#t10_4{left:101px;top:821px;}
+#t11_4{left:101px;top:838px;}
+#t12_4{left:101px;top:855px;}
+#t13_4{left:101px;top:873px;}
+#t14_4{left:101px;top:890px;}
+#t15_4{left:101px;top:908px;}
+#t16_4{left:101px;top:942px;}
+#t17_4{left:101px;top:960px;}
+#t18_4{left:101px;top:977px;}
+#t19_4{left:101px;top:1012px;}
+#t1a_4{left:192px;top:1012px;}
+#t1b_4{left:370px;top:1012px;}
+#t1c_4{left:101px;top:1030px;}
+#t1d_4{left:101px;top:1064px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">código de individualización que permita la lectura automatizada de cada uno de los electores, los </div>
+<div id="t4_4" class="t s2_4">datos que para los padrones provisionales requiere la presente ley y un espacio para la firma. </div>
+<div id="t5_4" class="t s2_4">Artículo 33: </div>
+<div id="t6_4" class="t s3_4">Errores u omisiones. Plazos para subsanarlos. </div>
+<div id="t7_4" class="t s2_4">Los electores estarán facultados para </div>
+<div id="t8_4" class="t s2_4">pedir, hasta veinte (20) días antes del acto comicial, que se subsanen los errores y omisiones </div>
+<div id="t9_4" class="t s2_4">existentes en el padrón. Ello podrá hacerse personalmente o por carta certificada con aviso de </div>
+<div id="ta_4" class="t s2_4">recepción, en forma gratuita, y los jueces dispondrán se tome nota de las rectificaciones e </div>
+<div id="tb_4" class="t s2_4">inscripciones a que hubiere lugar en los ejemplares del juzgado, y en los que deben remitir para la </div>
+<div id="tc_4" class="t s2_4">elección al presidente del comicio. </div>
+<div id="td_4" class="t s2_4">No darán órdenes directas de inclusión de electores en los ejemplares ya enviados a los presidentes </div>
+<div id="te_4" class="t s2_4">de mesa. </div>
+<div id="tf_4" class="t s2_4">Las reclamaciones que autoriza este artículo se limitarán exclusivamente a la enmienda de erratas u </div>
+<div id="tg_4" class="t s2_4">omisiones. No serán admisibles las reclamaciones e impugnaciones a que se refieren los artículos 27 </div>
+<div id="th_4" class="t s2_4">y 28 de esta ley, las cuales tendrán que ser formuladas en las oportunidades allí señaladas. </div>
+<div id="ti_4" class="t s2_4">Artículo 35: </div>
+<div id="tj_4" class="t s3_4">Comunicación de autoridades civiles y militares respecto de electores inhabilitados. </div>
+<div id="tk_4" class="t s2_4">Las </div>
+<div id="tl_4" class="t s2_4">autoridades civiles y militares deberán formalizar, noventa (90) días antes de cada elección </div>
+<div id="tm_4" class="t s2_4">mediante comunicación a los jueces electorales la referencia de los electores inhabilitados en virtud </div>
+<div id="tn_4" class="t s2_4">de las prescripciones del artículo 3° y que se hallasen bajo sus órdenes o custodia o inscriptos en los </div>
+<div id="to_4" class="t s2_4">registros a su cargo. </div>
+<div id="tp_4" class="t s2_4">El incumplimiento de las obligaciones determinadas en el presente artículo, pasados treinta (30) días </div>
+<div id="tq_4" class="t s2_4">del plazo fijado en ellos y sin necesidad de requerimiento alguno, hará incurrir a los funcionarios </div>
+<div id="tr_4" class="t s2_4">responsables en falta grave administrativa. Los jueces electorales comunicarán el hecho a los </div>
+<div id="ts_4" class="t s2_4">respectivos superiores jerárquicos a los fines que corresponda. </div>
+<div id="tt_4" class="t s2_4">Si las autoridades que se mencionan aquí no tuviesen bajo sus órdenes o custodia a electores </div>
+<div id="tu_4" class="t s2_4">comprendidos en la prescripción del artículo 3°, igualmente lo harán saber a los jueces pertinentes </div>
+<div id="tv_4" class="t s2_4">en el plazo a que alude el primero de ellos. </div>
+<div id="tw_4" class="t s2_4">Artículo 41: </div>
+<div id="tx_4" class="t s3_4">Mesas electorales. </div>
+<div id="ty_4" class="t s2_4">Cada circuito se dividirá en mesas, las que se constituirán con hasta </div>
+<div id="tz_4" class="t s2_4">trescientos cincuenta (350) electores inscritos, agrupados por orden alfabético. </div>
+<div id="t10_4" class="t s2_4">Si realizado tal agrupamiento de electores quedare una fracción inferior a sesenta (60), se </div>
+<div id="t11_4" class="t s2_4">incorporará a la mesa que el juez determine. Si restare una fracción de sesenta (60) o más, se </div>
+<div id="t12_4" class="t s2_4">formará con la misma una mesa electoral. Los jueces electorales pueden constituir mesas </div>
+<div id="t13_4" class="t s2_4">electorales, en aquellos circuitos cuyos núcleos de población estén separados por largas distancias o </div>
+<div id="t14_4" class="t s2_4">accidentes geográficos que dificulten la concurrencia de los electores al comicio, agrupando a los </div>
+<div id="t15_4" class="t s2_4">electores considerando la proximidad de sus domicilios y por orden alfabético. </div>
+<div id="t16_4" class="t s2_4">Los electores domiciliados dentro de cada circuito se ordenarán alfabéticamente. Una vez realizada </div>
+<div id="t17_4" class="t s2_4">esta operación se procederá a agruparlos en mesas electorales, conforme a las disposiciones del </div>
+<div id="t18_4" class="t s2_4">presente artículo. </div>
+<div id="t19_4" class="t s2_4">Artículo 43: </div>
+<div id="t1a_4" class="t s3_4">Atribuciones y deberes. </div>
+<div id="t1b_4" class="t s2_4">Tienen las siguientes atribuciones y deberes, sin perjuicio de lo </div>
+<div id="t1c_4" class="t s2_4">establecido en la ley 19.108 y reglamento para la justicia nacional: </div>
+<div id="t1d_4" class="t s2_4">1. Proponer a las personas que deban ocupar el cargo de secretario, prosecretario y demás empleos. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2933],['t4_4',2720],['t5_4',350],['t6_4',1391],['t7_4',1126],['t8_4',2934],['t9_4',2933],['ta_4',2934],['tb_4',2934],['tc_4',989],['td_4',2933],['te_4',266],['tf_4',2933],['tg_4',2934],['th_4',2663],['ti_4',342],['tj_4',2447],['tl_4',2934],['tm_4',2933],['tn_4',2933],['to_4',595],['tp_4',2934],['tq_4',2933],['tr_4',2934],['ts_4',1823],['tt_4',2933],['tu_4',2933],['tv_4',1248],['tw_4',341],['tx_4',533],['ty_4',2012],['tz_4',2301],['t10_4',2933],['t11_4',2933],['t12_4',2933],['t13_4',2934],['t14_4',2933],['t15_4',2264],['t16_4',2933],['t17_4',2933],['t18_4',507],['t19_4',341],['t1a_4',687],['t1b_4',1858],['t1c_4',1946],['t1d_4',2930]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 50;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load11();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_11{left:344px;top:126px;}
+#t2_11{left:342px;top:161px;}
+#t3_11{left:101px;top:238px;}
+#t4_11{left:230px;top:238px;}
+#t5_11{left:101px;top:256px;}
+#t6_11{left:101px;top:273px;}
+#t7_11{left:101px;top:291px;}
+#t8_11{left:101px;top:328px;}
+#t9_11{left:101px;top:346px;}
+#ta_11{left:101px;top:383px;}
+#tb_11{left:101px;top:401px;}
+#tc_11{left:101px;top:418px;}
+#td_11{left:101px;top:436px;}
+#te_11{left:101px;top:473px;}
+#tf_11{left:101px;top:491px;}
+#tg_11{left:101px;top:529px;}
+#th_11{left:101px;top:546px;}
+#ti_11{left:101px;top:563px;}
+#tj_11{left:101px;top:581px;}
+#tk_11{left:101px;top:598px;}
+#tl_11{left:101px;top:636px;}
+#tm_11{left:101px;top:674px;}
+#tn_11{left:230px;top:674px;}
+#to_11{left:101px;top:691px;}
+#tp_11{left:101px;top:729px;}
+#tq_11{left:101px;top:766px;}
+#tr_11{left:101px;top:784px;}
+#ts_11{left:101px;top:821px;}
+#tt_11{left:101px;top:839px;}
+#tu_11{left:101px;top:876px;}
+#tv_11{left:101px;top:894px;}
+#tw_11{left:101px;top:931px;}
+#tx_11{left:101px;top:949px;}
+#ty_11{left:101px;top:966px;}
+#tz_11{left:101px;top:984px;}
+#t10_11{left:101px;top:1021px;}
+#t11_11{left:101px;top:1039px;}
+#t12_11{left:101px;top:1056px;}
+#t13_11{left:101px;top:1074px;}
+
+.s2_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_11{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_11" class="t s1_11">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_11" class="t s1_11">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_11" class="t s2_11">ARTÍCULO 32.- </div>
+<div id="t4_11" class="t s3_11">Las decisiones que adopten las Juntas Electorales desde la fecha de convocatoria </div>
+<div id="t5_11" class="t s3_11">de las elecciones partidarias internas hasta el escrutinio definitivo inclusive, deberán ser notificadas </div>
+<div id="t6_11" class="t s3_11">dentro de las veinticuatro (24) horas y serán susceptibles de apelación en idéntico plazo ante el juez </div>
+<div id="t7_11" class="t s3_11">federal con competencia electoral correspondiente. </div>
+<div id="t8_11" class="t s3_11">El juez decidirá el recurso sin más trámite dentro de las veinticuatro (24) horas de promovido el </div>
+<div id="t9_11" class="t s3_11">mismo y su resolución será inapelable. </div>
+<div id="ta_11" class="t s3_11">El fallo de la Junta Electoral sobre el escrutinio definitivo deberá notificarse dentro del plazo previsto </div>
+<div id="tb_11" class="t s3_11">en el párrafo precedente y será apelable dentro de las cuarenta y ocho (48) horas ante el juez </div>
+<div id="tc_11" class="t s3_11">federal con competencia electoral correspondiente, que deberá decidirlo sin más trámite dentro de </div>
+<div id="td_11" class="t s3_11">las setenta y dos (72) horas de promovido. </div>
+<div id="te_11" class="t s3_11">Los recursos previstos en los párrafos anteriores se interpondrán debidamente fundados ante la </div>
+<div id="tf_11" class="t s3_11">Junta Electoral que elevará el expediente de inmediato. </div>
+<div id="tg_11" class="t s3_11">Salvo el caso del párrafo primero las resoluciones judiciales que se dicten serán susceptibles de </div>
+<div id="th_11" class="t s3_11">apelación ante la Cámara correspondiente dentro de los tres (3) días de notificadas. El recurso se </div>
+<div id="ti_11" class="t s3_11">interpondrá debidamente fundado ante el juez federal con competencia electoral quien lo remitirá de </div>
+<div id="tj_11" class="t s3_11">inmediato al superior, el que deberá decidirlo, sin más trámite, dentro de los cinco (5) días de </div>
+<div id="tk_11" class="t s3_11">recibido. </div>
+<div id="tl_11" class="t s3_11">En ningún caso se admitirá la recusación ya sea con o sin causa, de los magistrados intervinientes. </div>
+<div id="tm_11" class="t s2_11">ARTÍCULO 33.- </div>
+<div id="tn_11" class="t s3_11">No podrán ser precandidatos en elecciones primarias ni candidatos en elecciones </div>
+<div id="to_11" class="t s3_11">generales a cargos públicos electivos nacionales, ni ser designados para ejercer cargos partidarios: </div>
+<div id="tp_11" class="t s3_11">a) Los excluidos del padrón electoral como consecuencia de disposiciones legales vigentes; </div>
+<div id="tq_11" class="t s3_11">b) El personal superior y subalterno de las Fuerzas Armadas de la Nación en actividad o en situación </div>
+<div id="tr_11" class="t s3_11">de retiro, cuando hayan sido llamados a prestar servicios; </div>
+<div id="ts_11" class="t s3_11">c) El personal superior y subalterno de las fuerzas de seguridad de la Nación y de las provincias, en </div>
+<div id="tt_11" class="t s3_11">actividad o retirados llamados a prestar servicios; </div>
+<div id="tu_11" class="t s3_11">d) Los magistrados y funcionarios permanentes del Poder Judicial nacional, provincial, de la Ciudad </div>
+<div id="tv_11" class="t s3_11">Autónoma de Buenos Aires y tribunales de faltas municipales; </div>
+<div id="tw_11" class="t s3_11">e) Los que desempeñaren cargos directivos o fueren apoderados de empresas concesionarias de </div>
+<div id="tx_11" class="t s3_11">servicios y obras públicas de la Nación, provincias, Ciudad Autónoma de Buenos Aires, </div>
+<div id="ty_11" class="t s3_11">municipalidades o entidades autárquicas o descentralizadas o de empresas que exploten juegos de </div>
+<div id="tz_11" class="t s3_11">azar; </div>
+<div id="t10_11" class="t s3_11">f) Las personas con auto de procesamiento por genocidio, crímenes de lesa humanidad o crímenes </div>
+<div id="t11_11" class="t s3_11">de guerra, hechos de represión ilegal constitutivos de graves violaciones de derechos humanos, </div>
+<div id="t12_11" class="t s3_11">torturas, desaparición forzada de personas, apropiación de niños y otras violaciones graves de </div>
+<div id="t13_11" class="t s3_11">derechos humanos o cuyas conductas criminales se encuentren prescriptas en el Estatuto de Roma </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg11Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg11"><object width="935" height="1210" data="11/11.svg" type="image/svg+xml" id="pdf11" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld11" type="text/javascript">
+
+var isIE = false;
+var f11 = [['t1_11',987],['t2_11',1004],['t3_11',490],['t4_11',2417],['t5_11',2933],['t6_11',2933],['t7_11',1478],['t8_11',2933],['t9_11',1123],['ta_11',2933],['tb_11',2934],['tc_11',2933],['td_11',1254],['te_11',2933],['tf_11',1610],['tg_11',2934],['th_11',2933],['ti_11',2934],['tj_11',2934],['tl_11',2873],['tm_11',491],['tn_11',2415],['to_11',2875],['tp_11',2638],['tq_11',2934],['tr_11',1683],['ts_11',2933],['tt_11',1445],['tu_11',2933],['tv_11',1796],['tw_11',2934],['tx_11',2933],['ty_11',2934],['t10_11',2934],['t11_11',2933],['t12_11',2934],['t13_11',2934]];
+function load11(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f11);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_11");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

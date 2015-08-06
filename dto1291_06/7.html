@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load7();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:333px;top:108px;}
+#t2_7{left:331px;top:128px;}
+#t3_7{left:101px;top:191px;}
+#t4_7{left:101px;top:208px;}
+#t5_7{left:101px;top:226px;}
+#t6_7{left:101px;top:243px;}
+#t7_7{left:101px;top:261px;}
+#t8_7{left:101px;top:298px;}
+#t9_7{left:101px;top:336px;}
+#ta_7{left:101px;top:353px;}
+#tb_7{left:101px;top:371px;}
+#tc_7{left:101px;top:388px;}
+#td_7{left:101px;top:406px;}
+#te_7{left:101px;top:423px;}
+#tf_7{left:101px;top:461px;}
+#tg_7{left:101px;top:478px;}
+#th_7{left:101px;top:516px;}
+#ti_7{left:101px;top:533px;}
+#tj_7{left:101px;top:551px;}
+#tk_7{left:101px;top:568px;}
+#tl_7{left:101px;top:586px;}
+#tm_7{left:101px;top:623px;}
+#tn_7{left:101px;top:661px;}
+#to_7{left:101px;top:698px;}
+#tp_7{left:101px;top:716px;}
+#tq_7{left:101px;top:753px;}
+#tr_7{left:101px;top:771px;}
+#ts_7{left:101px;top:788px;}
+#tt_7{left:101px;top:806px;}
+#tu_7{left:101px;top:823px;}
+#tv_7{left:101px;top:861px;}
+#tw_7{left:101px;top:899px;}
+#tx_7{left:101px;top:916px;}
+#ty_7{left:101px;top:934px;}
+#tz_7{left:101px;top:951px;}
+#t10_7{left:101px;top:989px;}
+#t11_7{left:101px;top:1006px;}
+#t12_7{left:101px;top:1024px;}
+#t13_7{left:101px;top:1041px;}
+#t14_7{left:101px;top:1058px;}
+#t15_7{left:101px;top:1076px;}
+
+.s2_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_7{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_7" class="t s1_7">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_7" class="t s1_7">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_7" class="t s2_7">ARTÍCULO 28.- Guarda de boletas y documentos. Los sobres referidos en el artículo anterior serán </div>
+<div id="t4_7" class="t s2_7">guardados en un sobre especial junto con el Acta de Apertura y Cierre de cada mesa y el padrón </div>
+<div id="t5_7" class="t s2_7">electoral. Este sobre cerrado, lacrado y firmado por el Presidente de mesa y los Fiscales se enviará </div>
+<div id="t6_7" class="t s2_7">en forma inmediata a la CAMARA NACIONAL ELECTORAL. Las boletas sobrantes y las urnas </div>
+<div id="t7_7" class="t s2_7">utilizadas para el comicio serán destruidas por el Presidente de la Mesa. </div>
+<div id="t8_7" class="t s3_7">(Artículo sustituido por art. 8° del Decreto N° 295/2009 B.O. 15/4/2009)</div>
+<div id="t9_7" class="t s2_7">ARTÍCULO 29.- Escrutinio. El Servicio Oficial de Correos deberá remitir en forma urgente la </div>
+<div id="ta_7" class="t s2_7">documentación mencionada en el artículo 28 a la CAMARA NACIONAL ELECTORAL, la que, dentro de </div>
+<div id="tb_7" class="t s2_7">las CUARENTA Y OCHO (48) horas de finalizados los comicios, convocará a una audiencia con la </div>
+<div id="tc_7" class="t s2_7">presencia de Fiscales de los partidos políticos —cuya fecha y hora serán publicados en su sitio de </div>
+<div id="td_7" class="t s2_7">Internet—. La CAMARA NACIONAL ELECTORAL designará a los funcionarios que realizarán el </div>
+<div id="te_7" class="t s2_7">escrutinio. </div>
+<div id="tf_7" class="t s2_7">Estos procederán a la apertura de los sobres correspondientes a cada mesa, controlando las actas </div>
+<div id="tg_7" class="t s2_7">de apertura y cierre con el respectivo padrón. </div>
+<div id="th_7" class="t s2_7">Si existiesen votos recurridos, la CAMARA NACIONAL ELECTORAL los considerará para determinar su </div>
+<div id="ti_7" class="t s2_7">validez o nulidad. Reunidos la totalidad de los sobres provenientes de las mesas ubicadas en las </div>
+<div id="tj_7" class="t s2_7">cárceles, se procederá a la apertura de los sobres correspondientes a cada distrito, procediendo a </div>
+<div id="tk_7" class="t s2_7">contar los votos consignados en las boletas de sufragio, y se labrará un acta por distrito, la que será </div>
+<div id="tl_7" class="t s2_7">remitida a la Junta Electoral Nacional de cada distrito. </div>
+<div id="tm_7" class="t s2_7">No se efectuará escrutinio por unidad de detención. </div>
+<div id="tn_7" class="t s3_7">(Artículo sustituido por art. 9° del Decreto N° 295/2009 B.O. 15/4/2009)</div>
+<div id="to_7" class="t s2_7">ARTÍCULO 30.- Las Juntas Electorales Nacionales recibirán las actas de escrutinio a los efectos de </div>
+<div id="tp_7" class="t s2_7">incorporar los votos allí consignados al escrutinio definitivo. </div>
+<div id="tq_7" class="t s2_7">ARTÍCULO 31.- Traslados de Internos. Los internos que deban ser trasladados por decisión judicial, </div>
+<div id="tr_7" class="t s2_7">o de la administración penitenciaria, a partir de los CUARENTA Y CINCO (45) días anteriores a la </div>
+<div id="ts_7" class="t s2_7">fecha de las elecciones, serán reintegrados a los establecimientos penitenciarios que constan en el </div>
+<div id="tt_7" class="t s2_7">Padrón Electoral Especial para Procesados, con una antelación de SETENTA Y DOS (72) horas al acto </div>
+<div id="tu_7" class="t s2_7">eleccionario, para la emisión del voto. </div>
+<div id="tv_7" class="t s3_7">(Artículo sustituido por art. 10 del Decreto N° 295/2009 B.O. 15/4/2009)</div>
+<div id="tw_7" class="t s2_7">ARTÍCULO 32.- Información. El interno tiene derecho a estar informado sobre las propuestas y </div>
+<div id="tx_7" class="t s2_7">actividades de los distintos partidos políticos por los medios de comunicación social, publicaciones o </div>
+<div id="ty_7" class="t s2_7">emisiones internas. En consecuencia podrá adquirir a su costa o recibir diarios, periódicos, </div>
+<div id="tz_7" class="t s2_7">plataformas de los distintos partidos políticos, revistas y libros de libre circulación en el país. </div>
+<div id="t10_7" class="t s2_7">ARTÍCULO 33.- Lugares de votación. A los efectos de la constitución de mesas electorales se </div>
+<div id="t11_7" class="t s2_7">consideran establecimientos de detención los definidos por el artículo 176, inciso a), de la Ley Nº </div>
+<div id="t12_7" class="t s2_7">24.660, y el artículo 1º del REGLAMENTO GENERAL DE PROCESADOS aprobado por el Decreto Nº </div>
+<div id="t13_7" class="t s2_7">303 del 26 de marzo de 1996 y su modificatorio (t.o. por Resolución de la ex-SECRETARIA DE </div>
+<div id="t14_7" class="t s2_7">POLITICA PENITENCIARIA Y DE READAPTACION SOCIAL Nº 13 de fecha 14 de enero de 1997). Las </div>
+<div id="t15_7" class="t s2_7">autoridades penitenciarias nacionales y provinciales deberán informar a la CAMARA NACIONAL </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7"><object width="935" height="1210" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld7" type="text/javascript">
+
+var isIE = false;
+var f7 = [['t1_7',1076],['t2_7',1096],['t3_7',2934],['t4_7',2933],['t5_7',2934],['t6_7',2934],['t7_7',2086],['t8_7',2120],['t9_7',2934],['ta_7',2934],['tb_7',2933],['tc_7',2933],['td_7',2934],['tf_7',2933],['tg_7',1326],['th_7',2933],['ti_7',2933],['tj_7',2933],['tk_7',2933],['tl_7',1564],['tm_7',1496],['tn_7',2120],['to_7',2933],['tp_7',1728],['tq_7',2934],['tr_7',2933],['ts_7',2933],['tt_7',2933],['tu_7',1099],['tv_7',2125],['tw_7',2933],['tx_7',2933],['ty_7',2933],['tz_7',2686],['t10_7',2933],['t11_7',2934],['t12_7',2934],['t13_7',2933],['t14_7',2934],['t15_7',2934]];
+function load7(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f7);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_7");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

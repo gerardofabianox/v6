@@ -1,0 +1,744 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load5();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_5{left:314px;top:192px;}
+#t2_5{left:385px;top:226px;}
+#t3_5{left:410px;top:248px;}
+#t4_5{left:712px;top:24px;}
+#t5_5{left:800px;top:44px;}
+#t6_5{left:101px;top:284px;}
+#t7_5{left:117px;top:284px;}
+#t8_5{left:121px;top:284px;}
+#t9_5{left:168px;top:284px;}
+#ta_5{left:189px;top:284px;}
+#tb_5{left:642px;top:279px;}
+#tc_5{left:649px;top:294px;}
+#td_5{left:760px;top:286px;}
+#te_5{left:101px;top:328px;}
+#tf_5{left:109px;top:328px;}
+#tg_5{left:114px;top:328px;}
+#th_5{left:168px;top:319px;}
+#ti_5{left:189px;top:319px;}
+#tj_5{left:189px;top:337px;}
+#tk_5{left:642px;top:315px;}
+#tl_5{left:643px;top:330px;}
+#tm_5{left:655px;top:345px;}
+#tn_5{left:755px;top:322px;}
+#to_5{left:791px;top:322px;}
+#tp_5{left:805px;top:322px;}
+#tq_5{left:773px;top:337px;}
+#tr_5{left:101px;top:398px;}
+#ts_5{left:109px;top:398px;}
+#tt_5{left:114px;top:398px;}
+#tu_5{left:94px;top:417px;}
+#tv_5{left:168px;top:371px;}
+#tw_5{left:189px;top:371px;}
+#tx_5{left:637px;top:402px;}
+#ty_5{left:662px;top:417px;}
+#tz_5{left:763px;top:366px;}
+#t10_5{left:773px;top:381px;}
+#t11_5{left:168px;top:406px;}
+#t12_5{left:189px;top:406px;}
+#t13_5{left:189px;top:424px;}
+#t14_5{left:217px;top:424px;}
+#t15_5{left:307px;top:424px;}
+#t16_5{left:326px;top:424px;}
+#t17_5{left:388px;top:424px;}
+#t18_5{left:408px;top:424px;}
+#t19_5{left:469px;top:424px;}
+#t1a_5{left:543px;top:424px;}
+#t1b_5{left:563px;top:424px;}
+#t1c_5{left:189px;top:443px;}
+#t1d_5{left:757px;top:419px;}
+#t1e_5{left:780px;top:434px;}
+#t1f_5{left:101px;top:471px;}
+#t1g_5{left:109px;top:471px;}
+#t1h_5{left:114px;top:471px;}
+#t1i_5{left:168px;top:477px;}
+#t1j_5{left:189px;top:477px;}
+#t1k_5{left:645px;top:472px;}
+#t1l_5{left:665px;top:487px;}
+#t1m_5{left:763px;top:472px;}
+#t1n_5{left:773px;top:487px;}
+#t1o_5{left:101px;top:512px;}
+#t1p_5{left:109px;top:512px;}
+#t1q_5{left:114px;top:512px;}
+#t1r_5{left:89px;top:530px;}
+#t1s_5{left:168px;top:512px;}
+#t1t_5{left:189px;top:512px;}
+#t1u_5{left:189px;top:530px;}
+#t1v_5{left:631px;top:508px;}
+#t1w_5{left:730px;top:508px;}
+#t1x_5{left:634px;top:523px;}
+#t1y_5{left:653px;top:538px;}
+#t1z_5{left:756px;top:516px;}
+#t20_5{left:780px;top:530px;}
+#t21_5{left:97px;top:582px;}
+#t22_5{left:113px;top:582px;}
+#t23_5{left:118px;top:582px;}
+#t24_5{left:91px;top:600px;}
+#t25_5{left:168px;top:565px;}
+#t26_5{left:189px;top:565px;}
+#t27_5{left:189px;top:583px;}
+#t28_5{left:638px;top:569px;}
+#t29_5{left:633px;top:583px;}
+#t2a_5{left:752px;top:569px;}
+#t2b_5{left:780px;top:583px;}
+#t2c_5{left:168px;top:618px;}
+#t2d_5{left:189px;top:618px;}
+#t2e_5{left:639px;top:612px;}
+#t2f_5{left:662px;top:627px;}
+#t2g_5{left:757px;top:620px;}
+#t2h_5{left:97px;top:652px;}
+#t2i_5{left:113px;top:652px;}
+#t2j_5{left:118px;top:652px;}
+#t2k_5{left:168px;top:652px;}
+#t2l_5{left:189px;top:652px;}
+#t2m_5{left:636px;top:647px;}
+#t2n_5{left:642px;top:661px;}
+#t2o_5{left:760px;top:654px;}
+#t2p_5{left:97px;top:696px;}
+#t2q_5{left:113px;top:696px;}
+#t2r_5{left:118px;top:696px;}
+#t2s_5{left:168px;top:686px;}
+#t2t_5{left:189px;top:686px;}
+#t2u_5{left:189px;top:705px;}
+#t2v_5{left:337px;top:705px;}
+#t2w_5{left:342px;top:705px;}
+#t2x_5{left:635px;top:690px;}
+#t2y_5{left:654px;top:705px;}
+#t2z_5{left:763px;top:690px;}
+#t30_5{left:773px;top:705px;}
+#t31_5{left:102px;top:748px;}
+#t32_5{left:110px;top:748px;}
+#t33_5{left:114px;top:748px;}
+#t34_5{left:168px;top:739px;}
+#t35_5{left:189px;top:739px;}
+#t36_5{left:189px;top:758px;}
+#t37_5{left:636px;top:743px;}
+#t38_5{left:642px;top:758px;}
+#t39_5{left:760px;top:751px;}
+#t3a_5{left:102px;top:786px;}
+#t3b_5{left:110px;top:786px;}
+#t3c_5{left:114px;top:786px;}
+#t3d_5{left:168px;top:792px;}
+#t3e_5{left:189px;top:792px;}
+#t3f_5{left:189px;top:811px;}
+#t3g_5{left:635px;top:794px;}
+#t3h_5{left:654px;top:809px;}
+#t3i_5{left:763px;top:794px;}
+#t3j_5{left:773px;top:809px;}
+#t3k_5{left:211px;top:839px;}
+#t3l_5{left:230px;top:839px;}
+#t3m_5{left:304px;top:839px;}
+#t3n_5{left:325px;top:839px;}
+#t3o_5{left:348px;top:839px;}
+#t3p_5{left:411px;top:839px;}
+#t3q_5{left:437px;top:839px;}
+#t3r_5{left:472px;top:839px;}
+#t3s_5{left:493px;top:839px;}
+#t3t_5{left:516px;top:839px;}
+#t3u_5{left:568px;top:839px;}
+#t3v_5{left:233px;top:854px;}
+#t3w_5{left:648px;top:839px;}
+#t3x_5{left:633px;top:854px;}
+#t3y_5{left:760px;top:847px;}
+#t3z_5{left:98px;top:908px;}
+#t40_5{left:113px;top:908px;}
+#t41_5{left:118px;top:908px;}
+#t42_5{left:168px;top:881px;}
+#t43_5{left:189px;top:881px;}
+#t44_5{left:636px;top:876px;}
+#t45_5{left:642px;top:891px;}
+#t46_5{left:752px;top:883px;}
+#t47_5{left:789px;top:883px;}
+#t48_5{left:802px;top:883px;}
+#t49_5{left:168px;top:916px;}
+#t4a_5{left:189px;top:916px;}
+#t4b_5{left:278px;top:916px;}
+#t4c_5{left:307px;top:916px;}
+#t4d_5{left:343px;top:916px;}
+#t4e_5{left:438px;top:916px;}
+#t4f_5{left:506px;top:916px;}
+#t4g_5{left:511px;top:916px;}
+#t4h_5{left:593px;top:916px;}
+#t4i_5{left:189px;top:934px;}
+#t4j_5{left:649px;top:920px;}
+#t4k_5{left:659px;top:935px;}
+#t4l_5{left:758px;top:920px;}
+#t4m_5{left:765px;top:935px;}
+#t4n_5{left:98px;top:1012px;}
+#t4o_5{left:113px;top:1012px;}
+#t4p_5{left:118px;top:1012px;}
+#t4q_5{left:168px;top:969px;}
+#t4r_5{left:189px;top:969px;}
+#t4s_5{left:636px;top:1007px;}
+#t4t_5{left:642px;top:1022px;}
+#t4u_5{left:758px;top:963px;}
+#t4v_5{left:780px;top:978px;}
+#t4w_5{left:168px;top:1003px;}
+#t4x_5{left:189px;top:1003px;}
+#t4y_5{left:189px;top:1022px;}
+#t4z_5{left:760px;top:1014px;}
+#t50_5{left:168px;top:1056px;}
+#t51_5{left:189px;top:1056px;}
+#t52_5{left:760px;top:1058px;}
+#t53_5{left:98px;top:1100px;}
+#t54_5{left:113px;top:1100px;}
+#t55_5{left:118px;top:1100px;}
+#t56_5{left:168px;top:1090px;}
+#t57_5{left:189px;top:1090px;}
+#t58_5{left:234px;top:1090px;}
+#t59_5{left:261px;top:1090px;}
+#t5a_5{left:283px;top:1090px;}
+#t5b_5{left:352px;top:1090px;}
+#t5c_5{left:417px;top:1090px;}
+#t5d_5{left:444px;top:1090px;}
+#t5e_5{left:501px;top:1090px;}
+#t5f_5{left:528px;top:1090px;}
+#t5g_5{left:189px;top:1109px;}
+#t5h_5{left:636px;top:1094px;}
+#t5i_5{left:642px;top:1109px;}
+#t5j_5{left:752px;top:1102px;}
+#t5k_5{left:788px;top:1102px;}
+#t5l_5{left:802px;top:1102px;}
+#t5m_5{left:103px;top:1137px;}
+#t5n_5{left:111px;top:1137px;}
+#t5o_5{left:115px;top:1137px;}
+#t5p_5{left:168px;top:1143px;}
+#t5q_5{left:189px;top:1143px;}
+#t5r_5{left:635px;top:1138px;}
+#t5s_5{left:654px;top:1153px;}
+#t5t_5{left:757px;top:1145px;}
+#t5u_5{left:99px;top:1204px;}
+#t5v_5{left:115px;top:1204px;}
+#t5w_5{left:119px;top:1204px;}
+#t5x_5{left:168px;top:1177px;}
+#t5y_5{left:189px;top:1177px;}
+#t5z_5{left:636px;top:1199px;}
+#t60_5{left:642px;top:1213px;}
+#t61_5{left:760px;top:1180px;}
+#t62_5{left:168px;top:1212px;}
+#t63_5{left:189px;top:1212px;}
+#t64_5{left:189px;top:1230px;}
+#t65_5{left:754px;top:1216px;}
+#t66_5{left:780px;top:1231px;}
+#t67_5{left:99px;top:1318px;}
+#t68_5{left:115px;top:1318px;}
+#t69_5{left:119px;top:1318px;}
+#t6a_5{left:168px;top:1265px;}
+#t6b_5{left:189px;top:1265px;}
+#t6c_5{left:636px;top:1312px;}
+#t6d_5{left:662px;top:1327px;}
+#t6e_5{left:760px;top:1267px;}
+#t6f_5{left:168px;top:1299px;}
+#t6g_5{left:189px;top:1299px;}
+#t6h_5{left:763px;top:1294px;}
+#t6i_5{left:773px;top:1309px;}
+#t6j_5{left:168px;top:1333px;}
+#t6k_5{left:189px;top:1333px;}
+#t6l_5{left:189px;top:1352px;}
+#t6m_5{left:189px;top:1371px;}
+#t6n_5{left:763px;top:1347px;}
+#t6o_5{left:773px;top:1362px;}
+
+.s9_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JGAPDH-Calibri-Italic5;
+	color: rgb(88,88,88);
+}
+
+.s12_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JFJAIH-Calibri5;
+	color: rgb(88,88,88);
+}
+
+.s3_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold5;
+	color: rgb(88,88,88);
+}
+
+.s5_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAGD-Calibri-Bold5;
+	color: rgb(88,88,88);
+}
+
+.s6_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHF-Wingdings-Regular5;
+	color: rgb(88,88,88);
+}
+
+.s10_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHF-Wingdings-Regular5;
+	color: rgb(0,0,0);
+}
+
+.s1_5{
+	FONT-SIZE: 110px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold5;
+	color: rgb(88,88,88);
+}
+
+.s11_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold5;
+	color: rgb(255,255,255);
+}
+
+.s13_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAIH-Calibri5;
+	color: rgb(88,88,88);
+}
+
+.s7_5{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAII-Calibri5;
+	color: rgb(88,88,88);
+}
+
+.s14_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JFJAHF-Wingdings-Regular5;
+	color: rgb(0,0,0);
+}
+
+.s15_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JFJAII-Calibri5;
+	color: rgb(126,126,126);
+}
+
+.s8_5{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JFJAII-Calibri5;
+	color: rgb(88,88,88);
+}
+
+.s2_5{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold5;
+	color: rgb(88,88,88);
+}
+
+.s4_5{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: 'Courier New', Courier, monospace;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts5" type="text/css" >
+
+@font-face {
+	font-family: JFJAHF-Wingdings-Regular5;
+	src :url("5/fonts/JFJAHF-Wingdings-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAHE-Calibri-Bold5;
+	src :url("5/fonts/JFJAHE-Calibri-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAGD-Calibri-Bold5;
+	src :url("5/fonts/JFJAGD-Calibri-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAIH-Calibri5;
+	src :url("5/fonts/JFJAIH-Calibri.woff") format("woff");
+}
+
+@font-face {
+	font-family: JGAPDH-Calibri-Italic5;
+	src :url("5/fonts/JGAPDH-Calibri-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAII-Calibri5;
+	src :url("5/fonts/JFJAII-Calibri.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_5" class="t s1_5">Elecciones nacionales 2015</div>
+<div id="t2_5" class="t s2_5">Cronograma electoral</div>
+<div id="t3_5" class="t s3_5">Decreto 775/2015</div>
+<div id="t4_5" class="t s4_5">Ac. Nº44/2015</div>
+<div id="t5_5" class="t s4_5">Anexo</div>
+<div id="t6_5" class="t s3_5">30</div>
+<div id="t7_5" class="t s5_5">‐</div>
+<div id="t8_5" class="t s3_5">jul</div>
+<div id="ta_5" class="t s7_5">Destrucción de los documentos cívicos de los ciudadanos fallecidos</div>
+<div id="tb_5" class="t s8_5">10 días antes de</div>
+<div id="tc_5" class="t s8_5">cada elección</div>
+<div id="td_5" class="t s8_5">Art. 22, CEN</div>
+<div id="te_5" class="t s3_5">6</div>
+<div id="tf_5" class="t s5_5">‐</div>
+<div id="tg_5" class="t s3_5">ago</div>
+<div id="ti_5" class="t s7_5">Fin de plazo para abrir el Registro de Empresas de Encuestas y</div>
+<div id="tj_5" class="t s7_5">Sondeos de Opinión</div>
+<div id="tk_5" class="t s8_5">30 días antes de</div>
+<div id="tl_5" class="t s8_5">oficialización de</div>
+<div id="tm_5" class="t s8_5">candidatos</div>
+<div id="tn_5" class="t s8_5">Art. 44</div>
+<div id="to_5" class="t s9_5">ter</div>
+<div id="tp_5" class="t s8_5">, ley</div>
+<div id="tq_5" class="t s8_5">26.215</div>
+<div id="tr_5" class="t s3_5">7</div>
+<div id="ts_5" class="t s5_5">‐</div>
+<div id="tt_5" class="t s3_5">ago</div>
+<div id="tu_5" class="t s3_5">8.00 hs.</div>
+<div id="tw_5" class="t s7_5">Fin de la campaña electoral</div>
+<div id="tx_5" class="t s8_5">48 hs. antes de las</div>
+<div id="ty_5" class="t s8_5">P.A.S.O.</div>
+<div id="tz_5" class="t s8_5">Art. 31, ley</div>
+<div id="t10_5" class="t s8_5">26.571</div>
+<div id="t11_5" class="t s6_5"></div>
+<div id="t12_5" class="t s7_5">Comienzo de la veda electoral (prohibición de realizar actos públicos</div>
+<div id="t13_5" class="t s7_5">de</div>
+<div id="t14_5" class="t s7_5">proselitismo</div>
+<div id="t15_5" class="t s7_5">y</div>
+<div id="t16_5" class="t s7_5">publicar</div>
+<div id="t17_5" class="t s7_5">y</div>
+<div id="t18_5" class="t s7_5">difundir</div>
+<div id="t19_5" class="t s7_5">encuestas</div>
+<div id="t1a_5" class="t s7_5">y</div>
+<div id="t1b_5" class="t s7_5">sondeos</div>
+<div id="t1c_5" class="t s7_5">preelectorales)</div>
+<div id="t1d_5" class="t s8_5">Art. 71, inc. f,</div>
+<div id="t1e_5" class="t s8_5">CEN</div>
+<div id="t1f_5" class="t s3_5">9</div>
+<div id="t1g_5" class="t s5_5">‐</div>
+<div id="t1h_5" class="t s3_5">ago</div>
+<div id="t1i_5" class="t s10_5"></div>
+<div id="t1j_5" class="t s11_5">Elecciones P.A.S.O.</div>
+<div id="t1k_5" class="t s8_5">2º domingo de</div>
+<div id="t1l_5" class="t s8_5">agosto</div>
+<div id="t1m_5" class="t s8_5">Art. 20, ley</div>
+<div id="t1n_5" class="t s8_5">26.571</div>
+<div id="t1o_5" class="t s3_5">9</div>
+<div id="t1p_5" class="t s5_5">‐</div>
+<div id="t1q_5" class="t s3_5">ago</div>
+<div id="t1r_5" class="t s3_5">8 a 21 hs.</div>
+<div id="t1s_5" class="t s6_5"></div>
+<div id="t1t_5" class="t s7_5">Prohibición de publicar o difundir encuestas y proyecciones sobre el</div>
+<div id="t1u_5" class="t s7_5">resultado de la elección</div>
+<div id="t1v_5" class="t s8_5">Durante la elección</div>
+<div id="t1w_5" class="t s12_5">‐</div>
+<div id="t1x_5" class="t s8_5">hasta 3 hs. después</div>
+<div id="t1y_5" class="t s8_5">de su cierre</div>
+<div id="t1z_5" class="t s8_5">Art. 71, inc. h,</div>
+<div id="t20_5" class="t s8_5">CEN</div>
+<div id="t21_5" class="t s3_5">11</div>
+<div id="t22_5" class="t s5_5">‐</div>
+<div id="t23_5" class="t s3_5">ago</div>
+<div id="t24_5" class="t s3_5">18.00 hs.</div>
+<div id="t25_5" class="t s6_5"></div>
+<div id="t26_5" class="t s7_5">Fin del plazo para efectuar reclamos y protestas sobre vicios en la</div>
+<div id="t27_5" class="t s7_5">constitución y funcionamiento de las mesas y sobre la elección</div>
+<div id="t28_5" class="t s8_5">Durante las 48 hs.</div>
+<div id="t29_5" class="t s8_5">sigtes. a las P.A.S.O.</div>
+<div id="t2a_5" class="t s8_5">Arts. 110 y 111,</div>
+<div id="t2b_5" class="t s8_5">CEN</div>
+<div id="t2c_5" class="t s6_5"></div>
+<div id="t2d_5" class="t s7_5">Inicio del escrutinio definitivo de las P.A.S.O.</div>
+<div id="t2e_5" class="t s8_5">48 hs. sgtes. a las</div>
+<div id="t2f_5" class="t s8_5">P.A.S.O.</div>
+<div id="t2g_5" class="t s8_5">Art. 112, CEN</div>
+<div id="t2h_5" class="t s3_5">26</div>
+<div id="t2i_5" class="t s5_5">‐</div>
+<div id="t2j_5" class="t s3_5">ago</div>
+<div id="t2k_5" class="t s6_5"></div>
+<div id="t2l_5" class="t s7_5">Constitución de las Juntas Electorales Nacionales</div>
+<div id="t2m_5" class="t s8_5">60 días antes de la</div>
+<div id="t2n_5" class="t s8_5">elección general</div>
+<div id="t2o_5" class="t s8_5">Art. 48, CEN</div>
+<div id="t2p_5" class="t s3_5">29</div>
+<div id="t2q_5" class="t s5_5">‐</div>
+<div id="t2r_5" class="t s3_5">ago</div>
+<div id="t2s_5" class="t s6_5"></div>
+<div id="t2t_5" class="t s7_5">Fin del plazo para presentar el informe final por lista ante el</div>
+<div id="t2u_5" class="t s7_5">responsable económico</div>
+<div id="t2v_5" class="t s13_5">‐</div>
+<div id="t2w_5" class="t s7_5">financiero de la agrupación</div>
+<div id="t2x_5" class="t s8_5">20 días después de</div>
+<div id="t2y_5" class="t s8_5">las P.A.S.O.</div>
+<div id="t2z_5" class="t s8_5">Art. 36, ley</div>
+<div id="t30_5" class="t s8_5">26.571</div>
+<div id="t31_5" class="t s3_5">5</div>
+<div id="t32_5" class="t s5_5">‐</div>
+<div id="t33_5" class="t s3_5">sep</div>
+<div id="t34_5" class="t s6_5"></div>
+<div id="t35_5" class="t s7_5">Fin del plazo para la registración de candidatos proclamados en las</div>
+<div id="t36_5" class="t s7_5">P.A.S.O.</div>
+<div id="t37_5" class="t s8_5">50 días antes de la</div>
+<div id="t38_5" class="t s8_5">elección general</div>
+<div id="t39_5" class="t s8_5">Art. 60, CEN</div>
+<div id="t3a_5" class="t s3_5">8</div>
+<div id="t3b_5" class="t s5_5">‐</div>
+<div id="t3c_5" class="t s3_5">sep</div>
+<div id="t3d_5" class="t s6_5"></div>
+<div id="t3e_5" class="t s7_5">Fin del plazo para presentar el informe final por agrupación ante el</div>
+<div id="t3f_5" class="t s7_5">juzgado federal electoral</div>
+<div id="t3g_5" class="t s8_5">30 días después de</div>
+<div id="t3h_5" class="t s8_5">las P.A.S.O.</div>
+<div id="t3i_5" class="t s8_5">Art. 37, ley</div>
+<div id="t3j_5" class="t s8_5">26.571</div>
+<div id="t3k_5" class="t s14_5"></div>
+<div id="t3l_5" class="t s15_5">Oficialización</div>
+<div id="t3m_5" class="t s15_5">de</div>
+<div id="t3n_5" class="t s15_5">los</div>
+<div id="t3o_5" class="t s15_5">candidatos</div>
+<div id="t3p_5" class="t s15_5">por</div>
+<div id="t3q_5" class="t s15_5">parte</div>
+<div id="t3r_5" class="t s15_5">de</div>
+<div id="t3s_5" class="t s15_5">los</div>
+<div id="t3t_5" class="t s15_5">juzgados</div>
+<div id="t3u_5" class="t s15_5">federales</div>
+<div id="t3v_5" class="t s15_5">electorales</div>
+<div id="t3w_5" class="t s15_5">5 días sgtes. a</div>
+<div id="t3x_5" class="t s15_5">present. candidatos</div>
+<div id="t3y_5" class="t s15_5">Art. 61, CEN</div>
+<div id="t3z_5" class="t s3_5">20</div>
+<div id="t40_5" class="t s5_5">‐</div>
+<div id="t41_5" class="t s3_5">sep</div>
+<div id="t42_5" class="t s6_5"></div>
+<div id="t43_5" class="t s7_5">Inicio de la campaña electoral</div>
+<div id="t44_5" class="t s8_5">35 días antes de la</div>
+<div id="t45_5" class="t s8_5">elección general</div>
+<div id="t46_5" class="t s8_5">Art. 64</div>
+<div id="t47_5" class="t s9_5">bis</div>
+<div id="t48_5" class="t s8_5">, CEN</div>
+<div id="t49_5" class="t s6_5"></div>
+<div id="t4a_5" class="t s7_5">Designación</div>
+<div id="t4b_5" class="t s7_5">de</div>
+<div id="t4c_5" class="t s7_5">dos</div>
+<div id="t4d_5" class="t s7_5">responsables</div>
+<div id="t4e_5" class="t s7_5">económico</div>
+<div id="t4f_5" class="t s13_5">‐</div>
+<div id="t4g_5" class="t s7_5">financieros</div>
+<div id="t4h_5" class="t s7_5">por</div>
+<div id="t4i_5" class="t s7_5">agrupación</div>
+<div id="t4j_5" class="t s8_5">Al inicio de la</div>
+<div id="t4k_5" class="t s8_5">campaña</div>
+<div id="t4l_5" class="t s8_5">Arts. 27 y 31,</div>
+<div id="t4m_5" class="t s8_5">ley 26.215</div>
+<div id="t4n_5" class="t s3_5">25</div>
+<div id="t4o_5" class="t s5_5">‐</div>
+<div id="t4p_5" class="t s3_5">sep</div>
+<div id="t4q_5" class="t s6_5"></div>
+<div id="t4r_5" class="t s7_5">Impresión y publicación de los padrones definitivos</div>
+<div id="t4s_5" class="t s8_5">30 días antes de la</div>
+<div id="t4t_5" class="t s8_5">elección general</div>
+<div id="t4u_5" class="t s8_5">Arts. 29 y 30,</div>
+<div id="t4v_5" class="t s8_5">CEN</div>
+<div id="t4w_5" class="t s6_5"></div>
+<div id="t4x_5" class="t s7_5">Presentación ante las Juntas Electorales Nacionales de los modelos</div>
+<div id="t4y_5" class="t s7_5">de boletas</div>
+<div id="t4z_5" class="t s8_5">Art. 62, CEN</div>
+<div id="t50_5" class="t s6_5"></div>
+<div id="t51_5" class="t s7_5">Ratificación de las autoridades de mesa designadas</div>
+<div id="t52_5" class="t s8_5">Art. 75, CEN</div>
+<div id="t53_5" class="t s3_5">30</div>
+<div id="t54_5" class="t s5_5">‐</div>
+<div id="t55_5" class="t s3_5">sep</div>
+<div id="t56_5" class="t s6_5"></div>
+<div id="t57_5" class="t s7_5">Inicio</div>
+<div id="t58_5" class="t s7_5">de</div>
+<div id="t59_5" class="t s7_5">la</div>
+<div id="t5a_5" class="t s7_5">campaña</div>
+<div id="t5b_5" class="t s7_5">electoral</div>
+<div id="t5c_5" class="t s7_5">en</div>
+<div id="t5d_5" class="t s7_5">medios</div>
+<div id="t5e_5" class="t s7_5">de</div>
+<div id="t5f_5" class="t s7_5">comunicación</div>
+<div id="t5g_5" class="t s7_5">audiovisual</div>
+<div id="t5h_5" class="t s8_5">25 días antes de la</div>
+<div id="t5i_5" class="t s8_5">elección general</div>
+<div id="t5j_5" class="t s8_5">Art. 64</div>
+<div id="t5k_5" class="t s9_5">ter</div>
+<div id="t5l_5" class="t s8_5">, CEN</div>
+<div id="t5m_5" class="t s3_5">8</div>
+<div id="t5n_5" class="t s5_5">‐</div>
+<div id="t5o_5" class="t s3_5">oct</div>
+<div id="t5p_5" class="t s6_5"></div>
+<div id="t5q_5" class="t s7_5">Fin del plazo para justificar la no emisión del voto en las P.A.S.O.</div>
+<div id="t5r_5" class="t s8_5">60 días después de</div>
+<div id="t5s_5" class="t s8_5">las P.A.S.O.</div>
+<div id="t5t_5" class="t s8_5">Art. 125, CEN</div>
+<div id="t5u_5" class="t s3_5">10</div>
+<div id="t5v_5" class="t s5_5">‐</div>
+<div id="t5w_5" class="t s3_5">oct</div>
+<div id="t5x_5" class="t s6_5"></div>
+<div id="t5y_5" class="t s7_5">Difusión de los lugares y mesas de votación</div>
+<div id="t5z_5" class="t s8_5">15 días antes de la</div>
+<div id="t60_5" class="t s8_5">elección general</div>
+<div id="t61_5" class="t s8_5">Art. 80, CEN</div>
+<div id="t62_5" class="t s6_5"></div>
+<div id="t63_5" class="t s7_5">Comienzo de la prohibición de actos públicos susceptibles de</div>
+<div id="t64_5" class="t s7_5">promover la captación del sufragio</div>
+<div id="t65_5" class="t s8_5">Art. 64 quater,</div>
+<div id="t66_5" class="t s8_5">CEN</div>
+<div id="t67_5" class="t s3_5">15</div>
+<div id="t68_5" class="t s5_5">‐</div>
+<div id="t69_5" class="t s3_5">oct</div>
+<div id="t6a_5" class="t s6_5"></div>
+<div id="t6b_5" class="t s7_5">Destrucción de los documentos cívicos de los ciudadanos fallecidos</div>
+<div id="t6c_5" class="t s8_5">10 días antes de la</div>
+<div id="t6d_5" class="t s8_5">elección</div>
+<div id="t6e_5" class="t s8_5">Art. 22, CEN</div>
+<div id="t6f_5" class="t s6_5"></div>
+<div id="t6g_5" class="t s7_5">Fin del plazo para presentar el informe previo de campaña</div>
+<div id="t6h_5" class="t s8_5">Art. 54, ley</div>
+<div id="t6i_5" class="t s8_5">26.215</div>
+<div id="t6j_5" class="t s6_5"></div>
+<div id="t6k_5" class="t s7_5">Informe de DINE a jueces fed. elec. sobre monto de aportes, subs. y</div>
+<div id="t6l_5" class="t s7_5">franquicias púb. a la campaña elect., por rubro, monto y partido y</div>
+<div id="t6m_5" class="t s7_5">con indicación de las sumas ya entregadas y las pendientes de pago</div>
+<div id="t6n_5" class="t s8_5">Art. 53, ley</div>
+<div id="t6o_5" class="t s8_5">26.215</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg5Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg5"><object width="935" height="1540" data="5/5.svg" type="image/svg+xml" id="pdf5" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld5" type="text/javascript">
+
+var isIE = false;
+var f5 = [['t1_5',1230],['t2_5',660],['t3_5',458],['t4_5',571],['ta_5',1663],['tb_5',320],['tc_5',267],['td_5',239],['ti_5',1698],['tj_5',498],['tk_5',320],['tl_5',316],['tn_5',134],['tp_5',80],['tu_5',196],['tw_5',680],['tx_5',363],['tz_5',215],['t12_5',1699],['t1d_5',265],['t1j_5',481],['t1k_5',293],['t1m_5',215],['t1r_5',238],['t1t_5',1699],['t1u_5',588],['t1v_5',383],['t1x_5',386],['t1y_5',231],['t1z_5',276],['t24_5',227],['t26_5',1699],['t27_5',1554],['t28_5',355],['t29_5',393],['t2a_5',309],['t2d_5',1102],['t2e_5',342],['t2g_5',263],['t2l_5',1210],['t2m_5',366],['t2n_5',323],['t2o_5',239],['t2t_5',1699],['t2u_5',589],['t2w_5',674],['t2x_5',375],['t2y_5',222],['t2z_5',215],['t35_5',1698],['t37_5',366],['t38_5',323],['t39_5',239],['t3e_5',1699],['t3f_5',615],['t3g_5',375],['t3h_5',222],['t3i_5',215],['t3w_5',274],['t3x_5',393],['t3y_5',239],['t43_5',739],['t44_5',366],['t45_5',323],['t46_5',134],['t48_5',104],['t4j_5',263],['t4l_5',259],['t4m_5',204],['t4r_5',1270],['t4s_5',366],['t4t_5',323],['t4u_5',259],['t4x_5',1699],['t4y_5',258],['t4z_5',239],['t51_5',1270],['t52_5',239],['t5h_5',366],['t5i_5',323],['t5j_5',134],['t5l_5',104],['t5q_5',1593],['t5r_5',375],['t5s_5',222],['t5t_5',263],['t5y_5',1074],['t5z_5',366],['t60_5',323],['t61_5',239],['t63_5',1699],['t64_5',862],['t65_5',290],['t6b_5',1663],['t6c_5',366],['t6e_5',239],['t6g_5',1449],['t6h_5',215],['t6k_5',1699],['t6l_5',1699],['t6m_5',1674],['t6n_5',215]];
+function load5(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f5);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 238;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_5");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

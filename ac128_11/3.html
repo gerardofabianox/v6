@@ -1,0 +1,288 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:257px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:341px;}
+#ta_3{left:101px;top:358px;}
+#tb_3{left:101px;top:375px;}
+#tc_3{left:822px;top:375px;}
+#td_3{left:101px;top:393px;}
+#te_3{left:238px;top:393px;}
+#tf_3{left:701px;top:393px;}
+#tg_3{left:101px;top:410px;}
+#th_3{left:344px;top:410px;}
+#ti_3{left:649px;top:410px;}
+#tj_3{left:101px;top:428px;}
+#tk_3{left:101px;top:445px;}
+#tl_3{left:101px;top:477px;}
+#tm_3{left:101px;top:494px;}
+#tn_3{left:101px;top:512px;}
+#to_3{left:190px;top:512px;}
+#tp_3{left:213px;top:512px;}
+#tq_3{left:600px;top:512px;}
+#tr_3{left:101px;top:529px;}
+#ts_3{left:258px;top:529px;}
+#tt_3{left:682px;top:529px;}
+#tu_3{left:101px;top:546px;}
+#tv_3{left:331px;top:546px;}
+#tw_3{left:101px;top:578px;}
+#tx_3{left:101px;top:596px;}
+#ty_3{left:101px;top:613px;}
+#tz_3{left:101px;top:631px;}
+#t10_3{left:101px;top:662px;}
+#t11_3{left:101px;top:680px;}
+#t12_3{left:101px;top:697px;}
+#t13_3{left:101px;top:714px;}
+#t14_3{left:101px;top:746px;}
+#t15_3{left:101px;top:764px;}
+#t16_3{left:101px;top:781px;}
+#t17_3{left:101px;top:813px;}
+#t18_3{left:101px;top:830px;}
+#t19_3{left:101px;top:848px;}
+#t1a_3{left:101px;top:879px;}
+#t1b_3{left:101px;top:897px;}
+#t1c_3{left:101px;top:914px;}
+#t1d_3{left:616px;top:914px;}
+#t1e_3{left:101px;top:932px;}
+#t1f_3{left:166px;top:932px;}
+#t1g_3{left:613px;top:932px;}
+#t1h_3{left:700px;top:932px;}
+#t1i_3{left:101px;top:949px;}
+#t1j_3{left:226px;top:949px;}
+#t1k_3{left:313px;top:949px;}
+#t1l_3{left:733px;top:949px;}
+#t1m_3{left:101px;top:967px;}
+#t1n_3{left:395px;top:967px;}
+#t1o_3{left:483px;top:967px;}
+#t1p_3{left:101px;top:998px;}
+#t1q_3{left:101px;top:1016px;}
+#t1r_3{left:101px;top:1033px;}
+#t1s_3{left:101px;top:1050px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">de datos acerca de todos los componentes que integran estos procesos, la sociedad civil tiene la </div>
+<div id="t4_3" class="t s2_3">posibilidad de coadyuvar al logro de elecciones auténticamente democráticas.- </div>
+<div id="t5_3" class="t s2_3">5º) Que, en esa misma inteligencia, cabe mencionar que en innumerables oportunidades, jueces y </div>
+<div id="t6_3" class="t s2_3">funcionarios de este fuero han acompañado a otros países en el desarrollo de sus procesos </div>
+<div id="t7_3" class="t s2_3">electorales sobre la base de considerar que la presencia de observadores puede redundar en </div>
+<div id="t8_3" class="t s2_3">beneficio para la gestión del proceso electoral.- </div>
+<div id="t9_3" class="t s2_3">Sobre la base de tales premisas, esta Cámara Nacional Electoral –junto con los delegados de los </div>
+<div id="ta_3" class="t s2_3">restantes organismos electorales de los países sudamericanos- suscribió el “Protocolo de Quito” –por </div>
+<div id="tb_3" class="t s2_3">el cual se conformó la Asociación de Organismos Electorales de América del Sur- que contempla “</div>
+<div id="tc_3" class="t s3_3">la </div>
+<div id="td_3" class="t s3_3">participación de</div>
+<div id="te_3" class="t s3_3">los representantes de los organismos miembros de la</div>
+<div id="tf_3" class="t s3_3">Asociación, como </div>
+<div id="tg_3" class="t s3_3">observadores de las elecciones a</div>
+<div id="th_3" class="t s3_3">invitación del país donde éstas se realicen</div>
+<div id="ti_3" class="t s2_3">”, e integra igualmente la </div>
+<div id="tj_3" class="t s2_3">Unión Interamericana de Organismos Electorales. En ese entendimiento, el Tribunal también prestó </div>
+<div id="tk_3" class="t s2_3">su colaboración para la creación del “Observatorio de la democracia del MERCOSUR”.- </div>
+<div id="tl_3" class="t s2_3">6º) Que, de modo concordante, la Carta Democrática Interamericana, aprobada el 11 de septiembre </div>
+<div id="tm_3" class="t s2_3">de 2001 por la Organización de los Estados Americanos, prevé en su artículo 23 que los Estados </div>
+<div id="tn_3" class="t s2_3">miembros, “</div>
+<div id="to_3" class="t s3_3">en</div>
+<div id="tp_3" class="t s3_3">ejercicio de su soberanía, podrán solicitar a la O.E.A</div>
+<div id="tq_3" class="t s3_3">asesoramiento o asistencia para </div>
+<div id="tr_3" class="t s3_3">el fortalecimiento y</div>
+<div id="ts_3" class="t s3_3">desarrollo de sus instituciones y procesos electorales,</div>
+<div id="tt_3" class="t s3_3">incluido el envío de </div>
+<div id="tu_3" class="t s3_3">misiones preliminares para ese</div>
+<div id="tv_3" class="t s3_3">propósito”.-</div>
+<div id="tw_3" class="t s2_3">Por imperativo constitucional (artículo 99, inc. 11, y artículo 27), el manejo de las relaciones </div>
+<div id="tx_3" class="t s2_3">exteriores del Estado argentino como tal es potestad exclusiva del Poder Ejecutivo Nacional, y por </div>
+<div id="ty_3" class="t s2_3">ello, resulta una atribución de éste formalizar los pedidos que –en tales términos- se formulen (cf. </div>
+<div id="tz_3" class="t s2_3">Acordada Nº 18/09 CNE). </div>
+<div id="t10_3" class="t s2_3">De allí que -en caso de que se estimase procedente realizarlo- habrán de precisarse, con la </div>
+<div id="t11_3" class="t s2_3">participación que corresponda por parte de este Tribunal, sus términos y alcances, así como las </div>
+<div id="t12_3" class="t s2_3">reglas que la regirán, pues la actuación de terceros debe necesariamente adecuarse a las normas </div>
+<div id="t13_3" class="t s2_3">que regulan los procesos electorales nacionales (cf. Ac. cit.).- </div>
+<div id="t14_3" class="t s2_3">7º) Que, ahora bien, no puede pasarse por alto que no se encuentra previsto en el plexo normativo </div>
+<div id="t15_3" class="t s2_3">electoral argentino ninguna regulación sobre observación electoral, ya sea interna -también </div>
+<div id="t16_3" class="t s2_3">denominada doméstica o ciudadana- o internacional.- </div>
+<div id="t17_3" class="t s2_3">Tal circunstancia, sin embargo, debe ser adecuadamente sopesada con el potencial interés de </div>
+<div id="t18_3" class="t s2_3">diversas organizaciones de monitorear o acompañar distintos aspectos o fases de los comicios, </div>
+<div id="t19_3" class="t s2_3">práctica que redundaría en favor de dicho proceso electoral.- </div>
+<div id="t1a_3" class="t s2_3">En este sentido, cabe resaltar, que diversos representantes de la sociedad civil (v. gr. “Poder </div>
+<div id="t1b_3" class="t s2_3">Ciudadano”; “CIPPEC”; “Directorio Legislativo”; “Asociación Conciencia” y “Asociación Civil por la </div>
+<div id="t1c_3" class="t s2_3">Igualdad y la Justicia”) se presentaron ante este Tribunal solicitando </div>
+<div id="t1d_3" class="t s3_3">“un marco de reglamentación </div>
+<div id="t1e_3" class="t s3_3">para las</div>
+<div id="t1f_3" class="t s3_3">acciones de acompañamiento cívico […] al proceso nacional</div>
+<div id="t1g_3" class="t s3_3">argentino”, </div>
+<div id="t1h_3" class="t s2_3">pues –consideran- </div>
+<div id="t1i_3" class="t s2_3">que su ausencia </div>
+<div id="t1j_3" class="t s3_3">“constituye</div>
+<div id="t1k_3" class="t s3_3">un gran impedimento a la hora de colaborar tanto en el</div>
+<div id="t1l_3" class="t s3_3">sostenimiento </div>
+<div id="t1m_3" class="t s3_3">como en el fortalecimiento de la calidad</div>
+<div id="t1n_3" class="t s3_3">democrática</div>
+<div id="t1o_3" class="t s2_3">”.- </div>
+<div id="t1p_3" class="t s2_3">En efecto, el acompañamiento cívico por parte de la sociedad civil es pertinente para fortalecer la </div>
+<div id="t1q_3" class="t s2_3">concepción de las elecciones como proceso ciudadano, pues -como se expuso en otra oportunidad- </div>
+<div id="t1r_3" class="t s2_3">“la construcción democrática requiere del aporte de todos los individuos que componen el cuerpo </div>
+<div id="t1s_3" class="t s2_3">electoral” (Acordada Nº128/09 CNE).- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2933],['t4_3',2278],['t5_3',2934],['t6_3',2934],['t7_3',2933],['t8_3',1371],['t9_3',2933],['ta_3',2933],['tb_3',2883],['td_3',492],['te_3',1797],['tf_3',533],['tg_3',951],['th_3',1222],['ti_3',739],['tj_3',2933],['tk_3',2496],['tl_3',2934],['tm_3',2934],['tn_3',356],['tp_3',1526],['tq_3',936],['tr_3',592],['ts_3',1657],['tt_3',608],['tu_3',900],['tw_3',2934],['tx_3',2933],['ty_3',2933],['tz_3',744],['t10_3',2933],['t11_3',2934],['t12_3',2933],['t13_3',1786],['t14_3',2934],['t15_3',2933],['t16_3',1558],['t17_3',2933],['t18_3',2933],['t19_3',1769],['t1a_3',2934],['t1b_3',2933],['t1c_3',2035],['t1d_3',872],['t1e_3',235],['t1f_3',1763],['t1h_3',536],['t1i_3',474],['t1k_3',1655],['t1m_3',1154],['t1p_3',2933],['t1q_3',2933],['t1r_3',2933],['t1s_3',1106]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 65;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

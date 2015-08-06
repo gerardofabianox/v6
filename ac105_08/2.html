@@ -1,0 +1,267 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:260px;}
+#t6_2{left:101px;top:278px;}
+#t7_2{left:101px;top:295px;}
+#t8_2{left:101px;top:312px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:362px;}
+#tb_2{left:101px;top:379px;}
+#tc_2{left:101px;top:396px;}
+#td_2{left:101px;top:414px;}
+#te_2{left:101px;top:431px;}
+#tf_2{left:101px;top:463px;}
+#tg_2{left:101px;top:480px;}
+#th_2{left:101px;top:498px;}
+#ti_2{left:101px;top:515px;}
+#tj_2{left:101px;top:533px;}
+#tk_2{left:101px;top:564px;}
+#tl_2{left:101px;top:582px;}
+#tm_2{left:101px;top:599px;}
+#tn_2{left:101px;top:617px;}
+#to_2{left:101px;top:634px;}
+#tp_2{left:101px;top:666px;}
+#tq_2{left:101px;top:683px;}
+#tr_2{left:101px;top:701px;}
+#ts_2{left:101px;top:718px;}
+#tt_2{left:101px;top:735px;}
+#tu_2{left:101px;top:753px;}
+#tv_2{left:101px;top:785px;}
+#tw_2{left:101px;top:802px;}
+#tx_2{left:101px;top:819px;letter-spacing:7px;}
+#ty_2{left:128px;top:819px;letter-spacing:5px;}
+#tz_2{left:158px;top:819px;}
+#t10_2{left:172px;top:819px;letter-spacing:10px;}
+#t11_2{left:201px;top:819px;letter-spacing:10px;}
+#t12_2{left:227px;top:819px;letter-spacing:10px;}
+#t13_2{left:255px;top:819px;letter-spacing:4px;}
+#t14_2{left:299px;top:819px;letter-spacing:7px;}
+#t15_2{left:331px;top:819px;letter-spacing:2px;}
+#t16_2{left:403px;top:819px;letter-spacing:10px;}
+#t17_2{left:431px;top:819px;letter-spacing:10px;}
+#t18_2{left:454px;top:819px;}
+#t19_2{left:101px;top:837px;}
+#t1a_2{left:101px;top:869px;}
+#t1b_2{left:101px;top:886px;}
+#t1c_2{left:101px;top:903px;}
+#t1d_2{left:101px;top:935px;}
+#t1e_2{left:101px;top:953px;}
+#t1f_2{left:101px;top:970px;}
+#t1g_2{left:101px;top:987px;}
+#t1h_2{left:101px;top:1005px;}
+#t1i_2{left:101px;top:1022px;}
+#t1j_2{left:101px;top:1054px;}
+#t1k_2{left:101px;top:1071px;}
+#t1l_2{left:101px;top:1089px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">inicial del Cuerpo, cuando se consideró indispensable un plantel mínimo de 15 (quince) </div>
+<div id="t4_2" class="t s2_2">profesionales, es decir 6 (seis) más de los que hoy lo conforman (cf. consid. 2°).- </div>
+<div id="t5_2" class="t s2_2">5°) Que lo expuesto precedentemente pone en evidencia, ante todo, la necesidad -que el Tribunal </div>
+<div id="t6_2" class="t s2_2">ya calificó de imperiosa (Ac. 4/08 CNE)- de ampliar la composición del Cuerpo de Auditores </div>
+<div id="t7_2" class="t s2_2">Contadores; pero indica también la conveniencia de actualizar las pautas establecidas en la </div>
+<div id="t8_2" class="t s2_2">Acordada 2/03 CNE, a los fines de acentuar la celeridad en la actuación de dicho Cuerpo técnico y de </div>
+<div id="t9_2" class="t s2_2">dotar de mayor agilidad a los procesos de control que la ley 26.215 impone llevar adelante.- </div>
+<div id="ta_2" class="t s2_2">6°) Que en cuanto a lo primero, cabe recordar que, al sancionar la ley citada, el legislador -</div>
+<div id="tb_2" class="t s2_2">asumiendo la necesidad de fortalecer la asistencia técnica a la luz de las nuevas exigencias que </div>
+<div id="tc_2" class="t s2_2">estaba estableciendo- previo que este Tribunal cuente con un "fondo anual especial" para la </div>
+<div id="td_2" class="t s2_2">organización del Cuerpo de Auditores Contadores (art. 73, modificatorio del articulo 4°, inc. d), de la </div>
+<div id="te_2" class="t s2_2">ley 19.108).- </div>
+<div id="tf_2" class="t s2_2">Conforme a ello, le reconoció a la Cámara la potestad de "administrar los recursos provenientes de </div>
+<div id="tg_2" class="t s2_2">los aranceles percibidos por los trámites que se realizan ante su sede, los que se asignen en el </div>
+<div id="th_2" class="t s2_2">Presupuesto General de la Nación y los provenientes de las transferencias especificas del Poder </div>
+<div id="ti_2" class="t s2_2">Ejecutivo nacional en ocasión de las elecciones y para el funcionamiento del Cuerpo de Auditores </div>
+<div id="tj_2" class="t s2_2">Contadores" (art. 4, inc. f, ley 19.108, modif. por ley 26.215).- </div>
+<div id="tk_2" class="t s2_2">Por otra parte, en el artículo 72 de la ley 26.215 dispuso asimismo que "la Corte Suprema de </div>
+<div id="tl_2" class="t s2_2">Justicia de la Nación y el Consejo de la Magistratura del Poder Judicial de la Nación arbitrarán los </div>
+<div id="tm_2" class="t s2_2">medios para dotar al Cuerpo de Auditores Contadores de la Cámara Nacional Electoral de los </div>
+<div id="tn_2" class="t s2_2">recursos humanos técnicos y financieros que permitan el adecuado cumplimiento de sus funciones </div>
+<div id="to_2" class="t s2_2">en los plazos previstos por esta ley".- </div>
+<div id="tp_2" class="t s2_2">7°) Que sobre la base de las previsiones transcriptas y teniendo en cuenta que la Corte Suprema de </div>
+<div id="tq_2" class="t s2_2">Justicia autorizó al Tribunal a disponer de los ingresos que obtenga en concepto de aranceles para </div>
+<div id="tr_2" class="t s2_2">aplicarlos a la organización del Cuerpo técnico de auditoria (Ac. 21/08 CSJN), esta Cámara convocó </div>
+<div id="ts_2" class="t s2_2">a un concurso público de antecedentes y oposición para cubrir cargos contratados de auditores </div>
+<div id="tt_2" class="t s2_2">contadores (Ac. 4/08 CNE), el cual se encuentra ya en la instancia final de su desarrollo (cf. Expte. </div>
+<div id="tu_2" class="t s2_2">SC 86/08 CNE).- </div>
+<div id="tv_2" class="t s2_2">No obstante ello, y pese a que existen los recursos necesarios, no se cuenta con autorización para </div>
+<div id="tw_2" class="t s2_2">efectuar las designaciones, toda vez que la Jefatura de Gabinete de Ministros del Poder Ejecutivo </div>
+<div id="tx_2" class="t s2_2">Nac</div>
+<div id="ty_2" class="t s2_2">iona</div>
+<div id="tz_2" class="t s2_2">l</div>
+<div id="t10_2" class="t s2_2">no</div>
+<div id="t11_2" class="t s2_2">se</div>
+<div id="t12_2" class="t s2_2">ha</div>
+<div id="t13_2" class="t s2_2">exped</div>
+<div id="t14_2" class="t s2_2">ido</div>
+<div id="t15_2" class="t s2_2">respecto</div>
+<div id="t16_2" class="t s2_2">de</div>
+<div id="t17_2" class="t s2_2">la</div>
+<div id="t18_2" class="t s2_2">habilitación de cargos y partidas presupuestarias </div>
+<div id="t19_2" class="t s2_2">correspondientes.- </div>
+<div id="t1a_2" class="t s2_2">8°) Que esta Cámara ha agotado ya todas las vías -formales y oficiosas- para expresarle a las </div>
+<div id="t1b_2" class="t s2_2">autoridades competentes la necesidad de fortalecer la composición del Cuerpo de Auditores </div>
+<div id="t1c_2" class="t s2_2">Contadores que de ella depende.- </div>
+<div id="t1d_2" class="t s2_2">En efecto, además de solicitarse a la Corte Suprema, sucesivamente desde el año 2002, una </div>
+<div id="t1e_2" class="t s2_2">dotación de al menos 15 contadores (cf. Ac. 7/02 CNE y Oficios N° 1936 -del 24 de junio de 2002-; </div>
+<div id="t1f_2" class="t s2_2">6177/06 -del 14 de noviembre de 2006-), se requirió a la Dirección General de Administración </div>
+<div id="t1g_2" class="t s2_2">Financiera del Consejo de la Magistratura que "se adopten las medidas necesarias tendientes a </div>
+<div id="t1h_2" class="t s2_2">requerir la ampliación del crédito presupuestario correspondiente" (cf. Oficio 373, del 27 de febrero </div>
+<div id="t1i_2" class="t s2_2">de 2008).- </div>
+<div id="t1j_2" class="t s2_2">Luego, el Tribunal se dirigió al señor Ministro del Interior, apelando a sus buenos oficios para que "el </div>
+<div id="t1k_2" class="t s2_2">señor Jefe de Gabinete adopte una decisión que permita contar con la habilitación de los cargos </div>
+<div id="t1l_2" class="t s2_2">requeridos" (cf. Oficio del 13 de junio de 2008). También informó al Consejo de la Magistratura del </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2934],['t4_2',2374],['t5_2',2933],['t6_2',2934],['t7_2',2933],['t8_2',2934],['t9_2',2684],['ta_2',2933],['tb_2',2933],['tc_2',2933],['td_2',2934],['te_2',381],['tf_2',2933],['tg_2',2933],['th_2',2934],['ti_2',2933],['tj_2',1838],['tk_2',2933],['tl_2',2933],['tm_2',2934],['tn_2',2934],['to_2',1090],['tp_2',2933],['tq_2',2934],['tr_2',2933],['ts_2',2934],['tt_2',2934],['tu_2',486],['tv_2',2934],['tw_2',2933],['t18_2',1521],['t1a_2',2934],['t1b_2',2934],['t1c_2',980],['t1d_2',2934],['t1e_2',2933],['t1f_2',2934],['t1g_2',2934],['t1h_2',2934],['t1i_2',310],['t1j_2',2934],['t1k_2',2933],['t1l_2',2933]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 58;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

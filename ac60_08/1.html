@@ -1,0 +1,263 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:207px;}
+#t4_1{left:101px;top:234px;}
+#t5_1{left:101px;top:258px;}
+#t6_1{left:101px;top:279px;}
+#t7_1{left:101px;top:297px;}
+#t8_1{left:101px;top:328px;}
+#t9_1{left:101px;top:346px;}
+#ta_1{left:101px;top:363px;}
+#tb_1{left:101px;top:381px;}
+#tc_1{left:101px;top:398px;}
+#td_1{left:101px;top:430px;}
+#te_1{left:101px;top:462px;}
+#tf_1{left:101px;top:479px;}
+#tg_1{left:101px;top:496px;}
+#th_1{left:101px;top:514px;}
+#ti_1{left:101px;top:531px;}
+#tj_1{left:101px;top:549px;}
+#tk_1{left:101px;top:566px;}
+#tl_1{left:101px;top:583px;}
+#tm_1{left:101px;top:615px;}
+#tn_1{left:101px;top:633px;}
+#to_1{left:101px;top:664px;}
+#tp_1{left:101px;top:682px;}
+#tq_1{left:101px;top:699px;}
+#tr_1{left:101px;top:717px;}
+#ts_1{left:101px;top:734px;}
+#tt_1{left:101px;top:751px;}
+#tu_1{left:101px;top:783px;}
+#tv_1{left:101px;top:815px;}
+#tw_1{left:101px;top:832px;}
+#tx_1{left:101px;top:850px;}
+#ty_1{left:101px;top:867px;}
+#tz_1{left:101px;top:885px;}
+#t10_1{left:101px;top:902px;}
+#t11_1{left:101px;top:919px;}
+#t12_1{left:101px;top:951px;}
+#t13_1{left:101px;top:969px;}
+#t14_1{left:101px;top:986px;}
+#t15_1{left:101px;top:1018px;}
+#t16_1{left:101px;top:1035px;}
+#t17_1{left:101px;top:1053px;}
+#t18_1{left:101px;top:1070px;}
+#t19_1{left:101px;top:1087px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 45px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N°60/2008 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 08/07/2008 </div>
+<div id="t5_1" class="t s4_1">*El texto incluye la modificación incorporada por la Acordada CNE N° 120/2008 </div>
+<div id="t6_1" class="t s5_1">REGISTRO GENERAL DE NOMBRES DE LOS PARTIDOS POLÍTICOS. SISTEMA </div>
+<div id="t7_1" class="t s5_1">INFORMÁTICO. </div>
+<div id="t8_1" class="t s3_1">En Buenos Aires, a los ocho días del mes de julio de dos mil ocho, se reúnen en acuerdo </div>
+<div id="t9_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Rodolfo Emilio </div>
+<div id="ta_1" class="t s3_1">Munné, Alberto Ricardo Dalla Vía y Santiago Hernán Corcuera, actuando los Secretarios de la </div>
+<div id="tb_1" class="t s3_1">Cámara doctores Felipe González Roura y Nicolás Deane. Abierto el acto por el señor Presidente </div>
+<div id="tc_1" class="t s3_1">doctor Rodolfo Emilio Munné, </div>
+<div id="td_1" class="t s3_1">CONSIDERARON: </div>
+<div id="te_1" class="t s3_1">1°) Que mediante Acordada CNE 81/90 el Tribunal estableció que los magistrados deben solicitar al </div>
+<div id="tf_1" class="t s3_1">Registro Nacional de Nombres de los Partidos Políticos, previamente a la concesión de la </div>
+<div id="tg_1" class="t s3_1">personalidad jurídico política a un partido, que informe si existe otra agrupación reconocida o en </div>
+<div id="th_1" class="t s3_1">formación con la misma denominación (Ac. cit., punto 1°). Ello a los fines de prevenir posibles </div>
+<div id="ti_1" class="t s3_1">conflictos que podrían suscitarse, durante o con posterioridad a su reconocimiento. Dispuso, </div>
+<div id="tj_1" class="t s3_1">asimismo, que a los fines de mantener permanentemente actualizado el referido Registro, los </div>
+<div id="tk_1" class="t s3_1">señores jueces deben comunicar de inmediato el inicio de todo trámite de reconocimiento de </div>
+<div id="tl_1" class="t s3_1">personalidad (Ac. cit., punto 2°).- </div>
+<div id="tm_1" class="t s3_1">Estas consultas y comunicaciones se realizan hasta ahora por oficio, con la natural demora que ello </div>
+<div id="tn_1" class="t s3_1">importa.- </div>
+<div id="to_1" class="t s3_1">2°) Que a los fines de agilizar el procedimiento para que los señores jueces puedan contar en forma </div>
+<div id="tp_1" class="t s3_1">inmediata con la información que requieren y de asegurar, asimismo, la actualización en tiempo real </div>
+<div id="tq_1" class="t s3_1">del Registro con los nombres de las agrupaciones que solicitan ser reconocidas, se dispuso el </div>
+<div id="tr_1" class="t s3_1">desarrollo de un sistema informático que permita a las secretarias electorales acceder directamente </div>
+<div id="ts_1" class="t s3_1">a la base de datos del mencionado Registro, eliminándose así el oficio como medio para efectuar las </div>
+<div id="tt_1" class="t s3_1">consultas y la mayoría de las comunicaciones que la mencionada Acordada contempla.- </div>
+<div id="tu_1" class="t s3_1">El sistema proyectado permite las siguientes operaciones: </div>
+<div id="tv_1" class="t s3_1">a.- La consulta en línea, a los fines de lo dispuesto en los arts. 13 y 16 ”in fine” de la ley 23, 298, en </div>
+<div id="tw_1" class="t s3_1">la Acordada CNE N° 81/90 y en la Acordada CNE N° 88/04, considerando 2°, de las coincidencias </div>
+<div id="tx_1" class="t s3_1">totales -es decir, de todos los vocablos que componen el nombre- o parciales -de uno o de algunos </div>
+<div id="ty_1" class="t s3_1">de los vocablos que integran la denominación- que existen entre el nombre pretendido y los que </div>
+<div id="tz_1" class="t s3_1">están ya registrados (arts. 14, ler. párrafo y 39 de la ley 23.298) en la totalidad de los distritos o </div>
+<div id="t10_1" class="t s3_1">que, sin estar aún registrados en los términos de las normas citadas, corresponden a partidos, </div>
+<div id="t11_1" class="t s3_1">confederaciones y alianzas en curso de reconocimiento (art. 14, 2° párrafo).- </div>
+<div id="t12_1" class="t s3_1">La base de consulta comprende los nombres de las agrupaciones reconocidas -con sus respectivas </div>
+<div id="t13_1" class="t s3_1">siglas y números- y de las que se encuentran en trámite de reconocimiento, así como los de las </div>
+<div id="t14_1" class="t s3_1">extinguidas y caducadas.- </div>
+<div id="t15_1" class="t s3_1">En cuanto a éstas, el cotejo solo se realiza con los registros correspondientes a las agrupaciones </div>
+<div id="t16_1" class="t s3_1">cuya extinción o caducidad no excede de 8 y 4 años respectivamente, por ser éstos los plazos </div>
+<div id="t17_1" class="t s3_1">durante los cuales, según la ley, el nombre de los partidos que se encuentran en tales condiciones </div>
+<div id="t18_1" class="t s3_1">no puede ser usado por ninguna otra entidad (cf. art. 17, ley 23.298). Respecto de las alianzas, </div>
+<div id="t19_1" class="t s3_1">además de las que en periodos electorales se encuentren vigentes, el sistema contiene aquellas -no </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',988],['t4_1',587],['t5_1',1840],['t6_1',2933],['t8_1',2933],['t9_1',2933],['ta_1',2934],['tb_1',2934],['tc_1',847],['te_1',2933],['tf_1',2933],['tg_1',2933],['th_1',2934],['ti_1',2933],['tj_1',2934],['tk_1',2933],['tl_1',984],['tm_1',2934],['to_1',2934],['tp_1',2933],['tq_1',2933],['tr_1',2934],['ts_1',2933],['tt_1',2539],['tu_1',1684],['tv_1',2935],['tw_1',2934],['tx_1',2933],['ty_1',2934],['tz_1',2934],['t10_1',2934],['t11_1',2246],['t12_1',2934],['t13_1',2933],['t14_1',756],['t15_1',2934],['t16_1',2934],['t17_1',2934],['t18_1',2934],['t19_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

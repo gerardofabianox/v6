@@ -1,0 +1,264 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:216px;}
+#t4_1{left:270px;top:215px;}
+#t5_1{left:101px;top:243px;}
+#t6_1{left:101px;top:267px;}
+#t7_1{left:101px;top:299px;}
+#t8_1{left:101px;top:316px;}
+#t9_1{left:101px;top:334px;}
+#ta_1{left:101px;top:351px;}
+#tb_1{left:101px;top:368px;}
+#tc_1{left:101px;top:400px;}
+#td_1{left:101px;top:432px;}
+#te_1{left:101px;top:449px;}
+#tf_1{left:101px;top:467px;}
+#tg_1{left:101px;top:484px;}
+#th_1{left:101px;top:516px;}
+#ti_1{left:101px;top:533px;}
+#tj_1{left:101px;top:551px;}
+#tk_1{left:101px;top:568px;}
+#tl_1{left:101px;top:600px;}
+#tm_1{left:101px;top:617px;}
+#tn_1{left:101px;top:635px;}
+#to_1{left:101px;top:652px;}
+#tp_1{left:101px;top:684px;}
+#tq_1{left:101px;top:701px;}
+#tr_1{left:101px;top:719px;}
+#ts_1{left:101px;top:736px;}
+#tt_1{left:101px;top:768px;}
+#tu_1{left:101px;top:785px;}
+#tv_1{left:101px;top:803px;}
+#tw_1{left:101px;top:820px;}
+#tx_1{left:101px;top:852px;}
+#ty_1{left:101px;top:869px;}
+#tz_1{left:101px;top:887px;}
+#t10_1{left:101px;top:904px;}
+#t11_1{left:101px;top:922px;}
+#t12_1{left:101px;top:939px;}
+#t13_1{left:101px;top:971px;}
+#t14_1{left:101px;top:988px;}
+#t15_1{left:101px;top:1020px;}
+#t16_1{left:101px;top:1037px;}
+#t17_1{left:101px;top:1055px;}
+#t18_1{left:101px;top:1072px;}
+#t19_1{left:101px;top:1090px;}
+
+.s3_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N°</div>
+<div id="t4_1" class="t s3_1">34/2012 </div>
+<div id="t5_1" class="t s4_1">Bs. As., 24/04/2012 </div>
+<div id="t6_1" class="t s5_1">CREACIÓN DEL REGISTRO DE DELEGADOS DE LA JUSTICIA NACIONAL ELECTORAL. </div>
+<div id="t7_1" class="t s4_1">En Buenos Aires, a los veinticuatro días del mes de abril del año dos mil doce, se reúnen en acuerdo </div>
+<div id="t8_1" class="t s4_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral los doctores Santiago Hernán </div>
+<div id="t9_1" class="t s4_1">Corcuera, Alberto Ricardo Dalla Via y Rodolfo Emilio Munné, actuando el Secretario de la Cámara </div>
+<div id="ta_1" class="t s4_1">doctor Hernán Gonçalves Figueiredo. Abierto el acto por el señor Presidente, doctor Santiago Hernán </div>
+<div id="tb_1" class="t s4_1">Corcuera, </div>
+<div id="tc_1" class="t s4_1">CONSIDERARON: </div>
+<div id="td_1" class="t s4_1">1°) Que a esta Cámara Nacional Electoral le corresponde, como autoridad superior en la materia (cf. </div>
+<div id="te_1" class="t s4_1">art. 5 de la ley 19.108 y sus modificatorias), aplicar las normas que garantizan a la ciudadanía el </div>
+<div id="tf_1" class="t s4_1">pleno goce de sus derechos políticos, asegurando la efectiva vigencia del principio democrático de la </div>
+<div id="tg_1" class="t s4_1">representación popular a través del sufragio (cf. Ac. 85/87 CNE).- </div>
+<div id="th_1" class="t s4_1">2º) Que en el año 2009 y a fin de facilitar el cumplimiento de tareas preelectorales y otras relativas </div>
+<div id="ti_1" class="t s4_1">a las contingencias que tienen lugar durante el desarrollo del acto electoral, el Tribunal recomendó a </div>
+<div id="tj_1" class="t s4_1">todas las juntas electorales del país implementar la designación de “delegados en locales de </div>
+<div id="tk_1" class="t s4_1">votación o en dependencias cercanas” (Ac. 57/09 CNE).- </div>
+<div id="tl_1" class="t s4_1">Posteriormente, y teniendo en cuenta los resultados favorables que dicha medida generó en aquellos </div>
+<div id="tm_1" class="t s4_1">distritos en que se implementó su designación, su adopción fue encomendada por esta Cámara a los </div>
+<div id="tn_1" class="t s4_1">señores Jueces Federales con competencia electoral en ocasión de los comicios celebrados en el año </div>
+<div id="to_1" class="t s4_1">2011 (Ac. 86/11 CNE).- </div>
+<div id="tp_1" class="t s4_1">3º) Que, en este contexto, en las elecciones primarias del 14 de agosto pasado, sobre un total de </div>
+<div id="tq_1" class="t s4_1">12.544 establecimientos, fueron designados 6.146 delegados; mientras que para los comicios </div>
+<div id="tr_1" class="t s4_1">generales del 23 de octubre, el número de ciudadanos designados en esa función se incrementó en </div>
+<div id="ts_1" class="t s4_1">aproximadamente un 17%.- </div>
+<div id="tt_1" class="t s4_1">Cabe mencionar que, una vez finalizado el proceso electoral, se requirió a los señores Secretarios </div>
+<div id="tu_1" class="t s4_1">Electorales que informaran acerca del desempeño de la figura de los delegados. De las respuestas </div>
+<div id="tv_1" class="t s4_1">recabadas se desprende unánimemente que su implementación –bajo las diversas modalidades que </div>
+<div id="tw_1" class="t s4_1">se adoptaron- fue calificada como altamente positiva.- </div>
+<div id="tx_1" class="t s4_1">4º) Que, ahora bien, es imprescindible tomar en consideración que, en las anteriores ocasiones en </div>
+<div id="ty_1" class="t s4_1">que se implementó la actuación de delegados de la Justicia Nacional Electoral, el Ministerio del </div>
+<div id="tz_1" class="t s4_1">Interior dispuso la afectación de las partidas presupuestarias necesarias para solventar el viático de </div>
+<div id="t10_1" class="t s4_1">los mismos. En el marco de esos precedentes, resulta posible planificar las acciones conducentes </div>
+<div id="t11_1" class="t s4_1">para el mantenimiento de la figura, bajo la previsión de la existencia de análogas condiciones de </div>
+<div id="t12_1" class="t s4_1">disponibilidad de recursos presupuestarios en los próximos procesos electorales.- </div>
+<div id="t13_1" class="t s4_1">5º) Que, en este sentido y a fin de continuar con la tarea emprendida, se torna indispensable </div>
+<div id="t14_1" class="t s4_1">disponer la creación de un Registro de Delegados de la Justicia Nacional Electoral.- </div>
+<div id="t15_1" class="t s4_1">Ello con el objetivo final de formar un cuerpo profesionalizado de delegados, dotando a sus </div>
+<div id="t16_1" class="t s4_1">inscriptos de los conocimientos necesarios vinculados a la función a desempeñar, así como también </div>
+<div id="t17_1" class="t s4_1">de propender al desarrollo de programas de capacitación y actualización –bajo la coordinación de la </div>
+<div id="t18_1" class="t s4_1">Escuela de Capacitación y Educación Electoral de este Tribunal (Ac. 128/09 CNE)- que permitan </div>
+<div id="t19_1" class="t s4_1">afrontar aquellas funciones que la normativa encomiende al fuero.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',676],['t5_1',587],['t6_1',2675],['t7_1',2933],['t8_1',2933],['t9_1',2934],['ta_1',2933],['td_1',2933],['te_1',2934],['tf_1',2933],['tg_1',1915],['th_1',2934],['ti_1',2934],['tj_1',2933],['tk_1',1648],['tl_1',2933],['tm_1',2933],['tn_1',2933],['to_1',690],['tp_1',2934],['tq_1',2934],['tr_1',2933],['ts_1',820],['tt_1',2934],['tu_1',2934],['tv_1',2933],['tw_1',1581],['tx_1',2933],['ty_1',2934],['tz_1',2933],['t10_1',2934],['t11_1',2933],['t12_1',2358],['t13_1',2934],['t14_1',2403],['t15_1',2934],['t16_1',2933],['t17_1',2933],['t18_1',2933],['t19_1',1952]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

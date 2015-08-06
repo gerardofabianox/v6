@@ -1,0 +1,502 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:314px;top:192px;}
+#t2_6{left:385px;top:226px;}
+#t3_6{left:410px;top:248px;}
+#t4_6{left:712px;top:24px;}
+#t5_6{left:800px;top:44px;}
+#t6_6{left:99px;top:279px;}
+#t7_6{left:115px;top:279px;}
+#t8_6{left:119px;top:279px;}
+#t9_6{left:168px;top:295px;}
+#ta_6{left:189px;top:295px;}
+#tb_6{left:189px;top:313px;}
+#tc_6{left:639px;top:298px;}
+#td_6{left:642px;top:313px;}
+#te_6{left:754px;top:298px;}
+#tf_6{left:791px;top:298px;}
+#tg_6{left:824px;top:298px;}
+#th_6{left:765px;top:313px;}
+#ti_6{left:99px;top:382px;}
+#tj_6{left:115px;top:382px;}
+#tk_6{left:119px;top:382px;}
+#tl_6{left:94px;top:401px;}
+#tm_6{left:168px;top:355px;}
+#tn_6{left:189px;top:355px;}
+#to_6{left:639px;top:386px;}
+#tp_6{left:642px;top:401px;}
+#tq_6{left:752px;top:358px;}
+#tr_6{left:789px;top:358px;}
+#ts_6{left:802px;top:358px;}
+#tt_6{left:168px;top:390px;}
+#tu_6{left:189px;top:390px;}
+#tv_6{left:189px;top:408px;}
+#tw_6{left:217px;top:408px;}
+#tx_6{left:307px;top:408px;}
+#ty_6{left:326px;top:408px;}
+#tz_6{left:388px;top:408px;}
+#t10_6{left:408px;top:408px;}
+#t11_6{left:469px;top:408px;}
+#t12_6{left:543px;top:408px;}
+#t13_6{left:563px;top:408px;}
+#t14_6{left:189px;top:427px;}
+#t15_6{left:757px;top:403px;}
+#t16_6{left:780px;top:418px;}
+#t17_6{left:99px;top:455px;}
+#t18_6{left:115px;top:455px;}
+#t19_6{left:119px;top:455px;}
+#t1a_6{left:168px;top:461px;}
+#t1b_6{left:189px;top:461px;}
+#t1c_6{left:653px;top:456px;}
+#t1d_6{left:655px;top:471px;}
+#t1e_6{left:760px;top:463px;}
+#t1f_6{left:99px;top:496px;}
+#t1g_6{left:115px;top:496px;}
+#t1h_6{left:119px;top:496px;}
+#t1i_6{left:91px;top:514px;}
+#t1j_6{left:168px;top:496px;}
+#t1k_6{left:189px;top:496px;}
+#t1l_6{left:189px;top:514px;}
+#t1m_6{left:631px;top:500px;}
+#t1n_6{left:631px;top:515px;}
+#t1o_6{left:756px;top:500px;}
+#t1p_6{left:780px;top:515px;}
+#t1q_6{left:99px;top:566px;}
+#t1r_6{left:115px;top:566px;}
+#t1s_6{left:119px;top:566px;}
+#t1t_6{left:91px;top:584px;}
+#t1u_6{left:168px;top:549px;}
+#t1v_6{left:189px;top:549px;}
+#t1w_6{left:189px;top:567px;}
+#t1x_6{left:646px;top:553px;}
+#t1y_6{left:637px;top:567px;}
+#t1z_6{left:752px;top:553px;}
+#t20_6{left:780px;top:567px;}
+#t21_6{left:168px;top:602px;}
+#t22_6{left:189px;top:602px;}
+#t23_6{left:642px;top:596px;}
+#t24_6{left:642px;top:611px;}
+#t25_6{left:757px;top:604px;}
+#t26_6{left:101px;top:630px;}
+#t27_6{left:109px;top:630px;}
+#t28_6{left:113px;top:630px;}
+#t29_6{left:168px;top:636px;}
+#t2a_6{left:189px;top:636px;}
+#t2b_6{left:219px;top:636px;}
+#t2c_6{left:246px;top:636px;}
+#t2d_6{left:290px;top:636px;}
+#t2e_6{left:329px;top:636px;}
+#t2f_6{left:387px;top:636px;}
+#t2g_6{left:409px;top:636px;}
+#t2h_6{left:482px;top:636px;}
+#t2i_6{left:552px;top:636px;}
+#t2j_6{left:189px;top:655px;}
+#t2k_6{left:638px;top:640px;}
+#t2l_6{left:632px;top:655px;}
+#t2m_6{left:752px;top:640px;}
+#t2n_6{left:780px;top:655px;}
+#t2o_6{left:97px;top:683px;}
+#t2p_6{left:113px;top:683px;}
+#t2q_6{left:117px;top:683px;}
+#t2r_6{left:168px;top:689px;}
+#t2s_6{left:189px;top:689px;}
+#t2t_6{left:638px;top:683px;}
+#t2u_6{left:632px;top:698px;}
+#t2v_6{left:763px;top:691px;}
+#t2w_6{left:100px;top:750px;}
+#t2x_6{left:115px;top:750px;}
+#t2y_6{left:120px;top:750px;}
+#t2z_6{left:168px;top:723px;}
+#t30_6{left:189px;top:723px;}
+#t31_6{left:189px;top:742px;}
+#t32_6{left:635px;top:727px;}
+#t33_6{left:656px;top:742px;}
+#t34_6{left:763px;top:727px;}
+#t35_6{left:773px;top:742px;}
+#t36_6{left:168px;top:776px;}
+#t37_6{left:189px;top:776px;}
+#t38_6{left:635px;top:771px;}
+#t39_6{left:642px;top:786px;}
+#t3a_6{left:757px;top:778px;}
+#t3b_6{left:85px;top:815px;}
+#t3c_6{left:92px;top:815px;}
+#t3d_6{left:97px;top:815px;}
+#t3e_6{left:118px;top:815px;}
+#t3f_6{left:122px;top:815px;}
+#t3g_6{left:168px;top:815px;}
+#t3h_6{left:189px;top:815px;}
+#t3i_6{left:635px;top:810px;}
+#t3j_6{left:656px;top:825px;}
+#t3k_6{left:763px;top:804px;}
+#t3l_6{left:773px;top:819px;}
+#t3m_6{left:753px;top:835px;}
+
+.s7_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAII-Calibri6;
+	color: rgb(88,88,88);
+}
+
+.s9_6{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JGAPDH-Calibri-Italic6;
+	color: rgb(88,88,88);
+}
+
+.s3_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold6;
+	color: rgb(88,88,88);
+}
+
+.s12_6{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: JFJAII-Calibri6;
+	color: rgb(88,88,88);
+}
+
+.s5_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAGD-Calibri-Bold6;
+	color: rgb(88,88,88);
+}
+
+.s8_6{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: JFJAII-Calibri6;
+	color: rgb(88,88,88);
+}
+
+.s6_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHF-Wingdings-Regular6;
+	color: rgb(88,88,88);
+}
+
+.s10_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHF-Wingdings-Regular6;
+	color: rgb(0,0,0);
+}
+
+.s2_6{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold6;
+	color: rgb(88,88,88);
+}
+
+.s1_6{
+	FONT-SIZE: 110px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold6;
+	color: rgb(88,88,88);
+}
+
+.s4_6{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: 'Courier New', Courier, monospace;
+	color: rgb(0,0,0);
+}
+
+.s11_6{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: JFJAHE-Calibri-Bold6;
+	color: rgb(255,255,255);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts6" type="text/css" >
+
+@font-face {
+	font-family: JFJAHF-Wingdings-Regular6;
+	src :url("6/fonts/JFJAHF-Wingdings-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAHE-Calibri-Bold6;
+	src :url("6/fonts/JFJAHE-Calibri-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAGD-Calibri-Bold6;
+	src :url("6/fonts/JFJAGD-Calibri-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: JGAPDH-Calibri-Italic6;
+	src :url("6/fonts/JGAPDH-Calibri-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: JFJAII-Calibri6;
+	src :url("6/fonts/JFJAII-Calibri.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">Elecciones nacionales 2015</div>
+<div id="t2_6" class="t s2_6">Cronograma electoral</div>
+<div id="t3_6" class="t s3_6">Decreto 775/2015</div>
+<div id="t4_6" class="t s4_6">Ac. Nº44/2015</div>
+<div id="t5_6" class="t s4_6">Anexo</div>
+<div id="t6_6" class="t s3_6">17</div>
+<div id="t7_6" class="t s5_6">‐</div>
+<div id="t8_6" class="t s3_6">oct</div>
+<div id="ta_6" class="t s7_6">Prohibición de publicar o difundir encuestras o sondeos de opinión</div>
+<div id="tb_6" class="t s7_6">y pronósticos electorales</div>
+<div id="tc_6" class="t s8_6">8 días antes de la</div>
+<div id="td_6" class="t s8_6">elección general</div>
+<div id="te_6" class="t s8_6">Art. 44</div>
+<div id="tf_6" class="t s9_6">quater</div>
+<div id="tg_6" class="t s8_6">,</div>
+<div id="th_6" class="t s8_6">ley 26.215</div>
+<div id="ti_6" class="t s3_6">23</div>
+<div id="tj_6" class="t s5_6">‐</div>
+<div id="tk_6" class="t s3_6">oct</div>
+<div id="tl_6" class="t s3_6">8.00 hs.</div>
+<div id="tn_6" class="t s7_6">Fin de la campaña electoral</div>
+<div id="to_6" class="t s8_6">48 hs. antes de la</div>
+<div id="tp_6" class="t s8_6">elección general</div>
+<div id="tq_6" class="t s8_6">Art. 64</div>
+<div id="tr_6" class="t s9_6">bis</div>
+<div id="ts_6" class="t s8_6">, CEN</div>
+<div id="tt_6" class="t s6_6"></div>
+<div id="tu_6" class="t s7_6">Comienzo de la veda electoral (prohibición de realizar actos públicos</div>
+<div id="tv_6" class="t s7_6">de</div>
+<div id="tw_6" class="t s7_6">proselitismo</div>
+<div id="tx_6" class="t s7_6">y</div>
+<div id="ty_6" class="t s7_6">publicar</div>
+<div id="tz_6" class="t s7_6">y</div>
+<div id="t10_6" class="t s7_6">difundir</div>
+<div id="t11_6" class="t s7_6">encuestas</div>
+<div id="t12_6" class="t s7_6">y</div>
+<div id="t13_6" class="t s7_6">sondeos</div>
+<div id="t14_6" class="t s7_6">preelectorales)</div>
+<div id="t15_6" class="t s8_6">Art. 71, inc. f,</div>
+<div id="t16_6" class="t s8_6">CEN</div>
+<div id="t17_6" class="t s3_6">25</div>
+<div id="t18_6" class="t s5_6">‐</div>
+<div id="t19_6" class="t s3_6">oct</div>
+<div id="t1a_6" class="t s10_6"></div>
+<div id="t1b_6" class="t s11_6">Elecciones generales</div>
+<div id="t1c_6" class="t s8_6">4º domingo</div>
+<div id="t1d_6" class="t s8_6">de octubre</div>
+<div id="t1e_6" class="t s8_6">Art. 53, CEN</div>
+<div id="t1f_6" class="t s3_6">25</div>
+<div id="t1g_6" class="t s5_6">‐</div>
+<div id="t1h_6" class="t s3_6">oct</div>
+<div id="t1i_6" class="t s3_6">8a 21 hs.</div>
+<div id="t1j_6" class="t s6_6"></div>
+<div id="t1k_6" class="t s7_6">Prohibición de publicar o difundir encuestas y proyecciones sobre el</div>
+<div id="t1l_6" class="t s7_6">resultado de la elección</div>
+<div id="t1m_6" class="t s8_6">Durante elección a 3</div>
+<div id="t1n_6" class="t s8_6">hs. desp.de su cierre</div>
+<div id="t1o_6" class="t s8_6">Art. 71, inc. h,</div>
+<div id="t1p_6" class="t s8_6">CEN</div>
+<div id="t1q_6" class="t s3_6">27</div>
+<div id="t1r_6" class="t s5_6">‐</div>
+<div id="t1s_6" class="t s3_6">oct</div>
+<div id="t1t_6" class="t s3_6">18.00 hs.</div>
+<div id="t1u_6" class="t s6_6"></div>
+<div id="t1v_6" class="t s7_6">Fin del plazo para efectuar reclamos y protestas sobre vicios en la</div>
+<div id="t1w_6" class="t s7_6">constitución y funcionamiento de las mesas y sobre la elección</div>
+<div id="t1x_6" class="t s8_6">Durante 48 hs.</div>
+<div id="t1y_6" class="t s8_6">sigtes. a elec. gral.</div>
+<div id="t1z_6" class="t s8_6">Arts. 110 y 111,</div>
+<div id="t20_6" class="t s8_6">CEN</div>
+<div id="t21_6" class="t s6_6"></div>
+<div id="t22_6" class="t s7_6">Inicio del escrutinio definitivo</div>
+<div id="t23_6" class="t s8_6">48 hs. sgtes. a la</div>
+<div id="t24_6" class="t s8_6">elección general</div>
+<div id="t25_6" class="t s8_6">Art. 112, CEN</div>
+<div id="t26_6" class="t s3_6">6</div>
+<div id="t27_6" class="t s5_6">‐</div>
+<div id="t28_6" class="t s3_6">nov</div>
+<div id="t29_6" class="t s6_6"></div>
+<div id="t2a_6" class="t s7_6">Fin</div>
+<div id="t2b_6" class="t s7_6">de</div>
+<div id="t2c_6" class="t s7_6">plazo</div>
+<div id="t2d_6" class="t s7_6">para</div>
+<div id="t2e_6" class="t s7_6">realizar</div>
+<div id="t2f_6" class="t s7_6">el</div>
+<div id="t2g_6" class="t s7_6">escrutinio</div>
+<div id="t2h_6" class="t s7_6">definitivo</div>
+<div id="t2i_6" class="t s7_6">(categoría</div>
+<div id="t2j_6" class="t s7_6">presidencial) y comunicar los resultados al Senado de la Nación</div>
+<div id="t2k_6" class="t s8_6">Dentro de 10 días</div>
+<div id="t2l_6" class="t s8_6">sgtes. a elec. presid.</div>
+<div id="t2m_6" class="t s8_6">Arts. 112 y 120,</div>
+<div id="t2n_6" class="t s8_6">CEN</div>
+<div id="t2o_6" class="t s3_6">22</div>
+<div id="t2p_6" class="t s5_6">‐</div>
+<div id="t2q_6" class="t s3_6">nov</div>
+<div id="t2r_6" class="t s6_6"></div>
+<div id="t2s_6" class="t s7_6">Fecha límite para realizar una eventual segunda vuelta</div>
+<div id="t2t_6" class="t s8_6">Dentro de 30 días</div>
+<div id="t2u_6" class="t s8_6">sgtes. a elec. presid.</div>
+<div id="t2v_6" class="t s8_6">Art. 96, CN</div>
+<div id="t2w_6" class="t s3_6">24</div>
+<div id="t2x_6" class="t s5_6">‐</div>
+<div id="t2y_6" class="t s3_6">dic</div>
+<div id="t2z_6" class="t s6_6"></div>
+<div id="t30_6" class="t s7_6">Fin del plazo para restituir el monto recibido como aporte para</div>
+<div id="t31_6" class="t s7_6">campaña de agrup. que retiraron sus candidatos</div>
+<div id="t32_6" class="t s8_6">60 días después de</div>
+<div id="t33_6" class="t s8_6">la elección</div>
+<div id="t34_6" class="t s8_6">Art. 39, ley</div>
+<div id="t35_6" class="t s8_6">26.215</div>
+<div id="t36_6" class="t s6_6"></div>
+<div id="t37_6" class="t s7_6">Fin del plazo para justificar la no emisión del voto</div>
+<div id="t38_6" class="t s8_6">60 días después de</div>
+<div id="t39_6" class="t s8_6">elección general</div>
+<div id="t3a_6" class="t s8_6">Art. 125, CEN</div>
+<div id="t3b_6" class="t s3_6">1</div>
+<div id="t3c_6" class="t s5_6">‐</div>
+<div id="t3d_6" class="t s3_6">feb</div>
+<div id="t3e_6" class="t s5_6">‐</div>
+<div id="t3f_6" class="t s3_6">2016</div>
+<div id="t3g_6" class="t s6_6"></div>
+<div id="t3h_6" class="t s7_6">Fin del plazo para presentar el informe final de campaña</div>
+<div id="t3i_6" class="t s8_6">90 días después de</div>
+<div id="t3j_6" class="t s8_6">la elección</div>
+<div id="t3k_6" class="t s8_6">Art. 58, ley</div>
+<div id="t3l_6" class="t s8_6">26.215</div>
+<div id="t3m_6" class="t s12_6">Ac. 131/07 y 158/11</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1540" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1230],['t2_6',660],['t3_6',458],['t4_6',571],['ta_6',1699],['tb_6',618],['tc_6',341],['td_6',323],['te_6',134],['th_6',204],['tl_6',196],['tn_6',680],['to_6',344],['tp_6',323],['tq_6',134],['ts_6',104],['tu_6',1699],['t15_6',265],['t1b_6',521],['t1c_6',232],['t1d_6',216],['t1e_6',239],['t1i_6',224],['t1k_6',1699],['t1l_6',588],['t1m_6',407],['t1n_6',406],['t1o_6',276],['t1t_6',227],['t1v_6',1699],['t1w_6',1554],['t1x_6',290],['t1y_6',362],['t1z_6',309],['t22_6',733],['t23_6',322],['t24_6',323],['t25_6',263],['t2j_6',1567],['t2k_6',351],['t2l_6',399],['t2m_6',309],['t2s_6',1352],['t2t_6',351],['t2u_6',399],['t2v_6',215],['t30_6',1699],['t31_6',1199],['t32_6',375],['t33_6',209],['t34_6',215],['t37_6',1225],['t38_6',375],['t39_6',323],['t3a_6',263],['t3h_6',1399],['t3i_6',375],['t3j_6',209],['t3k_6',215],['t3m_6',302]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 129;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

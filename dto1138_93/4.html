@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:108px;}
+#t2_4{left:331px;top:128px;}
+#t3_4{left:101px;top:191px;}
+#t4_4{left:101px;top:208px;}
+#t5_4{left:101px;top:226px;}
+#t6_4{left:101px;top:243px;}
+#t7_4{left:101px;top:261px;}
+#t8_4{left:101px;top:278px;}
+#t9_4{left:101px;top:295px;}
+#ta_4{left:101px;top:333px;}
+#tb_4{left:492px;top:333px;}
+#tc_4{left:101px;top:371px;}
+#td_4{left:101px;top:388px;}
+#te_4{left:101px;top:406px;}
+#tf_4{left:101px;top:423px;}
+#tg_4{left:101px;top:441px;}
+#th_4{left:420px;top:478px;}
+#ti_4{left:290px;top:516px;}
+#tj_4{left:101px;top:553px;}
+#tk_4{left:101px;top:571px;}
+#tl_4{left:101px;top:588px;}
+#tm_4{left:101px;top:606px;}
+#tn_4{left:101px;top:623px;}
+#to_4{left:101px;top:641px;}
+#tp_4{left:101px;top:658px;}
+#tq_4{left:101px;top:696px;}
+#tr_4{left:101px;top:713px;}
+#ts_4{left:101px;top:731px;}
+#tt_4{left:101px;top:768px;}
+#tu_4{left:101px;top:786px;}
+#tv_4{left:101px;top:803px;}
+#tw_4{left:101px;top:821px;}
+#tx_4{left:101px;top:858px;}
+#ty_4{left:101px;top:876px;}
+#tz_4{left:101px;top:893px;}
+#t10_4{left:101px;top:931px;}
+#t11_4{left:101px;top:948px;}
+#t12_4{left:101px;top:966px;}
+#t13_4{left:101px;top:983px;}
+#t14_4{left:101px;top:1021px;}
+#t15_4{left:423px;top:1058px;}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">ARTÍCULO 11. — Las Representaciones de la República en el exterior con responsabilidad en la </div>
+<div id="t4_4" class="t s2_4">organización del acto electoral deberán comunicar con la debida antelación la realización del mismo </div>
+<div id="t5_4" class="t s2_4">a las autoridades competentes del Estado donde se desarrollará el mencionado acto. Asimismo, de </div>
+<div id="t6_4" class="t s2_4">considerarlo conveniente, las autoridades consulares solicitarán la colaboración de las autoridades </div>
+<div id="t7_4" class="t s2_4">locales a los efectos del correcto desarrollo del acto electoral y del mantenimiento del orden en el </div>
+<div id="t8_4" class="t s2_4">ámbito perimetral al lugar de realización de los comicios durante su transcurso y hasta UNA (1) hora </div>
+<div id="t9_4" class="t s2_4">después de concluido el escrutinio. </div>
+<div id="ta_4" class="t s3_4">(Artículo sustituido por art. 5° del Decreto 254/2009 </div>
+<div id="tb_4" class="t s3_4">B.O. 8/4/2009)</div>
+<div id="tc_4" class="t s2_4">ARTÍCULO 12. — Publicidad del Acto Comicial en el Exterior. El Ministerio de Relaciones Exteriores, </div>
+<div id="td_4" class="t s2_4">Comercio Internacional y Culto será el encargado de remitir a las Embajadas, Consulados Generales, </div>
+<div id="te_4" class="t s2_4">Consulados o Secciones Consulares la redacción del comunicado a difundir por los distintos medios </div>
+<div id="tf_4" class="t s2_4">de comunicación locales, anunciando el acto comicial en un todo de acuerdo con lo indicado en el </div>
+<div id="tg_4" class="t s2_4">Decreto de Convocatoria a elecciones nacionales. </div>
+<div id="th_4" class="t s2_4">CAPITULO IV </div>
+<div id="ti_4" class="t s2_4">DE LOS FISCALES DE LOS PARTIDOS POLITICOS </div>
+<div id="tj_4" class="t s2_4">ARTÍCULO 13. — Designación de fiscales de los partidos políticos. Los partidos políticos </div>
+<div id="tk_4" class="t s2_4">intervinientes en la elección podrán designar fiscales a los mismos fines establecidos en el Código </div>
+<div id="tl_4" class="t s2_4">Electoral Nacional. Las designaciones serán efectuadas por los apoderados de las agrupaciones que </div>
+<div id="tm_4" class="t s2_4">participen en la elección ante la Cámara Nacional Electoral, la que extenderá las certificaciones </div>
+<div id="tn_4" class="t s2_4">correspondientes. Dichos fiscales deberán ser designados preferentemente entre la lista de los </div>
+<div id="to_4" class="t s2_4">inscriptos en el Registro de Electores Residentes en el Exterior pertinente, toda vez que los gastos </div>
+<div id="tp_4" class="t s2_4">en que incurran serán sufragados por la propia agrupación política. </div>
+<div id="tq_4" class="t s2_4">Los partidos políticos que no tengan la posibilidad de designar fiscales entre la lista de los inscriptos </div>
+<div id="tr_4" class="t s2_4">en el Registro de Electores Residentes en el Exterior, podrán designar como fiscales a personas </div>
+<div id="ts_4" class="t s2_4">extranjeras residentes en el país donde actúen como fiscales. </div>
+<div id="tt_4" class="t s2_4">La Cámara Nacional Electoral comunicará al Ministerio de Relaciones Exteriores, Comercio </div>
+<div id="tu_4" class="t s2_4">Internacional y Culto la nómina de los fiscales de mesa de los partidos políticos, titulares y </div>
+<div id="tv_4" class="t s2_4">suplentes, que desarrollarán sus funciones durante el acto comicial en el exterior. En la nómina </div>
+<div id="tw_4" class="t s2_4">deberá indicarse su nombre y apellido completo y clase y número de documento cívico. </div>
+<div id="tx_4" class="t s2_4">Dicha nómina será retransmitida a las Embajadas, Consulados Generales, Consulados y Secciones </div>
+<div id="ty_4" class="t s2_4">Consulares correspondientes por el Ministerio de Relaciones Exteriores, Comercio Internacional y </div>
+<div id="tz_4" class="t s2_4">Culto y servirá de suficiente reconocimiento para el desarrollo de sus tareas como tal. </div>
+<div id="t10_4" class="t s2_4">En caso de formularse algún reclamo, éste se realizará mediante nota presentada ante la autoridad </div>
+<div id="t11_4" class="t s2_4">de mesa firmada y en sobre cerrado y firmado que será elevado a la autoridad diplomática o </div>
+<div id="t12_4" class="t s2_4">consular. El sobre será enviado conjuntamente con la remisión de los elementos del escrutinio para </div>
+<div id="t13_4" class="t s2_4">ser entregado a la Cámara Nacional Electoral a sus efectos. </div>
+<div id="t14_4" class="t s3_4">(Artículo sustituido por art. 2° del Decreto N° 2010/1993 B.O. 5/10/1993)</div>
+<div id="t15_4" class="t s2_4">CAPITULO V </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1096],['t3_4',2933],['t4_4',2933],['t5_4',2934],['t6_4',2934],['t7_4',2934],['t8_4',2934],['t9_4',1008],['ta_4',1524],['tb_4',444],['tc_4',2933],['td_4',2934],['te_4',2933],['tf_4',2933],['tg_4',1426],['th_4',376],['ti_4',1422],['tj_4',2933],['tk_4',2933],['tl_4',2933],['tm_4',2933],['tn_4',2934],['to_4',2934],['tp_4',1945],['tq_4',2934],['tr_4',2933],['ts_4',1784],['tt_4',2933],['tu_4',2933],['tv_4',2934],['tw_4',2536],['tx_4',2933],['ty_4',2934],['tz_4',2491],['t10_4',2934],['t11_4',2934],['t12_4',2933],['t13_4',1724],['t14_4',2157],['t15_4',352]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

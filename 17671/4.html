@@ -1,0 +1,245 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:332px;top:128px;}
+#t2_4{left:330px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:101px;top:263px;}
+#t7_4{left:101px;top:281px;}
+#t8_4{left:101px;top:344px;}
+#t9_4{left:101px;top:376px;}
+#ta_4{left:101px;top:408px;}
+#tb_4{left:101px;top:425px;}
+#tc_4{left:101px;top:442px;}
+#td_4{left:101px;top:460px;}
+#te_4{left:101px;top:477px;}
+#tf_4{left:101px;top:509px;}
+#tg_4{left:101px;top:541px;}
+#th_4{left:121px;top:541px;}
+#ti_4{left:101px;top:572px;}
+#tj_4{left:101px;top:590px;}
+#tk_4{left:101px;top:607px;}
+#tl_4{left:101px;top:625px;}
+#tm_4{left:101px;top:656px;}
+#tn_4{left:101px;top:674px;}
+#to_4{left:101px;top:706px;}
+#tp_4{left:101px;top:723px;}
+#tq_4{left:101px;top:755px;}
+#tr_4{left:101px;top:772px;}
+#ts_4{left:101px;top:790px;}
+#tt_4{left:101px;top:807px;}
+#tu_4{left:101px;top:824px;}
+#tv_4{left:101px;top:856px;}
+#tw_4{left:101px;top:874px;}
+#tx_4{left:101px;top:905px;}
+#ty_4{left:101px;top:923px;}
+#tz_4{left:101px;top:940px;}
+#t10_4{left:101px;top:975px;}
+#t11_4{left:101px;top:992px;}
+#t12_4{left:101px;top:1056px;}
+#t13_4{left:101px;top:1088px;}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">Artículo 9°- La identificación se cumplirá ante la oficina seccional correspondiente al lugar donde se </div>
+<div id="t4_4" class="t s2_4">domicilie la persona, mediante el testimonio de su nacimiento, fotografías, impresiones </div>
+<div id="t5_4" class="t s2_4">dactiloscopia, descripciones de señas físicas, datos individuales, el grupo y factor sanguíneo, </div>
+<div id="t6_4" class="t s2_4">dejando expresa constancia de cuales son los datos consignados, por declaración jurada, a los </div>
+<div id="t7_4" class="t s2_4">efectos de su agregado al legajo de identificación. </div>
+<div id="t8_4" class="t s2_4">SECCION II </div>
+<div id="t9_4" class="t s3_4">Actualización </div>
+<div id="ta_4" class="t s2_4">Artículo 10.- La primer actualización de los datos de identificación deberá exigirse al llegar la </div>
+<div id="tb_4" class="t s2_4">persona a la edad escolar y a más tardar a los ocho años de edad, momento en el cual se requerirá </div>
+<div id="tc_4" class="t s2_4">su fotografía e impresión dígitopulgar derecho o de otro dedo por falta de éste para ser insertos en </div>
+<div id="td_4" class="t s2_4">el documento nacional de identidad. Asimismo en esta oportunidad se les tomará la impresión </div>
+<div id="te_4" class="t s2_4">dactiloscópica de los dedos de ambas manos, para su agregado en el legajo de identificación. </div>
+<div id="tf_4" class="t s2_4">Las sucesivas actualizaciones se cumplirán en las siguientes etapas: </div>
+<div id="tg_4" class="t s2_4">a)</div>
+<div id="th_4" class="t s4_4">(Inciso derogado por art. 3 del Decreto N° 1301/73 B.O. 24/9/1973)</div>
+<div id="ti_4" class="t s2_4">b) Al cumplir la persona los catorce (14) años de edad, oportunidad en que se completarán todos los </div>
+<div id="tj_4" class="t s2_4">datos y antecedentes, incluyendo una nueva fotografía. En esta etapa de actualización, que suple al </div>
+<div id="tk_4" class="t s2_4">anterior enrolamiento y empadronamiento, se entregará el documento nacional de identidad que </div>
+<div id="tl_4" class="t s2_4">corresponde; </div>
+<div id="tm_4" class="t s2_4">c) Al cumplir la persona identificada los treinta años de edad , oportunidad en que se realizará una </div>
+<div id="tn_4" class="t s2_4">nueva actualización del documento nacional de identidad. </div>
+<div id="to_4" class="t s2_4">El Poder Ejecutivo queda facultado para modificar las etapas precedentemente establecidas y </div>
+<div id="tp_4" class="t s2_4">disponer otras actualizaciones, cuando las necesidades que se presenten así lo justifiquen. </div>
+<div id="tq_4" class="t s2_4">Las personas enumeradas en el artículo 1 deberán presentarse en las oficinas seccionales para </div>
+<div id="tr_4" class="t s2_4">cumplir con las exigencias de la inscripción e identificación y las sucesivas actualizaciones. Las </div>
+<div id="ts_4" class="t s2_4">entidades privadas y estatales estarán obligadas a requerimiento del Registro Nacional de las </div>
+<div id="tt_4" class="t s2_4">Personas a la remisión oportuna y completa de todas las constancias y antecedentes que posibiliten </div>
+<div id="tu_4" class="t s2_4">la actualización de la identificación. </div>
+<div id="tv_4" class="t s2_4">Las personas o sus representantes legales y entidades que en alguna forma dejen de cumplir con las </div>
+<div id="tw_4" class="t s2_4">obligaciones que esta ley les asigna, se harán pasibles de las sanciones que por ella se establezcan. </div>
+<div id="tx_4" class="t s2_4">Artículo 10 Bis- En oportunidad de la primera actualización de los datos de identificación, se </div>
+<div id="ty_4" class="t s2_4">requerirá la presentación del certificado que acredite escolaridad actual, extendido por autoridad </div>
+<div id="tz_4" class="t s2_4">competente. </div>
+<div id="t10_4" class="t s2_4">Al tramitar la persona la actualización prevista a los catorce (14) años de edad, se solicitará el </div>
+<div id="t11_4" class="t s2_4">certificado de aprobación de la Educación General Básica, o la acreditación de escolaridad actual. </div>
+<div id="t12_4" class="t s2_4">CAPITULO IV </div>
+<div id="t13_4" class="t s3_4">De los documentos nacionales de identidad </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2929],['t4_4',2928],['t5_4',2929],['t6_4',2929],['t7_4',1449],['t8_4',337],['ta_4',2929],['tb_4',2929],['tc_4',2929],['td_4',2929],['te_4',2710],['tf_4',1979],['th_4',1998],['ti_4',2929],['tj_4',2929],['tk_4',2929],['tm_4',2929],['tn_4',1672],['to_4',2929],['tp_4',2627],['tq_4',2929],['tr_4',2928],['ts_4',2929],['tt_4',2929],['tu_4',1021],['tv_4',2929],['tw_4',2898],['tx_4',2929],['ty_4',2928],['t10_4',2929],['t11_4',2813],['t12_4',377],['t13_4',1401]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load17();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_17{left:334px;top:139px;}
+#t2_17{left:356px;top:165px;}
+#t3_17{left:480px;top:1455px;}
+#t4_17{left:130px;top:209px;}
+#t5_17{left:130px;top:229px;}
+#t6_17{left:157px;top:259px;}
+#t7_17{left:165px;top:261px;}
+#t8_17{left:262px;top:259px;}
+#t9_17{left:312px;top:261px;}
+#ta_17{left:360px;top:259px;}
+#tb_17{left:384px;top:261px;}
+#tc_17{left:402px;top:259px;}
+#td_17{left:411px;top:259px;}
+#te_17{left:426px;top:261px;}
+#tf_17{left:432px;top:259px;}
+#tg_17{left:440px;top:259px;}
+#th_17{left:157px;top:274px;}
+#ti_17{left:157px;top:289px;}
+#tj_17{left:157px;top:303px;}
+#tk_17{left:130px;top:327px;}
+#tl_17{left:130px;top:348px;}
+#tm_17{left:130px;top:368px;}
+#tn_17{left:157px;top:398px;}
+#to_17{left:165px;top:400px;}
+#tp_17{left:263px;top:398px;}
+#tq_17{left:312px;top:400px;}
+#tr_17{left:361px;top:398px;}
+#ts_17{left:384px;top:400px;}
+#tt_17{left:403px;top:398px;}
+#tu_17{left:411px;top:398px;}
+#tv_17{left:427px;top:400px;}
+#tw_17{left:432px;top:398px;}
+#tx_17{left:440px;top:398px;}
+#ty_17{left:157px;top:413px;}
+#tz_17{left:157px;top:428px;}
+#t10_17{left:130px;top:451px;}
+#t11_17{left:130px;top:472px;}
+#t12_17{left:157px;top:502px;}
+#t13_17{left:165px;top:504px;}
+#t14_17{left:270px;top:502px;}
+#t15_17{left:322px;top:504px;}
+#t16_17{left:373px;top:502px;}
+#t17_17{left:399px;top:504px;}
+#t18_17{left:418px;top:502px;}
+#t19_17{left:428px;top:502px;}
+#t1a_17{left:444px;top:504px;}
+#t1b_17{left:449px;top:502px;}
+#t1c_17{left:460px;top:502px;}
+#t1d_17{left:157px;top:516px;}
+#t1e_17{left:157px;top:531px;}
+#t1f_17{left:130px;top:555px;}
+#t1g_17{left:130px;top:576px;}
+#t1h_17{left:130px;top:596px;}
+#t1i_17{left:157px;top:626px;}
+#t1j_17{left:165px;top:628px;}
+#t1k_17{left:266px;top:626px;}
+#t1l_17{left:317px;top:628px;}
+#t1m_17{left:366px;top:626px;}
+#t1n_17{left:391px;top:628px;}
+#t1o_17{left:410px;top:626px;}
+#t1p_17{left:419px;top:626px;}
+#t1q_17{left:435px;top:628px;}
+#t1r_17{left:440px;top:626px;}
+#t1s_17{left:450px;top:626px;}
+#t1t_17{left:157px;top:641px;}
+#t1u_17{left:157px;top:656px;}
+#t1v_17{left:130px;top:679px;}
+#t1w_17{left:130px;top:700px;}
+#t1x_17{left:407px;top:759px;}
+#t1y_17{left:236px;top:789px;}
+#t1z_17{left:130px;top:818px;}
+#t20_17{left:239px;top:818px;}
+#t21_17{left:130px;top:839px;}
+#t22_17{left:130px;top:859px;}
+#t23_17{left:130px;top:879px;}
+#t24_17{left:130px;top:909px;}
+#t25_17{left:130px;top:929px;}
+#t26_17{left:130px;top:959px;}
+#t27_17{left:130px;top:989px;}
+#t28_17{left:130px;top:1009px;}
+#t29_17{left:130px;top:1030px;}
+#t2a_17{left:130px;top:1059px;}
+#t2b_17{left:130px;top:1080px;}
+#t2c_17{left:130px;top:1109px;}
+#t2d_17{left:130px;top:1130px;}
+#t2e_17{left:130px;top:1150px;}
+#t2f_17{left:130px;top:1170px;}
+#t2g_17{left:130px;top:1200px;}
+#t2h_17{left:130px;top:1220px;}
+#t2i_17{left:130px;top:1250px;}
+#t2j_17{left:130px;top:1270px;}
+#t2k_17{left:130px;top:1300px;}
+#t2l_17{left:130px;top:1330px;}
+#t2m_17{left:130px;top:1350px;}
+#t2n_17{left:130px;top:1370px;}
+#t2o_17{left:130px;top:1400px;}
+
+.s5_17{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_17{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s6_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_17{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi17;
+	color: rgb(0,0,0);
+}
+
+.s1_17{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi17;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts17" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi17;
+	src :url("17/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_17" class="t s1_17">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_17" class="t s2_17">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_17" class="t s3_17">17 </div>
+<div id="t4_17" class="t s3_17">esta facultad cuando el Congreso está en receso, porque es atribución que corresponde a </div>
+<div id="t5_17" class="t s3_17">este cuerpo. El Presidente la ejerce con las limitaciones prescriptas en el Artículo 23. </div>
+<div id="t6_17" class="t s4_17">T</div>
+<div id="t7_17" class="t s5_17">EXTO ANTERIOR A </div>
+<div id="t8_17" class="t s4_17">1994: A</div>
+<div id="t9_17" class="t s5_17">RTÍCULO </div>
+<div id="ta_17" class="t s4_17">86,</div>
+<div id="tb_17" class="t s5_17">INC</div>
+<div id="tc_17" class="t s4_17">.</div>
+<div id="td_17" class="t s4_17">19</div>
+<div id="te_17" class="t s5_17">º</div>
+<div id="tf_17" class="t s4_17">.</div>
+<div id="tg_17" class="t s4_17">Declara en estado de sitio uno o varios puntos de la Nación, en </div>
+<div id="th_17" class="t s4_17">caso de ataque exterior y por un término limitado, con acuerdo del Senado. En caso de conmoción interior </div>
+<div id="ti_17" class="t s4_17">sólo tiene esta facultad cuando el Congreso está en receso, porque es atribución que corresponde a este </div>
+<div id="tj_17" class="t s4_17">cuerpo, el Presidente la ejerce con las limitaciones prescriptas en el Art. 23. </div>
+<div id="tk_17" class="t s3_17">17. Puede pedir al jefe de gabinete de ministros y a los jefes de todos los ramos y </div>
+<div id="tl_17" class="t s3_17">departamentos de la administración, y por su conducto a los demás empleados, los informes </div>
+<div id="tm_17" class="t s3_17">que crea convenientes, y ellos están obligados a darlos. </div>
+<div id="tn_17" class="t s4_17">T</div>
+<div id="to_17" class="t s5_17">EXTO ANTERIOR A </div>
+<div id="tp_17" class="t s4_17">1994: A</div>
+<div id="tq_17" class="t s5_17">RTÍCULO </div>
+<div id="tr_17" class="t s4_17">86,</div>
+<div id="ts_17" class="t s5_17">INC</div>
+<div id="tt_17" class="t s4_17">.</div>
+<div id="tu_17" class="t s4_17">20</div>
+<div id="tv_17" class="t s5_17">º</div>
+<div id="tw_17" class="t s4_17">.</div>
+<div id="tx_17" class="t s4_17">Puede pedir a los jefes de todos los ramos y departamentos de </div>
+<div id="ty_17" class="t s4_17">la administración, y por su conducto a los demás empleados, los informes que crea convenientes, y ellos </div>
+<div id="tz_17" class="t s4_17">están obligados a darlos. </div>
+<div id="t10_17" class="t s3_17">18. Puede ausentarse del territorio de la Nación, con permiso del Congreso. En el receso de </div>
+<div id="t11_17" class="t s3_17">éste, sólo podrá hacerlo sin licencia por razones justificadas de servicio público. </div>
+<div id="t12_17" class="t s4_17">T</div>
+<div id="t13_17" class="t s5_17">EXTO ANTERIOR A </div>
+<div id="t14_17" class="t s4_17">1994: A</div>
+<div id="t15_17" class="t s5_17">RTÍCULO </div>
+<div id="t16_17" class="t s4_17">86,</div>
+<div id="t17_17" class="t s5_17">INC</div>
+<div id="t18_17" class="t s4_17">.</div>
+<div id="t19_17" class="t s4_17">21</div>
+<div id="t1a_17" class="t s5_17">º</div>
+<div id="t1b_17" class="t s4_17">.</div>
+<div id="t1c_17" class="t s4_17">No Puede ausentarse del territorio de la Capital sino con </div>
+<div id="t1d_17" class="t s4_17">permiso del Congreso. En el receso de éste, sólo podrá hacerlo sin licencia por graves objetos de servicio </div>
+<div id="t1e_17" class="t s4_17">público. </div>
+<div id="t1f_17" class="t s3_17">19. Puede llenar las vacantes de los empleos, que requieran el acuerdo del Senado, y que </div>
+<div id="t1g_17" class="t s3_17">ocurran durante su receso, por medio de nombramientos en comisión que expirarán al fin de </div>
+<div id="t1h_17" class="t s3_17">la próxima Legislatura. </div>
+<div id="t1i_17" class="t s4_17">T</div>
+<div id="t1j_17" class="t s5_17">EXTO ANTERIOR A </div>
+<div id="t1k_17" class="t s4_17">1994: A</div>
+<div id="t1l_17" class="t s5_17">RTÍCULO </div>
+<div id="t1m_17" class="t s4_17">86,</div>
+<div id="t1n_17" class="t s5_17">INC</div>
+<div id="t1o_17" class="t s4_17">.</div>
+<div id="t1p_17" class="t s4_17">22</div>
+<div id="t1q_17" class="t s5_17">º</div>
+<div id="t1r_17" class="t s4_17">.</div>
+<div id="t1s_17" class="t s4_17">El presidente tendrá facultad para llenar las vacantes de los </div>
+<div id="t1t_17" class="t s4_17">empleos, que requieran el acuerdo del Senado, y que ocurran durante su receso, por medio de </div>
+<div id="t1u_17" class="t s4_17">nombramientos en comisión que expirarán al fin de la próxima Legislatura. </div>
+<div id="t1v_17" class="t s3_17">20. Decreta la intervención federal a una provincia o a la ciudad de Buenos Aires en caso de </div>
+<div id="t1w_17" class="t s3_17">receso del Congreso, y debe convocarlo simultáneamente para su tratamiento. </div>
+<div id="t1x_17" class="t s6_17">CAPÍTULO CUARTO </div>
+<div id="t1y_17" class="t s6_17">Del jefe de gabinete y demás ministros del Poder Ejecutivo </div>
+<div id="t1z_17" class="t s6_17">Artículo 100</div>
+<div id="t20_17" class="t s3_17">.- El jefe de gabinete de ministros y los demás ministros secretarios cuyo </div>
+<div id="t21_17" class="t s3_17">número y competencia será establecida por una ley especial, tendrán a su cargo el despacho </div>
+<div id="t22_17" class="t s3_17">de los negocios de la Nación, y refrendarán y legalizarán los actos del presidente por medio </div>
+<div id="t23_17" class="t s3_17">de su firma, sin cuyo requisito carecen de eficacia. </div>
+<div id="t24_17" class="t s3_17">Al jefe de gabinete de ministros, con responsabilidad política ante el Congreso de la Nación, </div>
+<div id="t25_17" class="t s3_17">le corresponde: </div>
+<div id="t26_17" class="t s3_17">1. Ejercer la administración general del país. </div>
+<div id="t27_17" class="t s3_17">2. Expedir los actos y reglamentos que sean necesarios para ejercer las facultades que le </div>
+<div id="t28_17" class="t s3_17">atribuye este artículo y aquellas que le delegue el presidente de la Nación, con el refrendo </div>
+<div id="t29_17" class="t s3_17">del ministro secretario del ramo al cual el acto o reglamento se refiera. </div>
+<div id="t2a_17" class="t s3_17">3. Efectuar los nombramientos de los empleados de la administración, excepto los que </div>
+<div id="t2b_17" class="t s3_17">correspondan al presidente. </div>
+<div id="t2c_17" class="t s3_17">4. Ejercer las funciones y atribuciones que le delegue el presidente de la Nación y, en </div>
+<div id="t2d_17" class="t s3_17">acuerdo de gabinete resolver sobre las materias que le indique el Poder Ejecutivo, o por su </div>
+<div id="t2e_17" class="t s3_17">propia decisión, en aquellas que por su importancia estime necesario, en el ámbito de su </div>
+<div id="t2f_17" class="t s3_17">competencia. </div>
+<div id="t2g_17" class="t s3_17">5. Coordinar, preparar y convocar las reuniones de gabinete de ministros, presidiéndolas en </div>
+<div id="t2h_17" class="t s3_17">caso de ausencia del presidente. </div>
+<div id="t2i_17" class="t s3_17">6. Enviar al Congreso los proyectos de ley de ministerios y de presupuesto nacional, previo </div>
+<div id="t2j_17" class="t s3_17">tratamiento en acuerdo de gabinete y aprobación del Poder Ejecutivo. </div>
+<div id="t2k_17" class="t s3_17">7. Hacer recaudar las rentas de la Nación y ejecutar la ley de presupuesto nacional. </div>
+<div id="t2l_17" class="t s3_17">8. Refrendar los decretos reglamentarios de las leyes, los decretos que dispongan la </div>
+<div id="t2m_17" class="t s3_17">prórroga de las sesiones ordinarias del Congreso o la convocatoria de sesiones </div>
+<div id="t2n_17" class="t s3_17">extraordinarias y los mensajes del presidente que promuevan la iniciativa legislativa. </div>
+<div id="t2o_17" class="t s3_17">9. Concurrir a las sesiones del Congreso y participar en sus debates, pero no votar. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg17Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg17"><object width="935" height="1540" data="17/17.svg" type="image/svg+xml" id="pdf17" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld17" type="text/javascript">
+
+var isIE = false;
+var f17 = [['t1_17',1244],['t2_17',1068],['t4_17',2874],['t5_17',2612],['t7_17',374],['t8_17',198],['tg_17',1567],['th_17',2696],['ti_17',2696],['tj_17',1873],['tk_17',2874],['tl_17',2874],['tm_17',1721],['to_17',375],['tp_17',198],['tx_17',1565],['ty_17',2695],['tz_17',614],['t10_17',2874],['t11_17',2456],['t13_17',394],['t14_17',208],['t1c_17',1485],['t1d_17',2695],['t1f_17',2874],['t1g_17',2874],['t1h_17',705],['t1j_17',384],['t1k_17',203],['t1s_17',1527],['t1t_17',2696],['t1u_17',1849],['t1v_17',2874],['t1w_17',2430],['t1x_17',655],['t1y_17',2023],['t1z_17',435],['t20_17',2439],['t21_17',2874],['t22_17',2874],['t23_17',1559],['t24_17',2874],['t25_17',480],['t26_17',1375],['t27_17',2874],['t28_17',2874],['t29_17',2191],['t2a_17',2874],['t2b_17',859],['t2c_17',2874],['t2d_17',2874],['t2e_17',2874],['t2g_17',2874],['t2h_17',1002],['t2i_17',2874],['t2j_17',2155],['t2k_17',2580],['t2l_17',2874],['t2m_17',2874],['t2n_17',2621],['t2o_17',2573]];
+function load17(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f17);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 97;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_17");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

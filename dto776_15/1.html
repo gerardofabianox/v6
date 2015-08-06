@@ -1,0 +1,259 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:247px;}
+#t6_1{left:101px;top:285px;}
+#t7_1{left:101px;top:303px;}
+#t8_1{left:101px;top:340px;}
+#t9_1{left:213px;top:340px;}
+#ta_1{left:101px;top:358px;}
+#tb_1{left:101px;top:375px;}
+#tc_1{left:101px;top:393px;}
+#td_1{left:101px;top:430px;}
+#te_1{left:101px;top:448px;}
+#tf_1{left:101px;top:485px;}
+#tg_1{left:101px;top:503px;}
+#th_1{left:101px;top:520px;}
+#ti_1{left:101px;top:538px;}
+#tj_1{left:101px;top:555px;}
+#tk_1{left:101px;top:573px;}
+#tl_1{left:101px;top:590px;}
+#tm_1{left:101px;top:628px;}
+#tn_1{left:181px;top:628px;}
+#to_1{left:101px;top:645px;}
+#tp_1{left:101px;top:663px;}
+#tq_1{left:101px;top:680px;}
+#tr_1{left:101px;top:698px;}
+#ts_1{left:101px;top:715px;}
+#tt_1{left:101px;top:732px;}
+#tu_1{left:101px;top:770px;}
+#tv_1{left:101px;top:788px;}
+#tw_1{left:101px;top:805px;}
+#tx_1{left:101px;top:822px;}
+#ty_1{left:101px;top:860px;}
+#tz_1{left:184px;top:860px;}
+#t10_1{left:101px;top:877px;}
+#t11_1{left:101px;top:915px;}
+#t12_1{left:101px;top:933px;}
+#t13_1{left:101px;top:950px;}
+#t14_1{left:101px;top:968px;}
+#t15_1{left:101px;top:985px;}
+#t16_1{left:101px;top:1002px;}
+#t17_1{left:101px;top:1020px;}
+#t18_1{left:101px;top:1037px;}
+#t19_1{left:101px;top:1055px;}
+#t1a_1{left:101px;top:1072px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Decreto 776/2015 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 08/05/2015 </div>
+<div id="t5_1" class="t s3_1">Publicación: B.O. 11/05/2015 </div>
+<div id="t6_1" class="t s4_1">Ley N° 26.215. Artículos 38 y 44 bis. Reglamentación. Decretos N° 936/2010, N° </div>
+<div id="t7_1" class="t s4_1">937/2010 y N° 443/2011. Modificaciones. </div>
+<div id="t8_1" class="t s4_1">Artículo 1° —</div>
+<div id="t9_1" class="t s3_1">Reglaméntase el artículo 38 de la Ley N° 26.215 y sus modificaciones de la siguiente </div>
+<div id="ta_1" class="t s3_1">manera: La distribución a que hace referencia el artículo 38 de la Ley N° 26.215 se aplicará a los </div>
+<div id="tb_1" class="t s3_1">aportes de campaña para las categorías Senadores y Diputados Nacionales y Parlamentarios del </div>
+<div id="tc_1" class="t s3_1">MERCOSUR por distrito regional. </div>
+<div id="td_1" class="t s3_1">Los aportes para las categorías Presidencial y Parlamentarios del MERCOSUR distrito nacional se </div>
+<div id="te_1" class="t s3_1">efectuarán íntegramente en la cuenta corriente abierta al efecto por la agrupación nacional. </div>
+<div id="tf_1" class="t s3_1">A los fines del control patrimonial las agrupaciones de distrito rendirán cuentas por lo invertido en </div>
+<div id="tg_1" class="t s3_1">las campañas para las categorías Senadores y Diputados Nacionales y Parlamentarios del </div>
+<div id="th_1" class="t s3_1">MERCOSUR por distrito regional por sus respectivos distritos y las agrupaciones nacionales lo harán </div>
+<div id="ti_1" class="t s3_1">por la inversión de las sumas recibidas en calidad de aporte de campaña correspondiente a las </div>
+<div id="tj_1" class="t s3_1">categorías Senadores y Diputados Nacionales y Parlamentarios del MERCOSUR - distrito regional y </div>
+<div id="tk_1" class="t s3_1">respecto de los aportes de las campañas para las categorías Presidencial y Parlamentarios del </div>
+<div id="tl_1" class="t s3_1">MERCOSUR distrito nacional. </div>
+<div id="tm_1" class="t s4_1">Art. 2° —</div>
+<div id="tn_1" class="t s3_1">Reglaméntase el artículo 44 bis de la Ley N° 26.215 de la siguiente manera: Los aportes </div>
+<div id="to_1" class="t s3_1">privados destinados a las campañas electorales que reciba una agrupación política deben realizarse </div>
+<div id="tp_1" class="t s3_1">mediante transferencia bancaria, cheque, transferencia electrónica, tarjeta de crédito o débito, o </div>
+<div id="tq_1" class="t s3_1">cualquier otro medio que permita la identificación fehaciente del donante. Cuando fuera en efectivo, </div>
+<div id="tr_1" class="t s3_1">deberá consignarse en el correspondiente recibo. En los informes de campaña de la agrupación </div>
+<div id="ts_1" class="t s3_1">política deberá detallarse la nómina de donaciones que hubiese recibido, con la correspondiente </div>
+<div id="tt_1" class="t s3_1">identificación de las personas que hubieren realizado las mismas. </div>
+<div id="tu_1" class="t s3_1">Las entidades bancarias o administradoras de tarjetas de crédito o débito deberán informar a la </div>
+<div id="tv_1" class="t s3_1">agrupación política destinataria del aporte la identidad del donante y deberán permitir la reversión </div>
+<div id="tw_1" class="t s3_1">del aporte en caso que el mismo no sea aceptado por el destinatario, sin necesidad de expresión de </div>
+<div id="tx_1" class="t s3_1">causa por parte de este último. </div>
+<div id="ty_1" class="t s4_1">Art. 3° —</div>
+<div id="tz_1" class="t s3_1">Sustitúyese el artículo 10 del Decreto N° 936 del 30 de junio de 2010, el que quedará </div>
+<div id="t10_1" class="t s3_1">redactado de la siguiente manera: </div>
+<div id="t11_1" class="t s3_1">“ARTÍCULO 10.- Los aportes privados que reciba la agrupación política deben realizarse mediante </div>
+<div id="t12_1" class="t s3_1">transferencia bancaria, cheque, transferencia electrónica, tarjeta de crédito o débito, o cualquier </div>
+<div id="t13_1" class="t s3_1">otro medio que permita la identificación fehaciente del donante. En el caso de los aportes efectuados </div>
+<div id="t14_1" class="t s3_1">mediante tarjeta de crédito se podrán instrumentar de manera de constituir un aporte único o un </div>
+<div id="t15_1" class="t s3_1">aporte periódico. Cuando fuera en efectivo, deberá consignarse en el correspondiente recibo. En el </div>
+<div id="t16_1" class="t s3_1">balance de la agrupación política deberá detallarse la nómina de donaciones que hubiese recibido, </div>
+<div id="t17_1" class="t s3_1">con la correspondiente identificación de las personas que hubieren realizado las mismas. Los aportes </div>
+<div id="t18_1" class="t s3_1">previstos en las cartas orgánicas, de quienes desempeñan funciones públicas en representación del </div>
+<div id="t19_1" class="t s3_1">partido político y los aportes estatutarios tendrán el mismo tratamiento establecido en el penúltimo </div>
+<div id="t1a_1" class="t s3_1">párrafo del artículo 16 de la Ley N° 26.215 y sus modificatorias. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',657],['t4_1',586],['t5_1',857],['t6_1',2933],['t7_1',1367],['t8_1',427],['t9_1',2484],['ta_1',2934],['tb_1',2934],['tc_1',942],['td_1',2933],['te_1',2662],['tf_1',2933],['tg_1',2933],['th_1',2934],['ti_1',2933],['tj_1',2933],['tk_1',2933],['tl_1',832],['tm_1',297],['tn_1',2614],['to_1',2934],['tp_1',2933],['tq_1',2933],['tr_1',2934],['ts_1',2934],['tt_1',1894],['tu_1',2933],['tv_1',2933],['tw_1',2933],['tx_1',907],['ty_1',305],['tz_1',2602],['t10_1',995],['t11_1',2933],['t12_1',2933],['t13_1',2934],['t14_1',2934],['t15_1',2934],['t16_1',2934],['t17_1',2934],['t18_1',2934],['t19_1',2933],['t1a_1',1860]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 47;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

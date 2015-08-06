@@ -1,0 +1,358 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:441px;top:1453px;}
+#t2_8{left:87px;top:130px;}
+#t3_8{left:181px;top:130px;}
+#t4_8{left:87px;top:150px;}
+#t5_8{left:87px;top:171px;}
+#t6_8{left:360px;top:230px;}
+#t7_8{left:268px;top:260px;}
+#t8_8{left:87px;top:289px;}
+#t9_8{left:183px;top:289px;}
+#ta_8{left:87px;top:310px;}
+#tb_8{left:87px;top:330px;}
+#tc_8{left:114px;top:360px;}
+#td_8{left:122px;top:362px;}
+#te_8{left:218px;top:360px;}
+#tf_8{left:268px;top:362px;}
+#tg_8{left:316px;top:360px;}
+#th_8{left:114px;top:375px;}
+#ti_8{left:114px;top:389px;}
+#tj_8{left:87px;top:413px;}
+#tk_8{left:181px;top:413px;}
+#tl_8{left:87px;top:434px;}
+#tm_8{left:87px;top:454px;}
+#tn_8{left:87px;top:475px;}
+#to_8{left:87px;top:504px;}
+#tp_8{left:188px;top:504px;}
+#tq_8{left:87px;top:525px;}
+#tr_8{left:87px;top:545px;}
+#ts_8{left:87px;top:575px;}
+#tt_8{left:181px;top:575px;}
+#tu_8{left:87px;top:595px;}
+#tv_8{left:87px;top:615px;}
+#tw_8{left:87px;top:636px;}
+#tx_8{left:87px;top:656px;}
+#ty_8{left:87px;top:686px;}
+#tz_8{left:187px;top:686px;}
+#t10_8{left:537px;top:686px;letter-spacing:12px;}
+#t11_8{left:568px;top:686px;}
+#t12_8{left:577px;top:686px;}
+#t13_8{left:592px;top:686px;letter-spacing:12px;}
+#t14_8{left:610px;top:686px;letter-spacing:12px;}
+#t15_8{left:637px;top:686px;letter-spacing:12px;}
+#t16_8{left:667px;top:686px;letter-spacing:12px;}
+#t17_8{left:696px;top:686px;letter-spacing:2px;}
+#t18_8{left:776px;top:686px;letter-spacing:8px;}
+#t19_8{left:800px;top:686px;}
+#t1a_8{left:87px;top:706px;}
+#t1b_8{left:87px;top:727px;}
+#t1c_8{left:87px;top:756px;}
+#t1d_8{left:186px;top:756px;}
+#t1e_8{left:87px;top:777px;}
+#t1f_8{left:87px;top:797px;}
+#t1g_8{left:87px;top:827px;}
+#t1h_8{left:182px;top:827px;}
+#t1i_8{left:87px;top:847px;}
+#t1j_8{left:87px;top:868px;}
+#t1k_8{left:87px;top:888px;}
+#t1l_8{left:87px;top:918px;}
+#t1m_8{left:185px;top:918px;}
+#t1n_8{left:87px;top:938px;}
+#t1o_8{left:87px;top:958px;}
+#t1p_8{left:87px;top:979px;}
+#t1q_8{left:87px;top:1009px;}
+#t1r_8{left:184px;top:1009px;}
+#t1s_8{left:87px;top:1029px;}
+#t1t_8{left:87px;top:1059px;}
+#t1u_8{left:185px;top:1059px;}
+#t1v_8{left:87px;top:1079px;}
+#t1w_8{left:87px;top:1099px;}
+#t1x_8{left:87px;top:1129px;}
+#t1y_8{left:185px;top:1129px;}
+#t1z_8{left:87px;top:1149px;}
+#t20_8{left:87px;top:1179px;}
+#t21_8{left:182px;top:1179px;}
+#t22_8{left:87px;top:1199px;}
+#t23_8{left:364px;top:1259px;}
+#t24_8{left:333px;top:1288px;}
+#t25_8{left:87px;top:1318px;}
+#t26_8{left:181px;top:1318px;}
+#t27_8{left:87px;top:1347px;}
+#t28_8{left:87px;top:1368px;}
+#t29_8{left:114px;top:1397px;}
+#t2a_8{left:122px;top:1400px;}
+#t2b_8{left:221px;top:1397px;}
+#t2c_8{left:271px;top:1400px;}
+#t2d_8{left:320px;top:1397px;}
+#t2e_8{left:344px;top:1400px;}
+#t2f_8{left:363px;top:1397px;}
+#t2g_8{left:372px;top:1397px;}
+#t2h_8{left:379px;top:1400px;}
+#t2i_8{left:385px;top:1397px;}
+#t2j_8{left:393px;top:1397px;}
+#t2k_8{left:114px;top:1412px;}
+#t2l_8{left:114px;top:1427px;}
+
+.s2_8{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_8{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_8{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_8{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_8{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">8</div>
+<div id="t2_8" class="t s2_8">Artículo 62</div>
+<div id="t3_8" class="t s3_8">.- Cuando vacase alguna plaza de senador por muerte, renuncia u otra causa, el </div>
+<div id="t4_8" class="t s3_8">Gobierno a que corresponda la vacante hace proceder inmediatamente a la elección de un </div>
+<div id="t5_8" class="t s3_8">nuevo miembro. </div>
+<div id="t6_8" class="t s2_8">CAPITULO TERCERO </div>
+<div id="t7_8" class="t s2_8">Disposiciones comunes a ambas Cámaras </div>
+<div id="t8_8" class="t s2_8">Artículo 63</div>
+<div id="t9_8" class="t s3_8">.- Ambas Cámaras se reunirán por sí mismas en sesiones ordinarias todos los </div>
+<div id="ta_8" class="t s3_8">años desde el primero de marzo hasta el treinta de noviembre. Pueden también ser </div>
+<div id="tb_8" class="t s3_8">convocadas extraordinariamente por el Presidente de la Nación o prorrogadas sus sesiones </div>
+<div id="tc_8" class="t s4_8">T</div>
+<div id="td_8" class="t s5_8">EXTO ANTERIOR A </div>
+<div id="te_8" class="t s4_8">1994: A</div>
+<div id="tf_8" class="t s5_8">RTÍCULO </div>
+<div id="tg_8" class="t s4_8">55. Ambas Cámaras se reunirán en sesiones ordinarias todos los años desde </div>
+<div id="th_8" class="t s4_8">el 1 de mayo hasta el 30 de septiembre.Pueden también ser convocadas extraordinariamente por el </div>
+<div id="ti_8" class="t s4_8">presidente de la Nación, o prorrogadas sus sesiones. </div>
+<div id="tj_8" class="t s2_8">Artículo 64</div>
+<div id="tk_8" class="t s3_8">.- Cada Cámara es juez de las elecciones, derechos y títulos de sus miembros en </div>
+<div id="tl_8" class="t s3_8">cuanto a su validez. Ninguna de ellas entrará en sesión sin la mayoría absoluta de sus </div>
+<div id="tm_8" class="t s3_8">miembros; pero un número menor podrá compeler a los miembros ausentes a que </div>
+<div id="tn_8" class="t s3_8">concurran a las sesiones, en los términos y bajo las penas que cada Cámara establecerá. </div>
+<div id="to_8" class="t s2_8">Artículo 65</div>
+<div id="tp_8" class="t s3_8">.- Ambas Cámaras empiezan y concluyen sus sesiones simultáneamente. </div>
+<div id="tq_8" class="t s3_8">Ninguna de ellas, mientras se hallen reunidas, podrá suspender sus sesiones más de tres </div>
+<div id="tr_8" class="t s3_8">días, sin el consentimiento de la otra. </div>
+<div id="ts_8" class="t s2_8">Artículo 66</div>
+<div id="tt_8" class="t s3_8">.- Cada Cámara hará su reglamento y podrá con dos tercios de votos, corregir a </div>
+<div id="tu_8" class="t s3_8">cualquiera de sus miembros por desorden de conducta en el ejercicio de sus funciones, o </div>
+<div id="tv_8" class="t s3_8">removerlo por inhabilidad física o moral sobreviniente a su incorporación, y hasta excluirle </div>
+<div id="tw_8" class="t s3_8">de su seno; pero bastará la mayoría de uno sobre la mitad de los presentes para decidir en </div>
+<div id="tx_8" class="t s3_8">las renuncias que voluntariamente hicieren de sus cargos. </div>
+<div id="ty_8" class="t s2_8">Artículo 67</div>
+<div id="tz_8" class="t s3_8">.- Los senadores y diputados prestarán,</div>
+<div id="t10_8" class="t s3_8">en</div>
+<div id="t11_8" class="t s3_8">e</div>
+<div id="t12_8" class="t s3_8">l</div>
+<div id="t13_8" class="t s3_8">ac</div>
+<div id="t14_8" class="t s3_8">to</div>
+<div id="t15_8" class="t s3_8">de</div>
+<div id="t16_8" class="t s3_8">su</div>
+<div id="t17_8" class="t s3_8">incorporac</div>
+<div id="t18_8" class="t s3_8">ión</div>
+<div id="t19_8" class="t s3_8">,</div>
+<div id="t1a_8" class="t s3_8">juramento de desempeñar debidamente el cargo, y de obrar en todo en conformidad a lo </div>
+<div id="t1b_8" class="t s3_8">que prescribe esta Constitución. </div>
+<div id="t1c_8" class="t s2_8">Artículo 68</div>
+<div id="t1d_8" class="t s3_8">.- Ninguno de los miembros del Congreso puede ser acusado, interrogado </div>
+<div id="t1e_8" class="t s3_8">judicialmente, ni molestado por las opiniones o discursos que emita desempeñando su </div>
+<div id="t1f_8" class="t s3_8">mandato de legislador. </div>
+<div id="t1g_8" class="t s2_8">Artículo 69</div>
+<div id="t1h_8" class="t s3_8">.- Ningún senador o diputado, desde el día de su elección hasta el de su cese, </div>
+<div id="t1i_8" class="t s3_8">puede ser arrestado; excepto el caso de ser sorprendido in fraganti en la ejecución de algún </div>
+<div id="t1j_8" class="t s3_8">crimen que merezca pena de muerte, infamante, u otra aflictiva; de lo que se dará cuenta a </div>
+<div id="t1k_8" class="t s3_8">la Cámara respectiva con la información sumaria del hecho. </div>
+<div id="t1l_8" class="t s2_8">Artículo 70</div>
+<div id="t1m_8" class="t s3_8">.- Cuando se forme querella por escrito ante las justicias ordinarias contra </div>
+<div id="t1n_8" class="t s3_8">cualquier senador o diputado, examinado el mérito del sumario en juicio público, podrá cada </div>
+<div id="t1o_8" class="t s3_8">Cámara, con dos tercios de votos, suspender en sus funciones al acusado, y ponerlo a </div>
+<div id="t1p_8" class="t s3_8">disposición del juez competente para su juzgamiento. </div>
+<div id="t1q_8" class="t s2_8">Artículo 71</div>
+<div id="t1r_8" class="t s3_8">.- Cada una de las Cámaras puede hacer venir a su sala a los ministros del </div>
+<div id="t1s_8" class="t s3_8">Poder Ejecutivo para recibir las explicaciones e informes que estime convenientes. </div>
+<div id="t1t_8" class="t s2_8">Artículo 72</div>
+<div id="t1u_8" class="t s3_8">.- Ningún miembro del Congreso podrá recibir empleo o comisión del Poder </div>
+<div id="t1v_8" class="t s3_8">Ejecutivo, sin previo consentimiento de la Cámara respectiva, excepto los empleos de </div>
+<div id="t1w_8" class="t s3_8">escala. </div>
+<div id="t1x_8" class="t s2_8">Artículo 73</div>
+<div id="t1y_8" class="t s3_8">.- Los eclesiásticos regulares no pueden ser miembros del Congreso, ni los </div>
+<div id="t1z_8" class="t s3_8">gobernadores de provincia por la de su mando. </div>
+<div id="t20_8" class="t s2_8">Artículo 74</div>
+<div id="t21_8" class="t s3_8">.- Los servicios de los senadores y diputados son remunerados por el Tesoro de </div>
+<div id="t22_8" class="t s3_8">la Nación, con una dotación que señalará la ley. </div>
+<div id="t23_8" class="t s2_8">CAPITULO CUARTO </div>
+<div id="t24_8" class="t s2_8">Atribuciones del Congreso </div>
+<div id="t25_8" class="t s2_8">Artículo 75</div>
+<div id="t26_8" class="t s3_8">.- Corresponde al Congreso: </div>
+<div id="t27_8" class="t s3_8">1. Legislar en materia aduanera. Establecer los derechos de importación y exportación, los </div>
+<div id="t28_8" class="t s3_8">cuales, así como las avaluaciones sobre las que recaigan, serán uniformes en toda la Nación. </div>
+<div id="t29_8" class="t s4_8">T</div>
+<div id="t2a_8" class="t s5_8">EXTO ANTERIOR A </div>
+<div id="t2b_8" class="t s4_8">1994: A</div>
+<div id="t2c_8" class="t s5_8">RTÍCULO </div>
+<div id="t2d_8" class="t s4_8">67,</div>
+<div id="t2e_8" class="t s5_8">INC</div>
+<div id="t2f_8" class="t s4_8">.</div>
+<div id="t2g_8" class="t s4_8">1</div>
+<div id="t2h_8" class="t s5_8">º</div>
+<div id="t2i_8" class="t s4_8">.</div>
+<div id="t2j_8" class="t s4_8">Legislar sobre las aduanas exteriores y establecer los derechos </div>
+<div id="t2k_8" class="t s4_8">de importación, los cuales así como las avaluaciones sobre que recaigan serán uniformes en toda la Nación; </div>
+<div id="t2l_8" class="t s4_8">bien entendido, que ésta, así como las demás contribuciones nacionales, podrán ser satisfechas en la </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="935" height="1540" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t2_8',378],['t3_8',2496],['t4_8',2874],['t5_8',504],['t6_8',690],['t7_8',1422],['t8_8',384],['t9_8',2489],['ta_8',2874],['tb_8',2803],['td_8',372],['te_8',197],['tg_8',1889],['th_8',2695],['ti_8',1299],['tj_8',376],['tk_8',2497],['tl_8',2874],['tm_8',2874],['tn_8',2747],['to_8',404],['tp_8',2470],['tq_8',2874],['tr_8',1157],['ts_8',378],['tt_8',2496],['tu_8',2874],['tv_8',2874],['tw_8',2874],['tx_8',1789],['ty_8',402],['tz_8',1353],['t1a_8',2875],['t1b_8',989],['t1c_8',397],['t1d_8',2477],['t1e_8',2874],['t1f_8',705],['t1g_8',382],['t1h_8',2491],['t1i_8',2874],['t1j_8',2874],['t1k_8',1842],['t1l_8',394],['t1m_8',2480],['t1n_8',2874],['t1o_8',2874],['t1p_8',1655],['t1q_8',388],['t1r_8',2486],['t1s_8',2538],['t1t_8',391],['t1u_8',2482],['t1v_8',2874],['t1x_8',393],['t1y_8',2481],['t1z_8',1456],['t20_8',379],['t21_8',2495],['t22_8',1475],['t23_8',655],['t24_8',899],['t25_8',376],['t26_8',872],['t27_8',2874],['t28_8',2868],['t2a_8',379],['t2b_8',200],['t2j_8',1579],['t2k_8',2696],['t2l_8',2696]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 94;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

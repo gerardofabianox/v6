@@ -1,0 +1,233 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:108px;}
+#t2_2{left:331px;top:128px;}
+#t3_2{left:101px;top:191px;}
+#t4_2{left:101px;top:208px;}
+#t5_2{left:101px;top:246px;}
+#t6_2{left:101px;top:263px;}
+#t7_2{left:101px;top:281px;}
+#t8_2{left:101px;top:318px;}
+#t9_2{left:101px;top:336px;}
+#ta_2{left:101px;top:353px;}
+#tb_2{left:101px;top:391px;}
+#tc_2{left:101px;top:408px;letter-spacing:1px;}
+#td_2{left:101px;top:426px;}
+#te_2{left:101px;top:463px;}
+#tf_2{left:101px;top:481px;}
+#tg_2{left:101px;top:498px;}
+#th_2{left:101px;top:516px;}
+#ti_2{left:101px;top:553px;}
+#tj_2{left:101px;top:571px;}
+#tk_2{left:101px;top:588px;}
+#tl_2{left:101px;top:626px;}
+#tm_2{left:101px;top:643px;}
+#tn_2{left:101px;top:681px;}
+#to_2{left:101px;top:698px;}
+#tp_2{left:101px;top:716px;}
+#tq_2{left:101px;top:753px;}
+#tr_2{left:101px;top:771px;}
+#ts_2{left:101px;top:809px;}
+#tt_2{left:101px;top:826px;}
+#tu_2{left:101px;top:844px;letter-spacing:1px;}
+#tv_2{left:101px;top:861px;}
+#tw_2{left:101px;top:878px;}
+#tx_2{left:101px;top:916px;}
+#ty_2{left:101px;top:934px;}
+#tz_2{left:101px;top:951px;}
+#t10_2{left:101px;top:989px;}
+#t11_2{left:101px;top:1006px;}
+#t12_2{left:101px;top:1044px;}
+#t13_2{left:101px;top:1061px;}
+#t14_2{left:101px;top:1079px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">Los candidatos a cargos públicos nacionales podrán presentar la referida documentación ante la </div>
+<div id="t4_2" class="t s2_2">OFICINA ANTICORRUPCION o ante las sedes de la POLICIA FEDERAL ARGENTINA. </div>
+<div id="t5_2" class="t s2_2">Art. 6° — La Declaración Jurada Patrimonial Integral Pública F - 1245 y el Anexo Reservado deberán </div>
+<div id="t6_2" class="t s2_2">presentarse dentro de los TREINTA (30) días hábiles posteriores a la asunción en el cargo o función </div>
+<div id="t7_2" class="t s2_2">que motiva la presentación. </div>
+<div id="t8_2" class="t s2_2">En el caso de los candidatos a cargos electivos dicha presentación se realizará dentro de los DIEZ </div>
+<div id="t9_2" class="t s2_2">(10) días hábiles posteriores al cumplimiento del procedimiento previsto en el Capítulo VII de la Ley </div>
+<div id="ta_2" class="t s2_2">Nº 26.571 y sus modificatorias. </div>
+<div id="tb_2" class="t s2_2">La actualización anual deberá presentarse hasta el día 30 de mayo del año siguiente al período que </div>
+<div id="tc_2" class="t s2_2">se informa. En cuanto a la Declaración de baja se seguirá lo prescripto en el artículo 3° de la </div>
+<div id="td_2" class="t s2_2">Resolución General de AFIP Nº 3511/13. </div>
+<div id="te_2" class="t s2_2">Art. 7° — Cumplida la presentación de la “Declaración Jurada Patrimonial Integral Pública - F 1245” </div>
+<div id="tf_2" class="t s2_2">y una vez verificada la transmisión electrónica por parte de la ADMINISTRACION FEDERAL DE </div>
+<div id="tg_2" class="t s2_2">INGRESOS PUBLICOS, la OFICINA ANTICORRUPCION deberá proceder a su publicación en su página </div>
+<div id="th_2" class="t s2_2">web, en un plazo que no supere los DIEZ (10) días hábiles. </div>
+<div id="ti_2" class="t s2_2">Art. 8° — Apruébase el modelo de visualización de la información pública presentada a través del </div>
+<div id="tj_2" class="t s2_2">formulario “Declaración Jurada Patrimonial Integral - F 1245”, que como Anexo I forma parte de la </div>
+<div id="tk_2" class="t s2_2">presente resolución. </div>
+<div id="tl_2" class="t s2_2">Art. 9° — Apruébase el formulario de Anexo Reservado que como Anexo II forma parte de la </div>
+<div id="tm_2" class="t s2_2">presente. </div>
+<div id="tn_2" class="t s2_2">Art. 10. — Los formularios que conformaran el Anexo Reservado, el sobre que los contiene y la </div>
+<div id="to_2" class="t s2_2">constancia: “Presentación de DJ por Internet - Acuse de Recibo” en soporte papel, deben ser </div>
+<div id="tp_2" class="t s2_2">debidamente firmados por el declarante en todas sus hojas. </div>
+<div id="tq_2" class="t s2_2">Art. 11. — Apruébase el modelo de “Sobre para Declaración Jurada Patrimonial Integral - Anexo </div>
+<div id="tr_2" class="t s2_2">Reservado”, que como Anexo III forma parte de la presente resolución. </div>
+<div id="ts_2" class="t s2_2">Art. 12. — Las áreas de personal, administración o recursos humanos de las jurisdicciones y </div>
+<div id="tt_2" class="t s2_2">organismos del PODER EJECUTIVO NACIONAL y las dependencias que los Poderes Legislativo, </div>
+<div id="tu_2" class="t s2_2">Judicial y el MINISTERIO PUBLICO DE LA NACION determinen, deben verificar, la coincidencia del </div>
+<div id="tv_2" class="t s2_2">número de trasmisión obrante en la Constancia “Presentación de DJ por Internet - Acuse de Recibo” </div>
+<div id="tw_2" class="t s2_2">con el consignado en el sobre de su Anexo Reservado. </div>
+<div id="tx_2" class="t s2_2">En uno de los ejemplares de la Constancia “Presentación de DJ por Internet - Acuse de Recibo” la </div>
+<div id="ty_2" class="t s2_2">autoridad interviniente deberá certificar la recepción del sobre conteniendo el Anexo Reservado en </div>
+<div id="tz_2" class="t s2_2">soporte papel, y entregarla al presentante como suficiente recibo. </div>
+<div id="t10_2" class="t s2_2">No podrá recepcionarse el Anexo Reservado si no se encontrare acompañado de la referida </div>
+<div id="t11_2" class="t s2_2">Constancia “Presentación de DJ por Internet - Acuse de Recibo”. </div>
+<div id="t12_2" class="t s2_2">Art. 13. — Las áreas de personal, administración o recursos humanos de las jurisdicciones u </div>
+<div id="t13_2" class="t s2_2">organismos del PODER EJECUTIVO NACIONAL deberán remitir a la OFICINA ANTICORRUPCION del </div>
+<div id="t14_2" class="t s2_2">MINISTERIO DE JUSTICIA Y DERECHOS HUMANOS, dentro del plazo de los DIEZ (10) días hábiles </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1096],['t3_2',2933],['t4_2',2382],['t5_2',2934],['t6_2',2933],['t7_2',805],['t8_2',2933],['t9_2',2934],['ta_2',915],['tb_2',2933],['tc_2',2934],['td_2',1175],['te_2',2933],['tf_2',2934],['tg_2',2934],['th_2',1718],['ti_2',2933],['tj_2',2934],['tk_2',586],['tl_2',2934],['tn_2',2934],['to_2',2933],['tp_2',1738],['tq_2',2933],['tr_2',2074],['ts_2',2933],['tt_2',2934],['tu_2',2933],['tv_2',2934],['tw_2',1576],['tx_2',2933],['ty_2',2934],['tz_2',1910],['t10_2',2934],['t11_2',1867],['t12_2',2934],['t13_2',2933],['t14_2',2934]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 41;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

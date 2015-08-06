@@ -1,0 +1,241 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:344px;top:126px;}
+#t2_2{left:342px;top:161px;}
+#t3_2{left:101px;top:238px;}
+#t4_2{left:220px;top:238px;}
+#t5_2{left:101px;top:256px;}
+#t6_2{left:101px;top:293px;}
+#t7_2{left:223px;top:293px;}
+#t8_2{left:101px;top:311px;}
+#t9_2{left:101px;top:328px;}
+#ta_2{left:101px;top:346px;}
+#tb_2{left:101px;top:383px;}
+#tc_2{left:230px;top:383px;}
+#td_2{left:101px;top:401px;}
+#te_2{left:101px;top:418px;}
+#tf_2{left:101px;top:436px;}
+#tg_2{left:101px;top:453px;}
+#th_2{left:101px;top:491px;}
+#ti_2{left:427px;top:529px;}
+#tj_2{left:346px;top:566px;}
+#tk_2{left:425px;top:604px;}
+#tl_2{left:188px;top:641px;}
+#tm_2{left:101px;top:679px;}
+#tn_2{left:101px;top:717px;}
+#to_2{left:222px;top:717px;}
+#tp_2{left:101px;top:734px;}
+#tq_2{left:101px;top:751px;}
+#tr_2{left:101px;top:789px;}
+#ts_2{left:101px;top:807px;}
+#tt_2{left:101px;top:824px;}
+#tu_2{left:101px;top:862px;}
+#tv_2{left:101px;top:879px;}
+#tw_2{left:101px;top:917px;}
+#tx_2{left:101px;top:954px;}
+#ty_2{left:101px;top:972px;}
+#tz_2{left:101px;top:1009px;}
+#t10_2{left:101px;top:1047px;}
+#t11_2{left:101px;top:1085px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_2{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">ARTÍCULO 4.- </div>
+<div id="t4_2" class="t s3_2">Los partidos políticos pueden adquirir derechos y contraer obligaciones de acuerdo </div>
+<div id="t5_2" class="t s3_2">con el régimen dispuesto por el Código Civil y por las disposiciones de la presente ley. </div>
+<div id="t6_2" class="t s2_2">ARTÍCULO 5.- </div>
+<div id="t7_2" class="t s3_2">Esta ley es de orden público y se aplicará a los partidos que intervengan en la </div>
+<div id="t8_2" class="t s3_2">elección de autoridades nacionales y asimismo a los que concurran a elecciones municipales de la </div>
+<div id="t9_2" class="t s3_2">ciudad de Buenos Aires y territorio nacional de la Tierra del Fuego, Antártida e Islas del Atlántico </div>
+<div id="ta_2" class="t s3_2">Sur, a partir del 4 de noviembre de 1985. </div>
+<div id="tb_2" class="t s2_2">ARTÍCULO 6.- </div>
+<div id="tc_2" class="t s3_2">Corresponde a la Justicia Federal con competencia electoral, además de la </div>
+<div id="td_2" class="t s3_2">jurisdicción y competencia que le atribuye la ley orgánica respectiva, el contralor de la vigencia </div>
+<div id="te_2" class="t s3_2">efectiva de los derechos, atributos, poderes, garantías y obligaciones, así como el de los registros </div>
+<div id="tf_2" class="t s3_2">que ésta y demás disposiciones legales reglan con respecto a los partidos sus autoridades, </div>
+<div id="tg_2" class="t s3_2">candidatos, afiliados y electores en general. </div>
+<div id="th_2" class="t s4_2">(Artículo modificado por art. 4° de la Ley Nº 26.774 B.O. 02/11/2012) </div>
+<div id="ti_2" class="t s2_2">TITULO II </div>
+<div id="tj_2" class="t s2_2">De la fundación y constitución </div>
+<div id="tk_2" class="t s3_2">CAPITULO I </div>
+<div id="tl_2" class="t s2_2">Requisitos para el reconocimiento de la personalidad jurídico política </div>
+<div id="tm_2" class="t s3_2">1. Partidos de distrito </div>
+<div id="tn_2" class="t s2_2">ARTÍCULO 7.- </div>
+<div id="to_2" class="t s3_2">Para que a una agrupación política se le pueda reconocer su personería jurídico-</div>
+<div id="tp_2" class="t s3_2">política, en forma provisoria, debe solicitarlo ante el juez competente, cumpliendo con los siguientes </div>
+<div id="tq_2" class="t s3_2">requisitos: </div>
+<div id="tr_2" class="t s3_2">a) Acta de fundación y constitución, acompañada de constancias, que acrediten la adhesión de un </div>
+<div id="ts_2" class="t s3_2">número de electores no inferior al cuatro por mil (4‰) del total de los inscritos en el registro de </div>
+<div id="tt_2" class="t s3_2">electores del distrito correspondiente, hasta el máximo de un millón (1.000.000). </div>
+<div id="tu_2" class="t s3_2">Este acuerdo de voluntades se complementará con un documento en el que conste nombre, </div>
+<div id="tv_2" class="t s3_2">domicilio y matrícula de los firmantes; </div>
+<div id="tw_2" class="t s3_2">b) Nombre adoptado por la asamblea de fundación y constitución; </div>
+<div id="tx_2" class="t s3_2">c) Declaración de principios y programa o bases de acción política, sancionados por la asamblea de </div>
+<div id="ty_2" class="t s3_2">fundación y constitución; </div>
+<div id="tz_2" class="t s3_2">d) Carta orgánica sancionada por la asamblea de fundación y constitución; </div>
+<div id="t10_2" class="t s3_2">e) Acta de designación de las autoridades promotoras; </div>
+<div id="t11_2" class="t s3_2">f) Domicilio partidario y acta de designación de los apoderados. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',987],['t2_2',1004],['t3_2',449],['t4_2',2458],['t5_2',2497],['t6_2',455],['t7_2',2446],['t8_2',2934],['t9_2',2933],['ta_2',1211],['tb_2',469],['tc_2',2418],['td_2',2934],['te_2',2934],['tf_2',2933],['tg_2',1271],['th_2',2043],['ti_2',324],['tj_2',973],['tk_2',337],['tl_2',2234],['tm_2',622],['tn_2',453],['to_2',2451],['tp_2',2933],['tr_2',2933],['ts_2',2934],['tt_2',2364],['tu_2',2934],['tv_2',1111],['tw_2',1918],['tx_2',2933],['ty_2',726],['tz_2',2166],['t10_2',1586],['t11_2',1842]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

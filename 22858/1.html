@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:328px;top:128px;}
+#t2_1{left:326px;top:147px;}
+#t3_1{left:409px;top:207px;}
+#t4_1{left:101px;top:251px;}
+#t5_1{left:101px;top:266px;}
+#t6_1{left:101px;top:282px;}
+#t7_1{left:101px;top:298px;}
+#t8_1{left:314px;top:319px;}
+#t9_1{left:101px;top:351px;}
+#ta_1{left:101px;top:382px;}
+#tb_1{left:101px;top:414px;}
+#tc_1{left:216px;top:414px;}
+#td_1{left:101px;top:431px;}
+#te_1{left:101px;top:463px;}
+#tf_1{left:101px;top:480px;}
+#tg_1{left:101px;top:498px;}
+#th_1{left:101px;top:515px;}
+#ti_1{left:101px;top:547px;}
+#tj_1{left:214px;top:547px;}
+#tk_1{left:101px;top:565px;}
+#tl_1{left:101px;top:596px;}
+#tm_1{left:101px;top:614px;}
+#tn_1{left:101px;top:631px;}
+#to_1{left:101px;top:648px;}
+#tp_1{left:101px;top:680px;}
+#tq_1{left:214px;top:680px;}
+#tr_1{left:101px;top:698px;}
+#ts_1{left:101px;top:729px;}
+#tt_1{left:213px;top:729px;}
+#tu_1{left:101px;top:761px;}
+#tv_1{left:101px;top:779px;}
+#tw_1{left:101px;top:796px;}
+#tx_1{left:101px;top:828px;}
+#ty_1{left:101px;top:845px;}
+#tz_1{left:101px;top:863px;}
+#t10_1{left:101px;top:880px;}
+#t11_1{left:101px;top:912px;}
+#t12_1{left:101px;top:929px;}
+#t13_1{left:101px;top:947px;}
+#t14_1{left:101px;top:978px;}
+#t15_1{left:214px;top:978px;}
+#t16_1{left:101px;top:996px;}
+#t17_1{left:101px;top:1013px;}
+#t18_1{left:101px;top:1045px;}
+#t19_1{left:213px;top:1045px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s6_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 45px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Ley 22.858 </div>
+<div id="t4_1" class="t s3_1">Sancionada: Diciembre 4 de 2003. </div>
+<div id="t5_1" class="t s3_1">Promulgada: Diciembre 29 de 2003. </div>
+<div id="t6_1" class="t s3_1">Publicada: B.O. 06/01/2004. </div>
+<div id="t7_1" class="t s4_1">*Nota: Las modificaciones establecidas en la presente ley se encuentran incorporadas en el Código Electoral Nacional. </div>
+<div id="t8_1" class="t s5_1">ELECTORES PRIVADOS DE LIBERTAD </div>
+<div id="t9_1" class="t s5_1">CÓDIGO ELECTORAL NACIONAL </div>
+<div id="ta_1" class="t s5_1">Modificación. </div>
+<div id="tb_1" class="t s5_1">ARTÍCULO 1° </div>
+<div id="tc_1" class="t s6_1">— Incorpórase como último párrafo del artículo 94 de la Ley 19.945 del Código </div>
+<div id="td_1" class="t s6_1">Electoral Nacional, el siguiente: </div>
+<div id="te_1" class="t s6_1">Las personas que tuvieren imposibilidad concreta para efectuar todos o algunos de los movimientos </div>
+<div id="tf_1" class="t s6_1">propios para sufragar, serán acompañados por el presidente de la mesa al cuarto oscuro, donde a </div>
+<div id="tg_1" class="t s6_1">solas con el ciudadano elector, colaborará con los pasos necesarios hasta la introducción del voto, </div>
+<div id="th_1" class="t s6_1">en la medida que la discapacidad lo requiera. </div>
+<div id="ti_1" class="t s5_1">ARTÍCULO 2° </div>
+<div id="tj_1" class="t s6_1">— Incorporase como inciso d) del artículo 75 de la Ley 19.945 del Código Electoral </div>
+<div id="tk_1" class="t s6_1">Nacional, el siguiente: </div>
+<div id="tl_1" class="t s6_1">d) Los votantes mayores de setenta (70) años que hayan sido designados como autoridades de </div>
+<div id="tm_1" class="t s6_1">mesa podrán excusarse de dicha carga pública, justificando únicamente su edad. La excusación se </div>
+<div id="tn_1" class="t s6_1">formulará dentro de los tres (3) días de notificado. El presente inciso deberá figurar impreso en </div>
+<div id="to_1" class="t s6_1">todos los telegramas de designación. </div>
+<div id="tp_1" class="t s5_1">ARTÍCULO 3° </div>
+<div id="tq_1" class="t s6_1">— Deróganse los incisos d), h), j) y k) del artículo 3° de la Ley 19.945 del Código </div>
+<div id="tr_1" class="t s6_1">Electoral Nacional. </div>
+<div id="ts_1" class="t s5_1">ARTÍCULO 4° </div>
+<div id="tt_1" class="t s6_1">— Incorpórase a la Ley 19.945, Código Electoral Nacional, el siguiente artículo: </div>
+<div id="tu_1" class="t s6_1">Artículo 3° bis.- Los procesados que se encuentren cumpliendo prisión preventiva, tendrán derecho </div>
+<div id="tv_1" class="t s6_1">a emitir su voto en todos los actos eleccionarios que se celebren durante el lapso en que se </div>
+<div id="tw_1" class="t s6_1">encuentren detenidos. </div>
+<div id="tx_1" class="t s6_1">A tal fin la Cámara Nacional Electoral confeccionará el Registro de Electores Privados de Libertad, </div>
+<div id="ty_1" class="t s6_1">que contendrá los datos de los procesados que se encuentren alojados en esos establecimientos de </div>
+<div id="tz_1" class="t s6_1">acuerdo con la información que deberán remitir los jueces competentes; asimismo habilitará mesas </div>
+<div id="t10_1" class="t s6_1">de votación en cada uno de los establecimientos de detención y designará a sus autoridades. </div>
+<div id="t11_1" class="t s6_1">Los procesados que se encuentren en un distrito electoral diferente al que le corresponda podrán </div>
+<div id="t12_1" class="t s6_1">votar en el establecimiento en que se encuentren alojados y sus votos se adjudicarán al Distrito en </div>
+<div id="t13_1" class="t s6_1">el que estén empadronados. </div>
+<div id="t14_1" class="t s5_1">ARTÍCULO 5° </div>
+<div id="t15_1" class="t s6_1">— La norma del artículo anterior entrará en vigencia a partir de su reglamentación </div>
+<div id="t16_1" class="t s6_1">por el Poder Ejecutivo nacional, la que deberá dictarse en el plazo máximo de veinticuatro (24) </div>
+<div id="t17_1" class="t s6_1">meses contados a partir de la publicación de la presente. </div>
+<div id="t18_1" class="t s5_1">ARTÍCULO 6° </div>
+<div id="t19_1" class="t s6_1">— Comuníquese al Poder Ejecutivo. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1094],['t3_1',391],['t4_1',903],['t5_1',945],['t6_1',748],['t7_1',2731],['t8_1',1191],['t9_1',1022],['tb_1',440],['tc_1',2435],['td_1',912],['te_1',2895],['tf_1',2895],['tg_1',2894],['th_1',1311],['ti_1',433],['tj_1',2443],['tk_1',643],['tl_1',2894],['tm_1',2894],['tn_1',2895],['to_1',1072],['tp_1',434],['tq_1',2441],['tr_1',534],['ts_1',429],['tt_1',2297],['tu_1',2894],['tv_1',2894],['tw_1',647],['tx_1',2895],['ty_1',2894],['tz_1',2895],['t10_1',2702],['t11_1',2895],['t12_1',2894],['t13_1',823],['t14_1',433],['t15_1',2442],['t16_1',2894],['t17_1',1653],['t18_1',429],['t19_1',1029]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

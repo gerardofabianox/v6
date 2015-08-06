@@ -1,0 +1,220 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:239px;}
+#t4_3{left:101px;top:257px;}
+#t5_3{left:101px;top:288px;}
+#t6_3{left:101px;top:320px;}
+#t7_3{left:101px;top:352px;}
+#t8_3{left:101px;top:384px;}
+#t9_3{left:101px;top:415px;}
+#ta_3{left:101px;top:447px;}
+#tb_3{left:101px;top:479px;}
+#tc_3{left:101px;top:510px;}
+#td_3{left:101px;top:542px;}
+#te_3{left:101px;top:574px;}
+#tf_3{left:101px;top:606px;}
+#tg_3{left:101px;top:637px;}
+#th_3{left:101px;top:669px;}
+#ti_3{left:101px;top:701px;}
+#tj_3{left:101px;top:733px;}
+#tk_3{left:101px;top:764px;}
+#tl_3{left:101px;top:796px;}
+#tm_3{left:101px;top:828px;}
+#tn_3{left:101px;top:860px;}
+#to_3{left:101px;top:891px;}
+#tp_3{left:101px;top:923px;}
+#tq_3{left:101px;top:955px;}
+#tr_3{left:101px;top:986px;}
+#ts_3{left:101px;top:1018px;}
+#tt_3{left:101px;top:1050px;}
+#tu_3{left:101px;top:1082px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">PLAN DE CUENTAS UNIFORME PARA PARTIDOS POLITICOS Y CONFEDERACIONES DE </div>
+<div id="t4_3" class="t s2_3">ACUERDO A LO REQUERIDO POR LA LEY 26.215 </div>
+<div id="t5_3" class="t s2_3">1. ACTIVO </div>
+<div id="t6_3" class="t s2_3">1.1. CAJA Y BANCOS - CORRIENTES </div>
+<div id="t7_3" class="t s3_3">1.1.1. Caja </div>
+<div id="t8_3" class="t s3_3">1.1.2. Fondo fijo (según detalle) </div>
+<div id="t9_3" class="t s3_3">Fondo Fijo ……………………………………. </div>
+<div id="ta_3" class="t s3_3">Fondo Fijo ……………………………………. </div>
+<div id="tb_3" class="t s3_3">1.1.3. Valores a depositar </div>
+<div id="tc_3" class="t s3_3">1.1.4. Bancos </div>
+<div id="td_3" class="t s3_3">1.1.4.1. Banco Cta. Única partidaria (según detalle) </div>
+<div id="te_3" class="t s3_3">Banco ………………………………………. </div>
+<div id="tf_3" class="t s3_3">1.1.5. Otras disponibilidades (según detalle) </div>
+<div id="tg_3" class="t s3_3">………………………………………………………. </div>
+<div id="th_3" class="t s3_3">………………………………………………………. </div>
+<div id="ti_3" class="t s2_3">1.2. INVERSIONES – CORRIENTES Y NO CORRIENTES </div>
+<div id="tj_3" class="t s3_3">1.2.1. Depósitos a plazo fijo (según detalle) </div>
+<div id="tk_3" class="t s3_3">Banco ………………………………………. </div>
+<div id="tl_3" class="t s3_3">Banco ………………………………………. </div>
+<div id="tm_3" class="t s3_3">1.2.2. Depósitos a plazo fijo en moneda extranjera (según </div>
+<div id="tn_3" class="t s3_3">detalle) </div>
+<div id="to_3" class="t s3_3">Banco ………………………………………. </div>
+<div id="tp_3" class="t s3_3">Banco ………………………………………. </div>
+<div id="tq_3" class="t s3_3">1.2.3. Títulos Públicos (según detalle) </div>
+<div id="tr_3" class="t s3_3">………………………………………………………. </div>
+<div id="ts_3" class="t s3_3">………………………………………………………. </div>
+<div id="tt_3" class="t s3_3">1.2.4. Títulos Públicos en moneda extranjera (según detalle) </div>
+<div id="tu_3" class="t s3_3">………………………………………………………. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2744],['t4_3',1538],['t5_3',332],['t6_3',1144],['t7_3',322],['t8_3',938],['t9_3',1001],['ta_3',1001],['tb_3',749],['tc_3',399],['td_3',1502],['te_3',925],['tf_3',1287],['ti_3',1722],['tj_3',1272],['tk_3',925],['tl_3',925],['tm_3',1695],['to_3',925],['tp_3',925],['tq_3',1096],['tt_3',1760]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 31;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

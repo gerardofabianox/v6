@@ -1,0 +1,300 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:174px;top:211px;}
+#t5_2{left:634px;top:211px;}
+#t6_2{left:101px;top:228px;}
+#t7_2{left:313px;top:228px;}
+#t8_2{left:776px;top:228px;}
+#t9_2{left:101px;top:246px;}
+#ta_2{left:414px;top:246px;}
+#tb_2{left:643px;top:246px;}
+#tc_2{left:101px;top:278px;}
+#td_2{left:101px;top:295px;}
+#te_2{left:101px;top:312px;}
+#tf_2{left:101px;top:344px;}
+#tg_2{left:716px;top:344px;}
+#th_2{left:101px;top:362px;}
+#ti_2{left:200px;top:362px;}
+#tj_2{left:391px;top:362px;}
+#tk_2{left:101px;top:379px;}
+#tl_2{left:101px;top:411px;}
+#tm_2{left:276px;top:411px;}
+#tn_2{left:101px;top:428px;}
+#to_2{left:101px;top:445px;}
+#tp_2{left:101px;top:463px;}
+#tq_2{left:473px;top:463px;}
+#tr_2{left:101px;top:495px;}
+#ts_2{left:101px;top:512px;}
+#tt_2{left:101px;top:530px;}
+#tu_2{left:101px;top:547px;}
+#tv_2{left:101px;top:564px;}
+#tw_2{left:101px;top:582px;}
+#tx_2{left:101px;top:599px;}
+#ty_2{left:101px;top:631px;}
+#tz_2{left:101px;top:648px;}
+#t10_2{left:299px;top:648px;}
+#t11_2{left:601px;top:648px;}
+#t12_2{left:750px;top:648px;}
+#t13_2{left:101px;top:666px;}
+#t14_2{left:101px;top:683px;}
+#t15_2{left:101px;top:701px;}
+#t16_2{left:101px;top:732px;}
+#t17_2{left:101px;top:750px;}
+#t18_2{left:101px;top:767px;}
+#t19_2{left:101px;top:785px;}
+#t1a_2{left:101px;top:802px;}
+#t1b_2{left:101px;top:819px;}
+#t1c_2{left:101px;top:837px;}
+#t1d_2{left:101px;top:869px;}
+#t1e_2{left:101px;top:886px;}
+#t1f_2{left:101px;top:903px;}
+#t1g_2{left:101px;top:935px;}
+#t1h_2{left:101px;top:953px;}
+#t1i_2{left:101px;top:970px;}
+#t1j_2{left:417px;top:970px;}
+#t1k_2{left:776px;top:970px;}
+#t1l_2{left:101px;top:987px;}
+#t1m_2{left:409px;top:988px;}
+#t1n_2{left:101px;top:1005px;}
+#t1o_2{left:570px;top:1005px;}
+#t1p_2{left:101px;top:1022px;}
+#t1q_2{left:322px;top:1022px;}
+#t1r_2{left:793px;top:1022px;}
+#t1s_2{left:101px;top:1040px;}
+#t1t_2{left:424px;top:1040px;}
+#t1u_2{left:101px;top:1057px;}
+#t1v_2{left:127px;top:1057px;}
+#t1w_2{left:581px;top:1057px;}
+#t1x_2{left:101px;top:1075px;}
+#t1y_2{left:253px;top:1075px;}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">mediante</div>
+<div id="t4_2" class="t s2_2">denuncia ya presentada ante autoridad judicial competente, la</div>
+<div id="t5_2" class="t s2_2">ex Comisión Nacional sobre </div>
+<div id="t6_2" class="t s2_2">la Desaparición de Personas</div>
+<div id="t7_2" class="t s2_2">(decreto 158/83), o la Subsecretaría de Derechos Humanos y</div>
+<div id="t8_2" class="t s2_2">Sociales </div>
+<div id="t9_2" class="t s2_2">del Ministerio del Interior o la ex Dirección</div>
+<div id="ta_2" class="t s2_2">Nacional de Derechos Humanos</div>
+<div id="tb_2" class="t s3_2">”.- </div>
+<div id="tc_2" class="t s3_2">Esa regulación se complementa además por las leyes reparatorias números 24.043, 24.411, 24.436, </div>
+<div id="td_2" class="t s3_2">24.499, 24.823, 24.906, 25.814, 25.985, 26.178 y 26.521, entre otras disposiciones reglamentarias </div>
+<div id="te_2" class="t s3_2">sobre la cuestión.- </div>
+<div id="tf_2" class="t s3_2">3°) Que, por otra parte, en el año 2012 se dictó el decreto 1199/12, disponiendo “</div>
+<div id="tg_2" class="t s2_2">la inscripción de </div>
+<div id="th_2" class="t s2_2">la condición</div>
+<div id="ti_2" class="t s2_2">de detenido-desaparecido</div>
+<div id="tj_2" class="t s3_2">” (art. 1°) en los legajos de la nómina de personas allí </div>
+<div id="tk_2" class="t s3_2">consignada, que revistaban como agentes de la administración pública nacional.- </div>
+<div id="tl_2" class="t s3_2">Ello, atendiendo a que “</div>
+<div id="tm_2" class="t s2_2">es responsabilidad del Estado Nacional generar las acciones de reparaciones </div>
+<div id="tn_2" class="t s2_2">consecuentes y asegurar la verdad a registrar en la memoria colectiva ante las actuales y futuras </div>
+<div id="to_2" class="t s2_2">generaciones, mediante la adecuada documentación y testimonio de las circunstancias en que </div>
+<div id="tp_2" class="t s2_2">tuvieron lugar tan graves acciones y consecuencias</div>
+<div id="tq_2" class="t s3_2">”.-</div>
+<div id="tr_2" class="t s3_2">4°) Que, lo expuesto en el considerando anterior, así como también la remisión por parte de la </div>
+<div id="ts_2" class="t s3_2">Secretaría de Derechos Humanos de una nómina de electores que están incursos en las condiciones </div>
+<div id="tt_2" class="t s3_2">del artículo 2° de la ley 24.321 –conforme ha sido reconocido por resolución ministerial-, pero sobre </div>
+<div id="tu_2" class="t s3_2">los que no se ha solicitado judicialmente la reconversión de la declaración de “ausencia con </div>
+<div id="tv_2" class="t s3_2">presunción de fallecimiento” autorizada por el artículo 10 de la misma ley, exigen reexaminar el </div>
+<div id="tw_2" class="t s3_2">concepto de “elector ausente por desaparición forzada” que en una primera aproximación parece </div>
+<div id="tx_2" class="t s3_2">desprenderse de los términos del citado decreto 935/10.- </div>
+<div id="ty_2" class="t s3_2">Ello pues, si bien esta reglamentación menciona como antecedente de la inscripción en el Registro </div>
+<div id="tz_2" class="t s3_2">Nacional de Electores a la “</div>
+<div id="t10_2" class="t s2_2">sentencia declaratoria de la ausencia por</div>
+<div id="t11_2" class="t s2_2">desaparición forzada</div>
+<div id="t12_2" class="t s3_2">”, no puede </div>
+<div id="t13_2" class="t s3_2">pasarse por alto que –conforme se desprende de la ley 24.411 (art. 3° y ccdtes.)- existen otros </div>
+<div id="t14_2" class="t s3_2">antecedentes documentales igualmente constitutivos de aquella condición, aun careciendo de esa </div>
+<div id="t15_2" class="t s3_2">declaratoria judicial explícita dictada invocando los términos de la ley 24.321.- </div>
+<div id="t16_2" class="t s3_2">5°) Que, en ese marco, no puede pasarse por alto que la cronología de las leyes reparatorias </div>
+<div id="t17_2" class="t s3_2">condujo a que, en numerosos casos, los electores ausentes por desaparición forzada al momento de </div>
+<div id="t18_2" class="t s3_2">la sanción de la ley 24.321 ya hubiesen sido declarados “ausentes con presunción de fallecimiento” </div>
+<div id="t19_2" class="t s3_2">en los términos de la ley 14.394 -cuyos efectos civiles son análogos (cf. art. 7°)- sin que luego se </div>
+<div id="t1a_2" class="t s3_2">haya solicitado judicialmente la reconversión de esa declaración -que, si bien se encuentra prevista, </div>
+<div id="t1b_2" class="t s3_2">no es automática sino que procede a pedido de parte- toda vez que ello no obstaba al </div>
+<div id="t1c_2" class="t s3_2">reconocimiento administrativo de la condición de “ausente por desaparición forzada”.- </div>
+<div id="t1d_2" class="t s3_2">6°) Que, en ese marco, corresponde interpretar de modo amplio los supuestos en los que debe </div>
+<div id="t1e_2" class="t s3_2">asentarse la condición de elector ausente por desaparición forzada prevista en el artículo 15 del </div>
+<div id="t1f_2" class="t s3_2">Código Electoral Nacional.- </div>
+<div id="t1g_2" class="t s3_2">Ello, además, responde a lo expuesto por la Corte Suprema de Justicia de la Nación, en relación con </div>
+<div id="t1h_2" class="t s3_2">las políticas reparatorias comprendidas dentro del plexo normativo aludido. En efecto, el Alto </div>
+<div id="t1i_2" class="t s3_2">Tribunal ha tenido ocasión de indicar que “</div>
+<div id="t1j_2" class="t s2_2">el criterio amplio que debe imperar a la hora de</div>
+<div id="t1k_2" class="t s2_2">resolver </div>
+<div id="t1l_2" class="t s2_2">controversias suscitadas con motivo de la</div>
+<div id="t1m_2" class="t s2_2">interpretación de la ley 24.411 ha sido contemplado por el</div>
+<div id="t1n_2" class="t s2_2">propio legislador, pues entre los fundamentos del proyecto de</div>
+<div id="t1o_2" class="t s2_2">ley que luego se sancionara bajo el </div>
+<div id="t1p_2" class="t s2_2">número 24.823, modificando</div>
+<div id="t1q_2" class="t s2_2">la citada anteriormente, se afirmó que la reforma se propone</div>
+<div id="t1r_2" class="t s2_2">evitar </div>
+<div id="t1s_2" class="t s2_2">interpretaciones restrictivas que resultarían</div>
+<div id="t1t_2" class="t s2_2">arbitrarias, desvirtuando la voluntad del legislador, que, </div>
+<div id="t1u_2" class="t s2_2">sin</div>
+<div id="t1v_2" class="t s2_2">duda, quiso alcanzar a la mayor cantidad de población, cuyos</div>
+<div id="t1w_2" class="t s2_2">derechos fueron avasallados por el </div>
+<div id="t1x_2" class="t s2_2">terrorismo de Estado</div>
+<div id="t1y_2" class="t s3_2">” (Fallos 330:2304).- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t4_2',1820],['t5_2',800],['t6_2',825],['t7_2',1824],['t9_2',1230],['ta_2',916],['tc_2',2934],['td_2',2934],['te_2',537],['tf_2',2458],['tg_2',475],['th_2',359],['ti_2',765],['tj_2',1772],['tk_2',2353],['tl_2',701],['tm_2',2232],['tn_2',2934],['to_2',2933],['tp_2',1489],['tr_2',2933],['ts_2',2933],['tt_2',2933],['tu_2',2933],['tv_2',2933],['tw_2',2933],['tx_2',1668],['ty_2',2933],['tz_2',791],['t10_2',1187],['t11_2',598],['t12_2',336],['t13_2',2934],['t14_2',2934],['t15_2',2277],['t16_2',2934],['t17_2',2934],['t18_2',2933],['t19_2',2934],['t1a_2',2934],['t1b_2',2934],['t1c_2',2497],['t1d_2',2933],['t1e_2',2934],['t1f_2',778],['t1g_2',2933],['t1h_2',2933],['t1i_2',1263],['t1j_2',1415],['t1l_2',1211],['t1m_2',1702],['t1n_2',1849],['t1o_2',1058],['t1p_2',857],['t1q_2',1854],['t1s_2',1269],['t1t_2',1641],['t1v_2',1796],['t1w_2',1012],['t1x_2',607],['t1y_2',613]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 71;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

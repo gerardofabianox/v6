@@ -1,0 +1,279 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load17();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_17{left:333px;top:108px;}
+#t2_17{left:331px;top:128px;}
+#t3_17{left:101px;top:191px;}
+#t4_17{left:217px;top:191px;}
+#t5_17{left:539px;top:191px;}
+#t6_17{left:101px;top:208px;}
+#t7_17{left:101px;top:226px;}
+#t8_17{left:101px;top:263px;}
+#t9_17{left:101px;top:281px;}
+#ta_17{left:101px;top:318px;}
+#tb_17{left:101px;top:336px;}
+#tc_17{left:417px;top:373px;}
+#td_17{left:338px;top:409px;}
+#te_17{left:101px;top:445px;}
+#tf_17{left:209px;top:445px;}
+#tg_17{left:669px;top:445px;}
+#th_17{left:101px;top:463px;}
+#ti_17{left:101px;top:480px;}
+#tj_17{left:101px;top:497px;}
+#tk_17{left:101px;top:515px;}
+#tl_17{left:101px;top:552px;}
+#tm_17{left:101px;top:570px;}
+#tn_17{left:101px;top:587px;}
+#to_17{left:101px;top:625px;}
+#tp_17{left:101px;top:643px;}
+#tq_17{left:101px;top:660px;}
+#tr_17{left:101px;top:677px;}
+#ts_17{left:101px;top:715px;}
+#tt_17{left:101px;top:731px;}
+#tu_17{left:156px;top:731px;}
+#tv_17{left:101px;top:767px;}
+#tw_17{left:233px;top:767px;}
+#tx_17{left:556px;top:767px;}
+#ty_17{left:101px;top:784px;}
+#tz_17{left:101px;top:802px;}
+#t10_17{left:101px;top:819px;}
+#t11_17{left:101px;top:836px;}
+#t12_17{left:101px;top:854px;}
+#t13_17{left:101px;top:892px;}
+#t14_17{left:101px;top:909px;}
+#t15_17{left:101px;top:926px;}
+#t16_17{left:101px;top:944px;}
+#t17_17{left:101px;top:982px;}
+#t18_17{left:101px;top:999px;}
+#t19_17{left:101px;top:1016px;}
+#t1a_17{left:101px;top:1034px;}
+#t1b_17{left:101px;top:1051px;}
+#t1c_17{left:372px;top:1051px;}
+#t1d_17{left:101px;top:1069px;}
+
+.s2_17{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s5_17{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_17{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_17{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_17{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s6_17{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_17" class="t s1_17">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_17" class="t s1_17">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_17" class="t s2_17">Artículo 59.- </div>
+<div id="t4_17" class="t s3_17">Otorgamiento de poderes a los fiscales.</div>
+<div id="t5_17" class="t s4_17">Los poderes de los fiscales y fiscales </div>
+<div id="t6_17" class="t s4_17">generales serán otorgados bajo la firma de las autoridades directivas del partido, y contendrán </div>
+<div id="t7_17" class="t s4_17">nombre y apellido completo, número de documento cívico y su firma al pie del mismo. </div>
+<div id="t8_17" class="t s4_17">Estos poderes deberán ser presentados a los presidentes de mesa para su reconocimiento, desde </div>
+<div id="t9_17" class="t s4_17">tres días antes del fijado para la elección. </div>
+<div id="ta_17" class="t s4_17">La designación de fiscal general será comunicada a la Junta Electoral Nacional de distrito, por el </div>
+<div id="tb_17" class="t s4_17">apoderado general del partido, hasta veinticuatro horas antes del acto eleccionario. </div>
+<div id="tc_17" class="t s5_17">CAPITULO III </div>
+<div id="td_17" class="t s6_17">Oficialización de las listas de candidatos </div>
+<div id="te_17" class="t s2_17">Artículo 60.- </div>
+<div id="tf_17" class="t s3_17">Registro de los candidatos y pedido de oficialización de listas.</div>
+<div id="tg_17" class="t s4_17">Desde la proclamación </div>
+<div id="th_17" class="t s4_17">de los candidatos en las elecciones primarias y hasta cincuenta (50) días anteriores a la elección, los </div>
+<div id="ti_17" class="t s4_17">partidos registrarán ante el juez electoral las listas de los candidatos proclamados, quienes deberán </div>
+<div id="tj_17" class="t s4_17">reunir las condiciones propias del cargo para el cual se postulan y no estar comprendidos en alguna </div>
+<div id="tk_17" class="t s4_17">de las inhabilidades legales. </div>
+<div id="tl_17" class="t s4_17">En el caso de la elección del presidente y vicepresidente de la Nación, y de parlamentarios del </div>
+<div id="tm_17" class="t s4_17">Mercosur por distrito nacional, la presentación de las fórmulas y de las listas de candidatos se </div>
+<div id="tn_17" class="t s4_17">realizará ante el juez federal con competencia electoral de la Capital Federal. </div>
+<div id="to_17" class="t s4_17">En el caso de la elección de parlamentarios del Mercosur por distritos regionales provinciales y de la </div>
+<div id="tp_17" class="t s4_17">Ciudad Autónoma de Buenos Aires, senadores nacionales y diputados nacionales, la presentación de </div>
+<div id="tq_17" class="t s4_17">las listas de candidatos se realizará ante el juez federal con competencia electoral del distrito </div>
+<div id="tr_17" class="t s4_17">respectivo. </div>
+<div id="ts_17" class="t s6_17">(Artículo modificado por art. 88 de la Ley N° 26.571 B.O. 14/12/2009 y modificado por art. 2° de la Ley N° </div>
+<div id="tt_17" class="t s6_17">27.120 </div>
+<div id="tu_17" class="t s6_17">B.O. 08/01/2015) </div>
+<div id="tv_17" class="t s2_17">Artículo 60 bis:</div>
+<div id="tw_17" class="t s3_17">Requisitos para la oficialización de las listas</div>
+<div id="tx_17" class="t s4_17">. Las listas que se presenten deberán </div>
+<div id="ty_17" class="t s4_17">tener mujeres en un mínimo del treinta por ciento (30%) de los candidatos a los cargos a elegir y en </div>
+<div id="tz_17" class="t s4_17">proporciones con posibilidad de resultar electas, de acuerdo a lo establecido en la Ley 24.012 y sus </div>
+<div id="t10_17" class="t s4_17">decretos reglamentarios. En el caso de la categoría senadores nacionales para cumplir con dicho </div>
+<div id="t11_17" class="t s4_17">cupo mínimo, las listas deberán estar conformadas por dos personas de diferente sexo, tanto para </div>
+<div id="t12_17" class="t s4_17">candidatos titulares como suplentes. </div>
+<div id="t13_17" class="t s4_17">Las agrupaciones políticas que hayan alcanzado en las elecciones primarias el uno y medio por </div>
+<div id="t14_17" class="t s4_17">ciento (1,5%) de los votos válidamente emitidos en el distrito de que se trate, deberán presentar </div>
+<div id="t15_17" class="t s4_17">una sola lista por categoría, no admitiéndose la coexistencia de listas aunque sean idénticas entre </div>
+<div id="t16_17" class="t s4_17">las alianzas y los partidos que las integran. </div>
+<div id="t17_17" class="t s4_17">Las agrupaciones políticas presentarán, juntamente con el pedido de oficialización de listas, datos de </div>
+<div id="t18_17" class="t s4_17">filiación completos de sus candidatos, el último domicilio electoral y una declaración jurada suscrita </div>
+<div id="t19_17" class="t s4_17">individualmente por cada uno de los candidatos, donde se manifieste no estar comprendido en </div>
+<div id="t1a_17" class="t s4_17">ninguna de las inhabilidades previstas en la Constitución Nacional, en este Código, en la Ley </div>
+<div id="t1b_17" class="t s4_17">Orgánica de los Partidos Políticos, </div>
+<div id="t1c_17" class="t s4_17">en la Ley de Financiamiento de los Partidos Políticos y en el </div>
+<div id="t1d_17" class="t s4_17">Protocolo Constitutivo del Parlamento del Mercosur. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg17Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg17"><object width="935" height="1210" data="17/17.svg" type="image/svg+xml" id="pdf17" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld17" type="text/javascript">
+
+var isIE = false;
+var f17 = [['t1_17',1076],['t2_17',1096],['t3_17',423],['t4_17',1249],['t5_17',1179],['t6_17',2933],['t7_17',2507],['t8_17',2933],['t9_17',1205],['ta_17',2933],['tb_17',2421],['tc_17',400],['td_17',1039],['te_17',407],['tf_17',1818],['tg_17',660],['th_17',2933],['ti_17',2933],['tj_17',2934],['tk_17',809],['tl_17',2934],['tm_17',2934],['tn_17',2234],['to_17',2933],['tp_17',2934],['tq_17',2934],['ts_17',2934],['tu_17',465],['tv_17',501],['tw_17',1292],['tx_17',1114],['ty_17',2933],['tz_17',2934],['t10_17',2934],['t11_17',2934],['t12_17',1059],['t13_17',2933],['t14_17',2934],['t15_17',2934],['t16_17',1251],['t17_17',2933],['t18_17',2934],['t19_17',2933],['t1a_17',2934],['t1b_17',1022],['t1c_17',1848],['t1d_17',1497]];
+function load17(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f17);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 50;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_17");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

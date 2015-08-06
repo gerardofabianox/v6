@@ -1,0 +1,291 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:283px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:384px;}
+#tc_1{left:101px;top:416px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:482px;}
+#tg_1{left:101px;top:500px;}
+#th_1{left:101px;top:517px;}
+#ti_1{left:101px;top:549px;}
+#tj_1{left:101px;top:566px;}
+#tk_1{left:101px;top:584px;}
+#tl_1{left:694px;top:584px;}
+#tm_1{left:704px;top:584px;}
+#tn_1{left:101px;top:601px;}
+#to_1{left:101px;top:619px;}
+#tp_1{left:101px;top:636px;}
+#tq_1{left:101px;top:668px;}
+#tr_1{left:101px;top:700px;}
+#ts_1{left:101px;top:731px;}
+#tt_1{left:101px;top:749px;}
+#tu_1{left:101px;top:766px;}
+#tv_1{left:101px;top:784px;}
+#tw_1{left:101px;top:815px;}
+#tx_1{left:101px;top:847px;}
+#ty_1{left:157px;top:847px;}
+#tz_1{left:101px;top:879px;}
+#t10_1{left:159px;top:879px;}
+#t11_1{left:101px;top:911px;}
+#t12_1{left:609px;top:911px;}
+#t13_1{left:667px;top:911px;}
+#t14_1{left:101px;top:928px;}
+#t15_1{left:121px;top:928px;}
+#t16_1{left:211px;top:928px;}
+#t17_1{left:101px;top:945px;}
+#t18_1{left:616px;top:945px;}
+#t19_1{left:695px;top:945px;}
+#t1a_1{left:101px;top:963px;}
+#t1b_1{left:101px;top:980px;}
+#t1c_1{left:101px;top:998px;}
+#t1d_1{left:434px;top:998px;}
+#t1e_1{left:477px;top:998px;}
+#t1f_1{left:578px;top:998px;}
+#t1g_1{left:631px;top:998px;}
+#t1h_1{left:668px;top:998px;}
+#t1i_1{left:101px;top:1015px;}
+#t1j_1{left:164px;top:1015px;}
+#t1k_1{left:253px;top:1015px;}
+#t1l_1{left:285px;top:1015px;}
+#t1m_1{left:328px;top:1015px;}
+#t1n_1{left:385px;top:1015px;}
+#t1o_1{left:101px;top:1047px;}
+#t1p_1{left:101px;top:1079px;}
+#t1q_1{left:157px;top:1079px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 70/2005 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 05/07/2005 </div>
+<div id="t5_1" class="t s4_1">PUBLICACIÓN DE EDICTOS EN EL BOLETÍN OFICIAL. TEXTOS UNIFORMES DEL FUERO </div>
+<div id="t6_1" class="t s4_1">ELECTORAL. </div>
+<div id="t7_1" class="t s3_1">En Buenos Aires a los cinco días del mes de julio del año dos mil cinco, se reúnen en acuerdo </div>
+<div id="t8_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Alberto Ricardo </div>
+<div id="t9_1" class="t s3_1">Dalla Vía y Santiago Hernán Corcuera, actuando los secretarios de la Cámara doctores Jorge Horacio </div>
+<div id="ta_1" class="t s3_1">Otaño Piñero y Felipe González Roura, Abierto el acto por el señor Vicepresidente doctor Alberto </div>
+<div id="tb_1" class="t s3_1">Ricardo Dalla Vía, </div>
+<div id="tc_1" class="t s3_1">CONSIDERARON: </div>
+<div id="td_1" class="t s3_1">1°) Que la Corte Suprema de Justicia de la Nación -teniendo en cuenta lo dispuesto por ese Tribunal </div>
+<div id="te_1" class="t s3_1">mediante acordada del 11 de marzo de 1959, que dio fundamento a la del 22 de diciembre de 1960- </div>
+<div id="tf_1" class="t s3_1">solicita a las Cámaras Nacionales y Federales de Apelaciones que tengan a bien "remitir proyectos </div>
+<div id="tg_1" class="t s3_1">de textos uniformes de los edictos que corresponde publicar en sus respectivas jurisdicciones </div>
+<div id="th_1" class="t s3_1">conforme a disposiciones legales vigentes".- </div>
+<div id="ti_1" class="t s3_1">2°) Que los magistrados con competencia electoral ordenan la publicación de edictos en el Boletín </div>
+<div id="tj_1" class="t s3_1">Oficial de la Nación y en diarios de circulación nacional -según corresponda- con motivo de lo </div>
+<div id="tk_1" class="t s3_1">dispuesto en los artículos 14, 31 y 63 de la ley 23.298; 57 y 62 de la ley 25.600</div>
+<div id="tl_1" class="t s4_1">*</div>
+<div id="tm_1" class="t s3_1">, y 15 del decreto </div>
+<div id="tn_1" class="t s3_1">3213/84. Ello, pese a que en algunos de esos supuestos la legislación no pone a cargo de los </div>
+<div id="to_1" class="t s3_1">Tribunales, sino de las agrupaciones políticas, la publicación de la información que ellos contemplan. </div>
+<div id="tp_1" class="t s3_1">Por tanto, corresponde -de todos modos- unificar la redacción de sus textos, en lo que sea posible.- </div>
+<div id="tq_1" class="t s3_1">Por ello, </div>
+<div id="tr_1" class="t s3_1">ACORDARON: </div>
+<div id="ts_1" class="t s3_1">1°) Comunicar a la Corte Suprema de Justicia de la Nación que los textos de los edictos que se </div>
+<div id="tt_1" class="t s3_1">publican en la jurisdicción del fuero electoral, se atendrán a las modalidades que a continuación se </div>
+<div id="tu_1" class="t s3_1">detallan, sin perjuicio de las modificaciones que en virtud de las necesidades de cada caso pudieran </div>
+<div id="tv_1" class="t s3_1">considerarse imprescindibles: </div>
+<div id="tw_1" class="t s4_1">Publicación ordenada por el artículo 14 de la ley 23.298:</div>
+<div id="tx_1" class="t s3_1">Partido.</div>
+<div id="ty_1" class="t s3_1">........</div>
+<div id="tz_1" class="t s3_1">Distrito.</div>
+<div id="t10_1" class="t s3_1">.......</div>
+<div id="t11_1" class="t s3_1">El Juzgado Federal con Competencia Electoral en el Distrito .</div>
+<div id="t12_1" class="t s3_1">...........</div>
+<div id="t13_1" class="t s3_1">, a cargo del/la Dr. </div>
+<div id="t14_1" class="t s3_1">/a.</div>
+<div id="t15_1" class="t s3_1">.................</div>
+<div id="t16_1" class="t s3_1">, hacer saber, en cumplimiento de lo establecido en el art. 14 de la Ley Orgánica de </div>
+<div id="t17_1" class="t s3_1">los Partidos Políticos 23.298, que la agrupación política denominada .</div>
+<div id="t18_1" class="t s3_1">...............</div>
+<div id="t19_1" class="t s3_1">, se ha presentado </div>
+<div id="t1a_1" class="t s3_1">ante esta sede judicial iniciando el trámite de reconocimiento la personalidad jurídico política como </div>
+<div id="t1b_1" class="t s3_1">partido de distrito, en los términos del art. 7° de la Ley 23.298, bajo el nombre partidario, sigla, </div>
+<div id="t1c_1" class="t s3_1">emblema y/o símbolo, que adoptó en fecha .</div>
+<div id="t1d_1" class="t s3_1">.......</div>
+<div id="t1e_1" class="t s3_1">(Expte. N° ….</div>
+<div id="t1f_1" class="t s3_1">.). En .</div>
+<div id="t1g_1" class="t s3_1">.......</div>
+<div id="t1h_1" class="t s3_1">, a los . . . . . días del </div>
+<div id="t1i_1" class="t s3_1">mes de .</div>
+<div id="t1j_1" class="t s3_1">.... del año .</div>
+<div id="t1k_1" class="t s3_1">.....</div>
+<div id="t1l_1" class="t s3_1">Dr./a.</div>
+<div id="t1m_1" class="t s3_1">..........</div>
+<div id="t1n_1" class="t s3_1">,Secretario/a Electoral.- </div>
+<div id="t1o_1" class="t s4_1">Publicación prevista en el artículo 31 de la ley 23.298: </div>
+<div id="t1p_1" class="t s3_1">Partido.</div>
+<div id="t1q_1" class="t s3_1">........</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1010],['t4_1',587],['t5_1',2933],['t7_1',2934],['t8_1',2933],['t9_1',2934],['ta_1',2934],['tb_1',510],['td_1',2933],['te_1',2934],['tf_1',2934],['tg_1',2934],['th_1',1282],['ti_1',2934],['tj_1',2933],['tk_1',2373],['tm_1',520],['tn_1',2934],['to_1',2933],['tp_1',2901],['tq_1',235],['ts_1',2934],['tt_1',2933],['tu_1',2934],['tv_1',856],['tw_1',1829],['t11_1',2032],['t13_1',670],['t16_1',2494],['t17_1',2060],['t19_1',557],['t1a_1',2933],['t1b_1',2934],['t1c_1',1333],['t1e_1',402],['t1f_1',211],['t1h_1',666],['t1i_1',252],['t1j_1',357],['t1n_1',691],['t1o_1',1758]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 63;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

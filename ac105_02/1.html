@@ -1,0 +1,245 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:265px;}
+#t6_1{left:101px;top:297px;}
+#t7_1{left:101px;top:314px;}
+#t8_1{left:101px;top:332px;}
+#t9_1{left:101px;top:349px;}
+#ta_1{left:101px;top:367px;}
+#tb_1{left:101px;top:399px;}
+#tc_1{left:101px;top:430px;}
+#td_1{left:101px;top:448px;}
+#te_1{left:101px;top:465px;}
+#tf_1{left:101px;top:482px;}
+#tg_1{left:101px;top:500px;}
+#th_1{left:101px;top:517px;}
+#ti_1{left:101px;top:535px;}
+#tj_1{left:101px;top:566px;}
+#tk_1{left:101px;top:584px;}
+#tl_1{left:101px;top:601px;}
+#tm_1{left:101px;top:619px;}
+#tn_1{left:101px;top:651px;}
+#to_1{left:101px;top:682px;}
+#tp_1{left:101px;top:714px;}
+#tq_1{left:101px;top:731px;}
+#tr_1{left:101px;top:763px;}
+#ts_1{left:101px;top:781px;}
+#tt_1{left:101px;top:812px;}
+#tu_1{left:101px;top:830px;}
+#tv_1{left:101px;top:847px;}
+#tw_1{left:101px;top:879px;}
+#tx_1{left:101px;top:896px;}
+#ty_1{left:101px;top:928px;}
+#tz_1{left:101px;top:945px;}
+#t10_1{left:101px;top:977px;}
+#t11_1{left:101px;top:995px;}
+#t12_1{left:101px;top:1012px;}
+#t13_1{left:101px;top:1044px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 105/2002 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 17/12/2002 </div>
+<div id="t5_1" class="t s4_1">FORMULARIOS “NO CIUDADANO ARGENTINO” Y “CIUDADANO ARGENTINO”. </div>
+<div id="t6_1" class="t s3_1">En Buenos Aires, a los diecisiete días de diciembre de dos mil dos se reúnen en acuerdo </div>
+<div id="t7_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral los doctores Rodolfo E. </div>
+<div id="t8_1" class="t s3_1">Munné, Alberto Ricardo Dalla Vía y Santiago Hernán Corcuera, actuando los secretarios Dres. Jorge </div>
+<div id="t9_1" class="t s3_1">Horacio Otaño Piñero y Felipe González Roura. Abierto el acto por el señor Presidente, Rodolfo Emilio </div>
+<div id="ta_1" class="t s3_1">Munné, </div>
+<div id="tb_1" class="t s3_1">CONSIDERARON: </div>
+<div id="tc_1" class="t s3_1">Que en el marco del proyecto de asistencia para la implementación en la Cámara Nacional Electoral </div>
+<div id="td_1" class="t s3_1">del sistema de gestión de calidad conforme a la Norma ISO/IRAM 9001:2000 (cf. Acordada N° </div>
+<div id="te_1" class="t s3_1">41/2002 CNE) la señoras ingenieras Silvia Veitzman y María Inés Occhipinti, juntamente con los </div>
+<div id="tf_1" class="t s3_1">señores secretarios del Tribunal y los jefes de las respectivas áreas, proyectaron formularios </div>
+<div id="tg_1" class="t s3_1">normalizados para la solicitud de los certificados de "ciudadano argentino" y de "no ciudadano </div>
+<div id="th_1" class="t s3_1">argentino" que expide esta Cámara, así como folletos destinados a brindar información acerca de los </div>
+<div id="ti_1" class="t s3_1">correspondientes trámites y de los requisitos que se deben cumplir para iniciarlos.- </div>
+<div id="tj_1" class="t s3_1">Esos formularios tienen asimismo como propósito agilizar internamente dichos trámites y a la vez </div>
+<div id="tk_1" class="t s3_1">posibilitar una más fluida atención al público. Por otra parte, su colocación en el sitio de esta </div>
+<div id="tl_1" class="t s3_1">Cámara en Internet permitirá que quienes se encuentran en el interior del país puedan imprimirlos y </div>
+<div id="tm_1" class="t s3_1">utilizarlos para realizar el trámite por correo.- </div>
+<div id="tn_1" class="t s3_1">Por ello, </div>
+<div id="to_1" class="t s3_1">ACORDARON: </div>
+<div id="tp_1" class="t s3_1">1°) Aprobar los formularios N° 003 y 052 de solicitud de certificado de "No ciudadano argentino" y </div>
+<div id="tq_1" class="t s3_1">de "Ciudadano argentino", que se adjuntan como anexos 1 y 2, respectivamente.- </div>
+<div id="tr_1" class="t s3_1">2°) Aprobar los folletos informativos (formularios 003a y 052a) que se adjuntan como anexos 3 y 4, </div>
+<div id="ts_1" class="t s3_1">respectivamente.- </div>
+<div id="tt_1" class="t s3_1">3°) Disponer que los formularios N° 003 y 052 sean incorporados en el sitio de Internet provisto a </div>
+<div id="tu_1" class="t s3_1">este Tribunal por el Poder Judicial de la Nación a efectos de que puedan ser impresos por los </div>
+<div id="tv_1" class="t s3_1">interesados.- </div>
+<div id="tw_1" class="t s3_1">4°) Solicitar a la Dirección de Administración y Financiera del Consejo de la Magistratura la </div>
+<div id="tx_1" class="t s3_1">impresión de los referidos formularios, en las cantidades que se establezca por Secretaría.- </div>
+<div id="ty_1" class="t s3_1">5°) Expresar la gratitud del Tribunal a quienes colaboraron en la realización del proyecto que motiva </div>
+<div id="tz_1" class="t s3_1">esta acordada.- </div>
+<div id="t10_1" class="t s3_1">6°) Oficiar al Consejo de la Magistratura a los efectos de lo dispuesto en los puntos 3° y 4° y, </div>
+<div id="t11_1" class="t s3_1">oportunamente, hacer saber a los señores jueces federales electorales y a las autoridades </div>
+<div id="t12_1" class="t s3_1">consulares acreditadas en la República que correspondan.- </div>
+<div id="t13_1" class="t s3_1">Con lo que se dio por terminado el acto. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1055],['t4_1',587],['t5_1',2487],['t6_1',2933],['t7_1',2933],['t8_1',2934],['t9_1',2934],['tc_1',2934],['td_1',2934],['te_1',2933],['tf_1',2934],['tg_1',2933],['th_1',2934],['ti_1',2413],['tj_1',2934],['tk_1',2934],['tl_1',2933],['tm_1',1326],['tn_1',235],['tp_1',2934],['tq_1',2390],['tr_1',2934],['tt_1',2934],['tu_1',2934],['tw_1',2933],['tx_1',2649],['ty_1',2933],['tz_1',453],['t10_1',2934],['t11_1',2934],['t12_1',1706],['t13_1',1165]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

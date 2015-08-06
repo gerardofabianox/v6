@@ -1,0 +1,250 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load15();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_15{left:333px;top:108px;}
+#t2_15{left:331px;top:128px;}
+#t3_15{left:101px;top:191px;}
+#t4_15{left:101px;top:208px;}
+#t5_15{left:101px;top:246px;}
+#t6_15{left:101px;top:263px;}
+#t7_15{left:101px;top:301px;}
+#t8_15{left:207px;top:301px;}
+#t9_15{left:306px;top:301px;}
+#ta_15{left:101px;top:338px;}
+#tb_15{left:101px;top:376px;}
+#tc_15{left:118px;top:376px;}
+#td_15{left:101px;top:412px;}
+#te_15{left:101px;top:449px;}
+#tf_15{left:101px;top:487px;}
+#tg_15{left:101px;top:525px;}
+#th_15{left:101px;top:542px;}
+#ti_15{left:101px;top:580px;}
+#tj_15{left:101px;top:617px;}
+#tk_15{left:101px;top:635px;}
+#tl_15{left:101px;top:672px;}
+#tm_15{left:101px;top:690px;}
+#tn_15{left:101px;top:707px;}
+#to_15{left:101px;top:745px;}
+#tp_15{left:423px;top:782px;}
+#tq_15{left:359px;top:820px;}
+#tr_15{left:420px;top:858px;}
+#ts_15{left:420px;top:895px;}
+#tt_15{left:101px;top:933px;}
+#tu_15{left:202px;top:933px;}
+#tv_15{left:469px;top:933px;}
+#tw_15{left:101px;top:950px;}
+#tx_15{left:101px;top:988px;}
+#ty_15{left:101px;top:1005px;}
+#tz_15{left:101px;top:1043px;}
+
+.s3_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s5_15{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_15{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_15{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s6_15{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_15" class="t s1_15">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_15" class="t s1_15">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_15" class="t s2_15">criterios de las Juntas Electorales y tendrá respecto de éstas el alcance previsto por el artículo 303 </div>
+<div id="t4_15" class="t s2_15">del Código Procesal Civil y Comercial de la Nación. </div>
+<div id="t5_15" class="t s2_15">La secretaría electoral pondrá a disposición de la Junta la documentación y antecedentes de actos </div>
+<div id="t6_15" class="t s2_15">eleccionarios anteriores, como así también de los impresos y útiles de que es depositaria. </div>
+<div id="t7_15" class="t s3_15">Artículo 52.- </div>
+<div id="t8_15" class="t s4_15">Atribuciones.</div>
+<div id="t9_15" class="t s2_15">Son atribuciones de las Juntas Electorales; </div>
+<div id="ta_15" class="t s2_15">1. Aprobar las boletas de sufragio. </div>
+<div id="tb_15" class="t s5_15">2. </div>
+<div id="tc_15" class="t s6_15">(Inciso derogado por art. 103 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="td_15" class="t s2_15">3. Decidir sobre las impugnaciones, votos recurridos y protestas que se sometan a su consideración. </div>
+<div id="te_15" class="t s2_15">4. Resolver respecto de las causas que a su juicio fundan la validez o nulidad de la elección. </div>
+<div id="tf_15" class="t s2_15">5. Realizar el escrutinio del distrito, proclamar a los que resulten electos otorgarles sus diplomas. </div>
+<div id="tg_15" class="t s2_15">6. Nombrar al personal transitorio y afectar al de la secretaría electoral con arreglo a lo dispuesto en </div>
+<div id="th_15" class="t s2_15">el artículo anterior. </div>
+<div id="ti_15" class="t s2_15">7. Realizar las además tareas que le asigne esta ley, para lo cual podrá: </div>
+<div id="tj_15" class="t s2_15">a) Requerir de cualquier autoridad judicial o administrativa, sea nacional, provincial o municipal, la </div>
+<div id="tk_15" class="t s2_15">colaboración que estime necesaria; </div>
+<div id="tl_15" class="t s2_15">b) Arbitrar las medidas de orden, vigilancia y custodia relativas a documentos, urnas, efectos o </div>
+<div id="tm_15" class="t s2_15">locales sujetos a su disposición o autoridad, las que serán cumplidas directamente y de inmediato </div>
+<div id="tn_15" class="t s2_15">por la policía u otro organismo que cuente con efectivos para ello. </div>
+<div id="to_15" class="t s2_15">8. Llevar un libro especial de actas en el que se consignará todo lo actuado en cada elección. </div>
+<div id="tp_15" class="t s3_15">TITULO III </div>
+<div id="tq_15" class="t s3_15">De los actos preelectorales </div>
+<div id="tr_15" class="t s3_15">CAPITULO I </div>
+<div id="ts_15" class="t s4_15">Convocatoria </div>
+<div id="tt_15" class="t s3_15">Artículo 53: </div>
+<div id="tu_15" class="t s4_15">Convocatoria y fecha de elecciones.</div>
+<div id="tv_15" class="t s2_15">La convocatoria a elección de cargos nacionales y </div>
+<div id="tw_15" class="t s2_15">de parlamentarios del Mercosur será hecha por el Poder Ejecutivo nacional. </div>
+<div id="tx_15" class="t s2_15">La elección de cargos nacionales se realizará el cuarto domingo de octubre inmediatamente anterior </div>
+<div id="ty_15" class="t s2_15">a la finalización de los mandatos, sin perjuicio de las previsiones del artículo 148. </div>
+<div id="tz_15" class="t s2_15">La elección de parlamentarios del Mercosur se realizará el Día del Mercosur Ciudadano. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg15Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg15"><object width="935" height="1210" data="15/15.svg" type="image/svg+xml" id="pdf15" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld15" type="text/javascript">
+
+var isIE = false;
+var f15 = [['t1_15',1076],['t2_15',1096],['t3_15',2934],['t4_15',1461],['t5_15',2934],['t6_15',2598],['t7_15',403],['t9_15',1238],['ta_15',999],['tc_15',1794],['td_15',2918],['te_15',2669],['tf_15',2825],['tg_15',2933],['th_15',553],['ti_15',2093],['tj_15',2934],['tk_15',1022],['tl_15',2934],['tm_15',2933],['tn_15',1915],['to_15',2698],['tp_15',355],['tq_15',871],['tr_15',382],['tt_15',380],['tu_15',1047],['tv_15',1460],['tw_15',2182],['tx_15',2934],['ty_15',2360],['tz_15',2524]];
+function load15(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f15);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 36;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_15");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

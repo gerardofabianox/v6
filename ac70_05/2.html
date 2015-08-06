@@ -1,0 +1,462 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:159px;top:211px;}
+#t5_2{left:101px;top:236px;}
+#t6_2{left:468px;top:236px;}
+#t7_2{left:516px;top:236px;}
+#t8_2{left:683px;top:236px;}
+#t9_2{left:720px;top:236px;}
+#ta_2{left:737px;top:236px;}
+#tb_2{left:789px;top:236px;}
+#tc_2{left:101px;top:253px;}
+#td_2{left:369px;top:253px;}
+#te_2{left:432px;top:253px;}
+#tf_2{left:638px;top:253px;}
+#tg_2{left:101px;top:270px;}
+#th_2{left:270px;top:270px;}
+#ti_2{left:365px;top:270px;}
+#tj_2{left:101px;top:288px;}
+#tk_2{left:375px;top:288px;}
+#tl_2{left:524px;top:288px;}
+#tm_2{left:593px;top:288px;}
+#tn_2{left:623px;top:288px;}
+#to_2{left:659px;top:288px;}
+#tp_2{left:716px;top:288px;}
+#tq_2{left:101px;top:305px;}
+#tr_2{left:129px;top:305px;}
+#ts_2{left:181px;top:305px;}
+#tt_2{left:245px;top:305px;}
+#tu_2{left:276px;top:305px;}
+#tv_2{left:340px;top:305px;}
+#tw_2{left:382px;top:305px;}
+#tx_2{left:101px;top:347px;}
+#ty_2{left:101px;top:372px;}
+#tz_2{left:101px;top:389px;}
+#t10_2{left:178px;top:389px;}
+#t11_2{left:101px;top:414px;}
+#t12_2{left:476px;top:414px;}
+#t13_2{left:518px;top:414px;}
+#t14_2{left:819px;top:414px;}
+#t15_2{left:101px;top:431px;}
+#t16_2{left:528px;top:431px;}
+#t17_2{left:561px;top:431px;}
+#t18_2{left:101px;top:449px;}
+#t19_2{left:101px;top:466px;}
+#t1a_2{left:659px;top:466px;}
+#t1b_2{left:796px;top:466px;}
+#t1c_2{left:822px;top:466px;}
+#t1d_2{left:101px;top:483px;}
+#t1e_2{left:101px;top:501px;}
+#t1f_2{left:101px;top:518px;}
+#t1g_2{left:129px;top:518px;}
+#t1h_2{left:156px;top:518px;}
+#t1i_2{left:364px;top:518px;}
+#t1j_2{left:416px;top:518px;}
+#t1k_2{left:480px;top:518px;}
+#t1l_2{left:511px;top:518px;}
+#t1m_2{left:564px;top:518px;}
+#t1n_2{left:612px;top:518px;}
+#t1o_2{left:101px;top:550px;}
+#t1p_2{left:101px;top:582px;}
+#t1q_2{left:188px;top:582px;}
+#t1r_2{left:101px;top:613px;}
+#t1s_2{left:159px;top:613px;}
+#t1t_2{left:101px;top:645px;}
+#t1u_2{left:564px;top:645px;}
+#t1v_2{left:600px;top:645px;}
+#t1w_2{left:777px;top:645px;}
+#t1x_2{left:829px;top:645px;}
+#t1y_2{left:101px;top:663px;}
+#t1z_2{left:101px;top:680px;}
+#t20_2{left:190px;top:680px;}
+#t21_2{left:411px;top:680px;}
+#t22_2{left:431px;top:680px;}
+#t23_2{left:750px;top:680px;}
+#t24_2{left:829px;top:680px;}
+#t25_2{left:101px;top:698px;}
+#t26_2{left:617px;top:698px;}
+#t27_2{left:649px;top:698px;}
+#t28_2{left:679px;top:698px;}
+#t29_2{left:716px;top:698px;}
+#t2a_2{left:773px;top:698px;}
+#t2b_2{left:805px;top:698px;}
+#t2c_2{left:101px;top:715px;}
+#t2d_2{left:185px;top:715px;}
+#t2e_2{left:269px;top:715px;}
+#t2f_2{left:306px;top:715px;}
+#t2g_2{left:359px;top:715px;}
+#t2h_2{left:396px;top:715px;}
+#t2i_2{left:101px;top:747px;}
+#t2j_2{left:611px;top:747px;}
+#t2k_2{left:658px;top:747px;}
+#t2l_2{left:101px;top:764px;}
+#t2m_2{left:169px;top:764px;}
+#t2n_2{left:101px;top:781px;}
+#t2o_2{left:135px;top:781px;}
+#t2p_2{left:190px;top:781px;}
+#t2q_2{left:551px;top:781px;}
+#t2r_2{left:645px;top:781px;}
+#t2s_2{left:101px;top:799px;}
+#t2t_2{left:152px;top:799px;}
+#t2u_2{left:172px;top:799px;}
+#t2v_2{left:699px;top:799px;}
+#t2w_2{left:773px;top:799px;}
+#t2x_2{left:818px;top:799px;}
+#t2y_2{left:101px;top:816px;}
+#t2z_2{left:145px;top:816px;}
+#t30_2{left:295px;top:816px;}
+#t31_2{left:347px;top:816px;}
+#t32_2{left:405px;top:816px;}
+#t33_2{left:474px;top:816px;}
+#t34_2{left:527px;top:816px;}
+#t35_2{left:101px;top:848px;}
+#t36_2{left:674px;top:848px;}
+#t37_2{left:701px;top:848px;}
+#t38_2{left:101px;top:865px;}
+#t39_2{left:138px;top:865px;}
+#t3a_2{left:233px;top:865px;}
+#t3b_2{left:101px;top:883px;}
+#t3c_2{left:170px;top:883px;}
+#t3d_2{left:221px;top:883px;}
+#t3e_2{left:275px;top:883px;}
+#t3f_2{left:304px;top:883px;}
+#t3g_2{left:347px;top:883px;}
+#t3h_2{left:372px;top:883px;}
+#t3i_2{left:428px;top:883px;}
+#t3j_2{left:466px;top:883px;}
+#t3k_2{left:658px;top:883px;}
+#t3l_2{left:695px;top:883px;}
+#t3m_2{left:101px;top:900px;}
+#t3n_2{left:180px;top:900px;}
+#t3o_2{left:211px;top:900px;}
+#t3p_2{left:751px;top:900px;}
+#t3q_2{left:816px;top:900px;}
+#t3r_2{left:101px;top:918px;}
+#t3s_2{left:143px;top:918px;}
+#t3t_2{left:192px;top:918px;}
+#t3u_2{left:224px;top:918px;}
+#t3v_2{left:347px;top:918px;}
+#t3w_2{left:400px;top:918px;}
+#t3x_2{left:463px;top:918px;}
+#t3y_2{left:494px;top:918px;}
+#t3z_2{left:542px;top:918px;}
+#t40_2{left:595px;top:918px;}
+#t41_2{left:101px;top:949px;}
+#t42_2{left:101px;top:967px;}
+#t43_2{left:101px;top:984px;}
+#t44_2{left:101px;top:1002px;}
+#t45_2{left:101px;top:1019px;}
+#t46_2{left:101px;top:1051px;}
+#t47_2{left:101px;top:1068px;}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">Distrito.</div>
+<div id="t4_2" class="t s2_2">.......</div>
+<div id="t5_2" class="t s2_2">El Juzgado Federal con competencia Electoral de .</div>
+<div id="t6_2" class="t s2_2">.........</div>
+<div id="t7_2" class="t s2_2">, a cargo del/la Dr/a. .</div>
+<div id="t8_2" class="t s2_2">......</div>
+<div id="t9_2" class="t s2_2">. .</div>
+<div id="ta_2" class="t s2_2">..........</div>
+<div id="tb_2" class="t s2_2">, hace </div>
+<div id="tc_2" class="t s2_2">saber que en los autos caratulados .</div>
+<div id="td_2" class="t s2_2">............</div>
+<div id="te_2" class="t s2_2">, (Expte. Nº ……………………….</div>
+<div id="tf_2" class="t s2_2">....) que tramitan ante sus </div>
+<div id="tg_2" class="t s2_2">estrados, el partido .</div>
+<div id="th_2" class="t s2_2">................</div>
+<div id="ti_2" class="t s2_2">ha comunicado que el resultado de las elecciones internas </div>
+<div id="tj_2" class="t s2_2">realizadas por esa agrupación el día .</div>
+<div id="tk_2" class="t s2_2">.... es el siguiente: .</div>
+<div id="tl_2" class="t s2_2">............</div>
+<div id="tm_2" class="t s2_2">En .</div>
+<div id="tn_2" class="t s2_2">.......</div>
+<div id="to_2" class="t s2_2">, a los .</div>
+<div id="tp_2" class="t s2_2">.... días del mes </div>
+<div id="tq_2" class="t s2_2">de .</div>
+<div id="tr_2" class="t s2_2">.........</div>
+<div id="ts_2" class="t s2_2">del año .</div>
+<div id="tt_2" class="t s2_2">......</div>
+<div id="tu_2" class="t s2_2">, Dr./a. .</div>
+<div id="tv_2" class="t s2_2">........</div>
+<div id="tw_2" class="t s2_2">, Secretario/a Electoral.- </div>
+<div id="tx_2" class="t s3_2">Publicación ordenada por el artículo 15 del decreto 3213/84: </div>
+<div id="ty_2" class="t s2_2">JUZGADO FEDERAL. . . </div>
+<div id="tz_2" class="t s2_2">DISTRITO.</div>
+<div id="t10_2" class="t s2_2">...........</div>
+<div id="t11_2" class="t s2_2">El Juzgado Federal con competencia Electoral del .</div>
+<div id="t12_2" class="t s2_2">........</div>
+<div id="t13_2" class="t s2_2">, a cargo del/a Dr./a ……., sito en calle .</div>
+<div id="t14_2" class="t s2_2">... </div>
+<div id="t15_2" class="t s2_2">de la ciudad de . . . ., cita y emplaza por este medio a .</div>
+<div id="t16_2" class="t s2_2">.....</div>
+<div id="t17_2" class="t s2_2">M. I. N° . . ., de conformidad con lo </div>
+<div id="t18_2" class="t s2_2">previsto en el art. 15 del decreto 3213/84, a efectos que comparezca a estar a derecho dentro de </div>
+<div id="t19_2" class="t s2_2">los quince (l5) días contados desde la última publicación, en expediente .</div>
+<div id="t1a_2" class="t s2_2">.... , caratulado “.</div>
+<div id="t1b_2" class="t s2_2">.....</div>
+<div id="t1c_2" class="t s2_2">”, </div>
+<div id="t1d_2" class="t s2_2">caso contrario será asumida su defensa por el Sr. Defensor Oficial para que lo represente en este </div>
+<div id="t1e_2" class="t s2_2">juicio. Publíquese en tres oportunidades con intervalo de diez (10) días entre una y otra publicación. </div>
+<div id="t1f_2" class="t s2_2">En .</div>
+<div id="t1g_2" class="t s2_2">.....</div>
+<div id="t1h_2" class="t s2_2">, a los……… días del mes de .</div>
+<div id="t1i_2" class="t s2_2">.........</div>
+<div id="t1j_2" class="t s2_2">del año .</div>
+<div id="t1k_2" class="t s2_2">.....</div>
+<div id="t1l_2" class="t s2_2">Dr./ a .</div>
+<div id="t1m_2" class="t s2_2">.........</div>
+<div id="t1n_2" class="t s2_2">, Secretario/a Electoral.- </div>
+<div id="t1o_2" class="t s3_2">Publicaciones previstas en el artículo 62 de la 25.600*: </div>
+<div id="t1p_2" class="t s2_2">I. PARTIDO.</div>
+<div id="t1q_2" class="t s2_2">.....</div>
+<div id="t1r_2" class="t s2_2">Distrito.</div>
+<div id="t1s_2" class="t s2_2">..............</div>
+<div id="t1t_2" class="t s2_2">Juzgado Federal con competencia electoral en el distrito de .</div>
+<div id="t1u_2" class="t s2_2">.......</div>
+<div id="t1v_2" class="t s2_2">, a cargo del/la Dr/a. .</div>
+<div id="t1w_2" class="t s2_2">..........</div>
+<div id="t1x_2" class="t s2_2">, </div>
+<div id="t1y_2" class="t s2_2">hace saber a la población que el informe previo relativo a la campaña electoral de los comicios del . . </div>
+<div id="t1z_2" class="t s2_2">. de …. de .</div>
+<div id="t20_2" class="t s2_2">.... -articulo 54 de ley 25.600</div>
+<div id="t21_2" class="t s3_2">**</div>
+<div id="t22_2" class="t s2_2">- correspondiente a la agrupación política .</div>
+<div id="t23_2" class="t s2_2">...............</div>
+<div id="t24_2" class="t s2_2">, </div>
+<div id="t25_2" class="t s2_2">se halla disponible para su consulta en el siguiente sitio de Internet: .</div>
+<div id="t26_2" class="t s2_2">.....</div>
+<div id="t27_2" class="t s2_2">En .</div>
+<div id="t28_2" class="t s2_2">.......</div>
+<div id="t29_2" class="t s2_2">, a los .</div>
+<div id="t2a_2" class="t s2_2">.... </div>
+<div id="t2b_2" class="t s2_2">días </div>
+<div id="t2c_2" class="t s2_2">del mes de.</div>
+<div id="t2d_2" class="t s2_2">... del año .</div>
+<div id="t2e_2" class="t s2_2">......</div>
+<div id="t2f_2" class="t s2_2">Dr./a. </div>
+<div id="t2g_2" class="t s2_2">.......</div>
+<div id="t2h_2" class="t s2_2">, Secretario/ a Electoral.- </div>
+<div id="t2i_2" class="t s2_2">II. Juzgado Federal con competencia electoral en el distrito de.</div>
+<div id="t2j_2" class="t s2_2">.........</div>
+<div id="t2k_2" class="t s2_2">, a cargo del/la Dr/a. </div>
+<div id="t2l_2" class="t s2_2">.............</div>
+<div id="t2m_2" class="t s2_2">, hace saber a la población que el informe final de campaña relativo a los comicios del …. </div>
+<div id="t2n_2" class="t s2_2">de .</div>
+<div id="t2o_2" class="t s2_2">.. de .</div>
+<div id="t2p_2" class="t s2_2">... correspondiente a la agrupación política: .</div>
+<div id="t2q_2" class="t s2_2">..................</div>
+<div id="t2r_2" class="t s2_2">, -articulo 58 de la ley </div>
+<div id="t2s_2" class="t s2_2">25.600</div>
+<div id="t2t_2" class="t s3_2">**</div>
+<div id="t2u_2" class="t s2_2">- se halla disponible para su consulta en el siguiente sitio de Internet: .</div>
+<div id="t2v_2" class="t s2_2">.............</div>
+<div id="t2w_2" class="t s2_2">. . En.</div>
+<div id="t2x_2" class="t s2_2">.., </div>
+<div id="t2y_2" class="t s2_2">a los .</div>
+<div id="t2z_2" class="t s2_2">.... días del mes de .</div>
+<div id="t30_2" class="t s2_2">.........</div>
+<div id="t31_2" class="t s2_2">del año.</div>
+<div id="t32_2" class="t s2_2">.... Dr./a.</div>
+<div id="t33_2" class="t s2_2">..........</div>
+<div id="t34_2" class="t s2_2">, Secretario/a Electoral.- </div>
+<div id="t35_2" class="t s2_2">III. El Juzgado Federal con competencia electoral en el distrito de .</div>
+<div id="t36_2" class="t s2_2">.....</div>
+<div id="t37_2" class="t s2_2">, a cargo del/la </div>
+<div id="t38_2" class="t s2_2">Dr/a.</div>
+<div id="t39_2" class="t s2_2">..................</div>
+<div id="t3a_2" class="t s2_2">, hace saber a la población que los estados contables del ejercicio comprendido </div>
+<div id="t3b_2" class="t s2_2">entre el .</div>
+<div id="t3c_2" class="t s2_2">... de .</div>
+<div id="t3d_2" class="t s2_2">.........</div>
+<div id="t3e_2" class="t s2_2">de .</div>
+<div id="t3f_2" class="t s2_2">.......</div>
+<div id="t3g_2" class="t s2_2">al .</div>
+<div id="t3h_2" class="t s2_2">.... de .</div>
+<div id="t3i_2" class="t s2_2">......</div>
+<div id="t3j_2" class="t s2_2">de la agrupación política:.</div>
+<div id="t3k_2" class="t s2_2">.......</div>
+<div id="t3l_2" class="t s2_2">, -articulo 50 de la </div>
+<div id="t3m_2" class="t s2_2">ley 25.600</div>
+<div id="t3n_2" class="t s3_2">***</div>
+<div id="t3o_2" class="t s2_2">- se halla disponible para su consulta en el siguiente sitio de Internet:.</div>
+<div id="t3p_2" class="t s2_2">...........</div>
+<div id="t3q_2" class="t s2_2">En </div>
+<div id="t3r_2" class="t s2_2">........</div>
+<div id="t3s_2" class="t s2_2">, a los.</div>
+<div id="t3t_2" class="t s2_2">.... </div>
+<div id="t3u_2" class="t s2_2">días del mes de .</div>
+<div id="t3v_2" class="t s2_2">.........</div>
+<div id="t3w_2" class="t s2_2">del año .</div>
+<div id="t3x_2" class="t s2_2">.....</div>
+<div id="t3y_2" class="t s2_2">Dr./a .</div>
+<div id="t3z_2" class="t s2_2">.........</div>
+<div id="t40_2" class="t s2_2">Secretario/a Electoral.- </div>
+<div id="t41_2" class="t s2_2">2°) Hacer saber a ese Alto Tribunal que en cumplimiento de lo establecido en artículo 63 de la ley </div>
+<div id="t42_2" class="t s2_2">23.298, los magistrados ordenan la publicación del auto de reconocimiento de la personalidad </div>
+<div id="t43_2" class="t s2_2">jurídico política de las agrupaciones y su correspondiente carta orgánica. En los casos de lo </div>
+<div id="t44_2" class="t s2_2">determinado en el artículo 57 de la ley 25.600, se publican los balances e informes presentados por </div>
+<div id="t45_2" class="t s2_2">los partidos políticos.- </div>
+<div id="t46_2" class="t s2_2">Oficiar a la Corte Suprema de Justicia de la Nación, al Consejo de la Magistratura y a los señores </div>
+<div id="t47_2" class="t s2_2">Jueces federales electorales, con los que se dio por terminado el acto.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t5_2',1470],['t7_2',668],['t9_2',65],['tb_2',179],['tc_2',1073],['te_2',823],['tf_2',783],['tg_2',676],['ti_2',1876],['tj_2',1097],['tk_2',597],['tm_2',117],['to_2',225],['tp_2',474],['tq_2',111],['ts_2',253],['tu_2',254],['tw_2',712],['tx_2',1981],['ty_2',667],['t11_2',1499],['t13_2',1203],['t15_2',1708],['t17_2',1093],['t18_2',2934],['t19_2',2234],['t1a_2',547],['t1d_2',2933],['t1e_2',2933],['t1f_2',114],['t1h_2',832],['t1j_2',253],['t1l_2',212],['t1n_2',713],['t1o_2',1791],['t1p_2',350],['t1t_2',1850],['t1v_2',704],['t1y_2',2934],['t1z_2',355],['t20_2',885],['t22_2',1274],['t25_2',2065],['t27_2',117],['t29_2',227],['t2c_2',337],['t2d_2',336],['t2h_2',732],['t2i_2',2039],['t2k_2',704],['t2m_2',2659],['t2n_2',135],['t2o_2',220],['t2p_2',1442],['t2r_2',756],['t2u_2',2105],['t2w_2',181],['t2y_2',176],['t2z_2',598],['t31_2',232],['t32_2',276],['t34_2',712],['t35_2',2293],['t37_2',534],['t3a_2',2404],['t3b_2',274],['t3c_2',205],['t3e_2',116],['t3g_2',96],['t3h_2',227],['t3j_2',767],['t3l_2',557],['t3m_2',317],['t3o_2',2158],['t3s_2',197],['t3u_2',494],['t3w_2',253],['t3y_2',192],['t40_2',670],['t41_2',2934],['t42_2',2933],['t43_2',2933],['t44_2',2934],['t45_2',637],['t46_2',2934],['t47_2',2057]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 152;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

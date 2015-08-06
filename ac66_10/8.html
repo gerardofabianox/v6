@@ -1,0 +1,226 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:333px;top:128px;}
+#t2_8{left:331px;top:147px;}
+#t3_8{left:101px;top:211px;}
+#t4_8{left:101px;top:228px;}
+#t5_8{left:101px;top:260px;}
+#t6_8{left:129px;top:260px;}
+#t7_8{left:106px;top:292px;}
+#t8_8{left:101px;top:309px;}
+#t9_8{left:101px;top:327px;}
+#ta_8{left:101px;top:344px;}
+#tb_8{left:101px;top:376px;}
+#tc_8{left:101px;top:393px;}
+#td_8{left:101px;top:411px;}
+#te_8{left:101px;top:428px;}
+#tf_8{left:101px;top:460px;}
+#tg_8{left:101px;top:477px;}
+#th_8{left:101px;top:509px;}
+#ti_8{left:101px;top:526px;}
+#tj_8{left:101px;top:544px;}
+#tk_8{left:101px;top:561px;}
+#tl_8{left:101px;top:579px;}
+#tm_8{left:101px;top:610px;}
+#tn_8{left:101px;top:628px;}
+#to_8{left:101px;top:660px;}
+#tp_8{left:127px;top:660px;}
+#tq_8{left:101px;top:691px;}
+#tr_8{left:101px;top:709px;}
+#ts_8{left:101px;top:740px;}
+#tt_8{left:101px;top:758px;}
+#tu_8{left:101px;top:775px;}
+#tv_8{left:101px;top:793px;}
+#tw_8{left:101px;top:824px;}
+#tx_8{left:101px;top:842px;}
+
+.s3_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_8{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_8" class="t s1_8">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_8" class="t s2_8">Los informes serán conservados, como respaldo, en formato digital por el Registro Nacional de </div>
+<div id="t4_8" class="t s2_8">Electores.- </div>
+<div id="t5_8" class="t s2_8">III. </div>
+<div id="t6_8" class="t s3_8">Reclamos y otras fuentes de información</div>
+<div id="t7_8" class="t s2_8">Los jueces federales con competencia electoral seguirán actualizando los datos registrales con las </div>
+<div id="t8_8" class="t s2_8">comunicaciones de autoridades civiles, militares y judiciales a que se refieren los arts. 35 y 36 del </div>
+<div id="t9_8" class="t s2_8">Código Electoral Nacional, así como con los resultados derivados de reclamos (arts. 27 y 33 del </div>
+<div id="ta_8" class="t s2_8">Código Electoral Nacional) o de tareas de fiscalización (art. 17, cód. cit.).- </div>
+<div id="tb_8" class="t s2_8">En estos casos, la novedad y las constancias documentales en que se funda la decisión serán </div>
+<div id="tc_8" class="t s2_8">cargadas al sistema con el código de movimiento correspondiente y en el formato que se dispondrá </div>
+<div id="td_8" class="t s2_8">con arreglo a la capacidad tecnológica disponible para la más rápida tramitación de estas </div>
+<div id="te_8" class="t s2_8">cuestiones.- </div>
+<div id="tf_8" class="t s2_8">El Registro Nacional de Electores comunicará las novedades al ReNaPer, con copia de las constancias </div>
+<div id="tg_8" class="t s2_8">documentales (art. cit.).- </div>
+<div id="th_8" class="t s2_8">Las secretarías electorales fiscalizarán, de modo permanente, los datos contenidos en el subregistro </div>
+<div id="ti_8" class="t s2_8">de electores de su distrito, utilizando otras fuentes de información confiables y desarrollando incluso </div>
+<div id="tj_8" class="t s2_8">trabajo de campo y, en su caso, efectuarán las correcciones correspondientes mediante la utilización </div>
+<div id="tk_8" class="t s2_8">de un código de movimiento creado al efecto. Las situaciones irregulares deberán comunicarse al </div>
+<div id="tl_8" class="t s2_8">Registro Nacional de Electores.- </div>
+<div id="tm_8" class="t s2_8">A tal fin, se deberá disponer en el ámbito de las secretarías electorales de oficinas de fiscalización </div>
+<div id="tn_8" class="t s2_8">que actuarán en forma coordinada con la oficina de fiscalización del Registro Nacional de Electores.- </div>
+<div id="to_8" class="t s2_8">IV. </div>
+<div id="tp_8" class="t s3_8">Defunciones</div>
+<div id="tq_8" class="t s2_8">Para las comunicaciones sobre defunciones, se mantendrá el sistema vigente hasta tanto este </div>
+<div id="tr_8" class="t s2_8">Tribunal disponga lo contrario.- </div>
+<div id="ts_8" class="t s2_8">Además, las Secretarías Electorales informarán al Registro Nacional de Electores trimestralmente o </div>
+<div id="tt_8" class="t s2_8">cuando éste lo solicite la cantidad de documentos cívicos en condiciones de ser destruidos (art. 22 </div>
+<div id="tu_8" class="t s2_8">CEN). En base a dicha información se resolverá sobre la forma y el lugar en que la destrucción se </div>
+<div id="tv_8" class="t s2_8">llevará a cabo.- </div>
+<div id="tw_8" class="t s2_8">La documentación que dio lugar a la baja no será destruida y en la medida en que se provea la </div>
+<div id="tx_8" class="t s2_8">tecnología correspondiente deberá digitalizarse para su almacenamiento.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="935" height="1210" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t1_8',1076],['t2_8',1095],['t3_8',2933],['t6_8',1323],['t7_8',2913],['t8_8',2933],['t9_8',2933],['ta_8',2147],['tb_8',2933],['tc_8',2933],['td_8',2934],['tf_8',2934],['tg_8',733],['th_8',2933],['ti_8',2934],['tj_8',2933],['tk_8',2934],['tl_8',923],['tm_8',2933],['tn_8',2903],['tq_8',2933],['tr_8',910],['ts_8',2933],['tt_8',2934],['tu_8',2934],['tv_8',450],['tw_8',2934],['tx_8',2143]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 34;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

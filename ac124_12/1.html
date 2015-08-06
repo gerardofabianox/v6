@@ -1,0 +1,257 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:248px;}
+#t5_1{left:101px;top:280px;}
+#t6_1{left:101px;top:311px;}
+#t7_1{left:101px;top:329px;}
+#t8_1{left:101px;top:346px;}
+#t9_1{left:101px;top:364px;}
+#ta_1{left:101px;top:381px;}
+#tb_1{left:101px;top:413px;}
+#tc_1{left:101px;top:445px;}
+#td_1{left:101px;top:462px;}
+#te_1{left:101px;top:479px;}
+#tf_1{left:101px;top:497px;}
+#tg_1{left:101px;top:514px;}
+#th_1{left:101px;top:532px;}
+#ti_1{left:101px;top:563px;}
+#tj_1{left:101px;top:581px;}
+#tk_1{left:101px;top:598px;}
+#tl_1{left:101px;top:616px;}
+#tm_1{left:101px;top:633px;}
+#tn_1{left:101px;top:650px;}
+#to_1{left:101px;top:682px;}
+#tp_1{left:101px;top:700px;}
+#tq_1{left:101px;top:717px;}
+#tr_1{left:101px;top:734px;}
+#ts_1{left:101px;top:752px;}
+#tt_1{left:101px;top:769px;}
+#tu_1{left:101px;top:787px;}
+#tv_1{left:101px;top:804px;}
+#tw_1{left:706px;top:804px;}
+#tx_1{left:101px;top:822px;}
+#ty_1{left:101px;top:839px;}
+#tz_1{left:101px;top:871px;}
+#t10_1{left:101px;top:888px;}
+#t11_1{left:101px;top:906px;}
+#t12_1{left:101px;top:937px;}
+#t13_1{left:101px;top:955px;}
+#t14_1{left:101px;top:972px;}
+#t15_1{left:101px;top:990px;}
+#t16_1{left:101px;top:1007px;}
+#t17_1{left:101px;top:1039px;}
+#t18_1{left:101px;top:1056px;}
+#t19_1{left:101px;top:1074px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N° 124/2012 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 20/12/2012 </div>
+<div id="t5_1" class="t s4_1">CREACIÓN DEL CONSEJO FEDERAL ELECTORAL (COFEL). </div>
+<div id="t6_1" class="t s3_1">En Buenos Aires, a los veinte días del mes de diciembre del año dos mil doce, se reúnen en acuerdo </div>
+<div id="t7_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Santiago Hernán </div>
+<div id="t8_1" class="t s3_1">Corcuera, Alberto Ricardo Dalla Via y Rodolfo Emilio Munné, actuando los Secretarios de la Cámara </div>
+<div id="t9_1" class="t s3_1">doctores Hernán Gonçalves Figueiredo y Sebastián Schimmel. Abierto el acto por el señor Presidente </div>
+<div id="ta_1" class="t s3_1">doctor Santiago Hernán Corcuera, </div>
+<div id="tb_1" class="t s3_1">CONSIDERARON: </div>
+<div id="tc_1" class="t s3_1">1°) Que como responsable de la administración electoral federal, el fuero -del que esta Cámara es la </div>
+<div id="td_1" class="t s3_1">“autoridad superior” (art. 5°, ley 19.108 y sus modif.)- tiene a su cargo todo lo relativo a la </div>
+<div id="te_1" class="t s3_1">organización, dirección y control de los procesos electorales, entendidos como el conjunto de actos </div>
+<div id="tf_1" class="t s3_1">regulados jurídicamente y dirigidos a posibilitar la auténtica expresión de la voluntad política de la </div>
+<div id="tg_1" class="t s3_1">ciudadanía (cf. Fallos CNE 3473/05 y 3533/05 y doctrina de Ac. N° 107/06; 128/09 CNE, y sus </div>
+<div id="th_1" class="t s3_1">citas).- </div>
+<div id="ti_1" class="t s3_1">Por tal razón, la justicia nacional electoral fue investida de una naturaleza específica y singular, </div>
+<div id="tj_1" class="t s3_1">acorde con el rol atribuido legislativamente en todo lo relativo a la organización de los procesos </div>
+<div id="tk_1" class="t s3_1">electorales, respondiendo, por otra parte, a la tradición histórico-institucional según la cual, desde </div>
+<div id="tl_1" class="t s3_1">las primeras regulaciones sobre la materia, la administración y fiscalización de los procesos dirigidos </div>
+<div id="tm_1" class="t s3_1">a poner en ejercicio la soberanía popular para constituir directa o indirectamente a las autoridades </div>
+<div id="tn_1" class="t s3_1">de la Nación fue encomendada a magistrados judiciales (Ac. N° 107/06 CNE).- </div>
+<div id="to_1" class="t s3_1">Asimismo, en virtud de la condición aludida -cf. primer párrafo-, el Tribunal ejerce potestades </div>
+<div id="tp_1" class="t s3_1">reglamentarias, operativas, de dirección y fiscalización con relación a los registros de distrito -</div>
+<div id="tq_1" class="t s3_1">llevados en el ámbito de los juzgados federales con competencia electoral- así como también </div>
+<div id="tr_1" class="t s3_1">respecto de una multiplicidad de registros nacionales que de él dependen (cf. art., 4° de la ley </div>
+<div id="ts_1" class="t s3_1">19.108 -y sus modif.-, incs. “a”, “b” y “c”, y art. 39 de la ley 23.298). En efecto, cabe recordar que </div>
+<div id="tt_1" class="t s3_1">el Tribunal tiene la atribución de dictar las normas a que deberá sujetarse la formación y el </div>
+<div id="tu_1" class="t s3_1">funcionamiento de los registros generales y subregistros de distrito (cf. arts. cit.), así como también </div>
+<div id="tv_1" class="t s3_1">la de “disponer la organización, confección y actualización de los datos que [.</div>
+<div id="tw_1" class="t s3_1">..] componen [el </div>
+<div id="tx_1" class="t s3_1">Registro Nacional de Electores]” (cf. art. 17 del Código Electoral Nacional) y establecer las </div>
+<div id="ty_1" class="t s3_1">modalidades de actualización de los asientos registrales de los electores (Ac. N° 137/10 CNE).- </div>
+<div id="tz_1" class="t s3_1">Por otra parte, la ley prevé además que a esta Cámara le corresponde “dictar las reglas necesarias </div>
+<div id="t10_1" class="t s3_1">para el cumplimiento de las normas que rigen las materias propias de su competencia” (cf. art. 4° </div>
+<div id="t11_1" class="t s3_1">cit., inc. “h”).- </div>
+<div id="t12_1" class="t s3_1">2°) Que, en ese marco vale recordar que -como se expuso en otras ocasiones- el Tribunal ha venido </div>
+<div id="t13_1" class="t s3_1">promoviendo espacios de trabajo a fin de que los magistrados y funcionarios del fuero compartan </div>
+<div id="t14_1" class="t s3_1">sus experiencias e iniciativas, con el propósito de fortalecer la más eficiente gestión de las funciones </div>
+<div id="t15_1" class="t s3_1">a cargo del fuero y de asegurar el estudio constante de la organización de los procesos electorales </div>
+<div id="t16_1" class="t s3_1">(Ac. N° 57/09 CNE).- </div>
+<div id="t17_1" class="t s3_1">En tal sentido, se han llevado a cabo numerosas Reuniones Nacionales de Jueces Federales </div>
+<div id="t18_1" class="t s3_1">Electorales y, asimismo, desde que fuera creada mediante Acordada N° 68/08 CNE, también se </div>
+<div id="t19_1" class="t s3_1">realizaron periódicamente reuniones de la Comisión de Gestión Judicial para la Justicia Nacional </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',1055],['t4_1',587],['t5_1',1815],['t6_1',2933],['t7_1',2933],['t8_1',2934],['t9_1',2934],['ta_1',987],['tc_1',2934],['td_1',2933],['te_1',2933],['tf_1',2933],['tg_1',2934],['ti_1',2935],['tj_1',2934],['tk_1',2933],['tl_1',2934],['tm_1',2933],['tn_1',2282],['to_1',2934],['tp_1',2933],['tq_1',2934],['tr_1',2934],['ts_1',2934],['tt_1',2934],['tu_1',2934],['tv_1',2420],['tw_1',512],['tx_1',2933],['ty_1',2763],['tz_1',2933],['t10_1',2933],['t11_1',417],['t12_1',2933],['t13_1',2933],['t14_1',2934],['t15_1',2934],['t16_1',618],['t17_1',2933],['t18_1',2934],['t19_1',2933]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

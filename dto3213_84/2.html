@@ -1,0 +1,234 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:108px;}
+#t2_2{left:331px;top:128px;}
+#t3_2{left:101px;top:191px;}
+#t4_2{left:101px;top:208px;}
+#t5_2{left:101px;top:226px;}
+#t6_2{left:101px;top:263px;}
+#t7_2{left:101px;top:281px;}
+#t8_2{left:101px;top:318px;}
+#t9_2{left:101px;top:336px;}
+#ta_2{left:101px;top:373px;}
+#tb_2{left:101px;top:391px;}
+#tc_2{left:101px;top:428px;}
+#td_2{left:101px;top:446px;}
+#te_2{left:101px;top:483px;}
+#tf_2{left:101px;top:521px;}
+#tg_2{left:101px;top:559px;}
+#th_2{left:101px;top:576px;}
+#ti_2{left:101px;top:614px;}
+#tj_2{left:101px;top:651px;}
+#tk_2{left:101px;top:669px;}
+#tl_2{left:101px;top:706px;}
+#tm_2{left:101px;top:724px;}
+#tn_2{left:101px;top:741px;}
+#to_2{left:101px;top:759px;}
+#tp_2{left:101px;top:796px;}
+#tq_2{left:101px;top:814px;}
+#tr_2{left:101px;top:831px;}
+#ts_2{left:101px;top:849px;}
+#tt_2{left:101px;top:866px;}
+#tu_2{left:101px;top:884px;}
+#tv_2{left:101px;top:921px;}
+#tw_2{left:161px;top:921px;}
+#tx_2{left:101px;top:939px;}
+#ty_2{left:101px;top:976px;}
+#tz_2{left:101px;top:994px;}
+#t10_2{left:101px;top:1031px;}
+#t11_2{left:101px;top:1049px;}
+
+.s3_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">a) haber desempeñado con honradez empleos en la Administración Pública Nacional, Provincial o </div>
+<div id="t4_2" class="t s2_2">Municipal o en el Territorio Nacional de la Tierra del Fuego, Antártida e Islas del Atlántico Sud, </div>
+<div id="t5_2" class="t s2_2">dentro o fuera de la República. </div>
+<div id="t6_2" class="t s2_2">b) haber servido en las Fuerzas Armadas Argentinas o haber asistido a una acción de guerra en </div>
+<div id="t7_2" class="t s2_2">defensa de la Nación. </div>
+<div id="t8_2" class="t s2_2">c) haber establecido en el país una nueva industria, introducido una invención útil o realizado </div>
+<div id="t9_2" class="t s2_2">cualquier otra acción que signifique un adelanto moral o material para la República. </div>
+<div id="ta_2" class="t s2_2">d) hallarse formando parte de las colonias establecidas o que se establecieren en cualquier punto del </div>
+<div id="tb_2" class="t s2_2">país. </div>
+<div id="tc_2" class="t s2_2">e) habitar o promover el poblamiento del Territorio Nacional de la Tierra del Fuego, Antártida e Islas </div>
+<div id="td_2" class="t s2_2">del Atlántico Sud. </div>
+<div id="te_2" class="t s2_2">f) tener cónyuge o hijo argentino nativo. </div>
+<div id="tf_2" class="t s2_2">g) ejercer la docencia en cualquiera de sus ramas. </div>
+<div id="tg_2" class="t s2_2">Son causas que impedirán el otorgamiento de la ciudadanía argentina por naturalización, las </div>
+<div id="th_2" class="t s2_2">siguientes: </div>
+<div id="ti_2" class="t s2_2">a) no tener ocupación o medios de subsistencia honestos </div>
+<div id="tj_2" class="t s2_2">b) estar procesado en el país, o en el extranjero por delito previsto en la legislación penal argentina, </div>
+<div id="tk_2" class="t s2_2">hasta no ser separado de la causa. </div>
+<div id="tl_2" class="t s2_2">c) haber sido condenado por delito doloso, ya fuere en el país o en el extranjero, a pena privativa de </div>
+<div id="tm_2" class="t s2_2">libertad mayor de tres (3) años, salvo que la misma hubiere sido cumplida y hubieren transcurrido </div>
+<div id="tn_2" class="t s2_2">cinco (5) años desde el vencimiento del término de la pena fijada en la condena o hubiere mediado </div>
+<div id="to_2" class="t s2_2">amnistía. </div>
+<div id="tp_2" class="t s2_2">No podrá negarse la ciudadanía argentina por motivos fundados en razones políticas, ideológicas, </div>
+<div id="tq_2" class="t s2_2">gremiales, religiosas o raciales, en acciones privadas o en caracteres físicos de los solicitantes; sin </div>
+<div id="tr_2" class="t s2_2">perjuicio de ello, el Juzgado inteviniente podrá denegar la solicitud cuando estuviere plenamente </div>
+<div id="ts_2" class="t s2_2">probado que el causante realizó actos de carácter público que significaron la negación de los </div>
+<div id="tt_2" class="t s2_2">derechos humanos, la sustitución del sistema democrático, el empleo ilegal de la fuerza o la </div>
+<div id="tu_2" class="t s2_2">concentración personal del poder. </div>
+<div id="tv_2" class="t s3_2">Art. 4°</div>
+<div id="tw_2" class="t s2_2">— El extranjero que desee naturalizarze argentino, deberá presentarse ante el Juez Federal </div>
+<div id="tx_2" class="t s2_2">con competencia en su domicilio. </div>
+<div id="ty_2" class="t s2_2">En la solicitud el interesado deberá indicar claramente su nombre y apellido paterno y materno, </div>
+<div id="tz_2" class="t s2_2">fecha y lugar de nacimiento, nacionalidad o ciudadanía de origen y domicilio. </div>
+<div id="t10_2" class="t s2_2">La fecha y lugar de nacimiento, la nacionalidad o ciudadanía de origen, se probarán por alguno de </div>
+<div id="t11_2" class="t s2_2">los siguientes medios: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1096],['t3_2',2933],['t4_2',2933],['t5_2',893],['t6_2',2934],['t7_2',621],['t8_2',2933],['t9_2',2426],['ta_2',2934],['tc_2',2933],['td_2',510],['te_2',1177],['tf_2',1462],['tg_2',2933],['ti_2',1657],['tj_2',2933],['tk_2',1010],['tl_2',2935],['tm_2',2933],['tn_2',2934],['tp_2',2933],['tq_2',2934],['tr_2',2933],['ts_2',2934],['tt_2',2934],['tu_2',979],['tv_2',217],['tw_2',2693],['tx_2',959],['ty_2',2933],['tz_2',2231],['t10_2',2934],['t11_2',644]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

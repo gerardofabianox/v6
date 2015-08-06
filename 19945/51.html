@@ -1,0 +1,267 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load51();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_51{left:333px;top:108px;}
+#t2_51{left:331px;top:128px;}
+#t3_51{left:101px;top:191px;}
+#t4_51{left:101px;top:208px;}
+#t5_51{left:101px;top:246px;}
+#t6_51{left:560px;top:246px;}
+#t7_51{left:101px;top:282px;}
+#t8_51{left:101px;top:319px;}
+#t9_51{left:226px;top:319px;}
+#ta_51{left:101px;top:337px;}
+#tb_51{left:101px;top:354px;}
+#tc_51{left:101px;top:392px;}
+#td_51{left:101px;top:428px;}
+#te_51{left:101px;top:465px;}
+#tf_51{left:222px;top:465px;}
+#tg_51{left:101px;top:483px;}
+#th_51{left:101px;top:500px;}
+#ti_51{left:101px;top:538px;}
+#tj_51{left:101px;top:555px;}
+#tk_51{left:101px;top:593px;}
+#tl_51{left:101px;top:609px;}
+#tm_51{left:272px;top:609px;}
+#tn_51{left:101px;top:644px;}
+#to_51{left:402px;top:644px;}
+#tp_51{left:101px;top:682px;}
+#tq_51{left:223px;top:682px;}
+#tr_51{left:101px;top:699px;}
+#ts_51{left:101px;top:717px;}
+#tt_51{left:101px;top:755px;}
+#tu_51{left:101px;top:770px;}
+#tv_51{left:272px;top:770px;}
+#tw_51{left:101px;top:806px;}
+#tx_51{left:417px;top:806px;}
+#ty_51{left:101px;top:823px;}
+#tz_51{left:101px;top:841px;}
+#t10_51{left:601px;top:842px;}
+#t11_51{left:101px;top:879px;}
+#t12_51{left:821px;top:879px;}
+#t13_51{left:101px;top:914px;}
+#t14_51{left:228px;top:914px;}
+#t15_51{left:101px;top:932px;}
+#t16_51{left:101px;top:969px;}
+#t17_51{left:220px;top:969px;}
+#t18_51{left:101px;top:987px;}
+#t19_51{left:101px;top:1004px;}
+#t1a_51{left:577px;top:1006px;}
+#t1b_51{left:101px;top:1022px;}
+
+.s5_51{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_51{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_51{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_51{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_51{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_51" class="t s1_51">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_51" class="t s1_51">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_51" class="t s2_51">Resultará electo el titular de la lista que obtuviere el mayor número de sufragios, y el suplente lo </div>
+<div id="t4_51" class="t s2_51">sustituirá en los casos previstos por el artículo 62 de la Constitución Nacional. </div>
+<div id="t5_51" class="t s3_51">(Artículo incorporado por art. 3 de la Ley N° 24.444 B.O. 19/01/1995)</div>
+<div id="t6_51" class="t s4_51">. </div>
+<div id="t7_51" class="t s5_51">Documentos cívicos. </div>
+<div id="t8_51" class="t s5_51">Artículo 167.- </div>
+<div id="t9_51" class="t s2_51">La Libreta de Enrolamiento (Ley 11.386), la Libreta Cívica (Ley 13.010) y el </div>
+<div id="ta_51" class="t s2_51">Documento Nacional de Identidad (D.N.I.), en cualquiera de sus formatos (Ley 17.671) son </div>
+<div id="tb_51" class="t s2_51">documentos habilitantes a los fines de esta ley. </div>
+<div id="tc_51" class="t s3_51">(Artículo sustituido por art. 10 de la Ley 26.744 B.O. 11/06/2012)</div>
+<div id="td_51" class="t s5_51">Franquicias. </div>
+<div id="te_51" class="t s5_51">Artículo 168.- </div>
+<div id="tf_51" class="t s2_51">Los envíos y comunicaciones que deban cursarse en base a las disposiciones del </div>
+<div id="tg_51" class="t s2_51">presente Código, por intermedio de servicios oficiales, serán considerados como piezas oficiales </div>
+<div id="th_51" class="t s2_51">libres de porte o sin cargo. </div>
+<div id="ti_51" class="t s2_51">Las franquicias postales, telegráficas, de transporte o de cualquier otra naturaleza que se concedan </div>
+<div id="tj_51" class="t s2_51">a los funcionarios, empleados y demás autoridades, se determinarán por el Ministerio del Interior. </div>
+<div id="tk_51" class="t s3_51">(Artículo modificado por art. 4 de la Ley N° 24.444 B.O. 19/01/1995. El artículo 159 anterior cambia su </div>
+<div id="tl_51" class="t s3_51">numeración al 168 actual)</div>
+<div id="tm_51" class="t s4_51">. </div>
+<div id="tn_51" class="t s5_51">Disposiciones legales que se derogan</div>
+<div id="to_51" class="t s2_51">. </div>
+<div id="tp_51" class="t s5_51">Artículo 169.- </div>
+<div id="tq_51" class="t s2_51">Deróganse: la Ley N. 16.582 y sus decretos reglamentarios; los Decretos-Leyes </div>
+<div id="tr_51" class="t s2_51">Nros. 4.034/57, 5.054/57, 15.099/57, 335/58, 7.164/62, 3.284/63 y toda otra disposición </div>
+<div id="ts_51" class="t s2_51">complementaria de los mismos que se oponga a la presente. </div>
+<div id="tt_51" class="t s3_51">(Artículo modificado por art. 4 de la Ley N° 24.444 B.O. 19/01/1995. El artículo 160 anterior cambia su </div>
+<div id="tu_51" class="t s3_51">numeración al 169 actual)</div>
+<div id="tv_51" class="t s4_51">. </div>
+<div id="tw_51" class="t s5_51">Artículo s/n (Artículo 2 Ley 23.168).- </div>
+<div id="tx_51" class="t s2_51">Los ciudadanos que cumplan 18 años entre el día 31 de </div>
+<div id="ty_51" class="t s2_51">enero de 1985 y el día 31 de mayo del mismo año deberán ser incluídos en el padrón </div>
+<div id="tz_51" class="t s2_51">correspondiente, a cuyo efecto se adoptarán las medidas pertinentes</div>
+<div id="t10_51" class="t s4_51">. </div>
+<div id="t11_51" class="t s3_51">(Artículo incluido a continuación del art. 160 transitoriamente, por art. 2 de la Ley N° 23.168 B.O. 17/1/1985)</div>
+<div id="t12_51" class="t s4_51">. </div>
+<div id="t13_51" class="t s5_51">Artículo 170.- </div>
+<div id="t14_51" class="t s2_51">Comuníquese, publíquese, dése a la Dirección Nacional del Registro Oficial y </div>
+<div id="t15_51" class="t s2_51">archívese. BIGNONE-RESTON </div>
+<div id="t16_51" class="t s5_51">Artículo 171.- </div>
+<div id="t17_51" class="t s2_51">Todas aquellas normas del Código Electoral Nacional, Ley 19.945, t.o. por decreto </div>
+<div id="t18_51" class="t s2_51">2135/83 y sus modificatorias, que se refieran a los dos suplentes del presidente de mesa deberán </div>
+<div id="t19_51" class="t s2_51">entenderse como referidas al suplente del presidente de mesa.</div>
+<div id="t1a_51" class="t s3_51">(Artículo incorporado por art. 12 de la </div>
+<div id="t1b_51" class="t s3_51">Ley N° 25.610 B.O. 08/07/2002) </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg51Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg51"><object width="935" height="1210" data="51/51.svg" type="image/svg+xml" id="pdf51" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld51" type="text/javascript">
+
+var isIE = false;
+var f51 = [['t1_51',1076],['t2_51',1096],['t3_51',2934],['t4_51',2258],['t5_51',1837],['t7_51',659],['t8_51',463],['t9_51',2431],['ta_51',2934],['tb_51',1375],['tc_51',1728],['te_51',454],['tf_51',2449],['tg_51',2933],['th_51',777],['ti_51',2933],['tj_51',2846],['tk_51',2934],['tl_51',683],['tn_51',1206],['tp_51',456],['tq_51',2445],['tr_51',2934],['ts_51',1761],['tt_51',2934],['tu_51',683],['tw_51',1236],['tx_51',1671],['ty_51',2934],['tz_51',2001],['t11_51',2881],['t13_51',465],['t14_51',2427],['t15_51',855],['t16_51',450],['t17_51',2456],['t18_51',2933],['t19_51',1879],['t1a_51',1030],['t1b_51',861]];
+function load51(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f51);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 48;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_51");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load13();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_13{left:333px;top:108px;}
+#t2_13{left:331px;top:128px;}
+#t3_13{left:101px;top:191px;}
+#t4_13{left:101px;top:208px;}
+#t5_13{left:101px;top:246px;}
+#t6_13{left:101px;top:292px;}
+#t7_13{left:101px;top:328px;}
+#t8_13{left:207px;top:328px;}
+#t9_13{left:310px;top:328px;}
+#ta_13{left:101px;top:365px;}
+#tb_13{left:101px;top:403px;}
+#tc_13{left:101px;top:421px;}
+#td_13{left:101px;top:458px;}
+#te_13{left:101px;top:476px;}
+#tf_13{left:101px;top:493px;}
+#tg_13{left:101px;top:531px;}
+#th_13{left:101px;top:548px;}
+#ti_13{left:101px;top:566px;}
+#tj_13{left:101px;top:603px;}
+#tk_13{left:101px;top:621px;}
+#tl_13{left:101px;top:638px;}
+#tm_13{left:101px;top:676px;}
+#tn_13{left:101px;top:693px;}
+#to_13{left:780px;top:695px;}
+#tp_13{left:790px;top:695px;}
+#tq_13{left:101px;top:711px;}
+#tr_13{left:101px;top:747px;}
+#ts_13{left:101px;top:784px;}
+#tt_13{left:209px;top:784px;}
+#tu_13{left:533px;top:784px;}
+#tv_13{left:101px;top:802px;}
+#tw_13{left:101px;top:819px;}
+#tx_13{left:101px;top:857px;}
+#ty_13{left:101px;top:874px;}
+#tz_13{left:101px;top:912px;}
+#t10_13{left:101px;top:929px;}
+#t11_13{left:101px;top:967px;}
+#t12_13{left:101px;top:984px;}
+#t13_13{left:101px;top:1022px;}
+#t14_13{left:101px;top:1039px;}
+#t15_13{left:101px;top:1057px;}
+
+.s4_13{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s6_13{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_13{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_13{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_13{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_13{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_13" class="t s1_13">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_13" class="t s1_13">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_13" class="t s2_13">5. Designar auxiliares ad-hoc, para la realización de tareas electorales, a funcionarios nacionales, </div>
+<div id="t4_13" class="t s2_13">provinciales o municipales. Las designaciones se considerarán carga pública. </div>
+<div id="t5_13" class="t s2_13">6. Cumplimentar las demás funciones que esta ley les encomienda específicamente. </div>
+<div id="t6_13" class="t s3_13">(Artículo modificado por art. 3° de la Ley N° 26.774 B.O. 02/11/2012) </div>
+<div id="t7_13" class="t s4_13">Artículo 44.- </div>
+<div id="t8_13" class="t s5_13">Competencia.</div>
+<div id="t9_13" class="t s2_13">Los jueces electorales conocerán a pedido de parte o de oficio: </div>
+<div id="ta_13" class="t s2_13">1. En primera y única instancia en los juicios sobre faltas electorales. </div>
+<div id="tb_13" class="t s2_13">2. En primera instancia, y con apelación ante la Cámara Nacional Electoral, en todas las cuestiones </div>
+<div id="tc_13" class="t s2_13">relacionadas con: </div>
+<div id="td_13" class="t s2_13">a) La aplicación de la Ley Electoral, Ley Orgánica de los Partidos Políticos y de las disposiciones </div>
+<div id="te_13" class="t s2_13">complementarias y reglamentarias, en todo lo que no fuere atribuido expresamente a las juntas </div>
+<div id="tf_13" class="t s2_13">electorales; </div>
+<div id="tg_13" class="t s2_13">b) La fundación, constitución, organización, funcionamiento, caducidad y extinción de los partidos </div>
+<div id="th_13" class="t s2_13">políticos de su distrito; y, en su caso, de los partidos nacionales, confederaciones, alianzas o </div>
+<div id="ti_13" class="t s2_13">fusiones; </div>
+<div id="tj_13" class="t s2_13">c) El efectivo control y fiscalización patrimonial de los partidos mediante examen y aprobación o </div>
+<div id="tk_13" class="t s2_13">desaprobación de los estados contables que deben presentarse de conformidad con lo dispuesto por </div>
+<div id="tl_13" class="t s2_13">la Ley Orgánica de los Partidos Políticos, previo dictamen fiscal; </div>
+<div id="tm_13" class="t s2_13">d) La organización y fiscalización de las faltas electorales, nombres, símbolos, emblemas y números </div>
+<div id="tn_13" class="t s2_13">de identificación de los partidos políticos y de afiliados de los mismos en el distrito pertinente</div>
+<div id="to_13" class="t s6_13">. </div>
+<div id="tp_13" class="t s3_13">(Inciso </div>
+<div id="tq_13" class="t s3_13">modificado por art. 87 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tr_13" class="t s2_13">e) La elección, escrutinio y proclamación de las autoridades partidarias de su distrito. </div>
+<div id="ts_13" class="t s4_13">Artículo 45.- </div>
+<div id="tt_13" class="t s5_13">Organización de las secretarías electorales. </div>
+<div id="tu_13" class="t s2_13">Cada juzgado contará con una secretaría </div>
+<div id="tv_13" class="t s2_13">electoral, que estará a cargo de un funcionario que deberá reunir las calidades exigidas por la ley de </div>
+<div id="tw_13" class="t s2_13">organización de la justicia nacional. </div>
+<div id="tx_13" class="t s2_13">El secretario electoral será auxiliado por un prosecretario, quien también reunirá sus mismas </div>
+<div id="ty_13" class="t s2_13">calidades. </div>
+<div id="tz_13" class="t s2_13">El secretario y prosecretario no podrán estar vinculados con el juez por parentesco en cuarto grado </div>
+<div id="t10_13" class="t s2_13">de consanguinidad y segundo de afinidad. </div>
+<div id="t11_13" class="t s2_13">En caso de vacancia, ausencia o impedimento, el secretario será subrogado por el prosecretario, con </div>
+<div id="t12_13" class="t s2_13">iguales deberes y atribuciones. </div>
+<div id="t13_13" class="t s2_13">Por vacancia, ausencia o impedimento del secretario y prosecretario electoral, sus funciones serán </div>
+<div id="t14_13" class="t s2_13">desempeñadas en cada distrito por los secretarios de actuación del juzgado federal respectivo, que </div>
+<div id="t15_13" class="t s2_13">designe la pertinente cámara de apelaciones. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg13Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg13"><object width="935" height="1210" data="13/13.svg" type="image/svg+xml" id="pdf13" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld13" type="text/javascript">
+
+var isIE = false;
+var f13 = [['t1_13',1076],['t2_13',1096],['t3_13',2933],['t4_13',2220],['t5_13',2437],['t6_13',1839],['t7_13',403],['t9_13',1821],['ta_13',2004],['tb_13',2934],['tc_13',508],['td_13',2934],['te_13',2934],['tg_13',2934],['th_13',2933],['tj_13',2934],['tk_13',2934],['tl_13',1844],['tm_13',2933],['tn_13',2718],['tq_13',1604],['tr_13',2476],['ts_13',407],['tt_13',1270],['tu_13',1207],['tv_13',2933],['tw_13',1029],['tx_13',2933],['tz_13',2933],['t10_13',1216],['t11_13',2934],['t12_13',898],['t13_13',2933],['t14_13',2933],['t15_13',1311]];
+function load13(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f13);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_13");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

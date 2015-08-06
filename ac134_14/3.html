@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:242px;}
+#t6_3{left:101px;top:260px;}
+#t7_3{left:101px;top:277px;}
+#t8_3{left:101px;top:294px;}
+#t9_3{left:101px;top:326px;}
+#ta_3{left:101px;top:344px;}
+#tb_3{left:101px;top:361px;}
+#tc_3{left:101px;top:378px;}
+#td_3{left:101px;top:410px;}
+#te_3{left:101px;top:428px;}
+#tf_3{left:101px;top:445px;}
+#tg_3{left:101px;top:463px;}
+#th_3{left:101px;top:494px;}
+#ti_3{left:101px;top:512px;}
+#tj_3{left:101px;top:529px;}
+#tk_3{left:101px;top:546px;}
+#tl_3{left:101px;top:564px;}
+#tm_3{left:101px;top:581px;}
+#tn_3{left:101px;top:613px;}
+#to_3{left:101px;top:645px;}
+#tp_3{left:101px;top:677px;}
+#tq_3{left:101px;top:694px;}
+#tr_3{left:101px;top:711px;}
+#ts_3{left:101px;top:729px;}
+#tt_3{left:101px;top:746px;}
+#tu_3{left:101px;top:764px;}
+#tv_3{left:101px;top:795px;}
+#tw_3{left:101px;top:813px;}
+#tx_3{left:101px;top:830px;}
+#ty_3{left:101px;top:862px;}
+#tz_3{left:101px;top:879px;}
+#t10_3{left:101px;top:911px;}
+#t11_3{left:101px;top:928px;}
+#t12_3{left:101px;top:946px;}
+#t13_3{left:101px;top:963px;}
+#t14_3{left:101px;top:981px;}
+#t15_3{left:101px;top:998px;}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">expresado anteriormente este Tribunal en relación a las autoridades de mesa, tal solución responde </div>
+<div id="t4_3" class="t s2_3">a un principio rector de administración electoral, aplicado desde la ley 8.871 –conocida como “Ley </div>
+<div id="t5_3" class="t s2_3">Sáenz Peña”- como es el de confiar […] a ciudadanos ajenos a un universo determinado de la </div>
+<div id="t6_3" class="t s2_3">sociedad, e independientes, por tal razón, de cualquier vinculo asociativo -político, jurídico, gremial, </div>
+<div id="t7_3" class="t s2_3">de relaciones funcionales de jerarquía o de otra índole- y de cualquier influencia indebida (cf. </div>
+<div id="t8_3" class="t s2_3">Acordada Nº 129/08 CNE).- </div>
+<div id="t9_3" class="t s2_3">9º) Que, en otro orden de consideraciones, este Tribunal, mediante la resolución del 1º de marzo de </div>
+<div id="ta_3" class="t s2_3">2011 (Expediente “S” 112/2010), dispuso encomendar a la división Coordinación de Programas y </div>
+<div id="tb_3" class="t s2_3">Proyectos Especiales -a cargo de la Secretaría de Actuación Electoral- la elaboración de un programa </div>
+<div id="tc_3" class="t s2_3">de relevamiento estadístico, con base en datos obtenidos el día del acto comicial.- </div>
+<div id="td_3" class="t s2_3">En este marco, se estableció como función de los delegados, en los casos en que se solicitare, </div>
+<div id="te_3" class="t s2_3">“remitir a la Justicia Nacional Electoral, conforme el procedimiento que se indique, datos vinculados </div>
+<div id="tf_3" class="t s2_3">al recuento de votos de una o varias mesas de votación de las habilitadas en el establecimiento” (cf. </div>
+<div id="tg_3" class="t s2_3">Anexo, pto. “n”, Acordada Nº 68/14 citada).- </div>
+<div id="th_3" class="t s2_3">Por ello, a fin de obtener una mayor cantidad de datos relevantes y lograr un alcance territorial en </div>
+<div id="ti_3" class="t s2_3">todos los distritos -teniendo en cuenta el carácter presidencial de las próximas elecciones-, resulta </div>
+<div id="tj_3" class="t s2_3">pertinente fortalecer ciertos aspectos operativos para el cumplimiento de los objetivos planteados en </div>
+<div id="tk_3" class="t s2_3">el programa. En este sentido, corresponde solicitar a los Jueces Federales con competencia electoral </div>
+<div id="tl_3" class="t s2_3">su colaboración para llevar adelante esta tarea, en el marco de lo dispuesto en la Acordada Nº </div>
+<div id="tm_3" class="t s2_3">68/14 CNE citada, así como reforzar, en este aspecto, la capacitación de los delegados afectados.- </div>
+<div id="tn_3" class="t s2_3">Por ello, </div>
+<div id="to_3" class="t s3_3">ACORDARON: </div>
+<div id="tp_3" class="t s2_3">1º) Encomendar, a los jueces federales con competencia electoral y las Juntas Electorales </div>
+<div id="tq_3" class="t s2_3">Nacionales, la celebración de convenios de colaboración con los organismos provinciales </div>
+<div id="tr_3" class="t s2_3">correspondientes, en cuanto a la designación y capacitación de los delegados de la Justicia Nacional </div>
+<div id="ts_3" class="t s2_3">Electoral para futuras elecciones, de acuerdo al procedimiento establecido en el considerando 7º y </div>
+<div id="tt_3" class="t s2_3">requerir su colaboración con la división Coordinación de Programas y Proyectos Especiales, de </div>
+<div id="tu_3" class="t s2_3">acuerdo a lo establecido en el considerando 9º.- </div>
+<div id="tv_3" class="t s2_3">2º) Solicitar la cooperación de los organismos de educación locales y de los Superiores Tribunales </div>
+<div id="tw_3" class="t s2_3">provinciales, para llevar a cabo el desarrollo de lo dispuesto en el considerando 6º, poniendo este </div>
+<div id="tx_3" class="t s2_3">Tribunal a disposición los elementos necesarios a tal fin.- </div>
+<div id="ty_3" class="t s2_3">3º) Excluir del Registro de Delegados a aquellos ciudadanos afiliados a algún partido político, con </div>
+<div id="tz_3" class="t s2_3">fundamento en lo expresado en el considerando 8º.- </div>
+<div id="t10_3" class="t s2_3">Hágase saber a los señores jueces federales con competencia electoral de todo el país y, por su </div>
+<div id="t11_3" class="t s2_3">intermedio, oportunamente, a las Juntas Electorales Nacionales; ofíciese a la Corte Suprema de </div>
+<div id="t12_3" class="t s2_3">Justicia de la Nación, a los superiores tribunales provinciales y a las cámaras federales de </div>
+<div id="t13_3" class="t s2_3">apelaciones; comuníquese al Ministerio de Educación de la Nación y, por su intermedio, a los </div>
+<div id="t14_3" class="t s2_3">respectivos organismos educativos provinciales, y póngase en conocimiento de la división </div>
+<div id="t15_3" class="t s2_3">Coordinación de Programas y Proyectos Especiales. Con lo que se dio por terminado el acto.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2933],['t4_3',2933],['t5_3',2933],['t6_3',2933],['t7_3',2934],['t8_3',807],['t9_3',2933],['ta_3',2934],['tb_3',2934],['tc_3',2385],['td_3',2933],['te_3',2934],['tf_3',2933],['tg_3',1310],['th_3',2934],['ti_3',2933],['tj_3',2933],['tk_3',2934],['tl_3',2933],['tm_3',2861],['tn_3',235],['tp_3',2934],['tq_3',2934],['tr_3',2933],['ts_3',2933],['tt_3',2934],['tu_3',1400],['tv_3',2934],['tw_3',2933],['tx_3',1656],['ty_3',2933],['tz_3',1528],['t10_3',2933],['t11_3',2933],['t12_3',2934],['t13_3',2933],['t14_3',2933],['t15_3',2697]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

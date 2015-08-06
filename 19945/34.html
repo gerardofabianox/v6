@@ -1,0 +1,288 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load34();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_34{left:333px;top:108px;}
+#t2_34{left:331px;top:128px;}
+#t3_34{left:101px;top:191px;}
+#t4_34{left:101px;top:208px;}
+#t5_34{left:101px;top:226px;}
+#t6_34{left:101px;top:263px;}
+#t7_34{left:101px;top:281px;}
+#t8_34{left:101px;top:318px;}
+#t9_34{left:101px;top:336px;}
+#ta_34{left:101px;top:373px;}
+#tb_34{left:101px;top:391px;}
+#tc_34{left:101px;top:408px;}
+#td_34{left:101px;top:446px;}
+#te_34{left:207px;top:446px;}
+#tf_34{left:248px;top:446px;}
+#tg_34{left:101px;top:463px;}
+#th_34{left:101px;top:481px;}
+#ti_34{left:101px;top:498px;}
+#tj_34{left:101px;top:536px;}
+#tk_34{left:101px;top:572px;}
+#tl_34{left:220px;top:572px;}
+#tm_34{left:479px;top:572px;}
+#tn_34{left:101px;top:589px;}
+#to_34{left:101px;top:607px;}
+#tp_34{left:101px;top:624px;}
+#tq_34{left:101px;top:662px;}
+#tr_34{left:101px;top:679px;}
+#ts_34{left:101px;top:697px;}
+#tt_34{left:101px;top:714px;}
+#tu_34{left:101px;top:752px;}
+#tv_34{left:222px;top:752px;}
+#tw_34{left:494px;top:752px;}
+#tx_34{left:101px;top:769px;}
+#ty_34{left:101px;top:787px;}
+#tz_34{left:101px;top:824px;}
+#t10_34{left:101px;top:842px;}
+#t11_34{left:101px;top:859px;}
+#t12_34{left:101px;top:877px;}
+#t13_34{left:101px;top:894px;}
+#t14_34{left:101px;top:912px;}
+#t15_34{left:101px;top:949px;}
+#t16_34{left:101px;top:967px;}
+#t17_34{left:101px;top:984px;}
+#t18_34{left:101px;top:1022px;}
+#t19_34{left:223px;top:1022px;}
+#t1a_34{left:353px;top:1023px;}
+#t1b_34{left:830px;top:1023px;}
+#t1c_34{left:101px;top:1039px;}
+#t1d_34{left:101px;top:1057px;}
+#t1e_34{left:101px;top:1074px;}
+
+.s3_34{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s7_34{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_34{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_34{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s6_34{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_34{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_34{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_34" class="t s1_34">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_34" class="t s1_34">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_34" class="t s2_34">Además del acta referida y con los resultados extraídos de la misma el presidente de mesa </div>
+<div id="t4_34" class="t s2_34">extenderá, en formulario que se remitirá al efecto, un "Certificado de Escrutinio" que será suscripto </div>
+<div id="t5_34" class="t s2_34">por el mismo, por los suplentes y los fiscales. </div>
+<div id="t6_34" class="t s2_34">El presidente de mesa extenderá y entregará a los fiscales que lo soliciten un certificado del </div>
+<div id="t7_34" class="t s2_34">escrutinio, que deberá ser suscripto por las mismas personas premencionadas. </div>
+<div id="t8_34" class="t s2_34">Si los fiscales o alguno de ellos no quisieran firmar el o los certificados de escrutinio, se hará constar </div>
+<div id="t9_34" class="t s2_34">en los mismos esta circunstancia. </div>
+<div id="ta_34" class="t s2_34">En el acta de cierre de comicio se deberán consignar los certificados de escrutinio expedidos y </div>
+<div id="tb_34" class="t s2_34">quiénes los recibieron, así como las circunstancias de los casos en que no fueren suscriptos por los </div>
+<div id="tc_34" class="t s2_34">fiscales y el motivo de ello. </div>
+<div id="td_34" class="t s3_34">Artículo 102 </div>
+<div id="te_34" class="t s4_34">bis.-</div>
+<div id="tf_34" class="t s2_34">Concluida la tarea de escrutinio, y en el caso de elecciones simultáneas para la </div>
+<div id="tg_34" class="t s2_34">elección de los cargos de presidente y vicepresidente de la Nación y elección de legisladores </div>
+<div id="th_34" class="t s2_34">nacionales, se confeccionarán dos (2) actas separadas, una para la categoría de presidente y </div>
+<div id="ti_34" class="t s2_34">vicepresidente de la Nación, y otra para las categorías restantes. </div>
+<div id="tj_34" class="t s5_34">(Artículo incorporado por art. 101 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="tk_34" class="t s3_34">Artículo 103.- </div>
+<div id="tl_34" class="t s6_34">Guarda de boletas y documentos.</div>
+<div id="tm_34" class="t s2_34">Una vez suscripta el acta referida en el artículo </div>
+<div id="tn_34" class="t s2_34">anterior y los certificados de escrutinio que correspondan, se depositarán dentro de la urna: las </div>
+<div id="to_34" class="t s2_34">boletas compiladas y ordenadas de acuerdo a los partidos a que pertenecen las mismas, los sobres </div>
+<div id="tp_34" class="t s2_34">utilizados y un "certificado de escrutinio". </div>
+<div id="tq_34" class="t s2_34">El registro de electores con las actas "de apertura" y "de cierre" firmadas, los votos recurridos y los </div>
+<div id="tr_34" class="t s2_34">votos impugnados se guardarán en el sobre especial que remitirá la junta electoral el cual lacrado, </div>
+<div id="ts_34" class="t s2_34">sellado y firmado por las mismas autoridades de mesa y fiscales se entregará al empleado postal </div>
+<div id="tt_34" class="t s2_34">designado al efecto simultáneamente con la urna. </div>
+<div id="tu_34" class="t s3_34">Artículo 104.- </div>
+<div id="tv_34" class="t s6_34">Cierre de la urna y sobre especial.</div>
+<div id="tw_34" class="t s2_34">Seguidamente se procederá a cerrar la urna, </div>
+<div id="tx_34" class="t s2_34">colocándose una faja especial que tapará su boca o ranura, cubriéndose totalmente la tapa, frente y </div>
+<div id="ty_34" class="t s2_34">parte posterior, que asegurarán y firmarán el presidente, los suplentes y los fiscales que lo deseen. </div>
+<div id="tz_34" class="t s2_34">Cumplidos los requisitos precedentemente expuestos, el presidente hará entrega inmediatamente de </div>
+<div id="t10_34" class="t s2_34">la urna y el sobre especial indicado en el artículo anterior en forma personal, a los empleados de </div>
+<div id="t11_34" class="t s2_34">correos de quienes se hubiesen recibido los elementos para la elección, los que concurrirán al lugar </div>
+<div id="t12_34" class="t s2_34">del comicio a su finalización. El presidente recabará de dichos empleados el recibo correspondiente, </div>
+<div id="t13_34" class="t s2_34">por duplicado, con indicación de la hora. Uno de ellos lo remitirá a la junta y el otro lo guardará para </div>
+<div id="t14_34" class="t s2_34">su constancia. </div>
+<div id="t15_34" class="t s2_34">Los agentes de policía, fuerzas de seguridad o militares, bajo las órdenes hasta entonces del </div>
+<div id="t16_34" class="t s2_34">presidente de mesa, prestarán la custodia necesaria a los aludidos empleados, hasta que la urna y </div>
+<div id="t17_34" class="t s2_34">documentos se depositen en la oficina de correos respectiva. </div>
+<div id="t18_34" class="t s3_34">Artículo 105.- </div>
+<div id="t19_34" class="t s6_34">Comunicaciones.</div>
+<div id="t1a_34" class="t s5_34">(Título modificado por art. 7 de la Ley N° 25.610 B.O. 08/07/2002)</div>
+<div id="t1b_34" class="t s7_34">. </div>
+<div id="t1c_34" class="t s2_34">Terminado el escrutinio de mesa, el presidente hará saber al empleado de correos que se encuentre </div>
+<div id="t1d_34" class="t s2_34">presente, su resultado, y se confeccionará en formulario especial el texto de telegrama que </div>
+<div id="t1e_34" class="t s2_34">suscribirá el presidente de mesa, juntamente con los fiscales, que contendrá todos los detalles del </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg34Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg34"><object width="935" height="1210" data="34/34.svg" type="image/svg+xml" id="pdf34" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld34" type="text/javascript">
+
+var isIE = false;
+var f34 = [['t1_34',1076],['t2_34',1096],['t3_34',2934],['t4_34',2933],['t5_34',1317],['t6_34',2933],['t7_34',2290],['t8_34',2934],['t9_34',973],['ta_34',2934],['tb_34',2934],['tc_34',785],['td_34',400],['tf_34',2344],['tg_34',2934],['th_34',2934],['ti_34',1883],['tj_34',1902],['tk_34',451],['tl_34',1005],['tm_34',1423],['tn_34',2934],['to_34',2934],['tp_34',1202],['tq_34',2934],['tr_34',2934],['ts_34',2933],['tt_34',1444],['tu_34',454],['tv_34',1056],['tw_34',1363],['tx_34',2934],['ty_34',2884],['tz_34',2934],['t10_34',2934],['t11_34',2934],['t12_34',2934],['t13_34',2934],['t14_34',412],['t15_34',2933],['t16_34',2933],['t17_34',1765],['t18_34',457],['t1a_34',1906],['t1c_34',2934],['t1d_34',2933],['t1e_34',2933]];
+function load34(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f34);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 51;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_34");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

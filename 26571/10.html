@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load10();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_10{left:333px;top:128px;}
+#t2_10{left:331px;top:147px;}
+#t3_10{left:101px;top:211px;}
+#t4_10{left:101px;top:228px;}
+#t5_10{left:101px;top:260px;}
+#t6_10{left:101px;top:278px;}
+#t7_10{left:101px;top:295px;}
+#t8_10{left:101px;top:312px;}
+#t9_10{left:101px;top:330px;}
+#ta_10{left:101px;top:347px;}
+#tb_10{left:101px;top:379px;}
+#tc_10{left:232px;top:379px;}
+#td_10{left:101px;top:396px;}
+#te_10{left:101px;top:414px;}
+#tf_10{left:101px;top:431px;}
+#tg_10{left:101px;top:449px;}
+#th_10{left:101px;top:480px;}
+#ti_10{left:231px;top:480px;}
+#tj_10{left:101px;top:498px;}
+#tk_10{left:430px;top:530px;}
+#tl_10{left:363px;top:561px;}
+#tm_10{left:101px;top:593px;}
+#tn_10{left:236px;top:593px;}
+#to_10{left:101px;top:610px;}
+#tp_10{left:101px;top:628px;}
+#tq_10{left:101px;top:645px;}
+#tr_10{left:101px;top:677px;}
+#ts_10{left:101px;top:694px;}
+#tt_10{left:101px;top:712px;}
+#tu_10{left:101px;top:744px;}
+#tv_10{left:101px;top:775px;}
+#tw_10{left:232px;top:775px;}
+#tx_10{left:101px;top:793px;}
+#ty_10{left:101px;top:824px;}
+#tz_10{left:101px;top:856px;}
+#t10_10{left:232px;top:856px;}
+#t11_10{left:101px;top:874px;}
+#t12_10{left:101px;top:891px;}
+#t13_10{left:101px;top:923px;}
+#t14_10{left:230px;top:923px;}
+
+.s3_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_10{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_10" class="t s1_10">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_10" class="t s1_10">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_10" class="t s2_10">agrupaciones políticas de orden nacional que participen en el proceso electoral. El Consejo </div>
+<div id="t4_10" class="t s2_10">funcionará hasta la proclamación de los candidatos electos. </div>
+<div id="t5_10" class="t s2_10">La Dirección Nacional Electoral del Ministerio del Interior deberá informar pormenorizadamente en </div>
+<div id="t6_10" class="t s2_10">forma periódica o cuando el Consejo lo requiera sobre la marcha de los procedimientos relacionados </div>
+<div id="t7_10" class="t s2_10">con la financiación de las campañas políticas, asignación de espacios en los medios de comunicación, </div>
+<div id="t8_10" class="t s2_10">modalidades y difusión del recuento provisional de resultados, en ambas elecciones. Las </div>
+<div id="t9_10" class="t s2_10">agrupaciones políticas de distrito que no formen parte de una agrupación nacional que participen en </div>
+<div id="ta_10" class="t s2_10">el proceso electoral, podrán designar representantes al Consejo. </div>
+<div id="tb_10" class="t s3_10">ARTÍCULO 105. </div>
+<div id="tc_10" class="t s2_10">— La autoridad de aplicación adoptará las medidas pertinentes a fin de garantizar </div>
+<div id="td_10" class="t s2_10">la accesibilidad, confidencialidad e intimidad para el ejercicio de los derechos políticos de las </div>
+<div id="te_10" class="t s2_10">personas con discapacidad. Para ello se adecuarán los procedimientos, instalaciones y material </div>
+<div id="tf_10" class="t s2_10">electoral de modo que las personas con discapacidad puedan ejercer sus derechos sin discriminación </div>
+<div id="tg_10" class="t s2_10">y en igualdad de condiciones con los demás, tanto para ser electores como para ser candidatos. </div>
+<div id="th_10" class="t s3_10">ARTÍCULO 106. </div>
+<div id="ti_10" class="t s2_10">— Esta ley es de orden público. La justicia nacional electoral conocerá en todas las </div>
+<div id="tj_10" class="t s2_10">cuestiones relacionadas con la aplicación de la presente ley. </div>
+<div id="tk_10" class="t s2_10">TITULO VI </div>
+<div id="tl_10" class="t s3_10">Disposiciones transitorias </div>
+<div id="tm_10" class="t s3_10">ARTÍCULO 107. </div>
+<div id="tn_10" class="t s2_10">— Los partidos políticos de distrito y nacionales con personería jurídico-política </div>
+<div id="to_10" class="t s2_10">vigente, tendrán plazo hasta el 31 de diciembre de 2011 a los efectos de cumplir con lo dispuesto en </div>
+<div id="tp_10" class="t s2_10">los artículos 7º ter y 8º de la Ley Orgánica de Partidos Políticos, 23.298, según texto de la presente </div>
+<div id="tq_10" class="t s2_10">ley. </div>
+<div id="tr_10" class="t s2_10">A la fecha de entrada en vigencia de la presente ley, se extinguirá la acción y las actuaciones que se </div>
+<div id="ts_10" class="t s2_10">encuentren en trámite referentes al artículo 50, incisos a), b), c), e) y f) de la Ley Orgánica de </div>
+<div id="tt_10" class="t s2_10">Partidos Políticos, 23.298. </div>
+<div id="tu_10" class="t s4_10">(Artículo observado por art. 1° del Decreto N° 2004/2009 B.O. 14/12/2009)</div>
+<div id="tv_10" class="t s3_10">ARTÍCULO 108. </div>
+<div id="tw_10" class="t s2_10">— Los artículos 2º y 3º de la presente ley, entrarán en vigencia a partir del 31 de </div>
+<div id="tx_10" class="t s2_10">diciembre del 2011. </div>
+<div id="ty_10" class="t s4_10">(Artículo observado por art. 1° del Decreto N° 2004/2009 B.O. 14/12/2009)</div>
+<div id="tz_10" class="t s3_10">ARTÍCULO 109. </div>
+<div id="t10_10" class="t s2_10">— Las agrupaciones políticas deben adecuar sus cartas orgánicas y reglamentos a </div>
+<div id="t11_10" class="t s2_10">lo dispuesto en la presente ley dentro de los ciento ochenta (180) días de su vigencia, siendo a </div>
+<div id="t12_10" class="t s2_10">partir del vencimiento de ese plazo, nulas las disposiciones que se opongan a la presente. </div>
+<div id="t13_10" class="t s3_10">ARTÍCULO 110. </div>
+<div id="t14_10" class="t s2_10">— Comuníquese al Poder Ejecutivo nacional. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg10Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg10"><object width="935" height="1210" data="10/10.svg" type="image/svg+xml" id="pdf10" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld10" type="text/javascript">
+
+var isIE = false;
+var f10 = [['t1_10',1076],['t2_10',1095],['t3_10',2933],['t4_10',1720],['t5_10',2933],['t6_10',2934],['t7_10',2934],['t8_10',2934],['t9_10',2934],['ta_10',1869],['tb_10',501],['tc_10',2409],['td_10',2934],['te_10',2933],['tf_10',2934],['tg_10',2786],['th_10',499],['ti_10',2413],['tj_10',1739],['tk_10',298],['tl_10',837],['tm_10',509],['tn_10',2393],['to_10',2934],['tp_10',2934],['tr_10',2934],['ts_10',2934],['tt_10',753],['tu_10',2217],['tv_10',501],['tw_10',2410],['tx_10',575],['ty_10',2217],['tz_10',501],['t10_10',2409],['t11_10',2934],['t12_10',2608],['t13_10',498],['t14_10',1287]];
+function load10(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f10);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 41;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_10");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

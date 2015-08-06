@@ -1,0 +1,286 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load10();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_10{left:333px;top:128px;}
+#t2_10{left:331px;top:147px;}
+#t3_10{left:101px;top:211px;}
+#t4_10{left:101px;top:228px;}
+#t5_10{left:101px;top:260px;}
+#t6_10{left:803px;top:262px;}
+#t7_10{left:101px;top:279px;}
+#t8_10{left:310px;top:278px;}
+#t9_10{left:101px;top:309px;}
+#ta_10{left:226px;top:309px;}
+#tb_10{left:406px;top:309px;}
+#tc_10{left:101px;top:327px;}
+#td_10{left:101px;top:344px;}
+#te_10{left:101px;top:362px;}
+#tf_10{left:101px;top:379px;}
+#tg_10{left:101px;top:411px;}
+#th_10{left:221px;top:411px;}
+#ti_10{left:485px;top:411px;}
+#tj_10{left:101px;top:428px;}
+#tk_10{left:101px;top:445px;}
+#tl_10{left:101px;top:463px;}
+#tm_10{left:101px;top:495px;}
+#tn_10{left:101px;top:512px;}
+#to_10{left:101px;top:544px;}
+#tp_10{left:224px;top:544px;}
+#tq_10{left:410px;top:544px;}
+#tr_10{left:101px;top:561px;}
+#ts_10{left:101px;top:579px;}
+#tt_10{left:101px;top:610px;}
+#tu_10{left:101px;top:628px;}
+#tv_10{left:101px;top:645px;}
+#tw_10{left:101px;top:677px;}
+#tx_10{left:224px;top:677px;}
+#ty_10{left:246px;top:677px;}
+#tz_10{left:459px;top:677px;}
+#t10_10{left:101px;top:694px;}
+#t11_10{left:101px;top:712px;}
+#t12_10{left:101px;top:729px;}
+#t13_10{left:101px;top:747px;}
+#t14_10{left:101px;top:778px;}
+#t15_10{left:101px;top:810px;}
+#t16_10{left:101px;top:827px;}
+#t17_10{left:101px;top:845px;}
+#t18_10{left:101px;top:862px;}
+#t19_10{left:101px;top:880px;}
+#t1a_10{left:101px;top:912px;}
+#t1b_10{left:101px;top:943px;}
+#t1c_10{left:101px;top:975px;}
+#t1d_10{left:221px;top:975px;}
+#t1e_10{left:394px;top:975px;}
+#t1f_10{left:101px;top:992px;}
+#t1g_10{left:101px;top:1010px;}
+#t1h_10{left:101px;top:1042px;}
+#t1i_10{left:221px;top:1042px;}
+#t1j_10{left:363px;top:1042px;}
+#t1k_10{left:101px;top:1059px;}
+
+.s5_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_10{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_10{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_10" class="t s1_10">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_10" class="t s1_10">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_10" class="t s2_10">El Ministerio del Interior y Transporte depositará los aportes al inicio de la campaña una vez </div>
+<div id="t4_10" class="t s2_10">oficializadas las listas. </div>
+<div id="t5_10" class="t s3_10">(Artículo modificado por art. 54 de la Ley N° 26.571 B.O. 14/12/2009 y modificado por art. 10°</div>
+<div id="t6_10" class="t s4_10">de la </div>
+<div id="t7_10" class="t s4_10">Ley N° 27.120 B.O. 08/01/2015</div>
+<div id="t8_10" class="t s3_10">)</div>
+<div id="t9_10" class="t s5_10">ARTÍCULO 37. </div>
+<div id="ta_10" class="t s2_10">— Referencia electoral.</div>
+<div id="tb_10" class="t s2_10">Para el supuesto de partidos que no registren referencia </div>
+<div id="tc_10" class="t s2_10">electoral anterior se equiparará al partido que haya participado en la última elección de diputados </div>
+<div id="td_10" class="t s2_10">nacionales y que le corresponda el menor monto de aporte. Para el caso de las alianzas se tendrá en </div>
+<div id="te_10" class="t s2_10">cuenta la suma de votos obtenida en dicha elección por los partidos que la integran, o el aporte que </div>
+<div id="tf_10" class="t s2_10">les correspondiera. </div>
+<div id="tg_10" class="t s5_10">ARTÍCULO 38. </div>
+<div id="th_10" class="t s2_10">— Partidos nacionales y de distrito.</div>
+<div id="ti_10" class="t s2_10">Para el caso de los partidos nacionales, una vez </div>
+<div id="tj_10" class="t s2_10">determinado el monto correspondiente a cada partido o alianza, se distribuirá: el ochenta por ciento </div>
+<div id="tk_10" class="t s2_10">(80%) a los organismos de distrito y el veinte por ciento (20%) restante a los organismos </div>
+<div id="tl_10" class="t s2_10">nacionales. </div>
+<div id="tm_10" class="t s2_10">Para el caso de los partidos de distrito que no hayan sido reconocidos como partidos nacionales, el </div>
+<div id="tn_10" class="t s2_10">monto del aporte se entregará a los organismos partidarios del distrito. </div>
+<div id="to_10" class="t s5_10">ARTÍCULO 39. </div>
+<div id="tp_10" class="t s2_10">— Retiro de candidatos.</div>
+<div id="tq_10" class="t s2_10">Si el partido o la alianza retirara sus candidatos y no se </div>
+<div id="tr_10" class="t s2_10">presentara a la elección deberá restituir, en el término de sesenta (60) días de realizada la elección </div>
+<div id="ts_10" class="t s2_10">el monto recibido en concepto de aporte para la campaña. </div>
+<div id="tt_10" class="t s2_10">El presidente y el tesorero del partido, así como el responsable político y el responsable económico- </div>
+<div id="tu_10" class="t s2_10">financiero de la campaña serán responsables de la devolución de dichos fondos, habiéndose previsto </div>
+<div id="tv_10" class="t s2_10">las sanciones en el artículo 63 de la presente ley. </div>
+<div id="tw_10" class="t s5_10">ARTÍCULO 40. </div>
+<div id="tx_10" class="t s2_10">— </div>
+<div id="ty_10" class="t s3_10">Destino remanente aportes.</div>
+<div id="tz_10" class="t s2_10">El remanente de los fondos públicos otorgados en </div>
+<div id="t10_10" class="t s2_10">concepto de aporte extraordinario para campaña electoral podrá ser conservado por los partidos </div>
+<div id="t11_10" class="t s2_10">exclusivamente para ser destinado a actividades de capacitación y formación política, debiendo </div>
+<div id="t12_10" class="t s2_10">dejarse constancia expresa de ello en el informe final de campaña. En caso contrario, deberá ser </div>
+<div id="t13_10" class="t s2_10">restituido dentro de los noventa (90) días de realizado el acto electoral. </div>
+<div id="t14_10" class="t s2_10">La contravención a esta norma será sancionada de acuerdo a lo establecido en el artículo 65. </div>
+<div id="t15_10" class="t s2_10">El remanente del aporte de boletas o el total, en caso que no haya acreditado el gasto en el informe </div>
+<div id="t16_10" class="t s2_10">final de campaña, deberá ser reintegrado por las agrupaciones políticas dentro de los noventa (90) </div>
+<div id="t17_10" class="t s2_10">días de realizado el acto electoral. Vencido ese plazo la Dirección Nacional Electoral del Ministerio del </div>
+<div id="t18_10" class="t s2_10">Interior procederá a compensar la suma adeudada, de los aportes públicos que le correspondan al </div>
+<div id="t19_10" class="t s2_10">partido. </div>
+<div id="t1a_10" class="t s2_10">La contravención a esta norma será sancionada de acuerdo a lo establecido en el artículo 62. </div>
+<div id="t1b_10" class="t s3_10">(Artículo modificado por art. 55 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="t1c_10" class="t s5_10">ARTÍCULO 41. </div>
+<div id="t1d_10" class="t s2_10">— Depósito del aporte.</div>
+<div id="t1e_10" class="t s2_10">El aporte público para la campaña electoral del artículo 34 y </div>
+<div id="t1f_10" class="t s2_10">el aporte para la impresión de boletas del artículo 35, deberán hacerse efectivo dentro de los diez </div>
+<div id="t1g_10" class="t s2_10">(10) días hábiles siguientes a la fecha límite de oficialización definitiva de la lista. </div>
+<div id="t1h_10" class="t s5_10">ARTÍCULO 42. </div>
+<div id="t1i_10" class="t s2_10">— Segunda vuelta.</div>
+<div id="t1j_10" class="t s2_10">Los partidos o alianzas que participen en la segunda vuelta en la </div>
+<div id="t1k_10" class="t s2_10">elección presidencial recibirán como aporte para la campaña una suma equivalente al treinta por </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg10Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg10"><object width="935" height="1210" data="10/10.svg" type="image/svg+xml" id="pdf10" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld10" type="text/javascript">
+
+var isIE = false;
+var f10 = [['t1_10',1076],['t2_10',1095],['t3_10',2933],['t4_10',637],['t5_10',2788],['t6_10',126],['t7_10',836],['t9_10',468],['ta_10',690],['tb_10',1714],['tc_10',2934],['td_10',2934],['te_10',2934],['tf_10',551],['tg_10',459],['th_10',1031],['ti_10',1399],['tj_10',2933],['tk_10',2933],['tm_10',2933],['tn_10',2071],['to_10',465],['tp_10',715],['tq_10',1697],['tr_10',2933],['ts_10',1693],['tt_10',2933],['tu_10',2933],['tv_10',1430],['tw_10',465],['ty_10',826],['tz_10',1500],['t10_10',2934],['t11_10',2934],['t12_10',2933],['t13_10',2079],['t14_10',2704],['t15_10',2933],['t16_10',2934],['t17_10',2933],['t18_10',2934],['t1a_10',2704],['t1b_10',2053],['t1c_10',459],['t1d_10',670],['t1e_10',1760],['t1f_10',2934],['t1g_10',2357],['t1h_10',458],['t1i_10',551],['t1j_10',1883],['t1k_10',2934]];
+function load10(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f10);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 57;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_10");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

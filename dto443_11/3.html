@@ -1,0 +1,264 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:108px;}
+#t2_3{left:331px;top:128px;}
+#t3_3{left:101px;top:191px;}
+#t4_3{left:167px;top:191px;}
+#t5_3{left:101px;top:208px;}
+#t6_3{left:101px;top:226px;}
+#t7_3{left:101px;top:263px;}
+#t8_3{left:101px;top:281px;}
+#t9_3{left:101px;top:298px;}
+#ta_3{left:101px;top:336px;}
+#tb_3{left:174px;top:336px;}
+#tc_3{left:101px;top:353px;}
+#td_3{left:101px;top:371px;}
+#te_3{left:101px;top:388px;}
+#tf_3{left:101px;top:426px;}
+#tg_3{left:167px;top:426px;}
+#th_3{left:101px;top:443px;}
+#ti_3{left:101px;top:461px;}
+#tj_3{left:101px;top:478px;}
+#tk_3{left:101px;top:516px;}
+#tl_3{left:170px;top:516px;}
+#tm_3{left:101px;top:533px;}
+#tn_3{left:101px;top:551px;}
+#to_3{left:101px;top:568px;}
+#tp_3{left:101px;top:606px;}
+#tq_3{left:168px;top:606px;}
+#tr_3{left:101px;top:623px;}
+#ts_3{left:101px;top:641px;}
+#tt_3{left:101px;top:678px;}
+#tu_3{left:170px;top:678px;}
+#tv_3{left:101px;top:696px;}
+#tw_3{left:101px;top:713px;}
+#tx_3{left:101px;top:751px;}
+#ty_3{left:161px;top:751px;letter-spacing:5px;}
+#tz_3{left:323px;top:751px;letter-spacing:4px;}
+#t10_3{left:397px;top:751px;letter-spacing:1px;}
+#t11_3{left:101px;top:768px;}
+#t12_3{left:101px;top:786px;}
+#t13_3{left:101px;top:803px;}
+#t14_3{left:101px;top:821px;}
+#t15_3{left:101px;top:858px;}
+#t16_3{left:167px;top:858px;}
+#t17_3{left:101px;top:876px;}
+#t18_3{left:101px;top:893px;}
+#t19_3{left:101px;top:911px;}
+#t1a_3{left:101px;top:928px;}
+#t1b_3{left:101px;top:946px;}
+#t1c_3{left:101px;top:963px;}
+#t1d_3{left:101px;top:981px;}
+#t1e_3{left:101px;top:1018px;}
+#t1f_3{left:101px;top:1036px;}
+#t1g_3{left:101px;top:1053px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">Art. 16.</div>
+<div id="t4_3" class="t s3_3">— La solicitud de asignación de color de la boleta o su combinación podrá ser realizada por </div>
+<div id="t5_3" class="t s3_3">las agrupaciones políticas desde la fecha de convocatoria de las elecciones y hasta CINCUENTA Y </div>
+<div id="t6_3" class="t s3_3">CINCO (55) días antes de las elecciones primarias. </div>
+<div id="t7_3" class="t s3_3">En caso que las alianzas se encuentren integradas por partidos que ya han realizado la reserva de </div>
+<div id="t8_3" class="t s3_3">color podrán indicar al momento de su inscripción y hasta el plazo máximo fijado en el artículo 25 de </div>
+<div id="t9_3" class="t s3_3">la Ley Nº 26.571, si utilizará el color reservado por un partido integrante u otro color que elija. </div>
+<div id="ta_3" class="t s2_3">Art. 17.</div>
+<div id="tb_3" class="t s3_3">— Los juzgados federales con competencia electoral deben hacer la reserva del color </div>
+<div id="tc_3" class="t s3_3">establecida en el artículo 25 de la Ley Nº 26.571 observando preferentemente el orden temporal en </div>
+<div id="td_3" class="t s3_3">el que fuera efectuada tal reserva. En caso de controversia sobre la pretensión de color, decidirá a </div>
+<div id="te_3" class="t s3_3">favor de la agrupación que se identifique tradicionalmente con el color. </div>
+<div id="tf_3" class="t s2_3">Art. 18.</div>
+<div id="tg_3" class="t s3_3">— El juzgado federal con competencia electoral de la Capital Federal debe resolver sobre la </div>
+<div id="th_3" class="t s3_3">asignación de colores solicitados por las agrupaciones nacionales y comunicar sus resoluciones a los </div>
+<div id="ti_3" class="t s3_3">demás juzgados electorales, dentro de las CUARENTA Y OCHO (48) horas de vencido el plazo para </div>
+<div id="tj_3" class="t s3_3">formular la solicitud de acuerdo a lo establecido en el artículo 25 de la Ley Nº 26.571. </div>
+<div id="tk_3" class="t s2_3">Art. 19.</div>
+<div id="tl_3" class="t s3_3">— Dentro de las VEINTICUATRO (24) horas de notificados por el Juzgado Electoral de la </div>
+<div id="tm_3" class="t s3_3">Capital Federal, los juzgados federales con competencia electoral de cada distrito otorgarán a las </div>
+<div id="tn_3" class="t s3_3">agrupaciones de distrito que no pertenezcan a agrupaciones de orden nacional, los colores </div>
+<div id="to_3" class="t s3_3">requeridos que no hayan sido reservados en el orden nacional. </div>
+<div id="tp_3" class="t s2_3">Art. 20.</div>
+<div id="tq_3" class="t s3_3">— Para la confección de las boletas sólo puede utilizarse la escala de colores, codificada de </div>
+<div id="tr_3" class="t s3_3">manera que permita su identificación precisa, y el color de la tipografía respectiva, utilizando la </div>
+<div id="ts_3" class="t s3_3">codificación "Pantone". En todos los casos el reverso de las boletas debe imprimirse en fondo blanco. </div>
+<div id="tt_3" class="t s2_3">Art. 21.</div>
+<div id="tu_3" class="t s3_3">— Cada agrupación política debe presentar para su oficialización formal, ante el Juzgado </div>
+<div id="tv_3" class="t s3_3">Electoral del distrito respectivo, los modelos de boletas, correspondientes a cada lista, impresos en </div>
+<div id="tw_3" class="t s3_3">el color reservado. </div>
+<div id="tx_3" class="t s2_3">Art. 22</div>
+<div id="ty_3" class="t s3_3">. — Para la aprobac</div>
+<div id="tz_3" class="t s3_3">ión forma</div>
+<div id="t10_3" class="t s3_3">l de los modelos de boletas los juzgados federales con </div>
+<div id="t11_3" class="t s3_3">competencia electoral deben controlar además del cumplimiento de los requisitos establecidos en el </div>
+<div id="t12_3" class="t s3_3">artículo 62 del Código Electoral Nacional, el respeto de las listas oficializadas, los colores asignados, </div>
+<div id="t13_3" class="t s3_3">como así también que exista una clara diferenciación entre los modelos presentados por todas las </div>
+<div id="t14_3" class="t s3_3">agrupaciones </div>
+<div id="t15_3" class="t s2_3">Art. 23.</div>
+<div id="t16_3" class="t s3_3">— Las Juntas Electorales de las agrupaciones políticas distribuirán los fondos recibidos para </div>
+<div id="t17_3" class="t s3_3">la campaña y para impresión de boletas simultáneamente y en partes iguales entre las listas de </div>
+<div id="t18_3" class="t s3_3">precandidatos oficializadas de cada categoría. Las agrupaciones políticas abrirán a favor de las listas </div>
+<div id="t19_3" class="t s3_3">oficializadas una subcuenta corriente de la correspondiente a la agrupación política a los efectos de </div>
+<div id="t1a_3" class="t s3_3">emplearla para recibir la proporción que les corresponda del aporte de campaña y de impresión de </div>
+<div id="t1b_3" class="t s3_3">boletas, los aportes privados y para efectuar todos los pagos relacionados con las elecciones </div>
+<div id="t1c_3" class="t s3_3">primarias, aplicándose a las listas las mismas normas que a las agrupaciones políticas respecto de la </div>
+<div id="t1d_3" class="t s3_3">gestión financiera. </div>
+<div id="t1e_3" class="t s3_3">Los responsables económicos financieros y los apoderados de las listas tendrán la firma de los </div>
+<div id="t1f_3" class="t s3_3">libramientos correspondientes y serán responsables por la utilización de las mismas. Presentado el </div>
+<div id="t1g_3" class="t s3_3">informe establecido en el artículo 36 de la Ley Nº 26.571, se procederá al cierre de las subcuentas. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1096],['t3_3',244],['t4_3',2667],['t5_3',2933],['t6_3',1472],['t7_3',2934],['t8_3',2933],['t9_3',2756],['ta_3',257],['tb_3',2640],['tc_3',2934],['td_3',2934],['te_3',2059],['tf_3',244],['tg_3',2668],['th_3',2933],['ti_3',2933],['tj_3',2494],['tk_3',250],['tl_3',2655],['tm_3',2934],['tn_3',2933],['to_3',1821],['tp_3',244],['tq_3',2667],['tr_3',2933],['ts_3',2929],['tt_3',250],['tu_3',2656],['tv_3',2934],['tw_3',538],['tx_3',241],['ty_3',646],['tz_3',297],['t10_3',1748],['t11_3',2934],['t12_3',2933],['t13_3',2934],['t15_3',244],['t16_3',2668],['t17_3',2934],['t18_3',2934],['t19_3',2933],['t1a_3',2934],['t1b_3',2933],['t1c_3',2933],['t1d_3',533],['t1e_3',2934],['t1f_3',2934],['t1g_3',2882]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 53;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

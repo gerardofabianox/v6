@@ -1,0 +1,251 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:247px;}
+#t6_1{left:101px;top:265px;}
+#t7_1{left:101px;top:299px;}
+#t8_1{left:101px;top:317px;}
+#t9_1{left:101px;top:334px;}
+#ta_1{left:101px;top:372px;}
+#tb_1{left:194px;top:372px;}
+#tc_1{left:101px;top:389px;}
+#td_1{left:101px;top:407px;}
+#te_1{left:101px;top:444px;}
+#tf_1{left:160px;top:444px;}
+#tg_1{left:783px;top:482px;}
+#th_1{left:101px;top:519px;}
+#ti_1{left:101px;top:537px;}
+#tj_1{left:101px;top:554px;}
+#tk_1{left:101px;top:592px;}
+#tl_1{left:101px;top:609px;}
+#tm_1{left:101px;top:627px;}
+#tn_1{left:101px;top:644px;}
+#to_1{left:101px;top:682px;}
+#tp_1{left:101px;top:699px;}
+#tq_1{left:101px;top:717px;}
+#tr_1{left:101px;top:754px;}
+#ts_1{left:101px;top:772px;}
+#tt_1{left:101px;top:809px;}
+#tu_1{left:101px;top:847px;}
+#tv_1{left:101px;top:885px;}
+#tw_1{left:101px;top:902px;}
+#tx_1{left:101px;top:920px;}
+#ty_1{left:101px;top:937px;}
+#tz_1{left:101px;top:975px;}
+#t10_1{left:101px;top:992px;}
+#t11_1{left:101px;top:1030px;}
+#t12_1{left:101px;top:1047px;}
+#t13_1{left:101px;top:1065px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 45px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Decreto 1291/2006 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 25/09/2006 </div>
+<div id="t5_1" class="t s3_1">Publicación: B.O. 28/09/2006 </div>
+<div id="t6_1" class="t s4_1">*El texto incluye las modificaciones incorporadas por Decreto N° 295/2009 (B.O. 15/04/2009)</div>
+<div id="t7_1" class="t s5_1">Apruébase la reglamentación del artículo 3º bis del Código Electoral Nacional, aprobado </div>
+<div id="t8_1" class="t s5_1">por la Ley Nº 19.945 y sus modificatorias (t.o. por el Decreto Nº 2135 del 18 de agosto de </div>
+<div id="t9_1" class="t s5_1">1983). </div>
+<div id="ta_1" class="t s5_1">Artículo 1º </div>
+<div id="tb_1" class="t s3_1">— Apruébase la reglamentación del artículo 3º bis del CODIGO ELECTORAL NACIONAL, </div>
+<div id="tc_1" class="t s3_1">aprobado por la Ley Nº 19.945 y sus modificatorias (t.o. por el Decreto Nº 2135 del 18 de agosto de </div>
+<div id="td_1" class="t s3_1">1983) que como anexo forma parte integrante del presente Decreto. </div>
+<div id="te_1" class="t s5_1">Art. 2º </div>
+<div id="tf_1" class="t s3_1">— Comuníquese, publíquese, dése a la Dirección Nacional del Registro Oficial y archívese. </div>
+<div id="tg_1" class="t s3_1">ANEXO </div>
+<div id="th_1" class="t s3_1">ARTÍCULO 1º — Elector. Podrán votar en los actos electorales nacionales los ciudadanos </div>
+<div id="ti_1" class="t s3_1">comprendidos en los términos del artículo 3º bis del CODIGO ELECTORAL NACIONAL, siempre que </div>
+<div id="tj_1" class="t s3_1">no se encuentren incursos en ninguno de los supuestos del artículo 3º de dicho Código. </div>
+<div id="tk_1" class="t s3_1">ARTÍCULO 2º — Prueba de la calidad de elector. A los fines de la emisión del sufragio, la calidad de </div>
+<div id="tl_1" class="t s3_1">elector de los procesados que se encuentren cumpliendo prisión preventiva se probará </div>
+<div id="tm_1" class="t s3_1">exclusivamente por su inclusión en el REGISTRO DE ELECTORES PRIVADOS DE LIBERTAD, a cargo </div>
+<div id="tn_1" class="t s3_1">de la CAMARA NACIONAL ELECTORAL. </div>
+<div id="to_1" class="t s3_1">ARTICULO 3º — REGISTRO DE ELECTORES PRIVADOS DE LIBERTAD. EL REGISTRO DE ELECTORES </div>
+<div id="tp_1" class="t s3_1">PRIVADOS DE LIBERTAD será llevado por la CAMARA NACIONAL ELECTORAL sobre la base de la </div>
+<div id="tq_1" class="t s3_1">información que remitan todos los tribunales del país con competencia en materia penal. </div>
+<div id="tr_1" class="t s3_1">La CAMARA NACIONAL ELECTORAL confeccionará un ordenamiento por distrito electoral, de la </div>
+<div id="ts_1" class="t s3_1">siguiente manera: </div>
+<div id="tt_1" class="t s3_1">a) Por cárcel. </div>
+<div id="tu_1" class="t s3_1">b) Por sexo y por orden matricular. </div>
+<div id="tv_1" class="t s3_1">ARTÍCULO 4º — Formación y actualización del REGISTRO DE ELECTORES PRIVADOS DE LIBERTAD. </div>
+<div id="tw_1" class="t s3_1">Dentro de los TREINTA (30) días de publicado el presente Reglamento, los Jueces con competencia </div>
+<div id="tx_1" class="t s3_1">en materia penal de todo el país comunicarán a la CAMARA NACIONAL ELECTORAL la nómina, por </div>
+<div id="ty_1" class="t s3_1">cárcel, de quienes se encuentren privados de su libertad con prisión preventiva. </div>
+<div id="tz_1" class="t s3_1">Dicha comunicación será remitida en soporte electrónico de acuerdo con las especificaciones </div>
+<div id="t10_1" class="t s3_1">técnicas que establezca la justicia electoral, o por otro medio que ésta autorice. </div>
+<div id="t11_1" class="t s3_1">Posteriormente, en forma mensual y del mismo modo, deberá actualizarse la información </div>
+<div id="t12_1" class="t s3_1">comunicándose las nuevas prisiones preventivas dictadas en el período y las novedades producidas </div>
+<div id="t13_1" class="t s3_1">en ese mismo lapso por traslado, fallecimientos o modificaciones del estado procesal de los internos </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',702],['t4_1',586],['t5_1',857],['t6_1',2190],['t7_1',2843],['t8_1',2908],['ta_1',351],['tb_1',2562],['tc_1',2934],['td_1',1993],['te_1',215],['tf_1',2601],['th_1',2933],['ti_1',2933],['tj_1',2535],['tk_1',2933],['tl_1',2934],['tm_1',2933],['tn_1',1111],['to_1',2933],['tp_1',2933],['tq_1',2575],['tr_1',2933],['ts_1',528],['tt_1',385],['tu_1',1021],['tv_1',2933],['tw_1',2935],['tx_1',2934],['ty_1',2318],['tz_1',2933],['t10_1',2312],['t11_1',2933],['t12_1',2935],['t13_1',2934]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

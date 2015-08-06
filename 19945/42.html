@@ -1,0 +1,306 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load42();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_42{left:333px;top:108px;}
+#t2_42{left:331px;top:128px;}
+#t3_42{left:378px;top:191px;}
+#t4_42{left:101px;top:228px;}
+#t5_42{left:217px;top:228px;}
+#t6_42{left:538px;top:228px;}
+#t7_42{left:101px;top:246px;}
+#t8_42{left:101px;top:263px;}
+#t9_42{left:101px;top:281px;}
+#ta_42{left:101px;top:318px;}
+#tb_42{left:223px;top:318px;}
+#tc_42{left:551px;top:318px;}
+#td_42{left:101px;top:336px;}
+#te_42{left:101px;top:353px;}
+#tf_42{left:101px;top:371px;}
+#tg_42{left:101px;top:408px;}
+#th_42{left:101px;top:426px;}
+#ti_42{left:101px;top:463px;}
+#tj_42{left:219px;top:463px;}
+#tk_42{left:527px;top:463px;}
+#tl_42{left:101px;top:481px;}
+#tm_42{left:101px;top:498px;}
+#tn_42{left:101px;top:536px;}
+#to_42{left:218px;top:536px;}
+#tp_42{left:618px;top:536px;}
+#tq_42{left:101px;top:553px;}
+#tr_42{left:101px;top:571px;}
+#ts_42{left:101px;top:588px;}
+#tt_42{left:101px;top:626px;}
+#tu_42{left:223px;top:626px;}
+#tv_42{left:444px;top:626px;}
+#tw_42{left:101px;top:643px;}
+#tx_42{left:101px;top:661px;}
+#ty_42{left:101px;top:678px;}
+#tz_42{left:101px;top:696px;}
+#t10_42{left:101px;top:733px;}
+#t11_42{left:101px;top:769px;}
+#t12_42{left:210px;top:769px;}
+#t13_42{left:234px;top:769px;}
+#t14_42{left:254px;top:769px;}
+#t15_42{left:507px;top:769px;}
+#t16_42{left:101px;top:787px;}
+#t17_42{left:101px;top:804px;}
+#t18_42{left:101px;top:822px;}
+#t19_42{left:101px;top:859px;}
+#t1a_42{left:568px;top:859px;}
+#t1b_42{left:101px;top:895px;}
+#t1c_42{left:230px;top:895px;}
+#t1d_42{left:101px;top:912px;}
+#t1e_42{left:193px;top:912px;}
+#t1f_42{left:101px;top:930px;}
+#t1g_42{left:101px;top:947px;}
+#t1h_42{left:101px;top:985px;}
+#t1i_42{left:220px;top:985px;}
+#t1j_42{left:342px;top:985px;}
+#t1k_42{left:101px;top:1002px;}
+#t1l_42{left:101px;top:1020px;}
+#t1m_42{left:101px;top:1037px;}
+#t1n_42{left:101px;top:1055px;}
+
+.s3_42{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s7_42{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_42{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s6_42{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s2_42{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_42{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_42{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_42" class="t s1_42">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_42" class="t s1_42">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_42" class="t s2_42">De los delitos electorales </div>
+<div id="t4_42" class="t s3_42">Artículo 129.- </div>
+<div id="t5_42" class="t s2_42">Negativa o demora en la acción de amparo.</div>
+<div id="t6_42" class="t s4_42">Se impondrá prisión de tres meses a dos </div>
+<div id="t7_42" class="t s4_42">años al funcionario que no diere trámite a la acción de amparo prevista en los artículos 10 y 11, o </div>
+<div id="t8_42" class="t s4_42">no la resolviera dentro de las cuarenta y ocho horas de interpuesta de igual pena al que </div>
+<div id="t9_42" class="t s4_42">desobedeciere las ordenes impartidas al respecto por dicho funcionario. </div>
+<div id="ta_42" class="t s3_42">Artículo 130.- </div>
+<div id="tb_42" class="t s2_42">Reunión de electores. Depósito de armas.</div>
+<div id="tc_42" class="t s4_42">Todo propietario de inmueble situado </div>
+<div id="td_42" class="t s4_42">dentro del radio de ochenta metros (80 m.) del lugar de celebración del comicio, así como los </div>
+<div id="te_42" class="t s4_42">locatarios u ocupantes, sean éstos habituales o circunstanciales, serán pasibles si el día del acto </div>
+<div id="tf_42" class="t s4_42">comicial y conociendo el hecho no dieren aviso inmediato a las autoridades: </div>
+<div id="tg_42" class="t s4_42">1. De prisión de quince días a seis meses si admitieren reunión de electores 2. De prisión de tres </div>
+<div id="th_42" class="t s4_42">meses a dos años si tuvieran armas en depósito. </div>
+<div id="ti_42" class="t s3_42">Artículo 131.- </div>
+<div id="tj_42" class="t s2_42">Espectáculos públicos - Actos deportivos.</div>
+<div id="tk_42" class="t s4_42">Se impondrá prisión de quince días a seis </div>
+<div id="tl_42" class="t s4_42">meses al empresario u organizador de espectáculos públicos o actos deportivos que se realicen </div>
+<div id="tm_42" class="t s4_42">durante el lapso previsto en el artículo 71, inciso b). </div>
+<div id="tn_42" class="t s3_42">Artículo 132.- </div>
+<div id="to_42" class="t s2_42">No concurrencia o abandono de funciones electorales.</div>
+<div id="tp_42" class="t s4_42">Se penará con prisión de seis </div>
+<div id="tq_42" class="t s4_42">meses a dos años a los funcionarios creados por esta ley y a los electores designados para el </div>
+<div id="tr_42" class="t s4_42">desempeño de funciones que sin causa justificada dejen de concurrir al lugar donde deban </div>
+<div id="ts_42" class="t s4_42">cumplirlas o hicieren abandono de ellas. </div>
+<div id="tt_42" class="t s3_42">Artículo 133. - </div>
+<div id="tu_42" class="t s2_42">Empleados públicos. Sanción. </div>
+<div id="tv_42" class="t s4_42">Se impondrá multa de pesos quinientos ($ 500) a los </div>
+<div id="tw_42" class="t s4_42">empleados públicos que admitan gestiones o trámites ante sus respectivas oficinas o dependencias </div>
+<div id="tx_42" class="t s4_42">hasta un (1) año después de vencido el plazo fijado en el artículo 125, sin exigir la presentación de </div>
+<div id="ty_42" class="t s4_42">la constancia de emisión del sufragio, la justificación correspondiente o la constancia del pago de la </div>
+<div id="tz_42" class="t s4_42">multa. </div>
+<div id="t10_42" class="t s5_42">(Artículo sustituido por art. 9° de la Ley 26.744 B.O. 11/06/2012)</div>
+<div id="t11_42" class="t s3_42">Artículo 133 </div>
+<div id="t12_42" class="t s6_42">bis</div>
+<div id="t13_42" class="t s3_42">.- </div>
+<div id="t14_42" class="t s2_42">Publicidad de actos de gobierno.</div>
+<div id="t15_42" class="t s4_42">Los funcionarios públicos que autorizaren o </div>
+<div id="t16_42" class="t s4_42">consintieran la publicidad de actos de gobierno en violación de la prohibición establecida en el </div>
+<div id="t17_42" class="t s4_42">artículo 64 quater, serán pasibles de inhabilitación de uno (1) a diez (10) años para el ejercicio de </div>
+<div id="t18_42" class="t s4_42">cargos públicos. </div>
+<div id="t19_42" class="t s5_42">(Artículo incorporado por art. 11 de la Ley N° 25.610 B.O. 08/07/2002)</div>
+<div id="t1a_42" class="t s7_42">. </div>
+<div id="t1b_42" class="t s3_42">Artículo 134.- </div>
+<div id="t1c_42" class="t s2_42">Detención, demora y obstaculización al transporte de urnas, y documentos </div>
+<div id="t1d_42" class="t s2_42">electorales. </div>
+<div id="t1e_42" class="t s4_42">Se impondrá prisión de seis meses a dos años a quienes detuvieran, demoraran y </div>
+<div id="t1f_42" class="t s4_42">obstaculizaran por cualquier medio a los correos, mensajeros o encargados de la conducción de </div>
+<div id="t1g_42" class="t s4_42">urnas receptoras de votos documentos u otros efectos relacionados con una elección. </div>
+<div id="t1h_42" class="t s3_42">Artículo 135.- </div>
+<div id="t1i_42" class="t s2_42">Juegos de azar.</div>
+<div id="t1j_42" class="t s4_42">Se impondrá prisión de seis meses a dos años a las personas que </div>
+<div id="t1k_42" class="t s4_42">integren comisiones directivas de clubes o asociaciones, o desempeñen cargos en comités o centros </div>
+<div id="t1l_42" class="t s4_42">partidarios, que organicen o autoricen durante las horas fijadas para la realización del acto comicial </div>
+<div id="t1m_42" class="t s4_42">el funcionamiento de juegos de azar dentro de los respectivos locales. Con igual pena se sancionará </div>
+<div id="t1n_42" class="t s4_42">al empresario de dichos juegos. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg42Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg42"><object width="935" height="1210" data="42/42.svg" type="image/svg+xml" id="pdf42" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld42" type="text/javascript">
+
+var isIE = false;
+var f42 = [['t1_42',1076],['t2_42',1096],['t3_42',719],['t4_42',443],['t5_42',1266],['t6_42',1184],['t7_42',2934],['t8_42',2934],['t9_42',2076],['ta_42',457],['tb_42',1277],['tc_42',1133],['td_42',2933],['te_42',2934],['tf_42',2201],['tg_42',2934],['th_42',1416],['ti_42',447],['tj_42',1208],['tk_42',1229],['tl_42',2933],['tm_42',1514],['tn_42',446],['to_42',1579],['tp_42',863],['tq_42',2934],['tr_42',2934],['ts_42',1161],['tt_42',467],['tu_42',861],['tv_42',1560],['tw_42',2934],['tx_42',2934],['ty_42',2933],['t10_42',1724],['t11_42',407],['t14_42',982],['t15_42',1309],['t16_42',2933],['t17_42',2934],['t18_42',464],['t19_42',1870],['t1b_42',470],['t1c_42',2415],['t1e_42',2567],['t1f_42',2933],['t1g_42',2479],['t1h_42',449],['t1i_42',463],['t1j_42',1969],['t1k_42',2933],['t1l_42',2933],['t1m_42',2934],['t1n_42',920]];
+function load42(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f42);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 60;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_42");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

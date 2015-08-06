@@ -1,0 +1,376 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load14();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_14{left:437px;top:1453px;}
+#t2_14{left:359px;top:130px;}
+#t3_14{left:326px;top:160px;}
+#t4_14{left:87px;top:189px;}
+#t5_14{left:183px;top:189px;}
+#t6_14{left:87px;top:210px;}
+#t7_14{left:87px;top:239px;}
+#t8_14{left:181px;top:239px;}
+#t9_14{left:87px;top:260px;}
+#ta_14{left:87px;top:280px;}
+#tb_14{left:87px;top:300px;}
+#tc_14{left:87px;top:321px;}
+#td_14{left:87px;top:350px;}
+#te_14{left:182px;top:350px;}
+#tf_14{left:87px;top:371px;}
+#tg_14{left:87px;top:391px;}
+#th_14{left:114px;top:421px;}
+#ti_14{left:122px;top:423px;}
+#tj_14{left:222px;top:421px;}
+#tk_14{left:272px;top:423px;}
+#tl_14{left:322px;top:421px;}
+#tm_14{left:347px;top:421px;}
+#tn_14{left:114px;top:436px;}
+#to_14{left:114px;top:451px;}
+#tp_14{left:114px;top:465px;}
+#tq_14{left:87px;top:489px;}
+#tr_14{left:183px;top:489px;}
+#ts_14{left:87px;top:510px;}
+#tt_14{left:87px;top:530px;}
+#tu_14{left:87px;top:551px;}
+#tv_14{left:114px;top:580px;}
+#tw_14{left:122px;top:583px;}
+#tx_14{left:223px;top:580px;}
+#ty_14{left:274px;top:583px;}
+#tz_14{left:324px;top:580px;}
+#t10_14{left:349px;top:580px;}
+#t11_14{left:114px;top:595px;}
+#t12_14{left:87px;top:619px;}
+#t13_14{left:183px;top:619px;}
+#t14_14{left:87px;top:640px;}
+#t15_14{left:87px;top:660px;}
+#t16_14{left:114px;top:690px;}
+#t17_14{left:122px;top:692px;}
+#t18_14{left:220px;top:690px;}
+#t19_14{left:270px;top:692px;}
+#t1a_14{left:319px;top:690px;}
+#t1b_14{left:343px;top:690px;}
+#t1c_14{left:114px;top:705px;}
+#t1d_14{left:114px;top:719px;}
+#t1e_14{left:87px;top:743px;}
+#t1f_14{left:181px;top:743px;}
+#t1g_14{left:87px;top:764px;}
+#t1h_14{left:87px;top:784px;}
+#t1i_14{left:87px;top:805px;}
+#t1j_14{left:87px;top:834px;}
+#t1k_14{left:186px;top:834px;}
+#t1l_14{left:87px;top:855px;}
+#t1m_14{left:87px;top:875px;}
+#t1n_14{left:87px;top:895px;}
+#t1o_14{left:87px;top:916px;}
+#t1p_14{left:114px;top:946px;}
+#t1q_14{left:122px;top:948px;}
+#t1r_14{left:220px;top:946px;}
+#t1s_14{left:270px;top:948px;}
+#t1t_14{left:319px;top:946px;}
+#t1u_14{left:343px;top:946px;}
+#t1v_14{left:114px;top:960px;}
+#t1w_14{left:114px;top:975px;}
+#t1x_14{left:114px;top:990px;}
+#t1y_14{left:114px;top:1005px;}
+#t1z_14{left:114px;top:1020px;}
+#t20_14{left:357px;top:1044px;}
+#t21_14{left:102px;top:1073px;}
+#t22_14{left:87px;top:1103px;}
+#t23_14{left:181px;top:1103px;}
+#t24_14{left:87px;top:1123px;}
+#t25_14{left:87px;top:1144px;}
+#t26_14{left:114px;top:1174px;}
+#t27_14{left:122px;top:1176px;}
+#t28_14{left:224px;top:1174px;}
+#t29_14{left:275px;top:1176px;}
+#t2a_14{left:325px;top:1174px;}
+#t2b_14{left:351px;top:1174px;}
+#t2c_14{left:114px;top:1188px;}
+#t2d_14{left:114px;top:1203px;}
+#t2e_14{left:114px;top:1218px;}
+#t2f_14{left:114px;top:1233px;}
+#t2g_14{left:114px;top:1248px;}
+#t2h_14{left:114px;top:1263px;}
+#t2i_14{left:114px;top:1277px;}
+#t2j_14{left:114px;top:1292px;}
+#t2k_14{left:114px;top:1307px;}
+#t2l_14{left:114px;top:1322px;}
+#t2m_14{left:114px;top:1337px;}
+#t2n_14{left:114px;top:1352px;}
+#t2o_14{left:114px;top:1367px;}
+#t2p_14{left:114px;top:1391px;}
+#t2q_14{left:122px;top:1393px;}
+#t2r_14{left:173px;top:1391px;}
+#t2s_14{left:114px;top:1406px;}
+#t2t_14{left:114px;top:1420px;}
+#t2u_14{left:114px;top:1435px;}
+
+.s2_14{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s4_14{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_14{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_14{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_14{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_14" class="t s1_14">14</div>
+<div id="t2_14" class="t s2_14">CAPÍTULO PRIMERO </div>
+<div id="t3_14" class="t s2_14">De su naturaleza y duración </div>
+<div id="t4_14" class="t s2_14">Artículo 87</div>
+<div id="t5_14" class="t s3_14">.- El Poder Ejecutivo de la Nación será desempeñado por un ciudadano con el </div>
+<div id="t6_14" class="t s3_14">título de "Presidente de la Nación Argentina". </div>
+<div id="t7_14" class="t s2_14">Artículo 88</div>
+<div id="t8_14" class="t s3_14">.- En caso de enfermedad, ausencia de la Capital, muerte, renuncia o destitución </div>
+<div id="t9_14" class="t s3_14">del Presidente, el Poder Ejecutivo será ejercido por el vicepresidente de la Nación. En caso </div>
+<div id="ta_14" class="t s3_14">de destitución, muerte, dimisión o inhabilidad del Presidente y vicepresidente de la Nación, </div>
+<div id="tb_14" class="t s3_14">el Congreso determinará qué funcionario público ha de desempeñar la Presidencia, hasta </div>
+<div id="tc_14" class="t s3_14">que haya cesado la causa de la inhabilidad o un nuevo presidente sea electo. </div>
+<div id="td_14" class="t s2_14">Artículo 89</div>
+<div id="te_14" class="t s3_14">.- Para ser elegido Presidente o vicepresidente de la Nación, se requiere haber </div>
+<div id="tf_14" class="t s3_14">nacido en el territorio argentino, o ser hijo de ciudadano nativo, habiendo nacido en país </div>
+<div id="tg_14" class="t s3_14">extranjero; y las demás calidades exigidas para ser elegido senador. </div>
+<div id="th_14" class="t s4_14">T</div>
+<div id="ti_14" class="t s5_14">EXTO ANTERIOR A </div>
+<div id="tj_14" class="t s4_14">1994: A</div>
+<div id="tk_14" class="t s5_14">RTÍCULO </div>
+<div id="tl_14" class="t s4_14">76.</div>
+<div id="tm_14" class="t s4_14">Para ser elegido presidente y vicepresidente de la Nación, se requiere </div>
+<div id="tn_14" class="t s4_14">haber nacido en el territorio argentino, o ser hijo de ciudadano nativo, habiendo nacido en país extranjero; </div>
+<div id="to_14" class="t s4_14">pertenecer a la comunión católica apostólica romana, y las demás calidades exigidas para ser electo </div>
+<div id="tp_14" class="t s4_14">senador. </div>
+<div id="tq_14" class="t s2_14">Artículo 90</div>
+<div id="tr_14" class="t s3_14">.- El Presidente y vicepresidente duran en sus funciones el término de cuatro </div>
+<div id="ts_14" class="t s3_14">años y podrán ser reelegidos o sucederse recíprocamente por un solo período consecutivo. </div>
+<div id="tt_14" class="t s3_14">Si han sido reelectos o se han sucedido recíprocamente no pueden ser elegidos para ninguno </div>
+<div id="tu_14" class="t s3_14">de ambos cargos, sino con el intervalo de un período. </div>
+<div id="tv_14" class="t s4_14">T</div>
+<div id="tw_14" class="t s5_14">EXTO ANTERIOR A </div>
+<div id="tx_14" class="t s4_14">1994: A</div>
+<div id="ty_14" class="t s5_14">RTÍCULO </div>
+<div id="tz_14" class="t s4_14">77.</div>
+<div id="t10_14" class="t s4_14">El presidente y vicepresidente durarán en sus empleos el término de </div>
+<div id="t11_14" class="t s4_14">seis años; y no pueden ser reelegidos sino con intervalo de un período. </div>
+<div id="t12_14" class="t s2_14">Artículo 91</div>
+<div id="t13_14" class="t s3_14">.- El Presidente de la Nación cesa en el poder el mismo día en que expira su </div>
+<div id="t14_14" class="t s3_14">período de cuatro años; sin que evento alguno que lo haya interrumpido, pueda ser motivo </div>
+<div id="t15_14" class="t s3_14">de que se le complete más tarde. </div>
+<div id="t16_14" class="t s4_14">T</div>
+<div id="t17_14" class="t s5_14">EXTO ANTERIOR A </div>
+<div id="t18_14" class="t s4_14">1994: A</div>
+<div id="t19_14" class="t s5_14">RTÍCULO </div>
+<div id="t1a_14" class="t s4_14">78.</div>
+<div id="t1b_14" class="t s4_14">El presidente de la Nación cesa en el poder el día mismo en que expira </div>
+<div id="t1c_14" class="t s4_14">su período de seis años; sin que evento alguno que lo haya interrumpido, pueda ser motivo de que se le </div>
+<div id="t1d_14" class="t s4_14">complete más tarde. </div>
+<div id="t1e_14" class="t s2_14">Artículo 92</div>
+<div id="t1f_14" class="t s3_14">.- El Presidente y vicepresidente disfrutan de un sueldo pagado por el Tesoro de </div>
+<div id="t1g_14" class="t s3_14">la Nación, que no podrá ser alterado en el período de sus nombramientos. Durante el mismo </div>
+<div id="t1h_14" class="t s3_14">período no podrán ejercer otro empleo, ni recibir ningún otro emolumento de la Nación, ni </div>
+<div id="t1i_14" class="t s3_14">de provincia alguna. </div>
+<div id="t1j_14" class="t s2_14">Artículo 93</div>
+<div id="t1k_14" class="t s3_14">.- Al tomar posesión de su cargo el presidente y vicepresidente prestarán </div>
+<div id="t1l_14" class="t s3_14">juramento, en manos del presidente del Senado y ante el Congreso reunido en Asamblea, </div>
+<div id="t1m_14" class="t s3_14">respetando sus creencias religiosas, de "desempeñar con lealtad y patriotismo el cargo de </div>
+<div id="t1n_14" class="t s3_14">Presidente (o vicepresidente) de la Nación y observar y hacer observar fielmente la </div>
+<div id="t1o_14" class="t s3_14">Constitución de la Nación Argentina". </div>
+<div id="t1p_14" class="t s4_14">T</div>
+<div id="t1q_14" class="t s5_14">EXTO ANTERIOR A </div>
+<div id="t1r_14" class="t s4_14">1994: A</div>
+<div id="t1s_14" class="t s5_14">RTÍCULO </div>
+<div id="t1t_14" class="t s4_14">80.</div>
+<div id="t1u_14" class="t s4_14">Al tomar posesión de su cargo el presidente y vicepresidente prestarán </div>
+<div id="t1v_14" class="t s4_14">juramento en manos del presidente del Senado (la primera vez del presidente del Congreso Constituyente), </div>
+<div id="t1w_14" class="t s4_14">estando reunido el Congreso, en los términos siguientes: </div>
+<div id="t1x_14" class="t s4_14">"Yo, N.N., juro por Dios nuestro Señor y estos Santos Evangelios, desempeñar con lealtad y patriotismo el </div>
+<div id="t1y_14" class="t s4_14">cargo de presidente (o vicepresidente) de la Nación, y observar y hacer observar fielmente la Constitución </div>
+<div id="t1z_14" class="t s4_14">de la Nación Argentina. Si así no lo hiciere, Dios y la Nación me lo demanden". </div>
+<div id="t20_14" class="t s2_14">CAPÍTULO SEGUNDO </div>
+<div id="t21_14" class="t s2_14">De la forma y tiempo de la elección del Presidente y vicepresidente de la Nación </div>
+<div id="t22_14" class="t s2_14">Artículo 94</div>
+<div id="t23_14" class="t s3_14">.- El Presidente y el vicepresidente de la Nación serán elegidos directamente por </div>
+<div id="t24_14" class="t s3_14">el Pueblo, en doble vuelta, según lo establece esta Constitución. A este fin el territorio </div>
+<div id="t25_14" class="t s3_14">nacional conformará un distrito único. </div>
+<div id="t26_14" class="t s4_14">T</div>
+<div id="t27_14" class="t s5_14">EXTO ANTERIOR A </div>
+<div id="t28_14" class="t s4_14">1994: A</div>
+<div id="t29_14" class="t s5_14">RTÍCULO </div>
+<div id="t2a_14" class="t s4_14">81.</div>
+<div id="t2b_14" class="t s4_14">La elección del presidente y vicepresidente de la Nación se hará del </div>
+<div id="t2c_14" class="t s4_14">modo siguiente: La Capital y cada una de las provincias nombrarán por votación directa una junta de </div>
+<div id="t2d_14" class="t s4_14">electores, igual al duplo del total de diputados y senadores que envían al Congreso, con las mismas </div>
+<div id="t2e_14" class="t s4_14">calidades y bajo las mismas formas prescriptas para la elección de diputados. No pueden ser electores los </div>
+<div id="t2f_14" class="t s4_14">diputados, los senadores, ni los empleados a sueldo del Gobierno federal. Reunidos los electores en la </div>
+<div id="t2g_14" class="t s4_14">Capital de Nación y en la de sus provincias respectivas cuatro meses antes que concluya el término del </div>
+<div id="t2h_14" class="t s4_14">presidente cesante, procederán a elegir presidente y vicepresidente de la Nación por cédulas firmadas, </div>
+<div id="t2i_14" class="t s4_14">expresando en una la persona por quien votan para presidente, y en otra la que eligen para vicepresidente. </div>
+<div id="t2j_14" class="t s4_14">Se harán dos listas de todos los individuos electos para presidente, y otras dos de los nombrados para </div>
+<div id="t2k_14" class="t s4_14">vicepresidente con el número de votos que cada uno de ellos hubiese obtenido. Estas listas serán firmadas </div>
+<div id="t2l_14" class="t s4_14">por los electores, y se remitirán cerradas y selladas dos de ellas (una de cada clase) al presidente de la </div>
+<div id="t2m_14" class="t s4_14">Legislatura provincial, y en la Capital al presidente de la municipalidad, en cuyos registros permanecerán </div>
+<div id="t2n_14" class="t s4_14">depositadas y cerradas; y las otras dos al presidente del Senado (la primera vez al presidente del Congreso </div>
+<div id="t2o_14" class="t s4_14">Constituyente). </div>
+<div id="t2p_14" class="t s4_14">A</div>
+<div id="t2q_14" class="t s5_14">RTÍCULO </div>
+<div id="t2r_14" class="t s4_14">82. El presidente del Senado (la primera vez el del Congreso Constituyente), reunidas todas las </div>
+<div id="t2s_14" class="t s4_14">listas, las abrirá a presencia de ambas Cámaras. Asociados a los secretarios cuatro miembros del Congreso </div>
+<div id="t2t_14" class="t s4_14">sacados a la suerte, procederán inmediatamente a hacer el escrutinio y a anunciar el número de sufragios </div>
+<div id="t2u_14" class="t s4_14">que resulte en favor de cada candidato para la Presidencia y Vicepresidencia de la Nación. Los que reúnan en </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg14Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg14"><object width="935" height="1540" data="14/14.svg" type="image/svg+xml" id="pdf14" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld14" type="text/javascript">
+
+var isIE = false;
+var f14 = [['t2_14',698],['t3_14',960],['t4_14',384],['t5_14',2489],['t6_14',1393],['t7_14',376],['t8_14',2497],['t9_14',2874],['ta_14',2874],['tb_14',2874],['tc_14',2375],['td_14',383],['te_14',2491],['tf_14',2874],['tg_14',2117],['ti_14',382],['tj_14',202],['tm_14',1767],['tn_14',2695],['to_14',2696],['tq_14',386],['tr_14',2488],['ts_14',2874],['tt_14',2874],['tu_14',1652],['tw_14',386],['tx_14',203],['t10_14',1756],['t11_14',1758],['t12_14',385],['t13_14',2488],['t14_14',2874],['t15_14',1030],['t17_14',377],['t18_14',199],['t1b_14',1780],['t1c_14',2696],['t1d_14',507],['t1e_14',378],['t1f_14',2495],['t1g_14',2874],['t1h_14',2874],['t1i_14',624],['t1j_14',396],['t1k_14',2478],['t1l_14',2874],['t1m_14',2874],['t1n_14',2874],['t1o_14',1147],['t1q_14',377],['t1r_14',199],['t1u_14',1779],['t1v_14',2695],['t1w_14',1404],['t1x_14',2696],['t1y_14',2695],['t1z_14',1940],['t20_14',711],['t21_14',2748],['t22_14',378],['t23_14',2496],['t24_14',2874],['t25_14',1167],['t27_14',388],['t28_14',205],['t2b_14',1749],['t2c_14',2696],['t2d_14',2695],['t2e_14',2696],['t2f_14',2695],['t2g_14',2695],['t2h_14',2696],['t2i_14',2695],['t2j_14',2695],['t2k_14',2696],['t2l_14',2695],['t2m_14',2695],['t2n_14',2695],['t2r_14',2462],['t2s_14',2695],['t2t_14',2696],['t2u_14',2696]];
+function load14(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f14);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 103;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_14");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

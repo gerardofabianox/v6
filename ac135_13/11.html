@@ -1,0 +1,213 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load11();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_11{left:333px;top:128px;}
+#t2_11{left:331px;top:147px;}
+#t3_11{left:101px;top:207px;}
+#t4_11{left:101px;top:239px;}
+#t5_11{left:101px;top:271px;}
+#t6_11{left:101px;top:303px;}
+#t7_11{left:101px;top:334px;}
+#t8_11{left:101px;top:366px;}
+#t9_11{left:101px;top:398px;}
+#ta_11{left:101px;top:430px;}
+#tb_11{left:101px;top:461px;}
+#tc_11{left:101px;top:493px;}
+#td_11{left:101px;top:525px;}
+#te_11{left:101px;top:556px;}
+#tf_11{left:101px;top:588px;}
+#tg_11{left:101px;top:620px;}
+#th_11{left:101px;top:652px;}
+#ti_11{left:101px;top:683px;}
+#tj_11{left:101px;top:715px;}
+#tk_11{left:101px;top:747px;}
+#tl_11{left:101px;top:779px;}
+#tm_11{left:101px;top:810px;}
+#tn_11{left:101px;top:842px;}
+#to_11{left:101px;top:874px;}
+#tp_11{left:101px;top:906px;}
+#tq_11{left:101px;top:937px;}
+#tr_11{left:101px;top:969px;}
+#ts_11{left:101px;top:1001px;}
+#tt_11{left:101px;top:1033px;}
+#tu_11{left:101px;top:1064px;}
+
+.s2_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_11{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_11" class="t s1_11">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_11" class="t s1_11">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_11" class="t s2_11">5.1.17. Papelería e impresiones </div>
+<div id="t4_11" class="t s2_11">5.1.18. Gastos de oficina </div>
+<div id="t5_11" class="t s2_11">5.1.19. Gastos de mantenimiento </div>
+<div id="t6_11" class="t s2_11">5.1.20. Gastos de mantenimiento de equipos de computación </div>
+<div id="t7_11" class="t s2_11">5.1.21. Servicios públicos </div>
+<div id="t8_11" class="t s2_11">5.1.22. Limpieza </div>
+<div id="t9_11" class="t s2_11">5.1.23. Avisos oficiales </div>
+<div id="ta_11" class="t s2_11">5.1.24. Propaganda y difusión institucional </div>
+<div id="tb_11" class="t s2_11">5.1.25. Gastos de publicación en Internet </div>
+<div id="tc_11" class="t s2_11">5.1.26. Movilidad y viáticos </div>
+<div id="td_11" class="t s2_11">5.1.27. Alquiler de vehículos </div>
+<div id="te_11" class="t s2_11">5.1.28. Gastos de combustibles </div>
+<div id="tf_11" class="t s2_11">5.1.29. Gastos de estacionamiento </div>
+<div id="tg_11" class="t s2_11">5.1.30. Gastos de representación institucional </div>
+<div id="th_11" class="t s2_11">5.1.31. Impuestos, tasas y contribuciones </div>
+<div id="ti_11" class="t s2_11">5.1.32. Gastos de internet y TV </div>
+<div id="tj_11" class="t s2_11">5.1.33. Gastos legales </div>
+<div id="tk_11" class="t s2_11">5.1.34. Gastos Varios </div>
+<div id="tl_11" class="t s2_11">5.1.35. Indemnizaciones </div>
+<div id="tm_11" class="t s2_11">5.1.36. Deudores incobrables </div>
+<div id="tn_11" class="t s2_11">5.1.37. Cargo previsión para despidos </div>
+<div id="to_11" class="t s2_11">5.1.38. Cargo previsión para juicios </div>
+<div id="tp_11" class="t s2_11">5.1.39. Cargo previsión para incobrables </div>
+<div id="tq_11" class="t s2_11">5.1.40. Pérdida por revaluación de bienes de uso </div>
+<div id="tr_11" class="t s2_11">5.1.41. Transferencias realizadas a otros órganos o distritos para desenvolvimiento institucional </div>
+<div id="ts_11" class="t s2_11">5.1.42. Otros Gastos de desenvolvimiento institucional (según detalle) </div>
+<div id="tt_11" class="t s2_11">………………………………………………………. </div>
+<div id="tu_11" class="t s2_11">………………………………………………………. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg11Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg11"><object width="935" height="1210" data="11/11.svg" type="image/svg+xml" id="pdf11" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld11" type="text/javascript">
+
+var isIE = false;
+var f11 = [['t1_11',1076],['t2_11',1095],['t3_11',915],['t4_11',725],['t5_11',973],['t6_11',1785],['t7_11',742],['t8_11',484],['t9_11',665],['ta_11',1239],['tb_11',1206],['tc_11',792],['td_11',825],['te_11',914],['tf_11',1010],['tg_11',1333],['th_11',1220],['ti_11',914],['tj_11',646],['tk_11',625],['tl_11',715],['tm_11',852],['tn_11',1104],['to_11',1034],['tp_11',1179],['tq_11',1421],['tr_11',2783],['ts_11',2045]];
+function load11(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f11);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 31;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_11");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

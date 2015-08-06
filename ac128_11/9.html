@@ -1,0 +1,217 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load9();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_9{left:333px;top:128px;}
+#t2_9{left:331px;top:147px;}
+#t3_9{left:754px;top:207px;}
+#t4_9{left:165px;top:239px;}
+#t5_9{left:231px;top:271px;}
+#t6_9{left:101px;top:303px;}
+#t7_9{left:101px;top:334px;}
+#t8_9{left:101px;top:366px;}
+#t9_9{left:101px;top:398px;}
+#ta_9{left:101px;top:430px;}
+#tb_9{left:101px;top:461px;}
+#tc_9{left:101px;top:479px;}
+#td_9{left:101px;top:496px;}
+#te_9{left:101px;top:528px;}
+#tf_9{left:101px;top:545px;}
+#tg_9{left:101px;top:563px;}
+#th_9{left:101px;top:580px;}
+#ti_9{left:101px;top:612px;}
+#tj_9{left:101px;top:629px;}
+#tk_9{left:101px;top:647px;}
+#tl_9{left:101px;top:664px;}
+#tm_9{left:101px;top:682px;}
+#tn_9{left:101px;top:713px;}
+#to_9{left:101px;top:731px;}
+#tp_9{left:101px;top:762px;}
+#tq_9{left:101px;top:794px;}
+#tr_9{left:101px;top:826px;}
+#ts_9{left:407px;top:826px;}
+
+.s2_9{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_9{
+	FONT-SIZE: 45px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_9{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_9" class="t s1_9">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_9" class="t s1_9">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_9" class="t s2_9">ANEXO IV </div>
+<div id="t4_9" class="t s2_9">SOLICITUD DE AUTORIZACIÓN PARA EL ACOMPAÑAMIENTO CÍVICO A LOS </div>
+<div id="t5_9" class="t s2_9">COMICIOS POR ORGANIZACIONES DE LA SOCIEDAD CIVIL </div>
+<div id="t6_9" class="t s2_9">___________________________ representado/a por __________________________ </div>
+<div id="t7_9" class="t s2_9">(nombre de la entidad) (nombre completo del representante) </div>
+<div id="t8_9" class="t s2_9">con domicilio en ________________________________________________________ </div>
+<div id="t9_9" class="t s2_9">(dirección) </div>
+<div id="ta_9" class="t s2_9">localidad de _____________________ provincia de ___________________________ </div>
+<div id="tb_9" class="t s2_9">Por medio de la presente vengo a solicitar se tenga a mi representado/a como miembro </div>
+<div id="tc_9" class="t s2_9">autorizado/a a fin de participar en las tareas de acompañamiento cívico al proceso </div>
+<div id="td_9" class="t s2_9">electoral 2011. </div>
+<div id="te_9" class="t s2_9">A tal fin, manifiesto que la entidad y todos sus integrantes se conducirán conforme a los </div>
+<div id="tf_9" class="t s2_9">principios de imparcialidad, independencia y objetividad; asegurando no mantener </div>
+<div id="tg_9" class="t s2_9">vínculos con agrupación política alguna y garantizando no obstaculizar ni interferir en el </div>
+<div id="th_9" class="t s2_9">desarrollo del proceso electoral. </div>
+<div id="ti_9" class="t s2_9">Bajo protesta de decir verdad, declaro que todos los colaboradores -detallados en la ficha </div>
+<div id="tj_9" class="t s2_9">que se adjunta- forman parte de esta organización, son mayores de edad, no han </div>
+<div id="tk_9" class="t s2_9">participado activamente en los últimos cuatro (4) años en ninguna agrupación política, y </div>
+<div id="tl_9" class="t s2_9">no prestan servicios en ninguno de los poderes del Estado Nacional, Provincial ni </div>
+<div id="tm_9" class="t s2_9">Municipal. </div>
+<div id="tn_9" class="t s2_9">Anexo a la presente solicitud, la ficha prevista en el punto 4) del Anexo I de la Acordada </div>
+<div id="to_9" class="t s2_9">Extraordinaria 128/11 CNE. </div>
+<div id="tp_9" class="t s2_9">___________ a los __ días del mes de _______ de 2011 </div>
+<div id="tq_9" class="t s2_9">____________________________ _________________________ </div>
+<div id="tr_9" class="t s3_9">(firma del representante)</div>
+<div id="ts_9" class="t s3_9">(Aclaración)</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg9Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg9"><object width="935" height="1210" data="9/9.svg" type="image/svg+xml" id="pdf9" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld9" type="text/javascript">
+
+var isIE = false;
+var f9 = [['t1_9',1076],['t2_9',1095],['t3_9',321],['t4_9',2418],['t5_9',1892],['t6_9',2854],['t7_9',1998],['t8_9',2845],['ta_9',2816],['tb_9',2933],['tc_9',2933],['td_9',487],['te_9',2933],['tf_9',2933],['tg_9',2933],['th_9',1043],['ti_9',2933],['tj_9',2933],['tk_9',2933],['tl_9',2934],['tn_9',2933],['to_9',901],['tp_9',1836],['tq_9',2195],['tr_9',660]];
+function load9(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f9);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 29;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_9");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

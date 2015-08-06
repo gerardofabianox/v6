@@ -1,0 +1,221 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:333px;top:108px;}
+#t2_6{left:331px;top:128px;}
+#t3_6{left:101px;top:191px;}
+#t4_6{left:101px;top:208px;}
+#t5_6{left:101px;top:246px;}
+#t6_6{left:101px;top:263px;}
+#t7_6{left:101px;top:301px;}
+#t8_6{left:101px;top:318px;}
+#t9_6{left:101px;top:356px;}
+#ta_6{left:101px;top:373px;}
+#tb_6{left:101px;top:391px;}
+#tc_6{left:101px;top:428px;}
+#td_6{left:101px;top:466px;}
+#te_6{left:101px;top:504px;}
+#tf_6{left:101px;top:521px;}
+#tg_6{left:101px;top:559px;}
+#th_6{left:101px;top:576px;}
+#ti_6{left:101px;top:614px;}
+#tj_6{left:101px;top:631px;}
+#tk_6{left:101px;top:669px;}
+#tl_6{left:101px;top:686px;}
+#tm_6{left:101px;top:704px;}
+#tn_6{left:101px;top:741px;}
+#to_6{left:101px;top:759px;}
+#tp_6{left:101px;top:796px;}
+#tq_6{left:101px;top:814px;}
+#tr_6{left:101px;top:851px;}
+#ts_6{left:101px;top:869px;}
+#tt_6{left:101px;top:907px;}
+#tu_6{left:101px;top:924px;}
+#tv_6{left:101px;top:962px;}
+#tw_6{left:101px;top:979px;}
+#tx_6{left:101px;top:1017px;}
+#ty_6{left:101px;top:1054px;}
+
+.s2_6{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_6{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_6" class="t s1_6">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_6" class="t s2_6">6.- Elaborar documentos y publicaciones de naturaleza cívico-electoral, en diferentes vectores y </div>
+<div id="t4_6" class="t s2_6">canales de comunicación institucional. </div>
+<div id="t5_6" class="t s2_6">7.- Elaborar y desarrollar estrategias para las actividades de capacitación y formación cívico </div>
+<div id="t6_6" class="t s2_6">electoral. </div>
+<div id="t7_6" class="t s2_6">8.- Colaborar con la Justicia Nacional Electoral en la producción de materiales y actividades de </div>
+<div id="t8_6" class="t s2_6">capacitación para las autoridades de mesa, de acuerdo con las previsiones de la Ley Nº 19.945. </div>
+<div id="t9_6" class="t s2_6">9.- Desarrollar las actividades de recolección, procesamiento y difusión del recuento de resultados </div>
+<div id="ta_6" class="t s2_6">provisorios de los procesos electorales federales encomendados a la Dirección Nacional Electoral, de </div>
+<div id="tb_6" class="t s2_6">conformidad con las Leyes Nros. 19.945 y 26.571. </div>
+<div id="tc_6" class="t s2_6">DIRECCION DE ESTADISTICA Y CARTOGRAFIA ELECTORAL </div>
+<div id="td_6" class="t s2_6">ACCIONES: </div>
+<div id="te_6" class="t s2_6">1.- Elaborar las bases de datos y gestionar los Sistemas de Información Electoral y Geoelectoral de </div>
+<div id="tf_6" class="t s2_6">la Dirección Nacional Electoral, generando informes y productos geoestadísticos específicos. </div>
+<div id="tg_6" class="t s2_6">2.- Efectuar las tareas inherentes a la conformación del registro cartográfico y la evaluación de las </div>
+<div id="th_6" class="t s2_6">propuestas de actualización de circuitos electorales. </div>
+<div id="ti_6" class="t s2_6">3.- Obtener la información de base para el procesamiento y producción de la cartografía, que </div>
+<div id="tj_6" class="t s2_6">integrará el Sistema Geoelectoral. </div>
+<div id="tk_6" class="t s2_6">4.- Definir y aplicar los procedimientos de carga, validación y actualización de datos y los relativos al </div>
+<div id="tl_6" class="t s2_6">diseño, desarrollo y mantenimiento de los módulos específicos en la plataforma del Sistema de </div>
+<div id="tm_6" class="t s2_6">Información Electoral y Geoelectoral. </div>
+<div id="tn_6" class="t s2_6">5.- Procesar y elaborar la información estadística proveniente del Sistema de Información Electoral y </div>
+<div id="to_6" class="t s2_6">producir los informes pertinentes. </div>
+<div id="tp_6" class="t s2_6">6.- Gestionar las actuaciones referidas a la modificación de circuitos electorales de conformidad con </div>
+<div id="tq_6" class="t s2_6">la Ley Nº 19.945. </div>
+<div id="tr_6" class="t s2_6">7.- Desarrollar los procedimientos y análisis de base geográfica y socio-electoral, para la evaluación </div>
+<div id="ts_6" class="t s2_6">de proyectos de modificación de circuitos electorales. </div>
+<div id="tt_6" class="t s2_6">8.- Llevar a cabo actividades de cooperación e intercambio con organismos productores de </div>
+<div id="tu_6" class="t s2_6">información primaria geoelectoral. </div>
+<div id="tv_6" class="t s2_6">9.- Generar la información geoelectoral y estadística específica de apoyo para la organización y </div>
+<div id="tw_6" class="t s2_6">difusión de procesos electorales. </div>
+<div id="tx_6" class="t s2_6">DIRECCION DE FINANCIAMIENTO PARTIDARIO Y ELECTORAL </div>
+<div id="ty_6" class="t s2_6">ACCIONES: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t1_6',1076],['t2_6',1096],['t3_6',2933],['t4_6',1105],['t5_6',2934],['t7_6',2934],['t8_6',2779],['t9_6',2934],['ta_6',2933],['tb_6',1462],['tc_6',1708],['te_6',2933],['tf_6',2663],['tg_6',2934],['th_6',1502],['ti_6',2934],['tj_6',987],['tk_6',2934],['tl_6',2933],['tm_6',1072],['tn_6',2933],['to_6',978],['tp_6',2934],['tq_6',510],['tr_6',2934],['ts_6',1543],['tt_6',2933],['tu_6',993],['tv_6',2933],['tw_6',942],['tx_6',1777]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 35;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

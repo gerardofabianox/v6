@@ -1,0 +1,263 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:257px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:326px;}
+#ta_3{left:101px;top:358px;}
+#tb_3{left:101px;top:375px;}
+#tc_3{left:101px;top:393px;}
+#td_3{left:101px;top:410px;}
+#te_3{left:101px;top:428px;}
+#tf_3{left:101px;top:445px;}
+#tg_3{left:101px;top:463px;}
+#th_3{left:101px;top:480px;}
+#ti_3{left:101px;top:497px;}
+#tj_3{left:101px;top:515px;}
+#tk_3{left:101px;top:546px;}
+#tl_3{left:101px;top:564px;}
+#tm_3{left:101px;top:581px;}
+#tn_3{left:101px;top:613px;}
+#to_3{left:101px;top:631px;}
+#tp_3{left:101px;top:648px;}
+#tq_3{left:299px;top:648px;}
+#tr_3{left:728px;top:648px;}
+#ts_3{left:807px;top:648px;}
+#tt_3{left:101px;top:665px;}
+#tu_3{left:101px;top:697px;}
+#tv_3{left:101px;top:714px;}
+#tw_3{left:101px;top:732px;}
+#tx_3{left:101px;top:764px;}
+#ty_3{left:101px;top:781px;}
+#tz_3{left:101px;top:798px;}
+#t10_3{left:101px;top:816px;}
+#t11_3{left:101px;top:833px;}
+#t12_3{left:101px;top:865px;}
+#t13_3{left:101px;top:882px;}
+#t14_3{left:101px;top:900px;}
+#t15_3{left:101px;top:917px;}
+#t16_3{left:101px;top:949px;}
+#t17_3{left:101px;top:966px;}
+#t18_3{left:101px;top:984px;}
+#t19_3{left:101px;top:1001px;}
+#t1a_3{left:101px;top:1019px;}
+#t1b_3{left:101px;top:1050px;}
+#t1c_3{left:101px;top:1082px;}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">teórico-jurídico y las finanzas de la política”, Instituto de Investigaciones Jurídicas UNAM México, </div>
+<div id="t4_3" class="t s2_3">2002, p. 233).- </div>
+<div id="t5_3" class="t s2_3">4°) Que la alta complejidad de las maniobras delictivas asociadas con el lavado de activos y otras </div>
+<div id="t6_3" class="t s2_3">formas en que el financiamiento ilegal podría dirigirse a los partidos políticos y a las campañas </div>
+<div id="t7_3" class="t s2_3">electorales, revelan la necesidad de adoptar nuevas estrategias para trabajar de manera conjunta - </div>
+<div id="t8_3" class="t s2_3">como se dijo- con organismos relacionados con la investigación y persecución de ese tipo de delitos, </div>
+<div id="t9_3" class="t s2_3">mediante el intercambio de información para una actuación oportuna y eficaz.- </div>
+<div id="ta_3" class="t s2_3">En este sentido, en sus “40 Recomendaciones”, el Grupo de Acción Financiera Internacional (GAFI) </div>
+<div id="tb_3" class="t s2_3">ha establecido que “los países deben asegurar que, las autoridades que hacen las políticas, la </div>
+<div id="tc_3" class="t s2_3">Unidad de Inteligencia Financiera (UIF), las autoridades del orden público, los supervisores y otras </div>
+<div id="td_3" class="t s2_3">autoridades competentes relevantes, tanto a nivel de formulación de políticas como operativo, </div>
+<div id="te_3" class="t s2_3">cuenten con mecanismos eficaces establecidos que les permita cooperar y, cuando corresponda, </div>
+<div id="tf_3" class="t s2_3">entablar entre sí una coordinación a nivel interno en el desarrollo e implementación de políticas y </div>
+<div id="tg_3" class="t s2_3">actividades para combatir el lavado de activos, el financiamiento del terrorismo y el financiamiento </div>
+<div id="th_3" class="t s2_3">de la proliferación de armas de destrucción masiva” (cf. “Estándares Internacionales sobre la lucha </div>
+<div id="ti_3" class="t s2_3">contra el lavado de activos y el financiamiento del terrorismo y la proliferación. Las recomendaciones </div>
+<div id="tj_3" class="t s2_3">del GAFI”, febrero 2012; Recomendación A2).- </div>
+<div id="tk_3" class="t s2_3">5°) Que en nuestro medio, la “Unidad de Información Financiera (UIF)” es la encargada del análisis, </div>
+<div id="tl_3" class="t s2_3">el tratamiento y la transmisión de información a los efectos de prevenir e impedir, entre otros, los </div>
+<div id="tm_3" class="t s2_3">delitos de lavado de activos y narcotráfico (cf. art. 6° de la ley 25.246).- </div>
+<div id="tn_3" class="t s2_3">En dicho carácter, cuenta con información de “todas las personas jurídicas que reciben donaciones o </div>
+<div id="to_3" class="t s2_3">aportes de terceros” (artículo 20, inciso 18, ley cit.) y ha incluido en la categoría de Personas </div>
+<div id="tp_3" class="t s2_3">Expuestas Políticamente a </div>
+<div id="tq_3" class="t s3_3">“[l]as autoridades y apoderados de los partidos políticos” </div>
+<div id="tr_3" class="t s2_3">(cf. Inciso</div>
+<div id="ts_3" class="t s2_3">“e”, </div>
+<div id="tt_3" class="t s2_3">artículo 1° de la Resolución N° 11/2011, del 14/01/2011).- </div>
+<div id="tu_3" class="t s2_3">Al respecto, esta Cámara ha suscripto un convenio de colaboración con dicha unidad, en cuyo marco </div>
+<div id="tv_3" class="t s2_3">se está trabajando con acuerdos específicos y complementarios para profundizar ese lazo de </div>
+<div id="tw_3" class="t s2_3">cooperación.- </div>
+<div id="tx_3" class="t s2_3">En igual sentido se está avanzando en la concertación de acuerdos con la Procuraduría de </div>
+<div id="ty_3" class="t s2_3">Criminalidad Económica y Lavado de Activos (PROCELAC), creada en el ámbito del Ministerio Público </div>
+<div id="tz_3" class="t s2_3">Fiscal con la misión esencial de asumir “un papel protagónico en el impulso de la acción y la </div>
+<div id="t10_3" class="t s2_3">orientación de las investigaciones por hechos de criminalidad económica, en particular aquellos que </div>
+<div id="t11_3" class="t s2_3">revisten trascendencia institucional e impacto socioeconómico” (cf. Resolución PGN N°914/12).- </div>
+<div id="t12_3" class="t s2_3">Por otra parte, existen otros organismos con los que el intercambio de información también </div>
+<div id="t13_3" class="t s2_3">resultaría útil para los fines hasta aquí expresados, como la Administración Federal de Ingresos </div>
+<div id="t14_3" class="t s2_3">Públicos (AFIP), la Administración Nacional de la Seguridad Social (ANSES) y la Inspección General </div>
+<div id="t15_3" class="t s2_3">de Justicia (IGJ).- </div>
+<div id="t16_3" class="t s2_3">Asimismo, es relevante que al momento de controlar el financiamiento partidario, los jueces del </div>
+<div id="t17_3" class="t s2_3">fuero conozcan la existencia de procesos judiciales que pudieran influir en dicho control, como </div>
+<div id="t18_3" class="t s2_3">aquellos en los que esté involucrado un partido político, sus representantes legales, autoridades o </div>
+<div id="t19_3" class="t s2_3">candidatos. A tal efecto, corresponde dirigirse a las autoridades judiciales federales y provinciales </div>
+<div id="t1a_3" class="t s2_3">competentes.- </div>
+<div id="t1b_3" class="t s2_3">Por todo lo expuesto, </div>
+<div id="t1c_3" class="t s4_3">ACORDARON: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2934],['t4_3',448],['t5_3',2934],['t6_3',2933],['t7_3',2934],['t8_3',2934],['t9_3',2291],['ta_3',2934],['tb_3',2934],['tc_3',2934],['td_3',2933],['te_3',2934],['tf_3',2933],['tg_3',2933],['th_3',2933],['ti_3',2934],['tj_3',1360],['tk_3',2933],['tl_3',2933],['tm_3',2111],['tn_3',2934],['to_3',2934],['tp_3',766],['tq_3',1690],['tr_3',293],['tt_3',1719],['tu_3',2933],['tv_3',2933],['tx_3',2934],['ty_3',2933],['tz_3',2933],['t10_3',2933],['t11_3',2788],['t12_3',2933],['t13_3',2933],['t14_3',2933],['t15_3',516],['t16_3',2933],['t17_3',2934],['t18_3',2934],['t19_3',2934],['t1b_3',617]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 49;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

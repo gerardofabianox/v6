@@ -1,0 +1,213 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:108px;}
+#t2_3{left:331px;top:128px;}
+#t3_3{left:101px;top:191px;}
+#t4_3{left:101px;top:228px;}
+#t5_3{left:101px;top:266px;}
+#t6_3{left:101px;top:304px;}
+#t7_3{left:101px;top:341px;}
+#t8_3{left:101px;top:379px;}
+#t9_3{left:101px;top:416px;}
+#ta_3{left:101px;top:454px;}
+#tb_3{left:101px;top:491px;}
+#tc_3{left:101px;top:529px;}
+#td_3{left:101px;top:567px;}
+#te_3{left:101px;top:604px;}
+#tf_3{left:101px;top:642px;}
+#tg_3{left:101px;top:679px;}
+#th_3{left:101px;top:717px;}
+#ti_3{left:101px;top:755px;}
+#tj_3{left:101px;top:792px;}
+#tk_3{left:101px;top:810px;}
+#tl_3{left:101px;top:847px;}
+#tm_3{left:101px;top:885px;}
+#tn_3{left:101px;top:902px;}
+#to_3{left:101px;top:920px;}
+#tp_3{left:101px;top:937px;}
+#tq_3{left:101px;top:975px;}
+#tr_3{left:101px;top:1013px;}
+#ts_3{left:101px;top:1030px;}
+#tt_3{left:101px;top:1047px;}
+#tu_3{left:101px;top:1085px;}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">SUBSECRETARIA DE COORDINACION </div>
+<div id="t4_3" class="t s2_3">SUBSECRETARIA DE PLANIFICACION ESTRATEGICA </div>
+<div id="t5_3" class="t s2_3">SECRETARIA DE JUSTICIA </div>
+<div id="t6_3" class="t s2_3">- SUBSECRETARIA DE RELACIONES CON EL PODER JUDICIAL Y ASUNTOS PENITENCIARIOS </div>
+<div id="t7_3" class="t s2_3">- SUBSECRETARIA DE POLITICA CRIMINAL </div>
+<div id="t8_3" class="t s2_3">- SUBSECRETARIA DE ACCESO A LA JUSTICIA </div>
+<div id="t9_3" class="t s2_3">- SUBSECRETARIA DE ASUNTOS ELECTORALES </div>
+<div id="ta_3" class="t s2_3">SECRETARIA DE ASUNTOS REGISTRALES </div>
+<div id="tb_3" class="t s2_3">- SUBSECRETARIA DE COORDINACION Y CONTROL DE GESTION REGISTRAL </div>
+<div id="tc_3" class="t s2_3">SECRETARIA DE DERECHOS HUMANOS </div>
+<div id="td_3" class="t s2_3">- SUBSECRETARIA DE PROTECCION DE DERECHOS HUMANOS </div>
+<div id="te_3" class="t s2_3">- SUBSECRETARIA DE PROMOCION DE DERECHOS HUMANOS </div>
+<div id="tf_3" class="t s2_3">Planilla Anexa al artículo 3° </div>
+<div id="tg_3" class="t s2_3">XII.- MINISTERIO DEL INTERIOR Y TRANSPORTE </div>
+<div id="th_3" class="t s2_3">SECRETARIA DE ASUNTOS POLITICOS </div>
+<div id="ti_3" class="t s2_3">OBJETIVOS </div>
+<div id="tj_3" class="t s2_3">1. Intervenir en los temas conexos con la declaración de estado de sitio, intervenciones del gobierno </div>
+<div id="tk_3" class="t s2_3">federal a las provincias y la sanción de leyes de amnistía política. </div>
+<div id="tl_3" class="t s2_3">2. Intervenir en lo relativo a la concesión del derecho de asilo. </div>
+<div id="tm_3" class="t s2_3">3. Fomentar el federalismo a través de la participación a nivel nacional de los distintos estamentos </div>
+<div id="tn_3" class="t s2_3">de la sociedad en las actividades de capacitación del INSTITUTO NACIONAL DE CAPACITACION </div>
+<div id="to_3" class="t s2_3">POLITICA, realizando cursos y seminarios en forma coordinada y conjunta con gobiernos </div>
+<div id="tp_3" class="t s2_3">provinciales y organizaciones no gubernamentales. </div>
+<div id="tq_3" class="t s2_3">4. Intervenir en la elaboración de reformas y adecuación de la legislación en materia institucional. </div>
+<div id="tr_3" class="t s2_3">5. Desarrollar las acciones necesarias para la implementación de la Reforma Política, realizando el </div>
+<div id="ts_3" class="t s2_3">relevamiento de opiniones y de propuestas y la elaboración de proyectos de normas modificatorias </div>
+<div id="tt_3" class="t s2_3">de aquellas que rigen el funcionamiento del sistema político. </div>
+<div id="tu_3" class="t s2_3">6. Intervenir en la tramitación de los exhortos judiciales. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1096],['t3_3',1086],['t4_3',1505],['t5_3',762],['t6_3',2670],['t7_3',1245],['t8_3',1341],['t9_3',1374],['ta_3',1202],['tb_3',2230],['tc_3',1137],['td_3',1810],['te_3',1792],['tf_3',795],['tg_3',1421],['th_3',1115],['tj_3',2933],['tk_3',1890],['tl_3',1810],['tm_3',2933],['tn_3',2934],['to_3',2934],['tp_3',1477],['tq_3',2845],['tr_3',2933],['ts_3',2934],['tt_3',1752],['tu_3',1646]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 31;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

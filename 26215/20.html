@@ -1,0 +1,242 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load20();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_20{left:333px;top:128px;}
+#t2_20{left:331px;top:147px;}
+#t3_20{left:101px;top:211px;}
+#t4_20{left:101px;top:228px;}
+#t5_20{left:101px;top:260px;}
+#t6_20{left:101px;top:278px;}
+#t7_20{left:101px;top:309px;}
+#t8_20{left:101px;top:327px;}
+#t9_20{left:101px;top:358px;}
+#ta_20{left:229px;top:358px;}
+#tb_20{left:101px;top:376px;}
+#tc_20{left:101px;top:408px;}
+#td_20{left:101px;top:425px;}
+#te_20{left:101px;top:442px;}
+#tf_20{left:101px;top:460px;}
+#tg_20{left:101px;top:492px;}
+#th_20{left:230px;top:492px;}
+#ti_20{left:101px;top:509px;}
+#tj_20{left:101px;top:541px;}
+#tk_20{left:101px;top:558px;}
+#tl_20{left:101px;top:576px;}
+#tm_20{left:101px;top:607px;}
+#tn_20{left:101px;top:625px;}
+#to_20{left:101px;top:642px;}
+#tp_20{left:101px;top:674px;}
+#tq_20{left:101px;top:691px;}
+#tr_20{left:101px;top:723px;}
+#ts_20{left:101px;top:740px;}
+#tt_20{left:101px;top:758px;}
+#tu_20{left:101px;top:775px;}
+#tv_20{left:101px;top:793px;}
+#tw_20{left:335px;top:824px;}
+#tx_20{left:101px;top:856px;}
+#ty_20{left:225px;top:856px;}
+#tz_20{left:101px;top:874px;}
+#t10_20{left:101px;top:891px;}
+#t11_20{left:101px;top:908px;}
+#t12_20{left:101px;top:940px;}
+#t13_20{left:220px;top:940px;}
+#t14_20{left:101px;top:972px;}
+#t15_20{left:220px;top:972px;}
+
+.s3_20{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_20{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_20{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_20" class="t s1_20">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_20" class="t s1_20">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_20" class="t s2_20">transferencias específicas del Poder Ejecutivo nacional en ocasión de las elecciones nacionales y para </div>
+<div id="t4_20" class="t s2_20">el funcionamiento del Cuerpo de Auditores Contadores; </div>
+<div id="t5_20" class="t s2_20">g) trasladar su sede, temporariamente a los distritos, si así lo exigiere el mejor cumplimiento de sus </div>
+<div id="t6_20" class="t s2_20">funciones; </div>
+<div id="t7_20" class="t s2_20">h) dictar las reglas necesarias para el cumplimiento de las normas que rigen las materias propias de </div>
+<div id="t8_20" class="t s2_20">su competencia, respetando el espíritu de las leyes y de sus disposiciones reglamentarias. </div>
+<div id="t9_20" class="t s3_20">ARTÍCULO 74. </div>
+<div id="ta_20" class="t s2_20">— Modifícase el artículo 145 del Código Electoral Nacional (Ley 19.945 y sus </div>
+<div id="tb_20" class="t s2_20">modificatorias), el que quedará redactado de la siguiente manera: </div>
+<div id="tc_20" class="t s2_20">Artículo 145: Sanción accesoria y destino de las multas. Se impondrá como sanción accesoria, a </div>
+<div id="td_20" class="t s2_20">quienes cometen alguno de los hechos penados en esta ley, la privación de los derechos políticos </div>
+<div id="te_20" class="t s2_20">por el término de uno (1) a diez (10) años. Los importes de todas las multas aplicadas en virtud de </div>
+<div id="tf_20" class="t s2_20">esta ley integrarán el Fondo Partidario Permanente. </div>
+<div id="tg_20" class="t s3_20">ARTÍCULO 75. </div>
+<div id="th_20" class="t s2_20">— Modifícase el artículo 72 del Código Electoral Nacional (Ley 19.945 y sus </div>
+<div id="ti_20" class="t s2_20">modificatorias), el que quedará redactado de la siguiente manera: </div>
+<div id="tj_20" class="t s2_20">Artículo 72: Autoridades de la mesa. Cada mesa electoral tendrá como única autoridad un </div>
+<div id="tk_20" class="t s2_20">funcionario que actuará con el título de presidente. Se designará también un suplente, que auxiliará </div>
+<div id="tl_20" class="t s2_20">al presidente y lo reemplazará en los casos que esta ley determina. </div>
+<div id="tm_20" class="t s2_20">En caso de tratarse de la elección de Presidente y Vicepresidente de la Nación, las autoridades de </div>
+<div id="tn_20" class="t s2_20">mesa designadas para la primera vuelta cumplirán también esa función en caso de llevarse a cabo la </div>
+<div id="to_20" class="t s2_20">segunda vuelta. </div>
+<div id="tp_20" class="t s2_20">Los ciudadanos que hayan cumplido funciones como autoridades de mesa recibirán una </div>
+<div id="tq_20" class="t s2_20">compensación consistente en una suma fija en concepto de viático. </div>
+<div id="tr_20" class="t s2_20">Sesenta (60) días antes de la fecha fijada para el comicio, el Ministerio del Interior determinará la </div>
+<div id="ts_20" class="t s2_20">suma que se liquidará en concepto de viático, estableciendo el procedimiento para su pago que se </div>
+<div id="tt_20" class="t s2_20">efectuará dentro de los sesenta (60) días de realizado el comicio, informando de la resolución al juez </div>
+<div id="tu_20" class="t s2_20">federal con competencia electoral de cada distrito. Si se realizara segunda vuelta se sumarán ambas </div>
+<div id="tv_20" class="t s2_20">compensaciones y se cancelarán dentro de un mismo plazo. </div>
+<div id="tw_20" class="t s2_20">Título VII. Disposiciones Transitorias </div>
+<div id="tx_20" class="t s3_20">ARTÍCULO 76. </div>
+<div id="ty_20" class="t s2_20">— Encomiéndase a la Jefatura de Gabinete de Ministros asignar al Ministerio del </div>
+<div id="tz_20" class="t s2_20">Interior un fondo extraordinario por única vez para el pago de la totalidad de los fondos adeudados </div>
+<div id="t10_20" class="t s2_20">por el referido Ministerio a los partidos políticos a la fecha de promulgación de esta ley y previstos </div>
+<div id="t11_20" class="t s2_20">en los presupuestos respectivos. </div>
+<div id="t12_20" class="t s3_20">ARTÍCULO 77. </div>
+<div id="t13_20" class="t s2_20">— Derógase la Ley 25.600. </div>
+<div id="t14_20" class="t s3_20">ARTÍCULO 78. </div>
+<div id="t15_20" class="t s2_20">— Comuníquese al Poder Ejecutivo. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg20Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg20"><object width="935" height="1210" data="20/20.svg" type="image/svg+xml" id="pdf20" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld20" type="text/javascript">
+
+var isIE = false;
+var f20 = [['t1_20',1076],['t2_20',1095],['t3_20',2933],['t4_20',1607],['t5_20',2934],['t7_20',2934],['t8_20',2615],['t9_20',475],['ta_20',2422],['tb_20',1921],['tc_20',2933],['td_20',2934],['te_20',2934],['tf_20',1498],['tg_20',477],['th_20',2416],['ti_20',1921],['tj_20',2933],['tk_20',2933],['tl_20',1958],['tm_20',2934],['tn_20',2934],['to_20',462],['tp_20',2933],['tq_20',1953],['tr_20',2933],['ts_20',2933],['tt_20',2933],['tu_20',2933],['tv_20',1741],['tw_20',1057],['tx_20',467],['ty_20',2436],['tz_20',2934],['t10_20',2934],['t11_20',944],['t12_20',457],['t13_20',788],['t14_20',457],['t15_20',1029]];
+function load20(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f20);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 42;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_20");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

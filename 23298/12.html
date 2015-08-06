@@ -1,0 +1,241 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load12();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_12{left:344px;top:126px;}
+#t2_12{left:342px;top:161px;}
+#t3_12{left:101px;top:238px;}
+#t4_12{left:101px;top:256px;}
+#t5_12{left:101px;top:293px;}
+#t6_12{left:101px;top:311px;}
+#t7_12{left:101px;top:349px;}
+#t8_12{left:101px;top:366px;}
+#t9_12{left:101px;top:404px;}
+#ta_12{left:101px;top:441px;}
+#tb_12{left:230px;top:441px;}
+#tc_12{left:101px;top:459px;}
+#td_12{left:101px;top:476px;}
+#te_12{left:101px;top:494px;}
+#tf_12{left:419px;top:531px;}
+#tg_12{left:248px;top:569px;}
+#th_12{left:101px;top:606px;}
+#ti_12{left:237px;top:606px;}
+#tj_12{left:101px;top:624px;}
+#tk_12{left:101px;top:641px;}
+#tl_12{left:101px;top:659px;}
+#tm_12{left:101px;top:696px;}
+#tn_12{left:228px;top:696px;}
+#to_12{left:101px;top:714px;}
+#tp_12{left:420px;top:751px;}
+#tq_12{left:312px;top:789px;}
+#tr_12{left:101px;top:827px;}
+#ts_12{left:235px;top:827px;}
+#tt_12{left:101px;top:844px;}
+#tu_12{left:101px;top:862px;}
+#tv_12{left:101px;top:879px;}
+#tw_12{left:101px;top:917px;}
+#tx_12{left:101px;top:954px;}
+#ty_12{left:101px;top:972px;}
+#tz_12{left:101px;top:1009px;}
+#t10_12{left:101px;top:1047px;}
+#t11_12{left:423px;top:1085px;}
+
+.s4_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_12{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_12" class="t s1_12">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_12" class="t s1_12">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_12" class="t s2_12">como crímenes de competencia de la Corte Penal Internacional, por hechos acaecidos entre el 24 de </div>
+<div id="t4_12" class="t s2_12">marzo de 1976 y el 10 de diciembre de 1983; </div>
+<div id="t5_12" class="t s2_12">g) Las personas condenadas por los crímenes descriptos en el inciso anterior aun cuando la </div>
+<div id="t6_12" class="t s2_12">resolución judicial no fuere susceptible de ejecución. </div>
+<div id="t7_12" class="t s2_12">Los partidos políticos no podrán registrar candidatos a cargos públicos electivos para las elecciones </div>
+<div id="t8_12" class="t s2_12">nacionales en violación a lo establecido en el presente artículo. </div>
+<div id="t9_12" class="t s3_12">(Artículo modificado por art. 15 de la Ley N° 26.571 B.O. 14/12/2009) </div>
+<div id="ta_12" class="t s4_12">ARTÍCULO 34.- </div>
+<div id="tb_12" class="t s2_12">La residencia exigida por la Constitución Nacional o la ley como requisito para el </div>
+<div id="tc_12" class="t s2_12">desempeño de los cargos para los que se postulan los candidatos, podrá ser acreditada por cualquier </div>
+<div id="td_12" class="t s2_12">medio de prueba, excepto la testimonial, siempre que figuren inscriptos en el registro de electores </div>
+<div id="te_12" class="t s2_12">del distrito que corresponda. </div>
+<div id="tf_12" class="t s2_12">CAPITULO III </div>
+<div id="tg_12" class="t s4_12">De la titularidad de los derechos y poderes partidarios </div>
+<div id="th_12" class="t s4_12">ARTÍCULO 35.- </div>
+<div id="ti_12" class="t s2_12">Se garantiza a las autoridades constituidas el uso del nombre partidario, el </div>
+<div id="tj_12" class="t s2_12">ejercicio de las funciones de gobierno y administración del partido y, en general, el desempeño de </div>
+<div id="tk_12" class="t s2_12">todas las actividades inherentes al mismo, de conformidad con esta ley, demás disposiciones legales </div>
+<div id="tl_12" class="t s2_12">sobre la materia y la carta orgánica del partido. </div>
+<div id="tm_12" class="t s4_12">ARTÍCULO 36.- </div>
+<div id="tn_12" class="t s2_12">La titularidad de los derechos y poderes partidarios, reglada en el artículo anterior, </div>
+<div id="to_12" class="t s2_12">determina la de los bienes, símbolos emblemas, número, libros y documentación del partido. </div>
+<div id="tp_12" class="t s2_12">CAPITULO IV </div>
+<div id="tq_12" class="t s4_12">De los libros y documentos partidarios </div>
+<div id="tr_12" class="t s4_12">ARTÍCULO 37.- </div>
+<div id="ts_12" class="t s2_12">Sin perjuicio de los libros y documentos que prescriba la carta orgánica, los </div>
+<div id="tt_12" class="t s2_12">partidos, por intermedio de cada comité nacional y comité central de distrito, deberán llevar en </div>
+<div id="tu_12" class="t s2_12">forma regular los siguientes libros rubricados y sellados por el juez federal con competencia electoral </div>
+<div id="tv_12" class="t s2_12">correspondiente: </div>
+<div id="tw_12" class="t s2_12">a) Libro de inventario; </div>
+<div id="tx_12" class="t s2_12">b) Libro de caja debiendo conservarse la documentación complementaria correspondiente por el </div>
+<div id="ty_12" class="t s2_12">término de tres (3) años; </div>
+<div id="tz_12" class="t s2_12">c) Libro de actas y resoluciones en hojas fijas o móviles. </div>
+<div id="t10_12" class="t s2_12">Además, los comités centrales de distrito llevarán el fichero de afiliados. </div>
+<div id="t11_12" class="t s2_12">CAPITULO V </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg12Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg12"><object width="935" height="1210" data="12/12.svg" type="image/svg+xml" id="pdf12" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld12" type="text/javascript">
+
+var isIE = false;
+var f12 = [['t1_12',987],['t2_12',1004],['t3_12',2934],['t4_12',1329],['t5_12',2933],['t6_12',1522],['t7_12',2934],['t8_12',1824],['t9_12',2048],['ta_12',490],['tb_12',2416],['tc_12',2934],['td_12',2934],['te_12',831],['tf_12',385],['tg_12',1753],['th_12',504],['ti_12',2390],['tj_12',2933],['tk_12',2934],['tl_12',1381],['tm_12',485],['tn_12',2426],['to_12',2698],['tp_12',376],['tq_12',1243],['tr_12',501],['ts_12',2395],['tt_12',2934],['tu_12',2935],['tw_12',650],['tx_12',2933],['ty_12',737],['tz_12',1637],['t10_12',2095],['t11_12',352]];
+function load12(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f12);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_12");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

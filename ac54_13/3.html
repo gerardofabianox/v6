@@ -1,0 +1,273 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:333px;top:128px;}
+#t2_3{left:331px;top:147px;}
+#t3_3{left:101px;top:207px;}
+#t4_3{left:101px;top:225px;}
+#t5_3{left:101px;top:257px;}
+#t6_3{left:101px;top:274px;}
+#t7_3{left:101px;top:291px;}
+#t8_3{left:101px;top:309px;}
+#t9_3{left:101px;top:326px;}
+#ta_3{left:101px;top:358px;}
+#tb_3{left:101px;top:375px;}
+#tc_3{left:101px;top:393px;}
+#td_3{left:101px;top:410px;}
+#te_3{left:101px;top:442px;}
+#tf_3{left:101px;top:459px;}
+#tg_3{left:101px;top:477px;}
+#th_3{left:101px;top:494px;}
+#ti_3{left:101px;top:512px;}
+#tj_3{left:101px;top:529px;}
+#tk_3{left:101px;top:546px;}
+#tl_3{left:101px;top:564px;}
+#tm_3{left:101px;top:596px;}
+#tn_3{left:101px;top:613px;}
+#to_3{left:101px;top:631px;}
+#tp_3{left:101px;top:648px;}
+#tq_3{left:101px;top:665px;}
+#tr_3{left:101px;top:683px;}
+#ts_3{left:101px;top:700px;}
+#tt_3{left:101px;top:718px;}
+#tu_3{left:101px;top:735px;}
+#tv_3{left:101px;top:767px;}
+#tw_3{left:101px;top:784px;}
+#tx_3{left:101px;top:802px;}
+#ty_3{left:101px;top:819px;}
+#tz_3{left:101px;top:836px;}
+#t10_3{left:101px;top:868px;}
+#t11_3{left:101px;top:886px;}
+#t12_3{left:101px;top:903px;}
+#t13_3{left:156px;top:903px;}
+#t14_3{left:168px;top:903px;}
+#t15_3{left:101px;top:920px;}
+#t16_3{left:101px;top:938px;}
+#t17_3{left:101px;top:955px;}
+#t18_3{left:101px;top:973px;}
+#t19_3{left:101px;top:990px;}
+#t1a_3{left:101px;top:1007px;}
+#t1b_3{left:101px;top:1039px;}
+#t1c_3{left:101px;top:1071px;}
+
+.s4_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_3{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: NFPDLF-Verdana3;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts3" type="text/css" >
+
+@font-face {
+	font-family: NFPDLF-Verdana3;
+	src :url("3/fonts/NFPDLF-Verdana.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_3" class="t s1_3">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_3" class="t s2_3">instrucción electoral, los pueblos originarios. A tal fin, resulta idóneo diseñar nuevas herramientas </div>
+<div id="t4_3" class="t s2_3">de capacitación que propendan a preservar su identidad”.- </div>
+<div id="t5_3" class="t s2_3">5°) Que, sin perjuicio de lo anterior, en esta instancia resulta conveniente encaminar de modo más </div>
+<div id="t6_3" class="t s2_3">integral y orgánico el abordaje de la participación política de los pueblos originarios, promoviendo -</div>
+<div id="t7_3" class="t s2_3">en el marco de la competencia de la justicia nacional electoral- las acciones que resulten </div>
+<div id="t8_3" class="t s2_3">conducentes para favorecer el pleno ejercicio del derecho al sufragio y de las demás prerrogativas </div>
+<div id="t9_3" class="t s2_3">político-electorales por parte de los miembros de las comunidades indígenas.- </div>
+<div id="ta_3" class="t s2_3">6°) Que, en función de lo expuesto, resulta conveniente crear el “Programa de Promoción de la </div>
+<div id="tb_3" class="t s2_3">participación político electoral de los pueblos indígenas”, orientado a la evaluación, proposición y </div>
+<div id="tc_3" class="t s2_3">adopción de medidas que favorezcan el ejercicio de los derechos político-electorales por parte de los </div>
+<div id="td_3" class="t s2_3">miembros de las comunidades indígenas.- </div>
+<div id="te_3" class="t s2_3">A tal fin, sin perjuicio de las diversas acciones que puedan implementarse en lo sucesivo, tales </div>
+<div id="tf_3" class="t s2_3">medidas comprenderán la identificación geográfica de las comunidades indígenas en la cartografía </div>
+<div id="tg_3" class="t s2_3">electoral vigente, a fin de promover la conformación de circuitos electorales que contemplen la </div>
+<div id="th_3" class="t s2_3">individualidad de cada comunidad. En cuanto sea posible, la designación de autoridades de mesa </div>
+<div id="ti_3" class="t s2_3">bilingües o seleccionadas entre miembros de la propia comunidad y la elaboración de material </div>
+<div id="tj_3" class="t s2_3">electoral complementario en la lengua del respectivo pueblo originario. Finalmente, la selección de </div>
+<div id="tk_3" class="t s2_3">establecimientos de votación adecuados para así –en miras del espíritu y voluntad del Programa- </div>
+<div id="tl_3" class="t s2_3">favorecer la concurrencia por parte de los integrantes de todas las comunidades.- </div>
+<div id="tm_3" class="t s2_3">7°) Que, todo lo expuesto precedentemente evidencia a su vez la necesidad de articular la </div>
+<div id="tn_3" class="t s2_3">cooperación interinstitucional con organismos o entidades competentes en la implementación de </div>
+<div id="to_3" class="t s2_3">políticas públicas orientadas a los pueblos originarios, tales como el Instituto Nacional de Asuntos </div>
+<div id="tp_3" class="t s2_3">Indígenas -a cuyo cargo se encuentran el Registro Nacional de Comunidades Indígenas (RE.NA.C.I.) </div>
+<div id="tq_3" class="t s2_3">y el Registro Nacional de Organizaciones de Pueblos Indígenas (RENOPI)-, el Ministerio de Educación </div>
+<div id="tr_3" class="t s2_3">-en el marco del programa de Educación Intercultural Bilingüe (ley 26.206)-; el Instituto Nacional de </div>
+<div id="ts_3" class="t s2_3">Estadísticas y Censos en relación con la Encuesta Complementaria de Pueblos Indígenas (ECPI); el </div>
+<div id="tt_3" class="t s2_3">Equipo Nacional de Pastoral Aborigen (ENDEPA), entre otros; así como también con los organismos </div>
+<div id="tu_3" class="t s2_3">provinciales pertinentes y, naturalmente, con las propias comunidades interesadas.- </div>
+<div id="tv_3" class="t s2_3">8°) Que, finalmente, no puede dejar de mencionarse que la presente iniciativa constituye también, </div>
+<div id="tw_3" class="t s2_3">de modo secundario y accesorio, un modo de rendir homenaje al centenario de la ley Sáenz Peña, </div>
+<div id="tx_3" class="t s2_3">que promovió la consagración del sufragio universal -aun cuando esa “universalidad” se entendiera </div>
+<div id="ty_3" class="t s2_3">en el restringido sentido propio de su época-, pues aquella centenaria ley constituyó el punto de </div>
+<div id="tz_3" class="t s2_3">partida en la evolución de los derechos político-electorales en nuestro país.- </div>
+<div id="t10_3" class="t s2_3">En efecto, al implementar el carácter universal del sufragio, la ley Sáenz Peña ha inspirado otras </div>
+<div id="t11_3" class="t s2_3">normas que extendieron luego la composición del cuerpo electoral (cf. Acordada 23/12 CNE), como </div>
+<div id="t12_3" class="t s2_3">ocurrió </div>
+<div id="t13_3" class="t s3_3">−</div>
+<div id="t14_3" class="t s2_3">por ejemplo- con la participación de la mujer a partir de la incorporación del voto femenino </div>
+<div id="t15_3" class="t s2_3">en las elecciones del año 1951 (ley 13.010); la inclusión al cuerpo electoral de los habitantes de los </div>
+<div id="t16_3" class="t s2_3">territorios nacionales; el voto de los argentinos residentes en el exterior (ley 24.007), el voto de los </div>
+<div id="t17_3" class="t s2_3">detenidos sin condena (ley 25.858); y el voto a los 16 años (ley 26.774), entre otras acciones </div>
+<div id="t18_3" class="t s2_3">menos relevantes o visibles tendientes también a suprimir las barreras jurídicas y fácticas para </div>
+<div id="t19_3" class="t s2_3">continuar expandiendo -dentro de lo previsto por nuestra Constitución Nacional- la participación </div>
+<div id="t1a_3" class="t s2_3">electoral.- </div>
+<div id="t1b_3" class="t s2_3">Por ello, </div>
+<div id="t1c_3" class="t s4_3">ACORDARON: </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="935" height="1210" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1076],['t2_3',1095],['t3_3',2934],['t4_3',1700],['t5_3',2933],['t6_3',2933],['t7_3',2934],['t8_3',2934],['t9_3',2260],['ta_3',2933],['tb_3',2934],['tc_3',2933],['td_3',1220],['te_3',2934],['tf_3',2934],['tg_3',2934],['th_3',2934],['ti_3',2934],['tj_3',2933],['tk_3',2934],['tl_3',2373],['tm_3',2934],['tn_3',2933],['to_3',2934],['tp_3',2933],['tq_3',2934],['tr_3',2934],['ts_3',2934],['tt_3',2934],['tu_3',2448],['tv_3',2933],['tw_3',2934],['tx_3',2934],['ty_3',2934],['tz_3',2205],['t10_3',2933],['t11_3',2934],['t14_3',2664],['t15_3',2934],['t16_3',2934],['t17_3',2934],['t18_3',2934],['t19_3',2933],['t1b_3',235]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 49;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

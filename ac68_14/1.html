@@ -1,0 +1,272 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:101px;top:215px;}
+#t4_1{left:101px;top:248px;}
+#t5_1{left:101px;top:280px;}
+#t6_1{left:101px;top:297px;}
+#t7_1{left:101px;top:329px;}
+#t8_1{left:101px;top:346px;}
+#t9_1{left:101px;top:364px;}
+#ta_1{left:101px;top:381px;}
+#tb_1{left:101px;top:399px;}
+#tc_1{left:101px;top:430px;}
+#td_1{left:101px;top:462px;}
+#te_1{left:101px;top:479px;}
+#tf_1{left:101px;top:497px;}
+#tg_1{left:101px;top:514px;}
+#th_1{left:101px;top:532px;}
+#ti_1{left:101px;top:549px;}
+#tj_1{left:101px;top:581px;}
+#tk_1{left:101px;top:598px;}
+#tl_1{left:101px;top:616px;}
+#tm_1{left:101px;top:647px;}
+#tn_1{left:101px;top:665px;}
+#to_1{left:202px;top:665px;}
+#tp_1{left:675px;top:665px;}
+#tq_1{left:101px;top:682px;}
+#tr_1{left:386px;top:682px;}
+#ts_1{left:565px;top:682px;}
+#tt_1{left:101px;top:700px;}
+#tu_1{left:217px;top:700px;}
+#tv_1{left:482px;top:700px;}
+#tw_1{left:611px;top:700px;}
+#tx_1{left:101px;top:731px;}
+#ty_1{left:101px;top:749px;}
+#tz_1{left:101px;top:766px;}
+#t10_1{left:101px;top:784px;}
+#t11_1{left:101px;top:801px;}
+#t12_1{left:101px;top:833px;}
+#t13_1{left:101px;top:850px;}
+#t14_1{left:101px;top:868px;}
+#t15_1{left:101px;top:899px;}
+#t16_1{left:101px;top:917px;}
+#t17_1{left:101px;top:934px;}
+#t18_1{left:101px;top:966px;}
+#t19_1{left:101px;top:983px;}
+#t1a_1{left:101px;top:1001px;}
+#t1b_1{left:101px;top:1018px;}
+#t1c_1{left:101px;top:1036px;}
+#t1d_1{left:101px;top:1053px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">ACORDADA CNE N°68/2014 </div>
+<div id="t4_1" class="t s3_1">Bs. As., 03/07/2014 </div>
+<div id="t5_1" class="t s4_1">DELEGADOS DE LA JUSTICIA NACIONAL ELECTORAL. DESIGNACIÓN. FUNCIONES Y </div>
+<div id="t6_1" class="t s4_1">RESPONSABILIDADES. </div>
+<div id="t7_1" class="t s3_1">En Buenos Aires, a los tres días del mes de julio de dos mil catorce, se reúnen en acuerdo </div>
+<div id="t8_1" class="t s3_1">extraordinario en la Sala de Acuerdos de la Cámara Nacional Electoral, los doctores Rodolfo Emilio </div>
+<div id="t9_1" class="t s3_1">Munné y Alberto Ricardo Dalla Via, actuando los Secretarios de la Cámara doctores Hernán </div>
+<div id="ta_1" class="t s3_1">Gonçalves Figueiredo y Sebastián Schimmel. Abierto el acto por el señor Presidente doctor Rodolfo </div>
+<div id="tb_1" class="t s3_1">Emilio Munné, </div>
+<div id="tc_1" class="t s4_1">CONSIDERARON: </div>
+<div id="td_1" class="t s3_1">1º) Que, en primer término, cabe mencionar que en el año 2009 (Ac. 57/09 CNE) este Tribunal ha </div>
+<div id="te_1" class="t s3_1">puesto de manifiesto la necesidad de designar “delegados” de la justicia electoral en los </div>
+<div id="tf_1" class="t s3_1">establecimientos de votación, a fin de propender a un mejor desarrollo del acto electoral mediante la </div>
+<div id="tg_1" class="t s3_1">asignación de diversas responsabilidades a un agente que actúa de nexo entre los diversos actores </div>
+<div id="th_1" class="t s3_1">presentes durante la jornada electoral en los locales de votación, y la respectiva Secretaría </div>
+<div id="ti_1" class="t s3_1">Electoral.- </div>
+<div id="tj_1" class="t s3_1">Posteriormente, en atención a la positiva valoración de su desempeño por parte de los señores </div>
+<div id="tk_1" class="t s3_1">jueces federales con competencia electoral, las funciones asignadas a esos agentes han sido </div>
+<div id="tl_1" class="t s3_1">progresivamente incrementadas en el marco de los procesos electorales de los años 2011 y 2013.- </div>
+<div id="tm_1" class="t s3_1">En el mismo orden, debe recordarse que mediante Acordada Extraordinaria Nº 34/12 CNE, y con el </div>
+<div id="tn_1" class="t s3_1">objetivo de “</div>
+<div id="to_1" class="t s5_1">formar un cuerpo profesionalizado de delegados, dotando a</div>
+<div id="tp_1" class="t s5_1">sus inscriptos de los </div>
+<div id="tq_1" class="t s5_1">conocimientos necesarios vinculados a</div>
+<div id="tr_1" class="t s5_1">la función a desempeñar</div>
+<div id="ts_1" class="t s3_1">” (cf. consid. 5°, Ac. cit.), se dispuso </div>
+<div id="tt_1" class="t s3_1">la creación del “</div>
+<div id="tu_1" class="t s5_1">Registro de Delegados de la Justicia</div>
+<div id="tv_1" class="t s5_1">Nacional Electoral</div>
+<div id="tw_1" class="t s3_1">”.- </div>
+<div id="tx_1" class="t s3_1">2º) Que, como consecuencia de todo lo expuesto, en los comicios legislativos del año 2013 el </div>
+<div id="ty_1" class="t s3_1">porcentaje de delegados designados sobre la cantidad total de establecimientos de votación </div>
+<div id="tz_1" class="t s3_1">afectados ha superado el 75%, habiendo sido dicho incremento acompañado de actividades de </div>
+<div id="t10_1" class="t s3_1">capacitación, las que –bajo diversas modalidades- han contribuido al más eficaz desempeño de los </div>
+<div id="t11_1" class="t s3_1">ciudadanos designados en tal carácter.- </div>
+<div id="t12_1" class="t s3_1">3º) Que, entonces, a fin de proseguir el camino de la profesionalización de estos sujetos que </div>
+<div id="t13_1" class="t s3_1">episódicamente se desempeñan como auxiliares de la Justicia Nacional Electoral, corresponde </div>
+<div id="t14_1" class="t s3_1">adoptar medidas que contribuyan a su correcta individualización y posterior formación.- </div>
+<div id="t15_1" class="t s3_1">A tal efecto, se requiere -en primer término- la delimitación de perfiles personales, cuya unificación </div>
+<div id="t16_1" class="t s3_1">permita no sólo estandarizar las herramientas de capacitación, sino también brindar un universo </div>
+<div id="t17_1" class="t s3_1">cierto sobre el cual puedan recaer nuevas designaciones y/o reemplazos.- </div>
+<div id="t18_1" class="t s3_1">4º) Que, del mismo modo, para propender a una sustancial unificación de las responsabilidades de </div>
+<div id="t19_1" class="t s3_1">los Delegados en todo el país, cabe disponer el núcleo de funciones básicas que serán </div>
+<div id="t1a_1" class="t s3_1">encomendadas a estos agentes. Ello, sin perjuicio de que -cuando las particularidades de cada </div>
+<div id="t1b_1" class="t s3_1">distrito así lo aconsejen- las tareas asignadas puedan ser ampliadas, así como también puedan ser </div>
+<div id="t1c_1" class="t s3_1">establecidas modalidades específicas de llevarlas a cabo en cada jurisdicción, conforme lo establezca </div>
+<div id="t1d_1" class="t s3_1">la Cámara Nacional Electoral y la Secretaría Electoral del distrito respectivo.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',988],['t4_1',587],['t5_1',2934],['t7_1',2934],['t8_1',2933],['t9_1',2934],['ta_1',2933],['tb_1',407],['td_1',2934],['te_1',2934],['tf_1',2933],['tg_1',2933],['th_1',2934],['tj_1',2934],['tk_1',2933],['tl_1',2873],['tm_1',2934],['tn_1',404],['to_1',1853],['tp_1',637],['tq_1',1120],['tr_1',716],['ts_1',1076],['tt_1',463],['tu_1',1041],['tv_1',514],['tx_1',2933],['ty_1',2933],['tz_1',2934],['t10_1',2933],['t11_1',1154],['t12_1',2933],['t13_1',2934],['t14_1',2551],['t15_1',2934],['t16_1',2933],['t17_1',2148],['t18_1',2934],['t19_1',2933],['t1a_1',2933],['t1b_1',2933],['t1c_1',2934],['t1d_1',2228]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 50;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load11();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_11{left:333px;top:108px;}
+#t2_11{left:331px;top:128px;}
+#t3_11{left:101px;top:191px;}
+#t4_11{left:101px;top:208px;}
+#t5_11{left:101px;top:226px;}
+#t6_11{left:101px;top:243px;}
+#t7_11{left:101px;top:281px;}
+#t8_11{left:101px;top:298px;}
+#t9_11{left:101px;top:316px;}
+#ta_11{left:101px;top:333px;}
+#tb_11{left:101px;top:351px;}
+#tc_11{left:101px;top:388px;}
+#td_11{left:101px;top:406px;}
+#te_11{left:101px;top:423px;}
+#tf_11{left:101px;top:441px;}
+#tg_11{left:414px;top:478px;}
+#th_11{left:428px;top:516px;}
+#ti_11{left:101px;top:553px;}
+#tj_11{left:101px;top:571px;}
+#tk_11{left:101px;top:588px;}
+#tl_11{left:101px;top:626px;}
+#tm_11{left:101px;top:643px;}
+#tn_11{left:101px;top:661px;}
+#to_11{left:101px;top:678px;}
+#tp_11{left:101px;top:716px;}
+#tq_11{left:420px;top:753px;}
+#tr_11{left:421px;top:791px;}
+#ts_11{left:101px;top:829px;}
+#tt_11{left:101px;top:846px;}
+#tu_11{left:101px;top:864px;}
+#tv_11{left:101px;top:901px;}
+#tw_11{left:101px;top:919px;}
+#tx_11{left:101px;top:956px;}
+#ty_11{left:101px;top:994px;}
+#tz_11{left:101px;top:1031px;}
+#t10_11{left:101px;top:1069px;}
+#t11_11{left:101px;top:1087px;}
+
+.s2_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_11{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_11{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_11" class="t s1_11">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_11" class="t s1_11">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_11" class="t s2_11">acompañará al elector al cuarto oscuro, le leerá los números de identificación de las distintas </div>
+<div id="t4_11" class="t s2_11">agrupaciones políticas, le explicará la forma de doblar la boleta, se la doblará incluso y luego la </div>
+<div id="t5_11" class="t s2_11">abrirá, de modo que el no vidente ya tenga marcados los dobleces. El elector, marcará la boleta de </div>
+<div id="t6_11" class="t s2_11">sufragio en el mismo lugar donde lea el número de identificación de la agrupación política que elija. </div>
+<div id="t7_11" class="t s2_11">En el supuesto de otros discapacitados habilitados a sufragar, pero que se encontraran </div>
+<div id="t8_11" class="t s2_11">imposibilitados físicamente para marcar la boleta oficial de sufragio, doblarla y cerrarla, serán </div>
+<div id="t9_11" class="t s2_11">acompañados al cuarto oscuro por el presidente de la mesa, quien procederá a facilitar la emisión </div>
+<div id="ta_11" class="t s2_11">del sufragio del elector colaborando en los pases sucesivos hasta la introducción en la urna, en la </div>
+<div id="tb_11" class="t s2_11">medida que la discapacidad lo requiera. </div>
+<div id="tc_11" class="t s2_11">ARTÍCULO 33. — Constancia de la emisión del voto. Acto continuo el presidente procederá a anotar </div>
+<div id="td_11" class="t s2_11">en el padrón de electores de la mesa, a la vista de los fiscales y del elector mismo, la palabra "votó" </div>
+<div id="te_11" class="t s2_11">en la columna respectiva del nombre del sufragante. La misma anotación, fechada, sellada y </div>
+<div id="tf_11" class="t s2_11">firmada, se hará en su documento cívico, en el lugar expresamente destinado a ese efecto. </div>
+<div id="tg_11" class="t s2_11">CAPITULO VIII </div>
+<div id="th_11" class="t s2_11">CLAUSURA </div>
+<div id="ti_11" class="t s2_11">ARTÍCULO 34. — Clausura del Acto. Cuando haya sufragado la totalidad de los electores inscriptos </div>
+<div id="tj_11" class="t s2_11">en la mesa podrá declararse la clausura del acto electoral, procediendo a la realización del escrutinio </div>
+<div id="tk_11" class="t s2_11">de mesa. </div>
+<div id="tl_11" class="t s2_11">Si a las DIECIOCHO (18) horas no ha sufragado la totalidad de los electores inscriptos, el presidente </div>
+<div id="tm_11" class="t s2_11">de la mesa ordenará se clausure el acceso al comicio, pero continuará recibiendo el voto de los </div>
+<div id="tn_11" class="t s2_11">electores presentes que aguardan turno. Concluida la recepción de estos sufragios, tachará del </div>
+<div id="to_11" class="t s2_11">padrón los nombres de los electores que no hayan comparecido. </div>
+<div id="tp_11" class="t s3_11">(Artículo sustituido por art. 4° del Decreto N° 2010/1993 B.O. 5/10/1993)</div>
+<div id="tq_11" class="t s2_11">CAPITULO IX </div>
+<div id="tr_11" class="t s2_11">ESCRUTINIO </div>
+<div id="ts_11" class="t s2_11">ARTÍCULO 35. — Procedimiento. Clasificación de los sufragios. Acto seguido el presidente del </div>
+<div id="tt_11" class="t s2_11">Comicio, auxiliado por los suplentes, y ante la sola presencia de los fiscales acreditados, hará el </div>
+<div id="tu_11" class="t s2_11">escrutinio ajustándose al siguiente procedimiento: </div>
+<div id="tv_11" class="t s2_11">a) Abrirá la urna, de la que extraerá todas las boletas cerradas y las separará según el distrito </div>
+<div id="tw_11" class="t s2_11">electoral correspondiente; </div>
+<div id="tx_11" class="t s2_11">b) Procederá a la apertura de las boletas sufragio; </div>
+<div id="ty_11" class="t s2_11">c) Luego clasificará los sufragios de la siguiente forma: </div>
+<div id="tz_11" class="t s2_11">I. Votos válidos: son los siguientes: </div>
+<div id="t10_11" class="t s2_11">1. Votos válidos: son los emitidos en las boletas de sufragio que tienen una marca en el espacio </div>
+<div id="t11_11" class="t s2_11">correspondiente a una agrupación política. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg11Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg11"><object width="935" height="1210" data="11/11.svg" type="image/svg+xml" id="pdf11" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld11" type="text/javascript">
+
+var isIE = false;
+var f11 = [['t1_11',1076],['t2_11',1096],['t3_11',2934],['t4_11',2933],['t5_11',2933],['t6_11',2890],['t7_11',2934],['t8_11',2933],['t9_11',2934],['ta_11',2933],['tb_11',1149],['tc_11',2934],['td_11',2933],['te_11',2933],['tf_11',2647],['tg_11',424],['ti_11',2933],['tj_11',2933],['tk_11',265],['tl_11',2933],['tm_11',2933],['tn_11',2933],['to_11',1868],['tp_11',2157],['tq_11',376],['ts_11',2933],['tt_11',2934],['tu_11',1459],['tv_11',2934],['tw_11',757],['tx_11',1459],['ty_11',1596],['tz_11',1033],['t10_11',2934],['t11_11',1231]];
+function load11(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f11);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_11");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

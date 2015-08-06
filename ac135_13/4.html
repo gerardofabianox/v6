@@ -1,0 +1,220 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:243px;}
+#t5_4{left:101px;top:274px;}
+#t6_4{left:101px;top:306px;}
+#t7_4{left:101px;top:338px;}
+#t8_4{left:101px;top:370px;}
+#t9_4{left:101px;top:401px;}
+#ta_4{left:101px;top:433px;}
+#tb_4{left:101px;top:465px;}
+#tc_4{left:101px;top:497px;}
+#td_4{left:101px;top:528px;}
+#te_4{left:101px;top:560px;}
+#tf_4{left:101px;top:592px;}
+#tg_4{left:101px;top:623px;}
+#th_4{left:101px;top:655px;}
+#ti_4{left:101px;top:687px;}
+#tj_4{left:101px;top:719px;}
+#tk_4{left:101px;top:750px;}
+#tl_4{left:101px;top:782px;}
+#tm_4{left:101px;top:814px;}
+#tn_4{left:101px;top:846px;}
+#to_4{left:101px;top:877px;}
+#tp_4{left:101px;top:909px;}
+#tq_4{left:101px;top:941px;}
+#tr_4{left:101px;top:973px;}
+#ts_4{left:101px;top:1004px;}
+#tt_4{left:101px;top:1036px;}
+#tu_4{left:101px;top:1068px;}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">………………………………………………………. </div>
+<div id="t4_4" class="t s2_4">1.2.5. Otras Inversiones (según detalle) </div>
+<div id="t5_4" class="t s2_4">………………………………………………………. </div>
+<div id="t6_4" class="t s2_4">………………………………………………………. </div>
+<div id="t7_4" class="t s2_4">1.2.6. Intereses a devengar por inversiones </div>
+<div id="t8_4" class="t s3_4">1.3. CRÉDITOS POR APORTES PÚBLICOS – CORRIENTES </div>
+<div id="t9_4" class="t s2_4">1.3.1. Aportes Públicos para desenvolvimiento institucional a cobrar </div>
+<div id="ta_4" class="t s2_4">1.3.2. Aportes Públicos extraordinarios para campaña electoral a cobrar </div>
+<div id="tb_4" class="t s2_4">1.3.3. Aportes Públicos para impresión de boletas a cobrar </div>
+<div id="tc_4" class="t s2_4">1.3.4. Aportes Públicos para elecciones primarias a cobrar </div>
+<div id="td_4" class="t s2_4">1.3.5. Aportes públicos extraordinarios a cobrar </div>
+<div id="te_4" class="t s2_4">1.3.6. Aportes públicos para mantenimiento de cuenta a cobrar </div>
+<div id="tf_4" class="t s2_4">1.3.7. Aportes públicos provinciales a cobrar (según detalle) </div>
+<div id="tg_4" class="t s2_4">………………………………………………………. </div>
+<div id="th_4" class="t s3_4">………………………………………………………. </div>
+<div id="ti_4" class="t s3_4">1.4. OTROS CRÉDITOS – CORRIENTES Y NO CORRIENTES </div>
+<div id="tj_4" class="t s2_4">1.4.1. Aportes privados a cobrar </div>
+<div id="tk_4" class="t s2_4">1.4.2. Adelanto de haberes </div>
+<div id="tl_4" class="t s2_4">1.4.3. Anticipo a proveedores </div>
+<div id="tm_4" class="t s2_4">1.4.4. Deudores por préstamos a otros órganos o distritos(según detalle) </div>
+<div id="tn_4" class="t s2_4">………………………………………………………. </div>
+<div id="to_4" class="t s2_4">………………………………………………………. </div>
+<div id="tp_4" class="t s2_4">1.4.5. Gastos pagados por adelantado </div>
+<div id="tq_4" class="t s2_4">1.4.6. Seguros pagados por adelantado </div>
+<div id="tr_4" class="t s2_4">1.4.7. Anticipos para gastos a rendir </div>
+<div id="ts_4" class="t s2_4">1.4.8. Préstamos al personal </div>
+<div id="tt_4" class="t s2_4">1.4.9. Depósitos en garantía </div>
+<div id="tu_4" class="t s2_4">1.4.10. Otros Créditos (según detalle) </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t4_4',1164],['t7_4',1270],['t8_4',1807],['t9_4',1969],['ta_4',2083],['tb_4',1699],['tc_4',1684],['td_4',1386],['te_4',1840],['tf_4',1750],['ti_4',1841],['tj_4',940],['tk_4',788],['tl_4',856],['tm_4',2125],['tp_4',1107],['tq_4',1146],['tr_4',1058],['ts_4',831],['tt_4',826],['tu_4',1105]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 31;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

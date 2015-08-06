@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load2();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:333px;top:128px;}
+#t2_2{left:331px;top:147px;}
+#t3_2{left:101px;top:211px;}
+#t4_2{left:101px;top:228px;}
+#t5_2{left:101px;top:246px;}
+#t6_2{left:101px;top:263px;}
+#t7_2{left:101px;top:295px;}
+#t8_2{left:101px;top:312px;}
+#t9_2{left:101px;top:330px;}
+#ta_2{left:101px;top:347px;}
+#tb_2{left:101px;top:365px;}
+#tc_2{left:101px;top:382px;}
+#td_2{left:101px;top:399px;}
+#te_2{left:101px;top:417px;}
+#tf_2{left:101px;top:434px;}
+#tg_2{left:101px;top:452px;}
+#th_2{left:101px;top:469px;}
+#ti_2{left:101px;top:501px;}
+#tj_2{left:101px;top:518px;}
+#tk_2{left:101px;top:536px;}
+#tl_2{left:101px;top:553px;}
+#tm_2{left:101px;top:585px;}
+#tn_2{left:101px;top:602px;}
+#to_2{left:101px;top:620px;}
+#tp_2{left:101px;top:637px;}
+#tq_2{left:101px;top:655px;}
+#tr_2{left:101px;top:672px;}
+#ts_2{left:101px;top:704px;}
+#tt_2{left:101px;top:721px;}
+#tu_2{left:101px;top:738px;}
+#tv_2{left:101px;top:756px;}
+#tw_2{left:101px;top:773px;}
+#tx_2{left:101px;top:805px;}
+#ty_2{left:101px;top:823px;}
+#tz_2{left:101px;top:840px;}
+#t10_2{left:101px;top:857px;}
+#t11_2{left:101px;top:875px;}
+#t12_2{left:101px;top:906px;}
+#t13_2{left:101px;top:924px;}
+#t14_2{left:101px;top:941px;}
+#t15_2{left:101px;top:973px;}
+#t16_2{left:101px;top:991px;}
+#t17_2{left:101px;top:1008px;}
+#t18_2{left:101px;top:1040px;}
+#t19_2{left:101px;top:1057px;}
+
+.s2_2{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_2{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_2" class="t s1_2">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_2" class="t s2_2">mencionó, debe diferenciarse el padrón provisional (artículo 25) de los definitivos (artículo 30 y </div>
+<div id="t4_2" class="t s2_2">concordantes). De otro lado, en lo que respecta a los padrones definitivos, el artículo 66, inc. 1, </div>
+<div id="t5_2" class="t s2_2">prevé que se remitan tres (3) ejemplares de padrón a cada mesa electoral, los cuales deben </div>
+<div id="t6_2" class="t s2_2">distinguirse de acuerdo a su finalidad, lo que justifica a su vez asignarles formato diferenciado.- </div>
+<div id="t7_2" class="t s2_2">En ese orden, el artículo 82, inc. 6, precisa que uno de esos ejemplares -conocido corrientemente </div>
+<div id="t8_2" class="t s2_2">como “padrón para pared”- es el destinado a fijar “en lugar bien visible” de los establecimientos de </div>
+<div id="t9_2" class="t s2_2">votación para consulta de los electores. Los dos restantes son -conforme se desprende del inciso 8 </div>
+<div id="ta_2" class="t s2_2">del mismo artículo 82- para utilizar en la mesa electoral durante el procedimiento de verificación de </div>
+<div id="tb_2" class="t s2_2">la identidad de los electores y emisión del sufragio. Asimismo, de estos dos ejemplares, uno -que a </div>
+<div id="tc_2" class="t s2_2">efectos de una mayor precisión conceptual referiremos como “padrón auxiliar” o para fiscales- está </div>
+<div id="td_2" class="t s2_2">destinado al uso por parte de los fiscales o el vocal para el cumplimiento de sus tareas, mientras </div>
+<div id="te_2" class="t s2_2">que el restante -al que se hará referencia en lo sucesivo como “padrón especial” para presidente de </div>
+<div id="tf_2" class="t s2_2">mesa- es el que debe reunir todas las condiciones para su utilización por el presidente de mesa y </div>
+<div id="tg_2" class="t s2_2">debe ineludiblemente devolverse a la justicia nacional electoral para el escrutinio definitivo y para </div>
+<div id="th_2" class="t s2_2">conformar el Registro de Infractores.- </div>
+<div id="ti_2" class="t s2_2">En ese orden, conviene destacar que se remitirá un padrón especial diferenciado de los restantes </div>
+<div id="tj_2" class="t s2_2">ejemplares que habrán de enviarse a cada mesa, toda vez que únicamente el padrón destinado al </div>
+<div id="tk_2" class="t s2_2">uso del presidente de mesa contendrá las constancias de emisión del voto y el espacio para la firma </div>
+<div id="tl_2" class="t s2_2">del elector.- </div>
+<div id="tm_2" class="t s2_2">5°) Que, en relación con ello, resulta pertinente entonces aprobar el modelo de padrón especial </div>
+<div id="tn_2" class="t s2_2">destinado al presidente de mesa que consta como Anexo I; del cual resulta que las “constancias de </div>
+<div id="to_2" class="t s2_2">emisión del voto” estarán integradas en la propia hoja de dicho padrón electoral, a fin de facilitar las </div>
+<div id="tp_2" class="t s2_2">tareas a cargo de las autoridades de mesa, así como también para asegurar su adecuada remisión </div>
+<div id="tq_2" class="t s2_2">por parte de la justicia nacional electoral y la posterior devolución conjuntamente con la restante </div>
+<div id="tr_2" class="t s2_2">documentación electoral.- </div>
+<div id="ts_2" class="t s2_2">Por lo demás, debe resaltarse que la constancia de emisión del voto deberá estar sujeta a la hoja del </div>
+<div id="tt_2" class="t s2_2">padrón mediante un troquelado que -por su conformación y calidad- permita fácilmente </div>
+<div id="tu_2" class="t s2_2">desprenderla para su entrega al elector una vez que éste haya depositado su voto en la urna –y </div>
+<div id="tv_2" class="t s2_2">firmado el padrón en el lugar previsto a tal efecto-, sin incurrir en demoras excesivas ni afectar la </div>
+<div id="tw_2" class="t s2_2">hoja del padrón o las restantes constancias.- </div>
+<div id="tx_2" class="t s2_2">6°) Que, de conformidad con lo expuesto, el presidente de mesa deberá proceder a la entrega del </div>
+<div id="ty_2" class="t s2_2">comprobante correspondiente a cada elector que emita su voto, conservando las autoridades de </div>
+<div id="tz_2" class="t s2_2">mesa el ejemplar del padrón utilizado -con las constancias no entregadas aún adheridas al mismo- </div>
+<div id="t10_2" class="t s2_2">para su devolución a la justicia nacional electoral (art. 82, inc. 8, CEN), en orden a la conformación </div>
+<div id="t11_2" class="t s2_2">del Registro de Infractores al deber de votar (art. 18, CEN).- </div>
+<div id="t12_2" class="t s2_2">Por ello, la devolución del padrón conteniendo las constancias no entregadas, así como también de </div>
+<div id="t13_2" class="t s2_2">las actas de la mesa -de apertura, cierre y de escrutinio-, se considerará condición necesaria para el </div>
+<div id="t14_2" class="t s2_2">cobro de la compensación prevista por el artículo 72 del Código Electoral Nacional.- </div>
+<div id="t15_2" class="t s2_2">Los delegados de la justicia nacional electoral deberán verificar que los ejemplares del padrón </div>
+<div id="t16_2" class="t s2_2">especial utilizados por el presidente de mesa sean oportunamente incorporados en los sobres para </div>
+<div id="t17_2" class="t s2_2">su devolución.- </div>
+<div id="t18_2" class="t s2_2">7°) Que, sin perjuicio de lo previsto en los modelos agregados como Anexos, con respecto a la </div>
+<div id="t19_2" class="t s2_2">incorporación de fotografías de los electores corresponde aclarar que su eventual inclusión en los </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2"><object width="935" height="1210" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld2" type="text/javascript">
+
+var isIE = false;
+var f2 = [['t1_2',1076],['t2_2',1095],['t3_2',2933],['t4_2',2934],['t5_2',2934],['t6_2',2784],['t7_2',2933],['t8_2',2934],['t9_2',2934],['ta_2',2933],['tb_2',2933],['tc_2',2933],['td_2',2933],['te_2',2934],['tf_2',2934],['tg_2',2934],['th_2',1099],['ti_2',2933],['tj_2',2933],['tk_2',2933],['tl_2',348],['tm_2',2933],['tn_2',2934],['to_2',2934],['tp_2',2934],['tq_2',2934],['tr_2',751],['ts_2',2933],['tt_2',2933],['tu_2',2934],['tv_2',2934],['tw_2',1302],['tx_2',2933],['ty_2',2934],['tz_2',2934],['t10_2',2933],['t11_2',1765],['t12_2',2934],['t13_2',2934],['t14_2',2419],['t15_2',2934],['t16_2',2933],['t17_2',442],['t18_2',2933],['t19_2',2934]];
+function load2(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f2);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 46;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_2");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

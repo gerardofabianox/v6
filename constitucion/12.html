@@ -1,0 +1,358 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load12();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_12{left:437px;top:1453px;}
+#t2_12{left:114px;top:130px;}
+#t3_12{left:122px;top:132px;}
+#t4_12{left:225px;top:130px;}
+#t5_12{left:276px;top:132px;}
+#t6_12{left:326px;top:130px;}
+#t7_12{left:352px;top:132px;}
+#t8_12{left:371px;top:130px;}
+#t9_12{left:381px;top:130px;}
+#ta_12{left:396px;top:132px;}
+#tb_12{left:402px;top:130px;}
+#tc_12{left:412px;top:130px;}
+#td_12{left:114px;top:145px;}
+#te_12{left:114px;top:160px;}
+#tf_12{left:87px;top:184px;}
+#tg_12{left:87px;top:213px;}
+#th_12{left:87px;top:243px;}
+#ti_12{left:87px;top:263px;}
+#tj_12{left:87px;top:284px;}
+#tk_12{left:87px;top:313px;}
+#tl_12{left:183px;top:313px;}
+#tm_12{left:87px;top:334px;}
+#tn_12{left:87px;top:354px;}
+#to_12{left:87px;top:384px;}
+#tp_12{left:87px;top:404px;}
+#tq_12{left:87px;top:425px;}
+#tr_12{left:364px;top:484px;}
+#ts_12{left:283px;top:513px;}
+#tt_12{left:87px;top:543px;}
+#tu_12{left:182px;top:543px;}
+#tv_12{left:87px;top:563px;}
+#tw_12{left:87px;top:584px;}
+#tx_12{left:87px;top:613px;}
+#ty_12{left:87px;top:634px;}
+#tz_12{left:114px;top:663px;}
+#t10_12{left:122px;top:666px;}
+#t11_12{left:226px;top:663px;}
+#t12_12{left:278px;top:666px;}
+#t13_12{left:329px;top:663px;}
+#t14_12{left:355px;top:663px;}
+#t15_12{left:114px;top:678px;}
+#t16_12{left:114px;top:693px;}
+#t17_12{left:87px;top:717px;}
+#t18_12{left:185px;top:717px;}
+#t19_12{left:87px;top:738px;}
+#t1a_12{left:87px;top:758px;}
+#t1b_12{left:87px;top:788px;}
+#t1c_12{left:181px;top:788px;}
+#t1d_12{left:87px;top:808px;}
+#t1e_12{left:634px;top:808px;letter-spacing:4px;}
+#t1f_12{left:792px;top:808px;letter-spacing:5px;}
+#t1g_12{left:87px;top:828px;}
+#t1h_12{left:87px;top:849px;}
+#t1i_12{left:87px;top:869px;}
+#t1j_12{left:87px;top:890px;}
+#t1k_12{left:87px;top:919px;}
+#t1l_12{left:183px;top:919px;}
+#t1m_12{left:87px;top:940px;}
+#t1n_12{left:87px;top:960px;}
+#t1o_12{left:87px;top:981px;}
+#t1p_12{left:87px;top:1001px;}
+#t1q_12{left:87px;top:1021px;}
+#t1r_12{left:114px;top:1051px;}
+#t1s_12{left:122px;top:1053px;}
+#t1t_12{left:222px;top:1051px;}
+#t1u_12{left:272px;top:1053px;}
+#t1v_12{left:321px;top:1051px;}
+#t1w_12{left:346px;top:1051px;}
+#t1x_12{left:114px;top:1066px;}
+#t1y_12{left:87px;top:1090px;}
+#t1z_12{left:182px;top:1090px;}
+#t20_12{left:87px;top:1110px;}
+#t21_12{left:87px;top:1131px;}
+#t22_12{left:87px;top:1151px;}
+#t23_12{left:87px;top:1172px;}
+#t24_12{left:87px;top:1192px;}
+#t25_12{left:87px;top:1212px;}
+#t26_12{left:87px;top:1233px;}
+#t27_12{left:87px;top:1253px;}
+#t28_12{left:87px;top:1274px;}
+#t29_12{left:87px;top:1294px;}
+#t2a_12{left:87px;top:1314px;}
+#t2b_12{left:87px;top:1335px;}
+#t2c_12{left:87px;top:1355px;}
+#t2d_12{left:114px;top:1385px;}
+#t2e_12{left:122px;top:1387px;}
+#t2f_12{left:220px;top:1385px;}
+#t2g_12{left:270px;top:1387px;}
+#t2h_12{left:319px;top:1385px;}
+#t2i_12{left:343px;top:1385px;}
+#t2j_12{left:114px;top:1400px;}
+#t2k_12{left:128px;top:1415px;}
+#t2l_12{left:114px;top:1430px;}
+
+.s5_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_12{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_12{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_12{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: TimesNewRomanPSMT;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_12" class="t s1_12">12</div>
+<div id="t2_12" class="t s2_12">T</div>
+<div id="t3_12" class="t s3_12">EXTO ANTERIOR A </div>
+<div id="t4_12" class="t s2_12">1994: A</div>
+<div id="t5_12" class="t s3_12">RTÍCULO </div>
+<div id="t6_12" class="t s2_12">67,</div>
+<div id="t7_12" class="t s3_12">INC</div>
+<div id="t8_12" class="t s2_12">.</div>
+<div id="t9_12" class="t s2_12">27</div>
+<div id="ta_12" class="t s3_12">º</div>
+<div id="tb_12" class="t s2_12">.</div>
+<div id="tc_12" class="t s2_12">Ejercer una legislación exclusiva en todo el territorio de la </div>
+<div id="td_12" class="t s2_12">Capital de la Nación y sobre los demás lugares adquiridos por compra o cesión en cualquiera de las </div>
+<div id="te_12" class="t s2_12">provincias, para establecer fronteras, arsenales, almacenes u otros establecimientos de utilidad nacional. </div>
+<div id="tf_12" class="t s4_12">31. Disponer la intervención federal a una provincia o a la ciudad de Buenos Aires. </div>
+<div id="tg_12" class="t s4_12">Aprobar o revocar la intervención decretada, durante su receso, por el Poder Ejecutivo. </div>
+<div id="th_12" class="t s4_12">32. Hacer todas las leyes y reglamentos que sean convenientes para poner en ejercicio los </div>
+<div id="ti_12" class="t s4_12">poderes antecedentes, y todos los otros concedidos por la presente Constitución al Gobierno </div>
+<div id="tj_12" class="t s4_12">de la Nación Argentina. </div>
+<div id="tk_12" class="t s5_12">Artículo 76</div>
+<div id="tl_12" class="t s4_12">.- Se prohíbe la delegación legislativa en el Poder Ejecutivo, salvo en materias </div>
+<div id="tm_12" class="t s4_12">determinadas de administración o de emergencia pública, con plazo fijado para su ejercicio y </div>
+<div id="tn_12" class="t s4_12">dentro de las bases de la delegación que el Congreso establezca. </div>
+<div id="to_12" class="t s4_12">La caducidad resultante del transcurso del plazo previsto en el párrafo anterior no importará </div>
+<div id="tp_12" class="t s4_12">revisión de las relaciones jurídicas nacidas al amparo de las normas dictadas en </div>
+<div id="tq_12" class="t s4_12">consecuencia de la delegación legislativa. </div>
+<div id="tr_12" class="t s5_12">CAPÍTULO QUINTO </div>
+<div id="ts_12" class="t s5_12">De la formación y sanción de las leyes </div>
+<div id="tt_12" class="t s5_12">Artículo 77</div>
+<div id="tu_12" class="t s4_12">.- Las leyes pueden tener principio en cualquiera de las Cámaras del Congreso, </div>
+<div id="tv_12" class="t s4_12">por proyectos presentados por sus miembros o por el Poder Ejecutivo, salvo las excepciones </div>
+<div id="tw_12" class="t s4_12">que establece esta Constitución. </div>
+<div id="tx_12" class="t s4_12">Los proyectos de ley que modifiquen el régimen electoral y de partidos políticos deberán ser </div>
+<div id="ty_12" class="t s4_12">aprobados por mayoría absoluta del total de los miembros de las Cámaras. </div>
+<div id="tz_12" class="t s2_12">T</div>
+<div id="t10_12" class="t s3_12">EXTO ANTERIOR A </div>
+<div id="t11_12" class="t s2_12">1994: A</div>
+<div id="t12_12" class="t s3_12">RTÍCULO </div>
+<div id="t13_12" class="t s2_12">68.</div>
+<div id="t14_12" class="t s2_12">Las leyes pueden tener principio en cualquiera de las Cámaras del </div>
+<div id="t15_12" class="t s2_12">Congreso, por proyectos presentados por sus miembros o por el Poder Ejecutivo; excepto las relativas a los </div>
+<div id="t16_12" class="t s2_12">objetos de que trata el artículo 43. </div>
+<div id="t17_12" class="t s5_12">Artículo 78</div>
+<div id="t18_12" class="t s4_12">.- Aprobado un proyecto de ley por la Cámara de su origen, pasa para su </div>
+<div id="t19_12" class="t s4_12">discusión a la otra Cámara. Aprobado por ambas, pasa al Poder Ejecutivo de la Nación para </div>
+<div id="t1a_12" class="t s4_12">su examen; y si también obtiene su aprobación, lo promulga como ley. </div>
+<div id="t1b_12" class="t s5_12">Artículo 79</div>
+<div id="t1c_12" class="t s4_12">.- Cada Cámara, luego de aprobar un proyecto de ley en general, puede delegar </div>
+<div id="t1d_12" class="t s4_12">en sus comisiones la aprobación en particular del proyecto, con e</div>
+<div id="t1e_12" class="t s4_12">l voto de la mayor</div>
+<div id="t1f_12" class="t s4_12">ía </div>
+<div id="t1g_12" class="t s4_12">absoluta del total de sus miembros. La Cámara podrá, con igual número de votos, dejar sin </div>
+<div id="t1h_12" class="t s4_12">efecto la delegación y retomar el trámite ordinario. La aprobación en comisión requerirá el </div>
+<div id="t1i_12" class="t s4_12">voto de la mayoría absoluta del total de sus miembros. Una vez aprobado el proyecto en </div>
+<div id="t1j_12" class="t s4_12">comisión, se seguirá el trámite ordinario. </div>
+<div id="t1k_12" class="t s5_12">Artículo 80</div>
+<div id="t1l_12" class="t s4_12">.- Se reputa aprobado por el Poder Ejecutivo todo proyecto no devuelto en el </div>
+<div id="t1m_12" class="t s4_12">término de diez días útiles. Los proyectos desechados parcialmente no podrán ser aprobados </div>
+<div id="t1n_12" class="t s4_12">en la parte restante. Sin embargo, las partes no observadas solamente podrán ser </div>
+<div id="t1o_12" class="t s4_12">promulgadas si tienen autonomía normativa y su aprobación parcial no altera el espíritu ni la </div>
+<div id="t1p_12" class="t s4_12">unidad del proyecto sancionado por el Congreso. En este caso será de aplicación el </div>
+<div id="t1q_12" class="t s4_12">procedimiento previsto para los decretos de necesidad y urgencia. </div>
+<div id="t1r_12" class="t s2_12">T</div>
+<div id="t1s_12" class="t s3_12">EXTO ANTERIOR A </div>
+<div id="t1t_12" class="t s2_12">1994: A</div>
+<div id="t1u_12" class="t s3_12">RTÍCULO </div>
+<div id="t1v_12" class="t s2_12">70.</div>
+<div id="t1w_12" class="t s2_12">Se reputa aprobado por el Poder Ejecutivo, todo proyecto no devuelto </div>
+<div id="t1x_12" class="t s2_12">en el término de diez días útiles. </div>
+<div id="t1y_12" class="t s5_12">Artículo 81</div>
+<div id="t1z_12" class="t s4_12">.- Ningún proyecto de ley desechado totalmente por una de las Cámaras podrá </div>
+<div id="t20_12" class="t s4_12">repetirse en las sesiones de aquel año. Ninguna de las Cámaras puede desechar totalmente </div>
+<div id="t21_12" class="t s4_12">un proyecto que hubiera tenido origen en ella y luego hubiese sido adicionado o enmendado </div>
+<div id="t22_12" class="t s4_12">por la Cámara revisora. Si el proyecto fuere objeto de adiciones o correcciones por la </div>
+<div id="t23_12" class="t s4_12">Cámara revisora, deberá indicarse el resultado de la votación a fin de establecer si tales </div>
+<div id="t24_12" class="t s4_12">adiciones o correcciones fueron realizadas por mayoría absoluta de los presentes o por las </div>
+<div id="t25_12" class="t s4_12">dos terceras partes de los presentes. La Cámara de origen podrá por mayoría absoluta de </div>
+<div id="t26_12" class="t s4_12">los presentes aprobar el proyecto con las adiciones o correcciones introducidas o insistir en </div>
+<div id="t27_12" class="t s4_12">la redacción originaria, a menos que las adiciones o correcciones las haya realizado la </div>
+<div id="t28_12" class="t s4_12">revisora por dos terceras partes de los presentes. En este último caso, el proyecto pasará al </div>
+<div id="t29_12" class="t s4_12">Poder Ejecutivo con las adiciones o correcciones de la Cámara revisora, salvo que la Cámara </div>
+<div id="t2a_12" class="t s4_12">de origen insista en su redacción originaria con el voto de las dos terceras partes de los </div>
+<div id="t2b_12" class="t s4_12">presentes. La Cámara de origen no podrá introducir nuevas adiciones o correcciones a las </div>
+<div id="t2c_12" class="t s4_12">realizadas por la Cámara revisora. </div>
+<div id="t2d_12" class="t s2_12">T</div>
+<div id="t2e_12" class="t s3_12">EXTO ANTERIOR A </div>
+<div id="t2f_12" class="t s2_12">1994: A</div>
+<div id="t2g_12" class="t s3_12">RTÍCULO </div>
+<div id="t2h_12" class="t s2_12">71.</div>
+<div id="t2i_12" class="t s2_12">Ningún proyecto de ley desechado totalmente por una de las Cámaras, </div>
+<div id="t2j_12" class="t s2_12">podrá repetirse en las sesiones de aquel año. </div>
+<div id="t2k_12" class="t s2_12">Pero si sólo fuese adicionado o corregido por la Cámara revisora, volverá a la de su origen; y si en ésta se </div>
+<div id="t2l_12" class="t s2_12">aprobasen las adiciones o correcciones por mayoría absoluta, pasará al Poder Ejecutivo de la Nación.Si las </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg12Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg12"><object width="935" height="1540" data="12/12.svg" type="image/svg+xml" id="pdf12" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld12" type="text/javascript">
+
+var isIE = false;
+var f12 = [['t3_12',389],['t4_12',205],['tc_12',1506],['td_12',2695],['te_12',2594],['tf_12',2546],['tg_12',2689],['th_12',2874],['ti_12',2874],['tj_12',719],['tk_12',383],['tl_12',2491],['tm_12',2874],['tn_12',2001],['to_12',2875],['tp_12',2874],['tq_12',1276],['tr_12',653],['ts_12',1307],['tt_12',381],['tu_12',2493],['tv_12',2874],['tw_12',996],['tx_12',2874],['ty_12',2314],['t10_12',393],['t11_12',207],['t14_12',1733],['t15_12',2695],['t16_12',856],['t17_12',393],['t18_12',2482],['t19_12',2874],['t1a_12',2193],['t1b_12',378],['t1c_12',2496],['t1d_12',2189],['t1e_12',631],['t1g_12',2874],['t1h_12',2874],['t1i_12',2874],['t1j_12',1264],['t1k_12',385],['t1l_12',2489],['t1m_12',2874],['t1n_12',2874],['t1o_12',2875],['t1p_12',2874],['t1q_12',2042],['t1s_12',381],['t1t_12',201],['t1w_12',1768],['t1x_12',803],['t1y_12',381],['t1z_12',2493],['t20_12',2874],['t21_12',2874],['t22_12',2874],['t23_12',2874],['t24_12',2875],['t25_12',2874],['t26_12',2874],['t27_12',2875],['t28_12',2874],['t29_12',2875],['t2a_12',2874],['t2b_12',2875],['t2c_12',1057],['t2e_12',378],['t2f_12',199],['t2i_12',1778],['t2j_12',1116],['t2k_12',2640],['t2l_12',2695]];
+function load12(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f12);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 94;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_12");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

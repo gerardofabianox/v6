@@ -1,0 +1,348 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load9();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_9{left:334px;top:139px;}
+#t2_9{left:356px;top:165px;}
+#t3_9{left:484px;top:1455px;}
+#t4_9{left:157px;top:209px;}
+#t5_9{left:157px;top:224px;}
+#t6_9{left:130px;top:248px;}
+#t7_9{left:130px;top:268px;}
+#t8_9{left:130px;top:288px;}
+#t9_9{left:130px;top:309px;}
+#ta_9{left:130px;top:329px;}
+#tb_9{left:130px;top:359px;}
+#tc_9{left:130px;top:379px;}
+#td_9{left:130px;top:400px;}
+#te_9{left:130px;top:429px;}
+#tf_9{left:130px;top:450px;}
+#tg_9{left:130px;top:470px;}
+#th_9{left:130px;top:491px;}
+#ti_9{left:130px;top:511px;}
+#tj_9{left:130px;top:541px;}
+#tk_9{left:130px;top:561px;}
+#tl_9{left:130px;top:581px;}
+#tm_9{left:130px;top:611px;}
+#tn_9{left:130px;top:631px;}
+#to_9{left:130px;top:652px;}
+#tp_9{left:130px;top:682px;}
+#tq_9{left:130px;top:702px;}
+#tr_9{left:130px;top:722px;}
+#ts_9{left:157px;top:752px;}
+#tt_9{left:165px;top:754px;}
+#tu_9{left:269px;top:752px;}
+#tv_9{left:321px;top:754px;}
+#tw_9{left:371px;top:752px;}
+#tx_9{left:397px;top:754px;}
+#ty_9{left:416px;top:752px;}
+#tz_9{left:426px;top:752px;}
+#t10_9{left:434px;top:754px;}
+#t11_9{left:439px;top:752px;}
+#t12_9{left:450px;top:752px;}
+#t13_9{left:157px;top:767px;}
+#t14_9{left:157px;top:782px;}
+#t15_9{left:130px;top:806px;}
+#t16_9{left:130px;top:826px;}
+#t17_9{left:130px;top:847px;}
+#t18_9{left:130px;top:876px;}
+#t19_9{left:130px;top:906px;}
+#t1a_9{left:130px;top:935px;}
+#t1b_9{left:130px;top:956px;}
+#t1c_9{left:157px;top:985px;}
+#t1d_9{left:165px;top:988px;}
+#t1e_9{left:263px;top:985px;}
+#t1f_9{left:313px;top:988px;}
+#t1g_9{left:362px;top:985px;}
+#t1h_9{left:386px;top:988px;}
+#t1i_9{left:405px;top:985px;}
+#t1j_9{left:157px;top:1000px;}
+#t1k_9{left:130px;top:1024px;}
+#t1l_9{left:130px;top:1054px;}
+#t1m_9{left:130px;top:1074px;}
+#t1n_9{left:130px;top:1095px;}
+#t1o_9{left:130px;top:1115px;}
+#t1p_9{left:157px;top:1145px;}
+#t1q_9{left:165px;top:1147px;}
+#t1r_9{left:275px;top:1145px;}
+#t1s_9{left:328px;top:1147px;}
+#t1t_9{left:381px;top:1145px;}
+#t1u_9{left:409px;top:1147px;}
+#t1v_9{left:427px;top:1145px;}
+#t1w_9{left:440px;top:1145px;}
+#t1x_9{left:447px;top:1147px;}
+#t1y_9{left:453px;top:1145px;}
+#t1z_9{left:465px;top:1145px;}
+#t20_9{left:157px;top:1160px;}
+#t21_9{left:130px;top:1184px;}
+#t22_9{left:130px;top:1204px;}
+#t23_9{left:130px;top:1234px;}
+#t24_9{left:130px;top:1254px;}
+#t25_9{left:130px;top:1284px;}
+#t26_9{left:130px;top:1304px;}
+#t27_9{left:130px;top:1334px;}
+#t28_9{left:130px;top:1354px;}
+#t29_9{left:130px;top:1374px;}
+#t2a_9{left:130px;top:1395px;}
+#t2b_9{left:130px;top:1415px;}
+
+.s5_9{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_9{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_9{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_9{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi9;
+	color: rgb(0,0,0);
+}
+
+.s1_9{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: PMLEGJ-ZapfHumanist601BT-Demi9;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts9" type="text/css" >
+
+@font-face {
+	font-family: PMLEGJ-ZapfHumanist601BT-Demi9;
+	src :url("9/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_9" class="t s1_9">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t2_9" class="t s2_9">PODER JUDICIAL DE LA NACIÓN</div>
+<div id="t3_9" class="t s3_9">9 </div>
+<div id="t4_9" class="t s4_9">moneda que fuese corriente en las provincias respectivas, por su justo equivalente. Establecer igualmente </div>
+<div id="t5_9" class="t s4_9">los derechos de exportación. </div>
+<div id="t6_9" class="t s3_9">2. Imponer contribuciones indirectas como facultad concurrente con las provincias. Imponer </div>
+<div id="t7_9" class="t s3_9">contribuciones directas, por tiempo determinado, proporcionalmente iguales en todo el </div>
+<div id="t8_9" class="t s3_9">territorio de la Nación, siempre que la defensa, seguridad común y bien general del Estado </div>
+<div id="t9_9" class="t s3_9">lo exijan. Las contribuciones previstas en este inciso, con excepción de la parte o el total de </div>
+<div id="ta_9" class="t s3_9">las que tengan asignación específica, son coparticipables. </div>
+<div id="tb_9" class="t s3_9">Una ley convenio, sobre la base de acuerdos entre la Nación y las provincias, instituirá </div>
+<div id="tc_9" class="t s3_9">regímenes de coparticipación de estas contribuciones, garantizando la automaticidad en la </div>
+<div id="td_9" class="t s3_9">remisión de los fondos. </div>
+<div id="te_9" class="t s3_9">La distribución entre la Nación, las provincias y la ciudad de Buenos Aires y entre éstas, se </div>
+<div id="tf_9" class="t s3_9">efectuará en relación directa a las competencias, servicios y funciones de cada una de ellas </div>
+<div id="tg_9" class="t s3_9">contemplando criterios objetivos de reparto; será equitativa, solidaria y dará prioridad al </div>
+<div id="th_9" class="t s3_9">logro de un grado equivalente de desarrollo, calidad de vida e igualdad de oportunidades en </div>
+<div id="ti_9" class="t s3_9">todo el territorio nacional. </div>
+<div id="tj_9" class="t s3_9">La ley convenio tendrá como Cámara de origen el Senado y deberá ser sancionada con la </div>
+<div id="tk_9" class="t s3_9">mayoría absoluta de la totalidad de los miembros de cada Cámara, no podrá ser modificada </div>
+<div id="tl_9" class="t s3_9">unilateralmente ni reglamentada y será aprobada por las provincias. </div>
+<div id="tm_9" class="t s3_9">No habrá transferencia de competencias, servicios o funciones sin la respectiva reasignación </div>
+<div id="tn_9" class="t s3_9">de recursos, aprobada por ley del Congreso cuando correspondiere y por la provincia </div>
+<div id="to_9" class="t s3_9">interesada o la ciudad de Buenos Aires en su caso. </div>
+<div id="tp_9" class="t s3_9">Un organismo fiscal federal tendrá a su cargo el control y fiscalización de la ejecución de lo </div>
+<div id="tq_9" class="t s3_9">establecido en este inciso, según lo determina la ley, la que deberá asegurar la </div>
+<div id="tr_9" class="t s3_9">representación de todas las provincias y la ciudad de Buenos Aires en su composición. </div>
+<div id="ts_9" class="t s4_9">T</div>
+<div id="tt_9" class="t s5_9">EXTO ANTERIOR A </div>
+<div id="tu_9" class="t s4_9">1994: A</div>
+<div id="tv_9" class="t s5_9">RTÍCULO </div>
+<div id="tw_9" class="t s4_9">67,</div>
+<div id="tx_9" class="t s5_9">INC</div>
+<div id="ty_9" class="t s4_9">.</div>
+<div id="tz_9" class="t s4_9">2</div>
+<div id="t10_9" class="t s5_9">º</div>
+<div id="t11_9" class="t s4_9">.</div>
+<div id="t12_9" class="t s4_9">Imponer contribuciones directas, por tiempo determinado y </div>
+<div id="t13_9" class="t s4_9">proporcionalmente iguales en todo el territorio de la Nación, siempre que la defensa, seguridad común y </div>
+<div id="t14_9" class="t s4_9">bien general del Estado lo exijan. </div>
+<div id="t15_9" class="t s3_9">3. Establecer y modificar asignaciones específicas de recursos coparticipables, por tiempo </div>
+<div id="t16_9" class="t s3_9">determinado, por ley especial aprobada por la mayoría absoluta de la totalidad de los </div>
+<div id="t17_9" class="t s3_9">miembros de cada Cámara. </div>
+<div id="t18_9" class="t s3_9">4. Contraer empréstitos sobre el crédito de la Nación. </div>
+<div id="t19_9" class="t s3_9">5. Disponer del uso y de la enajenación de las tierras de propiedad nacional. </div>
+<div id="t1a_9" class="t s3_9">6. Establecer y reglamentar un banco federal con facultad de emitir moneda, así como otros </div>
+<div id="t1b_9" class="t s3_9">bancos nacionales. </div>
+<div id="t1c_9" class="t s4_9">T</div>
+<div id="t1d_9" class="t s5_9">EXTO ANTERIOR A </div>
+<div id="t1e_9" class="t s4_9">1994: A</div>
+<div id="t1f_9" class="t s5_9">RTÍCULO </div>
+<div id="t1g_9" class="t s4_9">67,</div>
+<div id="t1h_9" class="t s5_9">INC</div>
+<div id="t1i_9" class="t s4_9">. 5º. Establecer y reglamentar un banco Nacional en la Capital y sus </div>
+<div id="t1j_9" class="t s4_9">sucursales en las provincias con facultad de emitir billetes. </div>
+<div id="t1k_9" class="t s3_9">7. Arreglar el pago de la deuda interior y exterior de la Nación. </div>
+<div id="t1l_9" class="t s3_9">8. Fijar anualmente, conforme a las pautas establecidas en el tercer párrafo del inc. 2 de </div>
+<div id="t1m_9" class="t s3_9">este artículo, el presupuesto general de gastos y cálculo de recursos de la administración </div>
+<div id="t1n_9" class="t s3_9">nacional, en base al programa general de gobierno y al plan de inversiones públicas y </div>
+<div id="t1o_9" class="t s3_9">aprobar o desechar la cuenta de inversión. </div>
+<div id="t1p_9" class="t s4_9">T</div>
+<div id="t1q_9" class="t s5_9">EXTO ANTERIOR A </div>
+<div id="t1r_9" class="t s4_9">1994: A</div>
+<div id="t1s_9" class="t s5_9">RTÍCULO </div>
+<div id="t1t_9" class="t s4_9">67,</div>
+<div id="t1u_9" class="t s5_9">INC</div>
+<div id="t1v_9" class="t s4_9">.</div>
+<div id="t1w_9" class="t s4_9">7</div>
+<div id="t1x_9" class="t s5_9">º</div>
+<div id="t1y_9" class="t s4_9">.</div>
+<div id="t1z_9" class="t s4_9">Fijar anualmente, el presupuesto general de gastos de </div>
+<div id="t20_9" class="t s4_9">administración de la Nación, y aprobar o desechar la cuenta de inversión. </div>
+<div id="t21_9" class="t s3_9">9. Acordar subsidios del Tesoro nacional a las provincias, cuyas rentas no alcancen, según </div>
+<div id="t22_9" class="t s3_9">sus presupuestos, a cubrir sus gastos ordinarios. </div>
+<div id="t23_9" class="t s3_9">10. Reglamentar la libre navegación de los ríos interiores, habilitar los puertos que considere </div>
+<div id="t24_9" class="t s3_9">convenientes, y crear o suprimir aduanas. </div>
+<div id="t25_9" class="t s3_9">11. Hacer sellar moneda, fijar su valor y el de las extranjeras; y adoptar un sistema </div>
+<div id="t26_9" class="t s3_9">uniforme de pesos y medidas para toda la Nación. </div>
+<div id="t27_9" class="t s3_9">12. Dictar los Códigos Civil, Comercial, Penal, de Minería, y del Trabajo y Seguridad Social, </div>
+<div id="t28_9" class="t s3_9">en cuerpos unificados o separados, sin que tales códigos alteren las jurisdicciones locales, </div>
+<div id="t29_9" class="t s3_9">correspondiendo su aplicación a los tribunales federales o provinciales, según que las cosas </div>
+<div id="t2a_9" class="t s3_9">o las personas cayeren bajo sus respectivas jurisdicciones; y especialmente leyes generales </div>
+<div id="t2b_9" class="t s3_9">para toda la Nación sobre naturalización y nacionalidad, con sujeción al principio de </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg9Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg9"><object width="935" height="1540" data="9/9.svg" type="image/svg+xml" id="pdf9" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld9" type="text/javascript">
+
+var isIE = false;
+var f9 = [['t1_9',1244],['t2_9',1068],['t4_9',2695],['t5_9',705],['t6_9',2874],['t7_9',2874],['t8_9',2874],['t9_9',2874],['ta_9',1770],['tb_9',2874],['tc_9',2874],['td_9',714],['te_9',2874],['tf_9',2874],['tg_9',2874],['th_9',2874],['ti_9',799],['tj_9',2874],['tk_9',2874],['tl_9',2108],['tm_9',2875],['tn_9',2874],['to_9',1563],['tp_9',2874],['tq_9',2874],['tr_9',2659],['tt_9',392],['tu_9',206],['t12_9',1526],['t13_9',2695],['t14_9',820],['t15_9',2874],['t16_9',2874],['t17_9',849],['t18_9',1653],['t19_9',2357],['t1a_9',2874],['t1b_9',579],['t1d_9',377],['t1e_9',199],['t1i_9',1707],['t1j_9',1446],['t1k_9',1941],['t1l_9',2874],['t1m_9',2874],['t1n_9',2874],['t1o_9',1316],['t1q_9',407],['t1r_9',214],['t1z_9',1465],['t20_9',1812],['t21_9',2875],['t22_9',1507],['t23_9',2874],['t24_9',1296],['t25_9',2874],['t26_9',1546],['t27_9',2874],['t28_9',2874],['t29_9',2874],['t2a_9',2874],['t2b_9',2874]];
+function load9(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f9);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 84;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_9");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

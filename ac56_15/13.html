@@ -1,0 +1,471 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 1540px; height: 935px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load13();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_13{left:21px;top:793px;letter-spacing:1px;}
+#t2_13{left:74px;top:23px;}
+#t3_13{left:74px;top:44px;}
+#t4_13{left:74px;top:72px;}
+#t5_13{left:25px;top:100px;}
+#t6_13{left:71px;top:100px;}
+#t7_13{left:25px;top:117px;}
+#t8_13{left:960px;top:145px;}
+#t9_13{left:53px;top:188px;}
+#ta_13{left:329px;top:188px;}
+#tb_13{left:597px;top:641px;}
+#tc_13{left:567px;top:671px;}
+#td_13{left:499px;top:696px;}
+#te_13{left:493px;top:766px;}
+#tf_13{left:457px;top:712px;letter-spacing:1px;}
+#tg_13{left:572px;top:732px;}
+#th_13{left:910px;top:215px;}
+#ti_13{left:1072px;top:215px;}
+#tj_13{left:1234px;top:215px;}
+#tk_13{left:748px;top:215px;}
+#tl_13{left:1396px;top:215px;}
+#tm_13{left:930px;top:178px;}
+#tn_13{left:768px;top:178px;}
+#to_13{left:1092px;top:178px;}
+#tp_13{left:1255px;top:178px;}
+#tq_13{left:1417px;top:178px;}
+#tr_13{left:20px;top:816px;}
+#ts_13{left:20px;top:826px;}
+#tt_13{left:20px;top:842px;}
+#tu_13{left:26px;top:897px;}
+#tv_13{left:270px;top:816px;}
+#tw_13{left:270px;top:826px;}
+#tx_13{left:270px;top:842px;}
+#ty_13{left:277px;top:897px;}
+#tz_13{left:1308px;top:816px;}
+#t10_13{left:1308px;top:826px;}
+#t11_13{left:1308px;top:842px;}
+#t12_13{left:1314px;top:897px;}
+#t13_13{left:1092px;top:816px;}
+#t14_13{left:1092px;top:826px;}
+#t15_13{left:1092px;top:842px;}
+#t16_13{left:1098px;top:897px;}
+#t17_13{left:875px;top:816px;}
+#t18_13{left:875px;top:826px;}
+#t19_13{left:875px;top:842px;}
+#t1a_13{left:881px;top:897px;}
+#t1b_13{left:659px;top:816px;}
+#t1c_13{left:659px;top:826px;}
+#t1d_13{left:659px;top:842px;}
+#t1e_13{left:665px;top:897px;}
+#t1f_13{left:891px;top:34px;letter-spacing:1px;}
+#t1g_13{left:876px;top:44px;letter-spacing:1px;}
+#t1h_13{left:1056px;top:40px;letter-spacing:3px;}
+#t1i_13{left:724px;top:59px;}
+#t1j_13{left:724px;top:70px;}
+#t1k_13{left:724px;top:86px;}
+#t1l_13{left:724px;top:97px;}
+#t1m_13{left:809px;top:97px;}
+#t1n_13{left:724px;top:117px;}
+#t1o_13{left:1263px;top:80px;}
+#t1p_13{left:1259px;top:100px;}
+#t1q_13{left:1278px;top:120px;}
+#t1r_13{left:1310px;top:62px;letter-spacing:25px;}
+#t1s_13{left:344px;top:37px;}
+#t1t_13{left:344px;top:101px;}
+#t1u_13{left:360px;top:105px;}
+#t1v_13{left:1436px;top:1px;}
+#t1w_13{left:1445px;top:13px;}
+
+.s5_13{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed13;
+	color: rgb(255,255,255);
+}
+
+.s6_13{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed13;
+	color: rgb(63,63,64);
+}
+
+.s16_13{
+	FONT-SIZE: 42px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed13;
+	color: rgb(63,63,64);
+}
+
+.s22_13{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(35,31,32);
+}
+
+.s2_13{
+	FONT-SIZE: 71px;
+	FONT-FAMILY: CenturyGothic-Bold;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s8_13{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: MAIIBU-Vrinda13;
+	color: rgb(35,31,32);
+}
+
+.s3_13{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black13;
+	color: rgb(35,31,32);
+}
+
+.s19_13{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Regular13;
+	color: rgb(35,31,32);
+}
+
+.s13_13{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(35,31,32);
+}
+
+.s20_13{
+	FONT-SIZE: 97px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(35,31,32);
+}
+
+.s1_13{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed13;
+	color: rgb(35,31,32);
+}
+
+.s21_13{
+	FONT-SIZE: 103px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(35,31,32);
+}
+
+.s7_13{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-MyriadPro-Bold13;
+	color: rgb(255,255,255);
+}
+
+.s15_13{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed13;
+	color: rgb(63,63,64);
+}
+
+.s10_13{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(255,255,255);
+}
+
+.s18_13{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(63,63,64);
+}
+
+.s11_13{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: Helvetica, Arial, sans-serif;
+	color: rgb(35,31,32);
+}
+
+.s14_13{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo13;
+	color: rgb(35,31,32);
+}
+
+.s17_13{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed13;
+	color: rgb(63,63,64);
+}
+
+.s9_13{
+	FONT-SIZE: 55px;
+	FONT-FAMILY: MAIIBU-Vrinda13;
+	color: rgb(35,31,32);
+}
+
+.s24_13{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: EKFPXV-CourierNewPS-BoldMT13;
+	color: rgb(35,31,32);
+}
+
+.s12_13{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: MAIIBU-Vrinda13;
+	color: rgb(35,31,32);
+}
+
+.s4_13{
+	FONT-SIZE: 51px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black13;
+	color: rgb(35,31,32);
+}
+
+.s23_13{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: CourierNewPS-BoldMT;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.v1_13{
+-webkit-transform: scale(0.25, 0,30);
+-ms-transform: scale(0.25, 0,30);
+-moz-transform: scale(0.25, 0,30);
+-o-transform: scale(0.25, 0,30);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts13" type="text/css" >
+
+@font-face {
+	font-family: EKFPXV-Helvetica-Condensed-Bo13;
+	src :url("13/fonts/EKFPXV-Helvetica-Condensed-Bo.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Black13;
+	src :url("13/fonts/WCGQLA-MyriadPro-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-MyriadPro-Bold13;
+	src :url("13/fonts/EKFPXV-MyriadPro-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: MAIIBU-Vrinda13;
+	src :url("13/fonts/MAIIBU-Vrinda.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-CourierNewPS-BoldMT13;
+	src :url("13/fonts/EKFPXV-CourierNewPS-BoldMT.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-Helvetica-Condensed13;
+	src :url("13/fonts/UNCHNP-Helvetica-Condensed.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Regular13;
+	src :url("13/fonts/WCGQLA-MyriadPro-Regular.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_13" class="t s1_13">* SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBE COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS QUE SE EXTRAJERON DE LA URNA.</div>
+<div id="t2_13" class="t s2_13">ELECCIONES NACIONALES</div>
+<div id="t3_13" class="t s3_13">25 de octubre de 2015</div>
+<div id="t4_13" class="t s4_13">CERTIFICADO DE ESCRUTINIO DE MESA</div>
+<div id="t5_13" class="t v1_13 s5_13">CERTIFICO: </div>
+<div id="t6_13" class="t v1_13 s6_13">en mi carácter de presidente de mesa, de acuerdo con lo establecido en los arts. </div>
+<div id="t7_13" class="t v1_13 s6_13">102 y 102 bis del Código Electoral Nacional, que el escrutinio arrojó los siguientes resultados:</div>
+<div id="t8_13" class="t s7_13">INTRODUCIR UN CERTIFICADO EN LA URNA Y ENTREGAR OTRO IGUAL A CADA FISCAL QUE LO SOLICITE</div>
+<div id="t9_13" class="t s8_13">N°</div>
+<div id="ta_13" class="t s8_13">PARTIDO POLÍTICO O ALIANZA</div>
+<div id="tb_13" class="t s9_13">VOTOS NULOS</div>
+<div id="tc_13" class="t s9_13">VOTOS RECURRIDOS</div>
+<div id="td_13" class="t s9_13">VOTOS DE IDENTIDAD IMPUGNADA</div>
+<div id="te_13" class="t s10_13">TOTAL DE VOTOS POR COLUMNA*</div>
+<div id="tf_13" class="t v1_13 s11_13">(en todas las columnas debe asentar la misma cantidad)</div>
+<div id="tg_13" class="t s9_13">VOTOS EN BLANCO</div>
+<div id="th_13" class="t s12_13">total de votos - en N°</div>
+<div id="ti_13" class="t s12_13">total de votos - en N°</div>
+<div id="tj_13" class="t s12_13">total de votos - en N°</div>
+<div id="tk_13" class="t s12_13">total de votos - en N°</div>
+<div id="tl_13" class="t s12_13">total de votos - en N°</div>
+<div id="tm_13" class="t s8_13">CATEGORÍA</div>
+<div id="tn_13" class="t s8_13">CATEGORÍA</div>
+<div id="to_13" class="t s8_13">CATEGORÍA</div>
+<div id="tp_13" class="t s8_13">CATEGORÍA</div>
+<div id="tq_13" class="t s8_13">CATEGORÍA</div>
+<div id="tr_13" class="t s1_13">Firma </div>
+<div id="ts_13" class="t s1_13">Presidente</div>
+<div id="tt_13" class="t s13_13">Nombre Apellido</div>
+<div id="tu_13" class="t s14_13">D.N.I.</div>
+<div id="tv_13" class="t s1_13">Firma </div>
+<div id="tw_13" class="t s1_13">Suplente</div>
+<div id="tx_13" class="t s13_13">Nombre Apellido</div>
+<div id="ty_13" class="t s14_13">D.N.I.</div>
+<div id="tz_13" class="t s1_13">Firma </div>
+<div id="t10_13" class="t s1_13">Fiscal</div>
+<div id="t11_13" class="t s13_13">Nombre Apellido</div>
+<div id="t12_13" class="t s14_13">D.N.I.</div>
+<div id="t13_13" class="t s1_13">Firma </div>
+<div id="t14_13" class="t s1_13">Fiscal</div>
+<div id="t15_13" class="t s13_13">Nombre Apellido</div>
+<div id="t16_13" class="t s14_13">D.N.I.</div>
+<div id="t17_13" class="t s1_13">Firma </div>
+<div id="t18_13" class="t s1_13">Fiscal</div>
+<div id="t19_13" class="t s13_13">Nombre Apellido</div>
+<div id="t1a_13" class="t s14_13">D.N.I.</div>
+<div id="t1b_13" class="t s1_13">Firma </div>
+<div id="t1c_13" class="t s1_13">Fiscal</div>
+<div id="t1d_13" class="t s13_13">Nombre Apellido</div>
+<div id="t1e_13" class="t s14_13">D.N.I.</div>
+<div id="t1f_13" class="t s15_13">EN</div>
+<div id="t1g_13" class="t s15_13">NÚMEROS</div>
+<div id="t1h_13" class="t s16_13">EN LETRAS</div>
+<div id="t1i_13" class="t s17_13">Cantidad de ciudadanos que </div>
+<div id="t1j_13" class="t s17_13">votaron (según el padrón)</div>
+<div id="t1k_13" class="t s17_13">Cantidad de sobres utilizados</div>
+<div id="t1l_13" class="t s17_13">extraídos de la urna </div>
+<div id="t1m_13" class="t s18_13">*</div>
+<div id="t1n_13" class="t s17_13">Diferencia entre las anteriores</div>
+<div id="t1o_13" class="t s14_13">SECCIÓN:</div>
+<div id="t1p_13" class="t s14_13">CIRCUITO:</div>
+<div id="t1q_13" class="t s14_13">MESA:</div>
+<div id="t1r_13" class="t s19_13">*010010000101*</div>
+<div id="t1s_13" class="t s20_13">Justicia Nacional Electoral</div>
+<div id="t1t_13" class="t s21_13">D</div>
+<div id="t1u_13" class="t s22_13">ISTRITO:</div>
+<div id="t1v_13" class="t s23_13">Ac. 56/15</div>
+<div id="t1w_13" class="t s24_13">Anexo ІX</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg13Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg13"><object width="1540" height="935" data="13/13.svg" type="image/svg+xml" id="pdf13" style="width:1540px; height:935px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld13" type="text/javascript">
+
+var isIE = false;
+var f13 = [['t1_13',2643],['t2_13',897],['t3_13',601],['t4_13',925],['t6_13',948],['t7_13',1110],['t8_13',2218],['ta_13',647],['tb_13',276],['tc_13',395],['td_13',665],['te_13',689],['tf_13',833],['tg_13',375],['th_13',400],['ti_13',400],['tj_13',400],['tk_13',400],['tl_13',400],['tt_13',264],['tx_13',264],['t11_13',264],['t15_13',264],['t19_13',264],['t1d_13',264],['t1h_13',221],['t1i_13',465],['t1j_13',430],['t1k_13',485],['t1l_13',327],['t1n_13',496],['t1s_13',1064],['t1v_13',330],['t1w_13',293]];
+function load13(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f13);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 69;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_13");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 1540px; height: 935px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load3();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:369px;top:141px;}
+#t2_3{left:369px;top:163px;}
+#t3_3{left:679px;top:163px;}
+#t4_3{left:369px;top:181px;}
+#t5_3{left:532px;top:181px;}
+#t6_3{left:532px;top:234px;}
+#t7_3{left:815px;top:234px;}
+#t8_3{left:720px;top:234px;}
+#t9_3{left:532px;top:252px;}
+#ta_3{left:815px;top:252px;}
+#tb_3{left:720px;top:252px;}
+#tc_3{left:427px;top:342px;}
+#td_3{left:559px;top:342px;}
+#te_3{left:588px;top:358px;}
+#tf_3{left:739px;top:342px;}
+#tg_3{left:770px;top:358px;}
+#th_3{left:916px;top:342px;}
+#ti_3{left:911px;top:358px;}
+#tj_3{left:563px;top:376px;}
+#tk_3{left:743px;top:376px;}
+#tl_3{left:920px;top:376px;}
+#tm_3{left:369px;top:394px;}
+#tn_3{left:611px;top:394px;}
+#to_3{left:815px;top:394px;}
+#tp_3{left:720px;top:394px;}
+#tq_3{left:992px;top:394px;}
+#tr_3{left:897px;top:394px;}
+#ts_3{left:369px;top:411px;}
+#tt_3{left:611px;top:411px;}
+#tu_3{left:823px;top:411px;}
+#tv_3{left:720px;top:411px;}
+#tw_3{left:1000px;top:411px;}
+#tx_3{left:897px;top:411px;}
+#ty_3{left:369px;top:429px;}
+#tz_3{left:645px;top:429px;}
+#t10_3{left:539px;top:429px;}
+#t11_3{left:823px;top:429px;}
+#t12_3{left:720px;top:429px;}
+#t13_3{left:1000px;top:429px;}
+#t14_3{left:897px;top:429px;}
+#t15_3{left:369px;top:447px;}
+#t16_3{left:611px;top:447px;}
+#t17_3{left:823px;top:447px;}
+#t18_3{left:720px;top:447px;}
+#t19_3{left:1000px;top:447px;}
+#t1a_3{left:897px;top:447px;}
+#t1b_3{left:369px;top:465px;}
+#t1c_3{left:645px;top:465px;}
+#t1d_3{left:539px;top:465px;}
+#t1e_3{left:823px;top:465px;}
+#t1f_3{left:720px;top:465px;}
+#t1g_3{left:1000px;top:465px;}
+#t1h_3{left:897px;top:465px;}
+#t1i_3{left:369px;top:482px;}
+#t1j_3{left:645px;top:482px;}
+#t1k_3{left:539px;top:482px;}
+#t1l_3{left:823px;top:482px;}
+#t1m_3{left:720px;top:482px;}
+#t1n_3{left:1000px;top:482px;}
+#t1o_3{left:897px;top:482px;}
+#t1p_3{left:369px;top:500px;}
+#t1q_3{left:645px;top:500px;}
+#t1r_3{left:539px;top:500px;}
+#t1s_3{left:823px;top:500px;}
+#t1t_3{left:720px;top:500px;}
+#t1u_3{left:1000px;top:500px;}
+#t1v_3{left:897px;top:500px;}
+#t1w_3{left:369px;top:518px;}
+#t1x_3{left:611px;top:518px;}
+#t1y_3{left:823px;top:518px;}
+#t1z_3{left:720px;top:518px;}
+#t20_3{left:1000px;top:518px;}
+#t21_3{left:897px;top:518px;}
+#t22_3{left:369px;top:536px;}
+#t23_3{left:611px;top:536px;}
+#t24_3{left:823px;top:536px;}
+#t25_3{left:720px;top:536px;}
+#t26_3{left:1000px;top:536px;}
+#t27_3{left:897px;top:536px;}
+#t28_3{left:369px;top:554px;}
+#t29_3{left:611px;top:554px;}
+#t2a_3{left:823px;top:554px;}
+#t2b_3{left:720px;top:554px;}
+#t2c_3{left:1000px;top:554px;}
+#t2d_3{left:897px;top:554px;}
+#t2e_3{left:369px;top:571px;}
+#t2f_3{left:645px;top:571px;}
+#t2g_3{left:539px;top:571px;}
+#t2h_3{left:823px;top:571px;}
+#t2i_3{left:720px;top:571px;}
+#t2j_3{left:1000px;top:571px;}
+#t2k_3{left:897px;top:571px;}
+#t2l_3{left:369px;top:589px;}
+#t2m_3{left:611px;top:589px;}
+#t2n_3{left:823px;top:589px;}
+#t2o_3{left:720px;top:589px;}
+#t2p_3{left:1000px;top:589px;}
+#t2q_3{left:897px;top:589px;}
+#t2r_3{left:369px;top:607px;}
+#t2s_3{left:645px;top:607px;}
+#t2t_3{left:539px;top:607px;}
+#t2u_3{left:823px;top:607px;}
+#t2v_3{left:720px;top:607px;}
+#t2w_3{left:1000px;top:607px;}
+#t2x_3{left:897px;top:607px;}
+#t2y_3{left:369px;top:625px;}
+#t2z_3{left:611px;top:625px;}
+#t30_3{left:823px;top:625px;}
+#t31_3{left:720px;top:625px;}
+#t32_3{left:1000px;top:625px;}
+#t33_3{left:897px;top:625px;}
+#t34_3{left:369px;top:643px;}
+#t35_3{left:611px;top:643px;}
+#t36_3{left:823px;top:643px;}
+#t37_3{left:720px;top:643px;}
+#t38_3{left:1000px;top:643px;}
+#t39_3{left:897px;top:643px;}
+#t3a_3{left:369px;top:660px;}
+#t3b_3{left:611px;top:660px;}
+#t3c_3{left:823px;top:660px;}
+#t3d_3{left:720px;top:660px;}
+#t3e_3{left:1000px;top:660px;}
+#t3f_3{left:897px;top:660px;}
+#t3g_3{left:369px;top:678px;}
+#t3h_3{left:611px;top:678px;}
+#t3i_3{left:823px;top:678px;}
+#t3j_3{left:720px;top:678px;}
+#t3k_3{left:1000px;top:678px;}
+#t3l_3{left:897px;top:678px;}
+#t3m_3{left:369px;top:696px;}
+#t3n_3{left:611px;top:696px;}
+#t3o_3{left:823px;top:696px;}
+#t3p_3{left:720px;top:696px;}
+#t3q_3{left:1000px;top:696px;}
+#t3r_3{left:897px;top:696px;}
+#t3s_3{left:369px;top:714px;}
+#t3t_3{left:611px;top:714px;}
+#t3u_3{left:823px;top:714px;}
+#t3v_3{left:720px;top:714px;}
+#t3w_3{left:1000px;top:714px;}
+#t3x_3{left:897px;top:714px;}
+#t3y_3{left:369px;top:731px;}
+#t3z_3{left:611px;top:731px;}
+#t40_3{left:823px;top:731px;}
+#t41_3{left:720px;top:731px;}
+#t42_3{left:1000px;top:731px;}
+#t43_3{left:897px;top:731px;}
+#t44_3{left:369px;top:749px;}
+#t45_3{left:645px;top:749px;}
+#t46_3{left:539px;top:749px;}
+#t47_3{left:823px;top:749px;}
+#t48_3{left:720px;top:749px;}
+#t49_3{left:1000px;top:749px;}
+#t4a_3{left:897px;top:749px;}
+#t4b_3{left:369px;top:767px;}
+#t4c_3{left:611px;top:767px;}
+#t4d_3{left:823px;top:767px;}
+#t4e_3{left:720px;top:767px;}
+#t4f_3{left:1000px;top:767px;}
+#t4g_3{left:897px;top:767px;}
+#t4h_3{left:369px;top:785px;}
+#t4i_3{left:611px;top:785px;}
+#t4j_3{left:823px;top:785px;}
+#t4k_3{left:720px;top:785px;}
+#t4l_3{left:1000px;top:785px;}
+#t4m_3{left:897px;top:785px;}
+#t4n_3{left:369px;top:802px;}
+#t4o_3{left:645px;top:802px;}
+#t4p_3{left:539px;top:802px;}
+#t4q_3{left:823px;top:802px;}
+#t4r_3{left:720px;top:802px;}
+#t4s_3{left:1000px;top:802px;}
+#t4t_3{left:897px;top:802px;}
+#t4u_3{left:521px;top:86px;}
+#t4v_3{left:345px;top:68px;}
+#t4w_3{left:587px;top:324px;}
+#t4x_3{left:582px;top:217px;}
+#t4y_3{left:575px;top:105px;}
+
+.s5_3{
+	FONT-SIZE: 58px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_3{
+	FONT-SIZE: 53px;
+	FONT-FAMILY: ABCDEE-Calibri3;
+	color: rgb(0,0,0);
+}
+
+.s4_3{
+	FONT-SIZE: 53px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_3{
+	FONT-SIZE: 53px;
+	FONT-FAMILY: ABCDEE-Calibri-Bold3;
+	color: rgb(0,0,0);
+}
+
+.s1_3{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: ABCDEE-Calibri-Bold3;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts3" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-Calibri3;
+	src :url("3/fonts/ABCDEE-Calibri.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-Calibri-Bold3;
+	src :url("3/fonts/ABCDEE-Calibri-Bold.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_3" class="t s1_3">ELECCIONES PRIMARIAS 2015: LIMITES DE GASTOS DE CAMPAÑA</div>
+<div id="t2_3" class="t s2_3">Módulo Electoral 2015</div>
+<div id="t3_3" class="t s2_3">5,392</div>
+<div id="t4_3" class="t s2_3">Padrón al 31-12-14</div>
+<div id="t5_3" class="t s3_3">Incluye Electores en el Exterior</div>
+<div id="t6_3" class="t s3_3">Límite Campaña PRESIDENTE</div>
+<div id="t7_3" class="t s4_3">84.906.387</div>
+<div id="t8_3" class="t s4_3">$ </div>
+<div id="t9_3" class="t s3_3">Límite Campaña PARLASUR</div>
+<div id="ta_3" class="t s4_3">84.906.387</div>
+<div id="tb_3" class="t s4_3">$ </div>
+<div id="tc_3" class="t s4_3">Distrito</div>
+<div id="td_3" class="t s4_3">Elecciones primarias </div>
+<div id="te_3" class="t s4_3">Senadores</div>
+<div id="tf_3" class="t s4_3">Elecciones primarias </div>
+<div id="tg_3" class="t s4_3">Diputados</div>
+<div id="th_3" class="t s4_3">Elecciones primarias </div>
+<div id="ti_3" class="t s4_3">PARLASUR (Distritos)</div>
+<div id="tj_3" class="t s4_3">(art. 33, ley 26.571)</div>
+<div id="tk_3" class="t s4_3">(art. 33, ley 26.571)</div>
+<div id="tl_3" class="t s4_3">(art. 45, ley 26.215)</div>
+<div id="tm_3" class="t s4_3">Buenos Aires</div>
+<div id="tn_3" class="t s4_3">- - -</div>
+<div id="to_3" class="t s4_3">31.624.363</div>
+<div id="tp_3" class="t s4_3">$ </div>
+<div id="tq_3" class="t s4_3">31.624.363</div>
+<div id="tr_3" class="t s4_3">$ </div>
+<div id="ts_3" class="t s4_3">Capital Federal</div>
+<div id="tt_3" class="t s4_3">- - -</div>
+<div id="tu_3" class="t s4_3">6.862.371</div>
+<div id="tv_3" class="t s4_3">$ </div>
+<div id="tw_3" class="t s4_3">6.862.371</div>
+<div id="tx_3" class="t s4_3">$ </div>
+<div id="ty_3" class="t s4_3">Catamarca</div>
+<div id="tz_3" class="t s4_3">1.348.000</div>
+<div id="t10_3" class="t s4_3">$ </div>
+<div id="t11_3" class="t s4_3">1.348.000</div>
+<div id="t12_3" class="t s4_3">$ </div>
+<div id="t13_3" class="t s4_3">1.348.000</div>
+<div id="t14_3" class="t s4_3">$ </div>
+<div id="t15_3" class="t s4_3">Chaco</div>
+<div id="t16_3" class="t s4_3">- - -</div>
+<div id="t17_3" class="t s4_3">2.292.684</div>
+<div id="t18_3" class="t s4_3">$ </div>
+<div id="t19_3" class="t s4_3">2.292.684</div>
+<div id="t1a_3" class="t s4_3">$ </div>
+<div id="t1b_3" class="t s4_3">Chubut</div>
+<div id="t1c_3" class="t s4_3">1.348.000</div>
+<div id="t1d_3" class="t s4_3">$ </div>
+<div id="t1e_3" class="t s4_3">1.348.000</div>
+<div id="t1f_3" class="t s4_3">$ </div>
+<div id="t1g_3" class="t s4_3">1.348.000</div>
+<div id="t1h_3" class="t s4_3">$ </div>
+<div id="t1i_3" class="t s4_3">Córdoba</div>
+<div id="t1j_3" class="t s4_3">7.376.183</div>
+<div id="t1k_3" class="t s4_3">$ </div>
+<div id="t1l_3" class="t s4_3">7.376.183</div>
+<div id="t1m_3" class="t s4_3">$ </div>
+<div id="t1n_3" class="t s4_3">7.376.183</div>
+<div id="t1o_3" class="t s4_3">$ </div>
+<div id="t1p_3" class="t s4_3">Corrientes</div>
+<div id="t1q_3" class="t s4_3">2.137.866</div>
+<div id="t1r_3" class="t s4_3">$ </div>
+<div id="t1s_3" class="t s4_3">2.137.866</div>
+<div id="t1t_3" class="t s4_3">$ </div>
+<div id="t1u_3" class="t s4_3">2.137.866</div>
+<div id="t1v_3" class="t s4_3">$ </div>
+<div id="t1w_3" class="t s4_3">Entre Ríos</div>
+<div id="t1x_3" class="t s4_3">- - -</div>
+<div id="t1y_3" class="t s4_3">2.720.636</div>
+<div id="t1z_3" class="t s4_3">$ </div>
+<div id="t20_3" class="t s4_3">2.720.636</div>
+<div id="t21_3" class="t s4_3">$ </div>
+<div id="t22_3" class="t s4_3">Formosa</div>
+<div id="t23_3" class="t s4_3">- - -</div>
+<div id="t24_3" class="t s4_3">1.348.000</div>
+<div id="t25_3" class="t s4_3">$ </div>
+<div id="t26_3" class="t s4_3">1.348.000</div>
+<div id="t27_3" class="t s4_3">$ </div>
+<div id="t28_3" class="t s4_3">Jujuy</div>
+<div id="t29_3" class="t s4_3">- - -</div>
+<div id="t2a_3" class="t s4_3">1.348.000</div>
+<div id="t2b_3" class="t s4_3">$ </div>
+<div id="t2c_3" class="t s4_3">1.348.000</div>
+<div id="t2d_3" class="t s4_3">$ </div>
+<div id="t2e_3" class="t s4_3">La Pampa</div>
+<div id="t2f_3" class="t s4_3">1.348.000</div>
+<div id="t2g_3" class="t s4_3">$ </div>
+<div id="t2h_3" class="t s4_3">1.348.000</div>
+<div id="t2i_3" class="t s4_3">$ </div>
+<div id="t2j_3" class="t s4_3">1.348.000</div>
+<div id="t2k_3" class="t s4_3">$ </div>
+<div id="t2l_3" class="t s4_3">La Rioja</div>
+<div id="t2m_3" class="t s4_3">- - -</div>
+<div id="t2n_3" class="t s4_3">1.348.000</div>
+<div id="t2o_3" class="t s4_3">$ </div>
+<div id="t2p_3" class="t s4_3">1.348.000</div>
+<div id="t2q_3" class="t s4_3">$ </div>
+<div id="t2r_3" class="t s4_3">Mendoza</div>
+<div id="t2s_3" class="t s4_3">3.623.632</div>
+<div id="t2t_3" class="t s4_3">$ </div>
+<div id="t2u_3" class="t s4_3">3.623.632</div>
+<div id="t2v_3" class="t s4_3">$ </div>
+<div id="t2w_3" class="t s4_3">3.623.632</div>
+<div id="t2x_3" class="t s4_3">$ </div>
+<div id="t2y_3" class="t s4_3">Misiones</div>
+<div id="t2z_3" class="t s4_3">- - -</div>
+<div id="t30_3" class="t s4_3">2.237.564</div>
+<div id="t31_3" class="t s4_3">$ </div>
+<div id="t32_3" class="t s4_3">2.237.564</div>
+<div id="t33_3" class="t s4_3">$ </div>
+<div id="t34_3" class="t s4_3">Neuquén</div>
+<div id="t35_3" class="t s4_3">- - -</div>
+<div id="t36_3" class="t s4_3">1.348.000</div>
+<div id="t37_3" class="t s4_3">$ </div>
+<div id="t38_3" class="t s4_3">1.348.000</div>
+<div id="t39_3" class="t s4_3">$ </div>
+<div id="t3a_3" class="t s4_3">Río Negro</div>
+<div id="t3b_3" class="t s4_3">- - -</div>
+<div id="t3c_3" class="t s4_3">1.348.000</div>
+<div id="t3d_3" class="t s4_3">$ </div>
+<div id="t3e_3" class="t s4_3">1.348.000</div>
+<div id="t3f_3" class="t s4_3">$ </div>
+<div id="t3g_3" class="t s4_3">Salta</div>
+<div id="t3h_3" class="t s4_3">- - -</div>
+<div id="t3i_3" class="t s4_3">2.498.235</div>
+<div id="t3j_3" class="t s4_3">$ </div>
+<div id="t3k_3" class="t s4_3">2.498.235</div>
+<div id="t3l_3" class="t s4_3">$ </div>
+<div id="t3m_3" class="t s4_3">San Juan</div>
+<div id="t3n_3" class="t s4_3">- - -</div>
+<div id="t3o_3" class="t s4_3">1.409.296</div>
+<div id="t3p_3" class="t s4_3">$ </div>
+<div id="t3q_3" class="t s4_3">1.409.296</div>
+<div id="t3r_3" class="t s4_3">$ </div>
+<div id="t3s_3" class="t s4_3">San Luis</div>
+<div id="t3t_3" class="t s4_3">- - -</div>
+<div id="t3u_3" class="t s4_3">1.348.000</div>
+<div id="t3v_3" class="t s4_3">$ </div>
+<div id="t3w_3" class="t s4_3">1.348.000</div>
+<div id="t3x_3" class="t s4_3">$ </div>
+<div id="t3y_3" class="t s4_3">Santa Cruz</div>
+<div id="t3z_3" class="t s4_3">- - -</div>
+<div id="t40_3" class="t s4_3">1.348.000</div>
+<div id="t41_3" class="t s4_3">$ </div>
+<div id="t42_3" class="t s4_3">1.348.000</div>
+<div id="t43_3" class="t s4_3">$ </div>
+<div id="t44_3" class="t s4_3">Santa Fe</div>
+<div id="t45_3" class="t s4_3">7.112.536</div>
+<div id="t46_3" class="t s4_3">$ </div>
+<div id="t47_3" class="t s4_3">7.112.536</div>
+<div id="t48_3" class="t s4_3">$ </div>
+<div id="t49_3" class="t s4_3">7.112.536</div>
+<div id="t4a_3" class="t s4_3">$ </div>
+<div id="t4b_3" class="t s4_3">Santiago del Estero</div>
+<div id="t4c_3" class="t s4_3">- - -</div>
+<div id="t4d_3" class="t s4_3">1.830.732</div>
+<div id="t4e_3" class="t s4_3">$ </div>
+<div id="t4f_3" class="t s4_3">1.830.732</div>
+<div id="t4g_3" class="t s4_3">$ </div>
+<div id="t4h_3" class="t s4_3">Tierra del Fuego</div>
+<div id="t4i_3" class="t s4_3">- - -</div>
+<div id="t4j_3" class="t s4_3">1.348.000</div>
+<div id="t4k_3" class="t s4_3">$ </div>
+<div id="t4l_3" class="t s4_3">1.348.000</div>
+<div id="t4m_3" class="t s4_3">$ </div>
+<div id="t4n_3" class="t s4_3">Tucumán</div>
+<div id="t4o_3" class="t s4_3">3.025.343</div>
+<div id="t4p_3" class="t s4_3">$ </div>
+<div id="t4q_3" class="t s4_3">3.025.343</div>
+<div id="t4r_3" class="t s4_3">$ </div>
+<div id="t4s_3" class="t s4_3">3.025.343</div>
+<div id="t4t_3" class="t s4_3">$ </div>
+<div id="t4u_3" class="t s5_3">PARA LOS PARTIDOS POLÍTICOS, ALIANZAS Y CONFEDERACIONES</div>
+<div id="t4v_3" class="t s5_3">LÍMITES DE GASTOS DE CAMPAÑA Y MONTOS MÁXIMOS DE APORTES PRIVADOS POR PERSONA FÍSICA O JURÍDICA</div>
+<div id="t4w_3" class="t s4_3">Límite de gastos de campaña por categoría</div>
+<div id="t4x_3" class="t s3_3">Límites Campañas DISTRITO ÚNICO PRIMARIAS</div>
+<div id="t4y_3" class="t s2_3">AUTORIZADOS POR LEY 26.215 (Arts. 16 y 45) Y LEY 26.571 (Art. 33)</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3"><object width="1540" height="935" data="3/3.svg" type="image/svg+xml" id="pdf3" style="width:1540px; height:935px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld3" type="text/javascript">
+
+var isIE = false;
+var f3 = [['t1_3',1834],['t2_3',502],['t4_3',419],['t5_3',669],['t6_3',630],['t9_3',592],['td_3',495],['tf_3',495],['th_3',495],['ti_3',533],['tj_3',463],['tk_3',463],['tl_3',463],['tm_3',319],['tn_3',82],['ts_3',364],['tt_3',82],['t16_3',82],['t1w_3',253],['t1x_3',82],['t23_3',82],['t29_3',82],['t2e_3',244],['t2l_3',196],['t2m_3',82],['t2z_3',82],['t35_3',82],['t3a_3',244],['t3b_3',82],['t3h_3',82],['t3m_3',227],['t3n_3',82],['t3s_3',209],['t3t_3',82],['t3y_3',268],['t3z_3',82],['t44_3',217],['t4b_3',468],['t4c_3',82],['t4h_3',393],['t4i_3',82],['t4u_3',1934],['t4v_3',3342],['t4w_3',1035],['t4x_3',1022],['t4y_3',1498]];
+function load3(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f3);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 179;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_3");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

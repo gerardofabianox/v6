@@ -1,0 +1,262 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load10();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_10{left:333px;top:128px;}
+#t2_10{left:331px;top:147px;}
+#t3_10{left:101px;top:228px;}
+#t4_10{left:101px;top:246px;}
+#t5_10{left:101px;top:281px;}
+#t6_10{left:101px;top:315px;}
+#t7_10{left:101px;top:333px;}
+#t8_10{left:101px;top:350px;}
+#t9_10{left:101px;top:385px;}
+#ta_10{left:101px;top:403px;}
+#tb_10{left:101px;top:437px;}
+#tc_10{left:101px;top:455px;}
+#td_10{left:101px;top:472px;}
+#te_10{left:101px;top:507px;}
+#tf_10{left:201px;top:507px;}
+#tg_10{left:357px;top:507px;}
+#th_10{left:101px;top:524px;}
+#ti_10{left:101px;top:542px;}
+#tj_10{left:101px;top:559px;}
+#tk_10{left:101px;top:577px;}
+#tl_10{left:101px;top:594px;}
+#tm_10{left:101px;top:612px;}
+#tn_10{left:101px;top:629px;}
+#to_10{left:101px;top:646px;}
+#tp_10{left:101px;top:681px;}
+#tq_10{left:101px;top:699px;}
+#tr_10{left:101px;top:716px;letter-spacing:5px;}
+#ts_10{left:161px;top:716px;letter-spacing:4px;}
+#tt_10{left:256px;top:716px;}
+#tu_10{left:260px;top:716px;letter-spacing:4px;}
+#tv_10{left:288px;top:716px;letter-spacing:6px;}
+#tw_10{left:392px;top:716px;}
+#tx_10{left:101px;top:733px;}
+#ty_10{left:101px;top:768px;}
+#tz_10{left:202px;top:768px;}
+#t10_10{left:630px;top:768px;}
+#t11_10{left:101px;top:786px;}
+#t12_10{left:101px;top:803px;}
+#t13_10{left:101px;top:821px;}
+#t14_10{left:101px;top:838px;}
+#t15_10{left:101px;top:873px;}
+#t16_10{left:101px;top:890px;}
+#t17_10{left:101px;top:908px;}
+#t18_10{left:101px;top:925px;}
+#t19_10{left:101px;top:942px;}
+#t1a_10{left:101px;top:960px;}
+#t1b_10{left:101px;top:995px;}
+#t1c_10{left:101px;top:1012px;}
+#t1d_10{left:101px;top:1030px;}
+#t1e_10{left:101px;top:1064px;}
+#t1f_10{left:101px;top:1082px;}
+
+.s2_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_10{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_10{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_10" class="t s1_10">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_10" class="t s1_10">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_10" class="t s2_10">3. Si viene acompañado de las demás actas y documentos que el presidente hubiere recibido o </div>
+<div id="t4_10" class="t s2_10">producido con motivo del acto electoral y escrutinio. </div>
+<div id="t5_10" class="t s2_10">4. Si admite o rechaza las protestas. </div>
+<div id="t6_10" class="t s2_10">5. Si el número de electores que sufragaron según el acta coincide con el número de sobres </div>
+<div id="t7_10" class="t s2_10">remitidos por el Presidente de la mesa, verificación que sólo se llevará a cabo en el caso de que </div>
+<div id="t8_10" class="t s2_10">medie denuncia de un partido político actuante en la elección. </div>
+<div id="t9_10" class="t s2_10">6. Si existen votos recurridos los considerará para determinar su validez o nulidad, computándolos </div>
+<div id="ta_10" class="t s2_10">en conjunto por sección electoral. </div>
+<div id="tb_10" class="t s2_10">Realizadas las verificaciones preestablecidas la Junta se limitará a efectuar las operaciones </div>
+<div id="tc_10" class="t s2_10">aritméticas de los resultados consignados en el acta, salvo que mediare reclamación de algún </div>
+<div id="td_10" class="t s2_10">partido político actuante en la elección. </div>
+<div id="te_10" class="t s2_10">Artículo 125: </div>
+<div id="tf_10" class="t s3_10">No emisión del voto.</div>
+<div id="tg_10" class="t s2_10">Se impondrá multa de pesos cincuenta ($ 50) a pesos quinientos </div>
+<div id="th_10" class="t s2_10">($ 500) al elector mayor de dieciocho (18) años y menor de setenta (70) años de edad que dejare </div>
+<div id="ti_10" class="t s2_10">de emitir su voto y no se justificare ante la justicia nacional electoral dentro de los sesenta (60) días </div>
+<div id="tj_10" class="t s2_10">de la respectiva elección. Cuando se acreditare la no emisión por alguna de las causales que prevé </div>
+<div id="tk_10" class="t s2_10">el artículo 12, se entregará una constancia al efecto. El infractor incluido en el Registro de </div>
+<div id="tl_10" class="t s2_10">infractores al deber de votar establecido en el artículo 18 no podrá ser designado para desempeñar </div>
+<div id="tm_10" class="t s2_10">funciones o empleos públicos durante tres (3) años a partir de la elección. El juez electoral de </div>
+<div id="tn_10" class="t s2_10">distrito, si no fuere el del domicilio del infractor a la fecha prevista en el artículo 25, comunicará la </div>
+<div id="to_10" class="t s2_10">justificación o pago de la multa al juez electoral donde se encontraba inscripto el elector. </div>
+<div id="tp_10" class="t s2_10">Será causa suficiente para la aplicación de la multa, la constatación objetiva de la omisión no </div>
+<div id="tq_10" class="t s2_10">justificada. Los procesos y las resoluciones judiciales que se originen respecto de los electores que </div>
+<div id="tr_10" class="t s2_10">no cons</div>
+<div id="ts_10" class="t s2_10">ientan la ap</div>
+<div id="tt_10" class="t s2_10">l</div>
+<div id="tu_10" class="t s2_10">icac</div>
+<div id="tv_10" class="t s2_10">ión de la mu</div>
+<div id="tw_10" class="t s2_10">lta, podrán comprender a un infractor o a un grupo de </div>
+<div id="tx_10" class="t s2_10">infractores. Las resoluciones serán apelables ante la alzada de la justicia nacional electoral. </div>
+<div id="ty_10" class="t s2_10">Artículo 127: </div>
+<div id="tz_10" class="t s3_10">Constancia de justificación administrativa. Comunicación. </div>
+<div id="t10_10" class="t s2_10">Los jefes de los organismos </div>
+<div id="t11_10" class="t s2_10">nacionales, provinciales, de la Ciudad Autónoma de Buenos Aires o municipales expedirán una </div>
+<div id="t12_10" class="t s2_10">constancia, según el modelo que establezca la reglamentación, que acredite el motivo de la omisión </div>
+<div id="t13_10" class="t s2_10">del sufragio de los subordinados, aclarando cuando la misma haya sido originada por actos de </div>
+<div id="t14_10" class="t s2_10">servicio por disposición legal, siendo suficiente constancia para tenerlo como no infractor. </div>
+<div id="t15_10" class="t s2_10">Los empleados de la administración pública nacional, provincial, de la Ciudad Autónoma de Buenos </div>
+<div id="t16_10" class="t s2_10">Aires o municipal, que sean mayores de dieciocho (18) años y menores de setenta (70) años de </div>
+<div id="t17_10" class="t s2_10">edad, presentarán a sus superiores inmediatos la constancia de emisión del voto, el día siguiente a </div>
+<div id="t18_10" class="t s2_10">la elección, para permitir la fiscalización del cumplimiento de su deber de votar. Si no lo hicieren </div>
+<div id="t19_10" class="t s2_10">serán sancionados con suspensión de hasta seis (6) meses y en caso de reincidencia, podrán llegar </div>
+<div id="t1a_10" class="t s2_10">a la cesantía. </div>
+<div id="t1b_10" class="t s2_10">Los jefes a su vez darán cuenta a sus superiores, por escrito y de inmediato, de las omisiones en </div>
+<div id="t1c_10" class="t s2_10">que sus subalternos hubieren incurrido. La omisión o inexactitud en tales comunicaciones también </div>
+<div id="t1d_10" class="t s2_10">se sancionará con suspensión de hasta seis (6) meses. </div>
+<div id="t1e_10" class="t s2_10">De las constancias que expidan darán cuenta a la justicia nacional electoral dentro de los diez (10) </div>
+<div id="t1f_10" class="t s2_10">días de realizada una elección nacional. Estas comunicaciones tendrán que establecer el nombre del </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg10Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg10"><object width="935" height="1210" data="10/10.svg" type="image/svg+xml" id="pdf10" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld10" type="text/javascript">
+
+var isIE = false;
+var f10 = [['t1_10',1076],['t2_10',1095],['t3_10',2934],['t4_10',1515],['t5_10',1063],['t6_10',2933],['t7_10',2934],['t8_10',1795],['t9_10',2934],['ta_10',977],['tb_10',2934],['tc_10',2934],['td_10',1135],['te_10',377],['tf_10',602],['tg_10',1908],['th_10',2933],['ti_10',2934],['tj_10',2934],['tk_10',2934],['tl_10',2933],['tm_10',2934],['tn_10',2934],['to_10',2582],['tp_10',2933],['tq_10',2933],['tr_10',242],['ts_10',380],['tv_10',418],['tw_10',1767],['tx_10',2649],['ty_10',380],['tz_10',1686],['t10_10',818],['t11_10',2934],['t12_10',2933],['t13_10',2934],['t14_10',2600],['t15_10',2933],['t16_10',2934],['t17_10',2934],['t18_10',2934],['t19_10',2934],['t1a_10',384],['t1b_10',2933],['t1c_10',2934],['t1d_10',1593],['t1e_10',2933],['t1f_10',2934]];
+function load10(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f10);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 52;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_10");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

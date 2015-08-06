@@ -1,0 +1,459 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 1540px; height: 935px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load12();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_12{left:20px;top:816px;}
+#t2_12{left:20px;top:826px;}
+#t3_12{left:20px;top:842px;}
+#t4_12{left:26px;top:897px;}
+#t5_12{left:270px;top:816px;}
+#t6_12{left:270px;top:826px;}
+#t7_12{left:270px;top:842px;}
+#t8_12{left:277px;top:897px;}
+#t9_12{left:21px;top:798px;letter-spacing:1px;}
+#ta_12{left:1196px;top:816px;}
+#tb_12{left:1196px;top:826px;}
+#tc_12{left:1196px;top:842px;}
+#td_12{left:1203px;top:897px;}
+#te_12{left:980px;top:816px;}
+#tf_12{left:980px;top:826px;}
+#tg_12{left:980px;top:842px;}
+#th_12{left:986px;top:897px;}
+#ti_12{left:763px;top:816px;}
+#tj_12{left:763px;top:826px;}
+#tk_12{left:763px;top:842px;}
+#tl_12{left:770px;top:897px;}
+#tm_12{left:547px;top:816px;}
+#tn_12{left:547px;top:826px;}
+#to_12{left:547px;top:842px;}
+#tp_12{left:553px;top:897px;}
+#tq_12{left:49px;top:180px;}
+#tr_12{left:187px;top:180px;}
+#ts_12{left:488px;top:174px;}
+#tt_12{left:711px;top:174px;}
+#tu_12{left:1157px;top:174px;}
+#tv_12{left:934px;top:174px;}
+#tw_12{left:1380px;top:174px;}
+#tx_12{left:415px;top:196px;}
+#ty_12{left:533px;top:196px;}
+#tz_12{left:638px;top:196px;}
+#t10_12{left:756px;top:196px;}
+#t11_12{left:862px;top:196px;}
+#t12_12{left:979px;top:196px;}
+#t13_12{left:1083px;top:196px;}
+#t14_12{left:1202px;top:196px;}
+#t15_12{left:1306px;top:196px;}
+#t16_12{left:1425px;top:196px;}
+#t17_12{left:305px;top:637px;}
+#t18_12{left:276px;top:669px;}
+#t19_12{left:208px;top:695px;}
+#t1a_12{left:202px;top:768px;}
+#t1b_12{left:166px;top:712px;letter-spacing:1px;}
+#t1c_12{left:281px;top:731px;}
+#t1d_12{left:74px;top:23px;}
+#t1e_12{left:74px;top:44px;}
+#t1f_12{left:74px;top:71px;}
+#t1g_12{left:25px;top:100px;}
+#t1h_12{left:71px;top:100px;}
+#t1i_12{left:25px;top:117px;}
+#t1j_12{left:634px;top:145px;}
+#t1k_12{left:891px;top:20px;letter-spacing:1px;}
+#t1l_12{left:876px;top:31px;letter-spacing:1px;}
+#t1m_12{left:1056px;top:26px;letter-spacing:3px;}
+#t1n_12{left:724px;top:45px;}
+#t1o_12{left:724px;top:56px;}
+#t1p_12{left:724px;top:72px;}
+#t1q_12{left:724px;top:83px;}
+#t1r_12{left:809px;top:83px;}
+#t1s_12{left:724px;top:104px;}
+#t1t_12{left:1263px;top:66px;}
+#t1u_12{left:1259px;top:86px;}
+#t1v_12{left:1278px;top:106px;}
+#t1w_12{left:1310px;top:48px;letter-spacing:25px;}
+#t1x_12{left:344px;top:23px;}
+#t1y_12{left:344px;top:87px;}
+#t1z_12{left:360px;top:91px;}
+
+.s12_12{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(255,255,255);
+}
+
+.s16_12{
+	FONT-SIZE: 42px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(63,63,64);
+}
+
+.s20_12{
+	FONT-SIZE: 97px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(35,31,32);
+}
+
+.s14_12{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-MyriadPro-Bold12;
+	color: rgb(255,255,255);
+}
+
+.s10_12{
+	FONT-SIZE: 59px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black12;
+	color: rgb(35,31,32);
+}
+
+.s4_12{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(35,31,32);
+}
+
+.s8_12{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: Helvetica, Arial, sans-serif;
+	color: rgb(35,31,32);
+}
+
+.s19_12{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Regular12;
+	color: rgb(35,31,32);
+}
+
+.s22_12{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(35,31,32);
+}
+
+.s13_12{
+	FONT-SIZE: 30px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(63,63,64);
+}
+
+.s1_12{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(35,31,32);
+}
+
+.s2_12{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(35,31,32);
+}
+
+.s15_12{
+	FONT-SIZE: 36px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(63,63,64);
+}
+
+.s21_12{
+	FONT-SIZE: 103px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(35,31,32);
+}
+
+.s17_12{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: UNCHNP-Helvetica-Condensed12;
+	color: rgb(63,63,64);
+}
+
+.s9_12{
+	FONT-SIZE: 71px;
+	FONT-FAMILY: CenturyGothic-Bold;
+	color: rgb(35,31,32);
+	FONT-WEIGHT: bold;
+}
+
+.s11_12{
+	FONT-SIZE: 65px;
+	FONT-FAMILY: WCGQLA-MyriadPro-Black12;
+	color: rgb(0,137,208);
+}
+
+.s18_12{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(63,63,64);
+}
+
+.s5_12{
+	FONT-SIZE: 55px;
+	FONT-FAMILY: MAIIBU-Vrinda12;
+	color: rgb(35,31,32);
+}
+
+.s3_12{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(35,31,32);
+}
+
+.s6_12{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: MAIIBU-Vrinda12;
+	color: rgb(35,31,32);
+}
+
+.s7_12{
+	FONT-SIZE: 48px;
+	FONT-FAMILY: EKFPXV-Helvetica-Condensed-Bo12;
+	color: rgb(255,255,255);
+}
+
+.v1_12{
+-webkit-transform: scale(0.25, 0,30);
+-ms-transform: scale(0.25, 0,30);
+-moz-transform: scale(0.25, 0,30);
+-o-transform: scale(0.25, 0,30);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts12" type="text/css" >
+
+@font-face {
+	font-family: EKFPXV-Helvetica-Condensed-Bo12;
+	src :url("12/fonts/EKFPXV-Helvetica-Condensed-Bo.woff") format("woff");
+}
+
+@font-face {
+	font-family: MAIIBU-Vrinda12;
+	src :url("12/fonts/MAIIBU-Vrinda.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Black12;
+	src :url("12/fonts/WCGQLA-MyriadPro-Black.woff") format("woff");
+}
+
+@font-face {
+	font-family: EKFPXV-MyriadPro-Bold12;
+	src :url("12/fonts/EKFPXV-MyriadPro-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: UNCHNP-Helvetica-Condensed12;
+	src :url("12/fonts/UNCHNP-Helvetica-Condensed.woff") format("woff");
+}
+
+@font-face {
+	font-family: WCGQLA-MyriadPro-Regular12;
+	src :url("12/fonts/WCGQLA-MyriadPro-Regular.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_12" class="t s1_12">Firma </div>
+<div id="t2_12" class="t s1_12">Presidente</div>
+<div id="t3_12" class="t s2_12">Nombre Apellido</div>
+<div id="t4_12" class="t s3_12">D.N.I.</div>
+<div id="t5_12" class="t s1_12">Firma </div>
+<div id="t6_12" class="t s1_12">Suplente</div>
+<div id="t7_12" class="t s2_12">Nombre Apellido</div>
+<div id="t8_12" class="t s3_12">D.N.I.</div>
+<div id="t9_12" class="t s4_12">* SR. PRESIDENTE: LA SUMA DE LOS TOTALES POR COLUMNA DEBE COINCIDIR CON LA CANTIDAD DE SOBRES UTILIZADOS QUE SE EXTRAJERON DE LA URNA.</div>
+<div id="ta_12" class="t s1_12">Firma </div>
+<div id="tb_12" class="t s1_12">Fiscal</div>
+<div id="tc_12" class="t s2_12">Nombre Apellido</div>
+<div id="td_12" class="t s3_12">D.N.I.</div>
+<div id="te_12" class="t s1_12">Firma </div>
+<div id="tf_12" class="t s1_12">Fiscal</div>
+<div id="tg_12" class="t s2_12">Nombre Apellido</div>
+<div id="th_12" class="t s3_12">D.N.I.</div>
+<div id="ti_12" class="t s1_12">Firma </div>
+<div id="tj_12" class="t s1_12">Fiscal</div>
+<div id="tk_12" class="t s2_12">Nombre Apellido</div>
+<div id="tl_12" class="t s3_12">D.N.I.</div>
+<div id="tm_12" class="t s1_12">Firma </div>
+<div id="tn_12" class="t s1_12">Fiscal</div>
+<div id="to_12" class="t s2_12">Nombre Apellido</div>
+<div id="tp_12" class="t s3_12">D.N.I.</div>
+<div id="tq_12" class="t s5_12">NÚMERO</div>
+<div id="tr_12" class="t s5_12">PARTIDO POLÍTICO O ALIANZA</div>
+<div id="ts_12" class="t s5_12">CATEGORÍA</div>
+<div id="tt_12" class="t s5_12">CATEGORÍA</div>
+<div id="tu_12" class="t s5_12">CATEGORÍA</div>
+<div id="tv_12" class="t s5_12">CATEGORÍA</div>
+<div id="tw_12" class="t s5_12">CATEGORÍA</div>
+<div id="tx_12" class="t s6_12">en números</div>
+<div id="ty_12" class="t s6_12">en letras</div>
+<div id="tz_12" class="t s6_12">en números</div>
+<div id="t10_12" class="t s6_12">en letras</div>
+<div id="t11_12" class="t s6_12">en números</div>
+<div id="t12_12" class="t s6_12">en letras</div>
+<div id="t13_12" class="t s6_12">en números</div>
+<div id="t14_12" class="t s6_12">en letras</div>
+<div id="t15_12" class="t s6_12">en números</div>
+<div id="t16_12" class="t s6_12">en letras</div>
+<div id="t17_12" class="t s5_12">VOTOS NULOS</div>
+<div id="t18_12" class="t s5_12">VOTOS RECURRIDOS</div>
+<div id="t19_12" class="t s5_12">VOTOS DE IDENTIDAD IMPUGNADA</div>
+<div id="t1a_12" class="t s7_12">TOTAL DE VOTOS POR COLUMNA*</div>
+<div id="t1b_12" class="t v1_12 s8_12">(en todas las columnas debe asentar la misma cantidad)</div>
+<div id="t1c_12" class="t s5_12">VOTOS EN BLANCO</div>
+<div id="t1d_12" class="t s9_12">ELECCIONES NACIONALES</div>
+<div id="t1e_12" class="t s10_12">25 de octubre de 2015</div>
+<div id="t1f_12" class="t s11_12">ACTA DE ESCRUTINIO DE MESA</div>
+<div id="t1g_12" class="t v1_12 s12_12">CERTIFICO: </div>
+<div id="t1h_12" class="t v1_12 s13_12">en mi carácter de presidente de mesa, de acuerdo con lo establecido en los arts. </div>
+<div id="t1i_12" class="t v1_12 s13_12">102 y 102 bis del Código Electoral Nacional, que el escrutinio arrojó los siguientes resultados:</div>
+<div id="t1j_12" class="t s14_12">NO INTRODUCIR EN LA URNA. INTRODUCIR EN EL SOBRE DE DEVOLUCION DE ACTA, JUNTO CON EL PADRÓN UTILIZADO Y LOS VOTOS RECURRIDOS E IMPUGNADOS</div>
+<div id="t1k_12" class="t s15_12">EN</div>
+<div id="t1l_12" class="t s15_12">NÚMEROS</div>
+<div id="t1m_12" class="t s16_12">EN LETRAS</div>
+<div id="t1n_12" class="t s17_12">Cantidad de ciudadanos que </div>
+<div id="t1o_12" class="t s17_12">votaron (según el padrón)</div>
+<div id="t1p_12" class="t s17_12">Cantidad de sobres utilizados</div>
+<div id="t1q_12" class="t s17_12">extraídos de la urna </div>
+<div id="t1r_12" class="t s18_12">*</div>
+<div id="t1s_12" class="t s17_12">Diferencia entre las anteriores</div>
+<div id="t1t_12" class="t s3_12">SECCIÓN:</div>
+<div id="t1u_12" class="t s3_12">CIRCUITO:</div>
+<div id="t1v_12" class="t s3_12">MESA:</div>
+<div id="t1w_12" class="t s19_12">*010010000101*</div>
+<div id="t1x_12" class="t s20_12">Justicia Nacional Electoral</div>
+<div id="t1y_12" class="t s21_12">D</div>
+<div id="t1z_12" class="t s22_12">ISTRITO:</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg12Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg12"><object width="1540" height="935" data="12/12.svg" type="image/svg+xml" id="pdf12" style="width:1540px; height:935px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld12" type="text/javascript">
+
+var isIE = false;
+var f12 = [['t3_12',264],['t7_12',264],['t9_12',2203],['tc_12',264],['tg_12',264],['tk_12',264],['to_12',264],['tr_12',583],['tx_12',182],['ty_12',136],['tz_12',182],['t10_12',136],['t11_12',182],['t12_12',136],['t13_12',182],['t14_12',136],['t15_12',182],['t16_12',136],['t17_12',276],['t18_12',395],['t19_12',665],['t1a_12',689],['t1b_12',833],['t1c_12',375],['t1d_12',897],['t1e_12',601],['t1f_12',925],['t1h_12',948],['t1i_12',1110],['t1j_12',3521],['t1m_12',221],['t1n_12',465],['t1o_12',430],['t1p_12',485],['t1q_12',327],['t1s_12',496],['t1x_12',1064]];
+function load12(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f12);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 72;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_12");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

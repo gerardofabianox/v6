@@ -1,0 +1,253 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:128px;}
+#t2_1{left:331px;top:147px;}
+#t3_1{left:418px;top:215px;}
+#t4_1{left:101px;top:241px;}
+#t5_1{left:101px;top:258px;}
+#t6_1{left:101px;top:276px;}
+#t7_1{left:101px;top:300px;}
+#t8_1{left:364px;top:332px;}
+#t9_1{left:101px;top:364px;}
+#ta_1{left:230px;top:364px;}
+#tb_1{left:101px;top:381px;}
+#tc_1{left:101px;top:399px;}
+#td_1{left:101px;top:430px;}
+#te_1{left:232px;top:430px;}
+#tf_1{left:101px;top:448px;}
+#tg_1{left:101px;top:465px;}
+#th_1{left:101px;top:497px;}
+#ti_1{left:231px;top:497px;}
+#tj_1{left:101px;top:514px;}
+#tk_1{left:101px;top:532px;}
+#tl_1{left:101px;top:549px;}
+#tm_1{left:101px;top:581px;}
+#tn_1{left:101px;top:598px;}
+#to_1{left:101px;top:630px;}
+#tp_1{left:232px;top:630px;}
+#tq_1{left:101px;top:647px;}
+#tr_1{left:101px;top:665px;}
+#ts_1{left:101px;top:697px;}
+#tt_1{left:240px;top:697px;}
+#tu_1{left:101px;top:714px;}
+#tv_1{left:101px;top:731px;}
+#tw_1{left:101px;top:763px;}
+#tx_1{left:235px;top:763px;}
+#ty_1{left:101px;top:781px;}
+#tz_1{left:101px;top:798px;}
+#t10_1{left:101px;top:830px;}
+#t11_1{left:235px;top:830px;}
+#t12_1{left:101px;top:847px;}
+#t13_1{left:101px;top:865px;}
+#t14_1{left:101px;top:896px;}
+#t15_1{left:229px;top:896px;}
+#t16_1{left:101px;top:928px;}
+#t17_1{left:229px;top:928px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Ley 20.907 </div>
+<div id="t4_1" class="t s3_1">Sancionada: Septiembre 30 de 1974. </div>
+<div id="t5_1" class="t s3_1">Promulgada de hecho: Octubre 22 de 1974. </div>
+<div id="t6_1" class="t s3_1">Publicada: B.O. 26/11/1974</div>
+<div id="t7_1" class="t s4_1">PARTIDOS POLÍTICOS </div>
+<div id="t8_1" class="t s4_1">Inscripción de Inmuebles </div>
+<div id="t9_1" class="t s4_1">ARTÍCULO 1° –</div>
+<div id="ta_1" class="t s3_1">Los partidos políticos reconocidos podrán obtener la inscripción a su nombre de los </div>
+<div id="tb_1" class="t s3_1">inmuebles adquiridos para ellos y cuyo dominio figure inscrito a nombre de otras personas en el </div>
+<div id="tc_1" class="t s3_1">Registro de la Propiedad. </div>
+<div id="td_1" class="t s4_1">ARTÍCULO 2° –</div>
+<div id="te_1" class="t s3_1">La acción debe ser promovida por quien ejerza la representación legal del partido </div>
+<div id="tf_1" class="t s3_1">político ante el Juzgado Nacional Electoral con jurisdicción en el lugar donde se encuentre el </div>
+<div id="tg_1" class="t s3_1">inmueble. </div>
+<div id="th_1" class="t s4_1">ARTÍCULO 3° –</div>
+<div id="ti_1" class="t s3_1">El escrito de demanda se presentará con el certificado de dominio expedido por el </div>
+<div id="tj_1" class="t s3_1">Registro de la Propiedad, el consentimiento de las personas a cuyo nombre figure inscripto el </div>
+<div id="tk_1" class="t s3_1">dominio del inmueble, los antecedentes que hagan al derecho invocado y el ofrecimiento de las </div>
+<div id="tl_1" class="t s3_1">pruebas para acreditarlo en forma sumaria. </div>
+<div id="tm_1" class="t s3_1">El Juzgado ordenará publicar edictos por el término de diez días, citando por treinta días corridos a </div>
+<div id="tn_1" class="t s3_1">quienes se opongan a la acción promovida por el partido político. </div>
+<div id="to_1" class="t s4_1">ARTÍCULO 4° – </div>
+<div id="tp_1" class="t s3_1">Vencido el término de citación sin que se articule oposición, el Juzgado declarará </div>
+<div id="tq_1" class="t s3_1">procedente la inscripción del dominio a nombre de partido político en el Registro de la Propiedad, </div>
+<div id="tr_1" class="t s3_1">previa protocolización de las actuaciones por ante escribano público. </div>
+<div id="ts_1" class="t s4_1">ARTÍCULO 5° –</div>
+<div id="tt_1" class="t s3_1">Cuando se formule oposición, se sustanciará por el trámite de los incidentes </div>
+<div id="tu_1" class="t s3_1">previsto por el Código Procesal Civil y Comercial de la Nación. La sentencia será apelable ante la </div>
+<div id="tv_1" class="t s3_1">Cámara Nacional Electoral. </div>
+<div id="tw_1" class="t s4_1">ARTÍCULO 6° –</div>
+<div id="tx_1" class="t s3_1">Las personas que resulten afectadas por la sentencia que declare procedente la </div>
+<div id="ty_1" class="t s3_1">inscripción, podrán iniciar acción contra el partido político que resulte nuevo titular del dominio, </div>
+<div id="tz_1" class="t s3_1">dentro del término de un año de efectuada la inscripción. </div>
+<div id="t10_1" class="t s4_1">ARTÍCULO 7° –</div>
+<div id="t11_1" class="t s3_1">Las actuaciones que se realicen con motivo de la aplicación de esta ley estarán </div>
+<div id="t12_1" class="t s3_1">exentas del pago de la tasa de justicia y se harán sin cargo las publicaciones en el Boletín Oficial, las </div>
+<div id="t13_1" class="t s3_1">inscripciones en el Registro de la Propiedad y todo otro trámite administrativo. </div>
+<div id="t14_1" class="t s4_1">ARTÍCULO 8° –</div>
+<div id="t15_1" class="t s3_1">Quedan derogadas todas las disposiciones que se opongan a la presente ley. </div>
+<div id="t16_1" class="t s4_1">ARTÍCULO 9° –</div>
+<div id="t17_1" class="t s3_1">Comuníquese al Poder Ejecutivo.</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1095],['t3_1',392],['t4_1',1083],['t5_1',1273],['t6_1',811],['t7_1',721],['t8_1',827],['t9_1',493],['ta_1',2419],['tb_1',2933],['tc_1',726],['td_1',498],['te_1',2411],['tf_1',2933],['th_1',496],['ti_1',2413],['tj_1',2934],['tk_1',2933],['tl_1',1263],['tm_1',2933],['tn_1',1886],['to_1',501],['tp_1',2407],['tq_1',2933],['tr_1',1986],['ts_1',521],['tt_1',2376],['tu_1',2934],['tv_1',779],['tw_1',507],['tx_1',2396],['ty_1',2933],['tz_1',1659],['t10_1',506],['t11_1',2398],['t12_1',2934],['t13_1',2282],['t14_1',490],['t15_1',2225],['t16_1',490],['t17_1',951]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 44;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

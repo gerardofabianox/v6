@@ -1,0 +1,244 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load7();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:333px;top:128px;}
+#t2_7{left:331px;top:147px;}
+#t3_7{left:101px;top:207px;}
+#t4_7{left:101px;top:225px;}
+#t5_7{left:101px;top:257px;}
+#t6_7{left:101px;top:274px;}
+#t7_7{left:101px;top:306px;}
+#t8_7{left:101px;top:323px;}
+#t9_7{left:101px;top:355px;}
+#ta_7{left:101px;top:372px;}
+#tb_7{left:101px;top:404px;}
+#tc_7{left:101px;top:421px;}
+#td_7{left:101px;top:439px;}
+#te_7{left:101px;top:471px;}
+#tf_7{left:101px;top:488px;}
+#tg_7{left:101px;top:505px;}
+#th_7{left:101px;top:523px;}
+#ti_7{left:101px;top:540px;}
+#tj_7{left:101px;top:572px;}
+#tk_7{left:101px;top:589px;}
+#tl_7{left:101px;top:607px;}
+#tm_7{left:101px;top:624px;}
+#tn_7{left:101px;top:656px;}
+#to_7{left:101px;top:673px;}
+#tp_7{left:101px;top:691px;}
+#tq_7{left:101px;top:723px;}
+#tr_7{left:101px;top:740px;}
+#ts_7{left:101px;top:772px;}
+#tt_7{left:101px;top:789px;}
+#tu_7{left:101px;top:807px;}
+#tv_7{left:101px;top:838px;}
+#tw_7{left:101px;top:856px;}
+#tx_7{left:101px;top:873px;}
+#ty_7{left:101px;top:891px;}
+#tz_7{left:101px;top:922px;}
+#t10_7{left:101px;top:940px;}
+#t11_7{left:101px;top:971px;}
+#t12_7{left:123px;top:971px;}
+#t13_7{left:101px;top:1003px;}
+#t14_7{left:101px;top:1021px;}
+#t15_7{left:101px;top:1038px;}
+#t16_7{left:101px;top:1055px;}
+
+.s3_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_7{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_7{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_7" class="t s1_7">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_7" class="t s1_7">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_7" class="t s2_7">Registro Nacional de Electores la imagen escaneada de esos documentos. Ello, hasta tanto la </div>
+<div id="t4_7" class="t s2_7">incorporación de nuevas tecnologías permita la transmisión de dichas imágenes a las secretarías.- </div>
+<div id="t5_7" class="t s2_7">Las referidas imágenes serán oportunamente ingresadas al sistema a fin de que se encuentren a </div>
+<div id="t6_7" class="t s2_7">disposición de los Juzgados Federales con competencia electoral en el período de reclamos.- </div>
+<div id="t7_7" class="t s2_7">5) La secretaría electoral del domicilio del elector controlará la calidad de la información y la cargará </div>
+<div id="t8_7" class="t s2_7">en la base de datos.- </div>
+<div id="t9_7" class="t s2_7">Cuando se comunique un cambio de domicilio a un distrito diferente del que figura en el Registro </div>
+<div id="ta_7" class="t s2_7">Nacional de Electores, la secretaría actuante será la del nuevo domicilio.- </div>
+<div id="tb_7" class="t s2_7">Los cambios comunicados por el ReNaPer mediante archivos de datos planos se transmitirán a </div>
+<div id="tc_7" class="t s2_7">ambas secretarías en ese formato y se pondrá a su disposición la imagen escaneada del "Formulario </div>
+<div id="td_7" class="t s2_7">Único”.- </div>
+<div id="te_7" class="t s2_7">En cuanto a los cambios de domicilio enviados en soporte papel sin archivos de datos planos serán </div>
+<div id="tf_7" class="t s2_7">transmitidos a la secretaría de alta, mediante el "Formulario Único" en soporte papel. Esta solicitará </div>
+<div id="tg_7" class="t s2_7">la baja al distrito correspondiente, a cuyo fin podrá remitir vía fax o por Intranet la imagen del </div>
+<div id="th_7" class="t s2_7">formulario. Ello, hasta tanto la carga en el sistema de las imágenes digitales de los formularios </div>
+<div id="ti_7" class="t s2_7">pueda realizarse en forma simultánea a la remisión del soporte papel.- </div>
+<div id="tj_7" class="t s2_7">Si el cambio de distrito corresponde a un ciudadano registrado electoralmente bajo el sistema </div>
+<div id="tk_7" class="t s2_7">anterior, la secretaría de origen deberá remitir la ficha original a la del nuevo domicilio. Ello, hasta </div>
+<div id="tl_7" class="t s2_7">tanto se instale el nuevo programa informático en todas las secretarías y éstas cuenten con </div>
+<div id="tm_7" class="t s2_7">escáners que permitan la digitalización de dichas fichas.- </div>
+<div id="tn_7" class="t s2_7">6) Si la información cuenta con archivo de datos, las secretarías imprimirán los listados de </div>
+<div id="to_7" class="t s2_7">novedades y -en los trámites que lo requieran- procederán, ante todo, a consignar la sección y el </div>
+<div id="tp_7" class="t s2_7">circuito del domicilio del elector.- </div>
+<div id="tq_7" class="t s2_7">Los listados de novedades, con los circuitos consignados –en caso de corresponder- serán utilizados </div>
+<div id="tr_7" class="t s2_7">para efectuar el control y la carga de datos al subregistro del distrito.- </div>
+<div id="ts_7" class="t s2_7">Si la información fue recibida en papel o en imagen escaneada, se consignarán la sección y el </div>
+<div id="tt_7" class="t s2_7">circuito y luego se remitirá al área de control y carga de datos, para que -en su caso- los datos sean </div>
+<div id="tu_7" class="t s2_7">incorporados al sistema.- </div>
+<div id="tv_7" class="t s2_7">7) En ejercicio del control de calidad de la información las secretarias electorales recurrirán a </div>
+<div id="tw_7" class="t s2_7">verificaciones internas y también a fuentes externas de información y, cuando corresponda, estarán </div>
+<div id="tx_7" class="t s2_7">facultadas a corregir errores detectados en las novedades informadas por el ReNaPer (art. 17, 2° </div>
+<div id="ty_7" class="t s2_7">párr., del Código Electoral Nacional).- </div>
+<div id="tz_7" class="t s2_7">8) Una vez que la información haya sido controlada las secretarias electorales cargarán la novedad, </div>
+<div id="t10_7" class="t s2_7">con la corrección que -en su caso- fuera necesaria.- </div>
+<div id="t11_7" class="t s2_7">II. </div>
+<div id="t12_7" class="t s3_7">Actualización de profesión</div>
+<div id="t13_7" class="t s2_7">El Registro Nacional de Electores recabará informes de entidades que cuenten con datos relativos a </div>
+<div id="t14_7" class="t s2_7">la profesión u ocupación de los ciudadanos (vgr. colegios profesionales, universidades, etc.) y los </div>
+<div id="t15_7" class="t s2_7">comunicará a las Secretarias Electorales, para la actualización del subregistro de electores de su </div>
+<div id="t16_7" class="t s2_7">distrito.- </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7"><object width="935" height="1210" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld7" type="text/javascript">
+
+var isIE = false;
+var f7 = [['t1_7',1076],['t2_7',1095],['t3_7',2934],['t4_7',2848],['t5_7',2934],['t6_7',2673],['t7_7',2934],['t8_7',612],['t9_7',2933],['ta_7',2124],['tb_7',2933],['tc_7',2933],['te_7',2934],['tf_7',2933],['tg_7',2933],['th_7',2934],['ti_7',2052],['tj_7',2933],['tk_7',2934],['tl_7',2934],['tm_7',1652],['tn_7',2934],['to_7',2934],['tp_7',959],['tq_7',2933],['tr_7',2040],['ts_7',2934],['tt_7',2933],['tu_7',732],['tv_7',2934],['tw_7',2934],['tx_7',2933],['ty_7',1092],['tz_7',2934],['t10_7',1506],['t12_7',855],['t13_7',2933],['t14_7',2934],['t15_7',2934]];
+function load7(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f7);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 43;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_7");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

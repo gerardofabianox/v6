@@ -1,0 +1,265 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load49();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_49{left:333px;top:108px;}
+#t2_49{left:331px;top:128px;}
+#t3_49{left:101px;top:191px;}
+#t4_49{left:101px;top:208px;}
+#t5_49{left:101px;top:246px;}
+#t6_49{left:249px;top:246px;}
+#t7_49{left:101px;top:263px;}
+#t8_49{left:216px;top:263px;}
+#t9_49{left:101px;top:281px;}
+#ta_49{left:101px;top:298px;}
+#tb_49{left:101px;top:336px;}
+#tc_49{left:101px;top:373px;}
+#td_49{left:101px;top:391px;}
+#te_49{left:101px;top:408px;}
+#tf_49{left:101px;top:446px;}
+#tg_49{left:281px;top:446px;}
+#th_49{left:538px;top:446px;}
+#ti_49{left:101px;top:463px;}
+#tj_49{left:101px;top:501px;}
+#tk_49{left:101px;top:518px;}
+#tl_49{left:101px;top:556px;}
+#tm_49{left:101px;top:573px;}
+#tn_49{left:101px;top:611px;}
+#to_49{left:101px;top:629px;}
+#tp_49{left:101px;top:646px;}
+#tq_49{left:101px;top:684px;}
+#tr_49{left:101px;top:701px;}
+#ts_49{left:101px;top:739px;}
+#tt_49{left:101px;top:756px;}
+#tu_49{left:101px;top:774px;}
+#tv_49{left:101px;top:811px;}
+#tw_49{left:101px;top:829px;}
+#tx_49{left:101px;top:866px;}
+#ty_49{left:296px;top:866px;}
+#tz_49{left:570px;top:866px;}
+#t10_49{left:101px;top:884px;}
+#t11_49{left:101px;top:901px;}
+#t12_49{left:101px;top:919px;}
+#t13_49{left:101px;top:936px;}
+#t14_49{left:101px;top:954px;}
+#t15_49{left:101px;top:991px;}
+#t16_49{left:287px;top:991px;}
+#t17_49{left:375px;top:991px;}
+#t18_49{left:101px;top:1009px;}
+#t19_49{left:101px;top:1046px;}
+#t1a_49{left:290px;top:1046px;}
+#t1b_49{left:401px;top:1046px;}
+#t1c_49{left:101px;top:1064px;}
+#t1d_49{left:101px;top:1081px;}
+
+.s3_49{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_49{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_49{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_49{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_49" class="t s1_49">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_49" class="t s1_49">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_49" class="t s2_49">b) El resto de parlamentarios serán elegidos en forma directa por el pueblo de la Nación, por distrito </div>
+<div id="t4_49" class="t s2_49">nacional, a cuyo fin el territorio nacional constituye un distrito único. </div>
+<div id="t5_49" class="t s3_49">Artículo 164 ter:</div>
+<div id="t6_49" class="t s4_49">Postulación por distritos regionales provinciales y de la Ciudad Autónoma de </div>
+<div id="t7_49" class="t s4_49">Buenos Aires. </div>
+<div id="t8_49" class="t s2_49">Podrán postular candidatos a parlamentarios del Mercosur por distrito regional </div>
+<div id="t9_49" class="t s2_49">provincial y de la Ciudad Autónoma de Buenos Aires, las agrupaciones políticas de distrito </div>
+<div id="ta_49" class="t s2_49">correspondientes. </div>
+<div id="tb_49" class="t s2_49">Cada elector votará por una sola lista oficializada de un único candidato con dos suplentes. </div>
+<div id="tc_49" class="t s2_49">Resultará electo parlamentario del Mercosur por distrito regional provincial o en su caso de la Ciudad </div>
+<div id="td_49" class="t s2_49">Autónoma de Buenos Aires, el candidato de la agrupación política, que obtuviere la mayoría de los </div>
+<div id="te_49" class="t s2_49">votos emitidos en el respectivo distrito. </div>
+<div id="tf_49" class="t s3_49">Artículo 164 quáter: </div>
+<div id="tg_49" class="t s4_49">Postulación por distrito nacional. </div>
+<div id="th_49" class="t s2_49">Podrán postular listas de candidatos a </div>
+<div id="ti_49" class="t s2_49">parlamentarios del Mercosur por distrito nacional, las agrupaciones políticas de orden nacional. </div>
+<div id="tj_49" class="t s2_49">Cada elector votará por una sola lista oficializada, de candidatos titulares cuyo número será igual al </div>
+<div id="tk_49" class="t s2_49">de los cargos a cubrir e igual número de candidatos suplentes. </div>
+<div id="tl_49" class="t s2_49">Los cargos a cubrir se asignarán conforme al orden establecido por cada lista y con arreglo al </div>
+<div id="tm_49" class="t s2_49">siguiente procedimiento: </div>
+<div id="tn_49" class="t s2_49">a. El total de votos obtenidos por cada lista que haya alcanzado como mínimo el tres por ciento </div>
+<div id="to_49" class="t s2_49">(3%) del padrón electoral nacional será dividido por uno (1), por dos (2), por tres (3) y así </div>
+<div id="tp_49" class="t s2_49">sucesivamente hasta llegar al número igual al de los cargos a cubrir; </div>
+<div id="tq_49" class="t s2_49">b. Los cocientes resultantes, con independencia de la lista de que provengan, serán ordenados de </div>
+<div id="tr_49" class="t s2_49">mayor a menor en un número igual al de los cargos a cubrir;</div>
+<div id="ts_49" class="t s2_49">c. Si hubiera dos o más cocientes iguales se los ordenará en relación directa con el total de los votos </div>
+<div id="tt_49" class="t s2_49">obtenidos por las respectivas listas y si éstos hubieren logrado igual número de votos el </div>
+<div id="tu_49" class="t s2_49">ordenamiento resultará de un sorteo que a tal fin deberá practicar la Cámara Electoral Nacional;</div>
+<div id="tv_49" class="t s2_49">d. A cada lista le corresponderán tantos cargos como veces sus cocientes figuren en el ordenamiento </div>
+<div id="tw_49" class="t s2_49">indicado en el inciso b). </div>
+<div id="tx_49" class="t s3_49">Artículo 164 quinquies: </div>
+<div id="ty_49" class="t s4_49">Presentación de modelos de boletas. </div>
+<div id="tz_49" class="t s2_49">Para la categoría parlamentarios del </div>
+<div id="t10_49" class="t s2_49">Mercosur se presentarán dos secciones de boletas: una correspondiente a la elección de </div>
+<div id="t11_49" class="t s2_49">parlamentarios del Mercosur por distrito nacional, ante la Junta Electoral Nacional de la Capital </div>
+<div id="t12_49" class="t s2_49">Federal; y otra correspondiente a la elección de parlamentarios del Mercosur por distritos regionales </div>
+<div id="t13_49" class="t s2_49">provinciales y de la Ciudad Autónoma de Buenos Aires, ante las juntas electorales nacionales de los </div>
+<div id="t14_49" class="t s2_49">respectivos distritos. </div>
+<div id="t15_49" class="t s3_49">Artículo 164 sexies: </div>
+<div id="t16_49" class="t s4_49">Escrutinio. </div>
+<div id="t17_49" class="t s2_49">El escrutinio se practicará por lista oficializada por cada </div>
+<div id="t18_49" class="t s2_49">agrupación, sin tomar en cuenta las tachas o sustituciones que hubiere efectuado el votante. </div>
+<div id="t19_49" class="t s3_49">Artículo 164 septies: </div>
+<div id="t1a_49" class="t s4_49">Proclamación. </div>
+<div id="t1b_49" class="t s2_49">Se proclamarán parlamentarios del Mercosur a quienes </div>
+<div id="t1c_49" class="t s2_49">resulten elegidos con arreglo al sistema mixto descripto precedentemente. Serán suplentes de cada </div>
+<div id="t1d_49" class="t s2_49">lista, los titulares no electos y los suplentes que la integraron, según el orden en que figuraban. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg49Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg49"><object width="935" height="1210" data="49/49.svg" type="image/svg+xml" id="pdf49" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld49" type="text/javascript">
+
+var isIE = false;
+var f49 = [['t1_49',1076],['t2_49',1096],['t3_49',2933],['t4_49',1992],['t5_49',557],['t6_49',2342],['t7_49',418],['t8_49',2472],['t9_49',2933],['tb_49',2639],['tc_49',2934],['td_49',2934],['te_49',1142],['tf_49',683],['tg_49',992],['th_49',1183],['ti_49',2755],['tj_49',2934],['tk_49',1815],['tl_49',2933],['tm_49',718],['tn_49',2934],['to_49',2934],['tp_49',1999],['tq_49',2933],['tr_49',1770],['ts_49',2934],['tt_49',2933],['tu_49',2796],['tv_49',2934],['tw_49',685],['tx_49',759],['ty_49',1071],['tz_49',1058],['t10_49',2933],['t11_49',2933],['t12_49',2934],['t13_49',2933],['t14_49',599],['t15_49',697],['t17_49',1836],['t18_49',2697],['t19_49',714],['t1b_49',1732],['t1c_49',2934],['t1d_49',2781]];
+function load49(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f49);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 50;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_49");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

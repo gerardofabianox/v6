@@ -1,0 +1,261 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:333px;top:128px;}
+#t2_4{left:331px;top:147px;}
+#t3_4{left:101px;top:211px;}
+#t4_4{left:101px;top:228px;}
+#t5_4{left:101px;top:246px;}
+#t6_4{left:101px;top:278px;}
+#t7_4{left:101px;top:295px;}
+#t8_4{left:101px;top:312px;}
+#t9_4{left:101px;top:344px;}
+#ta_4{left:101px;top:362px;}
+#tb_4{left:101px;top:379px;}
+#tc_4{left:101px;top:396px;}
+#td_4{left:101px;top:428px;}
+#te_4{left:101px;top:445px;}
+#tf_4{left:101px;top:463px;}
+#tg_4{left:722px;top:463px;}
+#th_4{left:101px;top:480px;}
+#ti_4{left:101px;top:512px;}
+#tj_4{left:101px;top:544px;}
+#tk_4{left:226px;top:544px;}
+#tl_4{left:101px;top:561px;}
+#tm_4{left:101px;top:579px;}
+#tn_4{left:101px;top:596px;}
+#to_4{left:101px;top:628px;}
+#tp_4{left:101px;top:660px;}
+#tq_4{left:101px;top:677px;}
+#tr_4{left:101px;top:694px;}
+#ts_4{left:101px;top:712px;}
+#tt_4{left:101px;top:744px;}
+#tu_4{left:101px;top:775px;}
+#tv_4{left:229px;top:775px;}
+#tw_4{left:101px;top:793px;}
+#tx_4{left:101px;top:824px;}
+#ty_4{left:222px;top:824px;}
+#tz_4{left:101px;top:842px;}
+#t10_4{left:101px;top:859px;}
+#t11_4{left:101px;top:877px;}
+#t12_4{left:101px;top:894px;}
+#t13_4{left:101px;top:926px;}
+#t14_4{left:101px;top:943px;}
+#t15_4{left:420px;top:975px;}
+#t16_4{left:400px;top:1007px;}
+#t17_4{left:101px;top:1038px;}
+#t18_4{left:222px;top:1038px;}
+#t19_4{left:101px;top:1056px;}
+#t1a_4{left:101px;top:1073px;}
+#t1b_4{left:101px;top:1091px;}
+
+.s4_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s2_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s1_4{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_4" class="t s1_4">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_4" class="t s2_4">Dentro de las cuarenta y ocho (48) horas de presentadas las solicitudes de oficialización la junta </div>
+<div id="t4_4" class="t s2_4">electoral partidaria dictará resolución fundada acerca de su admisión o rechazo, y deberá notificarla </div>
+<div id="t5_4" class="t s2_4">a las listas presentadas dentro de las veinticuatro (24) horas. </div>
+<div id="t6_4" class="t s2_4">Cualquiera de las listas podrá solicitar la revocatoria de la resolución, la que deberá presentarse por </div>
+<div id="t7_4" class="t s2_4">escrito y fundada ante la junta electoral dentro de las veinticuatro (24) horas de serle notificada. La </div>
+<div id="t8_4" class="t s2_4">junta electoral deberá expedirse dentro de las veinticuatro (24) horas de su presentación. </div>
+<div id="t9_4" class="t s2_4">La solicitud de revocatoria podrá acompañarse del de apelación subsidiaria en base a los mismos </div>
+<div id="ta_4" class="t s2_4">fundamentos. Ante el rechazo de la revocatoria planteada la junta electoral elevará el expediente sin </div>
+<div id="tb_4" class="t s2_4">más al juzgado federal con competencia electoral del distrito correspondiente dentro de las </div>
+<div id="tc_4" class="t s2_4">veinticuatro (24) horas del dictado de la resolución confirmatoria. </div>
+<div id="td_4" class="t s2_4">Todas las notificaciones de las juntas electorales partidarias pueden hacerse indistintamente: en </div>
+<div id="te_4" class="t s2_4">forma personal ante ella, por acta notarial, por telegrama con copia certificada y aviso de entrega, </div>
+<div id="tf_4" class="t s2_4">por carta documento con aviso de entrega, o por publicación en el sitio web</div>
+<div id="tg_4" class="t s2_4">oficial de cada </div>
+<div id="th_4" class="t s2_4">agrupación política. </div>
+<div id="ti_4" class="t s3_4">(Artículo modificado por art. 12° de la Ley N° 27.120 B.O. 08/01/2015) </div>
+<div id="tj_4" class="t s4_4">ARTÍCULO 28. </div>
+<div id="tk_4" class="t s2_4">— Sin perjuicio de lo dispuesto en el artículo anterior, la resolución de la junta </div>
+<div id="tl_4" class="t s2_4">electoral de la agrupación puede ser apelada por cualquiera de las listas de la propia agrupación </div>
+<div id="tm_4" class="t s2_4">ante los juzgados con competencia electoral del distrito que corresponda dentro de las cuarenta y </div>
+<div id="tn_4" class="t s2_4">ocho (48) horas de serle notificada la resolución, fundándose en el mismo acto. </div>
+<div id="to_4" class="t s2_4">Los juzgados deberán expedirse en un plazo máximo de setenta y dos (72) horas. </div>
+<div id="tp_4" class="t s2_4">La resolución de los jueces de primera instancia podrá ser apelada ante la Cámara Nacional Electoral </div>
+<div id="tq_4" class="t s2_4">dentro de las cuarenta y ocho (48) horas de serle notificada la resolución, fundándose en el mismo </div>
+<div id="tr_4" class="t s2_4">acto. El juzgado federal con competencia electoral de primera instancia deberá elevar el expediente </div>
+<div id="ts_4" class="t s2_4">a la Cámara Nacional Electoral dentro de las veinticuatro (24) horas de interpuesto el recurso. </div>
+<div id="tt_4" class="t s2_4">La Cámara deberá expedirse en un plazo máximo de setenta y dos (72) horas desde su recepción. </div>
+<div id="tu_4" class="t s4_4">ARTÍCULO 29. </div>
+<div id="tv_4" class="t s2_4">— Tanto la solicitud de revocatoria como los recursos interpuestos contra las </div>
+<div id="tw_4" class="t s2_4">resoluciones que rechacen la oficialización de listas serán concedidos con efecto suspensivo. </div>
+<div id="tx_4" class="t s4_4">ARTÍCULO 30. </div>
+<div id="ty_4" class="t s2_4">— La resolución de oficialización de las listas una vez que se encuentra firme, será </div>
+<div id="tz_4" class="t s2_4">comunicada por la junta electoral de la agrupación, dentro de las veinticuatro (24) horas, al juzgado </div>
+<div id="t10_4" class="t s2_4">federal con competencia electoral que corresponda, el que a su vez informará al Ministerio del </div>
+<div id="t11_4" class="t s2_4">Interior a los efectos de asignación de aporte, espacios publicitarios y franquicias que </div>
+<div id="t12_4" class="t s2_4">correspondieren. </div>
+<div id="t13_4" class="t s2_4">En idéntico plazo hará saber a las listas oficializadas que deberán nombrar un representante para </div>
+<div id="t14_4" class="t s2_4">integrar la junta electoral partidaria. </div>
+<div id="t15_4" class="t s2_4">CAPITULO IV </div>
+<div id="t16_4" class="t s3_4">Campaña electoral </div>
+<div id="t17_4" class="t s4_4">ARTÍCULO 31. </div>
+<div id="t18_4" class="t s2_4">— La campaña electoral de las elecciones primarias se inicia treinta (30) días antes </div>
+<div id="t19_4" class="t s2_4">de la fecha del comicio. La publicidad electoral audiovisual puede realizarse desde los veinte (20) </div>
+<div id="t1a_4" class="t s2_4">días anteriores a la fecha de las elecciones primarias. En ambos casos finalizan cuarenta y ocho (48) </div>
+<div id="t1b_4" class="t s2_4">horas antes del inicio del acto eleccionario. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t1_4',1076],['t2_4',1095],['t3_4',2934],['t4_4',2933],['t5_4',1787],['t6_4',2933],['t7_4',2934],['t8_4',2611],['t9_4',2933],['ta_4',2933],['tb_4',2933],['tc_4',1904],['td_4',2933],['te_4',2933],['tf_4',2446],['tg_4',449],['th_4',564],['ti_4',2083],['tj_4',469],['tk_4',2433],['tl_4',2933],['tm_4',2934],['tn_4',2311],['to_4',2386],['tp_4',2933],['tq_4',2933],['tr_4',2933],['ts_4',2736],['tt_4',2859],['tu_4',475],['tv_4',2421],['tw_4',2674],['tx_4',461],['ty_4',2448],['tz_4',2933],['t10_4',2933],['t11_4',2933],['t13_4',2933],['t14_4',1055],['t15_4',377],['t16_4',539],['t17_4',460],['t18_4',2450],['t19_4',2933],['t1a_4',2933],['t1b_4',1243]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 48;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

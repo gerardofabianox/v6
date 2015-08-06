@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load1();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:333px;top:108px;}
+#t2_1{left:331px;top:128px;}
+#t3_1{left:101px;top:191px;}
+#t4_1{left:101px;top:230px;}
+#t5_1{left:101px;top:268px;}
+#t6_1{left:101px;top:305px;}
+#t7_1{left:101px;top:323px;}
+#t8_1{left:101px;top:374px;}
+#t9_1{left:101px;top:391px;}
+#ta_1{left:101px;top:426px;}
+#tb_1{left:101px;top:444px;}
+#tc_1{left:101px;top:478px;}
+#td_1{left:101px;top:496px;}
+#te_1{left:101px;top:513px;}
+#tf_1{left:101px;top:548px;}
+#tg_1{left:101px;top:565px;}
+#th_1{left:101px;top:583px;}
+#ti_1{left:101px;top:600px;}
+#tj_1{left:101px;top:618px;}
+#tk_1{left:101px;top:635px;}
+#tl_1{left:101px;top:653px;}
+#tm_1{left:101px;top:670px;}
+#tn_1{left:101px;top:705px;}
+#to_1{left:101px;top:722px;}
+#tp_1{left:101px;top:740px;}
+#tq_1{left:101px;top:775px;}
+#tr_1{left:101px;top:792px;}
+#ts_1{left:101px;top:810px;}
+#tt_1{left:101px;top:844px;}
+#tu_1{left:101px;top:862px;}
+#tv_1{left:101px;top:896px;}
+#tw_1{left:101px;top:914px;}
+#tx_1{left:303px;top:914px;}
+#ty_1{left:482px;top:914px;}
+#tz_1{left:101px;top:931px;}
+#t10_1{left:101px;top:949px;}
+#t11_1{left:101px;top:966px;}
+
+.s2_1{
+	FONT-SIZE: 63px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s5_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,255);
+}
+
+.s4_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_1{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: Verdana, Geneva, sans-serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+}
+
+.s1_1{
+	FONT-SIZE: 68px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_1" class="t s1_1">PODER JUDICIAL DE LA NACIÓN </div>
+<div id="t2_1" class="t s1_1">CÁMARA NACIONAL ELECTORAL </div>
+<div id="t3_1" class="t s2_1">Disposición 195/2015 </div>
+<div id="t4_1" class="t s3_1">MINISTERIO DEL INTERIOR Y TRANSPORTE </div>
+<div id="t5_1" class="t s3_1">DIRECCION NACIONAL ELECTORAL </div>
+<div id="t6_1" class="t s4_1">Bs. As., 12/5/2015 </div>
+<div id="t7_1" class="t s4_1">Publicación: B.O. 20/05/2015 </div>
+<div id="t8_1" class="t s4_1">ARTÍCULO 1° — Asígnanse a las agrupaciones políticas que se encuentran detalladas en el Anexo I </div>
+<div id="t9_1" class="t s4_1">de la presente el aporte establecido en los artículos 9° incisos a) y b) y 10 de la Ley N° 26.215. </div>
+<div id="ta_1" class="t s4_1">ARTÍCULO 2° — Detráiganse de los aportes asignados en el Anexo l las deudas preexistentes de </div>
+<div id="tb_1" class="t s4_1">acuerdo al detalle del Anexo II, que forma parte integrante de la presente. </div>
+<div id="tc_1" class="t s4_1">ARTÍCULO 3° — Detráiganse de los aportes asignados en el Anexo I, las multas informadas por la </div>
+<div id="td_1" class="t s4_1">JUSTICIA NACIONAL ELECTORAL y que se detallan en el Anexo III, el que forma parte integrante de </div>
+<div id="te_1" class="t s4_1">la presente. </div>
+<div id="tf_1" class="t s4_1">ARTÍCULO 4° — El Departamento Gestión Fondo Partidario Permanente de la Dirección de </div>
+<div id="tg_1" class="t s4_1">Financiamiento Partidario y Electoral dependiente de esta DIRECCIÓN NACIONAL ELECTORAL, previa </div>
+<div id="th_1" class="t s4_1">verificación del cumplimiento de la obligación consignada en el artículo 13 de la Ley N° 26.215 </div>
+<div id="ti_1" class="t s4_1">emitirá las solicitudes de gastos correspondientes a los saldos de la aplicación de lo establecido en </div>
+<div id="tj_1" class="t s4_1">los artículos 1°, 2° y 3° de la presente y que se consignan en el Anexo IV fraccionándose el pago en </div>
+<div id="tk_1" class="t s4_1">DOS (2) cuotas iguales y consecutivas de manera semestral en aquellos casos en que el total del </div>
+<div id="tl_1" class="t s4_1">aporte supere los PESOS VEINTICUATRO MIL CIENTO NOVENTA Y CUATRO CON DIECIOCHO </div>
+<div id="tm_1" class="t s4_1">CENTAVOS ($ 24.194,18). </div>
+<div id="tn_1" class="t s4_1">ARTÍCULO 5° — Los montos que se descuenten a los Partidos Políticos en virtud de lo establecido en </div>
+<div id="to_1" class="t s4_1">los artículos 2° y 3° de la presente se transferirán a la Cuenta N° 2933/01 Ministerio del Interior y </div>
+<div id="tp_1" class="t s4_1">Transporte - 3001/325 - FPP L25.600. </div>
+<div id="tq_1" class="t s4_1">ARTÍCULO 6° — El gasto que demande el cumplimiento de la presente será atendido con los créditos </div>
+<div id="tr_1" class="t s4_1">asignados al Programa 16, actividad 2, inciso 5, partida principal 1, partida parcial 7 de la </div>
+<div id="ts_1" class="t s4_1">Jurisdicción 30 —MINISTERIO DEL INTERIOR Y TRANSPORTE— para el año 2015. </div>
+<div id="tt_1" class="t s4_1">ARTÍCULO 7° — Comuníquese, publíquese, dese a la DIRECCIÓN NACIONAL DEL REGISTRO OFICIAL </div>
+<div id="tu_1" class="t s4_1">y archívese. </div>
+<div id="tv_1" class="t s4_1">NOTA: Los Anexos I, II y III que integran la presente Disposición podrán ser consultados en la </div>
+<div id="tw_1" class="t s4_1">siguiente dirección web: </div>
+<div id="tx_1" class="t s5_1">www.elecciones.gob.ar</div>
+<div id="ty_1" class="t s4_1">NOTA: El/los Anexo/s que integra/n este(a) </div>
+<div id="tz_1" class="t s4_1">Disposición se publican en la edición web del BORA — www.boletinoficial.gov.ar— y también podrán </div>
+<div id="t10_1" class="t s4_1">ser consultados en la Sede Central de esta Dirección Nacional (Suipacha 767 - Ciudad Autónoma de </div>
+<div id="t11_1" class="t s4_1">Buenos Aires). </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1"><object width="935" height="1210" data="1/1.svg" type="image/svg+xml" id="pdf1" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld1" type="text/javascript">
+
+var isIE = false;
+var f1 = [['t1_1',1076],['t2_1',1096],['t3_1',785],['t4_1',1416],['t5_1',1131],['t6_1',549],['t7_1',857],['t8_1',2934],['t9_1',2776],['ta_1',2934],['tb_1',2169],['tc_1',2934],['td_1',2934],['te_1',343],['tf_1',2934],['tg_1',2933],['th_1',2934],['ti_1',2933],['tj_1',2934],['tk_1',2934],['tl_1',2933],['tm_1',766],['tn_1',2933],['to_1',2934],['tp_1',1107],['tq_1',2935],['tr_1',2934],['ts_1',2359],['tt_1',2934],['tu_1',349],['tv_1',2934],['tw_1',760],['ty_1',1409],['tz_1',2933],['t10_1',2934],['t11_1',422]];
+function load1(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f1);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_1");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>
