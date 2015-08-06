@@ -2,8 +2,29 @@
 <html>
 <head>
 <title>Compendio Electoral 2015 - Cámara Nacional Electoral</title>
-<script type="text/javascript" src="Insomnia.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+        // Llama a onDeviceReady cuando PhoneGap se inicie
+        //
+        // En este momento, el documento esta cargado pero phonegap.js aun no.
+        // Cuando PhoneGap este listo y se comunique con el dispositivo nativo
+        // se lanzara el evento `deviceready`.
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // PhoneGap esta listo y ahora ya se pueden hacer llamadas a PhoneGap
+        //
+        function onDeviceReady() {
+		    document.addEventListener("pause", onPause, false);
+        }
+
+        // Maneja el evento online
+        //
+        function onPause() {
+        }
+
+        </script>
 <!-- jQuery-->
 <script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
